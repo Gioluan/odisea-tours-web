@@ -1,26 +1,327 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f6f6f6;
+  --paper-warm: #efece4;
+  --ink: #111111;
+  --ink-soft: #1a1612;
+  --ink-muted: #5a564e;
+  --gold: #ffb400;
+  --gold-deep: #c98a00;
+  --rule: #11111118;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-paper-warm: var(--paper-warm);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-instrument);
+  --font-mono: var(--font-mono-editorial);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01", "ss02", "cv11";
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Display serif: Fraunces variable with dramatic opsz */
+.font-display {
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  letter-spacing: -0.035em;
+  line-height: 0.88;
+}
+
+.font-display-italic {
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+  font-style: italic;
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  letter-spacing: -0.02em;
+}
+
+/* Editorial caption mono */
+.font-mono-editorial {
+  font-family: var(--font-mono-editorial), ui-monospace, monospace;
+  font-feature-settings: "ss01", "zero";
+}
+
+/* Section number stamp */
+.chapter-num {
+  font-family: var(--font-fraunces), serif;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  font-weight: 300;
+}
+
+/* Film grain overlay — subtle, full screen */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Paper texture for cream sections */
+.paper-texture {
+  background-color: var(--paper-warm);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 180, 0, 0.04), transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(17, 17, 17, 0.03), transparent 50%);
+}
+
+/* Editorial horizontal rule with label */
+.rule-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.rule-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
+}
+.rule-label::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 55s linear infinite;
+  will-change: transform;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Ken Burns slow pan */
+@keyframes kenburns {
+  0%   { transform: scale(1.05) translate(0, 0); }
+  100% { transform: scale(1.15) translate(-2%, -1%); }
+}
+.kenburns {
+  animation: kenburns 22s ease-out infinite alternate;
+}
+
+/* Letter-by-letter reveal */
+@keyframes letterIn {
+  from { opacity: 0; transform: translateY(0.4em) rotate(-4deg); }
+  to   { opacity: 1; transform: translateY(0) rotate(0); }
+}
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation: letterIn 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Underline link, editorial style */
+.link-rule {
+  position: relative;
+  padding-bottom: 2px;
+}
+.link-rule::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.link-rule:hover::after {
+  transform-origin: left;
+  transform: scaleX(1.02);
+  background: var(--gold);
+  height: 2px;
+}
+
+/* Diagonal divider stripes */
+.stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--ink) 0,
+    var(--ink) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}
+
+/* Large vertical label text */
+.vlabel {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-family: var(--font-mono-editorial), monospace;
+  font-size: 0.7rem;
+}
+
+/* Editorial pullquote */
+.pullquote {
+  font-family: var(--font-fraunces), serif;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Custom cursor dot on hero */
+.cursor-dot {
+  cursor: none;
+}
+
+/* Button — editorial with corner ticks */
+.btn-editorial {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  font-family: var(--font-mono-editorial), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+  transition: all 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-editorial::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform: translateY(101%);
+  transition: transform 0.5s cubic-bezier(0.7, 0, 0.2, 1);
+  z-index: -1;
+}
+.btn-editorial:hover {
+  color: var(--paper);
+}
+.btn-editorial:hover::before {
+  transform: translateY(0);
+}
+.btn-editorial.on-dark {
+  color: var(--paper);
+  border-color: var(--paper);
+}
+.btn-editorial.on-dark::before {
+  background: var(--gold);
+}
+.btn-editorial.on-dark:hover {
+  color: var(--ink);
+}
+
+/* Corner ticks — hard to replicate signature */
+.corner-ticks {
+  position: relative;
+}
+.corner-ticks::before,
+.corner-ticks::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: currentColor;
+  opacity: 0.5;
+}
+.corner-ticks::before {
+  top: 0;
+  left: 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+.corner-ticks::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+/* Hand-drawn wavy connector */
+.squiggle {
+  stroke: currentColor;
+  stroke-width: 1.25;
+  fill: none;
+  stroke-linecap: round;
+}
+
+/* Stamp — est. 2005 */
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border: 1.5px solid currentColor;
+  border-radius: 9999px;
+  font-family: var(--font-mono-editorial), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  padding: 0.5rem;
+  position: relative;
+}
+.stamp::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px dashed currentColor;
+  border-radius: 9999px;
+  opacity: 0.35;
+}
+
+/* Reveal on scroll utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1.1s cubic-bezier(0.2, 0.8, 0.2, 1),
+              transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
 }

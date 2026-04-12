@@ -58,7 +58,7 @@ export default async function TourDetail({
               <span>Chapter {tour.chapter}</span>
               <span>{tour.coordinates}</span>
             </div>
-            <h1 className="font-display text-[clamp(3.5rem,13vw,13rem)] leading-[0.82] tracking-[-0.04em] max-w-[14ch]">
+            <h1 className="font-display text-[clamp(3.5rem,13vw,13rem)] leading-[0.82] tracking-[-0.01em] max-w-[14ch]">
               {tour.title}{" "}
               <span className="font-display-italic text-gold">
                 {tour.italicTitle}

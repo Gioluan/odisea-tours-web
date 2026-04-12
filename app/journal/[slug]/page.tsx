@@ -44,7 +44,7 @@ export default async function JournalPost({
             <span>{post.category}</span>
             <span>{post.readTime}</span>
           </div>
-          <h1 className="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.9] tracking-[-0.03em]">
+          <h1 className="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.9] tracking-[-0.005em]">
             {post.title}{" "}
             <span className="font-display-italic text-gold">
               {post.italicTitle}

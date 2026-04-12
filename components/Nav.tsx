@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const LINKS = [
@@ -10,8 +11,14 @@ const LINKS = [
 ];
 
 export default function Nav() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  // Only the home page has a dark hero at the top.
+  // Every other page starts on a light background, so treat it as "scrolled".
+  const onDarkHero = pathname === "/" && !scrolled;
+  const useLightStyle = !onDarkHero;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -24,24 +31,20 @@ export default function Nav() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-          scrolled
+          useLightStyle
             ? "bg-paper/88 backdrop-blur-md border-b border-ink/10 text-ink"
             : "bg-transparent text-paper"
         }`}
       >
         <div className="max-w-[1680px] mx-auto px-6 md:px-10 lg:px-14 flex items-center justify-between h-20">
-          {/* Wordmark */}
-          <Link href="/" className="flex items-end gap-3 group">
-            <span className="font-display text-3xl md:text-[2.1rem] leading-none tracking-tight">
-              Odisea
-            </span>
-            <span
-              className={`font-mono-editorial text-[0.62rem] tracking-[0.28em] uppercase pb-1 hidden sm:inline ${
-                scrolled ? "text-ink-muted" : "text-paper/70"
-              }`}
-            >
-              Tours / Est. 2005
-            </span>
+          {/* Wordmark — real brand logo */}
+          <Link href="/" className="flex items-center group" aria-label="Odisea Tours — home">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={useLightStyle ? "/brand/svg/black.svg" : "/brand/svg/color.svg"}
+              alt="Odisea Tours"
+              className="h-10 md:h-12 w-auto transition-opacity duration-700"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -54,7 +57,7 @@ export default function Nav() {
               >
                 <span
                   className={`font-mono-editorial text-[0.6rem] tracking-[0.2em] ${
-                    scrolled ? "text-ink-muted" : "text-paper/70"
+                    useLightStyle ? "text-ink-muted" : "text-paper/70"
                   }`}
                 >
                   {l.num}
@@ -66,7 +69,7 @@ export default function Nav() {
             ))}
             <Link
               href="/contact"
-              className={`btn-editorial ${scrolled ? "" : "on-dark"}`}
+              className={`btn-editorial ${useLightStyle ? "" : "on-dark"}`}
             >
               <span className="w-1.5 h-1.5 bg-gold rounded-full" />
               Request Dispatch
@@ -81,12 +84,12 @@ export default function Nav() {
           >
             <span
               className={`block w-6 h-px transition-transform ${
-                scrolled ? "bg-ink" : "bg-paper"
+                useLightStyle ? "bg-ink" : "bg-paper"
               } ${open ? "translate-y-[3px] rotate-45" : ""}`}
             />
             <span
               className={`block w-6 h-px transition-transform ${
-                scrolled ? "bg-ink" : "bg-paper"
+                useLightStyle ? "bg-ink" : "bg-paper"
               } ${open ? "-translate-y-[3px] -rotate-45" : ""}`}
             />
           </button>

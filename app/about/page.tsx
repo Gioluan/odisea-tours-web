@@ -55,7 +55,7 @@ export default function AboutPage() {
           <div className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60 mb-10">
             Chapter II · Origin
           </div>
-          <h1 className="font-display text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.04em]">
+          <h1 className="font-display text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.01em]">
             A small team.
             <br />
             <span className="font-display-italic text-gold">

@@ -37,7 +37,7 @@ export default function Home() {
               <span>A Dispatch From Spain</span>
             </div>
 
-            <h1 className="font-display text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.04em]">
+            <h1 className="font-display uppercase text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.015em]">
               <HeroLetters
                 text="Travel is"
                 delayStart={120}
@@ -326,7 +326,7 @@ export default function Home() {
           <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-paper/60 mb-14">
             <span>Chapter V · The Invitation</span>
           </div>
-          <h2 className="font-display text-[clamp(3rem,11vw,12rem)] leading-[0.82] tracking-[-0.03em] max-w-[15ch]">
+          <h2 className="font-display text-[clamp(3rem,11vw,12rem)] leading-[0.82] tracking-[-0.005em] max-w-[15ch]">
             Tell us who
             <br />
             you&apos;re bringing.

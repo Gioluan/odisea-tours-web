@@ -10,12 +10,14 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14">
-          {/* Big wordmark */}
+          {/* Big wordmark — real brand logo */}
           <div className="lg:col-span-7 flex flex-col justify-between">
-            <h2 className="font-display text-[clamp(3.5rem,10vw,9rem)] leading-[0.85] tracking-tight">
-              Odisea
-              <span className="font-display-italic text-gold"> Tours.</span>
-            </h2>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand/svg/color.svg"
+              alt="Odisea Tours — Travel Specialists"
+              className="w-full max-w-[640px] h-auto"
+            />
             <p className="mt-10 font-display-italic text-2xl max-w-md text-paper/80">
               Twenty years of quiet craftsmanship.
               <br />

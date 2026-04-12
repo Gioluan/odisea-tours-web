@@ -18,7 +18,7 @@ export default function ToursIndex() {
             <span>Index · All Chapters</span>
             <span>04 Dispatches</span>
           </div>
-          <h1 className="font-display text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.04em]">
+          <h1 className="font-display text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.01em]">
             The
             <br />
             <span className="font-display-italic text-gold">Dispatches.</span>

@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import { Fraunces, Instrument_Sans, JetBrains_Mono } from "next/font/google";
+import { Archivo, Archivo_Black, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const archivoBlack = Archivo_Black({
+  variable: "--font-archivo-black",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT"],
+  weight: "400",
+  display: "swap",
+});
+
+const archivo = Archivo({
+  variable: "--font-archivo",
+  subsets: ["latin"],
   display: "swap",
 });
 
@@ -53,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${instrument.variable} ${mono.variable}`}
+      className={`${archivoBlack.variable} ${archivo.variable} ${instrument.variable} ${mono.variable}`}
     >
       <body className="bg-paper text-ink grain min-h-screen flex flex-col">
         <Reveal />

@@ -71,15 +71,15 @@ export default function AboutPage() {
           <div className="md:col-span-5">
             <div className="aspect-[3/4] relative overflow-hidden corner-ticks text-ink/30">
               <Image
-                src="/img/tours/cultural.jpg"
-                alt=""
+                src="/photos/juan-sanchez-odisea-tours-director.jpg"
+                alt="Juan Sánchez, Founder of Odisea Tours"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
             </div>
             <p className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60 mt-4">
-              Juan · Founder · Benicassim
+              Juan Sánchez · Founder · Benicassim
             </p>
           </div>
 

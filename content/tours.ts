@@ -23,7 +23,7 @@ export const TOURS: Tour[] = [
     tagline: "Where the game still feels like religion.",
     description:
       "Matchday access no tourist buys online. Training-ground pass from academy directors we've worked with for fifteen years. Back-row seats in the press box, a pint with an old scout afterward, and a guide who remembers when Xavi was still a kid at La Masia.",
-    image: "/img/tours/soccer.jpg",
+    image: "/photos/veterans-soccer-tour-camp-nou-barcelona.jpg",
     coordinates: "41.3809° N / 2.1228° E",
     duration: "6–10 nights",
     groupSize: "12–60 travelers",
@@ -77,7 +77,7 @@ export const TOURS: Tour[] = [
     tagline: "Spain, with the volume turned up.",
     description:
       "Not the greatest-hits bus tour. Dinners in private homes in Triana, studio time with a ceramicist in Úbeda, a dawn walk through the Alhambra before it opens. Built around curiosity, paced for adults who actually want to linger.",
-    image: "/img/tours/cultural.jpg",
+    image: "/photos/odisea-tours-group-barcelona-cathedral.jpg",
     coordinates: "37.1773° N / 3.5986° W",
     duration: "8–12 nights",
     groupSize: "10–30 travelers",

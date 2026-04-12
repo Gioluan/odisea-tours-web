@@ -25,8 +25,8 @@ export default function Nav() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "bg-paper/88 backdrop-blur-md border-b border-ink/10"
-            : "bg-transparent"
+            ? "bg-paper/88 backdrop-blur-md border-b border-ink/10 text-ink"
+            : "bg-transparent text-paper"
         }`}
       >
         <div className="max-w-[1680px] mx-auto px-6 md:px-10 lg:px-14 flex items-center justify-between h-20">
@@ -35,7 +35,11 @@ export default function Nav() {
             <span className="font-display text-3xl md:text-[2.1rem] leading-none tracking-tight">
               Odisea
             </span>
-            <span className="font-mono-editorial text-[0.62rem] tracking-[0.28em] uppercase text-ink-muted pb-1 hidden sm:inline">
+            <span
+              className={`font-mono-editorial text-[0.62rem] tracking-[0.28em] uppercase pb-1 hidden sm:inline ${
+                scrolled ? "text-ink-muted" : "text-paper/70"
+              }`}
+            >
               Tours / Est. 2005
             </span>
           </Link>
@@ -48,7 +52,11 @@ export default function Nav() {
                 href={l.href}
                 className="group flex items-baseline gap-2 text-sm"
               >
-                <span className="font-mono-editorial text-[0.6rem] text-ink-muted tracking-[0.2em]">
+                <span
+                  className={`font-mono-editorial text-[0.6rem] tracking-[0.2em] ${
+                    scrolled ? "text-ink-muted" : "text-paper/70"
+                  }`}
+                >
                   {l.num}
                 </span>
                 <span className="link-rule font-display text-xl tracking-tight">
@@ -56,7 +64,10 @@ export default function Nav() {
                 </span>
               </Link>
             ))}
-            <Link href="/contact" className="btn-editorial">
+            <Link
+              href="/contact"
+              className={`btn-editorial ${scrolled ? "" : "on-dark"}`}
+            >
               <span className="w-1.5 h-1.5 bg-gold rounded-full" />
               Request Dispatch
             </Link>
@@ -69,14 +80,14 @@ export default function Nav() {
             aria-label="Menu"
           >
             <span
-              className={`block w-6 h-px bg-ink transition-transform ${
-                open ? "translate-y-[3px] rotate-45" : ""
-              }`}
+              className={`block w-6 h-px transition-transform ${
+                scrolled ? "bg-ink" : "bg-paper"
+              } ${open ? "translate-y-[3px] rotate-45" : ""}`}
             />
             <span
-              className={`block w-6 h-px bg-ink transition-transform ${
-                open ? "-translate-y-[3px] -rotate-45" : ""
-              }`}
+              className={`block w-6 h-px transition-transform ${
+                scrolled ? "bg-ink" : "bg-paper"
+              } ${open ? "-translate-y-[3px] -rotate-45" : ""}`}
             />
           </button>
         </div>

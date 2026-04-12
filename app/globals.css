@@ -11,17 +11,17 @@
   --rule: #11111118;
 }
 
-@theme inline {
-  --color-paper: var(--paper);
-  --color-paper-warm: var(--paper-warm);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-ink-muted: var(--ink-muted);
-  --color-gold: var(--gold);
-  --color-gold-deep: var(--gold-deep);
-  --font-display: var(--font-fraunces);
-  --font-body: var(--font-instrument);
-  --font-mono: var(--font-mono-editorial);
+@theme {
+  --color-paper: #f6f6f6;
+  --color-paper-warm: #efece4;
+  --color-ink: #111111;
+  --color-ink-soft: #1a1612;
+  --color-ink-muted: #5a564e;
+  --color-gold: #ffb400;
+  --color-gold-deep: #c98a00;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 * {

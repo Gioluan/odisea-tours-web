@@ -8,23 +8,23 @@ export default function Home() {
   return (
     <>
       {/* ---------- HERO ---------- */}
-      <section className="relative min-h-[100svh] flex flex-col pt-20 overflow-hidden">
+      <section className="relative isolate min-h-[100svh] flex flex-col pt-20 overflow-hidden text-paper">
         {/* Background image */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/img/tours/cultural.jpg"
+            src="/photos/veterans-soccer-tour-spain-match-action.jpg"
             alt=""
             fill
             priority
-            className="object-cover kenburns"
+            className="object-cover object-center kenburns"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-paper via-paper/60 to-paper" />
-          <div className="absolute inset-0 bg-gradient-to-t from-paper via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-ink/45" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/20 to-ink" />
         </div>
 
         {/* Top meta bar */}
-        <div className="px-6 md:px-10 lg:px-14 pt-6 flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60">
+        <div className="px-6 md:px-10 lg:px-14 pt-6 flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70">
           <span>40.4168° N / 3.7038° W</span>
           <span className="hidden md:inline">Volume I · Edition MMXXVI</span>
           <span>Est. 2005</span>
@@ -33,7 +33,7 @@ export default function Home() {
         {/* Hero headline */}
         <div className="flex-1 flex items-center px-6 md:px-10 lg:px-14">
           <div className="max-w-[1400px] w-full">
-            <div className="rule-label text-ink/60 font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase mb-8">
+            <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-paper/70 mb-8">
               <span>A Dispatch From Spain</span>
             </div>
 
@@ -56,20 +56,20 @@ export default function Home() {
             </h1>
 
             <div className="mt-12 grid md:grid-cols-12 gap-10 items-end">
-              <p className="md:col-span-5 md:col-start-7 text-lg md:text-xl text-ink/80 max-w-md leading-relaxed">
+              <p className="md:col-span-5 md:col-start-7 text-lg md:text-xl text-paper/85 max-w-md leading-relaxed">
                 Odisea Tours has been quietly crafting group journeys through
                 Spain for twenty years. Soccer pilgrimages, cultural odysseys,
                 corporate retreats and adventures on the coast—
                 <span className="font-display-italic"> all handled, all yours.</span>
               </p>
               <div className="md:col-span-5 flex flex-wrap gap-4">
-                <Link href="/tours" className="btn-editorial">
+                <Link href="/tours" className="btn-editorial on-dark">
                   Browse the Tours
                   <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                     <path d="M1 5 H13 M9 1 L13 5 L9 9" stroke="currentColor" strokeWidth="1.3" />
                   </svg>
                 </Link>
-                <Link href="/contact" className="btn-editorial">
+                <Link href="/contact" className="btn-editorial on-dark">
                   Request a Proposal
                 </Link>
               </div>
@@ -78,7 +78,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="px-6 md:px-10 lg:px-14 pb-6 flex items-end justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60">
+        <div className="px-6 md:px-10 lg:px-14 pb-6 flex items-end justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70">
           <span className="flex items-center gap-3">
             <span className="w-8 h-px bg-current" />
             Scroll
@@ -198,6 +198,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- INTERMISSION · FIELD NOTES (PHOTO GALLERY) ---------- */}
+      <section className="paper-texture py-32 md:py-44 relative overflow-hidden">
+        <div className="max-w-[1680px] mx-auto px-6 md:px-10 lg:px-14">
+          <div className="flex items-end justify-between mb-20 gap-10">
+            <div>
+              <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60 mb-8">
+                <span>Intermission · Field Notes</span>
+              </div>
+              <h2 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.88] tracking-tight">
+                Twenty years,
+                <br />
+                <span className="font-display-italic text-gold">in frames.</span>
+              </h2>
+            </div>
+            <p className="hidden md:block max-w-sm text-ink/70 leading-relaxed pb-4">
+              Unstaged. Unfiltered. A sampling of the groups, stadiums, and
+              afternoons that have passed through our hands since 2005.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6">
+            {GALLERY.map((photo, i) => (
+              <div
+                key={photo.src}
+                className={`relative overflow-hidden corner-ticks text-ink/40 reveal ${photo.className}`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.caption}
+                  fill
+                  className="object-cover transition-transform duration-[1.6s] ease-out hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-ink/80 to-transparent">
+                  <p className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-paper/90">
+                    No. {String(i + 1).padStart(2, "0")} · {photo.caption}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ---------- CHAPTER III · PRINCIPLES ---------- */}
       <section className="py-32 md:py-44 paper-texture">
         <div className="max-w-[1680px] mx-auto px-6 md:px-10 lg:px-14">
@@ -305,6 +349,44 @@ export default function Home() {
     </>
   );
 }
+
+const GALLERY = [
+  {
+    src: "/photos/veterans-soccer-tour-real-madrid-bernabeu.jpg",
+    caption: "Bernabéu · Madrid",
+    className: "md:col-span-6 aspect-[4/5] md:aspect-[3/4]",
+  },
+  {
+    src: "/photos/odisea-tours-match-vs-local-team.jpg",
+    caption: "Match Day · vs. Local Side",
+    className: "md:col-span-6 aspect-[4/5] md:aspect-[3/4]",
+  },
+  {
+    src: "/photos/odisea-tours-youth-girls-celebrating.jpg",
+    caption: "After the Whistle",
+    className: "md:col-span-4 aspect-square",
+  },
+  {
+    src: "/photos/veterans-soccer-tour-spanish-football-federation.jpg",
+    caption: "Spanish FA · Training",
+    className: "md:col-span-4 aspect-square",
+  },
+  {
+    src: "/photos/veterans-soccer-tour-valencia-cf-match.jpg",
+    caption: "Valencia CF",
+    className: "md:col-span-4 aspect-square",
+  },
+  {
+    src: "/photos/veterans-soccer-tour-barcelona-la-rambla.jpg",
+    caption: "Las Ramblas · Barcelona",
+    className: "md:col-span-7 aspect-[3/2]",
+  },
+  {
+    src: "/photos/odisea-tours-professional-coaching.jpg",
+    caption: "Coaching Clinic",
+    className: "md:col-span-5 aspect-[3/2]",
+  },
+];
 
 const PRINCIPLES = [
   {

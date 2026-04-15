@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { POSTS, postBySlug } from "@/content/journal";
+
+const SITE = "https://odisea-tours.com";
 
 export function generateStaticParams() {
   return POSTS.map((p) => ({ slug: p.slug }));
@@ -11,13 +14,33 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const post = postBySlug(slug);
   if (!post) return {};
+  const fullTitle = `${post.title}${post.italicTitle ? " " + post.italicTitle : ""}`.trim();
+  const url = `${SITE}/journal/${post.slug}`;
   return {
-    title: `${post.title} ${post.italicTitle ?? ""}`,
+    title: fullTitle,
     description: post.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      title: fullTitle,
+      description: post.excerpt,
+      url,
+      siteName: "Odisea Tours",
+      locale: "en_US",
+      publishedTime: post.date,
+      modifiedTime: post.date,
+      authors: ["Odisea Tours"],
+      tags: [post.category, "youth soccer tours", "Spain", "football"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: fullTitle,
+      description: post.excerpt,
+    },
   };
 }
 
@@ -31,9 +54,44 @@ export default async function JournalPost({
   if (!post) notFound();
 
   const others = POSTS.filter((p) => p.slug !== slug);
+  const fullTitle = `${post.title}${post.italicTitle ? " " + post.italicTitle : ""}`.trim();
+  const url = `${SITE}/journal/${post.slug}`;
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: fullTitle,
+    description: post.excerpt,
+    image: `${SITE}${post.cover}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Odisea Tours",
+      url: SITE,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Odisea Tours",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE}/img/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    articleSection: post.category,
+    keywords: [post.category, "youth soccer tours Spain", "football academy", "Spain sport tours"].join(", "),
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Header */}
       <article className="pt-40 pb-24 px-6 md:px-10 lg:px-14">
         <div className="max-w-[900px] mx-auto">

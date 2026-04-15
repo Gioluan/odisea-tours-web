@@ -146,7 +146,7 @@ export default function ContactForm() {
           disabled={status === "sending"}
           className="btn-editorial disabled:opacity-40"
         >
-          {status === "sending" ? "Sending..." : "Send Dispatch"}
+          {status === "sending" ? "Sending..." : "Send Inquiry"}
           <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
             <path
               d="M1 5 H13 M9 1 L13 5 L9 9"

@@ -35,8 +35,8 @@ export default async function TourDetail({
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[92svh] flex flex-col pt-24">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative min-h-[92svh] flex flex-col pt-24 bg-ink isolate overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <Image
             src={tour.image}
             alt={tour.title}
@@ -49,11 +49,11 @@ export default async function TourDetail({
           <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-transparent to-ink" />
         </div>
 
-        <div className="flex-1 flex items-center px-6 md:px-10 lg:px-14 text-paper">
+        <div className="relative z-10 flex-1 flex items-center px-6 md:px-10 lg:px-14 text-paper">
           <div className="max-w-[1680px] mx-auto w-full">
             <div className="flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70 mb-10">
               <Link href="/tours" className="link-rule">
-                ← Back to Dispatches
+                ← Back to Tour Experiences
               </Link>
               <span>Chapter {tour.chapter}</span>
               <span>{tour.coordinates}</span>
@@ -153,7 +153,7 @@ export default async function TourDetail({
 
           <div className="mt-20 flex flex-wrap gap-5">
             <Link href="/contact" className="btn-editorial on-dark">
-              Request This Dispatch
+              Request This Experience
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                 <path
                   d="M1 5 H13 M9 1 L13 5 L9 9"
@@ -172,7 +172,7 @@ export default async function TourDetail({
         </div>
       </section>
 
-      {/* Other dispatches */}
+      {/* Other tour experiences */}
       <section className="py-32 paper-texture">
         <div className="max-w-[1680px] mx-auto px-6 md:px-10 lg:px-14">
           <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60 mb-14">

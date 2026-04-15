@@ -72,7 +72,7 @@ export default function Nav() {
               className={`btn-editorial ${useLightStyle ? "" : "on-dark"}`}
             >
               <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-              Request Dispatch
+              Request a Tour
             </Link>
           </nav>
 

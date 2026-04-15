@@ -34,7 +34,7 @@ export default function Home() {
         <div className="flex-1 flex items-center px-6 md:px-10 lg:px-14">
           <div className="max-w-[1400px] w-full">
             <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-paper/70 mb-8">
-              <span>A Dispatch From Spain</span>
+              <span>Group Travel From Spain</span>
             </div>
 
             <h1 className="font-display uppercase text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.015em]">
@@ -136,10 +136,10 @@ export default function Home() {
           <div className="flex items-end justify-between mb-24 gap-10">
             <div>
               <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-paper/60 mb-8">
-                <span>Chapter II · The Dispatches</span>
+                <span>Chapter II · Tour Experiences</span>
               </div>
               <h2 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.88] tracking-tight">
-                Four kinds of
+                Seven kinds of
                 <br />
                 <span className="font-display-italic text-gold">unforgettable.</span>
               </h2>
@@ -187,7 +187,7 @@ export default function Home() {
                   {tour.description}
                 </p>
                 <span className="mt-6 inline-flex items-center gap-3 font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase link-rule">
-                  Read the Dispatch
+                  Read More
                   <svg width="20" height="10" viewBox="0 0 20 10" fill="none">
                     <path d="M1 5 H19 M14 1 L19 5 L14 9" stroke="currentColor" strokeWidth="1" />
                   </svg>

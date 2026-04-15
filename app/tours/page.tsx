@@ -3,9 +3,9 @@ import Link from "next/link";
 import { TOURS } from "@/content/tours";
 
 export const metadata = {
-  title: "Tours",
+  title: "Tour Experiences",
   description:
-    "Four chapters of group travel across Spain: European soccer, cultural, corporate, and sport & adventure.",
+    "Seven tour experiences across Spain: European soccer pilgrimages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats, and sport and adventure.",
 };
 
 export default function ToursIndex() {
@@ -16,16 +16,16 @@ export default function ToursIndex() {
         <div className="max-w-[1680px] mx-auto">
           <div className="flex items-end justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60 mb-10">
             <span>Index · All Chapters</span>
-            <span>04 Dispatches</span>
+            <span>07 Tour Experiences</span>
           </div>
           <h1 className="font-display text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.01em]">
-            The
+            Tour
             <br />
-            <span className="font-display-italic text-gold">Dispatches.</span>
+            <span className="font-display-italic text-gold">Experiences.</span>
           </h1>
           <p className="mt-10 max-w-xl text-lg text-ink/75 leading-relaxed">
-            Four ways to travel through Spain with us. Each one built from the
-            ground up for groups—from a handful of friends to a corporate team
+            Seven ways to travel through Spain with us. Each one built from the
+            ground up for groups, from a handful of friends to a corporate team
             of a hundred. Pick a chapter; we&apos;ll write the rest together.
           </p>
         </div>

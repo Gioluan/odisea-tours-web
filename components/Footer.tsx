@@ -41,7 +41,7 @@ export default function Footer() {
 
             <div>
               <p className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/50 mb-5">
-                Dispatch
+                Contact
               </p>
               <ul className="space-y-2.5 text-sm text-paper/80 font-mono-editorial">
                 <li>

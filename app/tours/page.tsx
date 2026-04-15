@@ -1,11 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { TOURS } from "@/content/tours";
 
-export const metadata = {
-  title: "Tour Experiences",
+export const metadata: Metadata = {
+  title: "Spain Group Tours — Soccer, Cultural, Camino & Corporate Experiences",
   description:
-    "Seven tour experiences across Spain: European soccer pilgrimages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats, and sport and adventure.",
+    "Seven group tour experiences across Spain. Youth soccer pilgrimages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats and sport and adventure. Built for groups of 10 to 120 since 2005.",
+  alternates: { canonical: "https://odisea-tours.com/tours" },
+  openGraph: {
+    title: "Spain Group Tours — Soccer, Cultural, Camino & Corporate",
+    description:
+      "Seven group tour experiences across Spain. Built for groups of 10 to 120 since 2005.",
+    url: "https://odisea-tours.com/tours",
+  },
 };
 
 export default function ToursIndex() {
@@ -36,6 +44,55 @@ export default function ToursIndex() {
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
             Seven ways to travel through Spain with us. Each one built from the ground up for groups, from a handful of friends to a corporate team of a hundred.
           </p>
+        </div>
+      </section>
+
+      {/* Intro copy for SEO content depth */}
+      <section className="paper-texture py-12 md:py-16 border-b border-ink/10">
+        <div className="max-w-[860px] mx-auto px-6 md:px-10 lg:px-14">
+          <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.3em] uppercase text-ink/55 mb-4">
+            <span>How We Build Tours</span>
+          </div>
+          <h2 className="font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.15] tracking-[-0.01em] mb-6">
+            Seven shapes of trip. One way of working.
+          </h2>
+          <div className="space-y-5 text-[1.0rem] md:text-[1.05rem] leading-[1.7] text-ink/75">
+            <p>
+              Every group tour we run in Spain begins the same way. A real
+              conversation, no canned itinerary, and a single question we ask
+              every coach, school director and trip organiser before we touch a
+              hotel: what is the spine of this trip going to be? Soccer? Food?
+              The Camino? A corporate offsite that needs to feel nothing like an
+              offsite? Once the spine is set, the rest of the trip bends around
+              it. That is the discipline that separates a tour somebody
+              remembers from one they merely survived.
+            </p>
+            <p>
+              The seven experiences below are the shapes we run most often,
+              built up over twenty years of hosting youth soccer teams from the
+              United States and Australia, school groups from the United
+              Kingdom, culinary groups from across Europe, and corporate teams
+              who want a few days that cost less and produce more than the
+              conference hotel they used last year. Each one is a starting
+              point, not a fixed package. We adjust every itinerary to the
+              group, the season, the dates and the budget, and we put a real
+              person on the ground in Spain with the group from the first
+              transfer to the last.
+            </p>
+            <p>
+              If your group does not fit one of these seven, that is normally
+              the most interesting place to start a conversation. Use the form
+              on{" "}
+              <Link href="/contact" className="link-rule text-gold">
+                the contact page
+              </Link>{" "}
+              and a real person will write back the same day. Or read{" "}
+              <Link href="/journal" className="link-rule text-gold">
+                the journal
+              </Link>{" "}
+              for the working notes behind how these tours actually get built.
+            </p>
+          </div>
         </div>
       </section>
 

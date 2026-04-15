@@ -3,8 +3,10 @@ import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import HeroLetters from "@/components/HeroLetters";
 import { TOURS } from "@/content/tours";
+import { topJournalPosts } from "@/lib/tour-journal-map";
 
 export default function Home() {
+  const featuredPosts = topJournalPosts(3);
   return (
     <>
       {/* ---------- HERO ---------- */}
@@ -13,7 +15,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10">
           <Image
             src="/photos/veterans-soccer-tour-spain-match-action.jpg"
-            alt=""
+            alt="An Odisea Tours youth soccer group on a match day in Spain"
             fill
             priority
             className="object-cover object-center kenburns"
@@ -192,6 +194,71 @@ export default function Home() {
                 </p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- FIELD NOTES PREVIEW (links into /journal for SEO topic clustering) ---------- */}
+      <section className="bg-[#faf6ee] py-16 md:py-20 border-t border-ink/10">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14">
+          <div className="mb-10 flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <div className="flex items-baseline gap-4 mb-3">
+                <span className="chapter-num text-4xl leading-none text-gold">III</span>
+                <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-ink/60">
+                  <span>From The Journal</span>
+                </div>
+              </div>
+              <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1] tracking-[-0.015em]">
+                The way we{" "}
+                <span className="font-display-italic text-gold">actually plan</span> a trip.
+              </h2>
+            </div>
+            <p className="text-sm text-ink/65 leading-snug max-w-sm">
+              Twenty years of working notes. The questions coaches ask, the
+              cities most tours miss, what a real Spain tour costs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {featuredPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/journal/${post.slug}`}
+                className="group block reveal"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+                  <Image
+                    src={post.cover}
+                    alt={post.title}
+                    fill
+                    className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <span className="absolute top-3 left-3 font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase bg-ink/70 backdrop-blur-sm text-paper px-2 py-0.5 rounded-sm">
+                    {post.category}
+                  </span>
+                </div>
+                <h3 className="mt-4 font-display text-xl md:text-2xl leading-tight tracking-tight group-hover:text-gold transition-colors">
+                  {post.title}{" "}
+                  <span className="font-display-italic text-gold">
+                    {post.italicTitle}
+                  </span>
+                </h3>
+                <p className="mt-2 text-sm text-ink/70 leading-snug">
+                  {post.excerpt}
+                </p>
+                <p className="mt-3 font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/55">
+                  {post.readTime} read
+                </p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <Link href="/journal" className="link-rule font-display text-base">
+              Read all field notes →
+            </Link>
           </div>
         </div>
       </section>

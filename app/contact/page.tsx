@@ -1,15 +1,79 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
 
-export const metadata = {
-  title: "Inquire",
+export const metadata: Metadata = {
+  title: "Contact Odisea Tours — Spain Group Travel & Soccer Tour Specialists",
   description:
-    "Tell us who you're bringing and we'll build the rest. bookings@odisea-tours.com",
+    "Get a real reply within hours, not days. Tell us who you're bringing — youth soccer team, school group, corporate retreat — and we'll build the trip. Offices in Castellón and Madrid.",
+  alternates: { canonical: "https://odisea-tours.com/contact" },
+  openGraph: {
+    title: "Contact Odisea Tours — Spain Group Travel Specialists",
+    description:
+      "Get a real reply within hours. Spain group travel, designed by locals since 2005.",
+    url: "https://odisea-tours.com/contact",
+  },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "@id": "https://odisea-tours.com/contact#localbusiness",
+  name: "Odisea Tours",
+  legalName: "Ground Agents Solutions S.L.",
+  url: "https://odisea-tours.com",
+  email: "bookings@odisea-tours.com",
+  telephone: "+34-635-745-527",
+  priceRange: "€€-€€€",
+  image: "https://odisea-tours.com/photos/odisea-tours-group-barcelona-cathedral.jpg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "c/José Bellido Mor",
+    addressLocality: "Benicassim",
+    addressRegion: "Castellón",
+    postalCode: "12560",
+    addressCountry: "ES",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 40.0382,
+    longitude: 0.0654,
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      email: "bookings@odisea-tours.com",
+      telephone: "+34-635-745-527",
+      areaServed: ["US", "AU", "GB", "EU"],
+      availableLanguage: ["English", "Spanish"],
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      telephone: "+34-670-059-797",
+      areaServed: ["ES", "EU"],
+      availableLanguage: ["Spanish", "English"],
+    },
+  ],
+  areaServed: ["ES", "EU", "US", "AU", "GB"],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "19:00",
+    },
+  ],
 };
 
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       {/* Hero with background photo */}
       <section className="relative pt-28 pb-12 md:pt-32 md:pb-16 bg-ink isolate overflow-hidden">
         <div className="absolute inset-0 z-0">

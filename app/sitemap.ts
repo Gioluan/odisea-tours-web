@@ -1,16 +1,26 @@
 import type { MetadataRoute } from "next";
 import { POSTS } from "@/content/journal";
+import { TOURS } from "@/content/tours";
 
 const SITE = "https://odisea-tours.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${SITE}/`, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
-    { url: `${SITE}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${SITE}/tours`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${SITE}/journal`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${SITE}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${SITE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/tours`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${SITE}/journal`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${SITE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
+
+  const tourRoutes: MetadataRoute.Sitemap = TOURS.map((tour) => ({
+    url: `${SITE}/tours/${tour.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }));
 
   const journalRoutes: MetadataRoute.Sitemap = POSTS.map((post) => ({
     url: `${SITE}/journal/${post.slug}`,
@@ -19,5 +29,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...journalRoutes];
+  return [...staticRoutes, ...tourRoutes, ...journalRoutes];
 }

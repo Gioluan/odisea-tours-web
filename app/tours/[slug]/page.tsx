@@ -1,7 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TOURS, tourBySlug } from "@/content/tours";
+import { relatedJournalPosts } from "@/lib/tour-journal-map";
+
+const SITE = "https://odisea-tours.com";
 
 export function generateStaticParams() {
   return TOURS.map((t) => ({ slug: t.slug }));
@@ -11,13 +15,37 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const tour = tourBySlug(slug);
   if (!tour) return {};
+  const fullTitle = `${tour.title}${tour.italicTitle ? " " + tour.italicTitle : ""}`.trim();
+  const url = `${SITE}/tours/${tour.slug}`;
   return {
-    title: `${tour.title} ${tour.italicTitle ?? ""}`,
-    description: tour.tagline,
+    title: fullTitle,
+    description: tour.description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      title: fullTitle,
+      description: tour.description,
+      url,
+      siteName: "Odisea Tours",
+      locale: "en_US",
+      images: [
+        {
+          url: `${SITE}${tour.image}`,
+          width: 1200,
+          height: 630,
+          alt: fullTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: fullTitle,
+      description: tour.tagline,
+    },
   };
 }
 
@@ -31,9 +59,80 @@ export default async function TourDetail({
   if (!tour) notFound();
 
   const others = TOURS.filter((t) => t.slug !== slug).slice(0, 3);
+  const related = relatedJournalPosts(tour.slug, 3);
+
+  const fullTitle = `${tour.title}${tour.italicTitle ? " " + tour.italicTitle : ""}`.trim();
+  const url = `${SITE}/tours/${tour.slug}`;
+  const tourSchema = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "@id": url,
+    name: fullTitle,
+    description: tour.description,
+    url,
+    image: `${SITE}${tour.image}`,
+    touristType: tour.groupSize,
+    provider: {
+      "@type": "TravelAgency",
+      "@id": `${SITE}/#organization`,
+      name: "Odisea Tours",
+      url: SITE,
+    },
+    offers: {
+      "@type": "Offer",
+      url,
+      availability: "https://schema.org/InStock",
+      priceCurrency: "EUR",
+      seller: {
+        "@type": "TravelAgency",
+        name: "Odisea Tours",
+        url: SITE,
+      },
+    },
+    itinerary: tour.itinerary.map((d, i) => ({
+      "@type": "ItemList",
+      position: i + 1,
+      name: `Day ${d.day}: ${d.title}`,
+      description: d.detail,
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tour Experiences",
+        item: `${SITE}/tours`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: fullTitle,
+        item: url,
+      },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(tourSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Hero */}
       <section className="relative min-h-[66svh] flex flex-col pt-24 pb-14 bg-ink isolate overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -235,6 +334,71 @@ export default async function TourDetail({
           </div>
         </div>
       </section>
+
+      {/* Related journal posts (cross-link for SEO topic clustering) */}
+      {related.length > 0 && (
+        <section className="py-16 md:py-20 bg-[#faf6ee] border-t border-ink/10">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14">
+            <div className="mb-8 flex items-end justify-between gap-6 flex-wrap">
+              <div>
+                <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.3em] uppercase text-ink/55 mb-3">
+                  <span>From The Journal</span>
+                </div>
+                <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1] tracking-[-0.015em]">
+                  How coaches plan{" "}
+                  <span className="font-display-italic text-gold">
+                    this kind of trip.
+                  </span>
+                </h2>
+              </div>
+              <p className="text-sm text-ink/65 leading-snug max-w-sm">
+                Field notes from twenty years of building tours like this one.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {related.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/journal/${post.slug}`}
+                  className="group block"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+                    <Image
+                      src={post.cover}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <span className="absolute top-3 left-3 font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase bg-ink/70 backdrop-blur-sm text-paper px-2 py-0.5 rounded-sm">
+                      {post.category}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 font-display text-xl md:text-2xl leading-tight tracking-tight group-hover:text-gold transition-colors">
+                    {post.title}{" "}
+                    <span className="font-display-italic text-gold">
+                      {post.italicTitle}
+                    </span>
+                  </h3>
+                  <p className="mt-2 text-sm text-ink/65 leading-snug">
+                    {post.excerpt}
+                  </p>
+                  <p className="mt-3 font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/55">
+                    {post.readTime} read
+                  </p>
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-10 text-center">
+              <Link href="/journal" className="link-rule font-display text-base">
+                Read all field notes →
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Other tour experiences */}
       <section className="py-16 md:py-20 paper-texture border-t border-ink/10">

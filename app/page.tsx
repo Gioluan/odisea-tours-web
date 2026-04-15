@@ -91,38 +91,44 @@ export default function Home() {
       <Marquee />
 
       {/* ---------- INTRO / CHAPTER I ---------- */}
-      <section className="paper-texture py-32 md:py-44 relative">
-        <div className="absolute left-6 md:left-10 top-32 vlabel text-ink/40 hidden md:block">
-          The Philosophy · 001
-        </div>
-
-        <div className="max-w-[1400px] mx-auto px-6 md:px-20 lg:px-28 grid md:grid-cols-12 gap-12">
-          <div className="md:col-span-2">
-            <span className="chapter-num text-[7rem] leading-none text-gold">I</span>
+      <section className="paper-texture py-16 md:py-20 relative">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14 grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+          <div className="md:col-span-5 relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm">
+            <Image
+              src="/photos/odisea-tours-group-barcelona-cathedral.jpg"
+              alt="A group from Odisea Tours standing in front of Barcelona Cathedral"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+            <span className="absolute top-3 left-3 font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase bg-ink/70 backdrop-blur-sm text-paper px-2 py-0.5 rounded-sm">
+              Chapter I · Our Quiet Craft
+            </span>
           </div>
-          <div className="md:col-span-9 md:col-start-4">
-            <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60 mb-8">
-              <span>Our Quiet Craft</span>
+          <div className="md:col-span-7">
+            <div className="flex items-baseline gap-4 mb-3">
+              <span className="chapter-num text-4xl leading-none text-gold">I</span>
+              <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-ink/60">
+                <span>Our Quiet Craft</span>
+              </div>
             </div>
-            <p className="font-display text-[clamp(2rem,4.5vw,4.5rem)] leading-[1.02] tracking-[-0.025em] reveal">
+            <p className="font-display text-[clamp(1.15rem,1.9vw,1.65rem)] leading-[1.35] tracking-[-0.01em] reveal">
               We are not an agency. We are a small team of
               <span className="font-display-italic"> Spaniards </span>
               who happen to love the country we were born in, and have spent
-              two decades translating it—
-              <span className="font-display-italic">honestly</span>—for the
-              people who come to see it.
+              two decades translating it, <span className="font-display-italic">honestly</span>, for the people who come to see it.
             </p>
-            <div className="mt-12 grid sm:grid-cols-3 gap-8 text-sm text-ink-muted font-mono-editorial">
-              <div className="border-t border-ink/15 pt-4">
-                <span className="text-ink font-display text-4xl block mb-2">20</span>
+            <div className="mt-6 grid grid-cols-3 gap-4 text-[0.72rem] text-ink-muted font-mono-editorial">
+              <div className="border-t border-ink/15 pt-3">
+                <span className="text-ink font-display text-xl block mb-1">20</span>
                 Years in the field
               </div>
-              <div className="border-t border-ink/15 pt-4">
-                <span className="text-ink font-display text-4xl block mb-2">1,400+</span>
+              <div className="border-t border-ink/15 pt-3">
+                <span className="text-ink font-display text-xl block mb-1">1,400+</span>
                 Groups hosted
               </div>
-              <div className="border-t border-ink/15 pt-4">
-                <span className="text-ink font-display text-4xl block mb-2">37</span>
+              <div className="border-t border-ink/15 pt-3">
+                <span className="text-ink font-display text-xl block mb-1">37</span>
                 Spanish provinces
               </div>
             </div>
@@ -130,68 +136,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- CHAPTER II · TOUR DISPATCHES ---------- */}
-      <section className="bg-ink text-paper py-32 md:py-44 relative overflow-hidden">
-        <div className="max-w-[1680px] mx-auto px-6 md:px-10 lg:px-14">
-          <div className="flex items-end justify-between mb-24 gap-10">
+      {/* ---------- CHAPTER II · TOUR EXPERIENCES ---------- */}
+      <section className="bg-ink text-paper py-16 md:py-20 relative overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14">
+          <div className="flex items-end justify-between mb-10 gap-6 flex-wrap">
             <div>
-              <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-paper/60 mb-8">
-                <span>Chapter II · Tour Experiences</span>
+              <div className="flex items-baseline gap-4 mb-3">
+                <span className="chapter-num text-4xl leading-none text-gold">II</span>
+                <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-paper/60">
+                  <span>Tour Experiences</span>
+                </div>
               </div>
-              <h2 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.88] tracking-tight">
-                Seven kinds of
-                <br />
-                <span className="font-display-italic text-gold">unforgettable.</span>
+              <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1] tracking-[-0.015em]">
+                Seven kinds of <span className="font-display-italic text-gold">unforgettable.</span>
               </h2>
             </div>
-            <span className="chapter-num text-[7rem] text-paper/20 hidden md:block leading-none">II</span>
+            <p className="text-sm text-paper/60 leading-snug max-w-sm">
+              Browse the full set. Each one built from the ground up for your group.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-24">
-            {TOURS.map((tour, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+            {TOURS.map((tour) => (
               <Link
                 key={tour.slug}
                 href={`/tours/${tour.slug}`}
-                className={`group block reveal ${i % 2 === 1 ? "md:mt-32" : ""}`}
+                className="group block reveal"
               >
-                <div className="relative aspect-[4/5] overflow-hidden corner-ticks text-paper/50">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-sm text-paper/50">
                   <Image
                     src={tour.image}
                     alt={tour.title}
                     fill
-                    className="object-cover transition-transform duration-[1.6s] ease-out group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
-                  <div className="absolute top-5 left-5 right-5 flex items-start justify-between font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-paper/90">
-                    <span>{tour.coordinates}</span>
-                    <span>No. {tour.chapter}</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent" />
+                  <div className="absolute top-3 left-3 right-3 flex items-start justify-between font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase text-paper/90">
+                    <span className="truncate">No. {tour.chapter}</span>
                   </div>
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <p className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70 mb-2">
-                      {tour.duration} · {tour.groupSize}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase text-paper/70 mb-1">
+                      {tour.duration}
                     </p>
-                    <h3 className="font-display text-5xl md:text-6xl leading-none tracking-tight text-paper">
-                      {tour.title}
-                      <br />
+                    <h3 className="font-display text-xl md:text-2xl leading-tight tracking-tight text-paper">
+                      {tour.title}{" "}
                       <span className="font-display-italic text-gold">
                         {tour.italicTitle}
                       </span>
                     </h3>
                   </div>
                 </div>
-                <p className="mt-6 pullquote text-2xl md:text-3xl text-paper/90 max-w-md">
+                <p className="mt-3 text-[0.95rem] text-paper/80 leading-snug max-w-md">
                   {tour.tagline}
                 </p>
-                <p className="mt-5 text-paper/60 leading-relaxed max-w-md">
-                  {tour.description}
-                </p>
-                <span className="mt-6 inline-flex items-center gap-3 font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase link-rule">
-                  Read More
-                  <svg width="20" height="10" viewBox="0 0 20 10" fill="none">
-                    <path d="M1 5 H19 M14 1 L19 5 L14 9" stroke="currentColor" strokeWidth="1" />
-                  </svg>
-                </span>
               </Link>
             ))}
           </div>
@@ -199,24 +197,41 @@ export default function Home() {
       </section>
 
       {/* ---------- INTERMISSION · FIELD NOTES (PHOTO GALLERY) ---------- */}
-      <section className="paper-texture py-32 md:py-44 relative overflow-hidden">
-        <div className="max-w-[1680px] mx-auto px-6 md:px-10 lg:px-14">
-          <div className="flex items-end justify-between mb-20 gap-10">
-            <div>
-              <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60 mb-8">
-                <span>Intermission · Field Notes</span>
-              </div>
-              <h2 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.88] tracking-tight">
-                Twenty years,
-                <br />
-                <span className="font-display-italic text-gold">in frames.</span>
-              </h2>
-            </div>
-            <p className="hidden md:block max-w-sm text-ink/70 leading-relaxed pb-4">
-              Unstaged. Unfiltered. A sampling of the groups, stadiums, and
-              afternoons that have passed through our hands since 2005.
-            </p>
+      <section className="paper-texture relative overflow-hidden">
+        {/* Header band with background photo */}
+        <div className="relative isolate overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/photos/flamenco-moorish-spain-hero.jpg"
+              alt="Spain at sunset"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-ink/65" />
+            <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-transparent to-ink/30" />
           </div>
+          <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14 py-14 md:py-20 text-paper">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+              <div>
+                <div className="flex items-baseline gap-4 mb-3">
+                  <span className="chapter-num text-4xl leading-none text-gold">·</span>
+                  <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-paper/70">
+                    <span>Intermission · Field Notes</span>
+                  </div>
+                </div>
+                <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1] tracking-[-0.015em]">
+                  Twenty years, <span className="font-display-italic text-gold">in frames.</span>
+                </h2>
+              </div>
+              <p className="max-w-sm text-sm text-paper/75 leading-snug">
+                Unstaged. Unfiltered. Groups, stadiums and afternoons that have passed through our hands since 2005.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14 py-12 md:py-16">
 
           <div className="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6">
             {GALLERY.map((photo, i) => (
@@ -243,43 +258,43 @@ export default function Home() {
       </section>
 
       {/* ---------- CHAPTER III · PRINCIPLES ---------- */}
-      <section className="py-32 md:py-44 paper-texture">
-        <div className="max-w-[1680px] mx-auto px-6 md:px-10 lg:px-14">
-          <div className="grid md:grid-cols-12 gap-12 mb-24">
-            <div className="md:col-span-4">
-              <span className="chapter-num text-[7rem] leading-none text-gold block">III</span>
-              <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60 mt-8">
-                <span>What we promise</span>
+      <section className="py-16 md:py-20 paper-texture border-t border-ink/10">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14">
+          <div className="mb-10 flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <div className="flex items-baseline gap-4 mb-3">
+                <span className="chapter-num text-4xl leading-none text-gold">III</span>
+                <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-ink/60">
+                  <span>What We Promise</span>
+                </div>
               </div>
+              <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1] tracking-[-0.015em]">
+                Six things we would <span className="font-display-italic">never stop</span> doing.
+              </h2>
             </div>
-            <h2 className="md:col-span-8 font-display text-[clamp(2.5rem,6vw,6rem)] leading-[0.95] tracking-tight">
-              Six things we would
-              <br />
-              <span className="font-display-italic">never stop</span> doing.
-            </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-px bg-ink/15 border border-ink/15">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-px bg-ink/15 border border-ink/15">
             {PRINCIPLES.map((p, i) => (
               <div
                 key={p.title}
-                className="bg-paper-warm p-10 md:p-14 reveal"
+                className="bg-paper-warm p-6 md:p-8 reveal"
               >
-                <div className="flex items-start justify-between mb-10">
-                  <span className="font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/50">
+                <div className="flex items-start justify-between mb-4">
+                  <span className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/50">
                     0{i + 1}
                   </span>
-                  <svg width="32" height="32" viewBox="0 0 32 32" className="text-gold">
+                  <svg width="20" height="20" viewBox="0 0 32 32" className="text-gold">
                     <path
                       d="M16 4 L19 13 L28 16 L19 19 L16 28 L13 19 L4 16 L13 13 Z"
                       fill="currentColor"
                     />
                   </svg>
                 </div>
-                <h3 className="font-display text-4xl leading-none tracking-tight mb-5">
+                <h3 className="font-display text-xl md:text-2xl leading-tight tracking-tight mb-2">
                   {p.title}
                 </h3>
-                <p className="text-ink-muted leading-relaxed text-[0.95rem]">
+                <p className="text-ink-muted leading-snug text-[0.88rem]">
                   {p.description}
                 </p>
               </div>
@@ -289,20 +304,18 @@ export default function Home() {
       </section>
 
       {/* ---------- CHAPTER IV · TESTIMONIAL ---------- */}
-      <section className="bg-paper py-32 md:py-44 relative">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14 text-center">
-          <div className="rule-label justify-center font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60 mb-12 inline-flex">
+      <section className="bg-paper py-16 md:py-20 relative border-t border-ink/10">
+        <div className="max-w-[900px] mx-auto px-6 md:px-10 lg:px-14 text-center">
+          <div className="rule-label justify-center font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-ink/60 mb-6 inline-flex">
             <span>Chapter IV · Word From a Traveler</span>
           </div>
-          <blockquote className="pullquote text-[clamp(2rem,5vw,5rem)] leading-[1.02] max-w-4xl mx-auto reveal">
-            &ldquo;Everything was handled—
+          <blockquote className="font-display italic text-[clamp(1.25rem,2.3vw,1.9rem)] leading-[1.3] max-w-3xl mx-auto reveal">
+            &ldquo;Everything was handled,{" "}
             <span className="not-italic font-display text-gold">every detail</span>
-            —from the playing facilities to the hotel to the little dinner
-            spots our boys still talk about. We have been on many trips.
-            None like this.&rdquo;
+            , from the playing facilities to the hotel to the little dinner spots our boys still talk about. We have been on many trips. None like this.&rdquo;
           </blockquote>
-          <div className="mt-14 flex flex-col items-center gap-2">
-            <svg width="60" height="12" viewBox="0 0 60 12" className="text-gold">
+          <div className="mt-8 flex flex-col items-center gap-1">
+            <svg width="48" height="10" viewBox="0 0 60 12" className="text-gold">
               {[0, 12, 24, 36, 48].map((x) => (
                 <path
                   key={x}
@@ -311,8 +324,8 @@ export default function Home() {
                 />
               ))}
             </svg>
-            <p className="font-display text-2xl mt-4">Jon Taylor</p>
-            <p className="font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60">
+            <p className="font-display text-lg mt-3">Jon Taylor</p>
+            <p className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/60">
               Colne Academy · United Kingdom
             </p>
           </div>
@@ -320,20 +333,19 @@ export default function Home() {
       </section>
 
       {/* ---------- CHAPTER V · CTA ---------- */}
-      <section className="bg-ink text-paper py-40 relative overflow-hidden">
+      <section className="bg-ink text-paper py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 stripes opacity-[0.04]" />
-        <div className="max-w-[1680px] mx-auto px-6 md:px-10 lg:px-14 relative">
-          <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-paper/60 mb-14">
-            <span>Chapter V · The Invitation</span>
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14 relative">
+          <div className="flex items-baseline gap-4 mb-4">
+            <span className="chapter-num text-4xl leading-none text-gold">V</span>
+            <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-paper/60">
+              <span>The Invitation</span>
+            </div>
           </div>
-          <h2 className="font-display text-[clamp(3rem,11vw,12rem)] leading-[0.82] tracking-[-0.005em] max-w-[15ch]">
-            Tell us who
-            <br />
-            you&apos;re bringing.
-            <br />
-            <span className="font-display-italic text-gold">We&apos;ll build the rest.</span>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] leading-[0.95] tracking-[-0.005em] max-w-[22ch]">
+            Tell us who you&apos;re bringing. <span className="font-display-italic text-gold">We&apos;ll build the rest.</span>
           </h2>
-          <div className="mt-16 flex flex-wrap gap-5">
+          <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact" className="btn-editorial on-dark">
               Start the Conversation
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none">

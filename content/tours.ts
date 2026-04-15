@@ -10,7 +10,7 @@ export interface Tour {
   duration: string;
   groupSize: string;
   includes: string[];
-  itinerary: { day: string; title: string; detail: string }[];
+  itinerary: { day: string; title: string; detail: string; image?: string }[];
   accent: string;
 }
 
@@ -249,6 +249,7 @@ export const TOURS: Tour[] = [
         day: "II",
         title: "Boqueria & Tablao",
         detail: "Morning city tour through Las Ramblas and La Boqueria, lunch at Port Olímpic, flamenco dinner show at night.",
+        image: "/photos/sabores-de-espana-hero.jpg",
       },
       {
         day: "III",
@@ -274,11 +275,13 @@ export const TOURS: Tour[] = [
         day: "VII",
         title: "Pamplona · Navarra",
         detail: "Full day on the Running of the Bulls route, tapas lunch on Calle Estafeta, D.O. Navarra bodega and Navarrese farewell dinner.",
+        image: "/photos/it-pamplona.jpg",
       },
       {
         day: "VIII",
         title: "Bilbao · Guggenheim",
         detail: "Guided Guggenheim visit, lunch at Mercado de la Ribera, afternoon stroll through Casco Viejo.",
+        image: "/photos/it-bilbao-guggenheim.jpg",
       },
       {
         day: "IX",
@@ -320,16 +323,19 @@ export const TOURS: Tour[] = [
         day: "II",
         title: "The Prado",
         detail: "Morning with an art historian at the Prado, leisurely lunch in Barrio de las Letras, free afternoon in Retiro.",
+        image: "/photos/it-madrid-prado.jpg",
       },
       {
         day: "III",
         title: "Córdoba · Mezquita",
         detail: "Scenic coach through La Mancha, arrival in the Jewish Quarter, guided hour inside the Mezquita.",
+        image: "/photos/it-cordoba-mezquita.jpg",
       },
       {
         day: "IV",
         title: "Sevilla · Flamenco",
         detail: "Morning coach via Carmona, afternoon at the Real Alcázar, evening flamenco tablao with tapas dinner.",
+        image: "/photos/it-sevilla-alcazar.jpg",
       },
       {
         day: "V",
@@ -345,6 +351,7 @@ export const TOURS: Tour[] = [
         day: "VII",
         title: "The Alhambra",
         detail: "Full day inside the Nasrid Palaces and Generalife with a specialist, afternoon Arab baths, farewell dinner with live guitar.",
+        image: "/photos/flamenco-moorish-spain-hero.jpg",
       },
       {
         day: "VIII",
@@ -381,6 +388,7 @@ export const TOURS: Tour[] = [
         day: "I",
         title: "Arrival · Sarria",
         detail: "Santiago airport pickup, transfer to Sarria, pilgrim briefing, credential handed out, welcome Galician dinner.",
+        image: "/photos/it-sarria.jpg",
       },
       {
         day: "II",
@@ -406,11 +414,13 @@ export const TOURS: Tour[] = [
         day: "VI",
         title: "Monte do Gozo → Santiago",
         detail: "The final twenty kilometers. First view from Monte do Gozo, triumphant entry into the Praza do Obradoiro, Compostela certificate, Pilgrim's Mass, celebratory dinner.",
+        image: "/photos/it-santiago-obradoiro.jpg",
       },
       {
         day: "VII",
         title: "Santiago Cathedral",
         detail: "Rest day. Private tour of the Cathedral, Museum and rooftops, free afternoon, farewell dinner at a Michelin-recommended Galician restaurant.",
+        image: "/photos/camino-de-santiago-hero.jpg",
       },
       {
         day: "VIII",

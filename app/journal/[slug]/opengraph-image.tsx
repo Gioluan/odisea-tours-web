@@ -3,15 +3,7 @@ import { POSTS, postBySlug } from "@/content/journal";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-
-export function generateImageMetadata() {
-  return POSTS.map((p) => ({
-    id: p.slug,
-    alt: `${p.title} ${p.italicTitle ?? ""}`.trim(),
-    size,
-    contentType,
-  }));
-}
+export const alt = "Odisea Tours — The Journal";
 
 export async function generateStaticParams() {
   return POSTS.map((p) => ({ slug: p.slug }));

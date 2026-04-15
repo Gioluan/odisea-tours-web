@@ -11,57 +11,97 @@ export const metadata = {
 export default function ToursIndex() {
   return (
     <>
-      {/* Header */}
-      <section className="pt-40 pb-24 px-6 md:px-10 lg:px-14">
-        <div className="max-w-[1680px] mx-auto">
-          <div className="flex items-end justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60 mb-10">
-            <span>Index · All Chapters</span>
+      {/* Hero with background photo */}
+      <section className="relative pt-28 pb-12 md:pt-32 md:pb-16 bg-ink isolate overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/photos/it-pamplona.jpg"
+            alt=""
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-ink/65" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-transparent to-ink" />
+        </div>
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14 text-paper">
+          <div className="flex items-center justify-between font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-paper/70 mb-4">
+            <span>Chapter I · Index</span>
             <span>07 Tour Experiences</span>
           </div>
-          <h1 className="font-display text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.01em]">
-            Tour
-            <br />
-            <span className="font-display-italic text-gold">Experiences.</span>
+          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
+            Tour <span className="font-display-italic text-gold">Experiences.</span>
           </h1>
-          <p className="mt-10 max-w-xl text-lg text-ink/75 leading-relaxed">
-            Seven ways to travel through Spain with us. Each one built from the
-            ground up for groups, from a handful of friends to a corporate team
-            of a hundred. Pick a chapter; we&apos;ll write the rest together.
+          <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
+            Seven ways to travel through Spain with us. Each one built from the ground up for groups, from a handful of friends to a corporate team of a hundred.
           </p>
         </div>
       </section>
 
       {/* List */}
-      <section className="pb-40">
-        <div className="max-w-[1680px] mx-auto">
+      <section className="pb-16 md:pb-20 paper-texture">
+        <div className="max-w-[1200px] mx-auto">
           {TOURS.map((tour, i) => (
             <Link
               key={tour.slug}
               href={`/tours/${tour.slug}`}
-              className="group block border-t border-ink/15 relative"
+              className="group block border-t border-ink/15 relative isolate overflow-hidden"
             >
-              <div className="grid md:grid-cols-12 gap-8 items-center px-6 md:px-10 lg:px-14 py-12 md:py-16 transition-colors duration-700 hover:bg-ink hover:text-paper">
-                <div className="md:col-span-1 font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase opacity-60">
+              {/* Mobile: full-row background photo + gradient */}
+              <div className="absolute inset-0 -z-0 md:hidden">
+                <Image
+                  src={tour.image}
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
+              </div>
+
+              <div className="relative z-10 grid md:grid-cols-12 gap-3 md:gap-6 items-center px-6 md:px-10 lg:px-14 py-8 md:py-6 text-paper md:text-ink min-h-[180px] md:min-h-0">
+                {/* Desktop thumbnail (always visible) */}
+                <div className="hidden md:block md:col-span-3">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+                    <Image
+                      src={tour.image}
+                      alt={tour.title}
+                      fill
+                      className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
+                      sizes="(max-width: 1200px) 25vw, 300px"
+                    />
+                    <div className="absolute inset-0 ring-1 ring-inset ring-ink/10 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
+                    <span className="absolute top-2 left-2 font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase bg-ink/70 backdrop-blur-sm text-paper px-1.5 py-0.5 rounded-sm">
+                      Ch. {tour.chapter}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Chapter label (mobile only, desktop uses badge above) */}
+                <div className="md:hidden font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase opacity-70">
                   Ch. {tour.chapter}
                 </div>
-                <div className="md:col-span-5">
-                  <h2 className="font-display text-[clamp(3rem,7vw,6rem)] leading-[0.88] tracking-tight">
-                    {tour.title}
-                    <br />
+
+                <div className="md:col-span-4">
+                  <h2 className="font-display text-2xl md:text-[1.75rem] leading-[1.1] tracking-tight group-hover:text-gold transition-colors duration-300">
+                    {tour.title}{" "}
                     <span className="font-display-italic text-gold">
                       {tour.italicTitle}
                     </span>
                   </h2>
                 </div>
-                <p className="md:col-span-4 pullquote text-xl md:text-2xl opacity-90 max-w-sm">
+                <p className="md:col-span-3 text-[0.95rem] leading-snug opacity-90 md:opacity-80 max-w-sm">
                   {tour.tagline}
                 </p>
-                <div className="md:col-span-2 font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase opacity-70 md:text-right">
+                <div className="md:col-span-2 font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase opacity-80 md:opacity-70 md:text-right">
                   <div>{tour.duration}</div>
-                  <div className="mt-1">{tour.groupSize}</div>
-                  <div className="mt-4 inline-flex items-center gap-2">
+                  <div className="mt-0.5">{tour.groupSize}</div>
+                  <div className="mt-2 inline-flex items-center gap-2 group-hover:text-gold transition-colors duration-300">
                     Read
-                    <svg width="24" height="10" viewBox="0 0 24 10" fill="none">
+                    <svg width="18" height="8" viewBox="0 0 24 10" fill="none">
                       <path
                         d="M1 5 H23 M18 1 L23 5 L18 9"
                         stroke="currentColor"
@@ -70,18 +110,6 @@ export default function ToursIndex() {
                     </svg>
                   </div>
                 </div>
-              </div>
-
-              {/* Image preview slides in on hover — desktop */}
-              <div className="hidden md:block absolute top-0 right-0 bottom-0 w-[40%] overflow-hidden pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                <Image
-                  src={tour.image}
-                  alt=""
-                  fill
-                  className="object-cover scale-110"
-                  sizes="40vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ink/70" />
               </div>
 
               {i === TOURS.length - 1 && (

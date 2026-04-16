@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import Analytics from "@/components/Analytics";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",
@@ -160,6 +161,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <Analytics />
         <Reveal />
         <Nav />
         <main className="flex-1">{children}</main>

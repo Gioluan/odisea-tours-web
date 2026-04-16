@@ -17,6 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/journal`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE}/plan-your-tour`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE}/destinations`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${SITE}/destinations/barcelona`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${SITE}/destinations/madrid`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${SITE}/destinations/valencia`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
   ];
 
   const tourRoutes: MetadataRoute.Sitemap = TOURS.map((tour) => ({

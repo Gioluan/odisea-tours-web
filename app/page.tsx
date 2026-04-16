@@ -71,8 +71,8 @@ export default function Home() {
                     <path d="M1 5 H13 M9 1 L13 5 L9 9" stroke="currentColor" strokeWidth="1.3" />
                   </svg>
                 </Link>
-                <Link href="/contact" className="btn-editorial on-dark">
-                  Request a Proposal
+                <Link href="/plan-your-tour" className="btn-editorial on-dark">
+                  Plan Your Tour
                 </Link>
               </div>
             </div>
@@ -134,6 +134,64 @@ export default function Home() {
                 Spanish provinces
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- WHO IT'S FOR ---------- */}
+      <section className="bg-paper py-16 md:py-20 border-t border-ink/10">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14">
+          <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-ink/60 mb-10">
+            <span>Who we build tours for</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ink/15">
+            {[
+              {
+                href: "/veterans",
+                title: "Veterans & Adult Clubs",
+                desc: "Fun-first tours with matches against local Spanish sides, iconic stadium visits, great hotels and the freedom to enjoy Spain together.",
+                image: "/photos/veterans-soccer-tour-spain-match-action.jpg",
+                label: "Over-35 clubs",
+              },
+              {
+                href: "/youth",
+                title: "Youth Clubs & Academies",
+                desc: "Development-focused tours. Train at professional facilities, play Spanish youth teams, visit iconic stadiums.",
+                image: "/photos/odisea-tours-professional-coaching.jpg",
+                label: "U12 to U19",
+              },
+              {
+                href: "/schools",
+                title: "Schools & College Teams",
+                desc: "Sport plus culture, perfectly balanced. La Liga, coaching, stadium tours and the best of Spain, all wrapped in end-to-end supervision.",
+                image: "/photos/odisea-tours-group-barcelona-cathedral.jpg",
+                label: "Educational tours",
+              },
+            ].map((a) => (
+              <Link key={a.href} href={a.href} className="group bg-paper block reveal">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={a.image}
+                    alt={a.title}
+                    fill
+                    className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <span className="absolute top-3 left-3 font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase bg-ink/70 backdrop-blur-sm text-paper px-2 py-0.5 rounded-sm">
+                    {a.label}
+                  </span>
+                </div>
+                <div className="p-6 md:p-8">
+                  <h3 className="font-display text-xl leading-tight tracking-tight text-ink group-hover:text-gold transition-colors mb-2">
+                    {a.title}
+                  </h3>
+                  <p className="text-ink-muted text-sm leading-snug">
+                    {a.desc}
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -413,7 +471,7 @@ export default function Home() {
             Tell us who you&apos;re bringing. <span className="font-display-italic text-gold">We&apos;ll build the rest.</span>
           </h2>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="btn-editorial on-dark">
+            <Link href="/plan-your-tour" className="btn-editorial on-dark">
               Start the Conversation
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                 <path d="M1 5 H13 M9 1 L13 5 L9 9" stroke="currentColor" strokeWidth="1.3" />

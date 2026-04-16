@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="95" fill="#CE1126"/>
+  <circle cx="100" cy="100" r="80" fill="#CE1126" stroke="#FEDD00" stroke-width="4"/>
+  <text x="100" y="80" text-anchor="middle" fill="#FEDD00" font-size="32" font-weight="bold" font-family="Arial, sans-serif">RFEF</text>
+  <text x="100" y="110" text-anchor="middle" fill="#FEDD00" font-size="11" font-weight="bold" font-family="Arial, sans-serif">REAL FEDERACION</text>
+  <text x="100" y="126" text-anchor="middle" fill="#FEDD00" font-size="11" font-weight="bold" font-family="Arial, sans-serif">ESPAÑOLA DE FUTBOL</text>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#FEDD00" stroke-width="1.5"/>
+</svg>

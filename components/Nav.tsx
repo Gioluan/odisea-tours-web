@@ -5,9 +5,8 @@ import { useEffect, useState } from "react";
 
 const LINKS = [
   { href: "/tours", label: "Tours", num: "I" },
-  { href: "/about", label: "Origin", num: "II" },
+  { href: "/team", label: "Team", num: "II" },
   { href: "/journal", label: "Journal", num: "III" },
-  { href: "/contact", label: "Inquire", num: "IV" },
 ];
 
 export default function Nav() {
@@ -68,11 +67,11 @@ export default function Nav() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/plan-your-tour"
               className={`btn-editorial ${useLightStyle ? "" : "on-dark"}`}
             >
               <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-              Request a Tour
+              Plan Your Tour
             </Link>
           </nav>
 

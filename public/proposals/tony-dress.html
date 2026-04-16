@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Odisea Tours | Private Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-dark: #050d1a;
+    --navy-light: #132340;
+    --orange: #f97316;
+    --orange-dark: #ea580c;
+    --orange-light: #fb923c;
+    --sand: #fef3e7;
+    --sand-light: #fff8ef;
+    --cream: #faf5ee;
+    --text: #0a1628;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --red: #dc2626;
+    --gold: #f59e0b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* SLIDES */
+  .deck {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  .slide {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    padding: 64px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide-inner { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 2; }
+
+  /* Slide number */
+  .slide-num {
+    position: absolute;
+    top: 36px;
+    right: 48px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    z-index: 5;
+  }
+
+  /* Typography */
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(48px, 6vw, 92px);
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: clamp(36px, 4.5vw, 64px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  h3 {
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+  p { font-size: 18px; line-height: 1.65; color: var(--text-muted); }
+  p.lead { font-size: 22px; color: var(--text); max-width: 760px; }
+  .accent { color: var(--orange); }
+  .text-white { color: white !important; }
+  .text-white-muted { color: rgba(255,255,255,0.65); }
+  strong { color: var(--text); font-weight: 700; }
+  .text-white strong, .text-white-muted strong { color: white; }
+
+  /* Slide 1: HERO */
+  .hero {
+    background:
+      radial-gradient(ellipse at top right, rgba(249,115,22,0.15), transparent 60%),
+      radial-gradient(ellipse at bottom left, rgba(220,38,38,0.08), transparent 60%),
+      linear-gradient(135deg, #050d1a 0%, #0a1628 40%, #132340 100%);
+    color: white;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 2px 2px, rgba(255,255,255,0.06) 1px, transparent 0);
+    background-size: 48px 48px;
+    opacity: 0.5;
+  }
+  .hero-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 64px;
+  }
+  .logo-mark {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    box-shadow: 0 20px 40px -10px rgba(249,115,22,0.4);
+  }
+  .logo-wordmark {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .logo-wordmark span { color: var(--orange); }
+  .hero h1 { color: white; }
+  .hero h1 .big { display: block; font-size: 1.2em; }
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 48px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .hero-meta .divider {
+    width: 40px;
+    height: 2px;
+    background: var(--orange);
+    border-radius: 2px;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 32px;
+  }
+  .flag { font-size: 16px; }
+  .scroll-hint {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.4);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+  .scroll-arrow {
+    width: 20px;
+    height: 32px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+  }
+  .scroll-arrow::after {
+    content: '';
+    width: 3px;
+    height: 8px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 2px;
+  }
+
+  /* Slide: THE OPPORTUNITY */
+  .opportunity {
+    background: var(--cream);
+  }
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .split-visual {
+    aspect-ratio: 1;
+    border-radius: 32px;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(249,115,22,0.35), transparent 60%),
+      linear-gradient(135deg, #0a1628, #132340);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 160px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 50px 100px -30px rgba(10,22,40,0.4);
+  }
+  .split-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 2px 2px, rgba(255,255,255,0.08) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+
+  /* Slide: CREDIBILITY */
+  .credibility {
+    background: var(--navy);
+    color: white;
+  }
+  .credibility::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(249,115,22,0.15), transparent 50%);
+  }
+  .badges {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+  }
+  .badge {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .badge:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(249,115,22,0.3);
+  }
+  .badge-logo {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .badge-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+  }
+  .badge-name { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.8); }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Slide: PRODUCTS */
+  .products {
+    background: var(--sand-light);
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .product-card {
+    background: white;
+    border-radius: 24px;
+    padding: 36px 32px;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  .product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+  }
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 40px 80px -20px rgba(249,115,22,0.15);
+    border-color: rgba(249,115,22,0.3);
+  }
+  .product-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+  .product-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--navy);
+  }
+  .product-card .price {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .product-card p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .product-card .features {
+    list-style: none;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .product-card .features li {
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .product-card .features li::before {
+    content: '✓';
+    color: var(--orange);
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .new-tag {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: var(--orange);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Slide: COMMISSION (the big money slide) */
+  .commission {
+    background:
+      radial-gradient(ellipse at top left, rgba(249,115,22,0.2), transparent 50%),
+      linear-gradient(135deg, #0a1628, #050d1a);
+    color: white;
+  }
+  .big-number {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(120px, 16vw, 240px);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--orange-light), var(--orange), var(--red));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 20px 40px rgba(249,115,22,0.3));
+  }
+  .commission .lead {
+    color: rgba(255,255,255,0.75);
+    max-width: 680px;
+  }
+  .commission-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+  .commission-feature {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .commission-feature-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .commission-feature-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+  }
+
+  /* Slide: EARNINGS TABLE */
+  .earnings {
+    background: var(--cream);
+  }
+  .table-wrap {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px -20px rgba(10,22,40,0.15);
+    margin-top: 48px;
+    border: 1px solid var(--border);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead {
+    background: var(--navy);
+    color: white;
+  }
+  th {
+    padding: 20px 24px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  th.right { text-align: right; }
+  td {
+    padding: 22px 24px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--sand-light); }
+  td.right { text-align: right; font-weight: 800; color: var(--orange); font-size: 20px; }
+  .group-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .group-icon-bg {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--sand);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .total-row td {
+    background: var(--navy);
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .total-row td.right { color: var(--orange-light); font-size: 26px; }
+
+  /* Slide: HOW IT WORKS */
+  .workflow {
+    background: var(--navy);
+    color: white;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 56px;
+    position: relative;
+  }
+  .step {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 28px 24px;
+    position: relative;
+  }
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+    color: white;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 10px 30px -8px rgba(249,115,22,0.5);
+  }
+  .step h4 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: white;
+  }
+  .step p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+  .workflow-highlight {
+    margin-top: 48px;
+    padding: 24px 32px;
+    background: rgba(249,115,22,0.1);
+    border: 1px solid rgba(249,115,22,0.3);
+    border-radius: 16px;
+    font-size: 17px;
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+  }
+  .workflow-highlight strong { color: var(--orange-light); }
+
+  /* Slide: WHAT YOU GET */
+  .support {
+    background: var(--sand-light);
+  }
+  .support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .support-item {
+    background: white;
+    border-radius: 16px;
+    padding: 24px 28px;
+    border: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .support-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--sand), var(--sand-light));
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .support-item h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .support-item p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Slide: CLOSING */
+  .closing {
+    background:
+      radial-gradient(ellipse at bottom, rgba(249,115,22,0.25), transparent 60%),
+      linear-gradient(135deg, #050d1a, #0a1628 60%, #132340);
+    color: white;
+    text-align: center;
+  }
+  .closing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+    background-size: 48px 48px;
+  }
+  .closing .slide-inner { text-align: center; }
+  .closing h1 { color: white; font-size: clamp(56px, 7vw, 104px); }
+  .closing .accent { background: linear-gradient(135deg, var(--orange-light), var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .closing .lead { color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 48px; }
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 22px 44px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 30px 60px -15px rgba(249,115,22,0.5);
+    transition: all 0.3s;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 40px 80px -15px rgba(249,115,22,0.6); }
+  .signature {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .signature-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 4px;
+  }
+  .signature-title {
+    font-size: 14px;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .signature-contact {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+  }
+
+  /* Nav dots */
+  .nav-dots {
+    position: fixed;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 100;
+  }
+  .nav-dots a {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(10,22,40,0.2);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .nav-dots a:hover { background: var(--orange); transform: scale(1.3); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .slide { padding: 48px 32px; }
+    .split { grid-template-columns: 1fr; gap: 40px; }
+    .split-visual { font-size: 100px; }
+    .product-grid, .badges, .steps, .commission-features, .stats, .support-grid { grid-template-columns: 1fr; }
+    .badges { grid-template-columns: repeat(2, 1fr); }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .nav-dots { display: none; }
+  }
+
+  /* LOCK SCREEN */
+  .lock {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    background:
+      radial-gradient(ellipse at top right, rgba(249,115,22,0.18), transparent 55%),
+      radial-gradient(ellipse at bottom left, rgba(220,38,38,0.08), transparent 60%),
+      linear-gradient(135deg, #050d1a 0%, #0a1628 40%, #132340 100%);
+  }
+  .lock::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.06) 1px, transparent 0);
+    background-size: 48px 48px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .lock-card {
+    position: relative;
+    z-index: 2;
+    max-width: 440px;
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 28px;
+    padding: 48px 40px;
+    text-align: center;
+    box-shadow: 0 50px 100px -30px rgba(0,0,0,0.6);
+  }
+  .lock-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .lock-logo .logo-mark {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+    font-size: 18px;
+    box-shadow: 0 20px 40px -10px rgba(249,115,22,0.5);
+  }
+  .lock-logo .logo-wordmark {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.01em;
+  }
+  .lock-logo .logo-wordmark span { color: var(--orange); }
+  .lock-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    background: rgba(249,115,22,0.12);
+    border: 1px solid rgba(249,115,22,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 24px;
+  }
+  .lock h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+  }
+  .lock p {
+    color: rgba(255,255,255,0.55);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+  .lock-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .lock-input {
+    width: 100%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 16px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .lock-input::placeholder {
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.1em;
+    text-transform: none;
+  }
+  .lock-input:focus {
+    outline: none;
+    border-color: var(--orange);
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 0 0 4px rgba(249,115,22,0.15);
+  }
+  .lock-input.error {
+    border-color: var(--red);
+    animation: shake 0.4s;
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+  }
+  .lock-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+    color: white;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 20px 40px -10px rgba(249,115,22,0.4);
+    letter-spacing: 0.02em;
+  }
+  .lock-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 25px 50px -10px rgba(249,115,22,0.5);
+  }
+  .lock-error {
+    color: #fca5a5;
+    font-size: 13px;
+    margin-top: 4px;
+    min-height: 18px;
+    font-weight: 600;
+  }
+  .lock-footer {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.35);
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .deck { display: none; }
+  body.unlocked .lock { display: none; }
+  body.unlocked .deck { display: block; }
+
+  /* Print: one slide per page */
+  @media print {
+    @page { size: A4 landscape; margin: 0; }
+    body { background: white; }
+    .deck { height: auto; overflow: visible; }
+    .slide { min-height: 100vh; page-break-after: always; break-after: page; }
+    .nav-dots, .scroll-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="lock" id="lock">
+  <div class="lock-card">
+    <div class="lock-logo">
+      <div class="logo-mark">OT</div>
+      <div class="logo-wordmark">Odisea<span>Tours</span></div>
+    </div>
+    <div class="lock-icon">🔒</div>
+    <h1>Private proposal</h1>
+    <p>This document is shared privately. Enter the access code to continue.</p>
+    <form class="lock-form" id="lockForm" autocomplete="off">
+      <input
+        type="password"
+        id="lockInput"
+        class="lock-input"
+        placeholder="Access code"
+        autofocus
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button type="submit" class="lock-btn">Unlock proposal</button>
+      <div class="lock-error" id="lockError">&nbsp;</div>
+    </form>
+    <div class="lock-footer">
+      Prepared by Juan Sanchez &middot; odisea-tours.com
+    </div>
+  </div>
+</div>
+
+<nav class="nav-dots" aria-label="Slide navigation">
+  <a href="#s1" title="Cover"></a>
+  <a href="#s2" title="The opportunity"></a>
+  <a href="#s3" title="Who we are"></a>
+  <a href="#s4" title="Product lines"></a>
+  <a href="#s5" title="Commission"></a>
+  <a href="#s6" title="Earnings"></a>
+  <a href="#s7" title="How it works"></a>
+  <a href="#s8" title="Support"></a>
+  <a href="#s9" title="Next steps"></a>
+</nav>
+
+<div class="deck">
+
+  <!-- SLIDE 1: HERO -->
+  <section class="slide hero" id="s1">
+    <span class="slide-num">01 / 09</span>
+    <div class="slide-inner">
+      <div class="hero-logo">
+        <div class="logo-mark">OT</div>
+        <div class="logo-wordmark">Odisea<span>Tours</span></div>
+      </div>
+      <div class="hero-badge">
+        <span class="flag">🇪🇸</span>
+        <span>Confidential partnership proposal</span>
+      </div>
+      <h1>
+        A new chapter
+        <br />
+        <span class="big accent">for Tony Dress.</span>
+      </h1>
+      <p class="lead" style="color: rgba(255,255,255,0.65); max-width: 720px;">
+        After Sabores de España, we want to turn this into a repeatable pipeline. Cultural groups, soccer groups, and softball groups. You source them. We run them. You earn.
+      </p>
+      <div class="hero-meta">
+        <span>April 15, 2026</span>
+        <div class="divider"></div>
+        <span>Prepared by Juan Sanchez</span>
+        <div class="divider"></div>
+        <span>For Tony Dress only</span>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: THE OPPORTUNITY -->
+  <section class="slide opportunity" id="s2">
+    <span class="slide-num">02 / 09</span>
+    <div class="slide-inner">
+      <div class="split">
+        <div>
+          <span class="eyebrow">The Opportunity</span>
+          <h2>You bring the group.<br /><span class="accent">We run everything else.</span></h2>
+          <p class="lead" style="margin-bottom: 24px;">
+            Odisea Tours has been organizing group travel in Spain since 2005. We know every pitch, every hotel, every hidden plaza, and every bilingual guide worth trusting.
+          </p>
+          <p class="lead">
+            You already proved with Sabores de España that you know how to build a group. Now imagine turning that into <strong>3, 5, or 10 groups a year</strong>, with zero logistics on your shoulders.
+          </p>
+        </div>
+        <div class="split-visual">
+          <div style="position: relative; z-index: 2;">⚽</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: WHO WE ARE -->
+  <section class="slide credibility" id="s3">
+    <span class="slide-num">03 / 09</span>
+    <div class="slide-inner">
+      <span class="eyebrow">Who We Are</span>
+      <h2 class="text-white">Trusted by the best<br />clubs in Spain.</h2>
+      <p class="lead text-white-muted">
+        Since 2005, we have been the operational partner behind hundreds of group travel programs. Soccer academies, cultural tours, school trips, and everything in between.
+      </p>
+      <div class="badges">
+        <div class="badge">
+          <div class="badge-logo"><img src="/badges/fc-barcelona.svg" alt="FC Barcelona badge" /></div>
+          <div class="badge-name">FC Barcelona</div>
+        </div>
+        <div class="badge">
+          <div class="badge-logo"><img src="/badges/valencia-cf.svg" alt="Valencia CF badge" /></div>
+          <div class="badge-name">Valencia CF</div>
+        </div>
+        <div class="badge">
+          <div class="badge-logo"><img src="/badges/real-madrid-badge.webp" alt="Real Madrid CF badge" /></div>
+          <div class="badge-name">Real Madrid</div>
+        </div>
+        <div class="badge">
+          <div class="badge-logo"><img src="/badges/rfef-badge.png" alt="Spanish Football Federation (RFEF) badge" /></div>
+          <div class="badge-name">Spanish FA</div>
+        </div>
+        <div class="badge">
+          <div class="badge-logo"><img src="/badges/malaga-cf-badge.png" alt="Málaga CF badge" /></div>
+          <div class="badge-name">Málaga CF</div>
+        </div>
+      </div>
+      <div class="stats">
+        <div>
+          <div class="stat-num">20+</div>
+          <div class="stat-label">Years on the ground</div>
+        </div>
+        <div>
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Groups delivered</div>
+        </div>
+        <div>
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Bilingual support</div>
+        </div>
+        <div>
+          <div class="stat-num">0</div>
+          <div class="stat-label">PDFs and goodbyes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: PRODUCT LINES -->
+  <section class="slide products" id="s4">
+    <span class="slide-num">04 / 09</span>
+    <div class="slide-inner">
+      <span class="eyebrow">Three Product Lines</span>
+      <h2>Everything you can sell<br /><span class="accent">to the US market.</span></h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-icon">🍷</div>
+          <h3>Cultural &amp; Culinary</h3>
+          <div class="price">€2,350 to €2,900 per person</div>
+          <p>The Sabores de España model. Adult groups, 15 to 30 pax, 7 to 10 nights, wine regions, cooking classes, history and gastronomy.</p>
+          <ul class="features">
+            <li>Sabores de España (BCN to Bilbao)</li>
+            <li>Flamenco &amp; Moorish Spain (Madrid to Granada)</li>
+            <li>Camino Lite</li>
+            <li>Custom themes on request</li>
+          </ul>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">⚽</div>
+          <h3>Soccer Tours</h3>
+          <div class="price">$2,800 to $3,800 per person</div>
+          <p>Our core product. Youth academies, high schools, colleges, veterans and women's squads. Train where the pros train, play the locals.</p>
+          <ul class="features">
+            <li>Training at FC Barcelona &amp; Valencia CF</li>
+            <li>Matches vs Spanish clubs</li>
+            <li>Camp Nou &amp; Bernabéu stadium tours</li>
+            <li>La Liga match tickets</li>
+          </ul>
+        </div>
+        <div class="product-card">
+          <span class="new-tag">New</span>
+          <div class="product-icon">🥎</div>
+          <h3>Softball Tours</h3>
+          <div class="price">$2,700 to $3,600 per person</div>
+          <p>An open lane in Spain. US high school and college softball teams have almost no Spain option on the market. You can be first in.</p>
+          <ul class="features">
+            <li>Training with Spanish women's clubs</li>
+            <li>Friendly games in BCN, Madrid, Valencia</li>
+            <li>Family friendly cultural day visits</li>
+            <li>RFEBS federation access</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: THE BIG NUMBER -->
+  <section class="slide commission" id="s5">
+    <span class="slide-num">05 / 09</span>
+    <div class="slide-inner">
+      <span class="eyebrow">Your Commission</span>
+      <div class="big-number">$150</div>
+      <h3 class="text-white" style="font-size: 32px; font-weight: 800; margin-bottom: 16px;">per traveler, every time.</h3>
+      <p class="lead">
+        Flat, transparent, and on top of the group price. You never negotiate your cut. You never chase an invoice. You source, we ship, you get paid within 30 days of the group returning home.
+      </p>
+      <div class="commission-features">
+        <div class="commission-feature">
+          <div class="commission-feature-label">Minimum</div>
+          <div class="commission-feature-value">None</div>
+        </div>
+        <div class="commission-feature">
+          <div class="commission-feature-label">Cap</div>
+          <div class="commission-feature-value">None</div>
+        </div>
+        <div class="commission-feature">
+          <div class="commission-feature-label">Payment</div>
+          <div class="commission-feature-value">30 days after departure</div>
+        </div>
+        <div class="commission-feature">
+          <div class="commission-feature-label">Client pays</div>
+          <div class="commission-feature-value">Odisea absorbs it</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: EARNINGS TABLE -->
+  <section class="slide earnings" id="s6">
+    <span class="slide-num">06 / 09</span>
+    <div class="slide-inner">
+      <span class="eyebrow">What This Looks Like</span>
+      <h2>Real groups.<br /><span class="accent">Real earnings.</span></h2>
+      <p class="lead">A realistic first year. Three to five groups is an achievable target for someone with your network.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Group type</th>
+              <th style="text-align: center;">Pax</th>
+              <th class="right">Your commission</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="group-icon"><span class="group-icon-bg">🍷</span> Culinary adults (Sabores)</span></td>
+              <td style="text-align: center;">20</td>
+              <td class="right">$3,000</td>
+            </tr>
+            <tr>
+              <td><span class="group-icon"><span class="group-icon-bg">⚽</span> Youth soccer club</span></td>
+              <td style="text-align: center;">24</td>
+              <td class="right">$3,600</td>
+            </tr>
+            <tr>
+              <td><span class="group-icon"><span class="group-icon-bg">🥎</span> High school softball</span></td>
+              <td style="text-align: center;">18</td>
+              <td class="right">$2,700</td>
+            </tr>
+            <tr>
+              <td><span class="group-icon"><span class="group-icon-bg">🎓</span> College soccer team</span></td>
+              <td style="text-align: center;">30</td>
+              <td class="right">$4,500</td>
+            </tr>
+            <tr>
+              <td><span class="group-icon"><span class="group-icon-bg">🍺</span> Veterans soccer tour</span></td>
+              <td style="text-align: center;">22</td>
+              <td class="right">$3,300</td>
+            </tr>
+            <tr class="total-row">
+              <td><strong>First year total (5 groups)</strong></td>
+              <td style="text-align: center;"><strong>114</strong></td>
+              <td class="right">$17,100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: HOW IT WORKS -->
+  <section class="slide workflow" id="s7">
+    <span class="slide-num">07 / 09</span>
+    <div class="slide-inner">
+      <span class="eyebrow">How It Works</span>
+      <h2 class="text-white">Four steps.<br /><span class="accent">That is the whole process.</span></h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>You find the group</h4>
+          <p>School, club, league, private travel group. Anyone interested in Spain or Europe (yes, we run Italy, Germany and Netherlands too).</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>You intro to us</h4>
+          <p>Send us the contact, rough dates, size, and interest. One email is enough.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>We quote &amp; close</h4>
+          <p>Branded proposal in 5 business days. We join the sales call if you want.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>We deliver, you get paid</h4>
+          <p>Odisea runs the tour. $150 per pax wired 30 days after departure.</p>
+        </div>
+      </div>
+      <div class="workflow-highlight">
+        You never touch a vendor. You never chase a hotel. You never worry about a bus driver. <strong>Your job ends when the intro is made.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: WHAT YOU GET -->
+  <section class="slide support" id="s8">
+    <span class="slide-num">08 / 09</span>
+    <div class="slide-inner">
+      <span class="eyebrow">What You Get From Us</span>
+      <h2>Everything you need<br /><span class="accent">to sell confidently.</span></h2>
+      <div class="support-grid">
+        <div class="support-item">
+          <div class="support-icon">📄</div>
+          <div>
+            <h4>Sample itineraries</h4>
+            <p>Pre-built decks for culinary, soccer, and softball tours. Ready to forward to a client today.</p>
+          </div>
+        </div>
+        <div class="support-item">
+          <div class="support-icon">🎨</div>
+          <div>
+            <h4>Co-branded proposals</h4>
+            <p>We can build every quote as "Tony Dress presents" if you want to own the client relationship.</p>
+          </div>
+        </div>
+        <div class="support-item">
+          <div class="support-icon">📸</div>
+          <div>
+            <h4>Photo &amp; video library</h4>
+            <p>Real tour photos, drone footage, client testimonials. All yours to use in your sales material.</p>
+          </div>
+        </div>
+        <div class="support-item">
+          <div class="support-icon">📞</div>
+          <div>
+            <h4>Direct line to Juan</h4>
+            <p>No ticket systems. You text, I answer. Usually within the hour.</p>
+          </div>
+        </div>
+        <div class="support-item">
+          <div class="support-icon">✈️</div>
+          <div>
+            <h4>FAM trip to Spain</h4>
+            <p>Annual visit at our cost to see operations and meet partners. Conditional on one booked group that year.</p>
+          </div>
+        </div>
+        <div class="support-item">
+          <div class="support-icon">🤝</div>
+          <div>
+            <h4>One page agreement</h4>
+            <p>No fine print, no lawyers. A clean letter confirming the $150 per pax terms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: CLOSING -->
+  <section class="slide closing" id="s9">
+    <span class="slide-num">09 / 09</span>
+    <div class="slide-inner">
+      <span class="eyebrow">Next Steps</span>
+      <h1>Let's build<br /><span class="accent">something real.</span></h1>
+      <p class="lead">
+        Read this over. Sit with it. Then let's jump on a 20 minute call next week and make it official. We can have your first sample deck in your inbox by Friday.
+      </p>
+      <a href="mailto:juan@odisea-tours.com?subject=Partnership%20proposal%20|%20yes%20let's%20talk" class="cta">
+        Book the call
+        <span>→</span>
+      </a>
+      <div class="signature">
+        <div class="signature-name">Juan Sanchez</div>
+        <div class="signature-title">Director, Odisea Tours</div>
+        <div class="signature-contact">
+          juan@odisea-tours.com<br />
+          +34 670 05 97 97<br />
+          odisea-tours.com
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  // Password gate
+  (function() {
+    const PASSWORD = 'TONY';
+    const lock = document.getElementById('lock');
+    const form = document.getElementById('lockForm');
+    const input = document.getElementById('lockInput');
+    const error = document.getElementById('lockError');
+
+    function unlock() {
+      document.body.classList.add('unlocked');
+      try { sessionStorage.setItem('tonyProposalUnlocked', '1'); } catch (e) {}
+    }
+
+    if (sessionStorage.getItem('tonyProposalUnlocked') === '1') {
+      unlock();
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const attempt = input.value.trim().toUpperCase();
+      if (attempt === PASSWORD) {
+        error.innerHTML = '&nbsp;';
+        unlock();
+      } else {
+        input.classList.remove('error');
+        void input.offsetWidth;
+        input.classList.add('error');
+        error.textContent = 'Incorrect code. Try again.';
+        input.value = '';
+        input.focus();
+      }
+    });
+
+    input.addEventListener('input', function() {
+      if (input.classList.contains('error')) {
+        input.classList.remove('error');
+        error.innerHTML = '&nbsp;';
+      }
+    });
+  })();
+</script>
+
+<script>
+  // Update nav dots based on scroll position
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.nav-dots a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const idx = Array.from(slides).indexOf(entry.target);
+        dots.forEach((d, i) => {
+          d.style.background = i === idx ? 'var(--orange)' : 'rgba(10,22,40,0.2)';
+          d.style.transform = i === idx ? 'scale(1.4)' : 'scale(1)';
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+  slides.forEach((s) => observer.observe(s));
+</script>
+
+</body>
+</html>

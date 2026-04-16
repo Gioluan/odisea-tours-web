@@ -33,9 +33,12 @@ export default function Footer() {
               </p>
               <ul className="space-y-2.5 font-display text-xl">
                 <li><Link href="/tours" className="link-rule">Tours</Link></li>
-                <li><Link href="/about" className="link-rule">Origin</Link></li>
+                <li><Link href="/veterans" className="link-rule">Veterans</Link></li>
+                <li><Link href="/youth" className="link-rule">Youth</Link></li>
+                <li><Link href="/schools" className="link-rule">Schools</Link></li>
+                <li><Link href="/team" className="link-rule">Team</Link></li>
                 <li><Link href="/journal" className="link-rule">Journal</Link></li>
-                <li><Link href="/contact" className="link-rule">Inquire</Link></li>
+                <li><Link href="/plan-your-tour" className="link-rule">Plan a Tour</Link></li>
               </ul>
             </div>
 

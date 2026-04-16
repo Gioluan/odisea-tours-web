@@ -6,6 +6,28 @@ import { POSTS, postBySlug } from "@/content/journal";
 
 const SITE = "https://odisea-tours.com";
 
+function renderParagraph(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (match) {
+      const [, linkText, href] = match;
+      const isExternal = href.startsWith("http");
+      return (
+        <a
+          key={i}
+          href={href}
+          className="text-gold-deep hover:text-gold underline underline-offset-2 transition-colors"
+          {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
+          {linkText}
+        </a>
+      );
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
+
 export function generateStaticParams() {
   return POSTS.map((p) => ({ slug: p.slug }));
 }
@@ -74,7 +96,7 @@ export default async function JournalPost({
       name: "Odisea Tours",
       logo: {
         "@type": "ImageObject",
-        url: `${SITE}/img/logo.png`,
+        url: `${SITE}/brand/favicons/Browser.png`,
       },
     },
     mainEntityOfPage: {
@@ -168,14 +190,15 @@ export default async function JournalPost({
         <div className="space-y-8 text-lg leading-[1.75] text-ink/85">
           {post.body.map((p, i) => (
             <p key={i} className={i === 0 ? "first-letter:font-display first-letter:text-7xl first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-[0.85] first-letter:text-gold" : ""}>
-              {p}
+              {renderParagraph(p)}
             </p>
           ))}
         </div>
 
         <div className="mt-16 pt-10 border-t border-ink/15 flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60">
           <Link href="/journal" className="link-rule">← All field notes</Link>
-          <Link href="/contact" className="link-rule">Plan a trip →</Link>
+          <Link href="/plan-your-tour" className="link-rule">Plan a trip →</Link>
+          <a href="https://wa.me/34670059797" target="_blank" rel="noopener noreferrer" className="font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-ink/50 hover:text-ink transition-colors link-rule">WhatsApp us</a>
         </div>
       </div>
 

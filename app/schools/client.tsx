@@ -91,10 +91,11 @@ export default function SchoolsPage() {
             <span>School & College Sport Tours</span>
           </div>
 
-          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] text-paper max-w-3xl reveal">
+          <h1 className="sr-only">School Football Tours to Spain: Educational Sport Travel</h1>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] text-paper max-w-3xl reveal">
             Sport, culture, and{" "}
             <span className="font-display-italic text-gold">memories for life.</span>
-          </h1>
+          </h2>
 
           <p className="mt-6 text-paper/60 max-w-xl text-base md:text-lg leading-relaxed reveal">
             The perfect mix of football, cultural immersion, and live sporting events.
@@ -280,11 +281,12 @@ export default function SchoolsPage() {
                 Plan a School Tour
               </Link>
               <a
-                href="mailto:juan@odisea-tours.com"
+                href="mailto:bookings@odisea-tours.com"
                 className="link-rule text-paper/50 hover:text-paper text-sm transition-colors"
               >
-                juan@odisea-tours.com
+                bookings@odisea-tours.com
               </a>
+              <a href="https://wa.me/34670059797" target="_blank" rel="noopener noreferrer" className="font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-paper/50 hover:text-paper transition-colors link-rule">WhatsApp us</a>
             </div>
           </div>
         </div>

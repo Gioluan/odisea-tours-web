@@ -14,6 +14,20 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://odisea-tours.com" },
+    { "@type": "ListItem", position: 2, name: "Plan Your Tour", item: "https://odisea-tours.com/plan-your-tour" },
+  ],
+};
+
 export default function Page() {
-  return <PlanYourTourClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <PlanYourTourClient />
+    </>
+  );
 }

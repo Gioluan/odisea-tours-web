@@ -67,6 +67,15 @@ const localBusinessSchema = {
   ],
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://odisea-tours.com" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://odisea-tours.com/contact" },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
@@ -74,12 +83,16 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero with background photo */}
       <section className="relative pt-28 pb-12 md:pt-32 md:pb-16 bg-ink isolate overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/photos/it-santiago-obradoiro.jpg"
-            alt=""
+            alt="Contact Odisea Tours for group travel in Spain"
             fill
             priority
             className="object-cover"
@@ -95,9 +108,10 @@ export default function ContactPage() {
               <span>The Invitation</span>
             </div>
           </div>
-          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[18ch]">
+          <h1 className="sr-only">Contact Odisea Tours: Spain Group Travel & Soccer Tour Specialists</h1>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[18ch]">
             Tell us <span className="font-display-italic text-gold">the story.</span>
-          </h1>
+          </h2>
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
             A real person will read every word, usually within a few hours. No autoresponder, no sales dashboard. Just a conversation.
           </p>

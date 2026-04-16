@@ -71,7 +71,7 @@ export default function TeamClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/photos/it-sarria.jpg"
-            alt=""
+            alt="Odisea Tours team on the ground in Spain since 2005"
             fill
             priority
             className="object-cover"
@@ -87,9 +87,10 @@ export default function TeamClient() {
               <span>The Team</span>
             </div>
           </div>
-          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[20ch]">
+          <h1 className="sr-only">Meet the Odisea Tours Team: Spain Tour Specialists Since 2005</h1>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[20ch]">
             A small team. <span className="font-display-italic text-gold">A long time.</span>
-          </h1>
+          </h2>
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
             Local specialists on the ground in Spain since 2005. Still small. Still independent.
             Still answering the phone ourselves.

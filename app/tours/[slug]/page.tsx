@@ -314,7 +314,7 @@ export default async function TourDetail({
               Ready to turn this into <span className="font-display-italic text-gold">your trip?</span>
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn-editorial">
+              <Link href="/plan-your-tour" className="btn-editorial">
                 Request This Experience
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                   <path
@@ -330,6 +330,7 @@ export default async function TourDetail({
               >
                 bookings@odisea-tours.com
               </a>
+              <a href="https://wa.me/34670059797" target="_blank" rel="noopener noreferrer" className="font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-ink/50 hover:text-ink transition-colors link-rule">WhatsApp us</a>
             </div>
           </div>
         </div>

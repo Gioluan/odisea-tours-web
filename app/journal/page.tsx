@@ -1,22 +1,40 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { POSTS } from "@/content/journal";
 
-export const metadata = {
-  title: "The Journal",
+export const metadata: Metadata = {
+  title: "Spain Football Tour Blog: Guides, Tips & Field Notes",
   description:
-    "Field notes on group travel, Spain, and twenty years of quietly running tours.",
+    "Insider tips, destination guides, and planning advice for organizing football tours to Spain. Written by the Odisea Tours team from 20+ years on the ground.",
+  alternates: { canonical: "/journal" },
+  openGraph: {
+    url: "https://odisea-tours.com/journal",
+    title: "Spain Football Tour Blog: Guides, Tips & Field Notes",
+    description:
+      "Insider tips, destination guides, and planning advice for organizing football tours to Spain. Written by the Odisea Tours team from 20+ years on the ground.",
+  },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://odisea-tours.com" },
+    { "@type": "ListItem", position: 2, name: "The Journal", item: "https://odisea-tours.com/journal" },
+  ],
 };
 
 export default function JournalIndex() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {/* Hero with background photo */}
       <section className="relative pt-28 pb-12 md:pt-32 md:pb-16 bg-ink isolate overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/photos/it-sevilla-alcazar.jpg"
-            alt=""
+            alt="Spain football tour field notes and travel guides"
             fill
             priority
             className="object-cover"
@@ -32,9 +50,10 @@ export default function JournalIndex() {
               <span>The Journal</span>
             </div>
           </div>
-          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
+          <h1 className="sr-only">Spain Football Tour Blog: Guides, Tips & Field Notes</h1>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
             Field <span className="font-display-italic text-gold">Notes.</span>
-          </h1>
+          </h2>
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
             Slow notes on Spain, group travel, and the small things we have learned from two decades in the field. Written by the people who run the trips.
           </p>

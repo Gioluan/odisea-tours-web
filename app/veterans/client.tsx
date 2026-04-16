@@ -100,11 +100,12 @@ export default function VeteransPage() {
             Veterans Football Tours to Spain
           </p>
 
-          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] text-paper max-w-3xl reveal">
+          <h1 className="sr-only">Veterans Football Tours to Spain for Over-35 Clubs</h1>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] text-paper max-w-3xl reveal">
             Your squad. Spanish pitches.
             <br />
             <span className="font-display-italic text-gold">Memories that last.</span>
-          </h1>
+          </h2>
 
           <p className="mt-6 text-paper/60 text-lg sm:text-xl max-w-xl leading-relaxed reveal">
             Matches against local veteran sides, iconic stadium tours,

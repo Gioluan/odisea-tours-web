@@ -60,10 +60,11 @@ export default function YouthPage() {
             <span>Youth Football Tours</span>
           </div>
 
-          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] text-paper max-w-3xl reveal">
+          <h1 className="sr-only">Youth Football Tours to Spain for Clubs & Academies</h1>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] text-paper max-w-3xl reveal">
             Train with the{" "}
             <span className="font-display-italic text-gold">best in Spain.</span>
-          </h1>
+          </h2>
 
           <p className="mt-6 text-paper/60 max-w-xl text-base md:text-lg leading-relaxed reveal">
             FC Barcelona coaches. Valencia CF facilities. Spanish FA training grounds.

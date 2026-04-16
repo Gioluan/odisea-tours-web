@@ -4,7 +4,7 @@ import Link from "next/link";
 import { TOURS } from "@/content/tours";
 
 export const metadata: Metadata = {
-  title: "Spain Group Tours — Soccer, Cultural, Camino & Corporate Experiences",
+  title: "Spain Group Tours — Soccer, Cultural & Corporate",
   description:
     "Seven group tour experiences across Spain. Youth soccer pilgrimages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats and sport and adventure. Built for groups of 10 to 120 since 2005.",
   alternates: { canonical: "https://odisea-tours.com/tours" },
@@ -16,15 +16,25 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://odisea-tours.com" },
+    { "@type": "ListItem", position: 2, name: "Tours", item: "https://odisea-tours.com/tours" },
+  ],
+};
+
 export default function ToursIndex() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {/* Hero with background photo */}
       <section className="relative pt-28 pb-12 md:pt-32 md:pb-16 bg-ink isolate overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/photos/it-pamplona.jpg"
-            alt=""
+            alt="Group soccer tours across Spain organized by Odisea Tours"
             fill
             priority
             className="object-cover"
@@ -38,9 +48,10 @@ export default function ToursIndex() {
             <span>Chapter I · Index</span>
             <span>07 Tour Experiences</span>
           </div>
-          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
+          <h1 className="sr-only">Spain Group Tours: Soccer, Cultural, Camino & Corporate Experiences</h1>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
             Tour <span className="font-display-italic text-gold">Experiences.</span>
-          </h1>
+          </h2>
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
             Seven ways to travel through Spain with us. Each one built from the ground up for groups, from a handful of friends to a corporate team of a hundred.
           </p>
@@ -83,8 +94,8 @@ export default function ToursIndex() {
               If your group does not fit one of these seven, that is normally
               the most interesting place to start a conversation. Use the form
               on{" "}
-              <Link href="/contact" className="link-rule text-gold">
-                the contact page
+              <Link href="/plan-your-tour" className="link-rule text-gold">
+                the planning page
               </Link>{" "}
               and a real person will write back the same day. Or read{" "}
               <Link href="/journal" className="link-rule text-gold">

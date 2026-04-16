@@ -61,7 +61,7 @@ export default function NotFound() {
         </div>
 
         <div className="mt-12">
-          <Link href="/contact" className="link-rule font-display text-base">
+          <Link href="/plan-your-tour" className="link-rule font-display text-base">
             Or just get in touch →
           </Link>
         </div>

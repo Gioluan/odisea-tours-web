@@ -5,8 +5,11 @@ import { useEffect, useState } from "react";
 
 const LINKS = [
   { href: "/tours", label: "Tours", num: "I" },
-  { href: "/team", label: "Team", num: "II" },
-  { href: "/journal", label: "Journal", num: "III" },
+  { href: "/veterans", label: "Veterans", num: "II" },
+  { href: "/youth", label: "Youth", num: "III" },
+  { href: "/schools", label: "Schools", num: "IV" },
+  { href: "/team", label: "Team", num: "V" },
+  { href: "/journal", label: "Journal", num: "VI" },
 ];
 
 export default function Nav() {

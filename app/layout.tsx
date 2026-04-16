@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://odisea-tours.com"),
   title: {
     default:
-      "Youth Soccer Tours, School Trips & Group Travel in Spain | Odisea Tours",
+      "Youth Soccer Tours & Group Travel in Spain | Odisea Tours",
     template: "%s · Odisea Tours",
   },
   description:
@@ -49,6 +49,12 @@ export const metadata: Metadata = {
     "Spain cultural tours",
     "Camino de Santiago groups",
   ],
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": "/journal/rss.xml",
+    },
+  },
   icons: {
     icon: "/brand/favicons/Browser.png",
     apple: "/brand/favicons/iPhone.png",

@@ -7,9 +7,23 @@
     "group_size": 22,
     "days": 7,
     "contact_name": "Juan Sanchez",
-    "contact_email": "juan@odisea-tours.com",
-    "contact_phone": "+34 600 000 000",
+    "contact_email": "bookings@odisea-tours.com",
+    "contact_phone": "+34 635 745 527",
     "password": "demo",
+    "created_at": "2026-04-17"
+  },
+  {
+    "slug": "indiana-elite-fc",
+    "club_name": "Indiana Elite FC",
+    "country": "USA",
+    "audience": "soccer_club",
+    "price_per_player_eur": 1895,
+    "group_size": 22,
+    "days": 7,
+    "contact_name": "Juan Sanchez",
+    "contact_email": "bookings@odisea-tours.com",
+    "contact_phone": "+34 635 745 527",
+    "password": "ELITE24",
     "created_at": "2026-04-17"
   }
 ]

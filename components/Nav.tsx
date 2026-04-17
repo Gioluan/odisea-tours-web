@@ -17,6 +17,9 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  // Proposal pages at /for/* are chromeless access-granted documents.
+  if (pathname?.startsWith("/for/")) return null;
+
   // Only the home page has a dark hero at the top.
   // Every other page starts on a light background, so treat it as "scrolled".
   const onDarkHero = pathname === "/" && !scrolled;

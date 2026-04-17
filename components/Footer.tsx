@@ -1,6 +1,11 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  // Proposal pages at /for/* are chromeless access-granted documents.
+  if (pathname?.startsWith("/for/")) return null;
   return (
     <footer className="bg-ink text-paper pt-24 pb-10 relative overflow-hidden">
       {/* Top hairline with diamond */}

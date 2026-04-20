@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { proposalBySlug } from "@/content/proposals";
 import { grantAccess } from "@/lib/proposals";
+import { verifyPassword } from "@/lib/proposal-hash";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -20,12 +21,20 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Missing access code." }, { status: 400 });
   }
 
-  const proposal = proposalBySlug(slug);
+  const proposal = await proposalBySlug(slug);
   if (!proposal) {
     return NextResponse.json({ error: "Proposal not found." }, { status: 404 });
   }
 
-  if (password.trim() !== proposal.password) {
+  const candidate = password.trim();
+  let ok = false;
+  if (proposal.password_hash) {
+    ok = await verifyPassword(candidate, proposal.password_hash);
+  } else if (proposal.password) {
+    ok = candidate === proposal.password;
+  }
+
+  if (!ok) {
     await new Promise((r) => setTimeout(r, 450));
     return NextResponse.json({ error: "Incorrect access code." }, { status: 401 });
   }

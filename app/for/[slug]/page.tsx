@@ -9,7 +9,7 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const proposal = proposalBySlug(slug);
+  const proposal = await proposalBySlug(slug);
   if (!proposal) {
     return {
       title: "Proposal not found · Odisea Tours",
@@ -23,14 +23,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function ProposalPage({ params }: Props) {
   const { slug } = await params;
-  const proposal = proposalBySlug(slug);
+  const proposal = await proposalBySlug(slug);
   if (!proposal) notFound();
 
   const ok = await hasAccess(slug);
   if (!ok) {
     return <PasswordGate slug={slug} clubName={proposal.club_name} />;
   }
-  return <ProposalView proposal={proposal} />;
+  const { password, password_hash, ...safe } = proposal;
+  return <ProposalView proposal={safe as typeof proposal} />;
 }

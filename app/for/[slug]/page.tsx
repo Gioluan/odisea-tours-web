@@ -10,15 +10,18 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const proposal = proposalBySlug(slug);
-  if (!proposal) return { title: "Proposal not found · Odisea Tours" };
+  if (!proposal) {
+    return {
+      title: "Proposal not found · Odisea Tours",
+      robots: { index: false, follow: false },
+    };
+  }
   return {
     title: `Spain Tour Proposal · ${proposal.club_name}`,
     description: `A personalised Spain sports tour proposal for ${proposal.club_name}.`,
     robots: { index: false, follow: false },
   };
 }
-
-export const dynamic = "force-dynamic";
 
 export default async function ProposalPage({ params }: Props) {
   const { slug } = await params;

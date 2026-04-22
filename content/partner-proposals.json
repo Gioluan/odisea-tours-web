@@ -1,0 +1,117 @@
+[
+  {
+    "slug": "mauricio-ingrassia",
+    "partner_name": "Mauricio Ingrassia",
+    "partner_title": "Director of Coaching",
+    "partner_org": "Long Beach State University",
+    "territory": "Southern California",
+    "commission_usd_per_player": 200,
+    "commission_note": "Included in the per-player price. Paid on deposit collection for every confirmed traveller.",
+    "contact_name": "Juan Sanchez",
+    "contact_email": "bookings@odisea-tours.com",
+    "contact_phone": "+34 635 745 527",
+    "password": "MAURICIO200",
+    "created_at": "2026-04-22",
+    "options": [
+      {
+        "id": "long-beach-state",
+        "club_name": "Long Beach State University",
+        "logo_url": "/partners/long-beach-state.png",
+        "tagline": "College-level tour. Strong opposition, deep culture.",
+        "cities": ["Madrid", "Valencia", "Barcelona"],
+        "nights": 8,
+        "group_size": 30,
+        "price_usd_per_person": 1900,
+        "highlights": [
+          "Games against strong local Spanish opposition",
+          "Training sessions in Madrid, Valencia and Barcelona",
+          "Deep cultural programme: Madrid, Valencia old town, Barcelona Gothic Quarter",
+          "Built for a college roster: 30 travellers, tight 8-night window",
+          "Commission of $200/player already baked into price"
+        ],
+        "itinerary": [
+          { "day": "Day 01", "title": "Arrival in Madrid", "detail": "Airport pickup by Raul Sanz. Transfer to Madrid accommodation. Welcome briefing and dinner." },
+          { "day": "Day 02", "title": "Madrid training + city", "detail": "Morning training vs local college-level opposition. Afternoon panoramic tour of Madrid, Gran Vía, Plaza Mayor. Optional La Liga match." },
+          { "day": "Day 03", "title": "First fixture in Madrid", "detail": "Match against a Spanish college or semi-pro side. Filmed and tagged per player." },
+          { "day": "Day 04", "title": "Transfer to Valencia", "detail": "Coastal route. Check-in in Valencia. Evening walk through Valencia old town with guide." },
+          { "day": "Day 05", "title": "Valencia training + fixture", "detail": "Morning session. Afternoon cultural programme at Ciudad de las Artes y las Ciencias. Evening match vs Valencia college side." },
+          { "day": "Day 06", "title": "Transfer to Barcelona", "detail": "Check-in Castelldefels. Afternoon full day in Barcelona. Gothic Quarter, La Rambla, tapas dinner." },
+          { "day": "Day 07", "title": "Barcelona fixture", "detail": "Competitive friendly against Spanish college opposition. Post-match recovery + team meal." },
+          { "day": "Day 08", "title": "Culture + final fixture", "detail": "Morning cultural programme in Barcelona. Evening closing fixture. Team awards." },
+          { "day": "Day 09", "title": "Departure", "detail": "Breakfast + airport transfers from Barcelona." }
+        ],
+        "included": [
+          "All accommodation (4-star hotels)",
+          "All meals (breakfast + dinner daily, select lunches)",
+          "Private coach transport throughout",
+          "Bilingual Odisea guide with group end-to-end",
+          "All training sessions and fixtures arranged with Spanish clubs",
+          "Match filming + per-player tagging",
+          "Travel insurance",
+          "Partner commission ($200/player) included"
+        ],
+        "excluded": [
+          "International flights",
+          "Lunches marked 'at own cost' in itinerary",
+          "Personal expenses"
+        ]
+      },
+      {
+        "id": "beach-futbol-club",
+        "club_name": "Beach Futbol Club",
+        "logo_url": "/partners/beach-fc.jpg",
+        "tagline": "Same package we ran for Hawaii Elite. Families welcome, all age groups.",
+        "cities": ["Madrid", "Valencia", "Benicassim", "Barcelona"],
+        "nights": 11,
+        "group_size": 100,
+        "group_size_note": "Ideal: 100 travellers (3 squads + family members)",
+        "price_usd_per_person": null,
+        "price_note": "Final per-player price matches Hawaii Elite 2026 package and is confirmed once we lock dates and final headcount.",
+        "highlights": [
+          "Training at Spanish FA headquarters (RFEF, Las Rozas)",
+          "Full training sessions at Valencia CF facilities with official staff",
+          "Training at FC Barcelona with official FC Barcelona coaches",
+          "Games against strong local Spanish opposition in every city",
+          "Families travel on the same itinerary (all age groups welcome, boys + girls)",
+          "Beach + culture days built in: Peñiscola, Sitges, Valencia, Barcelona",
+          "Stadium tours: Santiago Bernabéu, Mestalla, Camp Nou / La Masia",
+          "Optional La Liga match and FC Barcelona women's La Liga match",
+          "Commission of $200/player already baked into price"
+        ],
+        "itinerary": [
+          { "day": "Day 01", "title": "Arrival in Madrid", "detail": "Raul Sanz airport welcome. Check in at Spanish FA headquarters. Afternoon free in Madrid city centre. Evening HESA training at Spanish FA + welcome meeting." },
+          { "day": "Day 02", "title": "RFEF training + Madrid", "detail": "Two full sessions at Spanish FA. Lunch on-site. Afternoon Madrid sightseeing. Optional La Liga match in the evening." },
+          { "day": "Day 03", "title": "Bernabéu + transfer to Valencia", "detail": "Real Madrid CF Santiago Bernabéu stadium tour. Madrid panoramic tour. Afternoon transfer to Valencia. Check in 4-star hotel." },
+          { "day": "Day 04", "title": "Mestalla + first fixture", "detail": "Valencia CF Mestalla stadium tour. Free time Valencia old town. Evening match vs local Spanish opposition." },
+          { "day": "Day 05", "title": "Valencia CF training day", "detail": "Full morning + full afternoon training sessions at Valencia CF with official Valencia CF staff. Certificates ceremony. Transfer to Benicassim coastal hotel." },
+          { "day": "Day 06", "title": "Beach + second fixture", "detail": "Free morning. Evening pre-game meeting + match vs Club Fomento (or equivalent Spanish side)." },
+          { "day": "Day 07", "title": "Peñiscola + free time", "detail": "Day trip to Peñiscola castle. Free afternoon and evening in Benicassim." },
+          { "day": "Day 08", "title": "Transfer to Barcelona + FCB training", "detail": "Morning transfer to Barcelona (Castelldefels hotel). Afternoon FC Barcelona training session at Joan Gamper (players). Families visit FC Barcelona museum + shop." },
+          { "day": "Day 09", "title": "FC Barcelona youth + La Liga", "detail": "Morning at FC Barcelona training ground, watch FC Barcelona youth games. Full day Barcelona. Evening FC Barcelona women's La Liga match (Johan Cruyff stadium)." },
+          { "day": "Day 10", "title": "Beach + Sitges", "detail": "Free beach day in Castelldefels. Optional afternoon trip to Sitges." },
+          { "day": "Day 11", "title": "FCB training + closing fixture", "detail": "Morning FC Barcelona training with official FC Barcelona coaches. Afternoon full Barcelona. Evening closing match vs FC Barcelona youth (TBC)." },
+          { "day": "Day 12", "title": "Departures from Barcelona", "detail": "Breakfast. Airport transfers arranged for all passengers." }
+        ],
+        "included": [
+          "All accommodation (Spanish FA HQ, 4-star Valencia, Benicassim coastal, Castelldefels)",
+          "All meals per the itinerary",
+          "Private coach transport throughout",
+          "Bilingual Odisea guides end-to-end",
+          "Training sessions at Spanish FA, Valencia CF and FC Barcelona",
+          "Games against local Spanish opposition in every city",
+          "Stadium tours: Santiago Bernabéu, Mestalla, Camp Nou / La Masia",
+          "FC Barcelona museum + shop access",
+          "Match filming + per-player tagging",
+          "Travel insurance",
+          "Partner commission ($200/player) included"
+        ],
+        "excluded": [
+          "International flights",
+          "Lunches marked 'at own cost' in itinerary",
+          "Personal expenses",
+          "Optional La Liga match tickets"
+        ]
+      }
+    ]
+  }
+]

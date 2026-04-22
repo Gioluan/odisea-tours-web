@@ -22,12 +22,12 @@ function OptionBlock({ option, index, commission }: { option: PartnerProposalOpt
         </div>
 
         <div className="grid md:grid-cols-[220px_1fr] gap-8 md:gap-12 items-start">
-          <div className="bg-ink flex items-center justify-center p-6 aspect-square border border-ink/10">
+          <div className="bg-paper flex items-center justify-center p-6 aspect-square border border-ink/15 shadow-sm">
             {option.logo_url ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={option.logo_url} alt={`${option.club_name} logo`} className="w-full h-full object-contain" />
             ) : (
-              <span className="font-display text-4xl text-paper">{initialsFromName(option.club_name)}</span>
+              <span className="font-display text-4xl text-ink">{initialsFromName(option.club_name)}</span>
             )}
           </div>
 

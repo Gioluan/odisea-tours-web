@@ -352,11 +352,11 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
           <div className="rule-label font-mono-editorial text-[0.68rem] tracking-[0.28em] uppercase text-ink-muted mb-6">
             05 / Next step
           </div>
-          <h2 className="font-display text-[clamp(1.9rem,3.6vw,3.4rem)] uppercase leading-[1.02] max-w-[22ch]">
-            Pick an option, intro us to the club, we handle the rest.
+          <h2 className="font-display text-[clamp(1.9rem,3.6vw,3.4rem)] uppercase leading-[1.02] max-w-[24ch]">
+            Check the proposals, select the dates.
           </h2>
           <p className="mt-6 text-lg leading-relaxed max-w-[60ch] text-ink-soft">
-            Forward this proposal, CC us on one email with the club director, and we book a 15-minute call. Once the club says yes, we send the hard-number package and you collect on every deposit that comes in.
+            Let&apos;s work on these tours to make them happen.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={mailto} className="btn-editorial">Email {proposal.contact_email}</a>

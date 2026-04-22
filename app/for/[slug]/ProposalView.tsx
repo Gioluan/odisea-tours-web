@@ -52,7 +52,7 @@ const ITINERARY = [
 ];
 
 export default function ProposalView({ proposal }: { proposal: Proposal }) {
-  const hero = proposal.hero_photo || "/photos/veterans-soccer-tour-spain-match-action.jpg";
+  const hero = proposal.hero_photo || "/photos/odisea-tours-girls-fcb-celebration-hero.jpg";
   const clubName = proposal.club_name;
   const price = proposal.price_per_player_eur;
   const logoUrl = proposal.logo_url;

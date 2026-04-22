@@ -146,7 +146,7 @@ function OptionBlock({ option, index, commission }: { option: PartnerProposalOpt
 }
 
 export default function PartnerProposalView({ proposal }: { proposal: PartnerProposal }) {
-  const hero = "/photos/veterans-soccer-tour-spain-match-action.jpg";
+  const hero = "/photos/odisea-tours-fcb-celebration-night.jpg";
   const waDigits = (proposal.contact_phone || "").replace(/[^\d]/g, "");
   const waLink = waDigits
     ? `https://wa.me/${waDigits}?text=${encodeURIComponent(`Hi ${proposal.contact_name}, about the Odisea partner proposal for ${proposal.partner_name}.`)}`

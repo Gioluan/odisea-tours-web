@@ -347,7 +347,10 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
                   {fmtUSD(totalCommission(opt.group_size))}
                 </div>
                 <div className="font-mono-editorial text-[0.7rem] tracking-[0.22em] uppercase text-ink-muted mt-2">
-                  At {opt.group_size} pax · {fmtUSD(proposal.commission_usd_per_player)}/player
+                  At {opt.group_size} pax · {fmtUSD(proposal.commission_usd_per_player)}/traveler
+                </div>
+                <div className="font-mono-editorial text-[0.6rem] tracking-[0.14em] uppercase text-ink-muted/80 mt-1">
+                  Free-of-charge seats not included
                 </div>
                 <p className="mt-6 text-ink-soft text-[0.94rem] leading-relaxed">
                   {opt.group_size_note ? opt.group_size_note + "." : ""} Paid on deposit, in USD, by international wire or Wise.

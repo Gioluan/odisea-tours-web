@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s · Odisea Tours",
   },
   description:
-    "Trusted by 1,400+ groups since 2005. Youth soccer tours, school trips, cultural journeys and corporate retreats across Spain, designed and run by locals on the ground in Castellón and Madrid.",
+    "Trusted by 500+ groups since 2005. Youth soccer tours, school trips, cultural journeys and corporate retreats across Spain, designed and run by locals on the ground in Castellón and Madrid.",
   keywords: [
     "youth soccer tours Spain",
     "school trip Spain",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Youth Soccer Tours, School Trips & Group Travel in Spain",
     description:
-      "Trusted by 1,400+ groups since 2005. Soccer, school, cultural and corporate group travel across Spain, designed by locals.",
+      "Trusted by 500+ groups since 2005. Soccer, school, cultural and corporate group travel across Spain, designed by locals.",
     url: "https://odisea-tours.com",
     siteName: "Odisea Tours",
     type: "website",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Youth Soccer Tours & Group Travel in Spain | Odisea Tours",
     description:
-      "Trusted by 1,400+ groups since 2005. Soccer, school, cultural and corporate group travel across Spain.",
+      "Trusted by 500+ groups since 2005. Soccer, school, cultural and corporate group travel across Spain.",
     images: ["/photos/veterans-soccer-tour-camp-nou-barcelona.jpg"],
   },
   other: {

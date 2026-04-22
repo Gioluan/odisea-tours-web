@@ -167,8 +167,9 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
 
         <div className="relative z-10 flex items-start justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-[76px] h-[76px] bg-gold rounded-md flex items-center justify-center text-ink font-display text-xl flex-shrink-0">
-              PARTNER
+            <div className="w-[76px] h-[76px] bg-gold rounded-md flex flex-col items-center justify-center text-ink flex-shrink-0 px-1">
+              <span className="font-mono-editorial text-[0.55rem] tracking-[0.18em] uppercase leading-none">Odisea</span>
+              <span className="font-display text-[0.78rem] tracking-[0.08em] uppercase leading-none mt-1">Partner</span>
             </div>
             <div>
               <div className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70">

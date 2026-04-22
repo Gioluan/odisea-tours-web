@@ -16,15 +16,16 @@ export default function Home() {
         {/* Background image */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/photos/veterans-soccer-tour-spain-match-action.jpg"
-            alt="An Odisea Tours youth soccer group on a match day in Spain"
+            src="/photos/odisea-tours-youth-fcb-training-hero.jpg"
+            alt="A youth soccer team from Hawaii training at FC Barcelona's facilities on an Odisea Tours Spain tour"
             fill
             priority
             className="object-cover object-center kenburns"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-ink/45" />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/20 to-ink" />
+          <div className="absolute inset-0 bg-ink/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/25 to-ink" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/60 via-transparent to-transparent" />
         </div>
 
         {/* Top meta bar */}

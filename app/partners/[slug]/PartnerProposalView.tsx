@@ -184,11 +184,22 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
             </div>
           </div>
 
-          <div className="stamp text-paper/80">
-            <div>
-              <div>EST.</div>
-              <div className="font-display text-base mt-0.5">2005</div>
-              <div>20 YEARS</div>
+          <div className="flex items-center gap-3">
+            <div className="stamp text-gold -rotate-6">
+              <div>
+                <div>Confidential</div>
+                <div className="font-display text-[0.78rem] mt-0.5 tracking-[0.18em]">ONLY FOR</div>
+                <div className="font-display text-[0.72rem] mt-0.5 leading-tight tracking-[0.08em]">
+                  {proposal.partner_name.toUpperCase()}
+                </div>
+              </div>
+            </div>
+            <div className="stamp text-paper/80 hidden md:inline-flex">
+              <div>
+                <div>EST.</div>
+                <div className="font-display text-base mt-0.5">2005</div>
+                <div>20 YEARS</div>
+              </div>
             </div>
           </div>
         </div>

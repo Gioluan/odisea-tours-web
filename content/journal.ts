@@ -211,7 +211,7 @@ export const POSTS: Post[] = [
     date: "2026-04-02",
     readTime: "8 min",
     category: "Field Notes",
-    cover: "/img/tours/cultural.jpg",
+    cover: "/photos/veterans-soccer-tour-barcelona-la-rambla.jpg",
     body: [
       "The hardest part of a group trip is not the booking. It is the deciding. A group of twenty-five people will want twenty-five different things, and the agency that tries to please everyone will please no one. The first rule we learned in 2005, and the one we still repeat to every new client, is this. Pick a spine, and protect it.",
       "A spine is a single unifying idea. For a school team, it might be football. Every day anchors around a training visit or a match. For a [culinary tour](/tours/sabores-de-espana), it might be food. Every meal is the day's main event, and the sightseeing bends around it. Once the spine is set, every other decision becomes easier. The hotel is the one closest to the training ground. The bus leaves at the hour that gets you to the pintxos bar before the locals arrive.",

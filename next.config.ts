@@ -89,6 +89,22 @@ const nextConfig: NextConfig = {
       { source: "/bilbao", destination: "/tours/sabores-de-espana", permanent: true },
       { source: "/pamplona", destination: "/tours/sabores-de-espana", permanent: true },
       { source: "/la-masia", destination: "/journal/la-masia-la-fabrica-academies-worth-visiting", permanent: true },
+
+      // GSC 404 sweep 2026-04-27: actual legacy WordPress permalinks
+      { source: "/soccer-tours-spain", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/european-soccer-tours", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/travelingabroad", destination: "/tours", permanent: true },
+      { source: "/trip", destination: "/tours", permanent: true },
+      { source: "/trip/:path*", destination: "/tours", permanent: true },
+      { source: "/tour/valencia-soccer-tour/:path*", destination: "/destinations/valencia", permanent: true },
+      { source: "/tour/valencia-soccer-tour", destination: "/destinations/valencia", permanent: true },
+      { source: "/tour/madrid-soccer-tour/:path*", destination: "/destinations/madrid", permanent: true },
+      { source: "/tour/madrid-soccer-tour", destination: "/destinations/madrid", permanent: true },
+      { source: "/tour/barcelona-soccer-tour/:path*", destination: "/destinations/barcelona", permanent: true },
+      { source: "/tour/barcelona-soccer-tour", destination: "/destinations/barcelona", permanent: true },
+      { source: "/tour/munich-baviera-soccer-tour", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/tour", destination: "/tours", permanent: true },
+      { source: "/tour/:path*", destination: "/tours", permanent: true },
     ];
   },
 };

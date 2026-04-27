@@ -225,21 +225,41 @@
     .partner-grid { grid-template-columns: 1fr 1fr 1fr; }
   }
   .partner {
-    padding: 36px 32px 40px;
+    padding: 0;
     border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+    display: flex; flex-direction: column;
   }
   @media (min-width: 768px) {
     .partner { border-bottom: none; border-right: 1px solid var(--rule); }
     .partner:last-child { border-right: none; }
   }
-  .partner-code {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 56px; height: 56px;
-    border-radius: 50%;
-    background: var(--gold); color: var(--ink);
-    font-family: 'Archivo', sans-serif; font-weight: 800;
-    font-size: 13px; letter-spacing: 0.05em;
-    margin-bottom: 20px;
+  .partner-photo {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--ink);
+  }
+  .partner-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 1.2s ease;
+  }
+  .partner:hover .partner-photo img { transform: scale(1.04); }
+  .partner-logo {
+    position: absolute;
+    bottom: 14px; left: 14px;
+    height: 56px; width: auto;
+    background: var(--paper);
+    padding: 6px 10px;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    display: block;
+  }
+  .partner-body {
+    padding: 28px 32px 36px;
+    flex: 1;
+    display: flex; flex-direction: column;
   }
   .partner h3 { margin-bottom: 6px; }
   .partner .partner-cap {
@@ -520,6 +540,39 @@
     font-size: 14px; color: var(--ink-soft); line-height: 1.4;
   }
 
+  /* Partner logo strip */
+  .partner-strip {
+    display: flex; align-items: center; justify-content: center;
+    gap: 48px; flex-wrap: wrap;
+    padding: 28px 16px 56px;
+    margin-top: 8px;
+  }
+  .partner-strip img {
+    height: 88px; width: auto;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
+    transition: transform 0.3s ease;
+  }
+  .partner-strip img:hover { transform: translateY(-4px); }
+  @media (min-width: 768px) {
+    .partner-strip { gap: 88px; padding: 36px 16px 64px; }
+    .partner-strip img { height: 128px; }
+  }
+
+  /* Clinic header with VCF logo */
+  .clinic-header {
+    display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .clinic-logo {
+    height: 96px; width: auto;
+    flex-shrink: 0;
+    filter: drop-shadow(0 4px 14px rgba(0,0,0,0.10));
+  }
+  @media (min-width: 768px) {
+    .clinic-logo { height: 128px; }
+  }
+  .clinic-header h2 { margin-bottom: 0; }
+
   /* Caveat box */
   .caveat {
     margin-top: 48px;
@@ -617,24 +670,44 @@
   <div class="container">
     <div class="rule">02 / Three partners</div>
     <h2>Where you train. Who runs the session.</h2>
+    <div class="partner-strip">
+      <img src="/badges/fc-barcelona.svg" alt="FC Barcelona" />
+      <img src="/badges/valencia-cf.svg" alt="Valencia CF" />
+      <img src="/badges/rfef.svg" alt="Spanish FA (RFEF)" />
+    </div>
     <div class="partner-grid">
       <article class="partner">
-        <div class="partner-code">FCB</div>
-        <h3>FC Barcelona</h3>
-        <div class="partner-cap">Official facilities · Official coaching</div>
-        <p>Sessions take place at FC Barcelona facilities, run by official FC Barcelona academy coaches. Includes Camp Nou and La Masia academy access.</p>
+        <div class="partner-photo">
+          <img src="/photos/odisea-tours-youth-fcb-training-hero.jpg" alt="Youth squad training at FC Barcelona facilities" loading="lazy" />
+          <img class="partner-logo" src="/badges/fc-barcelona.svg" alt="FC Barcelona badge" />
+        </div>
+        <div class="partner-body">
+          <h3>FC Barcelona</h3>
+          <div class="partner-cap">Official facilities · Official coaching</div>
+          <p>Sessions take place at FC Barcelona facilities, run by official FC Barcelona academy coaches. Includes Camp Nou and La Masia academy access.</p>
+        </div>
       </article>
       <article class="partner">
-        <div class="partner-code">VCF</div>
-        <h3>Valencia CF</h3>
-        <div class="partner-cap">Official facilities · Formal clinic program</div>
-        <p>Training at Valencia CF facilities, run by official VCF academy staff. VCF runs a structured Coaching Clinic program at the Ciutat Esportiva (see section 04). Includes the Mestalla Forever Tour.</p>
+        <div class="partner-photo">
+          <img src="/photos/veterans-soccer-tour-valencia-cf-match.jpg" alt="Match at Valencia CF" loading="lazy" />
+          <img class="partner-logo" src="/badges/valencia-cf.svg" alt="Valencia CF badge" />
+        </div>
+        <div class="partner-body">
+          <h3>Valencia CF</h3>
+          <div class="partner-cap">Official facilities · Formal clinic program</div>
+          <p>Training at Valencia CF facilities, run by official VCF academy staff. VCF runs a structured Coaching Clinic program at the Ciutat Esportiva (see section 04). Includes the Mestalla Forever Tour.</p>
+        </div>
       </article>
       <article class="partner">
-        <div class="partner-code">RFEF</div>
-        <h3>Spanish FA · Las Rozas</h3>
-        <div class="partner-cap">UEFA Pro coaching · On-site stay</div>
-        <p>Two nights at the Spanish FA headquarters where La Roja prepares. Sessions led by UEFA Pro licensed coaches from the federation pool.</p>
+        <div class="partner-photo">
+          <img src="/photos/odisea-tours-spanish-fa-training.jpg" alt="Training at Spanish FA headquarters" loading="lazy" />
+          <img class="partner-logo" src="/badges/rfef.svg" alt="Spanish FA (RFEF) badge" />
+        </div>
+        <div class="partner-body">
+          <h3>Spanish FA · Las Rozas</h3>
+          <div class="partner-cap">UEFA Pro coaching · On-site stay</div>
+          <p>Two nights at the Spanish FA headquarters where La Roja prepares. Sessions led by UEFA Pro licensed coaches from the federation pool.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -679,7 +752,10 @@
 <section class="section partners-section">
   <div class="container">
     <div class="rule">04 / Coaching clinic add on</div>
-    <h2>The official <em class="gold-em">VCF Academy</em> Coaching Clinic.</h2>
+    <div class="clinic-header">
+      <img class="clinic-logo" src="/badges/valencia-cf.svg" alt="Valencia CF" />
+      <h2>The official <em class="gold-em">VCF Academy</em> Coaching Clinic.</h2>
+    </div>
     <p class="lede" style="margin-top: 24px;">
       Valencia CF runs a formal coaching clinic program at their Ciutat Esportiva, taught directly by VCF Academy staff. Coaching methodology, goalkeeper specific work, talent management, fitness, psychology of the player. Two formats, six structured formations, academy session viewing alongside every workshop.
     </p>

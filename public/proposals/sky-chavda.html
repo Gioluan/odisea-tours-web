@@ -127,7 +127,10 @@
   /* COVER */
   .cover {
     min-height: 100vh;
-    background: var(--ink);
+    background-color: var(--ink);
+    background-image: url('/photos/odisea-tours-camp-nou-tour-women.jpg');
+    background-size: cover;
+    background-position: center 28%;
     color: var(--paper);
     position: relative;
     display: flex; flex-direction: column; justify-content: space-between;
@@ -139,7 +142,8 @@
     content: "";
     position: absolute; inset: 0;
     background:
-      radial-gradient(circle at 25% 15%, rgba(255,180,0,0.10), transparent 45%),
+      linear-gradient(120deg, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.72) 55%, rgba(17,17,17,0.85) 100%),
+      radial-gradient(circle at 25% 15%, rgba(255,180,0,0.12), transparent 45%),
       radial-gradient(circle at 80% 85%, rgba(255,180,0,0.06), transparent 50%);
     z-index: 1;
   }
@@ -333,6 +337,27 @@
     color: var(--ink-muted);
     font-size: 15.5px; line-height: 1.62;
     max-width: 70ch;
+  }
+
+  /* Itinerary visual breaks */
+  .it-photo {
+    margin: 36px 0;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    position: relative;
+  }
+  .it-photo img {
+    width: 100%; height: auto; display: block;
+    aspect-ratio: 16 / 9; object-fit: cover;
+  }
+  .it-photo figcaption {
+    position: absolute; bottom: 14px; left: 16px;
+    padding: 8px 14px;
+    background: rgba(17,17,17,0.78);
+    color: var(--paper);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    backdrop-filter: blur(6px);
   }
 
   /* INCLUDES */
@@ -678,8 +703,7 @@
     <div class="partner-grid">
       <article class="partner">
         <div class="partner-photo">
-          <img src="/photos/odisea-tours-youth-fcb-training-hero.jpg" alt="Youth squad training at FC Barcelona facilities" loading="lazy" />
-          <img class="partner-logo" src="/badges/fc-barcelona.svg" alt="FC Barcelona badge" />
+          <img src="/photos/odisea-tours-fcb-squad-with-barca-coaches.jpg" alt="Odisea Tours squad with FC Barcelona academy coaches at Ciutat Esportiva Joan Gamper" loading="lazy" />
         </div>
         <div class="partner-body">
           <h3>FC Barcelona</h3>
@@ -689,8 +713,7 @@
       </article>
       <article class="partner">
         <div class="partner-photo">
-          <img src="/photos/veterans-soccer-tour-valencia-cf-match.jpg" alt="Match at Valencia CF" loading="lazy" />
-          <img class="partner-logo" src="/badges/valencia-cf.svg" alt="Valencia CF badge" />
+          <img src="/photos/odisea-tours-valencia-cf-coach-instructing.jpg" alt="Valencia CF academy coach instructing a young player on the pitch" loading="lazy" />
         </div>
         <div class="partner-body">
           <h3>Valencia CF</h3>
@@ -700,8 +723,7 @@
       </article>
       <article class="partner">
         <div class="partner-photo">
-          <img src="/photos/odisea-tours-spanish-fa-training.jpg" alt="Training at Spanish FA headquarters" loading="lazy" />
-          <img class="partner-logo" src="/badges/rfef.svg" alt="Spanish FA (RFEF) badge" />
+          <img src="/photos/odisea-tours-spanish-fa-rfef-training.jpg" alt="Training session at the Spanish FA headquarters in Las Rozas" loading="lazy" />
         </div>
         <div class="partner-body">
           <h3>Spanish FA · Las Rozas</h3>
@@ -872,6 +894,10 @@
           <div class="it-detail">Full morning training session at Valencia CF facilities, run by official VCF academy coaches. Coach debrief over lunch. Afternoon: friendly fixture vs a Valencia age matched academy side. Match filmed, tagged per player.</div>
         </div>
       </div>
+      <figure class="it-photo">
+        <img src="/photos/odisea-tours-both-teams-post-match.jpg" alt="Odisea Tours squad with their Spanish opponents post-match" loading="lazy" />
+        <figcaption>Friendly fixture · Spanish academy opposition</figcaption>
+      </figure>
       <div class="it-row">
         <div class="it-day">Day 06</div>
         <div>
@@ -893,6 +919,10 @@
           <div class="it-detail">Second FCB training session (morning). Coach round table on positional play and small sided games. Afternoon: friendly fixture vs a Barcelona age matched academy side. Camp Nou stadium tour for the squad after the match.</div>
         </div>
       </div>
+      <figure class="it-photo">
+        <img src="/photos/odisea-tours-fcb-night-celebration.jpg" alt="Odisea Tours squad celebrating at FC Barcelona facilities at night" loading="lazy" />
+        <figcaption>Camp Nou floodlights · End of FCB block</figcaption>
+      </figure>
       <div class="it-row">
         <div class="it-day">Day 09</div>
         <div>

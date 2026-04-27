@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import JournalLinks from "@/components/JournalLinks";
 
 export const metadata: Metadata = {
   title: "Football Tours in Barcelona — Camp Nou, La Masia & Coaching",
@@ -374,6 +375,18 @@ export default function BarcelonaPage() {
           </div>
         </div>
       </section>
+
+      <JournalLinks
+        title="Reading on Barcelona"
+        italicTail="for tour planners."
+        intro="Camp Nou or Bernabeu, La Masia after the move, the cities most tours miss. Field notes for groups choosing Barcelona as the anchor of a Spain tour."
+        slugs={[
+          "best-football-tour-destinations-barcelona",
+          "real-madrid-or-fc-barcelona-which-stadium-visit",
+          "la-masia-la-fabrica-academies-worth-visiting",
+          "barcelona-vs-madrid-best-city-football-tour-spain",
+        ]}
+      />
 
       {/* ═══════════════════════════════════════════════════
           CTA

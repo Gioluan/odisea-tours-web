@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import JournalLinks from "@/components/JournalLinks";
 
 const HERO_PHOTOS = [
   { src: "/photos/odisea-tours-group-barcelona-cathedral.jpg", alt: "School group at Barcelona Cathedral on educational sport tour", caption: "Culture meets sport -- Barcelona Cathedral" },
@@ -255,6 +256,18 @@ export default function SchoolsPage() {
           </div>
         </div>
       </section>
+
+      <JournalLinks
+        title="What teachers and PE leads ask"
+        italicTail="before the school board call."
+        intro="Pitching the trip, fundraising, the typical match day, parent letters: the field notes we wrote so a teacher can prep a board meeting in twenty minutes."
+        slugs={[
+          "how-to-organize-school-football-tour-spain",
+          "what-parents-need-to-know-youth-football-tours-spain",
+          "how-to-fundraise-for-your-teams-spain-tour",
+          "pre-tour-checklist-coach-field-guide",
+        ]}
+      />
 
       {/* ── CTA ── */}
       <section className="relative py-16 md:py-20 overflow-hidden">

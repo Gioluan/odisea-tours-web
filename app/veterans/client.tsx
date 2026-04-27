@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import JournalLinks from "@/components/JournalLinks";
 
 /* ─── Hero slideshow photos ─── */
 const HERO_PHOTOS = [
@@ -398,6 +399,18 @@ export default function VeteransPage() {
           </div>
         </div>
       </section>
+
+      <JournalLinks
+        title="What over-35 squads ask"
+        italicTail="before booking."
+        intro="Why veterans tours to Spain are picking up, what the matchday looks like, where to play and where to stay. Honest field notes from twenty years of running these trips."
+        slugs={[
+          "why-veterans-football-tours-spain-are-booming",
+          "why-australian-teams-choosing-spain-over-england",
+          "top-5-football-stadiums-visit-spain-soccer-tour",
+          "best-time-of-year-for-a-youth-soccer-tour-to-spain",
+        ]}
+      />
 
       {/* ═══════════════════════════════════════════════════
           CTA - full-bleed photo

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { FAQ_GROUPS, FAQ_FLAT } from "@/content/faq";
+import JournalLinks from "@/components/JournalLinks";
 
 export const metadata: Metadata = {
   title: "FAQ: Spain Soccer Tours, School Trips & Group Travel | Odisea Tours",
@@ -123,6 +124,18 @@ export default function FaqPage() {
           </div>
         </section>
       ))}
+
+      <JournalLinks
+        title="Long-form answers"
+        italicTail="to the bigger questions."
+        intro="The FAQ above gives you the short version. These field notes go deeper for coaches, parents and trip organisers who want the full picture before they commit."
+        slugs={[
+          "youth-soccer-tours-to-spain-complete-guide",
+          "what-a-youth-soccer-tour-to-spain-costs",
+          "pre-tour-checklist-coach-field-guide",
+          "how-to-plan-a-group-trip-to-spain",
+        ]}
+      />
 
       {/* CTA */}
       <section className="bg-ink text-paper py-20 md:py-28 px-6 md:px-10">

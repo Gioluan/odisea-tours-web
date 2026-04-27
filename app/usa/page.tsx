@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { US_CITIES } from "@/content/us-cities";
+import JournalLinks from "@/components/JournalLinks";
 
 export const metadata: Metadata = {
   title: "Spain Soccer Tours from the USA | Odisea Tours",
@@ -71,6 +72,18 @@ export default function UsaIndexPage() {
           </div>
         </div>
       </section>
+
+      <JournalLinks
+        title="Reading for US clubs"
+        italicTail="planning Spain."
+        intro="The conversations US club directors have with us before booking, written up as field notes. Cost, timing, opposition, parents."
+        slugs={[
+          "youth-soccer-tours-to-spain-complete-guide",
+          "what-a-youth-soccer-tour-to-spain-costs",
+          "real-madrid-or-fc-barcelona-which-stadium-visit",
+          "arranging-friendly-matches-against-spanish-youth-clubs",
+        ]}
+      />
     </main>
   );
 }

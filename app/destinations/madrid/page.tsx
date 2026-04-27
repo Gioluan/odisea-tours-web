@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import JournalLinks from "@/components/JournalLinks";
 
 export const metadata: Metadata = {
   title: "Football Tours in Madrid — Bernabeu, Atletico & La Liga",
@@ -377,6 +378,18 @@ export default function MadridPage() {
           </div>
         </div>
       </section>
+
+      <JournalLinks
+        title="Reading on Madrid"
+        italicTail="for tour planners."
+        intro="Bernabeu over Camp Nou, the case for Madrid as a tour anchor, the stadiums most groups miss. Field notes from twenty years of running tours through the capital."
+        slugs={[
+          "real-madrid-or-fc-barcelona-which-stadium-visit",
+          "barcelona-vs-madrid-best-city-football-tour-spain",
+          "top-5-football-stadiums-visit-spain-soccer-tour",
+          "training-spanish-fa-rfef-football-tour-experience",
+        ]}
+      />
 
       {/* ═══════════════════════════════════════════════════
           CTA

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import JournalLinks from "@/components/JournalLinks";
 
 const HERO_PHOTOS = [
   { src: "/photos/odisea-tours-professional-coaching.jpg", alt: "Professional UEFA coaching session for youth soccer players in Spain", caption: "Professional coaching at top Spanish facilities" },
@@ -220,6 +221,18 @@ export default function YouthPage() {
           </div>
         </div>
       </section>
+
+      <JournalLinks
+        title="The questions every youth coach asks"
+        italicTail="answered."
+        intro="Twenty years of running youth tours has narrowed the conversation down to a few essentials: cost, timing, matches, parents. Read the long-form answers before the planning call."
+        slugs={[
+          "youth-soccer-tours-to-spain-complete-guide",
+          "what-a-youth-soccer-tour-to-spain-costs",
+          "best-time-of-year-for-a-youth-soccer-tour-to-spain",
+          "arranging-friendly-matches-against-spanish-youth-clubs",
+        ]}
+      />
 
       {/* ── CTA ── */}
       <section className="relative py-16 md:py-20 overflow-hidden">

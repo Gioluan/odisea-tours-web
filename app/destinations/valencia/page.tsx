@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import JournalLinks from "@/components/JournalLinks";
 
 export const metadata: Metadata = {
   title: "Football Tours in Valencia — Mestalla, Coaching & Beach",
@@ -377,6 +378,18 @@ export default function ValenciaPage() {
           </div>
         </div>
       </section>
+
+      <JournalLinks
+        title="Reading on Valencia"
+        italicTail="for tour planners."
+        intro="Why Valencia and Sevilla quietly outperform the obvious cities, what training at Valencia CF looks like, and the case for the cities most tours miss."
+        slugs={[
+          "valencia-sevilla-football-cities-most-tours-miss",
+          "training-spanish-fa-rfef-football-tour-experience",
+          "top-5-football-stadiums-visit-spain-soccer-tour",
+          "how-to-plan-a-group-trip-to-spain",
+        ]}
+      />
 
       {/* ═══════════════════════════════════════════════════
           CTA

@@ -44,6 +44,7 @@ export default function Footer() {
                 <li><Link href="/team" className="link-rule">Team</Link></li>
                 <li><Link href="/journal" className="link-rule">Journal</Link></li>
                 <li><Link href="/plan-your-tour" className="link-rule">Plan a Tour</Link></li>
+                <li><Link href="/usa" className="link-rule">US Clubs</Link></li>
                 <li><Link href="/contact" className="link-rule">Contact</Link></li>
               </ul>
             </div>

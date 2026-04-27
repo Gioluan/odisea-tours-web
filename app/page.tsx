@@ -9,8 +9,6 @@ export default function Home() {
   const featuredPosts = topJournalPosts(3);
   return (
     <>
-      <h1 className="sr-only">Youth Soccer Tours, School Trips & Group Travel in Spain | Odisea Tours</h1>
-
       {/* ---------- HERO ---------- */}
       <section className="relative isolate min-h-[100svh] flex flex-col pt-20 overflow-hidden text-paper">
         {/* Background image */}
@@ -42,7 +40,8 @@ export default function Home() {
               <span>Group Travel From Spain</span>
             </div>
 
-            <h2 className="font-display uppercase text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.015em]">
+            <h1 className="font-display uppercase text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.015em]">
+              <span className="sr-only">Youth soccer tours, school trips and group travel in Spain since 2005. </span>
               <HeroLetters
                 text="Travel is"
                 delayStart={120}
@@ -58,7 +57,7 @@ export default function Home() {
                 italicWords={[0]}
                 delayStart={900}
               />
-            </h2>
+            </h1>
 
             <div className="mt-12 grid md:grid-cols-12 gap-10 items-end">
               <p className="md:col-span-5 md:col-start-7 text-lg md:text-xl text-paper/85 max-w-md leading-relaxed">

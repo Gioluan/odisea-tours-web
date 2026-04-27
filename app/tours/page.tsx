@@ -48,10 +48,9 @@ export default function ToursIndex() {
             <span>Chapter I · Index</span>
             <span>07 Tour Experiences</span>
           </div>
-          <h1 className="sr-only">Spain Group Tours: Soccer, Cultural, Camino & Corporate Experiences</h1>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
-            Tour <span className="font-display-italic text-gold">Experiences.</span>
-          </h2>
+          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
+            <span className="sr-only">Spain group tours: </span>Tour <span className="font-display-italic text-gold">Experiences.</span>
+          </h1>
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
             Seven ways to travel through Spain with us. Each one built from the ground up for groups, from a handful of friends to a corporate team of a hundred.
           </p>

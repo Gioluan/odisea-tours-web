@@ -50,10 +50,9 @@ export default function JournalIndex() {
               <span>The Journal</span>
             </div>
           </div>
-          <h1 className="sr-only">Spain Football Tour Blog: Guides, Tips & Field Notes</h1>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
-            Field <span className="font-display-italic text-gold">Notes.</span>
-          </h2>
+          <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
+            <span className="sr-only">Spain football tour blog: </span>Field <span className="font-display-italic text-gold">Notes.</span>
+          </h1>
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
             Slow notes on Spain, group travel, and the small things we have learned from two decades in the field. Written by the people who run the trips.
           </p>

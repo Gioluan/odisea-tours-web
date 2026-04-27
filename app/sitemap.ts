@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { POSTS } from "@/content/journal";
 import { TOURS } from "@/content/tours";
+import { US_CITIES } from "@/content/us-cities";
 
 const SITE = "https://odisea-tours.com";
 
@@ -21,7 +22,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/destinations/barcelona`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/destinations/madrid`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/destinations/valencia`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${SITE}/usa`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
   ];
+
+  const usCityRoutes: MetadataRoute.Sitemap = US_CITIES.map((c) => ({
+    url: `${SITE}/usa/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
 
   const tourRoutes: MetadataRoute.Sitemap = TOURS.map((tour) => ({
     url: `${SITE}/tours/${tour.slug}`,
@@ -37,5 +46,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...tourRoutes, ...journalRoutes];
+  return [...staticRoutes, ...tourRoutes, ...journalRoutes, ...usCityRoutes];
 }

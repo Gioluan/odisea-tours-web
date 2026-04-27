@@ -425,11 +425,33 @@
     font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
     color: var(--ink-muted);
   }
+  .price-card .tier { padding: 4px 0; }
+  .price-card .tier-divider {
+    height: 1px;
+    background: var(--rule);
+    margin: 22px 0 18px;
+    position: relative;
+  }
+  .price-card .tier-divider::before {
+    content: "+";
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    background: var(--paper);
+    padding: 0 10px 0 0;
+    color: var(--gold-deep);
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 16px;
+  }
   .price-card .num {
     font-family: 'Archivo', sans-serif; font-weight: 800;
     font-size: clamp(40px, 5vw, 60px);
     line-height: 1; letter-spacing: -0.025em;
     margin: 14px 0 6px;
+  }
+  .price-card .num-secondary {
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--ink-soft);
   }
   .price-card .small {
     font-family: 'JetBrains Mono', monospace;
@@ -660,6 +682,7 @@
       <span style="display:block;">Immersion</span>
       <span class="badges">
         <span>22 Players</span>
+        <span>Families Welcome</span>
         <span>Coach Track</span>
         <span>9 Days</span>
       </span>
@@ -976,14 +999,14 @@
         <p>Daily breakfast at the hotel. Daily dinner included (welcome dinner, post fixture dinners, awards lunch). Lunches free for the group.</p>
       </article>
       <article class="inc">
-        <span class="tag">Insurance</span>
-        <h4>Group cover in Spain</h4>
-        <p>Travel and medical insurance for the squad and staff for the duration of the trip in Spain.</p>
-      </article>
-      <article class="inc">
         <span class="tag">Coaches free</span>
         <h4>Sky + 2 staff complimentary</h4>
         <p>Sky and up to two TOCA coaching staff travel free on the trip. Adult ground services bundled into the player price.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Families welcome</span>
+        <h4>Same itinerary, separate price</h4>
+        <p>Family members travel on the same coach and stay in the same hotels. Optional excursions during training blocks. See pricing for the family rate.</p>
       </article>
     </div>
   </div>
@@ -997,16 +1020,24 @@
         <div class="rule">07 / Pricing</div>
         <h2>Best all in price in Europe for a tour at this level.</h2>
         <p class="lede" style="margin-top: 24px;">
-          Flights excluded. Everything else included: hotels, meals, coach transport, Spanish guides, insurance, training, fixtures, stadium and academy access, RFEF residence stay, methodology folders, match film.
+          Flights and travel insurance are arranged on the traveller side. Everything else is in the price: hotels, meals, coach transport, Spanish guides, training, fixtures, stadium and academy access, RFEF residence stay, methodology folders, match film.
         </p>
         <p class="lede">
           Flexible deposit. Final price locked once the federation sessions are confirmed.
         </p>
       </div>
       <div class="price-card">
-        <div class="label">Per player, all in</div>
-        <div class="num">$2,500</div>
-        <div class="small">Group of 22 · 9 days</div>
+        <div class="tier">
+          <div class="label">Per player, all in</div>
+          <div class="num">$2,500</div>
+          <div class="small">Group of 22 · 9 days</div>
+        </div>
+        <div class="tier-divider"></div>
+        <div class="tier">
+          <div class="label">Per family member</div>
+          <div class="num num-secondary">$1,995</div>
+          <div class="small">Up to 30 travellers · Same itinerary, optional family excursions</div>
+        </div>
         <ul>
           <li>Sky + 2 TOCA staff free</li>
           <li>Boys or girls teams welcome</li>
@@ -1015,8 +1046,12 @@
           <li>Price locked once confirmed</li>
         </ul>
         <div class="price-total">
-          <span>Group total</span>
+          <span>Players group (22)</span>
           <span class="v">$55,000</span>
+        </div>
+        <div class="price-total" style="margin-top: 10px;">
+          <span>Families group (up to 30)</span>
+          <span class="v">$59,850</span>
         </div>
         <div class="price-total" style="margin-top: 10px; background: transparent; border-color: var(--rule);">
           <span>VCF Clinic add on</span>

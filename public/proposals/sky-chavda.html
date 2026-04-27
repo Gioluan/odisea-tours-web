@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Odisea Tours · A Proposal for Sky Chavda · TOCA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Black&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f6f6;
+    --paper-warm: #efece4;
+    --ink: #111111;
+    --ink-soft: #1a1612;
+    --ink-muted: #5a564e;
+    --gold: #ffb400;
+    --gold-deep: #c98a00;
+    --rule: rgba(17,17,17,0.10);
+    --rule-strong: rgba(17,17,17,0.20);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Archivo', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "ss01", "ss02";
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--gold); color: var(--ink); }
+
+  /* Password Gate */
+  #gate {
+    position: fixed; inset: 0;
+    background: var(--ink); color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 200; padding: 24px;
+  }
+  #gate.hidden { display: none; }
+  #gate .gate-inner {
+    max-width: 460px; width: 100%;
+    text-align: center;
+    padding: 48px 32px;
+    border: 1px solid rgba(246,246,246,0.18);
+    background: rgba(246,246,246,0.02);
+  }
+  #gate .stamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 28px;
+  }
+  #gate h1 {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 30px; line-height: 1.05;
+    letter-spacing: -0.02em; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  #gate .sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: rgba(246,246,246,0.6); margin-bottom: 36px;
+  }
+  #gate input {
+    width: 100%; padding: 16px 18px;
+    background: transparent; color: var(--paper);
+    border: 1px solid rgba(246,246,246,0.30);
+    font-family: 'Archivo', sans-serif; font-size: 15px;
+    letter-spacing: 0.20em; text-align: center; text-transform: uppercase;
+  }
+  #gate input:focus { outline: none; border-color: var(--gold); }
+  #gate button {
+    margin-top: 14px; width: 100%; padding: 16px;
+    background: var(--gold); color: var(--ink); border: none;
+    font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px;
+    letter-spacing: 0.24em; text-transform: uppercase; cursor: pointer;
+    transition: background 0.2s;
+  }
+  #gate button:hover { background: var(--paper); }
+  #gate .err {
+    margin-top: 16px; height: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: #f87171;
+  }
+
+  /* Layout */
+  .section { padding: 96px 28px; }
+  @media (min-width: 768px) { .section { padding: 140px 56px; } }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  /* Eyebrow rule label */
+  .rule {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.30em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 32px;
+  }
+  .tracks .rule, .pricing .rule { color: rgba(246,246,246,0.55); }
+
+  /* Headings */
+  h2 {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: clamp(36px, 4.6vw, 64px);
+    line-height: 1.04; letter-spacing: -0.02em;
+    text-transform: uppercase;
+    max-width: 22ch;
+  }
+  h3 {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 22px; line-height: 1.15;
+    letter-spacing: -0.015em; text-transform: uppercase;
+  }
+  p {
+    color: var(--ink-soft);
+    font-size: 17px; line-height: 1.6;
+    max-width: 64ch;
+  }
+  .lede { font-size: 19px; line-height: 1.6; }
+  .gold { color: var(--gold-deep); }
+  em.gold-em { font-style: normal; color: var(--gold-deep); font-family: 'Archivo Black', sans-serif; font-weight: 400; }
+
+  /* COVER */
+  .cover {
+    min-height: 100vh;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 56px 32px;
+    overflow: hidden;
+  }
+  @media (min-width: 768px) { .cover { padding: 64px 56px; } }
+  .cover::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 25% 15%, rgba(255,180,0,0.10), transparent 45%),
+      radial-gradient(circle at 80% 85%, rgba(255,180,0,0.06), transparent 50%);
+    z-index: 1;
+  }
+  .cover > * { position: relative; z-index: 2; }
+  .cover-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 28px;
+  }
+  .cover-id { display: flex; align-items: center; gap: 18px; }
+  .cover-id .logo {
+    width: 72px; height: 72px;
+    background: var(--paper); color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 18px; letter-spacing: 0.05em;
+  }
+  .cover-id .meta-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.30em; text-transform: uppercase;
+    color: rgba(246,246,246,0.55);
+  }
+  .cover-id .meta-name {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 16px; letter-spacing: -0.01em;
+    text-transform: uppercase; margin-top: 6px;
+  }
+  .cover-stamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.30em; text-transform: uppercase;
+    color: rgba(246,246,246,0.55);
+    text-align: right;
+  }
+  .cover-stamp .yr {
+    display: block; font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 16px; letter-spacing: -0.01em; color: var(--paper);
+    margin: 6px 0 4px;
+  }
+  .cover-title {
+    flex: 1; display: flex; align-items: center;
+    padding: 60px 0 40px;
+  }
+  .cover-title h1 {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: clamp(64px, 13vw, 200px);
+    line-height: 0.92; letter-spacing: -0.025em;
+    text-transform: uppercase;
+  }
+  .cover-title h1 em {
+    font-style: normal; color: var(--gold);
+    font-family: 'Archivo Black', sans-serif; font-weight: 400;
+  }
+  .cover-title h1 .badges {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-top: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    line-height: normal;
+  }
+  .cover-title h1 .badges span {
+    padding: 8px 14px;
+    border: 1px solid rgba(246,246,246,0.55);
+    color: var(--paper);
+  }
+  .cover-bottom {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(246,246,246,0.55);
+  }
+
+  /* THE IDEA */
+  .idea h2 { margin-bottom: 32px; }
+  .idea .lede + .lede { margin-top: 18px; }
+
+  /* PARTNERS */
+  .partners-section { background: var(--paper-warm); }
+  .partner-grid {
+    display: grid; grid-template-columns: 1fr;
+    border: 1px solid var(--rule);
+    margin-top: 8px;
+  }
+  @media (min-width: 768px) {
+    .partner-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .partner {
+    padding: 36px 32px 40px;
+    border-bottom: 1px solid var(--rule);
+  }
+  @media (min-width: 768px) {
+    .partner { border-bottom: none; border-right: 1px solid var(--rule); }
+    .partner:last-child { border-right: none; }
+  }
+  .partner-code {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--gold); color: var(--ink);
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 13px; letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+  .partner h3 { margin-bottom: 6px; }
+  .partner .partner-cap {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 18px;
+  }
+  .partner p { font-size: 15.5px; line-height: 1.6; max-width: 38ch; color: var(--ink-soft); }
+
+  /* TWO TRACKS */
+  .tracks { background: var(--ink); color: var(--paper); }
+  .tracks h2 { color: var(--paper); margin-bottom: 48px; }
+  .tracks p { color: rgba(246,246,246,0.78); }
+  .track-grid {
+    display: grid; grid-template-columns: 1fr; gap: 24px;
+  }
+  @media (min-width: 768px) {
+    .track-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+  .track-card {
+    padding: 36px 32px 40px;
+    border: 1px solid rgba(246,246,246,0.20);
+    background: rgba(246,246,246,0.025);
+  }
+  .track-card .tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .track-card h3 { color: var(--paper); margin-bottom: 14px; }
+  .track-card p { font-size: 15.5px; line-height: 1.6; }
+  .track-card ul { list-style: none; margin-top: 20px; }
+  .track-card li {
+    padding: 13px 0;
+    border-top: 1px solid rgba(246,246,246,0.18);
+    color: rgba(246,246,246,0.85);
+    font-size: 15px;
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .track-card li::before {
+    content: "•";
+    color: var(--gold);
+    font-size: 18px; line-height: 1;
+    flex-shrink: 0; margin-top: 2px;
+  }
+
+  /* ITINERARY */
+  .it-row {
+    display: grid; grid-template-columns: 100px 1fr; gap: 22px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  @media (min-width: 768px) {
+    .it-row { grid-template-columns: 160px 1fr; gap: 40px; padding: 28px 0; }
+  }
+  .it-row:first-of-type { border-top: 1px solid var(--rule); }
+  .it-day {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold-deep); padding-top: 4px;
+  }
+  .it-title {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 19px; line-height: 1.18;
+    letter-spacing: -0.01em; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .it-detail {
+    color: var(--ink-muted);
+    font-size: 15.5px; line-height: 1.62;
+    max-width: 70ch;
+  }
+
+  /* INCLUDES */
+  .includes-section { background: var(--paper-warm); }
+  .inc-grid {
+    display: grid; grid-template-columns: 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 8px;
+  }
+  @media (min-width: 768px) { .inc-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .inc {
+    background: var(--paper-warm);
+    padding: 32px 30px 36px;
+  }
+  .inc .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-deep);
+    display: block; margin-bottom: 12px;
+  }
+  .inc h4 {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 18px; line-height: 1.18;
+    letter-spacing: -0.01em; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .inc p {
+    font-size: 14.5px; color: var(--ink-muted); line-height: 1.6;
+    max-width: 32ch;
+  }
+
+  /* PRICING */
+  .pricing { background: var(--ink); color: var(--paper); }
+  .pricing h2 { color: var(--paper); }
+  .pricing p { color: rgba(246,246,246,0.78); }
+  .price-grid {
+    display: grid; grid-template-columns: 1fr; gap: 32px;
+    align-items: end;
+  }
+  @media (min-width: 768px) {
+    .price-grid { grid-template-columns: 1.1fr 1fr; gap: 56px; }
+  }
+  .price-card {
+    background: var(--paper); color: var(--ink);
+    padding: 36px 32px;
+    position: relative;
+    border: 1px solid rgba(246,246,246,0.15);
+  }
+  .price-card::before {
+    content: ""; position: absolute; top: -1px; left: -1px;
+    width: 38px; height: 38px;
+    border-top: 2px solid var(--gold);
+    border-left: 2px solid var(--gold);
+  }
+  .price-card::after {
+    content: ""; position: absolute; bottom: -1px; right: -1px;
+    width: 38px; height: 38px;
+    border-bottom: 2px solid var(--gold);
+    border-right: 2px solid var(--gold);
+  }
+  .price-card .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .price-card .num {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: clamp(40px, 5vw, 60px);
+    line-height: 1; letter-spacing: -0.025em;
+    margin: 14px 0 6px;
+  }
+  .price-card .small {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .price-card ul {
+    list-style: none; margin-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .price-card li {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .price-total {
+    margin-top: 24px;
+    padding: 14px 16px;
+    background: rgba(255,180,0,0.10);
+    border: 1px solid var(--gold);
+    color: var(--ink);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .price-total .v {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 17px; letter-spacing: -0.01em;
+  }
+
+  /* CTA */
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .btn {
+    display: inline-flex; align-items: center;
+    padding: 15px 24px;
+    background: var(--ink); color: var(--paper);
+    border: 1px solid var(--ink);
+    font-family: 'Archivo', sans-serif; font-weight: 700;
+    font-size: 12.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+  .btn.gold { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+  .btn.gold:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .btn.outline { background: transparent; color: var(--ink); }
+  .btn.outline:hover { background: var(--ink); color: var(--paper); }
+
+  /* AUTHOR */
+  .author {
+    margin-top: 64px;
+    padding-top: 36px;
+    border-top: 1px solid var(--rule);
+    display: flex; gap: 22px; align-items: center;
+    flex-wrap: wrap;
+  }
+  .author .avatar {
+    width: 84px; height: 84px;
+    border-radius: 50%; object-fit: cover;
+    border: 1px solid var(--rule-strong);
+    background: var(--paper-warm);
+  }
+  .author .who {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 19px; letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .author .role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-top: 5px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink); color: rgba(246,246,246,0.55);
+    padding: 22px 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
+  }
+  footer .row {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+  }
+
+  /* COACHING CLINIC FORMATS */
+  .fmt-grid {
+    display: grid; grid-template-columns: 1fr; gap: 24px;
+    margin-top: 40px;
+  }
+  @media (min-width: 768px) {
+    .fmt-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+  .fmt-card {
+    background: var(--paper);
+    padding: 36px 32px 40px;
+    border: 1px solid var(--rule);
+    position: relative;
+  }
+  .fmt-card::before {
+    content: ""; position: absolute; top: -1px; left: -1px;
+    width: 32px; height: 32px;
+    border-top: 2px solid var(--gold);
+    border-left: 2px solid var(--gold);
+  }
+  .fmt-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 14px;
+  }
+  .fmt-price {
+    font-family: 'Archivo', sans-serif; font-weight: 800;
+    font-size: 30px; line-height: 1; letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .fmt-card p {
+    font-size: 15px; color: var(--ink-muted); line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .fmt-card ul {
+    list-style: none;
+    border-top: 1px solid var(--rule);
+  }
+  .fmt-card li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14px; color: var(--ink-soft); line-height: 1.4;
+  }
+
+  /* Caveat box */
+  .caveat {
+    margin-top: 48px;
+    padding: 24px 28px;
+    background: var(--paper);
+    border-left: 3px solid var(--gold);
+  }
+  .caveat-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 10px;
+  }
+  .caveat p {
+    font-size: 15px; color: var(--ink-soft); line-height: 1.6;
+    max-width: none;
+  }
+
+  /* PRINT */
+  @media print {
+    #gate { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="gate">
+  <div class="gate-inner">
+    <div class="stamp">Odisea Tours · Private</div>
+    <h1>Sky Chavda<br><span style="color: var(--gold)">TOCA Soccer Center</span></h1>
+    <div class="sub">Spain Coaching Immersion · 2026</div>
+    <input id="pw" type="password" placeholder="Access Code" autocomplete="off" autofocus />
+    <button id="go">Open Proposal</button>
+    <div class="err" id="err">&nbsp;</div>
+  </div>
+</div>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-top">
+    <div class="cover-id">
+      <div class="logo">JS</div>
+      <div>
+        <div class="meta-label">A proposal prepared for</div>
+        <div class="meta-name">Sky Chavda · TOCA Soccer Center</div>
+      </div>
+    </div>
+    <div class="cover-stamp">
+      <div>Est.</div>
+      <div class="yr">2005</div>
+      <div>20 Years</div>
+    </div>
+  </div>
+
+  <div class="cover-title">
+    <h1>
+      <span style="display:block;">Spain</span>
+      <span style="display:block;"><em>Coaching</em></span>
+      <span style="display:block;">Immersion</span>
+      <span class="badges">
+        <span>22 Players</span>
+        <span>Coach Track</span>
+        <span>9 Days</span>
+      </span>
+    </h1>
+  </div>
+
+  <div class="cover-bottom">
+    <div>odisea-tours.com</div>
+    <div>Madrid · Valencia · Barcelona</div>
+    <div id="dateLabel">April 2026</div>
+  </div>
+</section>
+
+<!-- THE IDEA -->
+<section class="section idea">
+  <div class="container">
+    <div class="rule">01 / The idea</div>
+    <h2>Nine days. Three federations. <em class="gold-em">One question.</em></h2>
+    <p class="lede" style="margin-top: 28px;">
+      Bring your TOCA squad to Spain. Twenty two players train on the same fields used by FC Barcelona, Valencia CF, and the Spanish National Team. While the players are on the pitch, you and your TOCA staff sit alongside the host coach, watch the session unfold, and debrief afterwards.
+    </p>
+    <p class="lede">
+      That is the question this trip answers: how does a top European academy actually coach? Not the highlight reel. The drill, the cue, the correction, the periodisation.
+    </p>
+    <p class="lede">
+      Players come home better. Coaches come home with a notebook full of methodology nobody in the United States is running yet.
+    </p>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section partners-section">
+  <div class="container">
+    <div class="rule">02 / Three partners</div>
+    <h2>Where you train. Who runs the session.</h2>
+    <div class="partner-grid">
+      <article class="partner">
+        <div class="partner-code">FCB</div>
+        <h3>FC Barcelona</h3>
+        <div class="partner-cap">Official facilities · Official coaching</div>
+        <p>Sessions take place at FC Barcelona facilities, run by official FC Barcelona academy coaches. Includes Camp Nou and La Masia academy access.</p>
+      </article>
+      <article class="partner">
+        <div class="partner-code">VCF</div>
+        <h3>Valencia CF</h3>
+        <div class="partner-cap">Official facilities · Formal clinic program</div>
+        <p>Training at Valencia CF facilities, run by official VCF academy staff. VCF runs a structured Coaching Clinic program at the Ciutat Esportiva (see section 04). Includes the Mestalla Forever Tour.</p>
+      </article>
+      <article class="partner">
+        <div class="partner-code">RFEF</div>
+        <h3>Spanish FA · Las Rozas</h3>
+        <div class="partner-cap">UEFA Pro coaching · On-site stay</div>
+        <p>Two nights at the Spanish FA headquarters where La Roja prepares. Sessions led by UEFA Pro licensed coaches from the federation pool.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TWO TRACKS -->
+<section class="section tracks">
+  <div class="container">
+    <div class="rule">03 / Two tracks · One trip</div>
+    <h2>Players train. <em class="gold-em" style="color: var(--gold);">Coaches learn.</em></h2>
+    <div class="track-grid" style="margin-top: 12px;">
+      <div class="track-card">
+        <span class="tag">Player Track · 22 Players</span>
+        <h3>Six elite sessions, two fixtures</h3>
+        <p>Six full training sessions split across three federation campuses. Two friendly fixtures versus age matched Spanish academy sides. Match film captured and tagged per player for the flight home.</p>
+        <ul>
+          <li>2 sessions at FC Barcelona facilities</li>
+          <li>2 sessions at Valencia CF facilities</li>
+          <li>2 sessions at the Spanish FA headquarters</li>
+          <li>2 friendlies vs Spanish academy opposition</li>
+          <li>Camp Nou, Mestalla, RFEF stadium and museum tours</li>
+        </ul>
+      </div>
+      <div class="track-card">
+        <span class="tag">Coach Track · Sky and TOCA Staff</span>
+        <h3>Inside the technical area</h3>
+        <p>You stand alongside the host coach during every player session. Methodology debrief after each block. A closed door tactical round table with a UEFA Pro licensed coach at Las Rozas. Optional add on: the formal VCF Academy Coaching Clinic (next section).</p>
+        <ul>
+          <li>Technical area access on every player session</li>
+          <li>Post session debrief with the lead coach</li>
+          <li>Methodology folder per club: drills, principles, periodisation</li>
+          <li>UEFA Pro licensed coach round table at the Spanish FA</li>
+          <li>Optional VCF Coaching Clinic with academy staff formations</li>
+          <li>Player evaluation framework you take home and use</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING CLINIC ADD ON -->
+<section class="section partners-section">
+  <div class="container">
+    <div class="rule">04 / Coaching clinic add on</div>
+    <h2>The official <em class="gold-em">VCF Academy</em> Coaching Clinic.</h2>
+    <p class="lede" style="margin-top: 24px;">
+      Valencia CF runs a formal coaching clinic program at their Ciutat Esportiva, taught directly by VCF Academy staff. Coaching methodology, goalkeeper specific work, talent management, fitness, psychology of the player. Two formats, six structured formations, academy session viewing alongside every workshop.
+    </p>
+
+    <div class="fmt-grid">
+      <div class="fmt-card">
+        <span class="fmt-tag">One-day clinic</span>
+        <div class="fmt-price">€200 per coach</div>
+        <p>4 hours of formation conducted by VCF Academy staff. VCF Mestalla and VCF U19 training session viewing. Evening U6 to U16 male and female team session viewing. Mestalla Forever Tour ticket.</p>
+        <ul>
+          <li>Formation 1 · VCF Academy Introduction</li>
+          <li>Formation 2 · VCF Academy Identity</li>
+          <li>VCF Mestalla and U19 training viewing</li>
+          <li>U6 to U16 male and female session viewing</li>
+          <li>Mestalla Forever Tour ticket</li>
+        </ul>
+      </div>
+      <div class="fmt-card">
+        <span class="fmt-tag">One-week clinic (Wed to Sun)</span>
+        <div class="fmt-price">€400 per coach</div>
+        <p>12 hours of formation across three days. 12 hours of academy training session viewing. Saturday VCF Academy games viewing. Sunday VCF LaLiga match viewing. Mestalla Forever Tour ticket.</p>
+        <ul>
+          <li>All 6 academy formations (see below)</li>
+          <li>VCF Mestalla, U19 and Female team session viewing</li>
+          <li>Saturday VCF Academy games viewing</li>
+          <li>Sunday Valencia CF LaLiga match viewing</li>
+          <li>Mestalla Forever Tour ticket</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rule" style="margin-top: 72px;">Six formations led by VCF Academy staff</div>
+    <div class="inc-grid">
+      <article class="inc">
+        <span class="tag">Formation 1</span>
+        <h4>VCF Academy Introduction</h4>
+        <p>How the academy is structured. How players move through the pyramid from U6 to first team.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Formation 2</span>
+        <h4>VCF Academy Identity</h4>
+        <p>The playing principles and competitive identity that define every age group at the club.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Formation 3</span>
+        <h4>Talent Management</h4>
+        <p>How VCF identifies, recruits, retains and develops academy talent across the catchment.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Formation 4</span>
+        <h4>Psycho-education of the Player</h4>
+        <p>Learning environment, mental development, and the coach to player communication framework.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Formation 5</span>
+        <h4>Goalkeeper Specific Training</h4>
+        <p>VCF goalkeeping methodology, session design, and how the GK position fits the academy identity.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Formation 6</span>
+        <h4>Fitness and Strength</h4>
+        <p>Periodisation, load management and physical preparation across the academy age groups.</p>
+      </article>
+    </div>
+
+    <div class="caveat">
+      <div class="caveat-tag">Group size note</div>
+      <p>The VCF Coaching Clinic requires a minimum of 15 coaches. If TOCA brings the staff to meet the threshold, the clinic runs as a private TOCA cohort. For smaller delegations, Odisea will align with VCF's open clinic schedule and place Sky and his staff in a shared clinic on matching dates. Pricing above is per coach, on top of the main trip, VAT exempt for non Spanish entities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="section">
+  <div class="container">
+    <div class="rule">05 / Nine day itinerary</div>
+    <h2 style="margin-bottom: 28px;">Madrid in. Barcelona out. Three campuses in between.</h2>
+    <p class="muted" style="color: var(--ink-muted); margin-bottom: 36px;">
+      Sample structure. Final session times depend on host club confirmation 60 days out.
+    </p>
+    <div>
+      <div class="it-row">
+        <div class="it-day">Day 01</div>
+        <div>
+          <div class="it-title">Arrival · Madrid</div>
+          <div class="it-detail">Land Madrid Barajas. Private coach transfer to Las Rozas. Check in at the Spanish FA headquarters residence. Light recovery walk and welcome dinner with your Odisea ground team.</div>
+        </div>
+      </div>
+      <div class="it-row">
+        <div class="it-day">Day 02</div>
+        <div>
+          <div class="it-title">Spanish FA · Session 1</div>
+          <div class="it-detail">Morning training session at the RFEF, led by a UEFA Pro licensed coach. Coach round table for Sky and the TOCA staff. Afternoon: guided tour of the federation campus, museum, and the pitches La Roja uses. Dinner on site.</div>
+        </div>
+      </div>
+      <div class="it-row">
+        <div class="it-day">Day 03</div>
+        <div>
+          <div class="it-title">Spanish FA · Session 2</div>
+          <div class="it-detail">Second session at the RFEF: small sided and tactical work. Coach methodology debrief and Q and A. Afternoon free in central Madrid for the players (orientation walk with guide). Recovery dinner.</div>
+        </div>
+      </div>
+      <div class="it-row">
+        <div class="it-day">Day 04</div>
+        <div>
+          <div class="it-title">Transfer · Valencia</div>
+          <div class="it-detail">Coach transfer to Valencia along the Mediterranean coast. Hotel check in. Late afternoon: light activation session at Valencia CF facilities. Evening: Mestalla stadium tour. Welcome dinner in the Old Town.</div>
+        </div>
+      </div>
+      <div class="it-row">
+        <div class="it-day">Day 05</div>
+        <div>
+          <div class="it-title">Valencia CF · Session 1</div>
+          <div class="it-detail">Full morning training session at Valencia CF facilities, run by official VCF academy coaches. Coach debrief over lunch. Afternoon: friendly fixture vs a Valencia age matched academy side. Match filmed, tagged per player.</div>
+        </div>
+      </div>
+      <div class="it-row">
+        <div class="it-day">Day 06</div>
+        <div>
+          <div class="it-title">Valencia CF · Session 2 + Transfer</div>
+          <div class="it-detail">Second VCF training session (morning). Methodology folder handover. Afternoon: coach transfer to Barcelona. Hotel check in in the Gothic Quarter. Free evening in the city.</div>
+        </div>
+      </div>
+      <div class="it-row">
+        <div class="it-day">Day 07</div>
+        <div>
+          <div class="it-title">FC Barcelona · Session 1</div>
+          <div class="it-detail">Training at FC Barcelona facilities, run by official FCB academy staff. Coach debrief on the FCB methodology and the rondo principles in practice. Afternoon: La Masia academy visit. Optional Gaudí half day for travelling families.</div>
+        </div>
+      </div>
+      <div class="it-row">
+        <div class="it-day">Day 08</div>
+        <div>
+          <div class="it-title">FC Barcelona · Session 2 + Fixture</div>
+          <div class="it-detail">Second FCB training session (morning). Coach round table on positional play and small sided games. Afternoon: friendly fixture vs a Barcelona age matched academy side. Camp Nou stadium tour for the squad after the match.</div>
+        </div>
+      </div>
+      <div class="it-row">
+        <div class="it-day">Day 09</div>
+        <div>
+          <div class="it-title">Recovery, Awards, Departure</div>
+          <div class="it-detail">Recovery walk along the beach at Barceloneta. Squad awards lunch. Sky and the TOCA staff receive the full methodology folder, match film USB, and player evaluation reports. Coach transfer to Barcelona airport.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDES -->
+<section class="section includes-section">
+  <div class="container">
+    <div class="rule">06 / What is included</div>
+    <h2>Everything on the ground in Spain.</h2>
+    <div class="inc-grid">
+      <article class="inc">
+        <span class="tag">Hotels</span>
+        <h4>8 nights, four star</h4>
+        <p>Las Rozas (RFEF residence) 2n, Valencia 2n, Barcelona 3n. Twin sharing for players, single for staff.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Coaching</span>
+        <h4>6 federation sessions</h4>
+        <p>Run by official FC Barcelona, Valencia CF, and Spanish FA academy coaches. UEFA Pro licensed lead at Las Rozas.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Coach Track</span>
+        <h4>Methodology debriefs</h4>
+        <p>Technical area access on every session, post session debrief, methodology folder per club, UEFA Pro round table.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Fixtures</span>
+        <h4>2 academy friendlies</h4>
+        <p>Versus age matched Spanish academy sides. Filmed and tagged per player. Editable cuts handed over on USB at the end.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Stadiums</span>
+        <h4>Camp Nou + Mestalla + RFEF</h4>
+        <p>Stadium tours and museum access at all three host federations. La Masia academy visit at FCB.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Ground</span>
+        <h4>Private coach + guides</h4>
+        <p>Private coach transport for all 9 days. Bilingual Spanish guide throughout. Airport transfers on arrival and departure.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Meals</span>
+        <h4>Half board</h4>
+        <p>Daily breakfast at the hotel. Daily dinner included (welcome dinner, post fixture dinners, awards lunch). Lunches free for the group.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Insurance</span>
+        <h4>Group cover in Spain</h4>
+        <p>Travel and medical insurance for the squad and staff for the duration of the trip in Spain.</p>
+      </article>
+      <article class="inc">
+        <span class="tag">Coaches free</span>
+        <h4>Sky + 2 staff complimentary</h4>
+        <p>Sky and up to two TOCA coaching staff travel free on the trip. Adult ground services bundled into the player price.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing">
+  <div class="container">
+    <div class="price-grid">
+      <div>
+        <div class="rule">07 / Pricing</div>
+        <h2>Best all in price in Europe for a tour at this level.</h2>
+        <p class="lede" style="margin-top: 24px;">
+          Flights excluded. Everything else included: hotels, meals, coach transport, Spanish guides, insurance, training, fixtures, stadium and academy access, RFEF residence stay, methodology folders, match film.
+        </p>
+        <p class="lede">
+          Flexible deposit. Final price locked once the federation sessions are confirmed.
+        </p>
+      </div>
+      <div class="price-card">
+        <div class="label">Per player, all in</div>
+        <div class="num">$2,500</div>
+        <div class="small">Group of 22 · 9 days</div>
+        <ul>
+          <li>Sky + 2 TOCA staff free</li>
+          <li>Boys or girls teams welcome</li>
+          <li>Deposit $500 / player at booking</li>
+          <li>Balance 60 days before departure</li>
+          <li>Price locked once confirmed</li>
+        </ul>
+        <div class="price-total">
+          <span>Group total</span>
+          <span class="v">$55,000</span>
+        </div>
+        <div class="price-total" style="margin-top: 10px; background: transparent; border-color: var(--rule);">
+          <span>VCF Clinic add on</span>
+          <span class="v" style="font-size: 14px; color: var(--ink-muted);">from €200 / coach</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEP -->
+<section class="section">
+  <div class="container">
+    <div class="rule">08 / Next step</div>
+    <h2>One 30 minute call. We lock your dates.</h2>
+    <p class="lede" style="margin-top: 24px;">
+      Tell us your target month and squad age band. We come back within 48 hours with confirmed federation availability, real flight ranges from your home airport, and a hard number itinerary you can take to your families.
+    </p>
+    <p class="lede">No deposit until you say yes.</p>
+
+    <div class="cta-row">
+      <a class="btn gold" href="https://calendly.com/juan-odisea-tours/30min" target="_blank" rel="noopener">Book the 30 min call</a>
+      <a class="btn outline" href="mailto:juan@odisea-tours.com?subject=Spain%20Coaching%20Immersion%20%C2%B7%20TOCA">Email Juan</a>
+      <a class="btn outline" href="https://wa.me/34635745527?text=Hi%20Juan%2C%20about%20the%20Spain%20Coaching%20Immersion%20proposal%20for%20TOCA." target="_blank" rel="noopener">WhatsApp +34 635 745 527</a>
+    </div>
+
+    <div class="author">
+      <img class="avatar" src="/photos/juan-sanchez-odisea-tours-director.jpg" alt="Juan Sanchez, Director, Odisea Tours" onerror="this.style.display='none'" />
+      <div>
+        <div class="who">Juan Sanchez</div>
+        <div class="role">Director · Ground Agents Solutions S.L.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="row">
+    <div>Odisea Tours · Since 2005</div>
+    <div>Prepared for Sky Chavda · TOCA Soccer Center · Confidential</div>
+  </div>
+</footer>
+
+<script>
+  // Date stamp
+  (function(){
+    var d = new Date();
+    var month = d.toLocaleString('en-US', { month: 'long' });
+    var year = d.getFullYear();
+    var el = document.getElementById('dateLabel');
+    if (el) el.textContent = month + ' ' + year;
+  })();
+
+  // Password gate
+  (function(){
+    var PASSWORD = 'TOCA2026';
+    var STORAGE = 'odisea_proposal_sky_chavda';
+    var gate = document.getElementById('gate');
+    var input = document.getElementById('pw');
+    var go = document.getElementById('go');
+    var err = document.getElementById('err');
+
+    if (sessionStorage.getItem(STORAGE) === 'ok') {
+      gate.classList.add('hidden');
+    }
+
+    function tryUnlock() {
+      var v = (input.value || '').trim().toUpperCase();
+      if (v === PASSWORD) {
+        sessionStorage.setItem(STORAGE, 'ok');
+        gate.classList.add('hidden');
+      } else {
+        err.textContent = 'Incorrect code';
+        input.value = '';
+        input.focus();
+      }
+    }
+
+    go.addEventListener('click', tryUnlock);
+    input.addEventListener('keydown', function(e){
+      if (e.key === 'Enter') tryUnlock();
+    });
+  })();
+</script>
+
+</body>
+</html>

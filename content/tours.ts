@@ -419,6 +419,7 @@ export const TOURS: Tour[] = [
         day: "I",
         title: "Madrid · Bienvenida",
         detail: "MAD airport pickup by private coach, hotel check-in near Gran Vía, welcome dinner around Plaza Mayor, ground rules: solo en español from this moment forward.",
+        image: "/photos/it-madrid-gran-via.jpg",
       },
       {
         day: "II",
@@ -450,11 +451,13 @@ export const TOURS: Tour[] = [
         day: "VII",
         title: "Gaudí",
         detail: "Sagrada Família interior in the morning, Gaudí walking route past Casa Batlló and Casa Milà, evening free walk down Las Ramblas through La Boquería and the Gothic Quarter.",
+        image: "/photos/it-boqueria-market.jpg",
       },
       {
         day: "VIII",
         title: "Barcelona Libre",
         detail: "Free morning for shopping, journals or a beach run. Farewell tapas dinner in El Born with the full group, certificates handed out for the students who stayed in Spanish all eight nights.",
+        image: "/photos/it-barcelona-el-born.jpg",
       },
       {
         day: "IX",

@@ -6,12 +6,12 @@ import { TOURS } from "@/content/tours";
 export const metadata: Metadata = {
   title: "Spain Group Tours — Soccer, Cultural & Corporate",
   description:
-    "Seven group tour experiences across Spain. Youth soccer pilgrimages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats and sport and adventure. Built for groups of 10 to 120 since 2005.",
+    "Nine group tour experiences across Spain. Youth soccer pilgrimages, UK pre-season stages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats and sport and adventure. Built for groups of 10 to 120 since 2005.",
   alternates: { canonical: "https://odisea-tours.com/tours" },
   openGraph: {
     title: "Spain Group Tours — Soccer, Cultural, Camino & Corporate",
     description:
-      "Seven group tour experiences across Spain. Built for groups of 10 to 120 since 2005.",
+      "Nine group tour experiences across Spain. Built for groups of 10 to 120 since 2005.",
     url: "https://odisea-tours.com/tours",
   },
 };
@@ -46,13 +46,13 @@ export default function ToursIndex() {
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14 text-paper">
           <div className="flex items-center justify-between font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-paper/70 mb-4">
             <span>Chapter I · Index</span>
-            <span>07 Tour Experiences</span>
+            <span>09 Tour Experiences</span>
           </div>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
             <span className="sr-only">Spain group tours: </span>Tour <span className="font-display-italic text-gold">Experiences.</span>
           </h1>
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
-            Seven ways to travel through Spain with us. Each one built from the ground up for groups, from a handful of friends to a corporate team of a hundred.
+            Nine ways to travel through Spain with us. Each one built from the ground up for groups, from a handful of friends to a corporate team of a hundred.
           </p>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function ToursIndex() {
             <span>How We Build Tours</span>
           </div>
           <h2 className="font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.15] tracking-[-0.01em] mb-6">
-            Seven shapes of trip. One way of working.
+            Nine shapes of trip. One way of working.
           </h2>
           <div className="space-y-5 text-[1.0rem] md:text-[1.05rem] leading-[1.7] text-ink/75">
             <p>
@@ -78,7 +78,7 @@ export default function ToursIndex() {
               remembers from one they merely survived.
             </p>
             <p>
-              The seven experiences below are the shapes we run most often,
+              The nine experiences below are the shapes we run most often,
               built up over twenty years of hosting youth soccer teams from the
               United States and Australia, school groups from the United
               Kingdom, culinary groups from across Europe, and corporate teams
@@ -90,7 +90,7 @@ export default function ToursIndex() {
               transfer to the last.
             </p>
             <p>
-              If your group does not fit one of these seven, that is normally
+              If your group does not fit one of these nine, that is normally
               the most interesting place to start a conversation. Use the form
               on{" "}
               <Link href="/plan-your-tour" className="link-rule text-gold">

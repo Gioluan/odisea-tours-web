@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/plan-your-tour`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${SITE}/brand`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
     { url: `${SITE}/destinations`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/destinations/barcelona`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/destinations/madrid`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },

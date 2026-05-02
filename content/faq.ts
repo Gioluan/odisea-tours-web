@@ -56,7 +56,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         q: "Do players actually train inside FC Barcelona, Valencia CF and the Spanish FA?",
-        a: "Yes. Training sessions are held at FC Barcelona's Joan Gamper facilities (the same complex used by the FCB academy), at Valencia CF's Paterna training ground, and at the Spanish Football Federation's headquarters in Las Rozas, Madrid. Sessions are run by official FC Barcelona and Valencia CF coaching staff. The Spanish FA stay includes accommodation on-site, where the senior Spanish national team also trains.",
+        a: "Yes. Training sessions are held at FC Barcelona's Joan Gamper facilities (the same complex used by the FCB academy), at Valencia CF's Paterna training ground, and at the Spanish Football Federation's headquarters in Las Rozas, Madrid. Sessions are run by FC Barcelona and Valencia CF coaching staff. The Spanish FA stay includes accommodation on-site, where the senior Spanish national team also trains.",
       },
       {
         q: "Who organises the matches, and who is the opposition?",

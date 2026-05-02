@@ -230,12 +230,12 @@ export default async function UsCityPage({ params }: Props) {
             04 / Where your players train
           </div>
           <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.8rem)] uppercase leading-[1.05] max-w-[22ch]">
-            Three official partners. <span className="font-display-italic text-gold-deep">No middleman.</span>
+            Three training homes. <span className="font-display-italic text-gold-deep">No middleman.</span>
           </h2>
           <div className="mt-12 grid md:grid-cols-3 gap-0 border border-ink/15">
             {[
-              { src: "/badges/fc-barcelona.svg", name: "FC Barcelona", caption: "Joan Gamper facilities · Official FCB coaches" },
-              { src: "/badges/valencia-cf.svg", name: "Valencia CF", caption: "Paterna training ground · Official Valencia CF staff" },
+              { src: "/badges/fc-barcelona.svg", name: "FC Barcelona", caption: "Joan Gamper facilities · FC Barcelona coaching staff" },
+              { src: "/badges/valencia-cf.svg", name: "Valencia CF", caption: "Paterna training ground · Valencia CF coaching staff" },
               { src: "/badges/rfef.svg", name: "Spanish FA", caption: "RFEF headquarters, Las Rozas · Accommodation + training" },
             ].map((b, i) => (
               <article key={b.name} className={`p-8 text-center flex flex-col items-center ${i < 2 ? "md:border-r border-ink/15" : ""} ${i > 0 ? "border-t md:border-t-0 border-ink/15" : ""}`}>

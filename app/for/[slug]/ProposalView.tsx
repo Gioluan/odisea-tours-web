@@ -22,7 +22,7 @@ const ITINERARY = [
   {
     day: "Day 02",
     title: "FC Barcelona training",
-    detail: "Training session at FC Barcelona facilities. Coaching led by official FC Barcelona staff. Afternoon: Camp Nou and La Masia academy visit.",
+    detail: "Training session at FC Barcelona facilities. Coaching led by FC Barcelona staff. Afternoon: Camp Nou and La Masia academy visit.",
   },
   {
     day: "Day 03",
@@ -37,7 +37,7 @@ const ITINERARY = [
   {
     day: "Day 05",
     title: "Valencia CF training",
-    detail: "Training at Valencia CF facilities. Coaching by official Valencia CF staff. Evening: Valencia old town walk with guide.",
+    detail: "Training at Valencia CF facilities. Coaching by Valencia CF staff. Evening: Valencia old town walk with guide.",
   },
   {
     day: "Day 06",
@@ -154,8 +154,8 @@ export default function ProposalView({ proposal }: { proposal: Proposal }) {
           </div>
           <div className="grid md:grid-cols-3 border border-paper/25">
             {[
-              { code: "FCB", name: "FC Barcelona", caption: "Official facilities · Official coaching", body: <>Training sessions are held <strong className="text-paper font-[800]">at FC Barcelona facilities</strong>. Your players are coached by <strong className="text-paper font-[800]">official FC Barcelona coaches</strong> on every session.</> },
-              { code: "VCF", name: "Valencia CF", caption: "Official facilities · Official coaching", body: <>Training <strong className="text-paper font-[800]">at Valencia CF facilities</strong>, with <strong className="text-paper font-[800]">official Valencia CF coaching staff</strong> leading every drill.</> },
+              { code: "FCB", name: "FC Barcelona", caption: "Club facilities · Club coaching", body: <>Training sessions are held <strong className="text-paper font-[800]">at FC Barcelona facilities</strong>. Your players are coached by <strong className="text-paper font-[800]">FC Barcelona coaching staff</strong> on every session.</> },
+              { code: "VCF", name: "Valencia CF", caption: "Club facilities · Club coaching", body: <>Training <strong className="text-paper font-[800]">at Valencia CF facilities</strong>, with <strong className="text-paper font-[800]">Valencia CF coaching staff</strong> leading every drill.</> },
               { code: "RFEF", name: "Spanish FA", caption: "On-site accommodation", body: <>Your team <strong className="text-paper font-[800]">stays at the RFEF headquarters</strong>, home base of the Spanish National Team. A night where champions sleep.</> },
             ].map((p, i) => (
               <article key={p.code} className={`p-8 md:p-10 ${i < 2 ? "md:border-r border-paper/25" : ""} ${i > 0 ? "border-t md:border-t-0 border-paper/25" : ""}`}>

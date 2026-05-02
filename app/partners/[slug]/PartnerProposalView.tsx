@@ -234,7 +234,7 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
             A partnership built on <em className="font-display-italic text-gold-deep">trust, credibility</em> and a fair share of every traveller you bring.
           </h2>
           <p className="mt-8 max-w-[68ch] text-[clamp(1.05rem,1.3vw,1.2rem)] leading-relaxed text-ink-soft">
-            {proposal.partner_name} refers clubs, coaches and families in {proposal.territory} to Odisea Tours. Odisea operates the tour end-to-end: Spanish FA, Valencia CF, FC Barcelona training partnerships, hotels, transport, games against local Spanish opposition, and on-the-ground support.
+            {proposal.partner_name} refers clubs, coaches and families in {proposal.territory} to Odisea Tours. Odisea operates the tour end-to-end: long-standing training relationships at the Spanish FA, Valencia CF and FC Barcelona, hotels, transport, games against local Spanish opposition, and on-the-ground support.
           </p>
 
           <div className="mt-12 grid md:grid-cols-3 border border-ink/15">
@@ -276,7 +276,7 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
             02 / Training partners you can put your name on
           </div>
           <h2 className="font-display text-[clamp(1.9rem,3.6vw,3.4rem)] uppercase leading-[1.02] max-w-[24ch]">
-            Official facilities. <em className="font-display-italic text-gold">Official coaches.</em> No middleman.
+            Club facilities. <em className="font-display-italic text-gold">Club coaches.</em> No middleman.
           </h2>
           <p className="mt-6 max-w-[62ch] text-paper/75 leading-relaxed">
             Every Odisea tour trains inside the same clubs that produce Spanish internationals. Not a license. Not a "partner of a partner". Direct relationships that let you tell a club director exactly what their players will do.
@@ -284,8 +284,8 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
 
           <div className="mt-14 grid md:grid-cols-3 gap-0 border border-paper/20">
             {[
-              { src: "/badges/fc-barcelona.svg", name: "FC Barcelona", caption: "Training at Joan Gamper · Official FCB coaches" },
-              { src: "/badges/valencia-cf.svg", name: "Valencia CF", caption: "Full sessions at VCF facilities · Official VCF staff" },
+              { src: "/badges/fc-barcelona.svg", name: "FC Barcelona", caption: "Training at Joan Gamper · FC Barcelona coaching staff" },
+              { src: "/badges/valencia-cf.svg", name: "Valencia CF", caption: "Full sessions at VCF facilities · Valencia CF coaching staff" },
               { src: "/badges/rfef.svg", name: "Spanish FA", caption: "Accommodation + training at RFEF HQ, Las Rozas" },
             ].map((b, i) => (
               <article

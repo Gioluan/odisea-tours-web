@@ -160,7 +160,7 @@ export const US_CITIES: UsCity[] = [
     intro:
       "New York is the closest major US metro to Spain by flight time and the easiest to build a Spain tour around. Odisea Tours runs youth soccer tours for clubs across the NY/NJ/CT metro, using the nonstop JFK-to-Madrid and Newark-to-Barcelona services to fit the school calendar tightly.",
     local_soccer_context:
-      "The NY metro runs ECNL, NPL and MLS Next alongside a deep high school soccer tradition and some of the most competitive academy sides on the East Coast. A Spain tour gives a NY club something the domestic showcase circuit cannot: official training inside FC Barcelona and Valencia CF, games against Spanish academy opposition, and a cultural programme in Barcelona, Madrid and Valencia that parents value as much as the soccer.",
+      "The NY metro runs ECNL, NPL and MLS Next alongside a deep high school soccer tradition and some of the most competitive academy sides on the East Coast. A Spain tour gives a NY club something the domestic showcase circuit cannot: training inside FC Barcelona and Valencia CF, games against Spanish academy opposition, and a cultural programme in Barcelona, Madrid and Valencia that parents value as much as the soccer.",
     time_zone_note:
       "Spain is 6 hours ahead of New York. Groups leaving JFK in the evening arrive Madrid first thing in the morning and train the same day.",
     why_spain: [

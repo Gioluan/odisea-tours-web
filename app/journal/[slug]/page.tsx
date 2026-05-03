@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { POSTS, postBySlug } from "@/content/journal";
+import { POSTS, postBySlug, authorOf, tagsOf } from "@/content/journal";
 
 const SITE = "https://odisea-tours.com";
 
@@ -42,6 +42,8 @@ export async function generateMetadata({
   if (!post) return {};
   const fullTitle = `${post.title}${post.italicTitle ? " " + post.italicTitle : ""}`.trim();
   const url = `${SITE}/journal/${post.slug}`;
+  const authorName = authorOf(post).name;
+  const postTags = tagsOf(post);
   return {
     title: fullTitle,
     description: post.excerpt,
@@ -54,9 +56,9 @@ export async function generateMetadata({
       siteName: "Odisea Tours",
       locale: "en_US",
       publishedTime: post.date,
-      modifiedTime: post.date,
-      authors: ["Odisea Tours"],
-      tags: [post.category, "youth soccer tours", "Spain", "football"],
+      modifiedTime: post.dateModified ?? post.date,
+      authors: [authorName],
+      tags: postTags,
     },
     twitter: {
       card: "summary_large_image",
@@ -75,9 +77,22 @@ export default async function JournalPost({
   const post = postBySlug(slug);
   if (!post) notFound();
 
-  const others = POSTS.filter((p) => p.slug !== slug);
   const fullTitle = `${post.title}${post.italicTitle ? " " + post.italicTitle : ""}`.trim();
   const url = `${SITE}/journal/${post.slug}`;
+  const sameCategory = POSTS.filter(
+    (p) => p.slug !== slug && p.category === post.category,
+  ).slice(0, 4);
+  const fillNeeded = 4 - sameCategory.length;
+  const otherCategory =
+    fillNeeded > 0
+      ? POSTS.filter(
+          (p) => p.slug !== slug && p.category !== post.category,
+        ).slice(0, fillNeeded)
+      : [];
+  const others = [...sameCategory, ...otherCategory];
+
+  const author = authorOf(post);
+  const postTags = tagsOf(post);
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -85,11 +100,18 @@ export default async function JournalPost({
     description: post.excerpt,
     image: `${SITE}${post.cover}`,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.dateModified ?? post.date,
+    inLanguage: "en",
     author: {
-      "@type": "Organization",
-      name: "Odisea Tours",
-      url: SITE,
+      "@type": "Person",
+      name: author.name,
+      url: `${SITE}/team`,
+      jobTitle: author.role,
+      worksFor: {
+        "@type": "Organization",
+        name: "Odisea Tours",
+        url: SITE,
+      },
     },
     publisher: {
       "@type": "Organization",
@@ -104,8 +126,23 @@ export default async function JournalPost({
       "@id": url,
     },
     articleSection: post.category,
-    keywords: [post.category, "youth soccer tours Spain", "football academy", "Spain sport tours"].join(", "),
+    keywords: postTags.join(", "),
   };
+
+  const faqSchema = post.faqs && post.faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqs.map((qa) => ({
+          "@type": "Question",
+          name: qa.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: qa.a,
+          },
+        })),
+      }
+    : null;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -142,6 +179,12 @@ export default async function JournalPost({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       {/* Header */}
       <article className="pt-40 pb-24 px-6 md:px-10 lg:px-14">
@@ -150,7 +193,12 @@ export default async function JournalPost({
             <Link href="/journal" className="link-rule">
               ← The Journal
             </Link>
-            <span>{post.category}</span>
+            <Link
+              href={`/journal/category/${post.category.toLowerCase().replace(/\s+/g, "-")}`}
+              className="link-rule hover:text-ink transition-colors"
+            >
+              {post.category}
+            </Link>
             <span>{post.readTime}</span>
           </div>
           <h1 className="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.9] tracking-[-0.005em]">
@@ -165,7 +213,11 @@ export default async function JournalPost({
               month: "long",
               year: "numeric",
             })}{" "}
-            · Odisea Tours
+            ·{" "}
+            <Link href="/team" className="hover:text-ink transition-colors">
+              {author.name}
+            </Link>
+            , {author.role}
           </p>
         </div>
       </article>
@@ -174,7 +226,7 @@ export default async function JournalPost({
       <div className="relative h-[55vh] md:h-[75vh] mb-24">
         <Image
           src={post.cover}
-          alt={post.title}
+          alt={fullTitle}
           fill
           className="object-cover"
           sizes="100vw"
@@ -188,11 +240,35 @@ export default async function JournalPost({
           {post.excerpt}
         </div>
         <div className="space-y-8 text-lg leading-[1.75] text-ink/85">
-          {post.body.map((p, i) => (
-            <p key={i} className={i === 0 ? "first-letter:font-display first-letter:text-7xl first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-[0.85] first-letter:text-gold" : ""}>
-              {renderParagraph(p)}
-            </p>
-          ))}
+          {(() => {
+            let firstParagraphSeen = false;
+            return post.body.map((p, i) => {
+              if (p.startsWith("## ")) {
+                return (
+                  <h2
+                    key={i}
+                    className="font-display text-3xl md:text-4xl tracking-tight text-ink !mt-16 !mb-2"
+                  >
+                    {p.slice(3)}
+                  </h2>
+                );
+              }
+              const isFirst = !firstParagraphSeen;
+              if (isFirst) firstParagraphSeen = true;
+              return (
+                <p
+                  key={i}
+                  className={
+                    isFirst
+                      ? "first-letter:font-display first-letter:text-7xl first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-[0.85] first-letter:text-gold"
+                      : ""
+                  }
+                >
+                  {renderParagraph(p)}
+                </p>
+              );
+            });
+          })()}
         </div>
 
         <div className="mt-16 pt-10 border-t border-ink/15 flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60">

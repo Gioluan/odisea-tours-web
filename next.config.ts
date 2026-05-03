@@ -90,6 +90,13 @@ const nextConfig: NextConfig = {
       { source: "/pamplona", destination: "/tours/sabores-de-espana", permanent: true },
       { source: "/la-masia", destination: "/journal/la-masia-la-fabrica-academies-worth-visiting", permanent: true },
 
+      // Journal duplicate consolidation 2026-05-02
+      {
+        source: "/journal/how-to-organize-youth-soccer-tour-spain-complete-guide",
+        destination: "/journal/youth-soccer-tours-to-spain-complete-guide",
+        permanent: true,
+      },
+
       // GSC 404 sweep 2026-04-27: actual legacy WordPress permalinks
       { source: "/soccer-tours-spain", destination: "/tours/european-soccer-tours", permanent: true },
       { source: "/european-soccer-tours", destination: "/tours/european-soccer-tours", permanent: true },

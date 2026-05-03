@@ -48,5 +48,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...tourRoutes, ...journalRoutes, ...usCityRoutes];
+  const categoryRoutes: MetadataRoute.Sitemap = [
+    "dispatches",
+    "field-notes",
+  ].map((slug) => ({
+    url: `${SITE}/journal/category/${slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.75,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...tourRoutes,
+    ...journalRoutes,
+    ...categoryRoutes,
+    ...usCityRoutes,
+  ];
 }

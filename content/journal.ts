@@ -1,13 +1,116 @@
+export type AuthorId = "juan" | "aitor" | "raul";
+
+export interface Author {
+  id: AuthorId;
+  name: string;
+  role: string;
+  bio: string;
+}
+
+export const AUTHORS: Record<AuthorId, Author> = {
+  juan: {
+    id: "juan",
+    name: "Juan Sanchez",
+    role: "Director, Odisea Tours",
+    bio: "Founded Odisea Tours in 2005. Twenty years organising group sport and cultural tours across Spain.",
+  },
+  aitor: {
+    id: "aitor",
+    name: "Aitor Corres",
+    role: "Founder, Odisea Tours",
+    bio: "Founder with deep roots across the Middle East and decades of group travel experience.",
+  },
+  raul: {
+    id: "raul",
+    name: "Raul Sanz",
+    role: "Lead Representative, Spain",
+    bio: "On the ground in Spain for every tour. Certified fitness and health instructor.",
+  },
+};
+
+export function authorById(id: AuthorId | undefined): Author {
+  return AUTHORS[id ?? "juan"];
+}
+
+const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
+  "best-football-tour-destinations-barcelona": "aitor",
+  "what-parents-need-to-know-youth-football-tours-spain": "juan",
+  "corporate-team-building-retreats-spain": "juan",
+  "how-to-organize-school-football-tour-spain": "juan",
+  "sabores-de-espana-food-wine-tour-spain": "aitor",
+  "youth-soccer-tours-to-spain-complete-guide": "juan",
+  "walking-camino-de-santiago-with-a-group": "aitor",
+  "how-to-fundraise-for-your-teams-spain-tour": "juan",
+  "what-a-youth-soccer-tour-to-spain-costs": "juan",
+  "la-masia-la-fabrica-academies-worth-visiting": "raul",
+  "how-to-plan-a-group-trip-to-spain": "juan",
+  "real-madrid-or-fc-barcelona-which-stadium-visit": "raul",
+  "top-5-football-stadiums-visit-spain-soccer-tour": "raul",
+  "arranging-friendly-matches-against-spanish-youth-clubs": "raul",
+  "best-time-of-year-for-a-youth-soccer-tour-to-spain": "juan",
+  "why-la-masia-is-still-the-best-football-visit-in-europe": "raul",
+  "barcelona-vs-madrid-best-city-football-tour-spain": "raul",
+  "valencia-sevilla-football-cities-most-tours-miss": "raul",
+  "pre-tour-checklist-coach-field-guide": "raul",
+  "training-spanish-fa-rfef-football-tour-experience": "raul",
+  "what-parents-ask-before-europe-soccer-tour": "juan",
+  "why-veterans-football-tours-spain-are-booming": "juan",
+  "why-australian-teams-choosing-spain-over-england": "juan",
+};
+
+const TAGS_BY_SLUG: Record<string, string[]> = {
+  "best-football-tour-destinations-barcelona": ["Barcelona", "Camp Nou", "football tours", "Spain"],
+  "what-parents-need-to-know-youth-football-tours-spain": ["youth tours", "parents", "safeguarding", "Spain"],
+  "corporate-team-building-retreats-spain": ["corporate retreats", "team building", "Spain", "Basque Country", "La Rioja"],
+  "how-to-organize-school-football-tour-spain": ["school tours", "PE", "safeguarding", "Spain"],
+  "sabores-de-espana-food-wine-tour-spain": ["food and wine", "Sabores de Espana", "Basque Country", "La Rioja"],
+  "youth-soccer-tours-to-spain-complete-guide": ["youth soccer", "complete guide", "Spain", "tour planning"],
+  "walking-camino-de-santiago-with-a-group": ["Camino de Santiago", "group walking", "Galicia", "pilgrimage"],
+  "how-to-fundraise-for-your-teams-spain-tour": ["fundraising", "youth clubs", "tour budget", "sponsorship"],
+  "what-a-youth-soccer-tour-to-spain-costs": ["pricing", "tour cost", "youth soccer", "Spain"],
+  "la-masia-la-fabrica-academies-worth-visiting": ["La Masia", "La Fabrica", "academies", "Valencia CF"],
+  "how-to-plan-a-group-trip-to-spain": ["group travel", "trip planning", "Spain"],
+  "real-madrid-or-fc-barcelona-which-stadium-visit": ["Bernabeu", "Camp Nou", "stadium tours", "Spain"],
+  "top-5-football-stadiums-visit-spain-soccer-tour": ["stadium tours", "La Liga", "Spain"],
+  "arranging-friendly-matches-against-spanish-youth-clubs": ["friendly matches", "youth football", "Spain"],
+  "best-time-of-year-for-a-youth-soccer-tour-to-spain": ["seasonality", "youth tours", "Spain"],
+  "why-la-masia-is-still-the-best-football-visit-in-europe": ["La Masia", "FC Barcelona", "academies"],
+  "barcelona-vs-madrid-best-city-football-tour-spain": ["Barcelona", "Madrid", "football tours", "Spain"],
+  "valencia-sevilla-football-cities-most-tours-miss": ["Valencia", "Sevilla", "off-the-beaten-path", "Spain"],
+  "pre-tour-checklist-coach-field-guide": ["coaching", "pre-tour checklist", "logistics"],
+  "training-spanish-fa-rfef-football-tour-experience": ["RFEF", "Spanish FA", "training", "Las Rozas"],
+  "what-parents-ask-before-europe-soccer-tour": ["parents", "FAQ", "youth tours", "Europe"],
+  "why-veterans-football-tours-spain-are-booming": ["veterans football", "masters", "Spain"],
+  "why-australian-teams-choosing-spain-over-england": ["Australia", "youth tours", "Spain", "England"],
+};
+
+export function authorOf(post: Post): Author {
+  return authorById(post.author ?? AUTHOR_BY_SLUG[post.slug]);
+}
+
+export function tagsOf(post: Post): string[] {
+  return post.tags ?? TAGS_BY_SLUG[post.slug] ?? [post.category, "Spain", "group travel"];
+}
+
+export interface FAQ {
+  q: string;
+  a: string;
+}
+
 export interface Post {
   slug: string;
   title: string;
   italicTitle?: string;
   excerpt: string;
   date: string;
+  dateModified?: string;
   readTime: string;
   category: string;
   cover: string;
   body: string[];
+  author?: AuthorId;
+  tags?: string[];
+  faqs?: FAQ[];
 }
 
 export const POSTS: Post[] = [
@@ -23,10 +126,15 @@ export const POSTS: Post[] = [
     cover: "/photos/veterans-soccer-tour-camp-nou-barcelona.jpg",
     body: [
       "Barcelona is the single best football tour destination in Spain, and it is not particularly close. We have been sending groups to this city since 2005, and every year the case gets stronger. The combination of world-class football infrastructure, a walkable city centre packed with culture, reliable Mediterranean weather, and a depth of experience that no other European city can match makes Barcelona the place where most groups want to start. Some groups come to Spain and visit two or three cities. Almost all of them wish they had spent more time in Barcelona. The city does not just host football tours. It absorbs them. Every corner of the place has something to offer a group that loves the game, and the non-football hours are just as rich as the ones spent on a pitch.",
+      "## Camp Nou and the Joan Gamper academy",
       "Camp Nou is the anchor of any Barcelona football tour, and it remains extraordinary even in the middle of its long renovation. The stadium's sheer scale is the thing that hits first: ninety-nine thousand seats rising around you in a bowl that makes every other ground in Europe feel like a theatre. The museum, which is the most visited museum in Barcelona ahead of the Picasso, houses decades of trophies, match footage, and the kind of Messi memorabilia that makes teenage players go very quiet. The Immersive Tour takes groups through the tunnel, onto the pitchside, through the mixed zone, and into the commentary boxes. Even with scaffolding visible in places, the emotional weight of the place is untouched. For groups staying more than three days, we also recommend a visit to the Johan Gamper training complex, where La Masia's youth teams and the first team train on adjacent pitches. Watching a Barcelona youth session from the sideline is one of the most instructive ninety minutes in European football. We write about this in detail on our [European soccer tours page](/tours/european-soccer-tours).",
+      "## Football experiences most itineraries miss",
       "Beyond Camp Nou, Barcelona offers football experiences that most itineraries overlook. The Montjuic Olympic Stadium, built for the 1992 Games, is a stunning venue that hosted the opening ceremony and still operates as a professional ground. It is where Espanyol played for several years, and the hilltop setting offers panoramic views over the entire city and the sea. Espanyol's current home, the RCDE Stadium in Cornella, is a modern, intimate ground that offers excellent group access and a friendlier, less corporate atmosphere than the bigger clubs. For groups interested in futsal, one of our favourite hidden gems is attending an FCB Futsal match at the Palau Blaugrana, the arena that sits right next to Camp Nou. The quality of play is breathtaking, the tickets are affordable, the atmosphere is intense, and your players will leave with a completely different understanding of close-quarters football. We recommend it to every group that asks us for something beyond the obvious.",
+      "## The city beyond the football",
       "The city itself is the other half of the equation, and it is the reason Barcelona works so well for groups that include families, partners, or non-footballing travellers. The Gothic Quarter is a maze of medieval streets that opens into hidden plazas with guitar players and outdoor cafes. La Rambla runs from Placa Catalunya down to the port and is best walked early in the morning before the crowds build. Barceloneta beach is a fifteen-minute walk from the city centre and offers a full afternoon of sand, seafood restaurants, and the kind of low-effort recovery time that a group needs after three days of matches and stadium visits. The Sagrada Familia is unlike any building most visitors have ever seen, and the interior, flooded with coloured light from Gaudi's stained glass, tends to silence even the loudest group of teenagers. For groups with a [youth football focus](/youth), we build itineraries that alternate football mornings with cultural afternoons, and the feedback is consistently that Barcelona makes the balance effortless.",
+      "## When to go and how to arrive",
       "The best time to visit Barcelona for a football tour is October through November or March through May. The weather in these windows sits comfortably in the low twenties Celsius, the hotel rates are significantly lower than summer, and the football calendar is in full swing. Summer tours are possible and we run plenty of them, but July and August bring heat that makes afternoon training sessions punishing, crowds that make stadium visits slower, and hotel prices that climb steeply. For groups arriving from the United States or Australia, a direct flight into Barcelona El Prat drops you twenty minutes from the city centre, and the airport transfer is one of the smoothest in Europe. We handle all ground logistics from the moment the group lands, including hotel check-in coordination, bus transfers, and restaurant bookings for groups of any size.",
+      "## Where to stay",
       "Where to stay depends on the group's priorities. For football-first itineraries, we book hotels near the Joan Gamper training complex or in the Sants district, which sits close to Camp Nou and has excellent metro connections to the rest of the city. For groups that want to be in the centre of things, the Eixample neighbourhood offers wide boulevards, easy walking to the Gothic Quarter, and a huge range of restaurants that can seat large groups without advance drama. For budget-conscious clubs, the Poble Nou district near the beach has newer hotels at lower rates and a creative, local atmosphere that feels nothing like a tourist zone. Whatever the group profile, Barcelona has the accommodation and the infrastructure to handle it. If you are considering Barcelona for your next football tour, [get in touch through our planning page](/plan-your-tour) and we will build an itinerary that makes the most of every day in this city.",
     ],
   },
@@ -40,12 +148,43 @@ export const POSTS: Post[] = [
     readTime: "7 min",
     category: "Field Notes",
     cover: "/photos/odisea-tours-youth-girls-celebrating.jpg",
+    faqs: [
+      {
+        q: "What is the supervisor-to-player ratio on Odisea Tours youth football tours?",
+        a: "Every tour operates with a minimum ratio of one adult supervisor to ten players. Most school and club groups bring it closer to one to eight.",
+      },
+      {
+        q: "How much does a youth football tour to Spain cost per player?",
+        a: "A seven to ten night youth football tour to Spain, including full board, ground transport, training, stadium visits, matches, insurance and bilingual coordination, sits between roughly 2,800 and 3,800 dollars per player. International flights are quoted separately because airfare fluctuates.",
+      },
+      {
+        q: "What is included in the tour price and what is extra?",
+        a: "Included: accommodation, all meals on match and training days, bus transfers, training facility hire, coaching, stadium tours, match fees, referees, medical cover, and our on-the-ground team. Typically extra: international flights, personal spending money (we recommend fifty to a hundred euros), and any optional excursions added by the group.",
+      },
+      {
+        q: "Can parents travel along with the youth team?",
+        a: "Yes. A significant number of our youth tours include parents who travel alongside the group. While players train in the morning, parents can explore the city with our bilingual guide, visit a market, or take a cooking class, then meet the team for dinner.",
+      },
+      {
+        q: "What does a typical day on tour look like?",
+        a: "Morning training (about two hours) at a professional or semi-professional facility led by a Spanish coach with our coordinator translating. Sit-down lunch where dietary requirements are briefed in advance. Afternoons rotate between cultural visits, friendly matches against local Spanish youth teams, or free time. Evenings are group dinners followed by supervised downtime at the hotel.",
+      },
+      {
+        q: "Are payment plans available for the tour?",
+        a: "Yes. Many clubs offer twelve-month payment plans that bring the monthly cost down to roughly 250 to 320 dollars per family, which is manageable for most household budgets.",
+      },
+    ],
     body: [
       "This is written for you, the parent, not the coach. We know the coach has already decided this tour is a good idea. You are the one who needs convincing, and you deserve straight answers rather than a glossy brochure. We have been running youth football tours to Spain since 2005, and in that time we have spoken to thousands of parents with the same set of concerns. Every one of those concerns is reasonable. None of them should stop your child from going. But you need to hear the detail before you can feel it in your chest, and that is what this piece is for.",
+      "## Safety and supervision on tour",
       "Safety and supervision are the first thing on your mind, and they should be. Every tour we run operates with a minimum ratio of one adult supervisor to ten players, and most school and club groups bring it closer to one to eight. Our ground coordinators in Spain are bilingual, trained in emergency response, and present with the group from the moment the bus leaves the airport until the moment it returns. Hotels are selected for secured-floor access with key-card entry, and we run a head count and curfew walk at 11pm every night without exception. Your child carries an emergency card with the hotel address, a local Spanish phone number, and embassy contact details in both English and Spanish. We are fully insured and bonded, and we carry comprehensive travel and medical cover for every player on every tour. The [youth tours page](/youth) has the full safeguarding framework if you want to read it in detail.",
+      "## What a typical day looks like",
       "A typical day on tour has a rhythm that keeps the players engaged without exhausting them. Morning training at a professional or semi-professional facility, usually two hours, led by a Spanish coach with our coordinator translating. A sit-down lunch at the hotel or a nearby restaurant where dietary requirements have been communicated in advance. An afternoon that rotates between cultural visits (a cathedral, a museum, a walking tour), a friendly match against a local Spanish youth team, or free time at the beach or in the town centre. Evenings are group dinners followed by supervised downtime at the hotel. Match days are the highlights: two per week, properly refereed, against organised Spanish opposition matched to your child's age and level. The days are full but not frantic, and rest time is built into the itinerary because tired teenagers do not learn and do not enjoy themselves.",
+      "## What it costs and what is included",
       "Cost is the question you want a number for, so here it is. A seven to ten night youth football tour to Spain, including full board, ground transport, training sessions, stadium visits, matches, insurance, and bilingual coordination, sits between roughly 2,800 and 3,800 dollars per player. International flights are quoted separately because airfare fluctuates and we refuse to hide the volatility. Many clubs offer twelve-month payment plans that bring the monthly cost down to 250 to 320 dollars, which is manageable for most family budgets. What is included: accommodation, all meals on match and training days, bus transfers, training facility hire, coaching, stadium tours, match fees, referees, medical cover, and our on-the-ground team. What is typically extra: flights, personal spending money (we recommend fifty to a hundred euros), and any optional excursions the group adds. There are no hidden fees. We quote everything upfront because parents who discover surprise costs mid-tour do not come back, and we want them to come back.",
+      "## Will my child actually be okay",
       "The concern we hear most often from parents who have never sent a child abroad without them is simple: will my kid be okay? The honest answer, after twenty years of watching thousands of teenagers on these tours, is that they will be better than okay. They will thrive. The players who are nervous on the first day are leading the group sing-along on the bus by day three. The ones who have never eaten anything more adventurous than chicken fingers are ordering pulpo a la gallega by the end of the week. Being away from home, in a country where the language is different and the football is played with a seriousness they have never encountered, grows something in young people that cannot be replicated at a domestic camp or a weekend tournament. They come back more confident, more independent, and more curious about the world. That is not a sales pitch. It is what we have observed, consistently, for two decades. Visit our [schools page](/schools) for details on how school groups structure these tours.",
+      "## Come along yourself",
       "The last thing we want to say to you is this: come along. A significant number of our youth tours include parents who travel with the group, and the experience is richer for it. While the players train in the morning, parents explore the city with our bilingual guide, visit a market, sit in a cafe in the Gothic Quarter, or take a cooking class. Everyone meets up for dinner with stories to share. The parents who come along do not regret it. They see their child compete on a Spanish pitch, navigate a foreign city, and handle themselves with a maturity that surprises everyone, including the child. And the parents who stay home? They get the phone call on the last night, the one where their kid's voice sounds different, a little older, a little wider. That call is worth the whole tour. Whenever you are ready, [start planning here](/plan-your-tour).",
     ],
   },
@@ -78,12 +217,39 @@ export const POSTS: Post[] = [
     readTime: "9 min",
     category: "Field Notes",
     cover: "/photos/odisea-tours-group-barcelona-cathedral.jpg",
+    faqs: [
+      {
+        q: "What does the school board want to see in a tour proposal?",
+        a: "A per-pupil cost, an insurance certificate, a safeguarding protocol, a risk assessment and a clear educational justification. We provide templates for all of these because we have helped dozens of schools through this process.",
+      },
+      {
+        q: "What is the supervision ratio on Odisea Tours school football tours?",
+        a: "A minimum of one adult to ten pupils, though most schools bring it closer to one to eight. Our ground coordinators are DBS-checked or equivalent, and every hotel has secured floors with key-card access.",
+      },
+      {
+        q: "How many matches should a school football tour include?",
+        a: "Two matches per week is the right number. Three is too many and pupils stop playing well. One is not enough to justify the trip.",
+      },
+      {
+        q: "Why is Spain a better school tour destination than France or the Netherlands?",
+        a: "Spain offers world-class football infrastructure, reliable weather, a cost base lower than northern Europe and a depth of professional academy access no other country can match. Pupils can train at facilities used by La Liga youth teams, visit Camp Nou or the Bernabeu, and play organised Spanish school sides who take the fixture seriously.",
+      },
+      {
+        q: "How far in advance should a school book a Spain football tour?",
+        a: "Twelve months ahead gets the best tour. Three months ahead gets a good tour. Six weeks before departure gets whatever is left.",
+      },
+    ],
     body: [
       "A school football tour to Spain is not a school trip with a ball thrown in. It is a proper sporting programme built around competitive matches, professional training, and cultural immersion, and the schools that do it well treat it with the same seriousness they would give to any other part of the curriculum. We have been organising these tours since 2005, and the schools that come back to us year after year are the ones where the PE department understood from the start that this was an educational project first, a holiday second, and a logistical challenge always. The good news is that the logistical part is the bit we handle. The educational part is the bit you are already good at.",
+      "## Pitching it to the school board",
       "The first hurdle is the school board, and the way to clear it is with numbers, not enthusiasm. A board wants to see a per-pupil cost, an insurance certificate, a safeguarding protocol, a risk assessment, and a clear educational justification. We provide templates for all of these because we have helped dozens of schools through exactly this process. The educational case writes itself once you frame it correctly: language exposure, cultural competency, teamwork under pressure, and the experience of competing against peers from a completely different footballing tradition. The cost, for a seven-night tour with matches, training, stadium visits, full board, and ground transport, sits in the range most parents already expect for a European school trip. When the board sees the numbers next to a residential trip to, say, an outdoor activity centre in Wales, Spain tends to win on value. Visit our [schools page](/schools) for the full breakdown of what a school tour includes.",
+      "## Safeguarding and supervision",
       "Safeguarding is the item that keeps heads of department awake at night, and rightly so. Every school tour we run carries a minimum supervision ratio of one adult to ten pupils, though most schools bring it closer to one to eight. Our ground coordinators in Spain are DBS-checked or equivalent, and every hotel we use has secured floors with key-card access. We run a curfew walk at 11pm every night. We carry emergency protocols for medical, passport, and behavioural incidents, and we brief the lead teacher on all of them before the group lands. The single most important thing we tell schools is this: the safeguarding framework you already run at home transfers to Spain without modification. The difference is that in Spain, you have a bilingual coordinator standing next to you who knows the local hospitals, the local police station, and the fastest route from the hotel to both.",
+      "## The shape of a tour day",
       "A typical day on a school football tour has a rhythm that teachers find surprisingly easy to manage. Morning training at a professional or semi-professional facility, usually two hours, led by a Spanish coach with our coordinator translating. A sit-down lunch at the hotel or a nearby restaurant where dietary requirements have been briefed in advance. An afternoon cultural visit, a cathedral, a museum, a walking tour of the old quarter, or free time at the beach if the group is on the coast. On match days, the cultural visit is replaced by the match itself, usually scheduled for late afternoon when the heat drops. Evenings are dinner together and free time in the hotel or a supervised walk in the neighbourhood. Two matches per week is the right number. Three is too many. One is not enough. The [plan your tour page](/plan-your-tour) walks you through how we build an itinerary around your group's specific needs.",
+      "## Why Spain over France or Holland",
       "The question we hear most from PE teachers considering Spain over other destinations is simple: why not France, or the Netherlands, or Portugal? The answer is equally simple. Spain offers the combination of world-class football infrastructure, reliable weather, a cost base that is lower than northern Europe, and a depth of professional academy access that no other country can match. Your pupils can train at facilities used by La Liga youth teams, visit Camp Nou or the Bernabeu, and play against organised Spanish school sides who take the fixture as seriously as your group does. The cultural dimension is richer too. Spain is different enough from home to feel like a genuine abroad experience, which is half the point of taking teenagers out of the country in the first place. A trip to the Netherlands is a good football trip. A trip to Spain is a good football trip and a good education. We have watched the difference land with thousands of pupils over twenty years.",
+      "## When to book",
       "The last piece of advice we give every school is about timing. Book early. The best training facilities and the strongest Spanish school opponents are available between October and May, and the most popular windows, Easter and half-term, fill up fast. If your school can travel in October or early November, you will find better availability, lower prices, and perfect weather. If you are locked into a spring or summer window, we can still build a superb tour, but the earlier you start the conversation the more options we have. The schools that plan twelve months ahead get the best tours. The schools that plan three months ahead get a good tour. The schools that call us six weeks before departure get whatever is left, and we would rather build you the best version. Explore the [European soccer tour options](/tours/european-soccer-tours) and get in touch when you are ready to start.",
     ],
   },
@@ -118,10 +284,15 @@ export const POSTS: Post[] = [
     cover: "/img/journal/youth-inspiration.jpg",
     body: [
       "A youth soccer tour to Spain is not a vacation with matches attached. It is the other way around. Everything in a good Spain tour, the hotel, the bus, the rest day, the museum afternoon, is built to serve the football, and everything we have learned in twenty years of organizing these trips comes back to that single ordering. When a tour works, the players come home changed. When it does not, they come home with souvenirs and a sore ankle. The difference is almost entirely in how the trip was designed.",
+      "## The teams that travel with us",
       "The teams that come to us are mostly the same shape. Twelve to twenty-five players, two or three coaches, a handful of parents, an age somewhere between U13 and U19. About seventy percent of our [youth soccer tours to Spain](/youth) groups are from the United States and Australia. They arrive with three things already decided, how many days they have, how much they can spend, and whether they want to see Madrid or Barcelona first, and almost nothing else. Everything after that is ours to build.",
+      "## The rhythm of a well-designed tour",
       "A well-designed Spain tour has a rhythm to it. Morning training sessions at a real academy ground. Friendly matches against local Spanish teams twice a week, never more. Stadium visits to one of the big clubs, Camp Nou, Bernabeu, Mestalla, which the players will talk about for a decade. An afternoon in the old town of wherever you are based. One full rest day in the middle where nothing football-related is scheduled. Coaches often want to add more. We gently talk them out of it. Tired legs do not learn anything, and tired teenagers do not remember anything.",
+      "## The invisible logistics layer",
       "The logistics are the invisible part. Visas if needed. A coach who speaks the language and knows which door to knock on. Kit laundry turnarounds. A bus driver who knows which stadium entrance is the one for touring groups, not the one for season ticket holders. A backup pitch for when a morning training site floods. A backup restaurant for when thirty-six hungry teenagers arrive at a place that was only holding tables for thirty. The best way to judge a Spain soccer tour operator is not the glossy itinerary. It is how they answer a phone call the week before departure, when one of your players has a passport problem.",
+      "## What it costs",
       "A full youth soccer tour to Spain, seven to ten nights, full board, matches, training, stadium visits, two Spanish cities, buses, guides, and the invisible insurance layer of someone in the country who picks up the phone at 2am, costs roughly what parents expect a family vacation to Europe to cost. We write more specifically about cost elsewhere in this journal. What matters here is that the price is almost always dictated by the quality of the things people remember, not the things they forget. A better hotel in an uninteresting neighborhood is a worse tour than a simpler hotel next to the training ground. We pick the training ground every time. If you are ready to explore what a trip looks like for your team, [start planning](/plan-your-tour).",
+      "## What players bring home",
       "The last thing worth saying about a youth soccer tour to Spain is the one thing that is hardest to put on a brochure. The players come back different. They have played on grass that Xavi trained on, eaten in a restaurant a first-team player eats at on days off, and spent ten days surrounded by the game being taken seriously by an entire country. You cannot buy that back home. You can only go and get it.",
     ],
   },
@@ -137,10 +308,15 @@ export const POSTS: Post[] = [
     cover: "/photos/camino-de-santiago-hero.jpg",
     body: [
       "The Camino de Santiago has been walked for a thousand years, and for most of those years it was walked alone or in small clusters of strangers who became friends by the time they reached the cathedral. That version of the Camino is still there, and it is wonderful, and it is not what we are talking about here. We are talking about the group version, the one where a corporate team, a circle of old friends, a family reunion, or a church congregation walks the final stage of the Camino together over seven days and arrives at the Cathedral of Santiago de Compostela as a unit. We have been running this tour for over a decade, and it is, without exaggeration, the most emotionally powerful thing we do.",
+      "## The route, distances and terrain",
       "The route we use is the last 115 kilometres of the Camino Frances, starting in Sarria and finishing in Santiago. This is the minimum distance required to earn the Compostela, the official certificate of completion issued by the Cathedral office, and it is also, conveniently, the most beautiful and best-supported stretch of the entire route. The daily distances are manageable: between 18 and 25 kilometres per day, depending on the stage, which translates to roughly five to seven hours of walking with stops. The terrain is rolling Galician countryside, through eucalyptus forests, across medieval stone bridges, past tiny hamlets where the church bells still ring at noon. It is not flat, but it is not punishing either. We have walked this route with groups whose youngest member was twelve and whose oldest was seventy-four. Everyone finished. Everyone cried at the end. Those two facts are related. The full itinerary is on the [Camino de Santiago tour page](/tours/camino-de-santiago).",
+      "## What makes a group Camino different",
       "What makes the group Camino different from the solo version is the shared rhythm of the days. You walk together in the morning when the mist is still on the fields. You stop for coffee at a village bar where the owner has been serving pilgrims for twenty years and does not need to be told what you want. You eat lunch at a long table in a country restaurant where the menu is whatever the kitchen made that morning, usually a thick Galician stew, bread, and a glass of local wine that costs less than the bread. In the afternoon you walk again, and by now the group has broken into smaller clusters, conversations happening that would never happen in a meeting room or a living room back home. The Camino strips away the noise. People talk properly on this walk. That is not something we put in the brochure, but it is the thing every group tells us afterwards.",
+      "## How we handle the logistics",
       "The logistics of a group Camino are the part we handle so that the group can focus entirely on the walking. Luggage is transferred by van from hotel to hotel each morning, so you walk with a daypack, not a full rucksack. The hotels are small, clean, and locally owned, selected because the owners understand pilgrims and do not try to turn the experience into a resort stay. Breakfast is at the hotel. Lunch is on the trail. Dinner is together each evening at a restaurant we have chosen, and the dinners get progressively more celebratory as Santiago draws closer. Our ground coordinator walks with the group every day, carrying a first-aid kit, a phone with local emergency contacts, and the quiet authority of someone who has walked this route more than fifty times. If someone needs to rest, the support van picks them up. Nobody is left behind, and nobody is made to feel bad about needing a shorter day.",
+      "## Who books a group Camino",
       "The groups who book the Camino with us are more varied than you might expect. Corporate teams use it as a leadership retreat, and the conversations that happen between kilometre markers eight and fifteen of a long walking day are worth more than any offsite workshop. Friend groups in their forties and fifties use it to mark a milestone, a collective fiftieth birthday, a reunion after years apart. Church groups use it as a pilgrimage in the original sense, and the arrival at the Cathedral carries a spiritual weight that the secular groups feel too, even if they would not use that word. Families use it to do something together that is not a beach holiday, something that requires effort and delivers a payoff that everyone shares equally. If your group is also interested in the culinary side of Spain, the Camino pairs beautifully with a few days on the [Sabores de Espana tour](/tours/sabores-de-espana), and we often build combined itineraries for groups who want both.",
+      "## Arriving in Santiago",
       "The arrival in Santiago is the moment the whole tour builds toward, and it is the moment we have watched hundreds of times without it losing any of its force. The group walks the last two kilometres through the outskirts of the city, enters the old town through a stone archway, follows the narrow streets downhill, and emerges into the Praza do Obradoiro with the Cathedral filling the entire western side of the square. People stop. Some cheer. Some go quiet. Some cry openly. The Cathedral has been receiving pilgrims since the ninth century, and the weight of that continuity is something you feel in your chest, not your head. After the square, we go to the Pilgrim Office to collect the Compostela certificates, and then to a long celebratory lunch where the Albarino wine flows and the stories from the trail start to become the stories the group will tell for the rest of their lives. If you are considering this for your group, [start the conversation](/plan-your-tour). The best windows are spring and autumn, and the most popular dates fill early.",
     ],
   },
@@ -173,6 +349,28 @@ export const POSTS: Post[] = [
     readTime: "7 min",
     category: "Field Notes",
     cover: "/img/journal/group-barcelona.jpg",
+    faqs: [
+      {
+        q: "What does a youth soccer tour to Spain actually cost?",
+        a: "A proper tour sits between roughly 2,800 and 3,800 dollars per player for seven to ten nights. The number depends on the time of year, the cities chosen, the opponent level you want to play and the origin city for the international flight.",
+      },
+      {
+        q: "What is included in the per-player price?",
+        a: "Hotels, ground transport, full board on match days, training sessions, stadium visits, Spanish youth opponents, referees, insurance and ground coordination. International flights are quoted separately because ticket prices swing week to week.",
+      },
+      {
+        q: "Why does the price move so much between trips?",
+        a: "Mostly the calendar. A tour in April or October costs noticeably less than one in June or July, because hotel rates in Spanish coastal cities roughly double in high summer and the professional academies are on their own holiday calendar.",
+      },
+      {
+        q: "When is the cheapest time of year to travel?",
+        a: "Shifting your travel window by two weeks into April or October typically saves fifteen to twenty percent without touching the quality of any item on the itinerary.",
+      },
+      {
+        q: "Why are the cheapest tours risky?",
+        a: "The two-thousand-dollar tours almost always cut one of three things: the insurance, the ground coordinator or the quality of the opposition. We have inherited groups whose previous operator did all three, and the tour fell apart the moment a player rolled an ankle or a bus driver got lost.",
+      },
+    ],
     body: [
       "The first question every coach asks is not about hotels or stadiums. It is about the number. We understand why. Before a director of coaching can pitch a Spain tour to a club board, or a high school athletic department, or a group of parents, they need a figure that will not move. Every year the first email of the planning season starts with the same line. What does a ten-day youth soccer tour to Spain actually cost.",
       "The honest answer is that a proper tour, the kind we are willing to put our name on, sits between roughly 2,800 and 3,800 dollars per player for seven to ten nights. The number depends on the time of year, the cities chosen, the opponent level you want to play, and whether you are flying into Madrid or Barcelona from New York, Los Angeles, or Sydney. That figure includes everything that happens once the team lands. Hotels, ground transport, full board on match days, training sessions, stadium visits, Spanish youth opponents, referees, insurance, ground coordination, and the people who fix things when they go sideways. It does not include the international flight. We quote flights separately because ticket prices swing week to week and we refuse to bury the volatility.",
@@ -194,11 +392,17 @@ export const POSTS: Post[] = [
     cover: "/img/journal/spanish-fa-training.jpg",
     body: [
       "There are five academy visits a Spain soccer tour can include, and only three of them are worth planning an entire trip around. We say this knowing it will annoy some of the newer tour operators who market all five with the same glossy language. We have been sending groups to these places since 2005, and we know exactly which of them leave a mark.",
+      "## La Masia, FC Barcelona",
       "La Masia is the one every family already knows. Twelve-year-olds from Texas show up with the Barcelona crest on their tracksuit, which is why the Barcelona staff still walk groups around with real patience after forty-five years of doing it. We have written before, in a separate note, about why La Masia is still the best football visit in Europe, and nothing about that has changed. The reason is simple. La Masia was built to develop players, not to host visitors. The visitor program is a by-product of how seriously the club takes its own youth system, and you can feel the difference the moment you step on the grass.",
+      "## La Fábrica, Real Madrid",
       "La Fábrica, Real Madrid's academy at Valdebebas, is the opposite experience. Where La Masia feels like a monastery, La Fábrica feels like a base. The facilities are newer, the perimeter is more corporate, and the visit itself is more choreographed. Real Madrid is uncompromising about protecting its first-team environment, so the visitor program keeps a respectful distance from the senior players. What it does offer is a walk through the best-resourced youth operation in world football, and for a coach who is there to see how a professional system is laid out physically, the pitches, the gym, the nutrition area, the classrooms, it is a clinic in how the modern game is built.",
+      "## Paterna, Valencia CF",
       "Valencia CF's academy at Paterna is the one most tours skip, and the one we recommend most often to groups on a [youth football tour](/youth) staying on the Mediterranean coast. It is the only academy we know of where a visiting youth team can, on a quiet afternoon, end up in a short session with a Valencia staff coach and walk away with real feedback on their own play. It is not always possible and we never promise it in advance. When it happens, it is the thing the group remembers from the whole trip. Paterna is also the spiritual home of a generation of players who came through the Valencia system and went on to the national team, and the atmosphere at the training ground reflects that.",
+      "## Villarreal and Sevilla",
       "Villarreal and Sevilla round out the top five. Villarreal is a reward for groups who are willing to drive two hours out of any major city. A club that punches four divisions above its town size, with a training ground laid out so meticulously it makes visiting coaches take photographs of the drainage. Sevilla's facility is the most human-scaled of the five, and the easiest one to get access to on short notice if a group adds a day at the last minute.",
+      "## Why we leave out Atlético and Athletic",
       "What we never include on the list, and what our more ambitious clients always ask us about, are Atlético Madrid and Athletic Bilbao. Atlético's academy program is professional and correct, but the club still treats visitors at arm's length, and the experience feels transactional in a way La Masia and Paterna do not. Athletic Bilbao we leave out for a different reason. The club's own identity is so tightly woven around Basque players that an outside youth team visit feels, by design, like you are a guest at someone else's family dinner. Which you are. We have great respect for that, and we send groups to Bilbao for other reasons. Not this one.",
+      "## How many academies to visit on one tour",
       "The single most common mistake we see new tour operators make is stringing three academy visits into the same week. It looks comprehensive on a spreadsheet. In practice, by the third academy, the players stop paying attention. Two academies per [European soccer tour](/tours/european-soccer-tours) is the correct number. One is the emotional highlight. The second is the comparison point that teaches the coaches something. Any more and you are trading the thing the players will remember for a bullet point on a brochure.",
     ],
   },
@@ -214,10 +418,15 @@ export const POSTS: Post[] = [
     cover: "/photos/veterans-soccer-tour-barcelona-la-rambla.jpg",
     body: [
       "The hardest part of a group trip is not the booking. It is the deciding. A group of twenty-five people will want twenty-five different things, and the agency that tries to please everyone will please no one. The first rule we learned in 2005, and the one we still repeat to every new client, is this. Pick a spine, and protect it.",
+      "## Rule one: pick a spine",
       "A spine is a single unifying idea. For a school team, it might be football. Every day anchors around a training visit or a match. For a [culinary tour](/tours/sabores-de-espana), it might be food. Every meal is the day's main event, and the sightseeing bends around it. Once the spine is set, every other decision becomes easier. The hotel is the one closest to the training ground. The bus leaves at the hour that gets you to the pintxos bar before the locals arrive.",
+      "## Rule two: spend on what is remembered",
       "The second rule is less obvious. Spend on what people will remember, save on what they will forget. Travelers remember the dinner on the terrace with the guitar player. They forget the mid-range rental car. So we book the rental car on a budget and the terrace dinner with the guitar player without apology.",
+      "## Rule three: always have a weather plan",
       "Rule three. Always have a weather plan. Spain is sunny until it is not. Every good itinerary we build has a shadow itinerary, an indoor day we can swap in if the forecast changes. We never tell the group. We just switch quietly, and nobody notices except that the day was good.",
+      "## Rule four: let the group breathe",
       "Rule four, and the one we feel most strongly about. Let the group breathe. Twenty years of watching travelers in this country has taught us that the best moments are almost always the ones that were not scheduled. The hour after lunch when everybody sat in the shade and nobody wanted to move. The wrong turn that led to a plaza nobody had heard of. Leave space for those moments. Build fewer items into the day. Your group will thank you in their photographs.",
+      "## Rule five: pick the agency that picks up at 2am",
       "And finally, the rule we hold above all the others. Pick the agency you would trust to answer the phone at two in the morning. Because something, on every trip, goes sideways. A flight delay. A sick traveler. A closed restaurant. The measure of a group travel company is not what happens on the sunny days. It is what happens at 2am on the day that did not go as planned. Meet [our team](/team), and see how long it takes us to answer.",
     ],
   },
@@ -297,26 +506,6 @@ export const POSTS: Post[] = [
       "The one exception we make to this rule is for high school teams in the United States, whose spring semester and state tournament schedules leave almost no room to travel in April. For these groups we push hard for early June, the last week of the Spanish regular season, before the academies break. You get a slightly hotter Spain and slightly pricier hotels, but you also catch the final match days of La Liga, which is something high school players talk about for a long time afterwards.",
       "November is the sleeper option. Late October bleeds into early November without much change in the weather, and for clubs whose fall season wraps up around Halloween, the first two weeks of November are an excellent Spain window. It is also a beautiful time for a [Camino de Santiago](/tours/camino-de-santiago) trip. The light is softer, the hotels are the cheapest they will be all year, and the Spanish academy coaches are in the reflective part of their season where they have a little more time to host a visiting group properly. We do more November tours every year as more coaches figure this out.",
       "The windows we steer every group away from are Easter week in Spain, Semana Santa, when the entire country halts for religious processions and our bus operators and referees disappear, and the first two weeks of January, when the Spanish Copa del Rey round disrupts everything. Everything else is workable with enough notice. April and October are the two best months. June is the compromise. July and August are for vacations, not tours. [Start planning](/plan-your-tour) and we will help you find the right window.",
-    ],
-  },
-  {
-    slug: "how-to-organize-youth-soccer-tour-spain-complete-guide",
-    title: "How to Organize a Youth Soccer Tour to Spain: The Complete",
-    italicTitle: "Guide",
-    excerpt:
-      "Everything you need to know about planning a football tour to Spain for your youth club, from budgeting and timing to training sessions and cultural activities.",
-    date: "2026-03-20",
-    readTime: "8 min",
-    category: "Field Notes",
-    cover: "/photos/odisea-tours-youth-girls-happy.jpg",
-    body: [
-      "Planning a soccer tour to Spain for your youth club is one of the most rewarding things you can do for your players and one of the most complex to organize. After 20 years of running these tours, here is everything I have learned about getting it right.",
-      "Spain's best training facilities and stadium slots book up fast, especially during school holidays. The sweet spots are October through November for perfect weather and fewer tourists with clubs in full season so the atmosphere is electric, March through April for spring break timing that works for US and Australian clubs with warm weather returning, and June through July for end of season when many facilities are available but it is hot so you should schedule training sessions for mornings. Avoid August when everything closes for summer holidays in Spain and December through January when it is too cold in Madrid and holiday schedules make logistics harder.",
-      "A quality 7 to 10 day tour to Spain typically costs between $2,500 and $4,000 per person, depending on accommodation level, training facilities, stadium visits, matches, and transfers. The difference between 3-star and 4-star hotels makes a big difference in group morale. Professional club facilities like FCB and Valencia CF cost more than municipal grounds but are worth every penny. Bernabeu and Camp Nou tours have entry fees, but they are non-negotiable highlights. Organizing friendlies against local Spanish teams requires pitch hire, referees, and sometimes opponent appearance fees. Private coach hire is essential for the group. Never try to use public transport with 30 or more kids and parents. Be upfront with parents about what is included and what is at their own cost.",
-      "The biggest lesson I have learned is that families travel together. When parents and siblings come along, the energy of the entire tour changes. Kids are happier, parents become your biggest advocates, and the cultural experiences become shared memories. Structure your itinerary so that while players are training, families have organized activities. Players at FC Barcelona training while parents visit the FCB Museum and go shopping. Players in an afternoon match while families explore the beach or Old Town. Evening activities together with dinner, cultural visits, and La Liga matches. This dual-track approach means nobody is ever bored or left behind.",
-      "Madrid plus Barcelona is the classic combo where you get the Bernabeu, Camp Nou, Spanish FA, and two incredible cities, but it involves a long transfer. Valencia plus Barcelona is our recommendation for younger groups with shorter distances, incredible training at Valencia CF, beach time in Benicassim between the two cities, and less hectic than Madrid. The Golden Triangle of Madrid to Valencia to Barcelona is the ultimate 10 to 12 day tour where your group sees the best of Spain, trains at three different sets of professional facilities, and the variety keeps everyone engaged.",
-      "Based on hundreds of tours, the non-negotiables are professional training sessions at recognized clubs and facilities with qualified coaches, at least one stadium tour and preferably two, matches against local opposition that are competitive but fair and matched to your level, cultural activities like city tours and gastronomy experiences, free time for kids and parents including beach days and shopping, certificates from the clubs players trained at which go on bedroom walls for years, and a professional bilingual guide physically with your group at all times.",
-      "The one thing most organizers get wrong is trying to do it yourself. Coaches spend months emailing clubs in broken Spanish, trying to coordinate stadium visits, find hotels that accept groups, and arrange bus transfers. By the time they arrive, they are exhausted and stressed and the itinerary has gaps because things fell through. A ground operator based in Spain like Odisea Tours has existing relationships with the clubs, knows which hotels work for groups, and handles all the day-to-day logistics. Whether it is a club trip or a [school football tour](/schools), you focus on coaching and enjoying the experience with your players. Meet [the Odisea Tours team](/team) and see how we work.",
     ],
   },
   {
@@ -424,6 +613,24 @@ export const POSTS: Post[] = [
     readTime: "6 min",
     category: "Field Notes",
     cover: "/img/journal/youth-girls-happy.jpg",
+    faqs: [
+      {
+        q: "Who supervises the players at night on a youth soccer tour to Europe?",
+        a: "Every hotel we use has secured floors. Our staff conduct curfew walks and a head count at 11pm every night of every tour. Each trip travels with a Spanish-speaking ground coordinator who is a trained operator with a radio and a car, not a volunteer. Every player carries an emergency card with the hotel address, a Spanish phone number and embassy contact in both English and Spanish.",
+      },
+      {
+        q: "What happens if my child gets injured or sick during the tour?",
+        a: "Spain has one of the best public healthcare systems in Europe. We can get a player into a clinic or emergency room in most Spanish cities within thirty minutes. Our ground coordinator has standing relationships with two hospital networks in both Madrid and Barcelona, and we carry a single point of contact emergency protocol that includes insurance, parental notification and transport.",
+      },
+      {
+        q: "How are food allergies and dietary requirements handled?",
+        a: "We carry dietary information for every player before the plane takes off and brief every restaurant we bring a group to. Gluten-free is handled. Vegetarian is handled. Severe nut allergies are handled with written notes and visual checks.",
+      },
+      {
+        q: "Can I call my child every day?",
+        a: "Yes. Players keep their phones, and the hotels have wifi. Most groups also build in a daily call window so parents know when to expect a check-in.",
+      },
+    ],
     body: [
       "The questions change a little each year, and the order changes a lot, but the first three questions parents ask about a youth soccer tour to Europe have been the same since we started in 2005. We keep a mental list because we have answered them about ten thousand times, and because the answers are almost always the part of the process that decides whether a parent feels safe sending their child.",
       "The first question is always about safety. Not the abstract is Spain a safe country question, which almost every parent already knows the answer to, but the practical one. Who is with the players at night. What happens if someone gets sick in the middle of the trip. Are the hotels secure. Who is between my fifteen-year-old and a stranger in a foreign city at 10pm. The answers we give are specific and unhurried. Every hotel we use has secured floors, curfew walks by our staff, and a head count at 11pm every night of every tour. Every trip travels with a Spanish-speaking ground coordinator who is not a volunteer but a trained operator with a radio and a car. Every player carries an emergency card with hotel address, Spanish phone number, and embassy contact in both English and Spanish. The parents who hear this in full almost always relax within the first minute. The parents who do not hear it in full do not.",

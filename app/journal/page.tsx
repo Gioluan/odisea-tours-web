@@ -56,6 +56,21 @@ export default function JournalIndex() {
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
             Slow notes on Spain, group travel, and the small things we have learned from two decades in the field. Written by the people who run the trips.
           </p>
+          <div className="mt-6 flex flex-wrap gap-3 font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase">
+            <Link
+              href="/journal/category/dispatches"
+              className="text-paper/80 hover:text-gold transition-colors link-rule"
+            >
+              Dispatches
+            </Link>
+            <span className="text-paper/30">·</span>
+            <Link
+              href="/journal/category/field-notes"
+              className="text-paper/80 hover:text-gold transition-colors link-rule"
+            >
+              Field Notes
+            </Link>
+          </div>
         </div>
       </section>
 

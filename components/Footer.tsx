@@ -4,8 +4,12 @@ import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
-  // Proposal pages at /for/* and /partners/* are chromeless access-granted documents.
-  if (pathname?.startsWith("/for/") || pathname?.startsWith("/partners/")) return null;
+  // Proposal pages at /for/*, /partners/*, /kearny-fc are chromeless access-granted documents.
+  if (
+    pathname?.startsWith("/for/") ||
+    pathname?.startsWith("/partners/") ||
+    pathname === "/kearny-fc"
+  ) return null;
   return (
     <footer className="bg-ink text-paper pt-24 pb-10 relative overflow-hidden">
       {/* Top hairline with diamond */}

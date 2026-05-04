@@ -1,0 +1,1958 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Kearny FC · Spain Tour 2027 · Odisea Tours</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="deck-stage.js"></script>
+<style>
+  :root {
+    --paper: #F6F6F6;
+    --paper-warm: #EFECE4;
+    --ink: #111111;
+    --ink-soft: #1A1612;
+    --ink-muted: #5A564E;
+    --gold: #FFB400;
+    --gold-deep: #C98A00;
+    --kearny-red: #B11E2A;
+    --kearny-deep: #6E1219;
+
+    --f-display: "Archivo", system-ui, sans-serif;
+    --f-mark: "Archivo Black", "Archivo", sans-serif;
+    --f-mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a0908;
+    font-family: var(--f-display);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  deck-stage section {
+    background: var(--paper);
+    color: var(--ink);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  /* ==================== TOKENS ==================== */
+  /*
+    TYPE_SCALE: title 88, subtitle 44, body 30, small 24, micro 20
+    SPACING:    paddingTop 100, paddingBottom 80, paddingX 110, titleGap 52, itemGap 28
+  */
+
+  /* ==================== UTILITY ==================== */
+  .slide-pad {
+    padding: 100px 110px 90px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .chapter-label {
+    font-family: var(--f-mono);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .chapter-label .gold-dot {
+    color: var(--gold);
+    margin: 0 0.6em;
+  }
+  .display-title {
+    font-family: var(--f-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 0.96;
+    color: var(--ink);
+    margin: 0;
+  }
+  .body-text {
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  .body-muted {
+    color: var(--ink-muted);
+  }
+  .gold-rule {
+    width: 64px;
+    height: 4px;
+    background: var(--gold);
+  }
+  .footer-bar {
+    position: absolute;
+    bottom: 36px;
+    left: 110px;
+    right: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--f-mono);
+    font-size: 18px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .footer-bar .dot { color: var(--gold); }
+
+  /* ==================== COVER ==================== */
+  .cover {
+    background: var(--ink-soft);
+    color: var(--paper);
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  .cover .cover-img {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(180deg, rgba(10,8,6,0.55) 0%, rgba(10,8,6,0.45) 40%, rgba(10,8,6,0.92) 100%),
+      url("assets/photos/cover-floodlights.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .cover .cover-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 78% 28%, rgba(255,180,0,0.10) 0%, rgba(255,180,0,0) 55%);
+    pointer-events: none;
+  }
+  .cover-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 90px 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .cover-top .left-mark {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .cover-top .left-mark img {
+    height: 110px;
+    width: auto;
+  }
+  .cover-top .vrule {
+    width: 1px;
+    height: 110px;
+    background: rgba(246,246,246,0.25);
+  }
+  .cover-top .right-mark img {
+    height: 80px;
+    width: auto;
+  }
+  .cover-top .left-mark .meta {
+    font-family: var(--f-mono);
+    font-size: 18px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.7);
+    line-height: 1.6;
+  }
+  .cover-top .left-mark .meta strong {
+    color: var(--paper);
+    font-weight: 500;
+  }
+
+  .cover-mid {
+    align-self: flex-start;
+    max-width: 1400px;
+  }
+  .cover-mid .eyebrow {
+    font-family: var(--f-mono);
+    font-size: 22px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 34px;
+  }
+  .cover-mid h1 {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 128px;
+    letter-spacing: -0.03em;
+    line-height: 0.96;
+    margin: 0 0 56px 0;
+  }
+  .cover-mid h1 .gold {
+    color: var(--gold);
+    font-family: var(--f-mark);
+    font-weight: 400;
+  }
+  .cover-mid .sub {
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: 36px;
+    color: rgba(246,246,246,0.85);
+    max-width: 1100px;
+    line-height: 1.35;
+  }
+
+  .cover-bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    align-items: end;
+    border-top: 1px solid rgba(246,246,246,0.18);
+    padding-top: 36px;
+  }
+  /* Partners strip on cover */
+  .cover-partners {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(246,246,246,0.18);
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  .cover-partners .label {
+    font-family: var(--f-mono);
+    font-size: 14px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.5);
+    white-space: nowrap;
+  }
+  .cover-partners .crests {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  .crest {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px 22px 14px 14px;
+    border: 1px solid rgba(246,246,246,0.22);
+    background: rgba(246,246,246,0.04);
+  }
+  .crest .shield {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .crest .shield svg { width: 100%; height: 100%; display: block; }
+  .crest .lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1;
+  }
+  .crest .lines .top {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .crest .lines .name {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 19px;
+    letter-spacing: -0.005em;
+    color: var(--paper);
+  }
+  .crest .lines .sub {
+    font-family: var(--f-mono);
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.55);
+    margin-top: 2px;
+  }
+  .cover-bottom .stat .k {
+    font-family: var(--f-mono);
+    font-size: 16px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.55);
+    margin-bottom: 10px;
+  }
+  .cover-bottom .stat .v {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--paper);
+    letter-spacing: -0.01em;
+  }
+  .cover-bottom .stat .v .gold { color: var(--gold); }
+
+  /* ==================== CHAPTER ==================== */
+  .chapter {
+    background: var(--ink-soft);
+    color: var(--paper);
+    height: 100%;
+    position: relative;
+    padding: 120px 110px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .chapter .bg-img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+  .chapter .bg-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(10,8,6,0.92) 0%, rgba(10,8,6,0.7) 45%, rgba(10,8,6,0.4) 100%);
+  }
+  .chapter > * { position: relative; z-index: 1; }
+  .chapter .num {
+    font-family: var(--f-mono);
+    font-size: 22px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .chapter h2 {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 200px;
+    letter-spacing: -0.035em;
+    line-height: 0.88;
+    margin: 0;
+    color: var(--paper);
+  }
+  .chapter h2 .accent {
+    color: var(--gold);
+  }
+  .chapter .lede {
+    font-family: var(--f-display);
+    font-size: 36px;
+    line-height: 1.35;
+    color: rgba(246,246,246,0.78);
+    max-width: 1100px;
+    margin: 30px 0 0;
+  }
+  .chapter .meta-row {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(246,246,246,0.2);
+    padding-top: 28px;
+    font-family: var(--f-mono);
+    font-size: 18px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.6);
+  }
+
+  /* ==================== OVERVIEW ==================== */
+  .overview {
+    height: 100%;
+    padding: 100px 110px 90px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+  }
+  .overview .left h1 {
+    font-size: 92px;
+    margin: 24px 0 36px;
+  }
+  .overview .left p.body-text {
+    font-size: 28px;
+    max-width: 700px;
+  }
+  .overview .stat-grid {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px 60px;
+    border-top: 1px solid rgba(17,17,17,0.15);
+    padding-top: 44px;
+  }
+  .overview .stat-grid .k {
+    font-family: var(--f-mono);
+    font-size: 18px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 8px;
+  }
+  .overview .stat-grid .v {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .overview .right {
+    background: var(--ink-soft);
+    border-radius: 4px;
+    padding: 56px 56px;
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .overview .right .map-eyebrow {
+    font-family: var(--f-mono);
+    font-size: 18px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+  .overview .right h3 {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 56px;
+    letter-spacing: -0.02em;
+    margin: 0 0 36px;
+    line-height: 1;
+  }
+  .route-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(246,246,246,0.15);
+  }
+  .route-item {
+    display: grid;
+    grid-template-columns: 60px 1fr 100px;
+    align-items: center;
+    padding: 26px 0;
+    border-bottom: 1px solid rgba(246,246,246,0.15);
+    gap: 24px;
+  }
+  .route-item .num {
+    font-family: var(--f-mono);
+    font-size: 18px;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+  }
+  .route-item .city {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 38px;
+    letter-spacing: -0.01em;
+    color: var(--paper);
+  }
+  .route-item .nights {
+    font-family: var(--f-mono);
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.6);
+    text-align: right;
+  }
+  .route-coords {
+    margin-top: auto;
+    padding-top: 28px;
+    font-family: var(--f-mono);
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.4);
+    line-height: 1.8;
+  }
+
+  /* ==================== DAY SLIDES ==================== */
+  .day {
+    height: 100%;
+    padding: 80px 110px 80px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 80px;
+    align-items: stretch;
+  }
+  .day .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+  .day-eyebrow {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    font-family: var(--f-mono);
+    font-size: 20px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .day-eyebrow .num {
+    font-family: var(--f-display);
+    font-weight: 800;
+    color: var(--ink);
+    font-size: 32px;
+    letter-spacing: 0;
+  }
+  .day-eyebrow .gold-dot { color: var(--gold); }
+  .day h1 {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 84px;
+    letter-spacing: -0.025em;
+    line-height: 0.96;
+    margin: 28px 0 24px;
+    color: var(--ink);
+  }
+  .day .summary {
+    font-family: var(--f-display);
+    font-size: 28px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0;
+  }
+  .day .footer-meta {
+    margin-top: 36px;
+    display: flex;
+    gap: 48px;
+    border-top: 1px solid rgba(17,17,17,0.15);
+    padding-top: 24px;
+  }
+  .day .footer-meta .k {
+    font-family: var(--f-mono);
+    font-size: 14px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 6px;
+  }
+  .day .footer-meta .v {
+    font-family: var(--f-display);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--ink);
+  }
+
+  .day .right {
+    background: var(--paper-warm);
+    padding: 44px 48px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  .day .right.has-photo {
+    padding: 0;
+    background: var(--ink-soft);
+  }
+  .day .right .photo-area {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .day .right .photo-area::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,8,6,0) 50%, rgba(10,8,6,0.7) 100%);
+  }
+  .day .right .photo-cap {
+    position: absolute;
+    left: 32px;
+    bottom: 18px;
+    z-index: 2;
+    font-family: var(--f-mono);
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.92);
+  }
+  .day .right .photo-cap .gold-dot { color: var(--gold); }
+  .day .right.has-photo .schedule-wrap {
+    background: var(--paper-warm);
+    padding: 36px 44px 36px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .day .right .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  .day .right .heading .title {
+    font-family: var(--f-mono);
+    font-size: 16px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .day .right .heading .date {
+    font-family: var(--f-mono);
+    font-size: 16px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+  }
+  .schedule {
+    margin-top: 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .sched-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(17,17,17,0.12);
+    align-items: baseline;
+  }
+  .sched-row:last-child { border-bottom: 1px solid rgba(17,17,17,0.12); }
+  .sched-row .time {
+    font-family: var(--f-mono);
+    font-size: 16px;
+    color: var(--ink-muted);
+    letter-spacing: 0.08em;
+  }
+  .sched-row .what {
+    font-family: var(--f-display);
+    font-size: 21px;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+  .sched-row.feature .what {
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .sched-row.feature .time {
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+
+  /* ==================== INCLUDED / PRICING ==================== */
+  .inclusions {
+    height: 100%;
+    padding: 80px 110px 80px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+  }
+  .inclusions h1 {
+    font-size: 76px;
+    margin: 20px 0 22px;
+    line-height: 0.96;
+  }
+  .inclusions .body-text {
+    font-size: 24px;
+    max-width: 640px;
+  }
+  .inclusions .grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 44px;
+  }
+  .inclusions .grid .item .k {
+    font-family: var(--f-mono);
+    font-size: 14px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 10px;
+  }
+  .inclusions .grid .item .v {
+    font-family: var(--f-display);
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .inclusions .right {
+    background: var(--ink-soft);
+    color: var(--paper);
+    padding: 50px 56px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .inclusions .right .eyebrow {
+    font-family: var(--f-mono);
+    font-size: 18px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .inclusions .right h2 {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 56px;
+    letter-spacing: -0.02em;
+    margin: 14px 0 22px;
+    line-height: 1;
+  }
+  .pricing-table {
+    margin-top: 18px;
+    border-top: 1px solid rgba(246,246,246,0.18);
+  }
+  .pricing-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(246,246,246,0.18);
+    gap: 24px;
+  }
+  .pricing-row .label {
+    font-family: var(--f-display);
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--paper);
+  }
+  .pricing-row .label .desc {
+    display: block;
+    font-family: var(--f-mono);
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.55);
+    font-weight: 400;
+    margin-top: 6px;
+  }
+  .pricing-row .price {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 34px;
+    letter-spacing: -0.01em;
+    color: var(--paper);
+  }
+  .pricing-row .price .ccy {
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--gold);
+    margin-right: 4px;
+  }
+  .pricing-row.featured {
+    background: linear-gradient(90deg, rgba(255,180,0,0.08) 0%, rgba(255,180,0,0) 100%);
+    padding-left: 18px;
+    border-left: 3px solid var(--gold);
+  }
+  .pricing-note {
+    margin-top: 26px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    font-family: var(--f-mono);
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.6);
+    line-height: 1.6;
+  }
+  .pricing-note .star {
+    color: var(--gold);
+    font-size: 20px;
+    line-height: 1;
+  }
+  .pricing-foot {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(246,246,246,0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .pricing-foot .k {
+    font-family: var(--f-mono);
+    font-size: 16px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.55);
+  }
+  .pricing-foot .v {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--paper);
+  }
+
+  /* ==================== CLOSING ==================== */
+  .closing {
+    background: var(--ink-soft);
+    color: var(--paper);
+    height: 100%;
+    padding: 120px 110px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 90px;
+    position: relative;
+  }
+  .closing .col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+  }
+  .closing .col-right {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #0a0a0a;
+  }
+  .closing .col-right .photo {
+    position: absolute; inset: 0;
+    background-image: url('assets/photos/closing-fcb-group.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    filter: saturate(0.92) contrast(1.02);
+  }
+  .closing .col-right .grad {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(15,15,15,0) 55%, rgba(15,15,15,0.55) 100%),
+      linear-gradient(135deg, rgba(196,156,89,0.18) 0%, rgba(196,156,89,0) 45%);
+    mix-blend-mode: normal;
+  }
+  .closing .col-right .frame {
+    position: absolute; inset: 18px;
+    border: 1px solid rgba(246,246,246,0.18);
+    pointer-events: none;
+  }
+  .closing .col-right .corner {
+    position: absolute;
+    width: 22px; height: 22px;
+    border: 1px solid var(--gold);
+  }
+  .closing .col-right .corner.tl { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+  .closing .col-right .corner.tr { top: 10px; right: 10px; border-left: none; border-bottom: none; }
+  .closing .col-right .corner.bl { bottom: 10px; left: 10px; border-right: none; border-top: none; }
+  .closing .col-right .corner.br { bottom: 10px; right: 10px; border-left: none; border-top: none; }
+  .closing .col-right .photo-meta {
+    position: absolute;
+    left: 36px; right: 36px; bottom: 36px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 24px;
+    color: var(--paper);
+  }
+  .closing .col-right .photo-meta .eyebrow {
+    font-family: var(--f-mono);
+    font-size: 13px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .closing .col-right .photo-meta .ttl {
+    font-family: var(--f-display);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .closing .col-right .photo-meta .stamp {
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.7);
+    text-align: right;
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+  .closing .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .closing img.mark {
+    height: 80px;
+  }
+  .closing .marks {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .closing .marks .mark-divider {
+    width: 1px;
+    height: 64px;
+    background: rgba(246,246,246,0.18);
+  }
+  .closing .marks img.mark-kearny {
+    height: 88px;
+  }
+  .closing .top .right-meta {
+    font-family: var(--f-mono);
+    font-size: 18px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.5);
+    text-align: right;
+    line-height: 1.8;
+  }
+  .closing h1 {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 132px;
+    letter-spacing: -0.03em;
+    line-height: 0.92;
+    margin: 0;
+    max-width: 1500px;
+  }
+  .closing h1 .gold {
+    color: var(--gold);
+    font-family: var(--f-mark);
+    font-weight: 400;
+  }
+  .closing .contact {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    border-top: 1px solid rgba(246,246,246,0.2);
+    padding-top: 36px;
+  }
+  .closing .contact .k {
+    font-family: var(--f-mono);
+    font-size: 14px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(246,246,246,0.5);
+    margin-bottom: 10px;
+  }
+  .closing .contact .v {
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--paper);
+    line-height: 1.4;
+  }
+  .closing .contact .v.gold {
+    color: var(--gold);
+  }
+
+  /* ==================== JOURNEY MAP ==================== */
+  .journey {
+    height: 100%;
+    padding: 100px 110px 90px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  .journey .head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 50px; }
+  .journey h1 {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 88px;
+    letter-spacing: -0.025em;
+    line-height: 0.96;
+    margin: 18px 0 0;
+  }
+  .journey .timeline {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 8px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(17,17,17,0.15);
+    padding-top: 30px;
+  }
+  .journey .day-card {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 14px;
+    border-right: 1px solid rgba(17,17,17,0.08);
+    min-height: 460px;
+    position: relative;
+  }
+  .journey .day-card:last-child { border-right: none; }
+  .journey .day-card .d-num {
+    font-family: var(--f-mono);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: var(--ink-muted);
+    margin-bottom: 6px;
+  }
+  .journey .day-card .d-date {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .journey .day-card .city-tag {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 8px;
+  }
+  .journey .day-card .head-line {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .journey .day-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .journey .day-card li {
+    font-family: var(--f-display);
+    font-size: 13px;
+    line-height: 1.35;
+    color: var(--ink-soft);
+    padding-left: 12px;
+    position: relative;
+  }
+  .journey .day-card li::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    position: absolute;
+    left: 0;
+    top: 8px;
+  }
+  .journey .legend {
+    display: flex;
+    gap: 36px;
+    margin-top: 24px;
+    font-family: var(--f-mono);
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .journey .legend .swatch {
+    display: inline-block;
+    width: 18px;
+    height: 4px;
+    background: var(--gold);
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+</style>
+</head>
+<body>
+
+<deck-stage width="1920" height="1080" autotag>
+
+  <!-- ============== 1 · COVER ============== -->
+  <section data-label="01 Cover">
+    <div class="cover">
+      <div class="cover-img"></div>
+      <div class="cover-content">
+
+        <div class="cover-top">
+          <div class="left-mark">
+            <img src="assets/kearny-fc.png" alt="Kearny FC" />
+            <div class="vrule"></div>
+            <div class="meta">
+              <strong>NEW JERSEY · KEARNY FC</strong><br/>
+              YOUTH SOCCER &amp; CULTURE TOUR<br/>
+              SPAIN · EASTER 2027
+            </div>
+          </div>
+          <div class="right-mark">
+            <img src="assets/odisea-color.png" alt="Odisea Tours" />
+          </div>
+        </div>
+
+        <div class="cover-mid">
+          <div class="eyebrow">Chapter I &middot; Itinerary &middot; Easter 2027</div>
+          <h1>Spanish<br/>Soccer &amp; <span class="gold">Culture</span></h1>
+          <div class="sub">A 10-day tour through Madrid, Valencia and Barcelona, designed for Kearny FC by Odisea Tours.</div>
+        </div>
+
+        <div class="cover-bottom">
+          <div class="stat">
+            <div class="k">Travel Window</div>
+            <div class="v">26 Mar to 04 Apr 2027</div>
+          </div>
+          <div class="stat">
+            <div class="k">Group Size</div>
+            <div class="v">100 PAX</div>
+          </div>
+          <div class="stat">
+            <div class="k">Cities</div>
+            <div class="v">Madrid <span class="gold">&middot;</span> Valencia <span class="gold">&middot;</span> Barcelona</div>
+          </div>
+          <div class="stat">
+            <div class="k">Operator</div>
+            <div class="v">Odisea Tours</div>
+          </div>
+        </div>
+
+        <div class="cover-partners">
+          <div class="label">In Partnership With</div>
+          <div class="crests">
+            <div class="crest">
+              <div class="shield">
+                <img src="assets/logos/rfef.png" alt="RFEF" style="width:100%; height:100%; object-fit: contain;" />
+              </div>
+              <div class="lines">
+                <div class="top">Federation</div>
+                <div class="name">Spanish FA</div>
+                <div class="sub">RFEF · Madrid</div>
+              </div>
+            </div>
+
+            <div class="crest">
+              <div class="shield">
+                <img src="assets/logos/valencia-cf.svg" alt="Valencia CF" style="width:100%; height:100%; object-fit: contain;" />
+              </div>
+              <div class="lines">
+                <div class="top">La Liga</div>
+                <div class="name">Valencia CF</div>
+                <div class="sub">Mestalla · Valencia</div>
+              </div>
+            </div>
+
+            <div class="crest">
+              <div class="shield">
+                <img src="assets/logos/fc-barcelona.png" alt="FC Barcelona" style="width:100%; height:100%; object-fit: contain;" />
+              </div>
+              <div class="lines">
+                <div class="top">La Liga</div>
+                <div class="name">FC Barcelona</div>
+                <div class="sub">Joan Gamper · BCN</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 2 · WELCOME ============== -->
+  <section data-label="02 Welcome">
+    <div class="slide-pad" style="display:grid; grid-template-columns: 1.1fr 1fr; gap: 90px; align-items:center;">
+      <div>
+        <div class="chapter-label">Chapter II <span class="gold-dot">&middot;</span> Welcome</div>
+        <h1 class="display-title" style="font-size: 108px; margin: 28px 0 32px;">Bienvenidos<br/>a España.</h1>
+        <div class="gold-rule" style="margin-bottom: 32px;"></div>
+        <p class="body-text" style="max-width: 720px; font-size: 30px; margin: 0 0 24px 0;">
+          For ten days, the Kearny FC squads will train where Spain&rsquo;s best are made: the RFEF, Valencia CF and FC Barcelona. They will play matches against local sides, walk the Bernabéu and Camp Nou, and travel from the heart of Madrid to the Mediterranean coast and Catalonia.
+        </p>
+        <p class="body-text" style="max-width: 720px; font-size: 30px; margin: 0;">
+          Designed and run by locals on the ground, with twenty years of quiet craftsmanship behind every transfer, every meal, every match.
+        </p>
+      </div>
+      <div style="background: var(--paper-warm); padding: 64px 56px; box-sizing: border-box; height: 720px; display:flex; flex-direction:column; justify-content: space-between;">
+        <div>
+          <div class="chapter-label" style="color: var(--gold-deep);">At a glance</div>
+          <h3 style="font-family: var(--f-display); font-weight: 800; font-size: 56px; letter-spacing: -0.02em; margin: 18px 0 36px; line-height: 1;">Ten days. Three cities.<br/>One unforgettable squad trip.</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 44px 40px;">
+          <div>
+            <div class="chapter-label" style="font-size: 14px;">Training</div>
+            <div style="font-family: var(--f-display); font-weight: 700; font-size: 22px; margin-top: 10px; line-height: 1.3;">RFEF · Valencia CF<br/>FC Barcelona</div>
+          </div>
+          <div>
+            <div class="chapter-label" style="font-size: 14px;">Stadium tours</div>
+            <div style="font-family: var(--f-display); font-weight: 700; font-size: 22px; margin-top: 10px; line-height: 1.3;">Bernabéu · Mestalla<br/>Camp Nou</div>
+          </div>
+          <div>
+            <div class="chapter-label" style="font-size: 14px;">Friendly matches</div>
+            <div style="font-family: var(--f-display); font-weight: 700; font-size: 22px; margin-top: 10px; line-height: 1.3;">3 vs. local Spanish<br/>opposition</div>
+          </div>
+          <div>
+            <div class="chapter-label" style="font-size: 14px;">La Liga</div>
+            <div style="font-family: var(--f-display); font-weight: 700; font-size: 22px; margin-top: 10px; line-height: 1.3;">Live match attended<br/>(TBC)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 3 · OVERVIEW + ROUTE ============== -->
+  <section data-label="03 Tour Overview">
+    <div class="overview">
+      <div class="left">
+        <div class="chapter-label">Chapter III <span class="gold-dot">&middot;</span> Overview</div>
+        <h1 class="display-title">Tour at a<br/>glance.</h1>
+        <p class="body-text" style="max-width: 660px;">Nine nights across Madrid, Valencia and Barcelona, structured around training sessions with Spanish federations and clubs, friendly matches against local academies, and unhurried afternoons in three of Spain&rsquo;s most extraordinary cities.</p>
+
+        <div class="stat-grid">
+          <div>
+            <div class="k">Tour dates</div>
+            <div class="v">26 Mar &ndash; 04 Apr</div>
+          </div>
+          <div>
+            <div class="k">Length</div>
+            <div class="v">10 days &middot; 9 nights</div>
+          </div>
+          <div>
+            <div class="k">Group capacity</div>
+            <div class="v">100 PAX</div>
+          </div>
+          <div>
+            <div class="k">Min. age</div>
+            <div class="v">U10 &ndash; Adult</div>
+          </div>
+          <div>
+            <div class="k">Arrive into</div>
+            <div class="v">Madrid (MAD)</div>
+          </div>
+          <div>
+            <div class="k">Depart from</div>
+            <div class="v">Barcelona (BCN)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="map-eyebrow">Route &middot; North to South to East</div>
+        <h3>Madrid → Valencia<br/>→ Barcelona.</h3>
+        <div class="route-list">
+          <div class="route-item">
+            <div class="num">01</div>
+            <div class="city">Madrid</div>
+            <div class="nights">3 Nights</div>
+          </div>
+          <div class="route-item">
+            <div class="num">02</div>
+            <div class="city">Valencia</div>
+            <div class="nights">3 Nights</div>
+          </div>
+          <div class="route-item">
+            <div class="num">03</div>
+            <div class="city">Barcelona</div>
+            <div class="nights">3 Nights</div>
+          </div>
+        </div>
+        <div class="route-coords">
+          40.4168° N · Madrid &nbsp;·&nbsp; 39.4699° N · Valencia &nbsp;·&nbsp; 41.3851° N · Barcelona
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 4 · CHAPTER · MADRID ============== -->
+  <section data-label="04 Chapter Madrid">
+    <div class="chapter">
+      <div class="bg-img" style="background-image: url('assets/photos/bernabeu.jpg');"></div>
+      <div>
+        <div class="num">Part One &middot; Madrid &middot; 40.4168° N</div>
+        <h2 style="margin-top: 32px;">MA<span class="accent">D</span>RID.</h2>
+        <p class="lede">Three nights at the heart of Spanish soccer. RFEF training, La Liga under the lights, the Bernabéu, and a panoramic walk through the capital.</p>
+      </div>
+      <div class="meta-row">
+        <span>Days 01 &middot; 02 &middot; 03</span>
+        <span>26 to 28 March 2027</span>
+        <span>RFEF &middot; Bernabéu &middot; La Liga</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 5 · DAY 1 ============== -->
+  <section data-label="05 Day 01 Arrival Madrid">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">01</span> <span class="gold-dot">&middot;</span> Madrid</div>
+          <h1>Arrival into<br/>Madrid.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">Raul Sanz meets the squad at MAD. Transfer to accommodation, a first walk through Madrid&rsquo;s city center, then a welcome briefing at the Spanish FA before dinner.</p>
+        </div>
+        <div class="footer-meta">
+          <div>
+            <div class="k">Date</div>
+            <div class="v">Friday, 26 March</div>
+          </div>
+          <div>
+            <div class="k">Stay</div>
+            <div class="v">Madrid · 4★ Hotel</div>
+          </div>
+          <div>
+            <div class="k">Highlight</div>
+            <div class="v">RFEF Welcome Meeting</div>
+          </div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/madrid-gran-via.jpg');">
+          <div class="photo-cap">Madrid <span class="gold-dot">&middot;</span> Gran Vía &amp; the historic centre</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 01</div>
+          <div class="date">26 Mar 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">All day</div><div class="what">Arrivals at Madrid Barajas (MAD). Raul Sanz greets the group at the airport</div></div>
+          <div class="sched-row"><div class="time">9 am</div><div class="what">Transfer to accommodation &amp; check in</div></div>
+          <div class="sched-row feature"><div class="time">10 am</div><div class="what">Check-in at Spanish FA Headquarters (TBC)</div></div>
+          <div class="sched-row"><div class="time">11:30 am</div><div class="what">Transfer to Madrid city center</div></div>
+          <div class="sched-row"><div class="time">12 pm</div><div class="what">Free time in Madrid city center</div></div>
+          <div class="sched-row"><div class="time">4 pm</div><div class="what">Return to accommodation</div></div>
+          <div class="sched-row feature"><div class="time">6 pm</div><div class="what">RFEF training at Spanish FA &amp; welcome meeting</div></div>
+          <div class="sched-row"><div class="time">8 pm</div><div class="what">Dinner at accommodation &amp; rest</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 6 · DAY 2 ============== -->
+  <section data-label="06 Day 02 RFEF Training">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">02</span> <span class="gold-dot">&middot;</span> Madrid</div>
+          <h1>RFEF training<br/>&amp; La Liga.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">Two full sessions at the Spanish FA, an afternoon in the city, and a top-flight La Liga match under the lights.</p>
+        </div>
+        <div class="footer-meta">
+          <div><div class="k">Date</div><div class="v">Saturday, 27 March</div></div>
+          <div><div class="k">Stay</div><div class="v">Madrid · 4★ Hotel</div></div>
+          <div><div class="k">Highlight</div><div class="v">La Liga Match (TBC)</div></div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/rfef-team-talk.jpg'); background-position: center;">
+          <div class="photo-cap">Training at the RFEF <span class="gold-dot">&middot;</span> Madrid</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 02</div>
+          <div class="date">27 Mar 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">8:30 am</div><div class="what">Breakfast at accommodation</div></div>
+          <div class="sched-row feature"><div class="time">9:30 am</div><div class="what">Full training session at the Spanish FA</div></div>
+          <div class="sched-row"><div class="time">11 am</div><div class="what">Rest &amp; quick refreshment</div></div>
+          <div class="sched-row feature"><div class="time">11:30 am</div><div class="what">Full training session at the Spanish FA</div></div>
+          <div class="sched-row"><div class="time">1:30 pm</div><div class="what">Lunch at the Spanish FA (own cost)</div></div>
+          <div class="sched-row"><div class="time">3 pm</div><div class="what">Transfer to Madrid city center</div></div>
+          <div class="sched-row"><div class="time">4 pm</div><div class="what">Visit Madrid &middot; sightseeing in the historic center</div></div>
+          <div class="sched-row"><div class="time">7:15 pm</div><div class="what">Transfer to stadium</div></div>
+          <div class="sched-row feature"><div class="time">9 pm</div><div class="what">Attend La Liga match (TBC)</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 7 · DAY 3 ============== -->
+  <section data-label="07 Day 03 Bernabeu">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">03</span> <span class="gold-dot">&middot;</span> Madrid</div>
+          <h1>Santiago<br/>Bernabéu.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">Tour the home of Real Madrid, take in a panoramic view of the capital, and a final evening in Madrid before transferring to Valencia in the morning.</p>
+        </div>
+        <div class="footer-meta">
+          <div><div class="k">Date</div><div class="v">Sunday, 28 March</div></div>
+          <div><div class="k">Stay</div><div class="v">Madrid · 4★ Hotel</div></div>
+          <div><div class="k">Highlight</div><div class="v">Bernabéu Stadium Tour</div></div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/bernabeu.jpg');">
+          <div class="photo-cap">Santiago Bernabéu <span class="gold-dot">&middot;</span> Real Madrid CF</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 03</div>
+          <div class="date">28 Mar 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">8 am</div><div class="what">Breakfast at accommodation</div></div>
+          <div class="sched-row"><div class="time">9 am</div><div class="what">Transfer to Real Madrid CF · Santiago Bernabéu</div></div>
+          <div class="sched-row feature"><div class="time">10:30 am</div><div class="what">Real Madrid CF Stadium Tour</div></div>
+          <div class="sched-row"><div class="time">12:30 pm</div><div class="what">Madrid panoramic city tour</div></div>
+          <div class="sched-row"><div class="time">2 pm</div><div class="what">Lunch in Madrid city center (own cost)</div></div>
+          <div class="sched-row"><div class="time">3:30 pm</div><div class="what">Free time in Madrid city center · Retiro Park &amp; shopping</div></div>
+          <div class="sched-row"><div class="time">7 pm</div><div class="what">Return to accommodation</div></div>
+          <div class="sched-row"><div class="time">8:30 pm</div><div class="what">Dinner at accommodation</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 8 · CHAPTER · VALENCIA ============== -->
+  <section data-label="08 Chapter Valencia">
+    <div class="chapter">
+      <div class="bg-img" style="background-image: url('assets/photos/mestalla.jpg');"></div>
+      <div>
+        <div class="num">Part Two &middot; Valencia &middot; 39.4699° N</div>
+        <h2 style="margin-top: 32px;">VAL<span class="accent">E</span>NCIA.</h2>
+        <p class="lede">Three nights on the Mediterranean coast. The Mestalla, friendly matches at Club Fomento, and full training sessions at Valencia CF.</p>
+      </div>
+      <div class="meta-row">
+        <span>Days 04 &middot; 05 &middot; 06</span>
+        <span>29 to 31 March 2027</span>
+        <span>Mestalla &middot; Valencia CF &middot; Matches</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 9 · DAY 4 ============== -->
+  <section data-label="09 Day 04 Mestalla">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">04</span> <span class="gold-dot">&middot;</span> Madrid → Valencia</div>
+          <h1>Mestalla<br/>&amp; first match.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">Morning transfer down the coast to Valencia, stadium tour at the Mestalla, then Kearny FC&rsquo;s first match against local Spanish opposition.</p>
+        </div>
+        <div class="footer-meta">
+          <div><div class="k">Date</div><div class="v">Monday, 29 March</div></div>
+          <div><div class="k">Transfer</div><div class="v">Madrid → Valencia · 3.5h</div></div>
+          <div><div class="k">Highlight</div><div class="v">Kearny FC vs. Local Opposition</div></div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/match-vs-local.jpg'); background-position: center top;">
+          <div class="photo-cap">Friendly vs. local opposition <span class="gold-dot">&middot;</span> Valencia</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 04</div>
+          <div class="date">29 Mar 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">8 am</div><div class="what">Breakfast &amp; check out of Madrid hotel</div></div>
+          <div class="sched-row"><div class="time">9 am</div><div class="what">Transfer to Valencia</div></div>
+          <div class="sched-row"><div class="time">12:30 pm</div><div class="what">Check in at 4★ hotel in Valencia &middot; lunch (own cost)</div></div>
+          <div class="sched-row feature"><div class="time">2:30 pm</div><div class="what">Valencia CF · Mestalla Stadium Tour</div></div>
+          <div class="sched-row"><div class="time">4:30 pm</div><div class="what">Valencia city center &middot; free time</div></div>
+          <div class="sched-row"><div class="time">6 pm</div><div class="what">Transfer to sport facilities</div></div>
+          <div class="sched-row feature"><div class="time">7 pm</div><div class="what">Kearny FC Boys &amp; Girls vs. Local Opposition</div></div>
+          <div class="sched-row"><div class="time">9 pm</div><div class="what">Return to accommodation &amp; dinner</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 10 · DAY 5 ============== -->
+  <section data-label="10 Day 05 Match Day">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">05</span> <span class="gold-dot">&middot;</span> Valencia</div>
+          <h1>Paella &amp; a<br/>match night.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">A relaxed morning at the hotel (the laundry party returns), an authentic Valencian paella experience for lunch, then an evening fixture against Club Fomento, one of Valencia&rsquo;s most respected youth academies.</p>
+        </div>
+        <div class="footer-meta">
+          <div><div class="k">Date</div><div class="v">Tuesday, 30 March</div></div>
+          <div><div class="k">Stay</div><div class="v">Valencia · 4★ Hotel</div></div>
+          <div><div class="k">Highlight</div><div class="v">Paella experience &amp; Club Fomento (TBC)</div></div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/valencia-city.jpg');">
+          <div class="photo-cap">Valencia city centre <span class="gold-dot">&middot;</span> Free afternoon</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 05</div>
+          <div class="date">30 Mar 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">8 am</div><div class="what">Breakfast at accommodation</div></div>
+          <div class="sched-row"><div class="time">10 am</div><div class="what">Free morning &middot; laundry party</div></div>
+          <div class="sched-row feature"><div class="time">1 pm</div><div class="what">Authentic Valencian paella experience (own cost)</div></div>
+          <div class="sched-row"><div class="time">3 pm</div><div class="what">Free afternoon</div></div>
+          <div class="sched-row"><div class="time">4:30 pm</div><div class="what">Pre-game team meeting</div></div>
+          <div class="sched-row"><div class="time">5 pm</div><div class="what">Transfer to soccer facilities</div></div>
+          <div class="sched-row feature"><div class="time">5:50 pm</div><div class="what">Kearny FC vs. Club Fomento (TBC)</div></div>
+          <div class="sched-row"><div class="time">7 pm</div><div class="what">Transfer to accommodation</div></div>
+          <div class="sched-row"><div class="time">8:30 pm</div><div class="what">Dinner at accommodation</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 11 · DAY 6 ============== -->
+  <section data-label="11 Day 06 Valencia CF Training">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">06</span> <span class="gold-dot">&middot;</span> Valencia</div>
+          <h1>Valencia CF<br/>training day.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">Two full sessions at Valencia CF&rsquo;s training ground and the certificates ceremony in the afternoon. A final evening in Valencia before the transfer up to Barcelona in the morning.</p>
+        </div>
+        <div class="footer-meta">
+          <div><div class="k">Date</div><div class="v">Wednesday, 31 March</div></div>
+          <div><div class="k">Stay</div><div class="v">Valencia · 4★ Hotel</div></div>
+          <div><div class="k">Highlight</div><div class="v">Certificates Ceremony</div></div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/aerial-pitches.jpg');">
+          <div class="photo-cap">Training at Valencia CF <span class="gold-dot">&middot;</span> Paterna</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 06</div>
+          <div class="date">31 Mar 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">8:30 am</div><div class="what">Breakfast at accommodation</div></div>
+          <div class="sched-row"><div class="time">9 am</div><div class="what">Transfer to Valencia CF training ground</div></div>
+          <div class="sched-row feature"><div class="time">10 am</div><div class="what">Full morning training session · Valencia CF</div></div>
+          <div class="sched-row"><div class="time">12:30 pm</div><div class="what">Transfer to Heron City &middot; lunch (own cost)</div></div>
+          <div class="sched-row feature"><div class="time">4 pm</div><div class="what">Full afternoon training session · Valencia CF</div></div>
+          <div class="sched-row feature"><div class="time">5:30 pm</div><div class="what">Certificates ceremony</div></div>
+          <div class="sched-row"><div class="time">7 pm</div><div class="what">Return to accommodation</div></div>
+          <div class="sched-row"><div class="time">8:30 pm</div><div class="what">Dinner at accommodation</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 13 · CHAPTER · BARCELONA ============== -->
+  <section data-label="13 Chapter Barcelona">
+    <div class="chapter">
+      <div class="bg-img" style="background-image: url('assets/photos/barcelona-aerial.jpg');"></div>
+      <div>
+        <div class="num">Part Three &middot; Barcelona &middot; 41.3851° N</div>
+        <h2 style="margin-top: 32px;">BARCELO<span class="accent">N</span>A.</h2>
+        <p class="lede">Three nights in Catalonia. Train at FC Barcelona&rsquo;s Joan Gamper, watch the youth and women&rsquo;s teams, and close the tour with a fixture under the Camp Nou name.</p>
+      </div>
+      <div class="meta-row">
+        <span>Days 07 &middot; 08 &middot; 09</span>
+        <span>01 to 03 April 2027</span>
+        <span>Joan Gamper &middot; FCB Museum &middot; Final Match</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 14 · DAY 7 ============== -->
+  <section data-label="14 Day 07 FC Barcelona Training">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">07</span> <span class="gold-dot">&middot;</span> Valencia → Barcelona</div>
+          <h1>FC Barcelona<br/>training session.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">Morning transfer to Barcelona, check in at Castelldefels, then straight onto the pitch at Joan Gamper for a training session led by FC Barcelona coaches. Parents head to the FCB Museum.</p>
+        </div>
+        <div class="footer-meta">
+          <div><div class="k">Date</div><div class="v">Thursday, 01 April</div></div>
+          <div><div class="k">Stay</div><div class="v">Ciutat de Castelldefels Hotel</div></div>
+          <div><div class="k">Highlight</div><div class="v">FC Barcelona Training Session</div></div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/fcb-team-celebration.jpg');">
+          <div class="photo-cap">FC Barcelona training <span class="gold-dot">&middot;</span> Joan Gamper</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 07</div>
+          <div class="date">01 Apr 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">9 am</div><div class="what">Morning transfer to Barcelona</div></div>
+          <div class="sched-row"><div class="time">12 pm</div><div class="what">Check in at Ciutat de Castelldefels Hotel (TBC)</div></div>
+          <div class="sched-row"><div class="time">1 pm</div><div class="what">Lunch (own cost)</div></div>
+          <div class="sched-row"><div class="time">2:30 pm</div><div class="what">Transfer to Joan Gamper · FC Barcelona training ground</div></div>
+          <div class="sched-row feature"><div class="time">3 pm</div><div class="what">FC Barcelona training session (players only)</div></div>
+          <div class="sched-row"><div class="time">4:15 pm</div><div class="what">Parents &amp; family transfer to FCB Museum</div></div>
+          <div class="sched-row feature"><div class="time">5 pm</div><div class="what">FC Barcelona Museum &amp; official shop</div></div>
+          <div class="sched-row"><div class="time">6 pm</div><div class="what">Transfer to accommodation</div></div>
+          <div class="sched-row"><div class="time">8:30 pm</div><div class="what">Dinner at accommodation &amp; rest</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 15 · DAY 8 ============== -->
+  <section data-label="15 Day 08 FCB Youth Barcelona">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">08</span> <span class="gold-dot">&middot;</span> Barcelona</div>
+          <h1>FCB youth<br/>&amp; the city.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">Morning watching FC Barcelona youth fixtures, an afternoon in the heart of Barcelona, and an evening La Liga F match at the Johan Cruyff Stadium.</p>
+        </div>
+        <div class="footer-meta">
+          <div><div class="k">Date</div><div class="v">Friday, 02 April</div></div>
+          <div><div class="k">Stay</div><div class="v">Ciutat de Castelldefels Hotel</div></div>
+          <div><div class="k">Highlight</div><div class="v">FCB Girls La Liga Match (TBC)</div></div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/sagrada-familia.jpg'); background-position: center;">
+          <div class="photo-cap">Barcelona <span class="gold-dot">&middot;</span> Sagrada Família</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 08</div>
+          <div class="date">02 Apr 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">9:30 am</div><div class="what">Transfer to FC Barcelona training ground</div></div>
+          <div class="sched-row feature"><div class="time">10 am</div><div class="what">Watch FC Barcelona youth games</div></div>
+          <div class="sched-row"><div class="time">12 pm</div><div class="what">Transfer to Barcelona city center</div></div>
+          <div class="sched-row"><div class="time">1 pm</div><div class="what">Full afternoon in Barcelona &middot; Sagrada Família, Las Ramblas</div></div>
+          <div class="sched-row"><div class="time">4:30 pm</div><div class="what">Transfer to Johan Cruyff Stadium</div></div>
+          <div class="sched-row feature"><div class="time">6 pm</div><div class="what">FC Barcelona Girls La Liga match (TBC)</div></div>
+          <div class="sched-row"><div class="time">8 pm</div><div class="what">Return to accommodation</div></div>
+          <div class="sched-row"><div class="time">8:30 pm</div><div class="what">Dinner at accommodation &amp; rest</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 16 · DAY 9 ============== -->
+  <section data-label="16 Day 09 Final Match">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">09</span> <span class="gold-dot">&middot;</span> Barcelona</div>
+          <h1>One last session.<br/>One last match.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">A last training under FC Barcelona coaches, a free afternoon in Barcelona, and the closing fixture: Kearny FC vs. FC Barcelona Escola (TBC, subject to club availability).</p>
+        </div>
+        <div class="footer-meta">
+          <div><div class="k">Date</div><div class="v">Saturday, 03 April</div></div>
+          <div><div class="k">Stay</div><div class="v">Ciutat de Castelldefels Hotel</div></div>
+          <div><div class="k">Highlight</div><div class="v">Kearny FC vs. FCB Escola (TBC)</div></div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/fcb-squad-coaches.jpeg'); background-position: center;">
+          <div class="photo-cap">Kearny FC <span class="gold-dot">&middot;</span> FCB training ground</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 09</div>
+          <div class="date">03 Apr 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">8 am</div><div class="what">Transfer to FC Barcelona training ground (players only)</div></div>
+          <div class="sched-row feature"><div class="time">8:30 am</div><div class="what">Training session led by FC Barcelona coaches</div></div>
+          <div class="sched-row"><div class="time">10:30 am</div><div class="what">Transfer to accommodation &amp; meet parents</div></div>
+          <div class="sched-row"><div class="time">11:30 am</div><div class="what">Transfer to Barcelona</div></div>
+          <div class="sched-row"><div class="time">12 pm</div><div class="what">Full afternoon in Barcelona</div></div>
+          <div class="sched-row"><div class="time">5 pm</div><div class="what">Transfer to accommodation</div></div>
+          <div class="sched-row"><div class="time">6 pm</div><div class="what">Free time at Castelldefels</div></div>
+          <div class="sched-row feature"><div class="time">7 pm</div><div class="what">Kearny FC vs. FC Barcelona Escola (TBC, subject to availability)</div></div>
+          <div class="sched-row"><div class="time">8 pm</div><div class="what">Dinner at accommodation</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 16b · DAY 10 · DEPARTURES ============== -->
+  <section data-label="17 Day 10 Departures Barcelona">
+    <div class="day">
+      <div class="left">
+        <div>
+          <div class="day-eyebrow">Day <span class="num">10</span> <span class="gold-dot">&middot;</span> Barcelona</div>
+          <h1>Hasta luego,<br/>España.</h1>
+          <div class="gold-rule" style="margin-bottom: 28px;"></div>
+          <p class="summary">A final breakfast together, group photograph at the hotel, and staggered transfers to Barcelona&ndash;El Prat (BCN) for return flights home.</p>
+        </div>
+        <div class="footer-meta">
+          <div><div class="k">Date</div><div class="v">Sunday, 04 April</div></div>
+          <div><div class="k">Departures</div><div class="v">BCN &middot; El Prat Airport</div></div>
+          <div><div class="k">Highlight</div><div class="v">Group Photograph &amp; Farewell</div></div>
+        </div>
+      </div>
+      <div class="right has-photo">
+        <div class="photo-area" style="background-image: url('assets/photos/barcelona-aerial.jpg');">
+          <div class="photo-cap">Barcelona <span class="gold-dot">&middot;</span> Departure day</div>
+        </div>
+        <div class="schedule-wrap">
+        <div class="heading">
+          <div class="title">Schedule &middot; Day 10</div>
+          <div class="date">04 Apr 2027</div>
+        </div>
+        <div class="schedule">
+          <div class="sched-row"><div class="time">8 am</div><div class="what">Final breakfast at accommodation</div></div>
+          <div class="sched-row feature"><div class="time">9:30 am</div><div class="what">Group photograph &amp; farewell at the hotel</div></div>
+          <div class="sched-row"><div class="time">10 am</div><div class="what">Hotel check-out &amp; luggage handling</div></div>
+          <div class="sched-row feature"><div class="time">11 am</div><div class="what">Staggered transfers to BCN &middot; El Prat Airport</div></div>
+          <div class="sched-row"><div class="time">All day</div><div class="what">Return flights home &middot; Odisea Tours assists at airport</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 17 · INCLUSIONS + PRICING ============== -->
+  <section data-label="18 Inclusions and Pricing">
+    <div class="inclusions">
+      <div class="left">
+        <div class="chapter-label">Chapter IV <span class="gold-dot">&middot;</span> The Package</div>
+        <h1 class="display-title">What&rsquo;s<br/>included.</h1>
+        <div class="gold-rule" style="margin-bottom: 28px;"></div>
+        <p class="body-text">Pricing covers everything below for the full 10-day programme, based on a confirmed group of 100 PAX traveling together.</p>
+
+        <div class="grid">
+          <div class="item">
+            <div class="k">Accommodation</div>
+            <div class="v">9 nights · 4★ hotels in Madrid, Valencia and Barcelona. Rooms allocated by squad and family.</div>
+          </div>
+          <div class="item">
+            <div class="k">Meals</div>
+            <div class="v">Daily breakfast &amp; dinner at hotels. All lunches at own cost.</div>
+          </div>
+          <div class="item">
+            <div class="k">Ground Transport</div>
+            <div class="v">Private coach transfers throughout, including airport pickups, inter-city transfers, training &amp; match-day shuttles.</div>
+          </div>
+          <div class="item">
+            <div class="k">Soccer Programme</div>
+            <div class="v">Training at RFEF, Valencia CF &amp; FC Barcelona; 3 friendly matches; Bernabéu, Mestalla &amp; Camp Nou stadium tours; FCB Museum.</div>
+          </div>
+          <div class="item">
+            <div class="k">Match Tickets</div>
+            <div class="v">1 La Liga fixture in Madrid &amp; 1 La Liga F fixture at Johan Cruyff Stadium (both TBC, subject to fixtures).</div>
+          </div>
+          <div class="item">
+            <div class="k">Tour Management</div>
+            <div class="v">Odisea Tours guide on the ground for the full 10 days, certificates ceremony, group photography &amp; daily logistics.</div>
+          </div>
+          <div class="item">
+            <div class="k">Cultural &amp; Family Experience</div>
+            <div class="v">A family-oriented programme woven into every day. Cities, coastline, food and culture, designed to leave players and parents with unforgettable memories of Spain.</div>
+          </div>
+          <div class="item">
+            <div class="k">Not Included</div>
+            <div class="v">International flights to Madrid &amp; from Barcelona, all lunches, personal expenses &amp; gratuities.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="eyebrow">The Package &middot; Per Person &middot; EUR</div>
+        <h2>Pricing.</h2>
+
+        <div class="pricing-table">
+          <div class="pricing-row featured">
+            <div class="label">
+              Player
+              <span class="desc">U10 to U18 · roster member</span>
+            </div>
+            <div class="price"><span class="ccy">€</span>1,999</div>
+          </div>
+          <div class="pricing-row">
+            <div class="label">
+              Child
+              <span class="desc">Under 12 · traveling family</span>
+            </div>
+            <div class="price"><span class="ccy">€</span>1,250</div>
+          </div>
+          <div class="pricing-row">
+            <div class="label">
+              Adult
+              <span class="desc">Parent · sibling 12+ · supporter</span>
+            </div>
+            <div class="price"><span class="ccy">€</span>1,799</div>
+          </div>
+          <div class="pricing-row">
+            <div class="label">
+              Extra Coach
+              <span class="desc">Beyond complimentary squad places</span>
+            </div>
+            <div class="price"><span class="ccy">€</span>1,250</div>
+          </div>
+        </div>
+
+        <div class="pricing-note">
+          <span class="star">★</span>
+          <span>One complimentary place per squad. Head coach travels free with each registered Kearny FC squad.</span>
+        </div>
+
+        <div class="pricing-foot">
+          <div>
+            <div class="k">Group Basis</div>
+            <div class="v">100 PAX confirmed</div>
+          </div>
+          <div>
+            <div class="k">Currency</div>
+            <div class="v">EUR &middot; €</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 18 · PAYMENT SCHEDULE ============== -->
+  <section data-label="18 Payment Schedule">
+    <div class="inclusions">
+      <div class="left">
+        <div class="chapter-label">Chapter V <span class="gold-dot">&middot;</span> Reservations</div>
+        <h1 class="display-title">Securing<br/>your place.</h1>
+        <div class="gold-rule" style="margin-bottom: 28px;"></div>
+        <p class="body-text">A €200 deposit per person reserves a spot, on a first-come, first-served basis. The June 15<sup>th</sup> deposit is what allows us to begin securing accommodation, training grounds, match fixtures and stadium slots in your name.</p>
+
+        <div class="grid">
+          <div class="item">
+            <div class="k">Why June 15<sup>th</sup> matters</div>
+            <div class="v">Hotels, training facilities at the RFEF, Valencia CF and FC Barcelona, and La Liga match tickets are blocked nine months out. Earlier deposits secure better rooms, prime training slots and the right fixture windows.</div>
+          </div>
+          <div class="item">
+            <div class="k">Squad &amp; family rooms</div>
+            <div class="v">Once your deposits are in, we begin allocating rooms by squad and by family unit. The earlier we know who is traveling, the better we can match.</div>
+          </div>
+          <div class="item">
+            <div class="k">Cancellation</div>
+            <div class="v">Deposits are non-refundable but transferable to another traveler in your squad up to 60 days before departure.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="eyebrow">Payment Schedule &middot; EUR &middot; Per Person</div>
+        <h2>Three<br/>payments.</h2>
+
+        <div class="pricing-table">
+          <div class="pricing-row featured">
+            <div class="label">
+              <span style="display:flex; align-items:baseline; gap:14px;"><span style="font-family:var(--f-mono); font-size:16px; letter-spacing:0.28em; color:var(--gold);">01</span> Deposit</span>
+              <span class="desc">First-come, first-served &middot; due 15 June 2026</span>
+            </div>
+            <div class="price"><span class="ccy">€</span>200</div>
+          </div>
+          <div class="pricing-row">
+            <div class="label">
+              <span style="display:flex; align-items:baseline; gap:14px;"><span style="font-family:var(--f-mono); font-size:16px; letter-spacing:0.28em; color:var(--gold);">02</span> Second payment</span>
+              <span class="desc">50% of remaining balance &middot; due 15 October 2026</span>
+            </div>
+            <div class="price"><span class="ccy">€</span>TBA</div>
+          </div>
+          <div class="pricing-row">
+            <div class="label">
+              <span style="display:flex; align-items:baseline; gap:14px;"><span style="font-family:var(--f-mono); font-size:16px; letter-spacing:0.28em; color:var(--gold);">03</span> Final payment</span>
+              <span class="desc">Remaining balance in full &middot; due 15 February 2027</span>
+            </div>
+            <div class="price"><span class="ccy">€</span>TBA</div>
+          </div>
+        </div>
+
+        <div class="pricing-note">
+          <span class="star">★</span>
+          <span>Deposits secure your spot. The June 15<sup>th</sup> date is critical. It&rsquo;s when accommodation blocks, training facilities and match tickets must be confirmed.</span>
+        </div>
+
+        <div class="pricing-foot">
+          <div>
+            <div class="k">Reserve By</div>
+            <div class="v">15 June 2026</div>
+          </div>
+          <div>
+            <div class="k">Departure</div>
+            <div class="v">26 March 2027</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 19 · CLOSING ============== -->
+  <section data-label="19 Closing">
+    <div class="closing">
+      <div class="col-left">
+        <div class="top">
+          <div class="marks">
+            <img class="mark" src="assets/odisea-color.png" alt="Odisea Tours" />
+            <div class="mark-divider"></div>
+            <img class="mark mark-kearny" src="assets/kearny-fc.png" alt="Kearny FC" />
+          </div>
+        </div>
+        <div>
+          <div class="chapter-label" style="color: var(--gold);">Fin &middot; The Invitation</div>
+          <h1 style="margin-top: 24px;">Vamos,<br/><span class="gold">Kearny FC.</span></h1>
+          <p class="body-text" style="color: rgba(246,246,246,0.78); font-size: 30px; max-width: 720px; margin-top: 28px;">
+            One extraordinary journey, designed by locals on the ground in Spain. Ready when you are.
+          </p>
+        </div>
+        <div class="contact" style="grid-template-columns: repeat(2, 1fr); gap: 28px 48px;">
+          <div>
+            <div class="k">Tour Lead</div>
+            <div class="v">Raul Sanz<br/>Odisea Tours</div>
+          </div>
+          <div>
+            <div class="k">Email</div>
+            <div class="v gold">juan@odisea-tours.com</div>
+          </div>
+          <div>
+            <div class="k">Phone</div>
+            <div class="v">+34 670 059 797</div>
+          </div>
+          <div>
+            <div class="k">Web · Social</div>
+            <div class="v">odisea-tours.com<br/>@Odisea_Tours</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <div class="photo"></div>
+        <div class="grad"></div>
+        <div class="frame"></div>
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+        <div class="photo-meta">
+          <div>
+            <div class="eyebrow">Camp Nou &middot; Barcelona</div>
+            <div class="ttl">Where the next<br/>memory begins.</div>
+          </div>
+          <div class="stamp">Easter<br/>2027</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</deck-stage>
+
+</body>
+</html>

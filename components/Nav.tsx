@@ -17,8 +17,12 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  // Proposal pages at /for/* and /partners/* are chromeless access-granted documents.
-  if (pathname?.startsWith("/for/") || pathname?.startsWith("/partners/")) return null;
+  // Proposal pages at /for/*, /partners/*, /kearny-fc are chromeless access-granted documents.
+  if (
+    pathname?.startsWith("/for/") ||
+    pathname?.startsWith("/partners/") ||
+    pathname === "/kearny-fc"
+  ) return null;
 
   // Only the home page has a dark hero at the top.
   // Every other page starts on a light background, so treat it as "scrolled".

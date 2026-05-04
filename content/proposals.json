@@ -25,5 +25,20 @@
     "contact_phone": "+34 635 745 527",
     "password": "ELITE24",
     "created_at": "2026-04-17"
+  },
+  {
+    "slug": "kearny-fc",
+    "club_name": "Kearny FC",
+    "country": "USA",
+    "state": "New Jersey",
+    "audience": "soccer_club",
+    "price_per_player_eur": 1999,
+    "group_size": 100,
+    "days": 10,
+    "contact_name": "Juan Sanchez",
+    "contact_email": "juan@odisea-tours.com",
+    "contact_phone": "+34 670 059 797",
+    "password": "KEARNY2027",
+    "created_at": "2026-05-04"
   }
 ]

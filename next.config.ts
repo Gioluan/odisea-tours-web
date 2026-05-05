@@ -97,6 +97,15 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // GSC 5xx sweep 2026-05-05: legacy WP paths that need keep-signal 301s
+      { source: "/activities", destination: "/tours", permanent: true },
+      { source: "/activities/:path*", destination: "/tours", permanent: true },
+      { source: "/destination", destination: "/destinations", permanent: true },
+      { source: "/destination/:path*", destination: "/destinations", permanent: true },
+      { source: "/terms-and-conditions", destination: "/terms", permanent: true },
+      { source: "/terms-and-conditions/:path*", destination: "/terms", permanent: true },
+      { source: "/european-soccer-tours/:path*", destination: "/tours/european-soccer-tours", permanent: true },
+
       // GSC 404 sweep 2026-04-27: actual legacy WordPress permalinks
       { source: "/soccer-tours-spain", destination: "/tours/european-soccer-tours", permanent: true },
       { source: "/european-soccer-tours", destination: "/tours/european-soccer-tours", permanent: true },
@@ -110,6 +119,14 @@ const nextConfig: NextConfig = {
       { source: "/tour/barcelona-soccer-tour/:path*", destination: "/destinations/barcelona", permanent: true },
       { source: "/tour/barcelona-soccer-tour", destination: "/destinations/barcelona", permanent: true },
       { source: "/tour/munich-baviera-soccer-tour", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/tour/munich-bavaria-soccer-tour", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/tour/fc-barcelona-soccer-tour", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/tour/netherlands-soccer-tour", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/tour/london-soccer-tour", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/tour/milan-venice-soccer-tour", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/tour/spanish-fa-madrid-soccer-tour", destination: "/destinations/madrid", permanent: true },
+      { source: "/tour/valencia-cf-soccer-tour", destination: "/destinations/valencia", permanent: true },
+      { source: "/destinations/spain-soccer", destination: "/tours/european-soccer-tours", permanent: true },
       { source: "/tour", destination: "/tours", permanent: true },
       { source: "/tour/:path*", destination: "/tours", permanent: true },
     ];

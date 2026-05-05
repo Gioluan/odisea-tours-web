@@ -53,6 +53,16 @@ export default function Footer() {
                 <li><Link href="/brand" className="link-rule">Brand Kit</Link></li>
                 <li><Link href="/contact" className="link-rule">Contact</Link></li>
               </ul>
+
+              <p className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/50 mt-10 mb-5">
+                Destinations
+              </p>
+              <ul className="space-y-2.5 font-display text-xl">
+                <li><Link href="/destinations" className="link-rule">All destinations</Link></li>
+                <li><Link href="/destinations/barcelona" className="link-rule">Barcelona</Link></li>
+                <li><Link href="/destinations/madrid" className="link-rule">Madrid</Link></li>
+                <li><Link href="/destinations/valencia" className="link-rule">Valencia</Link></li>
+              </ul>
             </div>
 
             <div>
@@ -90,8 +100,21 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-paper/40">
-            © {new Date().getFullYear()} Odisea Tours. All journeys reserved.
+          <div className="flex flex-col md:items-end gap-3">
+            <div className="flex flex-wrap gap-x-5 gap-y-2 font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase">
+              <Link href="/terms" className="text-paper/55 hover:text-gold transition-colors">
+                Booking Terms
+              </Link>
+              <Link href="/faq" className="text-paper/55 hover:text-gold transition-colors">
+                FAQ
+              </Link>
+              <Link href="/contact" className="text-paper/55 hover:text-gold transition-colors">
+                Contact
+              </Link>
+            </div>
+            <div className="font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-paper/40">
+              © {new Date().getFullYear()} Odisea Tours. All journeys reserved.
+            </div>
           </div>
         </div>
       </div>

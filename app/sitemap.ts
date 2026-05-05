@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/destinations/madrid`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/destinations/valencia`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/usa`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${SITE}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const usCityRoutes: MetadataRoute.Sitemap = US_CITIES.map((c) => ({

@@ -554,8 +554,8 @@ const PRINCIPLES = [
       "The tour breathes with the group. Slower mornings, longer meals, one more museum if you want it. The itinerary serves you, not the clock.",
   },
   {
-    title: "Licensed. Insured. Bonded.",
+    title: "Twenty years, every continent.",
     description:
-      "Ground Agents Solutions S.L.—twenty years registered in Spain. Every tour backed by full civil and travel-agency insurance. Quietly, carefully.",
+      "Since 2005, our Spanish team has hosted clubs, schools and traveling families from the United States, Australia, the United Kingdom and across Europe. Different countries, different needs, the same operator on the ground every time. Two decades of learning one trip at a time.",
   },
 ];

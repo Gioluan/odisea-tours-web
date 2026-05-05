@@ -26,5 +26,7 @@ export const config = {
     "/my-account-2",
     "/trip-search-result/:path*",
     "/trip-search-result",
+    "/embed/:path*",
+    "/embed",
   ],
 };

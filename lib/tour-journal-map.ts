@@ -14,24 +14,55 @@ export const TOUR_TO_JOURNAL: Record<string, string[]> = {
   ],
   "cultural-journeys": [
     "how-to-plan-a-group-trip-to-spain",
+    "sabores-de-espana-food-wine-tour-spain",
     "valencia-sevilla-football-cities-most-tours-miss",
+    "walking-camino-de-santiago-with-a-group",
+    "corporate-team-building-retreats-spain",
   ],
   "corporate-retreats": [
     "how-to-plan-a-group-trip-to-spain",
+    "corporate-team-building-retreats-spain",
+    "sabores-de-espana-food-wine-tour-spain",
   ],
   "sport-adventure": [
     "how-to-plan-a-group-trip-to-spain",
+    "walking-camino-de-santiago-with-a-group",
   ],
   "sabores-de-espana": [
     "how-to-plan-a-group-trip-to-spain",
+    "sabores-de-espana-food-wine-tour-spain",
     "valencia-sevilla-football-cities-most-tours-miss",
   ],
   "flamenco-moorish-spain": [
     "how-to-plan-a-group-trip-to-spain",
+    "sabores-de-espana-food-wine-tour-spain",
     "valencia-sevilla-football-cities-most-tours-miss",
   ],
   "camino-de-santiago": [
     "how-to-plan-a-group-trip-to-spain",
+    "walking-camino-de-santiago-with-a-group",
+  ],
+  "sin-traduccion": [
+    "how-to-organize-school-football-tour-spain",
+    "what-parents-need-to-know-youth-football-tours-spain",
+    "how-to-plan-a-group-trip-to-spain",
+  ],
+  "pre-season-stages": [
+    "what-a-youth-soccer-tour-to-spain-costs",
+    "training-spanish-fa-rfef-football-tour-experience",
+    "pre-tour-checklist-coach-field-guide",
+  ],
+  "youth-soccer-spain-tour": [
+    "youth-soccer-tours-to-spain-complete-guide",
+    "what-parents-ask-before-europe-soccer-tour",
+    "what-a-youth-soccer-tour-to-spain-costs",
+    "best-time-of-year-for-a-youth-soccer-tour-to-spain",
+    "how-to-fundraise-for-your-teams-spain-tour",
+  ],
+  "tournament-experience": [
+    "arranging-friendly-matches-against-spanish-youth-clubs",
+    "youth-soccer-tours-to-spain-complete-guide",
+    "what-a-youth-soccer-tour-to-spain-costs",
   ],
 };
 

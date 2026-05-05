@@ -105,6 +105,8 @@ const nextConfig: NextConfig = {
       { source: "/terms-and-conditions", destination: "/terms", permanent: true },
       { source: "/terms-and-conditions/:path*", destination: "/terms", permanent: true },
       { source: "/european-soccer-tours/:path*", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/group-leaders", destination: "/plan-your-tour", permanent: true },
+      { source: "/group-leaders/:path*", destination: "/plan-your-tour", permanent: true },
 
       // GSC 404 sweep 2026-04-27: actual legacy WordPress permalinks
       { source: "/soccer-tours-spain", destination: "/tours/european-soccer-tours", permanent: true },

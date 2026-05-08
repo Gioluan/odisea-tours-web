@@ -37,7 +37,7 @@ export default function Home() {
         <div className="flex-1 flex items-center px-6 md:px-10 lg:px-14">
           <div className="max-w-[1400px] w-full">
             <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-paper/70 mb-8">
-              <span>Group Travel From Spain</span>
+              <span>Soccer Tours · Group Travel · Spain</span>
             </div>
 
             <h1 className="font-display uppercase text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.015em]">
@@ -63,8 +63,8 @@ export default function Home() {
               <p className="md:col-span-5 md:col-start-7 text-lg md:text-xl text-paper/85 max-w-md leading-relaxed">
                 Odisea Tours has been quietly crafting group journeys through
                 Spain for twenty years. Soccer pilgrimages, cultural odysseys,
-                corporate retreats and adventures on the coast—
-                <span className="font-display-italic"> all handled, all yours.</span>
+                corporate retreats and adventures on the coast.
+                <span className="font-display-italic"> All handled, all yours.</span>
               </p>
               <div className="md:col-span-5 flex flex-wrap gap-4">
                 <Link href="/tours" className="btn-editorial on-dark">
@@ -536,7 +536,7 @@ const PRINCIPLES = [
   {
     title: "All-in, always.",
     description:
-      "Hotels, meals, transfers, tickets, guides—priced once, held transparently, with no quiet surcharges when the bus gets stuck in traffic.",
+      "Hotels, meals, transfers, tickets and guides, priced once, held transparently, with no quiet surcharges when the bus gets stuck in traffic.",
   },
   {
     title: "Awake when you need us.",

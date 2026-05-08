@@ -271,6 +271,24 @@ export default async function JournalPost({
           })()}
         </div>
 
+        {post.faqs && post.faqs.length > 0 && (
+          <section className="mt-16 pt-10 border-t border-ink/15">
+            <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60 mb-8">
+              <span>Frequently Asked Questions</span>
+            </div>
+            <div className="space-y-8">
+              {post.faqs.map((qa, i) => (
+                <div key={i}>
+                  <h3 className="font-display text-xl md:text-2xl tracking-tight text-ink mb-3">
+                    {qa.q}
+                  </h3>
+                  <p className="text-ink/85 leading-[1.7]">{qa.a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         <div className="mt-16 pt-10 border-t border-ink/15 flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60">
           <Link href="/journal" className="link-rule">← All field notes</Link>
           <Link href="/plan-your-tour" className="link-rule">Plan a trip →</Link>

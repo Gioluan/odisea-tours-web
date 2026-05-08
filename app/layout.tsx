@@ -52,6 +52,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+    languages: {
+      "en-US": "/",
+      "en-GB": "/",
+      "en-AU": "/",
+      "x-default": "/",
+    },
     types: {
       "application/rss+xml": "/journal/rss.xml",
     },

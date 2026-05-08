@@ -279,9 +279,52 @@ export const POSTS: Post[] = [
     excerpt:
       "Everything a coach needs to know before bringing a youth team to Spain: how a tour is built, what the rhythm looks like, and why the logistics are the part nobody sees.",
     date: "2026-04-14",
+    dateModified: "2026-05-09",
     readTime: "11 min",
     category: "Field Notes",
     cover: "/img/journal/youth-inspiration.jpg",
+    faqs: [
+      {
+        q: "How much does a youth soccer tour to Spain cost per player?",
+        a: "A 7 to 10 night youth soccer tour to Spain, including full board, ground transport, training sessions, stadium visits, friendly matches, insurance and bilingual coordination, sits between roughly 2,800 and 3,800 dollars per player. International flights are quoted separately because airfare moves with the calendar.",
+      },
+      {
+        q: "How many nights should a Spain soccer tour be?",
+        a: "Most groups travel for 7 to 10 nights. Anything shorter than 7 leaves no recovery time and most of your bus hours go to airport transfers. Anything longer than 10 starts to fatigue younger players. The 8-night, 2-city itinerary is our most-booked shape: Madrid plus Barcelona, or Valencia plus Barcelona.",
+      },
+      {
+        q: "Which age groups can travel? Is there a minimum age?",
+        a: "We host U12 through U19 club and school teams. We do not run tours for U11 and below because the trip rhythm and overnight format does not suit that age. For mixed-age school groups, we adapt training intensity by squad rather than by tour.",
+      },
+      {
+        q: "Do you organise friendly matches against Spanish teams?",
+        a: "Yes. Every youth tour includes 2 friendly matches against organised Spanish opposition matched to your age and level. We do not over-schedule matches because tired legs do not learn. Fixtures are typically against academy youth sides, top amateur clubs and federation development sides depending on the level of your group.",
+      },
+      {
+        q: "Can we visit Camp Nou, the Bernabéu or other La Liga stadiums?",
+        a: "Yes. Stadium visits to Camp Nou (FC Barcelona), the Santiago Bernabéu (Real Madrid), Mestalla (Valencia CF) and others are part of every soccer tour we run. Where available we book the immersive tunnel-and-pitchside tour for groups, which is the version players remember a decade later.",
+      },
+      {
+        q: "What is the supervision and safeguarding setup?",
+        a: "Every tour runs with a minimum 1 adult to 10 player ratio, more on most school groups. Our Spanish ground coordinators are bilingual, present from airport pickup to drop-off, and trained in emergency response. Hotels have key-card secured floors. Curfew check happens at 23:00 every night without exception. Every player carries a card with hotel address, local Spanish phone number and embassy contacts in English and Spanish.",
+      },
+      {
+        q: "What is included in the tour price?",
+        a: "Accommodation, all meals on training and match days, ground transport (private buses), training facility hire, Spanish coaching, stadium visits, match fees, referees, comprehensive medical and travel insurance, and our on-the-ground bilingual team for the entire tour. Excluded: international flights, personal spending money (we suggest 50 to 100 euros per player), and any optional excursions you add later.",
+      },
+      {
+        q: "What is the best time of year to bring a youth team to Spain?",
+        a: "October to November and March to May are the best windows. Weather sits in the high teens to low twenties Celsius, hotel rates are below summer peak and the Spanish football calendar is in full swing. We run tours in summer too but heat in southern Spain limits afternoon training and prices climb. Avoid mid-December through early January for fixture availability.",
+      },
+      {
+        q: "How far in advance should we book?",
+        a: "Six months is comfortable. Four months is workable. Anything inside three months gets harder for the best training facilities and stadium tour slots, especially around Real Madrid and FC Barcelona match weekends. For groups of 30 plus, six to nine months out is the right window.",
+      },
+      {
+        q: "Can parents travel along with the team?",
+        a: "Yes, and many do. We run a parent-side itinerary in parallel: cultural visits, a market tour, a cooking class, then everyone meets for dinner. The presence of parents does not get in the way of the football, and the players who have a parent on the trip do not get embarrassed by it the way coaches sometimes worry about.",
+      },
+    ],
     body: [
       "A youth soccer tour to Spain is not a vacation with matches attached. It is the other way around. Everything in a good Spain tour, the hotel, the bus, the rest day, the museum afternoon, is built to serve the football, and everything we have learned in twenty years of organizing these trips comes back to that single ordering. When a tour works, the players come home changed. When it does not, they come home with souvenirs and a sore ankle. The difference is almost entirely in how the trip was designed.",
       "## The teams that travel with us",

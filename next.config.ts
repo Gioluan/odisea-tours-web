@@ -131,6 +131,12 @@ const nextConfig: NextConfig = {
       { source: "/destinations/spain-soccer", destination: "/tours/european-soccer-tours", permanent: true },
       { source: "/tour", destination: "/tours", permanent: true },
       { source: "/tour/:path*", destination: "/tours", permanent: true },
+
+      // GSC indexed orphan slugs 2026-05-09: send to the complete-guide blog post
+      { source: "/best-soccer-tours-spain", destination: "/journal/youth-soccer-tours-to-spain-complete-guide", permanent: true },
+      { source: "/best-football-tours-spain", destination: "/journal/youth-soccer-tours-to-spain-complete-guide", permanent: true },
+      { source: "/best-soccer-tour-spain", destination: "/journal/youth-soccer-tours-to-spain-complete-guide", permanent: true },
+      { source: "/best-football-tour-spain", destination: "/journal/youth-soccer-tours-to-spain-complete-guide", permanent: true },
     ];
   },
 };

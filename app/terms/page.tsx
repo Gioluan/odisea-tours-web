@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 const SITE = "https://odisea-tours.com";
-const LAST_UPDATED = "2026-05-05";
+const LAST_UPDATED = "2026-05-06";
 
 export const metadata: Metadata = {
   title: "Booking Terms & Conditions | Odisea Tours",
@@ -30,18 +30,19 @@ const breadcrumbSchema = {
 
 const SECTIONS = [
   { id: "parties", label: "01. Who you are contracting with" },
-  { id: "booking", label: "02. Booking and confirmation" },
-  { id: "payments", label: "03. Payments and deposits" },
-  { id: "cancellation", label: "04. Cancellation and refunds" },
-  { id: "changes", label: "05. Changes to your tour" },
-  { id: "insurance", label: "06. Travel insurance" },
-  { id: "documents", label: "07. Passports, visas and entry requirements" },
-  { id: "conduct", label: "08. Group leader and participant conduct" },
-  { id: "liability", label: "09. Our liability" },
-  { id: "force-majeure", label: "10. Force majeure" },
-  { id: "complaints", label: "11. Complaints" },
-  { id: "data", label: "12. Data protection" },
-  { id: "law", label: "13. Governing law" },
+  { id: "third-parties", label: "02. Third-party operators" },
+  { id: "booking", label: "03. Booking and confirmation" },
+  { id: "payments", label: "04. Payments and deposits" },
+  { id: "cancellation", label: "05. Cancellation and refunds" },
+  { id: "changes", label: "06. Changes to your tour" },
+  { id: "insurance", label: "07. Travel insurance" },
+  { id: "documents", label: "08. Passports, visas and entry requirements" },
+  { id: "conduct", label: "09. Group leader and participant conduct" },
+  { id: "liability", label: "10. Our liability" },
+  { id: "force-majeure", label: "11. Force majeure" },
+  { id: "complaints", label: "12. Complaints" },
+  { id: "data", label: "13. Data protection" },
+  { id: "law", label: "14. Governing law" },
 ];
 
 export default function TermsPage() {
@@ -110,14 +111,46 @@ export default function TermsPage() {
               Odisea Tours is the trading name of <strong>Ground Agents Solutions, S.L.</strong>, a Spanish limited company registered in the Castellón Mercantile Registry, CIF <strong>B40274763</strong>, with registered address at c/José Bellido Mor, 12560 Benicassim, Castellón, Spain.
             </p>
             <p>
-              We act as the organiser of the package travel arrangements described in your booking proposal, in accordance with Spanish Royal Decree-Law 23/2018 of 21 December (transposing EU Directive 2015/2302 on package travel and linked travel arrangements). Where we put you in touch with a third-party supplier (for example a hotel, transport provider or stadium operator) for a service that is not part of your package, we act as an intermediary only.
+              We act as the organiser of the package travel arrangements described in your booking proposal, in accordance with Spanish Royal Decree-Law 23/2018 of 21 December (transposing EU Directive 2015/2302 on package travel and linked travel arrangements). The operational components of every tour (accommodation, ground transport, stadium tours, training sessions, clinics, cultural activities, food and beverage providers and any sports or adventure activities) are delivered by independent third-party operators. Our role is to design the tour, contract those operators on your behalf and coordinate them in the field. See section 02 below for the detail.
             </p>
             <p>
               In these terms, &quot;<strong>you</strong>&quot; means the lead booker who signs the proposal, and on whose behalf you make the booking for every member of your group. &quot;<strong>We</strong>&quot;, &quot;<strong>us</strong>&quot; and &quot;<strong>Odisea</strong>&quot; mean Ground Agents Solutions, S.L.
             </p>
           </Section>
 
-          <Section id="booking" title="02. Booking and confirmation">
+          <Section id="third-parties" title="02. Third-party operators">
+            <p>
+              Odisea designs and coordinates your tour, but the on-the-ground services that make up your itinerary are operated by independent specialist providers. Each of those providers operates under their own terms and conditions and carries their own civil liability and operator insurance for the services they deliver. Without limiting the generality of this clause, this includes:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 marker:text-gold-deep">
+              <li>
+                <strong>Stadium tours and football experiences</strong> (FC Barcelona / Spotify Camp Nou, Real Madrid / Santiago Bernabéu, Valencia CF / Mestalla, RCD Espanyol, Atlético de Madrid and others). These are operated by the clubs themselves through their official tour and hospitality programmes; Odisea purchases the tickets and coordinates the visit, but the experience inside the stadium is run entirely by the club.
+              </li>
+              <li>
+                <strong>Football clinics, training sessions and friendly fixtures</strong> with Spanish clubs, federations and academies. These are run by the host club, federation or academy under their own coaching staff, facility rules and insurance.
+              </li>
+              <li>
+                <strong>Sports and adventure activities</strong> that may form part of your tour (for example horse riding, cycling, kayaking, sailing, hiking with a guide). When included, these are subcontracted to specialist licensed operators in Spain who provide their own qualified instructors, equipment and operator liability insurance.
+              </li>
+              <li>
+                <strong>Ground transport</strong> (private coaches, minibuses, transfer vehicles). These are provided by licensed Spanish transport operators who carry the compulsory passenger insurance required by Spanish and EU regulation.
+              </li>
+              <li>
+                <strong>Accommodation</strong> (hotels, residences, hostels). The hotelier is responsible for the safety and condition of their premises and the conduct of their staff.
+              </li>
+              <li>
+                <strong>Restaurants, cultural venues and ticketed attractions</strong>. Each is responsible for their own premises and service.
+              </li>
+            </ul>
+            <p>
+              <strong>What this means for your group.</strong> Where loss, injury or damage is caused by a third-party operator, the operator is responsible for it under their own contract and insurance. We will assist you in pursuing a claim against them and will share the documentation you need, but we are not the responsible party. We recommend that we are contacted as soon as anything goes wrong, so that we can help you resolve it on the spot or escalate it with the operator.
+            </p>
+            <p>
+              <strong>Active participation in sports.</strong> Where members of your group take part in football, training, fixtures, tournaments or any other physical activity, they participate as athletes at their own risk in the same way they would in their home country. The host club, academy or activity operator is responsible for the safety of the session within the bounds of their own duty of care and insurance. Each participant must hold comprehensive sports and travel insurance covering the activities of the trip (see section 07).
+            </p>
+          </Section>
+
+          <Section id="booking" title="03. Booking and confirmation">
             <p>
               A booking is made when you sign the written proposal we send you and pay the deposit set out in it. From that moment a binding contract exists between your group and Odisea on the terms of the proposal and these conditions.
             </p>
@@ -129,7 +162,7 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="payments" title="03. Payments and deposits">
+          <Section id="payments" title="04. Payments and deposits">
             <p>
               The deposit, instalment dates and final balance for your trip are set out in your proposal. Unless your proposal says otherwise, the final balance is due no later than 60 days before the first day of travel. For bookings made within 60 days of departure, the full price is due at the time of booking.
             </p>
@@ -141,7 +174,7 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="cancellation" title="04. Cancellation and refunds">
+          <Section id="cancellation" title="05. Cancellation and refunds">
             <p>
               Group tours involve advance commitments to hotels, coach operators, training facilities and ticketed events. The amount we can refund if you cancel depends on how close to departure the cancellation is made and on the supplier terms in force at that point.
             </p>
@@ -156,7 +189,7 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="changes" title="05. Changes to your tour">
+          <Section id="changes" title="06. Changes to your tour">
             <p>
               The itinerary in your proposal is the planned shape of the trip. From time to time we make changes to it for reasons including weather, fixture rescheduling at partner clubs, road closures, security advice or supplier availability. Where a change is minor we will let you know in good time. Where a change is significant (a change of resort area, a downgrade in accommodation category, or a reduction of more than one day at a confirmed training partner), you may either accept the change or cancel and receive a full refund.
             </p>
@@ -165,16 +198,19 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="insurance" title="06. Travel insurance">
+          <Section id="insurance" title="07. Travel insurance">
             <p>
-              Comprehensive travel insurance is <strong>mandatory</strong> for every participant on every Odisea trip. Your insurance must cover, as a minimum, medical expenses and repatriation, trip cancellation and curtailment, lost luggage and personal liability. For sports tours, the policy must cover the specific activity (training, fixtures and tournament play).
+              Comprehensive travel insurance is <strong>mandatory</strong> for every participant on every Odisea trip. Your insurance must cover, as a minimum: medical expenses and emergency repatriation, trip cancellation and curtailment, lost luggage and personal liability. For sports tours, the policy must additionally cover the specific activity that the participant will take part in (training, friendly fixtures, tournament play, and any sport or adventure activity included in the itinerary). For minors, the policy must accept the child as a covered participant.
             </p>
             <p>
-              We are not authorised to sell or recommend a specific insurance product. The lead booker is responsible for confirming that every member of the group holds adequate insurance from the date of booking to the date of return, and for sharing the insurer and policy number with us before departure.
+              We are not authorised to sell or recommend a specific insurance product. The lead booker is responsible for confirming, in writing, that every member of the group holds adequate insurance from the date of booking to the date of return, and for sharing the insurer name and policy number with us no later than thirty (30) days before departure. A participant who arrives without valid insurance may be refused boarding of group transport, refused access to training and fixtures, or removed from the trip at the lead booker&apos;s expense, with no refund due.
+            </p>
+            <p>
+              Travel insurance covers risks that are not covered by the operator insurance described in section 02 (such as personal accident, individual illness, theft of personal belongings and curtailment of the trip for personal reasons). The two insurances are complementary and both are required.
             </p>
           </Section>
 
-          <Section id="documents" title="07. Passports, visas and entry requirements">
+          <Section id="documents" title="08. Passports, visas and entry requirements">
             <p>
               You are responsible for ensuring that every member of the group holds a passport valid for at least three months beyond the date of return, and any visa or other entry document required for travel to Spain (and to any other country in the itinerary). For US, Canadian, Australian, UK and EU passport holders, a Schengen visa is not required for short stays, but the EU Entry/Exit System (EES) and ETIAS authorisation may apply at the time of travel. Check current requirements with your nearest Spanish consulate.
             </p>
@@ -186,7 +222,7 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="conduct" title="08. Group leader and participant conduct">
+          <Section id="conduct" title="09. Group leader and participant conduct">
             <p>
               Sports and school tours are run under the supervision of the group leader you nominate (typically the head coach, athletic director, teacher or department chair). The group leader is responsible for the safeguarding, discipline and welfare of the group during the trip, supported by Odisea&apos;s ground staff.
             </p>
@@ -195,9 +231,12 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="liability" title="09. Our liability">
+          <Section id="liability" title="10. Our liability">
             <p>
               We are responsible for the proper performance of the travel services included in your package, in line with Royal Decree-Law 23/2018. If a service is not performed or is performed poorly, we will use reasonable efforts to put it right at no extra cost. If we are unable to do so, you may be entitled to a price reduction or compensation, except where the failure is attributable to you, to a third party unconnected with the supply of services, or to unavoidable and extraordinary circumstances.
+            </p>
+            <p>
+              Subject to the paragraph immediately below, we are not liable for loss, injury, illness or damage caused by the act or default of a third-party operator described in section 02, where that operator carries its own civil liability and operator insurance for the service it delivers. In those cases the participant&apos;s recourse is against the operator and, where applicable, against their own travel and sports insurance. We will provide reasonable assistance in identifying the responsible operator and supporting any claim.
             </p>
             <p>
               Our maximum liability for any non-personal-injury claim arising out of a booking is limited to three times the price paid for the affected participant&apos;s package, in accordance with Article 161.6 of Royal Decree-Law 23/2018. International conventions (Warsaw, Montreal, Athens) limit the liability of air, sea and rail carriers; where they apply, our liability is correspondingly limited.
@@ -207,7 +246,7 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="force-majeure" title="10. Force majeure">
+          <Section id="force-majeure" title="11. Force majeure">
             <p>
               Neither party is liable for any failure or delay in performing its obligations caused by an unavoidable and extraordinary circumstance beyond its reasonable control. This includes (without limitation) war, civil unrest, terrorism, government action, labour disputes affecting third parties, natural disasters, fires, floods, epidemics, pandemics, public-health restrictions, airspace closures and adverse weather that materially affects the itinerary.
             </p>
@@ -216,7 +255,7 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="complaints" title="11. Complaints">
+          <Section id="complaints" title="12. Complaints">
             <p>
               If something goes wrong during the trip, please tell the Odisea ground team immediately so we can fix it on the spot. Most issues can be resolved within hours when raised in real time.
             </p>
@@ -241,7 +280,7 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="data" title="12. Data protection">
+          <Section id="data" title="13. Data protection">
             <p>
               Ground Agents Solutions, S.L. is the data controller for personal data you share with us. We process the data of group members (names, dates of birth, passport details, medical and dietary information) only for the purpose of organising and running your trip, and we share it with suppliers (hotels, training partners, transport providers, insurers, emergency services) only as necessary for that purpose.
             </p>
@@ -263,7 +302,7 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="law" title="13. Governing law">
+          <Section id="law" title="14. Governing law">
             <p>
               This contract is governed by Spanish law. The courts of Castellón have exclusive jurisdiction over any dispute arising out of it, save where Spanish or EU consumer law gives you the right to bring proceedings before the courts of your country of residence.
             </p>

@@ -9,10 +9,16 @@ export const metadata: Metadata = {
     "Nine group tour experiences across Spain. Youth soccer pilgrimages, UK pre-season stages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats and sport and adventure. Built for groups of 10 to 120 since 2005.",
   alternates: { canonical: "https://odisea-tours.com/tours" },
   openGraph: {
-    title: "Spain Group Tours — Soccer, Cultural, Camino & Corporate",
+    title: "Spain Group Tours, Soccer, Cultural, Camino & Corporate",
     description:
       "Nine group tour experiences across Spain. Built for groups of 10 to 120 since 2005.",
     url: "https://odisea-tours.com/tours",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Spain Group Tours, Soccer, Cultural, Camino & Corporate",
+    description:
+      "Nine group tour experiences across Spain. Built for groups of 10 to 120 since 2005.",
   },
 };
 

@@ -10,7 +10,13 @@ export const metadata: Metadata = {
     url: "https://odisea-tours.com/schools",
     title: "School Football Tours to Spain",
     description:
-      "Safe, educational football tours for school teams. Training, matches, stadium visits — fully supervised end-to-end.",
+      "Safe, educational football tours for school teams. Training, matches, stadium visits, fully supervised end-to-end.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "School Football Tours to Spain",
+    description:
+      "Safe, educational football tours for school teams. Training, matches, stadium visits, fully supervised end-to-end.",
   },
 };
 

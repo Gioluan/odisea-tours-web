@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     description:
       "Local specialists on the ground in Spain, the Middle East and the USA. Decades of combined experience organizing group sport tours.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meet the Odisea Tours Team",
+    description:
+      "Local specialists on the ground in Spain, the Middle East and the USA. Decades of combined experience organizing group sport tours.",
+  },
 };
 
 const breadcrumbJsonLd = {

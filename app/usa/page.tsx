@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     url: "https://odisea-tours.com/usa",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Spain Soccer Tours from the USA | Odisea Tours",
+    description:
+      "Spain soccer tours built for US clubs, high schools and colleges. City-specific planning for the biggest youth soccer metros.",
+  },
 };
 
 export default function UsaIndexPage() {

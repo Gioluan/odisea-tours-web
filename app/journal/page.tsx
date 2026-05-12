@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     description:
       "Insider tips, destination guides, and planning advice for organizing football tours to Spain. Written by the Odisea Tours team from 20+ years on the ground.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Spain Football Tour Blog: Guides, Tips & Field Notes",
+    description:
+      "Insider tips, destination guides, and planning advice for organizing football tours to Spain. Written by the Odisea Tours team from 20+ years on the ground.",
+  },
 };
 
 const breadcrumbJsonLd = {

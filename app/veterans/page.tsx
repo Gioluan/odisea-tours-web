@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     description:
       "Over-35 football tours to Spain. Play local Spanish clubs, train at pro facilities, visit iconic stadiums. Families welcome.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Veterans Football Tours to Spain",
+    description:
+      "Over-35 football tours to Spain. Play local Spanish clubs, train at pro facilities, visit iconic stadiums. Families welcome.",
+  },
 };
 
 const breadcrumbJsonLd = {

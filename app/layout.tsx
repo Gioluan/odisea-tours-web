@@ -40,24 +40,8 @@ export const metadata: Metadata = {
   },
   description:
     "Trusted by 200+ groups since 2005. Youth soccer tours, school trips, cultural journeys and corporate retreats across Spain, designed and run by locals on the ground in Castellón and Madrid.",
-  keywords: [
-    "youth soccer tours Spain",
-    "school trip Spain",
-    "group travel Spain",
-    "Spain football tour operator",
-    "stadium tour Camp Nou Bernabeu",
-    "La Masia academy visit",
-    "Spain cultural tours",
-    "Camino de Santiago groups",
-  ],
   alternates: {
     canonical: "/",
-    languages: {
-      "en-US": "/",
-      "en-GB": "/",
-      "en-AU": "/",
-      "x-default": "/",
-    },
     types: {
       "application/rss+xml": "/journal/rss.xml",
     },

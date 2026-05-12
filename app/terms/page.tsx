@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     url: `${SITE}/terms`,
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Booking Terms & Conditions | Odisea Tours",
+    description:
+      "The terms that apply to every Odisea Tours group booking. Plain English, governed by Spanish law.",
+  },
 };
 
 const breadcrumbSchema = {

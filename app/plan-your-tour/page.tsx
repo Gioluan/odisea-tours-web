@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     description:
       "Free custom itinerary for your football tour to Spain. Tell us about your team and we'll handle the rest.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Plan Your Football Tour to Spain",
+    description:
+      "Free custom itinerary for your football tour to Spain. Tell us about your team and we'll handle the rest.",
+  },
 };
 
 const breadcrumbJsonLd = {

@@ -22,6 +22,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Football Tours in Barcelona | Odisea Tours",
+    description:
+      "Camp Nou, La Masia, Espanyol, coaching sessions and Mediterranean culture. Football tours in Barcelona organized on the ground since 2005.",
+    images: ["/photos/veterans-soccer-tour-camp-nou-barcelona.jpg"],
+  },
 };
 
 const breadcrumbJsonLd = {

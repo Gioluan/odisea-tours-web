@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     url: "https://odisea-tours.com/faq",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ: Spain Soccer Tours & Group Travel | Odisea Tours",
+    description:
+      "Pricing, what's included, group sizes, training partners and booking terms. Answered by Odisea Tours, operating Spain group travel since 2005.",
+  },
 };
 
 const faqPageSchema = {

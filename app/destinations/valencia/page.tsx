@@ -22,6 +22,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Football Tours in Valencia | Odisea Tours",
+    description:
+      "Mestalla, elite coaching at Paterna, Levante friendlies, paella on the beach. Football tours in Valencia organized on the ground since 2005.",
+    images: ["/photos/veterans-soccer-tour-valencia-cf-match.jpg"],
+  },
 };
 
 const breadcrumbJsonLd = {

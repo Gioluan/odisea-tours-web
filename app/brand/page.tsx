@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     url: "https://odisea-tours.com/brand",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brand Kit | Odisea Tours",
+    description:
+      "Logos, colors, typography and usage rules for press, partners and travel agencies working with Odisea Tours.",
+  },
 };
 
 const breadcrumbSchema = {

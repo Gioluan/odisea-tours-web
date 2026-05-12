@@ -21,6 +21,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Football Tour Destinations in Spain | Odisea Tours",
+    description:
+      "Barcelona, Madrid and Valencia. Three football cities, one expert tour operator on the ground since 2005.",
+    images: ["/photos/veterans-soccer-tour-camp-nou-barcelona.jpg"],
+  },
 };
 
 const breadcrumbJsonLd = {

@@ -22,6 +22,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Football Tours in Madrid | Odisea Tours",
+    description:
+      "Santiago Bernabeu, Atletico Madrid, Real Madrid City, Spanish FA headquarters. Football tours in Madrid organized on the ground.",
+    images: ["/photos/veterans-soccer-tour-bernabeu-stadium.jpg"],
+  },
 };
 
 const breadcrumbJsonLd = {

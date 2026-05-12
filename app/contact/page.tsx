@@ -8,10 +8,16 @@ export const metadata: Metadata = {
     "Get a real reply within hours, not days. Tell us who you're bringing — youth soccer team, school group, corporate retreat — and we'll build the trip. Offices in Castellón and Madrid.",
   alternates: { canonical: "https://odisea-tours.com/contact" },
   openGraph: {
-    title: "Contact Odisea Tours — Spain Group Travel Specialists",
+    title: "Contact Odisea Tours, Spain Group Travel Specialists",
     description:
       "Get a real reply within hours. Spain group travel, designed by locals since 2005.",
     url: "https://odisea-tours.com/contact",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Odisea Tours, Spain Group Travel Specialists",
+    description:
+      "Get a real reply within hours. Spain group travel, designed by locals since 2005.",
   },
 };
 

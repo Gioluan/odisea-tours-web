@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     description:
       "Train with FC Barcelona coaches, play Spanish youth sides, visit iconic stadiums. Safe, coach-led group travel for U-12 to U-18 squads.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Youth Football Tours to Spain",
+    description:
+      "Train with FC Barcelona coaches, play Spanish youth sides, visit iconic stadiums. Safe, coach-led group travel for U-12 to U-18 squads.",
+  },
 };
 
 const breadcrumbJsonLd = {

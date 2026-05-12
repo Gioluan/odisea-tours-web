@@ -128,7 +128,7 @@ export default function Home() {
                 Years in the field
               </div>
               <div className="border-t border-ink/15 pt-3">
-                <span className="text-ink font-display text-xl block mb-1">500+</span>
+                <span className="text-ink font-display text-xl block mb-1">200+</span>
                 Groups hosted
               </div>
               <div className="border-t border-ink/15 pt-3">

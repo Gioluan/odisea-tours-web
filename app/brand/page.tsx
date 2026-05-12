@@ -126,7 +126,7 @@ const FONTS: FontEntry[] = [
     name: "Archivo · Regular",
     role: "Body & long-form",
     weight: "400 Regular",
-    preview: "Trusted by 500+ groups since 2005. Designed and run by locals on the ground in Castellón and Madrid.",
+    preview: "Trusted by 200+ groups since 2005. Designed and run by locals on the ground in Castellón and Madrid.",
     classes: "text-lg md:text-xl leading-relaxed",
     notes: "Body copy, intro paragraphs, pull quotes. Generous line-height for editorial reading.",
   },
@@ -424,7 +424,7 @@ export default function BrandPage() {
                 </div>
                 <div className="flex gap-4">
                   <dt className="text-paper/50 w-28 flex-shrink-0 uppercase tracking-[0.18em] text-[0.65rem] pt-0.5">Groups</dt>
-                  <dd>500+ since 2005</dd>
+                  <dd>200+ since 2005</dd>
                 </div>
                 <div className="flex gap-4">
                   <dt className="text-paper/50 w-28 flex-shrink-0 uppercase tracking-[0.18em] text-[0.65rem] pt-0.5">Markets</dt>

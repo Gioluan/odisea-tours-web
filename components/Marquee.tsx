@@ -1,6 +1,6 @@
 const ITEMS = [
   "20 Years in the Field",
-  "500+ Groups Guided",
+  "200+ Groups Guided",
   "37 Spanish Provinces",
   "La Liga Stadium Access",
   "Michelin Kitchens",

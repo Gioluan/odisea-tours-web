@@ -142,7 +142,7 @@ export default async function AuCityPage({ params }: Props) {
             01 / Flying from {c.metro}
           </div>
           <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.8rem)] uppercase leading-[1.05] max-w-[24ch]">
-            The cleanest route from {c.name} to a training session at <span className="font-display-italic text-gold-deep">Camp Nou</span>.
+            The cleanest route from {c.name} to a training session at FC Barcelona's <span className="font-display-italic text-gold-deep">Joan Gamper ground</span>.
           </h2>
 
           <div className="mt-10 grid md:grid-cols-3 border border-ink/15">

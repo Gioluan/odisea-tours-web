@@ -141,7 +141,7 @@ export default async function UsCityPage({ params }: Props) {
             01 / Flying from {c.metro}
           </div>
           <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.8rem)] uppercase leading-[1.05] max-w-[22ch]">
-            The shortest route to a training session at <span className="font-display-italic text-gold-deep">Camp Nou</span>.
+            The shortest route to a training session at FC Barcelona's <span className="font-display-italic text-gold-deep">Joan Gamper ground</span>.
           </h2>
 
           <div className="mt-10 grid md:grid-cols-3 border border-ink/15">

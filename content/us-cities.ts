@@ -32,7 +32,7 @@ export const US_CITIES: UsCity[] = [
     intro:
       "Los Angeles runs one of the deepest youth soccer pipelines in the United States. Odisea Tours has been bringing Southern California clubs, high school teams and college rosters to Spain for two decades, training inside FC Barcelona, Valencia CF and the Spanish Football Federation's Las Rozas headquarters.",
     local_soccer_context:
-      "From the ECNL pathways in the San Fernando Valley to the MLS Next academies in Long Beach, Carson and the South Bay, LA teams are used to a high competitive standard and long seasons. A Spain tour slots naturally into the pre-season and the winter break windows most SoCal clubs already plan around, and it gives families something the domestic showcase circuit cannot: Camp Nou's training ground, Mestalla, and a night sleeping at the Spanish national team's headquarters.",
+      "From the ECNL pathways in the San Fernando Valley to the MLS Next academies in Long Beach, Carson and the South Bay, LA teams are used to a high competitive standard and long seasons. A Spain tour slots naturally into the pre-season and the winter break windows most SoCal clubs already plan around, and it gives families something the domestic showcase circuit cannot: FC Barcelona's Joan Gamper training ground, Mestalla, and a night sleeping at the Spanish national team's headquarters.",
     time_zone_note:
       "Spain sits 9 hours ahead of Los Angeles. Most LA groups land in Madrid mid-morning local time and are training inside 24 hours.",
     why_spain: [
@@ -102,7 +102,7 @@ export const US_CITIES: UsCity[] = [
     why_spain: [
       "Nonstop American Airlines service DFW to Madrid means 9.5 hours door-to-door and no layover delays.",
       "Tour windows align with UIL summer and winter breaks, so player-development time is protected.",
-      "Group pricing from Texas families sits at the same level as a Disney trip, but players come home having trained at Camp Nou.",
+      "Group pricing from Texas families sits at the same level as a Disney trip, but players come home having trained at FC Barcelona's Joan Gamper ground.",
     ],
     sample_clubs_phrase:
       "Clubs across Plano, Frisco, Southlake, Flower Mound, McKinney, Arlington and the mid-cities",

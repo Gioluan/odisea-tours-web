@@ -11,7 +11,7 @@ const ITEMS = [
   "Airport transfers, day one to day last",
   "Coach transport across Spain, with our own vetted drivers",
   "Four-star accommodation in our network, hand-picked for groups",
-  "Training facility bookings inside FC Barcelona, Valencia CF and the Spanish FA",
+  "Training facility bookings at FC Barcelona's Joan Gamper, Valencia CF's Paterna and the Spanish FA at Las Rozas",
   "Coaching staff coordination and session planning",
   "Friendly fixtures against Spanish academy or amateur sides at the right age band",
   "Stadium tours, matchday access, behind-the-scenes credentials",

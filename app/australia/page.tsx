@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 export default function AustraliaIndexPage() {
   return (
     <main className="bg-paper text-ink">
-      <section className="relative min-h-[68svh] text-paper flex items-end overflow-hidden pt-32 pb-20 px-6 md:px-12">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative isolate min-h-[68svh] text-paper flex items-end overflow-hidden pt-32 pb-20 px-6 md:px-12">
+        <div className="absolute inset-0 z-0">
           <Image
             src="/photos/spain-soccer-tour-australia-clubs-spanish-fa-las-rozas-training-spain.jpg"
             alt="Australian soccer clubs training at the Spanish Football Federation, Las Rozas, Spain"

@@ -102,8 +102,8 @@ export default async function UkCityPage({ params }: Props) {
       />
 
       {/* HERO */}
-      <section className="relative min-h-[70svh] text-paper flex items-end overflow-hidden pt-24 pb-14 px-6 md:px-12">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative isolate min-h-[70svh] text-paper flex items-end overflow-hidden pt-24 pb-14 px-6 md:px-12">
+        <div className="absolute inset-0 z-0">
           <Image
             src={c.hero_photo}
             alt={`Spain football tour group from ${c.name}, ${c.region}`}

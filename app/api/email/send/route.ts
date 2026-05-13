@@ -1,9 +1,19 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { google } from "googleapis";
+import { Resend } from "resend";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+
+/**
+ * Direct send for the Odisea Tours CRM (portal.odisea-tours.com) and the
+ * marketing site. Same pattern as mycantera.com/sales — Resend with
+ * juan@odisea-tours.com as the verified sender. Replies go to that address,
+ * which forwards to Juan's mailbox.
+ *
+ * Auth: Origin allowlist for v1. Replace with Firebase ID token verification
+ * when Aitor/Raul start sending on their own accounts.
+ */
 
 const ALLOWED_ORIGINS = new Set([
   "https://portal.odisea-tours.com",
@@ -13,6 +23,13 @@ const ALLOWED_ORIGINS = new Set([
   "http://127.0.0.1:5500",
 ]);
 
+const ALLOWED_SENDERS: Record<string, { name: string }> = {
+  "juan@odisea-tours.com": { name: "Juan Sanchez" },
+  "bookings@odisea-tours.com": { name: "Odisea Tours · Bookings" },
+  "info@odisea-tours.com": { name: "Odisea Tours" },
+};
+const DEFAULT_FROM_EMAIL = "juan@odisea-tours.com";
+
 type SendBody = {
   to: string | string[];
   subject: string;
@@ -21,6 +38,7 @@ type SendBody = {
   replyTo?: string;
   cc?: string | string[];
   bcc?: string | string[];
+  from?: string; // must be one of ALLOWED_SENDERS
 };
 
 export async function OPTIONS(req: NextRequest) {
@@ -33,15 +51,10 @@ export async function POST(req: NextRequest) {
     return cors(NextResponse.json({ error: "Origin not allowed" }, { status: 403 }), origin);
   }
 
-  const clientId = process.env.GOOGLE_OAUTH_CLIENT_ID;
-  const clientSecret = process.env.GOOGLE_OAUTH_CLIENT_SECRET;
-  const refreshToken = process.env.GMAIL_REFRESH_TOKEN;
-  if (!clientId || !clientSecret || !refreshToken) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
     return cors(
-      NextResponse.json(
-        { error: "Gmail OAuth not configured on the server." },
-        { status: 500 }
-      ),
+      NextResponse.json({ error: "RESEND_API_KEY not configured on the server" }, { status: 503 }),
       origin
     );
   }
@@ -58,46 +71,53 @@ export async function POST(req: NextRequest) {
     return cors(NextResponse.json({ error: "Missing 'to'" }, { status: 400 }), origin);
   }
   if (!body.subject || (!body.text && !body.html)) {
-    return cors(
-      NextResponse.json({ error: "Missing subject or body" }, { status: 400 }),
-      origin
-    );
+    return cors(NextResponse.json({ error: "Missing subject or body" }, { status: 400 }), origin);
   }
 
+  const fromEmail = body.from && ALLOWED_SENDERS[body.from] ? body.from : DEFAULT_FROM_EMAIL;
+  const fromName = ALLOWED_SENDERS[fromEmail].name;
+  const replyTo = body.replyTo || fromEmail;
+
+  // Auto-build HTML from plain text if no HTML supplied — preserves paragraph
+  // breaks and renders cleanly without making it look like a marketing blast.
+  const html = body.html
+    ? body.html
+    : (body.text || "")
+        .split("\n")
+        .map(line =>
+          line.trim()
+            ? `<p style="margin:0 0 12px 0;font-family:Arial,sans-serif;font-size:14px;line-height:1.5;color:#111">${escapeHtml(line)}</p>`
+            : ""
+        )
+        .join("");
+
   try {
-    const oauth2 = new google.auth.OAuth2(clientId, clientSecret);
-    oauth2.setCredentials({ refresh_token: refreshToken });
-
-    const gmail = google.gmail({ version: "v1", auth: oauth2 });
-
-    const raw = buildRawMessage({
+    const resend = new Resend(apiKey);
+    const { data, error } = await resend.emails.send({
+      from: `${fromName} <${fromEmail}>`,
       to,
       cc: normaliseAddresses(body.cc),
       bcc: normaliseAddresses(body.bcc),
+      replyTo,
       subject: body.subject,
+      html,
       text: body.text,
-      html: body.html,
-      replyTo: body.replyTo,
     });
 
-    const res = await gmail.users.messages.send({
-      userId: "me",
-      requestBody: { raw },
-    });
+    if (error) {
+      console.error("[email/send] Resend error:", error);
+      return cors(
+        NextResponse.json({ error: error.message || "Resend error", detail: error }, { status: 502 }),
+        origin
+      );
+    }
 
-    return cors(
-      NextResponse.json({
-        ok: true,
-        messageId: res.data.id,
-        threadId: res.data.threadId,
-      }),
-      origin
-    );
+    return cors(NextResponse.json({ ok: true, id: data?.id || null }), origin);
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    console.error("[gmail/send] failed:", msg);
+    console.error("[email/send] failed:", msg);
     return cors(
-      NextResponse.json({ error: "Gmail send failed", detail: msg }, { status: 500 }),
+      NextResponse.json({ error: "Send failed", detail: msg }, { status: 500 }),
       origin
     );
   }
@@ -134,62 +154,6 @@ function normaliseAddresses(v: string | string[] | undefined): string[] {
     .filter(s => s && /.+@.+/.test(s));
 }
 
-function buildRawMessage(args: {
-  to: string[];
-  cc: string[];
-  bcc: string[];
-  subject: string;
-  text?: string;
-  html?: string;
-  replyTo?: string;
-}) {
-  const boundary = "----=_OdiseaTours_" + Math.random().toString(36).slice(2);
-  const lines: string[] = [];
-  lines.push(`To: ${args.to.join(", ")}`);
-  if (args.cc.length) lines.push(`Cc: ${args.cc.join(", ")}`);
-  if (args.bcc.length) lines.push(`Bcc: ${args.bcc.join(", ")}`);
-  if (args.replyTo) lines.push(`Reply-To: ${args.replyTo}`);
-  lines.push(`Subject: ${encodeHeader(args.subject)}`);
-  lines.push("MIME-Version: 1.0");
-
-  if (args.text && args.html) {
-    lines.push(`Content-Type: multipart/alternative; boundary="${boundary}"`);
-    lines.push("");
-    lines.push(`--${boundary}`);
-    lines.push('Content-Type: text/plain; charset="UTF-8"');
-    lines.push("Content-Transfer-Encoding: 7bit");
-    lines.push("");
-    lines.push(args.text);
-    lines.push("");
-    lines.push(`--${boundary}`);
-    lines.push('Content-Type: text/html; charset="UTF-8"');
-    lines.push("Content-Transfer-Encoding: 7bit");
-    lines.push("");
-    lines.push(args.html);
-    lines.push("");
-    lines.push(`--${boundary}--`);
-  } else if (args.html) {
-    lines.push('Content-Type: text/html; charset="UTF-8"');
-    lines.push("Content-Transfer-Encoding: 7bit");
-    lines.push("");
-    lines.push(args.html);
-  } else {
-    lines.push('Content-Type: text/plain; charset="UTF-8"');
-    lines.push("Content-Transfer-Encoding: 7bit");
-    lines.push("");
-    lines.push(args.text || "");
-  }
-
-  const message = lines.join("\r\n");
-  return Buffer.from(message)
-    .toString("base64")
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "");
-}
-
-function encodeHeader(s: string) {
-  // RFC 2047 encoded-word for non-ASCII subjects
-  if (/^[\x20-\x7E]*$/.test(s)) return s;
-  return "=?UTF-8?B?" + Buffer.from(s).toString("base64") + "?=";
+function escapeHtml(s: string) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]!));
 }

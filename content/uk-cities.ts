@@ -51,7 +51,7 @@ export const UK_CITIES: UkCity[] = [
       "Independent school and state grammar football programmes",
       "Sixth form and academy development squads",
     ],
-    hero_photo: "/photos/odisea-tours-fcb-squad-with-barca-coaches.jpg",
+    hero_photo: "/photos/spain-football-tour-london-clubs-fc-barcelona-training-spain.jpg",
     og_summary:
       "Spain football tours for London clubs, schools and academies. FC Barcelona, Valencia CF and Spanish FA training, two and a half hours from Heathrow. Run by Odisea Tours since 2005.",
   },
@@ -87,7 +87,7 @@ export const UK_CITIES: UkCity[] = [
       "Independent and state school football programmes",
       "Sixth form and college academy squads",
     ],
-    hero_photo: "/photos/odisea-tours-youth-fcb-training-hero.jpg",
+    hero_photo: "/photos/spain-football-tour-manchester-clubs-pre-season-training-spain.jpg",
     og_summary:
       "Spain football tours from Manchester. Direct flights to Madrid, Barcelona and Valencia. FC Barcelona, Valencia CF and Spanish FA training. Run by Odisea Tours since 2005.",
   },
@@ -123,7 +123,7 @@ export const UK_CITIES: UkCity[] = [
       "Independent and state school first XI programmes",
       "Sixth form and college football squads",
     ],
-    hero_photo: "/photos/preseason-team-briefing.jpg",
+    hero_photo: "/photos/spain-football-tour-birmingham-clubs-spanish-fa-training-spain.jpg",
     og_summary:
       "Spain football tours from Birmingham. Direct flights to Madrid, Barcelona and Alicante. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
   },
@@ -159,7 +159,7 @@ export const UK_CITIES: UkCity[] = [
       "Independent school and state grammar first XIs",
       "Sixth form and college academy programmes",
     ],
-    hero_photo: "/photos/odisea-tours-coaching-session.jpg",
+    hero_photo: "/photos/spain-football-tour-liverpool-clubs-coaching-briefing-spain.jpg",
     og_summary:
       "Spain football tours from Liverpool and Merseyside. FC Barcelona, Valencia CF and Spanish FA training. Direct flights from LPL and MAN. Odisea Tours since 2005.",
   },
@@ -195,7 +195,7 @@ export const UK_CITIES: UkCity[] = [
       "Independent and state school first XIs",
       "County and district representative squads",
     ],
-    hero_photo: "/photos/odisea-tours-spanish-fa-rfef-training.jpg",
+    hero_photo: "/photos/spain-football-tour-leeds-clubs-spanish-fa-training-session-spain.jpg",
     og_summary:
       "Spain football tours from Leeds and West Yorkshire. Direct Jet2 flights from LBA. FC Barcelona, Valencia CF and Spanish FA training. Odisea Tours since 2005.",
   },
@@ -231,7 +231,7 @@ export const UK_CITIES: UkCity[] = [
       "Independent and state school first XIs",
       "Boys Club and SFA youth pathway sides",
     ],
-    hero_photo: "/photos/preseason-action-shot-pitch.jpg",
+    hero_photo: "/photos/spain-football-tour-glasgow-clubs-valencia-cf-coaching-spain.jpg",
     og_summary:
       "Spain football tours from Glasgow and central Scotland. Direct flights to Barcelona, Madrid and Alicante. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
   },

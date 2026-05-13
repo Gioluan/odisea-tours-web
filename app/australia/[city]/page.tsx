@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AU_CITIES, auCityBySlug, type AuCity } from "@/content/australia-cities";
+import GroundLogistics from "@/components/GroundLogistics";
 
 type Props = { params: Promise<{ city: string }> };
 
@@ -69,7 +70,7 @@ function faqSchema(c: AuCity) {
         name: `What does a Spain soccer tour from ${c.name} include?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Training at the Spanish FA in Las Rozas, Valencia CF's Paterna ground and FC Barcelona's Joan Gamper facilities, fixtures against Spanish academy or amateur sides at the right age band, four-star accommodation, coach transport, bilingual Odisea guides, stadium tours and a parent-friendly cultural programme. International flights excluded.",
+          text: "Every ground logistic in Spain is included: airport transfers, coach transport, four-star accommodation, training at the Spanish FA in Las Rozas, Valencia CF's Paterna ground and FC Barcelona's Joan Gamper facilities, fixtures against Spanish academy or amateur sides at the right age band, breakfast and dinner daily, stadium tours, bilingual on-the-ground staff and 24/7 emergency support. International flights from Australia are NOT included, you or your travel agent book those. We share the carrier shortlist and timing windows on request.",
         },
       },
       {
@@ -111,7 +112,7 @@ export default async function AuCityPage({ params }: Props) {
             sizes="100vw"
             className="object-cover kenburns"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/30 to-ink/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/35 via-ink/10 to-ink/85" />
         </div>
         <div className="relative z-10 max-w-[1200px] mx-auto w-full">
           <nav aria-label="Breadcrumb" className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70 mb-6">
@@ -222,6 +223,21 @@ export default async function AuCityPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* MIDPAGE PHOTO STRIP */}
+      <section className="relative h-[42svh] md:h-[55svh] overflow-hidden">
+        <Image
+          src="/photos/spain-soccer-tour-camp-nou-stadium-visit-barcelona.jpg"
+          alt={`${c.name} soccer tour group at Camp Nou stadium in Barcelona, Spain`}
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
+      </section>
+
+      {/* GROUND LOGISTICS */}
+      <GroundLogistics audience={`your ${c.name} club`} termFor="soccer" variant="paper" />
 
       {/* TRAINING PARTNERS */}
       <section className="bg-paper py-20 md:py-24 px-6 md:px-10">

@@ -51,7 +51,7 @@ export const AU_CITIES: AuCity[] = [
       "School AFC, CAS, GPS and CIS First XI programmes",
       "Junior representative and academy development squads",
     ],
-    hero_photo: "/photos/odisea-tours-youth-fcb-training-hero.jpg",
+    hero_photo: "/photos/spain-soccer-tour-sydney-clubs-fc-barcelona-training-spain.jpg",
     og_summary:
       "Spain soccer tours from Sydney for NPL clubs, schools and junior representative squads. FC Barcelona, Valencia CF and Spanish FA training. Run by Odisea Tours since 2005.",
   },
@@ -87,7 +87,7 @@ export const AU_CITIES: AuCity[] = [
       "ACC, AGSV and APS school sport programmes",
       "Junior representative and academy squads",
     ],
-    hero_photo: "/photos/odisea-tours-coaching-spanish-fa.jpg",
+    hero_photo: "/photos/spain-soccer-tour-melbourne-clubs-spanish-fa-training-spain.jpg",
     og_summary:
       "Spain soccer tours from Melbourne for NPL clubs, schools and academies. FC Barcelona, Valencia CF and Spanish FA training. Odisea Tours since 2005.",
   },
@@ -123,7 +123,7 @@ export const AU_CITIES: AuCity[] = [
       "AIC, GPS and TAS school sport programmes",
       "Junior representative and academy sides",
     ],
-    hero_photo: "/photos/odisea-tours-coaching-session.jpg",
+    hero_photo: "/photos/spain-soccer-tour-brisbane-clubs-spanish-fa-training-session-spain.jpg",
     og_summary:
       "Spain soccer tours from Brisbane and South East Queensland. NPL clubs, schools and academies. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
   },
@@ -159,7 +159,7 @@ export const AU_CITIES: AuCity[] = [
       "PSA and ACC school sport First XIs",
       "Junior representative and academy squads",
     ],
-    hero_photo: "/photos/preseason-friendly-handshake.jpg",
+    hero_photo: "/photos/spain-soccer-tour-perth-clubs-coaching-briefing-spain.jpg",
     og_summary:
       "Spain soccer tours from Perth and Western Australia. Shortest one-stop route to Europe. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
   },
@@ -195,7 +195,7 @@ export const AU_CITIES: AuCity[] = [
       "SAASTA and independent school First XIs",
       "Junior representative and academy squads",
     ],
-    hero_photo: "/photos/odisea-tours-spanish-fa-training.jpg",
+    hero_photo: "/photos/spain-soccer-tour-adelaide-clubs-action-training-spain.jpg",
     og_summary:
       "Spain soccer tours from Adelaide and South Australia. NPL clubs, schools and academies. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
   },

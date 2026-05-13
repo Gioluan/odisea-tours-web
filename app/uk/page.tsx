@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { UK_CITIES } from "@/content/uk-cities";
 import JournalLinks from "@/components/JournalLinks";
+import GroundLogistics from "@/components/GroundLogistics";
 
 export const metadata: Metadata = {
   title: "Spain Football Tours from the UK | Odisea Tours",
@@ -34,8 +36,19 @@ export const metadata: Metadata = {
 export default function UkIndexPage() {
   return (
     <main className="bg-paper text-ink">
-      <section className="bg-ink text-paper pt-32 pb-20 px-6 md:px-12">
-        <div className="max-w-[1100px] mx-auto">
+      <section className="relative min-h-[68svh] text-paper flex items-end overflow-hidden pt-32 pb-20 px-6 md:px-12">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/photos/spain-football-tour-uk-clubs-fc-barcelona-joan-gamper-training-spain.jpg"
+            alt="UK football clubs training inside FC Barcelona's Joan Gamper facilities, Spain"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover kenburns"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/35 via-ink/15 to-ink/85" />
+        </div>
+        <div className="relative z-10 max-w-[1100px] mx-auto w-full">
           <nav aria-label="Breadcrumb" className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70 mb-6">
             <Link href="/" className="hover:text-gold">Odisea Tours</Link>
             <span className="mx-2">/</span>
@@ -86,6 +99,8 @@ export default function UkIndexPage() {
           </div>
         </div>
       </section>
+
+      <GroundLogistics audience="your UK club" termFor="football" variant="paper" />
 
       <JournalLinks
         title="Reading for UK clubs"

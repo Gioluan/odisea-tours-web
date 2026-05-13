@@ -1,14 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { US_CITIES } from "@/content/us-cities";
+import { UK_CITIES } from "@/content/uk-cities";
 import JournalLinks from "@/components/JournalLinks";
 
 export const metadata: Metadata = {
-  title: "Spain Soccer Tours from the USA | Odisea Tours",
+  title: "Spain Football Tours from the UK | Odisea Tours",
   description:
-    "Spain soccer tours built for US clubs, high schools and colleges. City-specific planning for Los Angeles, San Diego, Dallas, Houston, New York, Miami and beyond. Run by Odisea Tours since 2005.",
+    "Spain football tours built for UK clubs, schools and academies. City-specific planning for London, Manchester, Birmingham, Liverpool, Leeds and Glasgow. Run by Odisea Tours since 2005.",
   alternates: {
-    canonical: "/usa",
+    canonical: "/uk",
     languages: {
       "en-US": "https://odisea-tours.com/usa",
       "en-GB": "https://odisea-tours.com/uk",
@@ -17,21 +17,21 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Spain Soccer Tours from the USA | Odisea Tours",
+    title: "Spain Football Tours from the UK | Odisea Tours",
     description:
-      "Spain soccer tours built for US clubs, high schools and colleges. City-specific planning for the biggest youth soccer metros.",
-    url: "https://odisea-tours.com/usa",
+      "Spain football tours for UK clubs, schools and academies. City-specific planning for the major UK markets.",
+    url: "https://odisea-tours.com/uk",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Spain Soccer Tours from the USA | Odisea Tours",
+    title: "Spain Football Tours from the UK | Odisea Tours",
     description:
-      "Spain soccer tours built for US clubs, high schools and colleges. City-specific planning for the biggest youth soccer metros.",
+      "Spain football tours for UK clubs, schools and academies. City-specific planning for the major UK markets.",
   },
 };
 
-export default function UsaIndexPage() {
+export default function UkIndexPage() {
   return (
     <main className="bg-paper text-ink">
       <section className="bg-ink text-paper pt-32 pb-20 px-6 md:px-12">
@@ -39,13 +39,13 @@ export default function UsaIndexPage() {
           <nav aria-label="Breadcrumb" className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70 mb-6">
             <Link href="/" className="hover:text-gold">Odisea Tours</Link>
             <span className="mx-2">/</span>
-            <span className="text-paper/50">Tours from the USA</span>
+            <span className="text-paper/50">Tours from the UK</span>
           </nav>
           <h1 className="font-display text-[clamp(2.4rem,6vw,5rem)] uppercase leading-[0.95] max-w-[20ch]">
-            Spain Soccer Tours <span className="font-display-italic text-gold">from the USA</span>
+            Spain Football Tours <span className="font-display-italic text-gold">from the UK</span>
           </h1>
           <p className="mt-6 max-w-[60ch] text-paper/85 text-lg leading-relaxed">
-            Odisea Tours has been hosting US soccer clubs, high schools and college rosters in Spain since 2005. Pick your home city to see flight routes, training partners and the tour formats that work from your market.
+            Odisea Tours has been hosting UK football clubs, school First XIs and academy squads in Spain since 2005. Pick your home city to see direct flights, training partners and the tour formats that work from your market.
           </p>
         </div>
       </section>
@@ -56,14 +56,14 @@ export default function UsaIndexPage() {
             Tour planning by home city
           </div>
           <div className="grid md:grid-cols-2 gap-5">
-            {US_CITIES.map((c) => (
+            {UK_CITIES.map((c) => (
               <Link
                 key={c.slug}
-                href={`/usa/${c.slug}`}
+                href={`/uk/${c.slug}`}
                 className="group border border-ink/15 p-8 hover:bg-ink hover:text-paper transition-colors"
               >
                 <div className="font-mono-editorial text-[0.6rem] tracking-[0.26em] uppercase text-ink/55 group-hover:text-paper/70 mb-3">
-                  {c.state_abbr} · {c.metro}
+                  {c.region_abbr} · {c.metro}
                 </div>
                 <h2 className="font-display text-2xl md:text-3xl uppercase leading-tight">
                   Spain tours from <span className="font-display-italic text-gold">{c.name}</span>
@@ -80,7 +80,7 @@ export default function UsaIndexPage() {
 
           <div className="mt-14 text-center">
             <p className="text-ink-soft max-w-[60ch] mx-auto leading-relaxed">
-              Not in one of these metros? Spain tours work from every US city. Tell us where you are flying from and we build the routing.
+              Not in one of these cities? Spain tours work from every UK airport. Tell us where you are flying from and we build the routing.
             </p>
             <Link href="/plan-your-tour" className="inline-block mt-6 btn-editorial">Plan a tour</Link>
           </div>
@@ -88,9 +88,9 @@ export default function UsaIndexPage() {
       </section>
 
       <JournalLinks
-        title="Reading for US clubs"
+        title="Reading for UK clubs"
         italicTail="planning Spain."
-        intro="The conversations US club directors have with us before booking, written up as field notes. Cost, timing, opposition, parents."
+        intro="The conversations UK club directors, school sport heads and academy coaches have with us before booking, written up as field notes. Cost, timing, opposition, parents."
         slugs={[
           "youth-soccer-tours-to-spain-complete-guide",
           "what-a-youth-soccer-tour-to-spain-costs",

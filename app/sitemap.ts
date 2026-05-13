@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { POSTS } from "@/content/journal";
 import { TOURS } from "@/content/tours";
 import { US_CITIES } from "@/content/us-cities";
+import { UK_CITIES } from "@/content/uk-cities";
+import { AU_CITIES } from "@/content/australia-cities";
 
 const SITE = "https://odisea-tours.com";
 
@@ -25,11 +27,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/destinations/madrid`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/destinations/valencia`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/usa`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${SITE}/uk`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${SITE}/australia`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const usCityRoutes: MetadataRoute.Sitemap = US_CITIES.map((c) => ({
     url: `${SITE}/usa/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  const ukCityRoutes: MetadataRoute.Sitemap = UK_CITIES.map((c) => ({
+    url: `${SITE}/uk/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  const auCityRoutes: MetadataRoute.Sitemap = AU_CITIES.map((c) => ({
+    url: `${SITE}/australia/${c.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8,
@@ -65,5 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...journalRoutes,
     ...categoryRoutes,
     ...usCityRoutes,
+    ...ukCityRoutes,
+    ...auCityRoutes,
   ];
 }

@@ -55,7 +55,7 @@ export default function ToursIndex() {
             <span>09 Tour Experiences</span>
           </div>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
-            <span className="sr-only">Spain group tours: </span>Tour <span className="font-display-italic text-gold">Experiences.</span>
+            <span className="sr-only">Spain group tours including Soccer Tours in Spain, cultural journeys, the Camino and corporate retreats: </span>Tour <span className="font-display-italic text-gold">Experiences.</span>
           </h1>
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
             Nine ways to travel through Spain with us. Each one built from the ground up for groups, from a handful of friends to a corporate team of a hundred.
@@ -107,6 +107,13 @@ export default function ToursIndex() {
                 the journal
               </Link>{" "}
               for the working notes behind how these tours actually get built.
+            </p>
+            <p>
+              Coaches looking specifically at a Spain soccer tour, start with the{" "}
+              <Link href="/soccer-tours-spain" className="link-rule text-gold">
+                Soccer Tours in Spain pillar
+              </Link>{" "}
+              for pricing, training homes (FC Barcelona, Valencia CF and the Spanish FA), audiences and the four soccer-specific formats we run.
             </p>
           </div>
         </div>

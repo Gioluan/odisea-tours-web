@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${SITE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${SITE}/soccer-tours-spain`, lastModified: now, changeFrequency: "weekly", priority: 0.98 },
     { url: `${SITE}/tours`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${SITE}/veterans`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE}/youth`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },

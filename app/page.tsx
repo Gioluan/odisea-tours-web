@@ -41,7 +41,7 @@ export default function Home() {
             </div>
 
             <h1 className="font-display uppercase text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.015em]">
-              <span className="sr-only">Youth soccer tours, school trips and group travel in Spain since 2005. </span>
+              <span className="sr-only">Soccer Tours in Spain since 2005. Youth, school, pre-season and veterans group travel by Odisea Tours. </span>
               <HeroLetters
                 text="Travel is"
                 delayStart={120}
@@ -67,11 +67,14 @@ export default function Home() {
                 <span className="font-display-italic"> All handled, all yours.</span>
               </p>
               <div className="md:col-span-5 flex flex-wrap gap-4">
-                <Link href="/tours" className="btn-editorial on-dark">
-                  Browse the Tours
+                <Link href="/soccer-tours-spain" className="btn-editorial on-dark">
+                  Soccer Tours in Spain
                   <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                     <path d="M1 5 H13 M9 1 L13 5 L9 9" stroke="currentColor" strokeWidth="1.3" />
                   </svg>
+                </Link>
+                <Link href="/tours" className="btn-editorial on-dark">
+                  Browse the Tours
                 </Link>
                 <Link href="/plan-your-tour" className="btn-editorial on-dark">
                   Plan Your Tour

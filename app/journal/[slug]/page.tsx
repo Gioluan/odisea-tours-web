@@ -93,6 +93,9 @@ export default async function JournalPost({
 
   const author = authorOf(post);
   const postTags = tagsOf(post);
+  const isSoccerPost = /soccer|football|fc-barcelona|real-madrid|valencia|la-masia|academy|spanish-fa|rfef|stadium|youth-tour|donosti|preseason|pre-season/i.test(
+    post.slug + " " + postTags.join(" "),
+  );
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -287,6 +290,21 @@ export default async function JournalPost({
               ))}
             </div>
           </section>
+        )}
+
+        {isSoccerPost && (
+          <aside className="mt-16 pt-10 border-t border-ink/15">
+            <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60 mb-4">
+              <span>Pillar guide</span>
+            </div>
+            <p className="text-lg leading-[1.7] text-ink/85">
+              The full operator-level breakdown of pricing, training homes (FC Barcelona, Valencia CF, the Spanish FA), audiences and the four formats lives on the{" "}
+              <Link href="/soccer-tours-spain" className="text-gold-deep hover:text-gold underline underline-offset-2 transition-colors">
+                Soccer Tours in Spain
+              </Link>{" "}
+              pillar page. Start there if this article is the first thing you have read about how we run a Spain soccer tour.
+            </p>
+          </aside>
         )}
 
         <div className="mt-16 pt-10 border-t border-ink/15 flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60">

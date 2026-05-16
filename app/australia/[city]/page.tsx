@@ -118,6 +118,8 @@ export default async function AuCityPage({ params }: Props) {
           <nav aria-label="Breadcrumb" className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70 mb-6">
             <Link href="/" className="hover:text-gold">Odisea Tours</Link>
             <span className="mx-2">/</span>
+            <Link href="/soccer-tours-spain" className="hover:text-gold">Soccer Tours in Spain</Link>
+            <span className="mx-2">/</span>
             <Link href="/australia" className="hover:text-gold">Australia</Link>
             <span className="mx-2">/</span>
             <span className="text-paper/50">{c.name}</span>
@@ -130,6 +132,7 @@ export default async function AuCityPage({ params }: Props) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/plan-your-tour" className="btn-editorial on-dark">Plan a tour from {c.name}</Link>
+            <Link href="/soccer-tours-spain" className="btn-editorial on-dark">Soccer Tours in Spain</Link>
             <Link href="/tours/european-soccer-tours" className="btn-editorial on-dark">Soccer tour package</Link>
           </div>
         </div>

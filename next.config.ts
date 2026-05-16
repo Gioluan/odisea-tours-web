@@ -109,7 +109,8 @@ const nextConfig: NextConfig = {
       { source: "/group-leaders/:path*", destination: "/plan-your-tour", permanent: true },
 
       // GSC 404 sweep 2026-04-27: actual legacy WordPress permalinks
-      { source: "/soccer-tours-spain", destination: "/tours/european-soccer-tours", permanent: true },
+      // NOTE: /soccer-tours-spain previously 301'd to /tours/european-soccer-tours.
+      // Removed 2026-05-16 when /soccer-tours-spain became the SEO pillar page.
       { source: "/european-soccer-tours", destination: "/tours/european-soccer-tours", permanent: true },
       { source: "/travelingabroad", destination: "/tours", permanent: true },
       { source: "/trip", destination: "/tours", permanent: true },

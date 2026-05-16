@@ -117,9 +117,11 @@ export default async function UsCityPage({ params }: Props) {
           <nav aria-label="Breadcrumb" className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70 mb-6">
             <Link href="/" className="hover:text-gold">Odisea Tours</Link>
             <span className="mx-2">/</span>
-            <Link href="/tours" className="hover:text-gold">Tours</Link>
+            <Link href="/soccer-tours-spain" className="hover:text-gold">Soccer Tours in Spain</Link>
             <span className="mx-2">/</span>
-            <span className="text-paper/50">USA · {c.name}</span>
+            <Link href="/usa" className="hover:text-gold">USA</Link>
+            <span className="mx-2">/</span>
+            <span className="text-paper/50">{c.name}</span>
           </nav>
           <h1 className="font-display text-[clamp(2.4rem,6vw,5.2rem)] uppercase leading-[0.95] max-w-[22ch]">
             Spain Soccer Tours from <span className="font-display-italic text-gold">{c.name}</span>
@@ -129,6 +131,7 @@ export default async function UsCityPage({ params }: Props) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/plan-your-tour" className="btn-editorial on-dark">Plan a tour from {c.name}</Link>
+            <Link href="/soccer-tours-spain" className="btn-editorial on-dark">Soccer Tours in Spain</Link>
             <Link href="/tours/european-soccer-tours" className="btn-editorial on-dark">Soccer tour package</Link>
           </div>
         </div>

@@ -599,6 +599,7 @@ export default function SoccerToursSpainPillarPage() {
         italicTail="in Spain."
         intro="Long-form pieces written for the coaches, directors and athletic departments planning their first or fifth Spain tour. Cost, timing, academies worth visiting, friendlies, what parents actually ask."
         slugs={[
+          "spain-soccer-tour-day-by-day",
           "youth-soccer-tours-to-spain-complete-guide",
           "what-a-youth-soccer-tour-to-spain-costs",
           "real-madrid-or-fc-barcelona-which-stadium-visit",

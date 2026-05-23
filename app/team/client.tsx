@@ -6,12 +6,12 @@ import Link from "next/link";
 const TEAM = [
   {
     name: "Aitor Corres",
-    role: "Founder, Odisea Tours",
-    region: "Middle East Specialist",
+    role: "Middle East Specialist",
+    region: "Group travel · Middle East",
     initials: "AC",
     linkedin: "https://www.linkedin.com/in/aitorcorres",
     photo: "/photos/aitor-corres-odisea-tours.jpg",
-    bio: "Founder of Odisea Tours, with deep roots across the Middle East. Aitor opens doors with federations, clubs and venues that other operators simply can't reach.",
+    bio: "Odisea Tours' Middle East specialist, with deep roots across the region. Aitor opens doors with federations, clubs and venues that other operators simply can't reach.",
   },
   {
     name: "Raul Sanz",

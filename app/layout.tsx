@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s · Odisea Tours",
   },
   description:
-    "Trusted by 200+ groups since 2005. Youth soccer tours, school trips, cultural journeys and corporate retreats across Spain, designed and run by locals on the ground in Castellón and Madrid.",
+    "Trusted by 200+ groups since 2003. Youth soccer tours, school trips, cultural journeys and corporate retreats across Spain, designed and run by a remote-first Spanish team based in Castellón, with trip leaders on the ground in Madrid, Barcelona and Valencia.",
   alternates: {
     canonical: "/",
     types: {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Youth Soccer Tours, School Trips & Group Travel in Spain",
     description:
-      "Trusted by 200+ groups since 2005. Soccer, school, cultural and corporate group travel across Spain, designed by locals.",
+      "Trusted by 200+ groups since 2003. Soccer, school, cultural and corporate group travel across Spain, designed by locals.",
     url: "https://odisea-tours.com",
     siteName: "Odisea Tours",
     type: "website",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Youth Soccer Tours & Group Travel in Spain | Odisea Tours",
     description:
-      "Trusted by 200+ groups since 2005. Soccer, school, cultural and corporate group travel across Spain.",
+      "Trusted by 200+ groups since 2003. Soccer, school, cultural and corporate group travel across Spain.",
     images: ["/photos/veterans-soccer-tour-camp-nou-barcelona.jpg"],
   },
   other: {
@@ -88,24 +88,41 @@ const organizationSchema = {
   url: "https://odisea-tours.com",
   logo: "https://odisea-tours.com/brand/favicons/Browser.png",
   description:
-    "Spain-based group travel operator running youth soccer tours, school trips, cultural journeys and corporate retreats across Spain and Europe. Operating since 2005.",
+    "Spanish destination management company (DMC) running youth soccer tours, school trips, Camino de Santiago, cultural and corporate group travel across Spain. Founded in 2005 by Juan Sanchez. Remote-first team based in Castellón.",
   foundingDate: "2005",
-  areaServed: ["ES", "EU", "US", "AU", "GB"],
+  foundingLocation: {
+    "@type": "Place",
+    name: "Castellón de la Plana, Spain",
+  },
+  founder: { "@id": "https://odisea-tours.com/team#juan-sanchez" },
+  employee: [
+    { "@id": "https://odisea-tours.com/team#juan-sanchez" },
+    { "@id": "https://odisea-tours.com/team#aitor-corres" },
+    { "@id": "https://odisea-tours.com/team#raul-sanz" },
+  ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "c/José Bellido Mor",
-    addressLocality: "Benicassim",
-    addressRegion: "Castellón",
-    postalCode: "12560",
+    addressLocality: "Castellón de la Plana",
+    addressRegion: "Valencian Community",
     addressCountry: "ES",
   },
+  areaServed: ["ES", "EU", "US", "AU", "GB", "CA"],
+  knowsAbout: [
+    "youth soccer tours Spain",
+    "school group travel Spain",
+    "Camino de Santiago guided tours",
+    "Spanish cultural and culinary tours",
+    "veterans soccer tours Spain",
+    "corporate incentive travel Spain",
+    "destination management Spain",
+  ],
   contactPoint: [
     {
       "@type": "ContactPoint",
       contactType: "customer service",
       email: "bookings@odisea-tours.com",
-      telephone: "+34-635-745-527",
-      areaServed: ["US", "AU", "GB", "EU"],
+      telephone: "+34-670-059-797",
+      areaServed: ["US", "AU", "GB", "EU", "CA"],
       availableLanguage: ["English", "Spanish"],
     },
   ],

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { POSTS, postBySlug, authorOf, tagsOf } from "@/content/journal";
+import { POSTS, postBySlug, authorOf, tagsOf, howToOf, clusterOf, pillarOf } from "@/content/journal";
 
 const SITE = "https://odisea-tours.com";
 
@@ -79,23 +79,35 @@ export default async function JournalPost({
 
   const fullTitle = `${post.title}${post.italicTitle ? " " + post.italicTitle : ""}`.trim();
   const url = `${SITE}/journal/${post.slug}`;
-  const sameCategory = POSTS.filter(
-    (p) => p.slug !== slug && p.category === post.category,
+  const currentCluster = clusterOf(post);
+  const sameCluster = POSTS.filter(
+    (p) => p.slug !== slug && clusterOf(p) === currentCluster,
   ).slice(0, 4);
-  const fillNeeded = 4 - sameCategory.length;
-  const otherCategory =
-    fillNeeded > 0
+  const clusterFillNeeded = 4 - sameCluster.length;
+  const fillFromCategory =
+    clusterFillNeeded > 0
       ? POSTS.filter(
-          (p) => p.slug !== slug && p.category !== post.category,
-        ).slice(0, fillNeeded)
+          (p) =>
+            p.slug !== slug &&
+            clusterOf(p) !== currentCluster &&
+            p.category === post.category,
+        ).slice(0, clusterFillNeeded)
       : [];
-  const others = [...sameCategory, ...otherCategory];
+  const remainingFill = 4 - sameCluster.length - fillFromCategory.length;
+  const fillFromAny =
+    remainingFill > 0
+      ? POSTS.filter(
+          (p) =>
+            p.slug !== slug &&
+            clusterOf(p) !== currentCluster &&
+            p.category !== post.category,
+        ).slice(0, remainingFill)
+      : [];
+  const others = [...sameCluster, ...fillFromCategory, ...fillFromAny];
 
   const author = authorOf(post);
   const postTags = tagsOf(post);
-  const isSoccerPost = /soccer|football|fc-barcelona|real-madrid|valencia|la-masia|academy|spanish-fa|rfef|stadium|youth-tour|donosti|preseason|pre-season/i.test(
-    post.slug + " " + postTags.join(" "),
-  );
+  const pillar = pillarOf(post);
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -147,6 +159,36 @@ export default async function JournalPost({
       }
     : null;
 
+  const howToData = howToOf(post);
+  const howToSchema = howToData
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: howToData.name,
+        description: howToData.description ?? post.excerpt,
+        image: `${SITE}${post.cover}`,
+        ...(howToData.totalTime ? { totalTime: howToData.totalTime } : {}),
+        inLanguage: "en",
+        author: {
+          "@type": "Person",
+          name: author.name,
+          url: `${SITE}/team`,
+          jobTitle: author.role,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Odisea Tours",
+          url: SITE,
+        },
+        step: howToData.steps.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.name,
+          text: s.text,
+        })),
+      }
+    : null;
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -186,6 +228,12 @@ export default async function JournalPost({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      {howToSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
       )}
 
@@ -292,18 +340,18 @@ export default async function JournalPost({
           </section>
         )}
 
-        {isSoccerPost && (
+        {pillar && (
           <aside className="mt-16 pt-10 border-t border-ink/15">
             <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.3em] uppercase text-ink/60 mb-4">
               <span>Pillar guide</span>
             </div>
-            <p className="text-lg leading-[1.7] text-ink/85">
-              The full operator-level breakdown of pricing, training homes (FC Barcelona, Valencia CF, the Spanish FA), audiences and the four formats lives on the{" "}
-              <Link href="/soccer-tours-spain" className="text-gold-deep hover:text-gold underline underline-offset-2 transition-colors">
-                Soccer Tours in Spain
-              </Link>{" "}
-              pillar page. Start there if this article is the first thing you have read about how we run a Spain soccer tour.
-            </p>
+            <p className="text-lg leading-[1.7] text-ink/85">{pillar.blurb}</p>
+            <Link
+              href={pillar.href}
+              className="inline-block mt-5 font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-gold-deep hover:text-gold underline underline-offset-2 transition-colors"
+            >
+              {pillar.ctaLabel} →
+            </Link>
           </aside>
         )}
 

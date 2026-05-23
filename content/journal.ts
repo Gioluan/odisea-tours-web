@@ -17,8 +17,8 @@ export const AUTHORS: Record<AuthorId, Author> = {
   aitor: {
     id: "aitor",
     name: "Aitor Corres",
-    role: "Founder, Odisea Tours",
-    bio: "Founder with deep roots across the Middle East and decades of group travel experience.",
+    role: "Middle East Specialist",
+    bio: "Middle East specialist with deep roots across the region and decades of group travel experience.",
   },
   raul: {
     id: "raul",
@@ -95,6 +95,212 @@ export function tagsOf(post: Post): string[] {
 export interface FAQ {
   q: string;
   a: string;
+}
+
+export interface HowToStep {
+  name: string;
+  text: string;
+}
+
+export interface HowToData {
+  name: string;
+  description?: string;
+  totalTime?: string;
+  steps: HowToStep[];
+}
+
+const HOWTO_BY_SLUG: Record<string, HowToData> = {
+  "how-to-fundraise-for-your-teams-spain-tour": {
+    name: "How to fundraise for your team's Spain tour",
+    description:
+      "A practical playbook to fund a youth or school football tour to Spain across local sponsorship, crowdfunding, community events and structured payment plans.",
+    totalTime: "P9M",
+    steps: [
+      {
+        name: "Build a local business sponsorship deck",
+        text: "Identify 10 to 15 local businesses connected to your club's families (dentist, dealership, real-estate agent, restaurant, gym). Send each a one-page PDF with club crest, tour dates and three sponsorship tiers from 250 to 1,500 dollars in exchange for kit logo, social mentions and a framed squad photo at a Spanish stadium.",
+      },
+      {
+        name: "Launch a focused crowdfunding campaign",
+        text: "Set a specific dollar goal, a hard deadline and a 60 to 90 second team video explaining why the trip matters. Update the page weekly with new content. Strong campaigns raise 3,000 to 12,000 dollars when the story is personal and the cadence is steady.",
+      },
+      {
+        name: "Run two to four community events",
+        text: "Schedule one car wash and one bake sale per quarter. Plan for 400 to 800 dollars per event. Treat these as community-building moments that keep families engaged, not as the primary revenue source.",
+      },
+      {
+        name: "Offer a 12-month structured payment plan",
+        text: "Spread the per-player tour cost over 10 to 12 monthly instalments starting at booking. A 3,000 dollar tour becomes a 250 dollar monthly line item families can absorb. Add an early-bird discount of 5 to 10 percent for families who commit and start paying 6+ months out.",
+      },
+      {
+        name: "Combine all four sources on one spreadsheet",
+        text: "Map sponsorship + crowdfunding + events + payment plan against the total tour cost per family. The clubs that fund tours successfully are the ones that attack from all four directions in parallel, not the ones who rely on a single channel.",
+      },
+    ],
+  },
+  "how-to-organize-school-football-tour-spain": {
+    name: "How to organize a school football tour to Spain",
+    description:
+      "Step by step for PE teachers and school coaches planning a football tour to Spain, from board approval through safeguarding, supervision ratios and match scheduling.",
+    totalTime: "P12M",
+    steps: [
+      {
+        name: "Pitch it to the school board with numbers",
+        text: "Prepare a one-page brief: per-pupil cost, insurance certificate, safeguarding protocol, risk assessment and educational justification (language exposure, cultural competency, teamwork). Compare the tour cost to your nearest residential trip to make value land.",
+      },
+      {
+        name: "Lock the safeguarding framework",
+        text: "Run a minimum 1 adult to 10 pupils supervision ratio. Confirm ground coordinators are DBS-checked or equivalent, hotels have secured floors with key-card access, and a curfew walk happens at 23:00 every night. Brief the lead teacher on medical, passport and behavioural protocols before departure.",
+      },
+      {
+        name: "Design the right day shape",
+        text: "Morning training (2 hours) at a professional or semi-pro facility with a Spanish coach and translator. Sit-down lunch with dietary requirements briefed in advance. Afternoon cultural visit or friendly match. Evening dinner together followed by supervised downtime. Keep activities and rest in balance.",
+      },
+      {
+        name: "Schedule two matches per week, not more",
+        text: "Two friendlies per week is the right number. Three over-fatigues pupils and the second-week matches degrade. One is not enough to justify the trip. Match against organised Spanish school sides matched to your age and level.",
+      },
+      {
+        name: "Book 12 months ahead",
+        text: "The best training facilities, Spanish school opponents and Easter or half-term windows fill 9 to 12 months out. October and early November give the best availability, lower prices and ideal weather. Anything inside three months means working from what is left.",
+      },
+    ],
+  },
+  "how-to-plan-a-group-trip-to-spain": {
+    name: "How to plan a group trip to Spain",
+    description:
+      "Five operating rules for planning a group trip to Spain that keep 20 plus travellers happy without diluting the experience.",
+    totalTime: "P4M",
+    steps: [
+      {
+        name: "Pick a spine and protect it",
+        text: "Choose one unifying idea (football, food, the Camino, history). Every day anchors around it. Once the spine is set the hotel choice, the bus timing and the restaurant bookings all become easier. Trying to please 25 people in 25 directions pleases no one.",
+      },
+      {
+        name: "Spend on what people will remember",
+        text: "Travellers remember the dinner on the terrace with the guitar player and forget the mid-range rental car. Book the rental car on a budget and the terrace dinner without apology. Allocate the budget to the moments that will outlive the trip.",
+      },
+      {
+        name: "Build a shadow itinerary for weather",
+        text: "Every outdoor day needs a quietly prepared indoor alternative. Spain is sunny until it is not. Switch the itinerary without announcing the change. Nobody notices except that the day still worked.",
+      },
+      {
+        name: "Leave breathing room in the day",
+        text: "The best moments are usually the ones that were not scheduled. Build fewer items into each day and protect 60 to 90 minutes of unstructured time. Tired groups do not enjoy themselves and the photographs all start to look the same.",
+      },
+      {
+        name: "Pick the operator who answers at 2am",
+        text: "Every trip has at least one thing that goes sideways. Flight delays, sick travellers, closed restaurants. The measure of a group travel operator is what happens at 2am on the day that did not go to plan. Choose accordingly.",
+      },
+    ],
+  },
+  "pre-tour-checklist-coach-field-guide": {
+    name: "Pre-tour checklist for coaches travelling to Spain",
+    description:
+      "The five items only the club can handle before a Spain football tour. Passports, medical, kit, currency and the talk that decides how the trip lands.",
+    totalTime: "P3M",
+    steps: [
+      {
+        name: "Check every passport 90 days before departure",
+        text: "Every player and adult needs a passport valid at least six months past the return date. Check each one by hand 90 days before the trip, not 90 days before booking. One four-month-validity passport can pull an entire travel plan apart at Spanish immigration.",
+      },
+      {
+        name: "Collect medical forms and insurance",
+        text: "Get a signed travel medical form for each player listing allergies and emergency contacts. Confirm team insurance explicitly covers international travel or buy a supplemental policy. Collect a signed permission slip allowing the head coach to consent to medical care in a foreign country.",
+      },
+      {
+        name: "Brief the kit packing list",
+        text: "Each player travels with two full training sets and one match kit. Training kit gets destroyed faster than the match shirt. Plan one kit rotation per day with a laundry turnaround built into the itinerary on day four.",
+      },
+      {
+        name: "Set up currency, cards and phones in advance",
+        text: "Confirm at least one adult per group carries a chip-and-PIN debit card that works internationally. Float 50 to 100 euros cash per player for incidentals. Put phones on an international plan before departure, not at the airport.",
+      },
+      {
+        name: "Have the meaning-of-the-trip talk before they fly",
+        text: "Spend an hour with the players in the week before the trip. Tell them plainly what the tour is, what the opponents will be like, how to behave at La Masia and what is expected of them at the dinner table and on the bus. Teams who are told this arrive prepared. Teams who are not arrive only excited.",
+      },
+    ],
+  },
+};
+
+export function howToOf(post: Post): HowToData | null {
+  return HOWTO_BY_SLUG[post.slug] ?? null;
+}
+
+export type ClusterId = "soccer" | "culinary" | "camino" | "corporate" | "planning";
+
+const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
+  "best-football-tour-destinations-barcelona": "soccer",
+  "what-parents-need-to-know-youth-football-tours-spain": "soccer",
+  "corporate-team-building-retreats-spain": "corporate",
+  "how-to-organize-school-football-tour-spain": "soccer",
+  "sabores-de-espana-food-wine-tour-spain": "culinary",
+  "youth-soccer-tours-to-spain-complete-guide": "soccer",
+  "walking-camino-de-santiago-with-a-group": "camino",
+  "how-to-fundraise-for-your-teams-spain-tour": "soccer",
+  "what-a-youth-soccer-tour-to-spain-costs": "soccer",
+  "la-masia-la-fabrica-academies-worth-visiting": "soccer",
+  "how-to-plan-a-group-trip-to-spain": "planning",
+  "real-madrid-or-fc-barcelona-which-stadium-visit": "soccer",
+  "top-5-football-stadiums-visit-spain-soccer-tour": "soccer",
+  "arranging-friendly-matches-against-spanish-youth-clubs": "soccer",
+  "best-time-of-year-for-a-youth-soccer-tour-to-spain": "soccer",
+  "why-la-masia-is-still-the-best-football-visit-in-europe": "soccer",
+  "barcelona-vs-madrid-best-city-football-tour-spain": "soccer",
+  "valencia-sevilla-football-cities-most-tours-miss": "soccer",
+  "pre-tour-checklist-coach-field-guide": "soccer",
+  "training-spanish-fa-rfef-football-tour-experience": "soccer",
+  "what-parents-ask-before-europe-soccer-tour": "soccer",
+  "why-veterans-football-tours-spain-are-booming": "soccer",
+  "why-australian-teams-choosing-spain-over-england": "soccer",
+};
+
+export interface PillarInfo {
+  href: string;
+  title: string;
+  blurb: string;
+  ctaLabel: string;
+}
+
+export const PILLAR_BY_CLUSTER: Record<ClusterId, PillarInfo | null> = {
+  soccer: {
+    href: "/soccer-tours-spain",
+    title: "Soccer Tours in Spain",
+    blurb:
+      "The full operator-level breakdown of pricing, training homes (FC Barcelona, Valencia CF, the Spanish FA), audiences and the four formats lives on our soccer pillar guide. Start there if this is the first thing you have read about how we run a Spain soccer tour.",
+    ctaLabel: "Read the Soccer Tours in Spain pillar",
+  },
+  culinary: {
+    href: "/tours/sabores-de-espana",
+    title: "Sabores de España",
+    blurb:
+      "The full day-by-day for our culinary tour through Barcelona, Penedès, La Rioja, San Sebastián and Pamplona lives on the Sabores de España tour page. Inclusions, group size, the cooking class and what is on each table are all listed there.",
+    ctaLabel: "Read the Sabores de España tour page",
+  },
+  camino: {
+    href: "/tours/camino-de-santiago",
+    title: "Camino de Santiago",
+    blurb:
+      "The full seven-day group Camino itinerary from Sarria to Santiago, with daily distances, hotel selection and luggage transfers, lives on the Camino de Santiago tour page.",
+    ctaLabel: "Read the Camino de Santiago tour page",
+  },
+  corporate: {
+    href: "/tours/corporate-retreats",
+    title: "Corporate Retreats in Spain",
+    blurb:
+      "The full menu of corporate retreat options across the Basque Country, La Rioja, Andalucía and the Camino lives on the Corporate Retreats tour page. Group sizes, activity options and what a typical five-day itinerary looks like.",
+    ctaLabel: "Read the Corporate Retreats tour page",
+  },
+  planning: null,
+};
+
+export function clusterOf(post: Post): ClusterId {
+  return CLUSTER_BY_SLUG[post.slug] ?? "planning";
+}
+
+export function pillarOf(post: Post): PillarInfo | null {
+  return PILLAR_BY_CLUSTER[clusterOf(post)];
 }
 
 export interface Post {

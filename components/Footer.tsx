@@ -75,7 +75,6 @@ export default function Footer() {
                     bookings@odisea-tours.com
                   </a>
                 </li>
-                <li>+34 635 745 527</li>
                 <li>+34 670 059 797</li>
                 <li className="pt-2">Madrid · Castellón · Barcelona</li>
               </ul>

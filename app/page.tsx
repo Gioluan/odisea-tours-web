@@ -5,10 +5,47 @@ import HeroLetters from "@/components/HeroLetters";
 import { TOURS } from "@/content/tours";
 import { topJournalPosts } from "@/lib/tour-journal-map";
 
+const HOME_FAQ = [
+  {
+    q: "Is Odisea Tours a reliable Spain DMC for international groups?",
+    a: "Odisea Tours has run Spain group travel since 2005. More than 200 groups from the United States, Australia, the United Kingdom and across Europe have used Odisea for youth soccer tours, school trips, Camino de Santiago and cultural programs. Legal entity is Ground Agents Solutions S.L., based in Castellón. Every group has a bilingual Odisea trip leader on the ground end to end and a 24 hour emergency contact for the full length of the trip.",
+  },
+  {
+    q: "What is included in a typical Odisea Spain Soccer Tour?",
+    a: "All accommodation in 4-star hotels and the Spanish Football Federation headquarters, all meals per itinerary, private coach transport across cities, bilingual Odisea guides traveling with the group, training sessions at FC Barcelona's Joan Gamper facility, Valencia CF Paterna, and the Spanish FA in Las Rozas, fixtures against Spanish academy opposition, stadium tours at Camp Nou and Bernabéu, match filming with per-player tagging, and group travel insurance. International flights are excluded so each family or club can use a preferred airline.",
+  },
+  {
+    q: "How much does a Spain soccer tour or school trip cost per traveler?",
+    a: "Published per-traveler pricing: youth soccer tour $3,495 for 10 to 12 days; softball tour $2,895; cultural tour Sabores de España €2,595; Camino de Santiago €1,995; Sin Traducción Spanish immersion for US schools $2,000 for 8 nights. Final pricing depends on group size, season and hotel level. Larger groups bring the per-traveler number down. Booking is locked in with a $500 deposit per traveler.",
+  },
+  {
+    q: "Which groups travel with Odisea Tours?",
+    a: "Youth soccer clubs and academies (ages 10 to 19), US private schools and Modern Languages departments, UK and Australian schools and clubs, veterans and over-30 soccer groups, university and alumni groups, corporate teams. Group size ranges from 18 to 100 travelers. Tours are custom built around each group's profile and goals, not booked off a shelf.",
+  },
+  {
+    q: "How do I plan and book a tour with Odisea?",
+    a: "Start with a free 15 to 30 minute planning call. The call confirms dates, group size, level, training partners and budget. A custom written quote follows within 48 hours with a per-traveler price. Once you accept, a $500 per-traveler deposit locks in the price and dates. Balance is due 60 days before departure. Contact bookings@odisea-tours.com, call +34 670 059 797 or book the call directly at calendly.com/juan-odisea-tours/30min.",
+  },
+];
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HOME_FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
 export default function Home() {
   const featuredPosts = topJournalPosts(3);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
+      />
       {/* ---------- HERO ---------- */}
       <section className="relative isolate min-h-[100svh] flex flex-col pt-20 overflow-hidden text-paper">
         {/* Background image */}
@@ -458,6 +495,41 @@ export default function Home() {
             <p className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/60">
               Colne Academy · United Kingdom
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- FAQ (extractable Q&A for LLMs + SERP rich results) ---------- */}
+      <section className="bg-paper text-ink py-16 md:py-24 border-t border-ink/10">
+        <div className="max-w-[1100px] mx-auto px-6 md:px-10 lg:px-14">
+          <div className="mb-12 max-w-[40ch]">
+            <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60 mb-4">
+              <span>Five questions, straight answers</span>
+            </div>
+            <h2 className="font-display text-[clamp(2rem,4.2vw,3.4rem)] leading-[1.02] tracking-[-0.01em]">
+              What every group asks{" "}
+              <span className="font-display-italic text-gold">before they book.</span>
+            </h2>
+          </div>
+          <div className="divide-y divide-ink/12 border-t border-ink/12">
+            {HOME_FAQ.map((item) => (
+              <article key={item.q} className="py-7 md:py-9 grid md:grid-cols-12 gap-6">
+                <h3 className="md:col-span-5 font-display text-lg md:text-xl leading-[1.2] tracking-[-0.01em]">
+                  {item.q}
+                </h3>
+                <p className="md:col-span-7 text-ink/75 leading-[1.6] text-[0.98rem]">
+                  {item.a}
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-wrap gap-4 items-baseline">
+            <Link href="/faq" className="link-rule font-display text-base">
+              Read the full FAQ →
+            </Link>
+            <span className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/45">
+              Fifteen more answers, same tone
+            </span>
           </div>
         </div>
       </section>

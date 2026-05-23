@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TOURS, tourBySlug } from "@/content/tours";
 import { relatedJournalPosts } from "@/lib/tour-journal-map";
+import { buildTourFaq } from "@/lib/tour-faq";
 
 const SITE = "https://odisea-tours.com";
 
@@ -122,6 +123,17 @@ export default async function TourDetail({
     ],
   };
 
+  const tourFaq = buildTourFaq(tour);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: tourFaq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <>
       <script
@@ -131,6 +143,10 @@ export default async function TourDetail({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Hero */}
@@ -332,6 +348,33 @@ export default async function TourDetail({
               </a>
               <a href="https://wa.me/34670059797" target="_blank" rel="noopener noreferrer" className="font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-ink/50 hover:text-ink transition-colors link-rule">WhatsApp us</a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-20 bg-paper border-t border-ink/10">
+        <div className="max-w-[1100px] mx-auto px-6 md:px-10 lg:px-14">
+          <div className="mb-10">
+            <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.3em] uppercase text-ink/60 mb-4">
+              <span>Frequently asked</span>
+            </div>
+            <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1.05] tracking-[-0.015em] max-w-[24ch]">
+              The questions every group asks{" "}
+              <span className="font-display-italic text-gold">before they book.</span>
+            </h2>
+          </div>
+          <div className="divide-y divide-ink/12 border-t border-ink/12">
+            {tourFaq.map((item) => (
+              <article key={item.q} className="py-7 md:py-8 grid md:grid-cols-12 gap-6">
+                <h3 className="md:col-span-5 font-display text-lg md:text-xl leading-[1.2] tracking-[-0.01em]">
+                  {item.q}
+                </h3>
+                <p className="md:col-span-7 text-ink/75 leading-[1.6] text-[0.98rem]">
+                  {item.a}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

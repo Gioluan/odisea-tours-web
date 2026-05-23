@@ -29,7 +29,7 @@ const localBusinessSchema = {
   legalName: "Ground Agents Solutions S.L.",
   url: "https://odisea-tours.com",
   email: "bookings@odisea-tours.com",
-  telephone: "+34-635-745-527",
+  telephone: "+34-670-059-797",
   priceRange: "€€-€€€",
   image: "https://odisea-tours.com/photos/odisea-tours-group-barcelona-cathedral.jpg",
   address: {
@@ -50,7 +50,7 @@ const localBusinessSchema = {
       "@type": "ContactPoint",
       contactType: "customer service",
       email: "bookings@odisea-tours.com",
-      telephone: "+34-635-745-527",
+      telephone: "+34-670-059-797",
       areaServed: ["US", "AU", "GB", "EU"],
       availableLanguage: ["English", "Spanish"],
     },
@@ -149,7 +149,7 @@ export default function ContactPage() {
                   <dt className="font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase text-ink/50 mb-0.5">
                     Madrid Office
                   </dt>
-                  <dd className="font-mono-editorial text-xs">+34 635 745 527</dd>
+                  <dd className="font-mono-editorial text-xs">+34 670 059 797</dd>
                 </div>
                 <div>
                   <dt className="font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase text-ink/50 mb-0.5">

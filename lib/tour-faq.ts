@@ -46,5 +46,7 @@ export function buildTourFaq(tour: Tour): FaqItem[] {
     },
   ];
 
-  return faq;
+  // Custom, query-targeted FAQs come first so the highest-intent answer leads
+  // both the on-page list and the FAQPage schema.
+  return [...(tour.faq ?? []), ...faq];
 }

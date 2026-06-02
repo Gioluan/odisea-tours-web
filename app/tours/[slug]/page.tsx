@@ -79,23 +79,16 @@ export default async function TourDetail({
       name: "Odisea Tours",
       url: SITE,
     },
-    offers: {
-      "@type": "Offer",
-      url,
-      availability: "https://schema.org/InStock",
-      priceCurrency: "EUR",
-      seller: {
-        "@type": "TravelAgency",
-        name: "Odisea Tours",
-        url: SITE,
-      },
-    },
-    itinerary: tour.itinerary.map((d, i) => ({
+    itinerary: {
       "@type": "ItemList",
-      position: i + 1,
-      name: `Day ${d.day}: ${d.title}`,
-      description: d.detail,
-    })),
+      numberOfItems: tour.itinerary.length,
+      itemListElement: tour.itinerary.map((d, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `Day ${d.day}: ${d.title}`,
+        description: d.detail,
+      })),
+    },
   };
 
   const breadcrumbSchema = {

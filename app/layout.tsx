@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s · Odisea Tours",
   },
   description:
-    "Trusted by 200+ groups since 2003. Youth soccer tours, school trips, cultural journeys and corporate retreats across Spain, designed and run by a remote-first Spanish team based in Castellón, with trip leaders on the ground in Madrid, Barcelona and Valencia.",
+    "Trusted by 200+ groups since 2005. Youth soccer tours, school trips, cultural journeys and corporate retreats across Spain, designed and run by a remote-first Spanish team based in Castellón, with trip leaders on the ground in Madrid, Barcelona and Valencia.",
   alternates: {
     canonical: "/",
     types: {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Youth Soccer Tours, School Trips & Group Travel in Spain",
     description:
-      "Trusted by 200+ groups since 2003. Soccer, school, cultural and corporate group travel across Spain, designed by locals.",
+      "Trusted by 200+ groups since 2005. Soccer, school, cultural and corporate group travel across Spain, designed by locals.",
     url: "https://odisea-tours.com",
     siteName: "Odisea Tours",
     type: "website",
@@ -69,9 +69,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@OdiseaTours",
+    creator: "@OdiseaTours",
     title: "Youth Soccer Tours & Group Travel in Spain | Odisea Tours",
     description:
-      "Trusted by 200+ groups since 2003. Soccer, school, cultural and corporate group travel across Spain.",
+      "Trusted by 200+ groups since 2005. Soccer, school, cultural and corporate group travel across Spain.",
     images: ["/photos/veterans-soccer-tour-camp-nou-barcelona.jpg"],
   },
   other: {
@@ -92,7 +94,7 @@ const organizationSchema = {
   foundingDate: "2005",
   foundingLocation: {
     "@type": "Place",
-    name: "Castellón de la Plana, Spain",
+    name: "Benicàssim, Castellón, Spain",
   },
   founder: { "@id": "https://odisea-tours.com/team#juan-sanchez" },
   employee: [
@@ -102,8 +104,9 @@ const organizationSchema = {
   ],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Castellón de la Plana",
-    addressRegion: "Valencian Community",
+    addressLocality: "Benicassim",
+    addressRegion: "Castellón",
+    postalCode: "12560",
     addressCountry: "ES",
   },
   areaServed: ["ES", "EU", "US", "AU", "GB", "CA"],

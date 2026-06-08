@@ -69,8 +69,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@OdiseaTours",
-    creator: "@OdiseaTours",
     title: "Youth Soccer Tours & Group Travel in Spain | Odisea Tours",
     description:
       "Trusted by 200+ groups since 2005. Soccer, school, cultural and corporate group travel across Spain.",
@@ -130,9 +128,9 @@ const organizationSchema = {
     },
   ],
   sameAs: [
+    "https://www.wikidata.org/wiki/Q140133533",
     "https://www.linkedin.com/company/odisea-tours",
     "https://www.facebook.com/odiseatoursEU/",
-    "https://x.com/OdiseaTours",
     "https://www.instagram.com/Odisea_Tours/",
   ],
 };

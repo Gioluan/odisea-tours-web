@@ -19,6 +19,7 @@ export type UsState = {
   soccer_landscape: string;
   major_soccer_organisations: string[];
   cities_we_serve: UsStateCity[];
+  /** Named past clients. Leave empty for states with no in-state client history. The page omits the section rather than claiming work we have not done. */
   real_clients: string[];
   flight_overview: string;
   gateway_airports: string[];
@@ -357,6 +358,590 @@ export const US_STATES: UsState[] = [
       {
         q: "Is the long flight worth it for younger players?",
         a: "After six years of running Hawaii groups, our honest answer is yes for U14 and above and case by case for U12 to U13. The Day 1 rest day is non-negotiable for Hawaii groups, and we never schedule a training session in the first 24 hours of the tour. Younger Hawaii squads usually travel with a higher parent-to-player ratio than mainland US groups, which we accommodate inside the same itinerary.",
+      },
+    ],
+  },
+  {
+    slug: "new-jersey",
+    name: "New Jersey",
+    abbreviation: "NJ",
+    hero_photo: "/photos/spain-soccer-tour-match-vs-spanish-academy-side.jpg",
+    og_summary:
+      "Spain soccer tours for New Jersey clubs, high schools and college programs. United nonstop Newark to Barcelona in 8 hours, JFK to Madrid in 7. Red Bulls academy ecosystem, deep ECNL and MLS Next base across the Garden State.",
+    intro:
+      "New Jersey runs one of the densest youth soccer ecosystems in the country, anchored by the New York Red Bulls academy in Whippany and a deep ECNL and MLS Next base across the northern and central parts of the state. Odisea Tours has hosted US soccer programs since 2005, and New Jersey groups travel on the same tour shapes as the rest of the tri-state metro, using the United nonstop from Newark to Barcelona and the short hop to JFK for Madrid services.",
+    soccer_landscape:
+      "New Jersey Youth Soccer registers one of the largest competitive bases on the East Coast. The New York Red Bulls run their MLS Next academy out of Whippany, which sets the ceiling for the state's pyramid, and ECNL fields a strong New Jersey contingent across both genders. The NJSIAA high school season runs in the fall, which leaves the spring break and summer windows clean for international travel. Bergen, Essex, Morris, Monmouth and Middlesex counties together hold a concentration of competitive clubs that rivals any metro in the country.",
+    major_soccer_organisations: [
+      "New Jersey Youth Soccer (NJYS)",
+      "ECNL Mid-Atlantic and ECNL Northeast",
+      "MLS Next (New York Red Bulls academy, Whippany)",
+      "NPL Northeast",
+      "New Jersey State Interscholastic Athletic Association (NJSIAA)",
+    ],
+    cities_we_serve: [
+      { slug: "northern-new-jersey", name: "Northern New Jersey", note: "Bergen, Essex, Morris and Passaic county clubs, Red Bulls academy ecosystem, Newark Liberty gateway" },
+      { slug: "central-new-jersey", name: "Central New Jersey", note: "Middlesex, Monmouth and Somerset county clubs, dense ECNL and NPL presence along the Route 1 corridor" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "New Jersey's home gateway is Newark Liberty (EWR), with United operating a year-round nonstop to Barcelona of around 8 hours. For Madrid, New Jersey groups use JFK, a short transfer across the metro, where Iberia, Delta and American all run nonstop services of around 7 hours. The tri-state metro has more transatlantic carrier optionality than any other US market, which keeps group rates competitive across the calendar.",
+    gateway_airports: ["EWR (United nonstop to BCN)", "JFK (Iberia, Delta, American nonstop to MAD)", "PHL (American nonstop to MAD, South Jersey)"],
+    why_state_picks_spain: [
+      "Newark to Barcelona nonstop on United is one of the shortest transatlantic flights from any US city, and JFK to Madrid is shorter still. New Jersey groups never burn a day on layovers.",
+      "The state's soccer calendar runs high school in the fall, which leaves spring break and summer wide open for a Spain tour without touching the school season.",
+      "South Jersey clubs have the Philadelphia nonstop to Madrid as a second clean gateway, so no part of the state is more than a short drive from a direct flight to Spain.",
+    ],
+    ideal_audiences: [
+      "Red Bulls academy and affiliate sides",
+      "ECNL clubs across NJYS",
+      "NJSIAA varsity high school programs",
+      "Patriot League, Big East and Ivy League college soccer programs",
+      "Competitive club and select squads from U13 up",
+    ],
+    best_seasons:
+      "Spring break (late March or early April) and the summer window (June through mid-July) are the two most-booked windows for New Jersey youth clubs and high schools. The state's fall high school calendar means most school programs travel in spring or early summer. College programs typically travel in late September during the Spanish league season.",
+    faqs: [
+      {
+        q: "How long is the flight from New Jersey to Spain?",
+        a: "From Newark Liberty (EWR), United runs a nonstop to Barcelona of around 8 hours. For Madrid, groups use JFK, a short transfer across the metro, where Iberia, Delta and American fly nonstop in around 7 hours. South Jersey clubs can also use the Philadelphia nonstop to Madrid.",
+      },
+      {
+        q: "Do you treat New Jersey separately from the New York metro?",
+        a: "For tour planning, the NY/NJ/CT tri-state area is a single market, but New Jersey has its own gateway logic. North Jersey clubs fly United nonstop from Newark to Barcelona, while South Jersey clubs often prefer the Philadelphia nonstop to Madrid. We route each group from whichever gateway is closest and cheapest.",
+      },
+      {
+        q: "What does a Spain tour from New Jersey cost per player?",
+        a: "A 10-day Spain soccer tour from New Jersey sits between roughly $3,295 and $4,000 per player for ground services. The short transatlantic flight time from the metro keeps the airfare base lower than most US states, and the carrier competition across Newark, JFK and Philadelphia works in the group's favour.",
+      },
+      {
+        q: "Which travel windows work for a New Jersey high school program?",
+        a: "NJSIAA soccer runs in the fall, so spring break (late March or early April) and early summer (June and the first half of July) are the cleanest windows for a New Jersey school program. Both leave the competitive season untouched.",
+      },
+    ],
+  },
+  {
+    slug: "illinois",
+    name: "Illinois",
+    abbreviation: "IL",
+    hero_photo: "/photos/odisea-tours-youth-fcb-training-hero.jpg",
+    og_summary:
+      "Spain soccer tours for Illinois clubs, high schools and college programs. Iberia and American nonstop Chicago O'Hare to Madrid in around 8.5 hours. Chicago Fire academy ecosystem, deep ECNL and MLS Next base across the Chicago metro.",
+    intro:
+      "Illinois anchors the Midwest's youth soccer pyramid, with the Chicago Fire FC academy at the top and a deep ECNL and NPL base across the Chicago metro and the collar counties. Odisea Tours has hosted US soccer programs since 2005, and Illinois groups build their Spain tour around the year-round Iberia and American nonstop services from Chicago O'Hare to Madrid, one of only a handful of direct US-to-Madrid routes outside the coasts.",
+    soccer_landscape:
+      "Illinois Youth Soccer registers the largest competitive base in the Midwest. The Chicago Fire FC run their MLS Next academy in the metro, and the ECNL fields a strong Illinois contingent across both genders, with several clubs that consistently produce college and professional players. The IHSA high school season runs in the fall for boys and spring for girls, which gives Illinois programs more nuance than most states when scheduling around the school calendar. The college pipeline runs through the Big Ten and the Missouri Valley Conference.",
+    major_soccer_organisations: [
+      "Illinois Youth Soccer Association (IYSA)",
+      "ECNL Midwest and ECNL Heartland",
+      "MLS Next (Chicago Fire FC academy)",
+      "NPL Great Lakes",
+      "Illinois High School Association (IHSA)",
+    ],
+    cities_we_serve: [
+      { slug: "chicago", name: "Chicago", note: "Chicago Fire academy ecosystem, ECNL and NPL clubs across the metro and collar counties, O'Hare nonstop to Madrid" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "Illinois's gateway to Spain is Chicago O'Hare (ORD), with both Iberia and American operating year-round nonstop services to Madrid of around 8.5 hours. O'Hare is one of the few direct US-to-Madrid gateways in the interior of the country, which means Illinois groups avoid the connection that clubs in most Midwest and Plains states have to accept. Downstate groups from Peoria, Champaign and the Quad Cities connect through O'Hare.",
+    gateway_airports: ["ORD (Iberia and American nonstop to MAD)", "MDW (Chicago Midway, domestic connections)"],
+    why_state_picks_spain: [
+      "Chicago O'Hare runs year-round nonstop to Madrid on both Iberia and American, a direct gateway most of the interior of the country does not have. Illinois groups land rested and train the same day.",
+      "Two carriers on the same nonstop route keep group airfares competitive across the calendar, including the spring break and summer peak windows.",
+      "The IHSA split season (boys in fall, girls in spring) gives Illinois programs unusual flexibility to slot an international tour into a window that does not touch their competitive calendar.",
+    ],
+    ideal_audiences: [
+      "Chicago Fire academy and affiliate sides",
+      "ECNL clubs across IYSA",
+      "IHSA varsity high school programs (boys and girls)",
+      "Big Ten and Missouri Valley college soccer programs",
+      "Competitive club and select squads from U13 up",
+    ],
+    best_seasons:
+      "Summer (June through late July) and spring break (late March) are the two most-booked windows for Illinois youth clubs. The IHSA split season means boys programs often travel in spring and girls programs in late summer or the December break. College programs typically travel in late September.",
+    faqs: [
+      {
+        q: "How long is the flight from Illinois to Spain?",
+        a: "Chicago O'Hare (ORD) runs year-round nonstop service to Madrid on both Iberia and American, around 8.5 hours. This is one of the few direct US-to-Madrid gateways in the interior of the country, so Illinois groups avoid the connection most Midwest states have to make. Downstate groups connect through O'Hare.",
+      },
+      {
+        q: "Does a tour fit around the IHSA soccer calendar?",
+        a: "Yes, and Illinois has more flexibility than most states because the IHSA runs boys soccer in the fall and girls soccer in the spring. We slot each program into the window that does not touch its competitive season, usually summer for boys and the December break or summer for girls.",
+      },
+      {
+        q: "What does a Spain tour from Illinois cost per player?",
+        a: "A 10-day Spain soccer tour from Illinois sits between roughly $3,395 and $4,100 per player for ground services. The year-round O'Hare nonstop to Madrid keeps the airfare base lower than most interior states, which usually carry a connection.",
+      },
+      {
+        q: "Which Illinois clubs do you work with?",
+        a: "We host competitive clubs, high school programs and college rosters from across the Chicago metro and downstate. We do not represent ourselves as an official partner of the Chicago Fire and our fixtures are against Spanish academy or amateur sides matched to your age and level, not MLS Next reserve sides.",
+      },
+    ],
+  },
+  {
+    slug: "georgia",
+    name: "Georgia",
+    abbreviation: "GA",
+    hero_photo: "/photos/odisea-tours-girls-fcb-celebration-hero.jpg",
+    og_summary:
+      "Spain soccer tours for Georgia clubs, high schools and college programs. Delta nonstop Atlanta to Madrid in around 8.5 hours. Atlanta United academy ecosystem, one of the fastest-growing youth soccer markets in the US.",
+    intro:
+      "Georgia is one of the fastest-growing youth soccer markets in the country, anchored by the Atlanta United FC academy and a youth culture that has accelerated sharply since the club's arrival. Odisea Tours has hosted US soccer programs since 2005, and Georgia groups build their Spain tour around the Delta nonstop from Atlanta to Madrid, which makes the Southeast's biggest hub one of the easiest gateways to Spain in the country.",
+    soccer_landscape:
+      "Georgia Soccer registers a rapidly expanding competitive base, and the arrival of Atlanta United FC reshaped the state's youth pyramid almost overnight. The Atlanta United MLS Next academy now sits at the top, and ECNL fields a growing Georgia contingent across both genders. The GHSA high school season runs in the spring, which puts summer and the December break in clear view for an international tour. The metro Atlanta counties hold the densest concentration of competitive clubs in the Southeast.",
+    major_soccer_organisations: [
+      "Georgia Soccer",
+      "ECNL Southeast",
+      "MLS Next (Atlanta United FC academy)",
+      "NPL Southeast",
+      "Georgia High School Association (GHSA)",
+    ],
+    cities_we_serve: [
+      { slug: "atlanta", name: "Atlanta", note: "Atlanta United academy ecosystem, ECNL and NPL clubs across the metro counties, Hartsfield-Jackson nonstop to Madrid" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "Georgia's gateway to Spain is Hartsfield-Jackson Atlanta (ATL), the busiest airport in the world, with Delta operating a year-round nonstop to Madrid of around 8.5 hours. Atlanta's hub status means groups from Savannah, Augusta, Columbus and the rest of the Southeast can reach the ATL gateway on a short domestic connection, then fly straight through to Spain.",
+    gateway_airports: ["ATL (Delta nonstop to MAD)"],
+    why_state_picks_spain: [
+      "Atlanta to Madrid nonstop on Delta turns the world's busiest hub into one of the cleanest US gateways to Spain. Georgia groups land rested and train the same day.",
+      "The GHSA spring soccer season leaves summer and the December break wide open for a Spain tour with no conflict with the competitive calendar.",
+      "Atlanta United's arrival has made the European-pipeline conversation urgent across the metro, and a Spain tour gives ambitious Georgia clubs the academy-level exposure their players are now chasing.",
+    ],
+    ideal_audiences: [
+      "Atlanta United academy and affiliate sides",
+      "ECNL clubs across Georgia Soccer",
+      "GHSA varsity high school programs",
+      "SEC, ACC and Sun Belt college soccer programs",
+      "Competitive club and select squads from U13 up",
+    ],
+    best_seasons:
+      "Summer (June through late July) and the December break are the two most-booked windows for Georgia youth clubs. The GHSA spring high school calendar means most Georgia school programs travel in early summer. College programs typically travel in late September during the Spanish league season.",
+    faqs: [
+      {
+        q: "How long is the flight from Georgia to Spain?",
+        a: "Hartsfield-Jackson Atlanta (ATL) runs year-round nonstop service to Madrid on Delta, around 8.5 hours. Because Atlanta is the busiest hub in the world, groups from Savannah, Augusta, Columbus and across the Southeast reach the ATL gateway on a short domestic connection and fly straight through.",
+      },
+      {
+        q: "Does a tour fit around the GHSA soccer calendar?",
+        a: "Yes. GHSA high school soccer runs in the spring, so summer (June and July) and the December break are the cleanest windows for a Georgia school program. Both leave the competitive season untouched.",
+      },
+      {
+        q: "What does a Spain tour from Georgia cost per player?",
+        a: "A 10-day Spain soccer tour from Georgia sits between roughly $3,395 and $4,100 per player for ground services. The year-round Atlanta nonstop to Madrid on Delta keeps the airfare base competitive, and the hub means feeder flights from across the Southeast are cheap.",
+      },
+      {
+        q: "Do you work with the Atlanta United academy?",
+        a: "We host competitive clubs, high school programs and college rosters from across Georgia. We do not represent ourselves as an official partner of Atlanta United and our fixtures are against Spanish academy or amateur sides matched to your age and level, not MLS Next reserve sides.",
+      },
+    ],
+  },
+  {
+    slug: "pennsylvania",
+    name: "Pennsylvania",
+    abbreviation: "PA",
+    hero_photo: "/photos/veterans-soccer-tour-fc-barcelona-visit.jpg",
+    og_summary:
+      "Spain soccer tours for Pennsylvania clubs, high schools and college programs. American nonstop Philadelphia to Madrid in around 8 hours. Philadelphia Union academy and YSC ecosystem, deep ECNL base across the state.",
+    intro:
+      "Pennsylvania runs a serious youth soccer pyramid, anchored by the Philadelphia Union academy and the YSC Academy model that has produced a steady stream of professional and college players. Odisea Tours has hosted US soccer programs since 2005, and Pennsylvania groups build their Spain tour around the American nonstop from Philadelphia to Madrid, one of the East Coast's cleanest direct gateways to Spain.",
+    soccer_landscape:
+      "Eastern Pennsylvania Youth Soccer and PA West together register a large competitive base spread across the Philadelphia and Pittsburgh metros. The Philadelphia Union's MLS Next academy, paired with the YSC Academy school model, sits at the top of the state's pyramid and is one of the most productive development environments in the country. ECNL fields a strong Pennsylvania contingent across both genders. The PIAA high school season runs in the fall, which leaves spring break and summer clear for international travel.",
+    major_soccer_organisations: [
+      "Eastern Pennsylvania Youth Soccer (EPYSA)",
+      "Pennsylvania West Youth Soccer (PA West)",
+      "ECNL Mid-Atlantic",
+      "MLS Next (Philadelphia Union academy, YSC Academy)",
+      "Pennsylvania Interscholastic Athletic Association (PIAA)",
+    ],
+    cities_we_serve: [
+      { slug: "philadelphia", name: "Philadelphia", note: "Philadelphia Union and YSC academy ecosystem, ECNL clubs across the metro and the Main Line, nonstop to Madrid" },
+      { slug: "pittsburgh", name: "Pittsburgh", note: "PA West clubs across Western Pennsylvania, connect through Philadelphia or the New York metro gateways" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "Pennsylvania's gateway to Spain is Philadelphia (PHL), with American operating a year-round nonstop to Madrid of around 8 hours. Philadelphia is one of American's transatlantic hubs, which makes it a clean, high-frequency gateway for the whole eastern half of the state. Pittsburgh and Western Pennsylvania groups connect through Philadelphia or use the New York metro gateways.",
+    gateway_airports: ["PHL (American nonstop to MAD)", "PIT (Pittsburgh, connect through PHL or the NY metro)"],
+    why_state_picks_spain: [
+      "Philadelphia to Madrid nonstop on American is one of the East Coast's cleanest direct gateways to Spain, and it is an American hub, so frequency and connections are strong.",
+      "The PIAA fall soccer season leaves spring break and summer wide open for a Spain tour with no conflict with the competitive calendar.",
+      "The Philadelphia Union and YSC academy model has set a high development bar across the state, and a Spain tour gives ambitious Pennsylvania clubs the academy-level exposure their players are chasing.",
+    ],
+    ideal_audiences: [
+      "Philadelphia Union academy and affiliate sides",
+      "ECNL clubs across EPYSA and PA West",
+      "PIAA varsity high school programs",
+      "Patriot League, Big Ten and Atlantic 10 college soccer programs",
+      "Competitive club and select squads from U13 up",
+    ],
+    best_seasons:
+      "Spring break (late March or early April) and summer (June through mid-July) are the two most-booked windows for Pennsylvania youth clubs. The PIAA fall high school season means most Pennsylvania school programs travel in spring or early summer. College programs typically travel in late September.",
+    faqs: [
+      {
+        q: "How long is the flight from Pennsylvania to Spain?",
+        a: "Philadelphia (PHL) runs year-round nonstop service to Madrid on American, around 8 hours. Philadelphia is an American transatlantic hub, so frequency is high and connections from across the eastern half of the state are easy. Pittsburgh groups connect through Philadelphia or use the New York metro gateways.",
+      },
+      {
+        q: "Does a tour fit around the PIAA soccer calendar?",
+        a: "Yes. PIAA high school soccer runs in the fall, so spring break (late March or early April) and summer (June and the first half of July) are the cleanest windows for a Pennsylvania school program. Both leave the competitive season untouched.",
+      },
+      {
+        q: "What does a Spain tour from Pennsylvania cost per player?",
+        a: "A 10-day Spain soccer tour from Pennsylvania sits between roughly $3,295 and $4,000 per player for ground services. The year-round Philadelphia nonstop to Madrid keeps the airfare base competitive for the eastern half of the state.",
+      },
+      {
+        q: "Do you work with the Philadelphia Union or YSC academies?",
+        a: "We host competitive clubs, high school programs and college rosters from across Pennsylvania. We do not represent ourselves as an official partner of the Philadelphia Union and our fixtures are against Spanish academy or amateur sides matched to your age and level.",
+      },
+    ],
+  },
+  {
+    slug: "north-carolina",
+    name: "North Carolina",
+    abbreviation: "NC",
+    hero_photo: "/photos/odisea-tours-both-teams-post-match.jpg",
+    og_summary:
+      "Spain soccer tours for North Carolina clubs, high schools and college programs. American nonstop Charlotte to Madrid in around 8 hours. NCFC Youth and North Carolina Courage ecosystem, one of the largest youth soccer bases in the Southeast.",
+    intro:
+      "North Carolina runs one of the largest and best-organised youth soccer bases in the Southeast, anchored by NCFC Youth and the North Carolina FC and Courage professional structure in the Triangle. Odisea Tours has hosted US soccer programs since 2005, and North Carolina groups build their Spain tour around the American nonstop from Charlotte to Madrid, which gives the state a direct gateway most of the Southeast does not have.",
+    soccer_landscape:
+      "The North Carolina Youth Soccer Association registers one of the largest competitive bases in the Southeast, and NCFC Youth in the Triangle is among the biggest youth clubs in the country by registration. North Carolina FC and the NWSL's North Carolina Courage anchor the professional structure, and ECNL fields a strong North Carolina contingent across both genders. The NCHSAA high school season runs in the fall for boys and spring for girls, which gives programs flexibility. The college pipeline runs through the ACC, home to North Carolina, Duke, NC State and Wake Forest.",
+    major_soccer_organisations: [
+      "North Carolina Youth Soccer Association (NCYSA)",
+      "NCFC Youth",
+      "ECNL Southeast",
+      "North Carolina FC and North Carolina Courage",
+      "North Carolina High School Athletic Association (NCHSAA)",
+    ],
+    cities_we_serve: [
+      { slug: "charlotte", name: "Charlotte", note: "American hub with nonstop service to Madrid, dense club base across Mecklenburg and the surrounding counties" },
+      { slug: "raleigh", name: "Raleigh and the Triangle", note: "NCFC Youth and the North Carolina FC and Courage structure, one of the largest youth bases in the country" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "North Carolina's gateway to Spain is Charlotte (CLT), an American hub, with a year-round nonstop to Madrid of around 8 hours. Charlotte's hub status means Triangle groups from Raleigh-Durham (RDU) and groups from Greensboro and Asheville reach the CLT gateway on a short domestic connection, then fly straight through to Spain.",
+    gateway_airports: ["CLT (American hub, nonstop to MAD)", "RDU (Raleigh-Durham, connect through CLT)"],
+    why_state_picks_spain: [
+      "Charlotte to Madrid nonstop on American gives North Carolina a direct gateway most of the Southeast does not have, with hub frequency and easy feeder connections from Raleigh, Greensboro and Asheville.",
+      "The NCHSAA split season (boys in fall, girls in spring) gives North Carolina programs flexibility to slot a Spain tour into a window that does not touch the competitive calendar.",
+      "NCFC Youth and the Triangle's professional structure have set a high development bar, and a Spain tour gives ambitious North Carolina clubs the academy-level exposure their players are chasing.",
+    ],
+    ideal_audiences: [
+      "NCFC Youth and other large competitive clubs",
+      "ECNL clubs across NCYSA",
+      "NCHSAA varsity high school programs (boys and girls)",
+      "ACC and Big South college soccer programs",
+      "Competitive club and select squads from U13 up",
+    ],
+    best_seasons:
+      "Summer (June through late July) and spring break (late March) are the two most-booked windows for North Carolina youth clubs. The NCHSAA split season means boys programs often travel in spring and girls programs in summer or the December break. College programs typically travel in late September.",
+    faqs: [
+      {
+        q: "How long is the flight from North Carolina to Spain?",
+        a: "Charlotte (CLT) runs year-round nonstop service to Madrid on American, around 8 hours. Charlotte is an American hub, so Triangle groups from Raleigh-Durham and groups from Greensboro and Asheville reach the gateway on a short domestic connection and fly straight through.",
+      },
+      {
+        q: "Does a tour fit around the NCHSAA soccer calendar?",
+        a: "Yes, and North Carolina has flexibility because the NCHSAA runs boys soccer in the fall and girls soccer in the spring. We slot each program into the window that does not touch its competitive season, usually summer or the December break.",
+      },
+      {
+        q: "What does a Spain tour from North Carolina cost per player?",
+        a: "A 10-day Spain soccer tour from North Carolina sits between roughly $3,395 and $4,100 per player for ground services. The year-round Charlotte nonstop to Madrid keeps the airfare base competitive, and the hub means feeder flights from across the state are cheap.",
+      },
+      {
+        q: "Which North Carolina cities have planning context?",
+        a: "Charlotte and the Raleigh-Triangle area are the two anchors. Charlotte is the nonstop gateway to Madrid, and the Triangle holds NCFC Youth and the North Carolina FC and Courage structure, one of the largest youth bases in the country. Clubs from Greensboro, Winston-Salem and Asheville route through Charlotte.",
+      },
+    ],
+  },
+  {
+    slug: "massachusetts",
+    name: "Massachusetts",
+    abbreviation: "MA",
+    hero_photo: "/photos/veterans-soccer-tour-bernabeu-stadium.jpg",
+    og_summary:
+      "Spain soccer tours for Massachusetts clubs, high schools and college programs. Iberia nonstop Boston to Madrid in around 7 hours. New England Revolution academy ecosystem, deep ECNL base across the New England metro.",
+    intro:
+      "Massachusetts anchors New England's youth soccer pyramid, with the New England Revolution academy at the top and a deep ECNL and club base across Greater Boston and the surrounding states. Odisea Tours has hosted US soccer programs since 2005, and Massachusetts groups build their Spain tour around the Iberia nonstop from Boston to Madrid, one of the shortest transatlantic flights from any US gateway.",
+    soccer_landscape:
+      "Mass Youth Soccer registers the largest competitive base in New England, and the New England Revolution run their MLS Next academy out of the Boston metro. ECNL fields a strong Massachusetts contingent across both genders, and the region's club soccer feeds one of the densest college pipelines in the country, anchored by the deep Division I, II and III presence across New England. The MIAA high school season runs in the fall, which leaves spring break and summer clear for international travel.",
+    major_soccer_organisations: [
+      "Massachusetts Youth Soccer Association (Mass Youth Soccer)",
+      "ECNL New England and ECNL Northeast",
+      "MLS Next (New England Revolution academy)",
+      "NPL Northeast",
+      "Massachusetts Interscholastic Athletic Association (MIAA)",
+    ],
+    cities_we_serve: [
+      { slug: "boston", name: "Boston", note: "New England Revolution academy ecosystem, ECNL clubs across Greater Boston and the surrounding metro, Logan nonstop to Madrid" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "Massachusetts's gateway to Spain is Boston Logan (BOS), with Iberia operating a year-round nonstop to Madrid of around 7 hours, one of the shortest transatlantic flights from any US gateway. Boston also carries seasonal nonstop service to Madrid and Barcelona on Delta and Aer Lingus partners, which adds optionality in the spring and summer peak windows. Groups from Worcester, Providence and southern New Hampshire all use the Logan gateway.",
+    gateway_airports: ["BOS (Iberia nonstop to MAD, around 7 hours)", "seasonal additional carriers in spring and summer"],
+    why_state_picks_spain: [
+      "Boston to Madrid nonstop on Iberia is around 7 hours, one of the shortest transatlantic flights from any US gateway. Massachusetts groups land rested and train the same day.",
+      "Boston picks up seasonal additional carriers to Spain in the spring and summer, exactly the peak tour windows, which keeps group rates competitive.",
+      "The MIAA fall soccer season leaves spring break and summer wide open for a Spain tour with no conflict with the competitive calendar.",
+    ],
+    ideal_audiences: [
+      "New England Revolution academy and affiliate sides",
+      "ECNL clubs across Mass Youth Soccer",
+      "MIAA varsity high school programs",
+      "Ivy League, Patriot League, Hockey East and NESCAC college soccer programs",
+      "Competitive club and select squads from U13 up",
+    ],
+    best_seasons:
+      "Spring break (April) and summer (June through mid-July) are the two most-booked windows for Massachusetts youth clubs. The MIAA fall high school season means most Massachusetts school programs travel in spring or early summer. College programs typically travel in late September.",
+    faqs: [
+      {
+        q: "How long is the flight from Massachusetts to Spain?",
+        a: "Boston Logan (BOS) runs year-round nonstop service to Madrid on Iberia, around 7 hours, one of the shortest transatlantic flights from any US gateway. Boston also picks up seasonal nonstop service to Madrid and Barcelona in the spring and summer. Groups from Worcester, Providence and southern New Hampshire all use Logan.",
+      },
+      {
+        q: "Does a tour fit around the MIAA soccer calendar?",
+        a: "Yes. MIAA high school soccer runs in the fall, so spring break (April) and summer (June and the first half of July) are the cleanest windows for a Massachusetts school program. Both leave the competitive season untouched.",
+      },
+      {
+        q: "What does a Spain tour from Massachusetts cost per player?",
+        a: "A 10-day Spain soccer tour from Massachusetts sits between roughly $3,295 and $4,000 per player for ground services. The 7-hour Boston nonstop to Madrid keeps the airfare base among the lowest of any US state, and the seasonal carrier additions in spring and summer help.",
+      },
+      {
+        q: "Do you also serve clubs from Rhode Island and New Hampshire?",
+        a: "Yes. New England is treated as a single market for tour planning, with Boston Logan as the shared gateway. Clubs from Providence, Worcester, southern New Hampshire and the rest of the region use the same Logan nonstop and the same tour formats apply.",
+      },
+    ],
+  },
+  {
+    slug: "virginia",
+    name: "Virginia",
+    abbreviation: "VA",
+    hero_photo: "/photos/odisea-tours-spanish-fa-training.jpg",
+    og_summary:
+      "Spain soccer tours for Virginia and DC-area clubs, high schools and college programs. Iberia nonstop Washington Dulles to Madrid in around 7.5 hours. One of the deepest competitive youth soccer markets on the East Coast.",
+    intro:
+      "Northern Virginia and the wider DC metro hold one of the deepest competitive youth soccer markets on the East Coast, with a concentration of nationally ranked ECNL clubs and a development culture as serious as any in the country. Odisea Tours has hosted US soccer programs since 2005, and Virginia groups build their Spain tour around the Iberia nonstop from Washington Dulles to Madrid, a clean direct gateway for the whole DC metro.",
+    soccer_landscape:
+      "The Virginia Youth Soccer Association registers a large and competitive base, with Northern Virginia in particular fielding some of the most successful ECNL clubs in the country across both genders. The DC United MLS Next academy draws from the Virginia, Maryland and DC region. The VHSL high school season runs in the spring, which leaves summer and the December break clear for international travel. The college pipeline runs through the ACC, the Patriot League and the Colonial Athletic Association.",
+    major_soccer_organisations: [
+      "Virginia Youth Soccer Association (VYSA)",
+      "ECNL Mid-Atlantic",
+      "MLS Next (DC United academy, regional)",
+      "NPL Mid-Atlantic",
+      "Virginia High School League (VHSL)",
+    ],
+    cities_we_serve: [
+      { slug: "northern-virginia", name: "Northern Virginia and DC metro", note: "Fairfax, Loudoun, Arlington and Prince William county clubs, some of the most competitive ECNL sides in the country, Dulles nonstop to Madrid" },
+      { slug: "richmond", name: "Richmond and Hampton Roads", note: "VYSA clubs across central and coastal Virginia, connect through Washington Dulles" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "Virginia's gateway to Spain is Washington Dulles (IAD), with Iberia operating a year-round nonstop to Madrid of around 7.5 hours, and United adding seasonal nonstop service in the spring and summer peak windows. Dulles serves the entire Northern Virginia and DC metro directly. Richmond (RIC) and Hampton Roads (ORF) groups connect through Dulles or the wider DC airports.",
+    gateway_airports: ["IAD (Iberia nonstop to MAD, United seasonal)", "DCA and BWI (DC metro alternatives)", "RIC and ORF (connect through IAD)"],
+    why_state_picks_spain: [
+      "Washington Dulles to Madrid nonstop on Iberia is around 7.5 hours and serves the entire Northern Virginia and DC metro directly. Virginia groups land rested and train the same day.",
+      "Dulles picks up United seasonal nonstop service to Madrid in spring and summer, the peak tour windows, which adds capacity and keeps group rates competitive.",
+      "The VHSL spring soccer season leaves summer and the December break wide open for a Spain tour with no conflict with the competitive calendar.",
+    ],
+    ideal_audiences: [
+      "Nationally ranked Northern Virginia ECNL clubs",
+      "DC United academy and affiliate sides",
+      "VHSL varsity high school programs",
+      "ACC, Patriot League and CAA college soccer programs",
+      "Competitive club and select squads from U13 up",
+    ],
+    best_seasons:
+      "Summer (June through late July) and the December break are the two most-booked windows for Virginia youth clubs. The VHSL spring high school season means most Virginia school programs travel in early summer. College programs typically travel in late September.",
+    faqs: [
+      {
+        q: "How long is the flight from Virginia to Spain?",
+        a: "Washington Dulles (IAD) runs year-round nonstop service to Madrid on Iberia, around 7.5 hours, with United adding seasonal nonstop service in spring and summer. Dulles serves the whole Northern Virginia and DC metro directly. Richmond and Hampton Roads groups connect through Dulles.",
+      },
+      {
+        q: "Does a tour fit around the VHSL soccer calendar?",
+        a: "Yes. VHSL high school soccer runs in the spring, so summer (June and July) and the December break are the cleanest windows for a Virginia school program. Both leave the competitive season untouched.",
+      },
+      {
+        q: "What does a Spain tour from Virginia cost per player?",
+        a: "A 10-day Spain soccer tour from Virginia sits between roughly $3,295 and $4,000 per player for ground services. The 7.5-hour Dulles nonstop to Madrid keeps the airfare base low, and the United seasonal additions in spring and summer help capacity.",
+      },
+      {
+        q: "Do you serve clubs from Maryland and DC as well?",
+        a: "Yes. The DC metro is treated as a single market for tour planning, with Washington Dulles as the primary gateway. Clubs from Maryland, the District and Northern Virginia use the same Dulles nonstop and the same tour formats apply.",
+      },
+    ],
+  },
+  {
+    slug: "washington",
+    name: "Washington",
+    abbreviation: "WA",
+    hero_photo: "/photos/veterans-soccer-tour-camp-nou-stadium.jpg",
+    og_summary:
+      "Spain soccer tours for Washington State clubs, high schools and college programs. One-stop routing from Seattle to Madrid via the East Coast or a European hub. Sounders academy ecosystem and one of the strongest youth development cultures in the country.",
+    intro:
+      "Washington State punches far above its size in youth soccer, with the Seattle Sounders academy and a development culture, led by clubs like Crossfire Premier, that has produced a remarkable number of professional and national-team players. Odisea Tours has hosted US soccer programs since 2005, and Washington groups travel on a one-stop routing from Seattle to Madrid, planned around the long flight day with a protected rest day on arrival.",
+    soccer_landscape:
+      "Washington Youth Soccer registers a deep competitive base for a state its size, and the Seattle Sounders FC run one of the most respected MLS Next academies in the country. Crossfire Premier and a handful of other Puget Sound clubs have a national reputation for development that outstrips the state's population. ECNL fields a strong Washington contingent across both genders. The WIAA high school season runs in the fall, which leaves spring break and summer clear for international travel.",
+    major_soccer_organisations: [
+      "Washington Youth Soccer",
+      "ECNL Northwest",
+      "MLS Next (Seattle Sounders FC academy)",
+      "NPL Northwest",
+      "Washington Interscholastic Activities Association (WIAA)",
+    ],
+    cities_we_serve: [
+      { slug: "seattle", name: "Seattle and Puget Sound", note: "Sounders academy ecosystem, Crossfire Premier and other nationally respected clubs, Sea-Tac gateway with one-stop routing to Spain" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "Washington has no nonstop service to Spain, so Seattle (SEA) groups route one-stop, either eastbound through a US gateway like New York or Chicago onto an Iberia or American nonstop to Madrid, or through a European hub such as London, Amsterdam or Paris. Total elapsed time is around 14 to 16 hours. We schedule departures so the arrival in Madrid lands in the morning and protect Day 1 as a rest day before training begins.",
+    gateway_airports: ["SEA (one-stop via JFK, ORD or a European hub)", "feeder connections from Spokane (GEG) and Portland (PDX)"],
+    why_state_picks_spain: [
+      "Washington's development culture, led by the Sounders academy and clubs like Crossfire Premier, is among the strongest in the country, and a Spain tour gives those players academy-level European opposition matched to their level.",
+      "The WIAA fall soccer season leaves spring break and summer wide open for a Spain tour with no conflict with the competitive calendar.",
+      "After two decades of running long-haul US groups, including annual Hawaii tours since 2019, our Day 1 rest protocol and long-flight logistics are built for exactly the routing Washington groups face.",
+    ],
+    ideal_audiences: [
+      "Seattle Sounders academy and affiliate sides",
+      "Nationally respected Puget Sound clubs",
+      "ECNL clubs across Washington Youth Soccer",
+      "WIAA varsity high school programs",
+      "Pac-12 and West Coast Conference college soccer programs",
+    ],
+    best_seasons:
+      "Summer (mid-June through late July) and spring break (late March or early April) are the two most-booked windows for Washington youth clubs. The WIAA fall high school season means most Washington school programs travel in spring or early summer. The one-stop routing is smoothest outside the December holiday peak.",
+    faqs: [
+      {
+        q: "How long is the journey from Washington to Spain?",
+        a: "Washington has no nonstop service to Spain, so Seattle (SEA) groups route one-stop, either eastbound through New York or Chicago onto an Iberia or American nonstop to Madrid, or through a European hub. Total elapsed time is around 14 to 16 hours. We schedule the routing so the arrival in Madrid lands in the morning and we protect Day 1 as a rest day.",
+      },
+      {
+        q: "Is the long flight worth it from the West Coast?",
+        a: "Yes. We have run long-haul US groups for two decades, including annual Hawaii tours since 2019 on a journey longer than Seattle's. The Day 1 rest protocol means no training session in the first 24 hours, so players arrive, recover, and train fresh on Day 2.",
+      },
+      {
+        q: "What does a Spain tour from Washington cost per player?",
+        a: "A 10-day Spain soccer tour from Washington sits between roughly $3,595 and $4,300 per player for ground services, with the slightly higher range reflecting the one-stop routing. International flights are quoted separately because the Seattle-to-Madrid connection varies by season and how far ahead the group books.",
+      },
+      {
+        q: "Which Washington clubs do you work with?",
+        a: "We host competitive clubs, high school programs and college rosters from across Washington State. We do not represent ourselves as an official partner of the Seattle Sounders and our fixtures are against Spanish academy or amateur sides matched to your age and level.",
+      },
+    ],
+  },
+  {
+    slug: "colorado",
+    name: "Colorado",
+    abbreviation: "CO",
+    hero_photo: "/photos/odisea-tours-spanish-fa-rfef-training.jpg",
+    og_summary:
+      "Spain soccer tours for Colorado clubs, high schools and college programs. One-stop routing from Denver to Madrid via the East Coast. Colorado Rapids and Real Colorado ecosystem, one of the strongest development states in the Mountain West.",
+    intro:
+      "Colorado is one of the strongest youth soccer development states in the Mountain West, anchored by the Colorado Rapids academy and Real Colorado, a club with a national reputation across both the ECNL and the player-development pipeline. Odisea Tours has hosted US soccer programs since 2005, and Colorado groups travel on a one-stop routing from Denver to Madrid, planned around the flight day with a protected rest day on arrival.",
+    soccer_landscape:
+      "The Colorado Soccer Association registers a deep competitive base, and the altitude-trained Colorado player has a long history of overperforming relative to the state's size. The Colorado Rapids run their MLS Next academy in the Denver metro, and Real Colorado is one of the most respected ECNL clubs in the country across both genders. The CHSAA high school season runs in the spring, which leaves summer and the December break clear for international travel.",
+    major_soccer_organisations: [
+      "Colorado Soccer Association",
+      "ECNL Mountain",
+      "MLS Next (Colorado Rapids academy)",
+      "Real Colorado and other nationally ranked clubs",
+      "Colorado High School Activities Association (CHSAA)",
+    ],
+    cities_we_serve: [
+      { slug: "denver", name: "Denver and the Front Range", note: "Colorado Rapids and Real Colorado ecosystem, dense club base from Boulder through Colorado Springs, DEN gateway with one-stop routing to Spain" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "Colorado has no nonstop service to Spain, so Denver (DEN) groups route one-stop, typically eastbound through a US gateway like New York, Chicago or Dallas onto an Iberia or American nonstop to Madrid. Total elapsed time is around 13 to 15 hours. We schedule departures so the arrival in Madrid lands in the morning and protect Day 1 as a rest day before training begins.",
+    gateway_airports: ["DEN (one-stop via JFK, ORD or DFW)", "feeder connections from Colorado Springs (COS)"],
+    why_state_picks_spain: [
+      "Colorado's altitude-trained players have a long history of overperforming, and a Spain tour gives clubs like Real Colorado and the Rapids academy the European academy-level opposition that matches their level.",
+      "The CHSAA spring soccer season leaves summer and the December break wide open for a Spain tour with no conflict with the competitive calendar.",
+      "Denver's central hub position means a clean single connection to an East Coast or Dallas nonstop to Madrid, with no European-hub detour required.",
+    ],
+    ideal_audiences: [
+      "Colorado Rapids academy and affiliate sides",
+      "Real Colorado and other nationally ranked clubs",
+      "ECNL clubs across the Colorado Soccer Association",
+      "CHSAA varsity high school programs",
+      "Pac-12, Big 12 and Mountain West college soccer programs",
+    ],
+    best_seasons:
+      "Summer (June through late July) and the December break are the two most-booked windows for Colorado youth clubs. The CHSAA spring high school season means most Colorado school programs travel in early summer. College programs typically travel in late September.",
+    faqs: [
+      {
+        q: "How long is the journey from Colorado to Spain?",
+        a: "Colorado has no nonstop service to Spain, so Denver (DEN) groups route one-stop, typically eastbound through New York, Chicago or Dallas onto an Iberia or American nonstop to Madrid. Total elapsed time is around 13 to 15 hours. We schedule the routing so the arrival lands in the morning and we protect Day 1 as a rest day.",
+      },
+      {
+        q: "Does a tour fit around the CHSAA soccer calendar?",
+        a: "Yes. CHSAA high school soccer runs in the spring, so summer (June and July) and the December break are the cleanest windows for a Colorado school program. Both leave the competitive season untouched.",
+      },
+      {
+        q: "What does a Spain tour from Colorado cost per player?",
+        a: "A 10-day Spain soccer tour from Colorado sits between roughly $3,495 and $4,200 per player for ground services, with the range reflecting the one-stop routing. International flights are quoted separately because the Denver-to-Madrid connection varies by season and booking lead time.",
+      },
+      {
+        q: "Do you work with Real Colorado or the Rapids academy?",
+        a: "We host competitive clubs, high school programs and college rosters from across Colorado. We do not represent ourselves as an official partner of the Colorado Rapids or Real Colorado, and our fixtures are against Spanish academy or amateur sides matched to your age and level.",
+      },
+    ],
+  },
+  {
+    slug: "arizona",
+    name: "Arizona",
+    abbreviation: "AZ",
+    hero_photo: "/photos/odisea-tours-valencia-cf-coach-instructing.jpg",
+    og_summary:
+      "Spain soccer tours for Arizona clubs, high schools and college programs. One-stop routing from Phoenix to Madrid via Dallas or the East Coast. Phoenix Rising academy ecosystem and a fast-growing Southwest youth base.",
+    intro:
+      "Arizona runs a fast-growing youth soccer base across the Phoenix and Tucson metros, anchored by the Phoenix Rising FC academy and a deep Hispanic soccer culture that makes Spain a natural first international destination. Odisea Tours has hosted US soccer programs since 2005, and Arizona groups travel on a clean one-stop routing from Phoenix to Madrid through Dallas, planned around the flight day with a protected rest day on arrival.",
+    soccer_landscape:
+      "The Arizona Youth Soccer Association registers a fast-growing competitive base, and the Phoenix Rising FC academy anchors the state's MLS Next presence. ECNL fields a growing Arizona contingent across both genders, and the year-round training climate means Arizona players are match-fit at almost any point in the calendar. The AIA high school season runs in the winter, which leaves spring break, summer and the early-fall windows clear for international travel.",
+    major_soccer_organisations: [
+      "Arizona Youth Soccer Association (AYSA)",
+      "ECNL Southwest",
+      "MLS Next (Phoenix Rising FC academy)",
+      "NPL Desert",
+      "Arizona Interscholastic Association (AIA)",
+    ],
+    cities_we_serve: [
+      { slug: "phoenix", name: "Phoenix and the Valley", note: "Phoenix Rising academy ecosystem, ECNL and NPL clubs across the Valley of the Sun, PHX gateway with one-stop routing via Dallas" },
+    ],
+    real_clients: [],
+    flight_overview:
+      "Arizona has no nonstop service to Spain, so Phoenix (PHX) groups route one-stop, most cleanly through Dallas (DFW) onto American's 9.5-hour nonstop to Madrid, the shortest direct US-to-Madrid flight west of the Mississippi. Total elapsed time is around 14 hours. Tucson (TUS) groups connect through Phoenix or Dallas. We schedule departures so the arrival lands in the morning and protect Day 1 as a rest day.",
+    gateway_airports: ["PHX (one-stop via DFW onto AA nonstop to MAD)", "TUS (Tucson, connect through PHX or DFW)"],
+    why_state_picks_spain: [
+      "Phoenix routes cleanly through Dallas onto the shortest direct US-to-Madrid nonstop, so Arizona groups face a single connection rather than a European-hub detour.",
+      "The AIA winter high school season leaves spring break, summer and early fall all open for a Spain tour with no conflict with the competitive calendar.",
+      "Arizona's deep Hispanic soccer culture means most groups have players, coaches or families who handle Spanish, so the trip reads as cultural homecoming rather than foreign expedition.",
+    ],
+    ideal_audiences: [
+      "Phoenix Rising academy and affiliate sides",
+      "ECNL clubs across the Arizona Youth Soccer Association",
+      "AIA varsity high school programs",
+      "Pac-12, Big 12 and WAC college soccer programs",
+      "Competitive club and select squads from U13 up",
+    ],
+    best_seasons:
+      "Spring break (March) and summer (June through late July) are the two most-booked windows for Arizona youth clubs. The AIA winter high school season gives Arizona programs unusual flexibility, with the early-fall window also clear. College programs typically travel in late September.",
+    faqs: [
+      {
+        q: "How long is the journey from Arizona to Spain?",
+        a: "Arizona has no nonstop service to Spain, so Phoenix (PHX) groups route one-stop, most cleanly through Dallas onto American's 9.5-hour nonstop to Madrid, the shortest direct US-to-Madrid flight west of the Mississippi. Total elapsed time is around 14 hours. Tucson groups connect through Phoenix or Dallas.",
+      },
+      {
+        q: "Does a tour fit around the AIA soccer calendar?",
+        a: "Yes, and Arizona has unusual flexibility because the AIA runs high school soccer in the winter. Spring break, summer and early fall are all clean windows for an Arizona school program, none of which touch the competitive season.",
+      },
+      {
+        q: "What does a Spain tour from Arizona cost per player?",
+        a: "A 10-day Spain soccer tour from Arizona sits between roughly $3,495 and $4,200 per player for ground services, with the range reflecting the one-stop routing through Dallas. International flights are quoted separately because the Phoenix-to-Madrid connection varies by season and booking lead time.",
+      },
+      {
+        q: "Can the tour include Spanish-language immersion?",
+        a: "Yes. For high school programs we run a Spanish-immersion variant where a Spanish-only guide leads the group and players are pushed into the language from arrival. Given Arizona's deep Hispanic soccer culture, this works particularly well for school programs with established Spanish departments.",
       },
     ],
   },

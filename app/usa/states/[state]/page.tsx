@@ -3,6 +3,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { US_STATES, usStateBySlug, type UsState } from "@/content/us-states";
+import { US_CITIES } from "@/content/us-cities";
+
+const CITY_PAGE_SLUGS = new Set(US_CITIES.map((c) => c.slug));
 
 type Props = { params: Promise<{ state: string }> };
 
@@ -231,7 +234,7 @@ export default async function UsStatePage({ params }: Props) {
             </h2>
             <div className="mt-12 grid md:grid-cols-2 gap-5">
               {s.cities_we_serve.map((c) => {
-                const hasOwnPage = !["honolulu", "kailua-kona"].includes(c.slug);
+                const hasOwnPage = CITY_PAGE_SLUGS.has(c.slug);
                 const href = hasOwnPage ? `/usa/${c.slug}` : "/plan-your-tour";
                 return (
                   <Link
@@ -291,26 +294,28 @@ export default async function UsStatePage({ params }: Props) {
       </section>
 
       {/* REAL CLIENTS */}
-      <section className="paper-texture py-20 md:py-24 px-6 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="rule-label font-mono-editorial text-[0.62rem] tracking-[0.28em] uppercase text-ink/55 mb-6">
-            05 / {s.name} groups we have hosted
+      {s.real_clients.length > 0 && (
+        <section className="paper-texture py-20 md:py-24 px-6 md:px-10">
+          <div className="max-w-[1100px] mx-auto">
+            <div className="rule-label font-mono-editorial text-[0.62rem] tracking-[0.28em] uppercase text-ink/55 mb-6">
+              05 / {s.name} groups we have hosted
+            </div>
+            <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.8rem)] uppercase leading-[1.05] max-w-[24ch]">
+              Real {s.name} programs, <span className="font-display-italic text-gold-deep">real itineraries</span>.
+            </h2>
+            <div className="mt-10 space-y-5 max-w-[68ch]">
+              {s.real_clients.map((c) => (
+                <div key={c} className="border-l-2 border-gold pl-6 py-2">
+                  <p className="text-ink-soft leading-relaxed text-[1.02rem]">{c}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 text-ink/55 text-sm max-w-[60ch] leading-relaxed">
+              Specific club and program names beyond those listed are shared on the planning call, when relevant to your group&apos;s profile and only with the prior client&apos;s permission.
+            </p>
           </div>
-          <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.8rem)] uppercase leading-[1.05] max-w-[24ch]">
-            Real {s.name} programs, <span className="font-display-italic text-gold-deep">real itineraries</span>.
-          </h2>
-          <div className="mt-10 space-y-5 max-w-[68ch]">
-            {s.real_clients.map((c) => (
-              <div key={c} className="border-l-2 border-gold pl-6 py-2">
-                <p className="text-ink-soft leading-relaxed text-[1.02rem]">{c}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-8 text-ink/55 text-sm max-w-[60ch] leading-relaxed">
-            Specific club and program names beyond those listed are shared on the planning call, when relevant to your group's profile and only with the prior client's permission.
-          </p>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* WHY SPAIN */}
       <section className="bg-ink text-paper py-20 md:py-24 px-6 md:px-10">

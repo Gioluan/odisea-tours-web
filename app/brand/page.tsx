@@ -454,8 +454,6 @@ export default function BrandPage() {
                 Phone
               </p>
               <p className="font-mono-editorial text-sm">
-                +34 635 745 527
-                <br />
                 +34 670 059 797
               </p>
             </div>

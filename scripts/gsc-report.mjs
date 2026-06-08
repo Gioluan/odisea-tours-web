@@ -22,7 +22,7 @@ const args = process.argv.slice(2);
 const SAMPLE = args.includes("--sample");
 const DAYS = Number((args.find((a) => a.startsWith("--days=")) || "--days=28").split("=")[1]) || 28;
 const KEY_PATH = process.env.GSC_KEY || resolve(process.cwd(), ".gsc-key.json");
-const SITE = process.env.GSC_SITE || "https://odisea-tours.com/";
+const SITE = process.env.GSC_SITE || "sc-domain:odisea-tours.com";
 const OUT_DIR = resolve(process.cwd(), "scripts", "gsc-out");
 
 function b64url(input) {
@@ -37,7 +37,30 @@ function isoDate(d) {
   return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
 }
 
-async function getAccessToken(key) {
+async function getAccessToken() {
+  // Prefer OAuth (user account that owns the property) when present, since
+  // Search Console refuses service-account emails as users on some properties.
+  const oauthPath = resolve(process.cwd(), ".gsc-oauth.json");
+  if (existsSync(oauthPath)) {
+    const o = JSON.parse(readFileSync(oauthPath, "utf8"));
+    const res = await fetch("https://oauth2.googleapis.com/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        client_id: o.client_id,
+        client_secret: o.client_secret,
+        refresh_token: o.refresh_token,
+        grant_type: "refresh_token",
+      }),
+    });
+    if (!res.ok) throw new Error(`OAuth refresh failed (${res.status}): ${await res.text()}`);
+    return (await res.json()).access_token;
+  }
+
+  if (!existsSync(KEY_PATH)) {
+    throw new Error(`No credentials found. Run "node scripts/gsc-auth.mjs <oauth-client.json>" to authorize, or drop a service-account key at ${KEY_PATH}.`);
+  }
+  const key = JSON.parse(readFileSync(KEY_PATH, "utf8"));
   const now = Math.floor(Date.now() / 1000);
   const header = { alg: "RS256", typ: "JWT" };
   const claim = {
@@ -187,12 +210,7 @@ async function main() {
     const s = sampleData();
     data = { startDate, endDate, sample: true, ...s };
   } else {
-    if (!existsSync(KEY_PATH)) {
-      console.error(`No key at ${KEY_PATH}. Run with --sample to preview, or drop the service-account JSON key there.`);
-      process.exit(1);
-    }
-    const key = JSON.parse(readFileSync(KEY_PATH, "utf8"));
-    const token = await getAccessToken(key);
+    const token = await getAccessToken();
     const base = { startDate, endDate };
     const [totalRows, queries, pages] = await Promise.all([
       query(token, { ...base, dimensions: [] }),

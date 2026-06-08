@@ -45,3 +45,4 @@ next-env.d.ts
 # gsc reporting (key + generated reports)
 .gsc-key.json
 scripts/gsc-out/
+.gsc-oauth.json

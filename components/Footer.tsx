@@ -45,6 +45,7 @@ export default function Footer() {
                 <li><Link href="/veterans" className="link-rule">Veterans</Link></li>
                 <li><Link href="/youth" className="link-rule">Youth</Link></li>
                 <li><Link href="/schools" className="link-rule">Schools</Link></li>
+                <li><Link href="/corporate-retreats" className="link-rule">Corporate Retreats</Link></li>
                 <li><Link href="/team" className="link-rule">Team</Link></li>
                 <li><Link href="/journal" className="link-rule">Journal</Link></li>
                 <li><Link href="/plan-your-tour" className="link-rule">Plan a Tour</Link></li>

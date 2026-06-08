@@ -324,7 +324,7 @@ export default function TermsPage() {
               <a href="mailto:bookings@odisea-tours.com" className="text-gold-deep underline underline-offset-2 hover:text-gold">
                 bookings@odisea-tours.com
               </a>{" "}
-              or call <strong>+34 635 745 527</strong>. The shortest answer is usually a 15 minute call.
+              or call <strong>+34 670 059 797</strong>. The shortest answer is usually a 15 minute call.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/plan-your-tour" className="btn-editorial">

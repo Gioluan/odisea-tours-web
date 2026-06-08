@@ -43,7 +43,8 @@ Odisea is a service-area business (Spanish company, clients abroad), so GBP valu
 
 - **[JUAN]** Create / claim the Google Business Profile for Ground Agents Solutions S.L. / Odisea Tours. Use the registered Benicàssim 12560 address, set it as a service-area business, list service areas. Verification needs a code sent to the business (postcard or phone), which only Juan can complete.
 - **[JUAN]** Same for Bing Places.
-- **NAP must match exactly everywhere**: "Odisea Tours" / Benicàssim, Castellón 12560, Spain / +34 670 059 797. (The site phone was just normalized to this number across schema, footer, contact, terms and llms.txt. The `/brand` page still lists a second number, +34 635 745 527, alongside it. Confirm whether 635 is a real secondary line to keep or a legacy number to remove everywhere.)
+- **GBP already exists** (confirmed 2026-06-08). Action: verify the profile's NAP matches the site exactly: "Odisea Tours" / Benicàssim, Castellón 12560, Spain / **+34 670 059 797**. Any mismatch (old phone, different name format) dilutes the entity signal.
+- **NAP is now consistent across the whole site** as of 2026-06-08: the discontinued +34 635 745 527 number was removed everywhere (schema, footer, contact, terms, brand, llms.txt, and the sky-chavda proposal), leaving the single canonical +34 670 059 797.
 
 ## 5. Citations and directory listings (consistency layer)
 
@@ -61,12 +62,12 @@ The Ground Agents ecosystem can pass a little relevant authority, but over-linki
 
 ---
 
-## What needs a decision from Juan to unblock
+## Decisions (resolved 2026-06-08)
 
-1. **Past-client link + review outreach**: who can we approach, and do you want me to draft the messages? (Section 1, 2)
-2. **Google Business Profile**: do you want to create/claim it? Only you can verify. (Section 4)
-3. **The second phone number** (+34 635 745 527 on `/brand`): keep as a real secondary line, or retire it everywhere for a single clean NAP? (Section 4)
-4. **Trade association memberships**: does Odisea hold any we can list for a directory link? (Section 5)
+1. **Past-client link + review outreach**: Juan handles directly. No drafting needed from me.
+2. **Google Business Profile**: already exists. Remaining action is the NAP-match check above.
+3. **Second phone number**: discontinued and removed site-wide. Done.
+4. **Trade association memberships**: open. "Trade body" means an industry membership organisation (e.g. ASTA or USTOA in the US travel trade, or a Spanish tourism / DMC association). Many run a public member directory that links to each member's site, which is a clean, relevant backlink. Only relevant if Odisea is genuinely a member of one. Not a priority.
 
 ## What I can start immediately without you
 

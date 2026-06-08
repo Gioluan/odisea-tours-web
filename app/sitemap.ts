@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { POSTS } from "@/content/journal";
 import { TOURS } from "@/content/tours";
 import { US_CITIES } from "@/content/us-cities";
+import { US_STATES } from "@/content/us-states";
 import { UK_CITIES } from "@/content/uk-cities";
 import { AU_CITIES } from "@/content/australia-cities";
 
@@ -38,6 +39,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8,
+  }));
+
+  const usStateRoutes: MetadataRoute.Sitemap = US_STATES.map((s) => ({
+    url: `${SITE}/usa/states/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85,
   }));
 
   const ukCityRoutes: MetadataRoute.Sitemap = UK_CITIES.map((c) => ({
@@ -84,6 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...journalRoutes,
     ...categoryRoutes,
     ...usCityRoutes,
+    ...usStateRoutes,
     ...ukCityRoutes,
     ...auCityRoutes,
   ];

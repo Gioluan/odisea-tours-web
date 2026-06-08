@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { US_CITIES } from "@/content/us-cities";
+import { US_STATES } from "@/content/us-states";
 import JournalLinks from "@/components/JournalLinks";
 
 export const metadata: Metadata = {
@@ -83,6 +84,43 @@ export default function UsaIndexPage() {
               Not in one of these metros? Spain tours work from every US city. Tell us where you are flying from and we build the routing.
             </p>
             <Link href="/plan-your-tour" className="inline-block mt-6 btn-editorial">Plan a tour</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* STATE HUBS */}
+      <section className="bg-ink text-paper py-20 md:py-24 px-6 md:px-10">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="rule-label font-mono-editorial text-[0.62rem] tracking-[0.28em] uppercase text-paper/70 mb-6">
+            State guides
+          </div>
+          <h2 className="font-display text-[clamp(1.9rem,3.6vw,3rem)] uppercase leading-[1.05] max-w-[24ch]">
+            Spain tours <span className="font-display-italic text-gold">by US state</span>.
+          </h2>
+          <p className="mt-6 max-w-[60ch] text-paper/80 leading-relaxed">
+            State-level guides covering the soccer landscape, gateway airports, ideal travel windows and the clubs we have hosted from each market.
+          </p>
+          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {US_STATES.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/usa/states/${s.slug}`}
+                className="group border border-paper/20 p-7 hover:bg-paper hover:text-ink transition-colors"
+              >
+                <div className="font-mono-editorial text-[0.6rem] tracking-[0.26em] uppercase text-paper/60 group-hover:text-ink/55 mb-3">
+                  {s.abbreviation} · State guide
+                </div>
+                <h3 className="font-display text-2xl uppercase">
+                  Spain tours from <span className="font-display-italic text-gold">{s.name}</span>
+                </h3>
+                <p className="mt-4 text-paper/80 group-hover:text-ink-soft leading-relaxed text-[0.97rem]">
+                  {s.og_summary}
+                </p>
+                <span className="inline-block mt-5 font-mono-editorial text-[0.58rem] tracking-[0.26em] uppercase text-gold group-hover:text-gold-deep">
+                  Read the {s.name} guide →
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

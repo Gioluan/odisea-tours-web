@@ -138,6 +138,20 @@ const nextConfig: NextConfig = {
       { source: "/best-football-tours-spain", destination: "/journal/youth-soccer-tours-to-spain-complete-guide", permanent: true },
       { source: "/best-soccer-tour-spain", destination: "/journal/youth-soccer-tours-to-spain-complete-guide", permanent: true },
       { source: "/best-football-tour-spain", destination: "/journal/youth-soccer-tours-to-spain-complete-guide", permanent: true },
+
+      // GSC legacy-URL cleanup 2026-06-09: WP paths still indexed, funnel corporate
+      // variants to the new /corporate-retreats pillar, partnership to contact.
+      { source: "/corporate-tours", destination: "/corporate-retreats", permanent: true },
+      { source: "/corporate-tours/:path*", destination: "/corporate-retreats", permanent: true },
+      { source: "/corporate-tour", destination: "/corporate-retreats", permanent: true },
+      { source: "/corporate", destination: "/corporate-retreats", permanent: true },
+      { source: "/corporate-retreat", destination: "/corporate-retreats", permanent: true },
+      { source: "/company-retreats", destination: "/corporate-retreats", permanent: true },
+      { source: "/company-retreat", destination: "/corporate-retreats", permanent: true },
+      { source: "/team-building", destination: "/corporate-retreats", permanent: true },
+      { source: "/retreats", destination: "/corporate-retreats", permanent: true },
+      { source: "/partnership", destination: "/contact", permanent: true },
+      { source: "/partnerships", destination: "/contact", permanent: true },
     ];
   },
 };

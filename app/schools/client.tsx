@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import JournalLinks from "@/components/JournalLinks";
+import { SCHOOLS_FAQ } from "./faq";
 
 const HERO_PHOTOS = [
   { src: "/photos/odisea-tours-group-barcelona-cathedral.jpg", alt: "School group at Barcelona Cathedral on educational sport tour", caption: "Culture meets sport -- Barcelona Cathedral" },
@@ -253,6 +254,30 @@ export default function SchoolsPage() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="bg-paper py-16 md:py-20 px-6 md:px-10">
+        <div className="max-w-[900px] mx-auto">
+          <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/55 mb-6">
+            <span>Coaches &amp; athletic directors ask</span>
+          </div>
+          <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1.05] max-w-[26ch]">
+            Organizing a high school soccer trip to Spain,{" "}
+            <span className="font-display-italic text-gold-deep">answered.</span>
+          </h2>
+          <div className="mt-10 divide-y divide-ink/12">
+            {SCHOOLS_FAQ.map((f) => (
+              <details key={f.q} className="group py-5">
+                <summary className="cursor-pointer list-none flex items-start justify-between gap-6">
+                  <h3 className="font-display text-lg md:text-xl leading-snug">{f.q}</h3>
+                  <span className="font-mono-editorial text-2xl text-gold-deep transition-transform group-open:rotate-45 shrink-0" aria-hidden>+</span>
+                </summary>
+                <p className="mt-4 text-ink-soft leading-relaxed max-w-[68ch]">{f.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

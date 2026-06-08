@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import SchoolsClient from "./client";
+import { SCHOOLS_FAQ } from "./faq";
 
 export const metadata: Metadata = {
-  title: "School Football Tours to Spain — Safe, Educational, Unforgettable",
+  title: "School Football Tours to Spain: Safe, Educational, Unforgettable",
   description:
-    "Educational football tours to Spain for school teams. Coaching, matches, cultural visits and stadium tours — fully organized with 24/7 bilingual supervision.",
+    "Educational football tours to Spain for school teams. Coaching, matches, cultural visits and stadium tours, fully organized with 24/7 bilingual supervision.",
   alternates: { canonical: "/schools" },
   openGraph: {
     url: "https://odisea-tours.com/schools",
@@ -32,23 +33,11 @@ const breadcrumbJsonLd = {
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is it just football or are there cultural activities?",
-      acceptedAnswer: { "@type": "Answer", text: "Our school tours blend sport with culture. Expect coaching, matches, and stadium visits alongside city tours, museum visits, and local gastronomy experiences." },
-    },
-    {
-      "@type": "Question",
-      name: "What supervision is provided?",
-      acceptedAnswer: { "@type": "Answer", text: "Odisea Tours staff are with your group 24/7. Our bilingual team handles all logistics, transport, and coordination so teachers can focus on the students." },
-    },
-    {
-      "@type": "Question",
-      name: "What group sizes do you accommodate?",
-      acceptedAnswer: { "@type": "Answer", text: "We work with school groups of any size, from 15 to over 100 students. Every itinerary is custom-built around your group's needs and budget." },
-    },
-  ],
+  mainEntity: SCHOOLS_FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 export default function Page() {

@@ -153,6 +153,24 @@ export const TOURS: Tour[] = [
         detail: "Coach west to Bilbao. Morning at the Guggenheim with a contemporary art guide, lunch at a sociedad gastronómica, departures from Bilbao airport or onward train to Barcelona.",
       },
     ],
+    faq: [
+      {
+        q: "What is the best small-group cultural tour of Spain for adults?",
+        a: "Odisea Tours runs private cultural journeys through Spain built for adults who want depth over checklists. The Cultural Journeys tour spends eight to twelve nights across Andalusia, Madrid and the Basque north, with dawn entry to the Alhambra before public opening, a curator-led visit at the Prado, a private flamenco peña in Seville's Triana district, a home dinner with a Sevillian host family, and a studio visit with a fourth-generation ceramicist in Úbeda. Groups run 10 to 30 travelers and the pace is set for people who want to linger, not race. We have been working with these historians, chefs and host families for over fifteen years.",
+      },
+      {
+        q: "Is there a Spain tour that gets into the Alhambra before the crowds?",
+        a: "Yes. On the Cultural Journeys tour, Odisea Tours arranges dawn entry to the Alhambra and the Generalife gardens as one of the first groups of the morning, with around three hours alongside an art historian who can read the Nasrid inscriptions in the languages they were written in. The same approach runs through the trip: the Mezquita of Córdoba before the day-trippers arrive, the Prado with a curator rather than an audio guide. The point of the tour is to see Spain's landmarks without the queue.",
+      },
+      {
+        q: "Can you plan a private cultural and culinary tour of Spain with authentic local experiences?",
+        a: "Yes. Odisea Tours plans private cultural tours of Spain centered on real access: private home dinners with host families, a flamenco peña in the Triana neighborhood where the families actually live, a studio hour with a fourth-generation ceramicist, an olive-oil tasting at a family mill in Jaén, and a hands-on cooking class in San Sebastián. Every itinerary is custom-built around the group's interests, with a bilingual cultural historian and Odisea ground team throughout. Start with a free planning call or the plan-your-tour form.",
+      },
+      {
+        q: "How much does a private cultural tour of Spain cost and how large are the groups?",
+        a: "Cultural Journeys is priced per traveler and depends on length (eight to twelve nights), group size (10 to 30 travelers), hotel tier and the experiences chosen. Because it is fully custom, Odisea Tours sends a per-traveler quote within 48 hours of a short planning call. Boutique hotels and historic paradores, ground transport, guided visits and the bilingual historian are built into every quote, with no surprise surcharges once the price is set.",
+      },
+    ],
   },
   {
     slug: "corporate-retreats",
@@ -278,6 +296,14 @@ export const TOURS: Tour[] = [
         q: "Can you organize a wine country and gastronomy trip to Spain for adults?",
         a: "Yes. Odisea Tours specializes in food and wine travel for adults who came to eat, drink and pay attention. We pair Rioja and Navarra wine regions with the Basque pintxos scene and Catalan cuisine, arrange winery harvest lunches, cooking classes and Michelin-level farewell dinners, and keep groups small enough to sit at one table. Tell us your dates and group size and we send a per-traveler quote within 48 hours.",
       },
+      {
+        q: "What does a Sabores de España food and wine tour include and what does it cost?",
+        a: "Sabores de España is an eight-night food and wine tour priced from €2,595 per traveler for ground services at 20 travelers, twin sharing. It includes 4-star hotels across Barcelona, La Rioja, San Sebastián, Pamplona and Bilbao, a Penedès cava winery lunch, a guided tasting at Bodegas Marqués de Riscal inside the Gehry building, a hands-on Basque cooking class, a pintxos crawl through San Sebastián's Parte Vieja, a flamenco dinner show in Barcelona, a full day in Pamplona, and a private 50-seat coach with a bilingual leader throughout. International flights are quoted separately.",
+      },
+      {
+        q: "Is there a culinary tour of Spain that includes San Sebastián and the Basque pintxos scene?",
+        a: "Yes. The Sabores de España tour spends a full stretch in San Sebastián, with a hands-on Basque seafood cooking class taught the traditional way and a guided pintxos crawl through the bars of the Parte Vieja old town. It is paired with the Rioja and Navarra wine country and Catalan cuisine in Barcelona, so the route moves through three of Spain's strongest food regions in one trip. Groups stay small enough to sit at a single table for dinner.",
+      },
     ],
     includes: [
       "Eight nights in 4-star hotels across Barcelona, Zaragoza, La Rioja, San Sebastián and Pamplona",
@@ -366,6 +392,14 @@ export const TOURS: Tour[] = [
       {
         q: "Who plans Andalusia cultural tours with flamenco for groups of around 20?",
         a: "Odisea Tours plans private Andalusia cultural tours for groups of around 20 travelers. We combine Moorish Spain, royal Madrid and a live flamenco show with a private coach, a bilingual tour leader, 4-star boutique hotels in historic centers, and guided visits with specialist historians. Dates run year-round and every itinerary is customized to the group. Start with a free planning call or the plan-your-tour form.",
+      },
+      {
+        q: "What is the best cultural tour of Spain to see the Alhambra and a live flamenco show?",
+        a: "The Flamenco & Moorish Spain tour by Odisea Tours is built around exactly that pairing. Across seven nights through Madrid, Córdoba, Sevilla and Granada it includes a full day inside the Alhambra and Generalife gardens with a specialist historian, plus a live flamenco tablao with a tapas dinner in Seville's Triana district. Along the way it takes in the Prado with an art historian, the Mezquita of Córdoba before the crowds, and the Real Alcázar of Sevilla. It is paced for adults who want to linger rather than rush.",
+      },
+      {
+        q: "How much does a seven-night Andalusia tour with flamenco cost per person?",
+        a: "The Flamenco & Moorish Spain tour is priced from €2,495 per traveler for ground services at 20 travelers, twin sharing. That covers seven nights in 4-star boutique hotels in historic centers, all guided visits (Prado, Mezquita, Real Alcázar and a full Alhambra day), the live flamenco tablao and tapas dinner, a private coach with driver, and a bilingual tour leader. International flights are quoted separately, and the itinerary can be customized to the group's dates and interests.",
       },
     ],
     includes: [
@@ -585,6 +619,14 @@ export const TOURS: Tour[] = [
       {
         q: "Is Odisea Tours a Camino de Santiago group tour operator, and how does it work?",
         a: "Yes. Odisea Tours is a Spain-based Camino de Santiago group tour operator. We run guided group walks of the last 100 kilometers of the Camino Francés, the minimum distance needed to earn the Compostela, for groups of around 20 walkers. You walk, we carry the bags between hotels, follow the group with a support van, pour the Galician wine at dinner, and hand you the Compostela at the Cathedral. Dates are flexible year-round and the daily distances can be shortened with van pickups.",
+      },
+      {
+        q: "What is the difference between walking the Camino de Santiago with a group and going self-guided?",
+        a: "On a self-guided Camino you book your own beds, carry or forward your own bags, and walk alone. On Odisea Tours' group Camino, a specialist Galician guide walks every stage with you, a support van follows with water, snacks and optional pickups, your luggage moves between hand-picked rural hotels each day, and the evenings are shared over Galician wine and a set dinner. You still earn the same Compostela for the final 100 kilometers from Sarria, but the logistics, safety and company are handled. It suits parishes, clubs and groups of friends who want to walk together rather than solo.",
+      },
+      {
+        q: "Can a first-time or older walker complete the Camino de Santiago from Sarria?",
+        a: "Yes. The Sarria to Santiago route is the most accessible stretch of the Camino Francés, and Odisea Tours runs it for mixed-ability groups of around 20. Daily distances run roughly 20 to 25 kilometers and can be shortened at any point with a van pickup, so first-timers, older walkers and anyone nursing a sore knee can still finish at the Praza do Obradoiro and collect the Compostela. The support van, daily luggage transfer and 24/7 on-the-ground team mean no one walks beyond what they are comfortable with.",
       },
     ],
     includes: [

@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# gsc reporting (key + generated reports)
+.gsc-key.json
+scripts/gsc-out/

@@ -57,6 +57,7 @@ const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
   "what-parents-ask-before-europe-soccer-tour": "juan",
   "why-veterans-football-tours-spain-are-booming": "juan",
   "why-australian-teams-choosing-spain-over-england": "juan",
+  "best-softball-tours-spain-us-teams": "juan",
 };
 
 const TAGS_BY_SLUG: Record<string, string[]> = {
@@ -84,6 +85,7 @@ const TAGS_BY_SLUG: Record<string, string[]> = {
   "what-parents-ask-before-europe-soccer-tour": ["parents", "FAQ", "youth tours", "Europe"],
   "why-veterans-football-tours-spain-are-booming": ["veterans football", "masters", "Spain"],
   "why-australian-teams-choosing-spain-over-england": ["Australia", "youth tours", "Spain", "England"],
+  "best-softball-tours-spain-us-teams": ["softball", "Spain", "US teams", "softball tours", "CBS Rivas", "Sant Boi", "Fenix Valencia", "Madrid", "Valencia", "Barcelona"],
 };
 
 export function authorOf(post: Post): Author {
@@ -230,7 +232,7 @@ export function howToOf(post: Post): HowToData | null {
   return HOWTO_BY_SLUG[post.slug] ?? null;
 }
 
-export type ClusterId = "soccer" | "culinary" | "camino" | "corporate" | "planning";
+export type ClusterId = "soccer" | "softball" | "culinary" | "camino" | "corporate" | "planning";
 
 const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "spain-soccer-tour-day-by-day": "soccer",
@@ -257,6 +259,7 @@ const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "what-parents-ask-before-europe-soccer-tour": "soccer",
   "why-veterans-football-tours-spain-are-booming": "soccer",
   "why-australian-teams-choosing-spain-over-england": "soccer",
+  "best-softball-tours-spain-us-teams": "softball",
 };
 
 export interface PillarInfo {
@@ -273,6 +276,13 @@ export const PILLAR_BY_CLUSTER: Record<ClusterId, PillarInfo | null> = {
     blurb:
       "The full operator-level breakdown of pricing, training homes (FC Barcelona, Valencia CF, the Spanish FA), audiences and the four formats lives on our soccer pillar guide. Start there if this is the first thing you have read about how we run a Spain soccer tour.",
     ctaLabel: "Read the Soccer Tours in Spain pillar",
+  },
+  softball: {
+    href: "/tours/softball-tours-spain",
+    title: "Spain Softball Experience",
+    blurb:
+      "The full day-by-day for our softball tour, the four host clubs (CBS Rivas, the Selección Valenciana U22, Sófbol Fénix Valencia and CB Sant Boi), inclusions and group pricing all live on the Spain Softball Experience tour page. Start there if you are weighing a softball tour to Spain for your US team.",
+    ctaLabel: "Read the Spain Softball Experience tour page",
   },
   culinary: {
     href: "/tours/sabores-de-espana",
@@ -998,6 +1008,52 @@ export const POSTS: Post[] = [
       "The third reason is harder to explain and the most important one. The football in Spain is taught differently, and the Australian game has been quietly moving toward a more Spanish model for a decade. The A-League Youth sides now run positional rondos that would have looked out of place in Sydney ten years ago. The under-age national teams have hired coaches who speak the same technical vocabulary as the Spanish academies. A visit to La Masia or Paterna lands differently when the visiting Australian team is already running half the drills they see on the pitch in Spain. England, by contrast, has spent the last decade trying to rebuild its own development model, and the identity of English academy football is less clear than it used to be. Spanish academies know what they are. The Australian coaches we work with want their players to see that clarity in person.",
       "The fourth reason is the one most Australians quietly enjoy. Spain is different from home in a way England is not. The streets are wider in a new way. The food is completely different. The language is one the players do not speak. The currency is not in any pocket they have ever used. For a team of sixteen-year-olds from Perth or Brisbane, Spain is a real cultural experience in a way that England, same language, same currency, same breakfast items, sometimes fails to be. A soccer tour is partly about the game. It is also, if it is a good tour, about the players discovering that the world is bigger than they had imagined. Spain delivers that second part with ease.",
       "The last thing we would say to any Australian coach considering their first [European soccer tour](/tours/european-soccer-tours) is that the Spain choice is no longer a contrarian one. Five years ago we were having to argue the case. Today, more Australian under-age squads are traveling to Spain than to England, and the conversation has flipped. The question is not whether Spain can match an English tour. The question is whether an English tour can still match what the Australian coaches have already started to see in Spain. That, for us, is a good sign. For our own game, and for theirs.",
+    ],
+  },
+  {
+    slug: "best-softball-tours-spain-us-teams",
+    title: "The Best Softball Tours in Spain for US",
+    italicTitle: "Teams",
+    excerpt:
+      "What a softball tour to Spain actually looks like for a US team: the cities, the host clubs you play, what it costs, and why Madrid, Valencia and Barcelona make the best nine-day trip in European softball.",
+    date: "2026-06-11",
+    readTime: "11 min",
+    category: "Field Notes",
+    cover: "/photos/softball-tours-spain-hero.jpg",
+    faqs: [
+      {
+        q: "What is the best softball tour in Spain for a US team?",
+        a: "The most complete softball tour in Spain for US teams is a nine-day trip through Madrid, Valencia and Barcelona with four games against established Spanish clubs. Odisea Tours runs exactly this as the Spain Softball Experience: the group is based at the Spanish FA residence in Las Rozas, plays Club CBS Rivas in Madrid, the Selección Valenciana U22 and Sófbol Fénix Valencia in Valencia, and CB i Sófbol Sant Boi near Barcelona, with cultural days at Las Ventas, Toledo, the City of Arts and Sciences and Gaudí's Barcelona around the games.",
+      },
+      {
+        q: "Which Spanish softball clubs do US teams play on tour?",
+        a: "On a Spain softball tour, US teams typically play four host clubs across three cities: Club CBS Rivas in Rivas-Vaciamadrid (Madrid), the Selección Valenciana U22 fielded by the Valencian softball federation, Sófbol Fénix Valencia, and CB i Sófbol Sant Boi in Sant Boi de Llobregat, one of the historic homes of Spanish softball and baseball near Barcelona. Opponents are matched to your age and level and confirmed in writing before departure.",
+      },
+      {
+        q: "How much does a softball tour to Spain cost for a US team?",
+        a: "A nine-day softball tour to Spain starts from around $2,895 per person for a group of 20, twin sharing, ground services only, with international flights separate. That covers accommodation, daily breakfast and dinner, all four games and field permits, a private coach with driver, every guided cultural visit and a full-time tour director. Final pricing is locked once the group size and dates are confirmed.",
+      },
+      {
+        q: "What is the best time of year for a softball tour to Spain?",
+        a: "Late spring and early summer, roughly May through June, is the best window for a US softball tour to Spain. The weather is warm and dry across Madrid, Valencia and Barcelona, the Spanish league and federation sides are mid-season and available for friendlies, and it lines up with the end of the US school year. June also catches the Sant Joan festival on the Catalan coast, which makes the Barcelona leg memorable.",
+      },
+    ],
+    body: [
+      "Every year more US softball teams ask us the same question: can you build a real softball tour in Spain, not a sightseeing trip with one exhibition game bolted on, but a proper tour with competitive games against Spanish clubs in the middle of a cultural trip families will remember. The answer is yes, and we have been doing it long enough to know exactly what the best version looks like. This is the operator's view of a softball tour to Spain for a US team: the route, the clubs you actually play, what it costs, and the decisions that separate a tour that lands from one that does not. We run it as the [Spain Softball Experience](/tours/softball-tours-spain), and the shape below is the one that works.",
+      "## Why Spain for softball",
+      "Softball in the US is enormous and the level is high, so the first thing a coach wants to know is whether Spain can give their players real games. It can. Spain has an established softball community concentrated around Madrid, Valencia and Catalonia, with federation structures, regional select sides and clubs that have been playing for decades. The level is not the US college game, and we never pretend it is. What it is, is competitive, well-organized, age-appropriate opposition that gives your players four real games in three different cities, against teams who are genuinely happy to host a visiting American side. The Spanish clubs treat these fixtures as an event. They turn out their squads, they put on refreshments afterward, and the post-game mixing between a team from Texas or California and a team from Valencia is consistently the part players talk about on the bus home.",
+      "The second reason is that Spain gives you a complete trip around the softball. A pure tournament trip is all diamond and hotel. A Spain tour alternates game days with Las Ventas, Toledo, the City of Arts and Sciences in Valencia, Sagunto castle above the Mediterranean, and a guided day through Gaudí's Barcelona. For a group that includes families, and softball groups almost always travel with families, that balance is the whole point. The players get four competitive games. The parents get a tour of Spain. Nobody spends a week sitting in a single set of bleachers.",
+      "## The route: Madrid, Valencia, Barcelona",
+      "The tour we recommend runs nine days and eight nights from Madrid in the center to Barcelona on the coast, with Valencia in between. The group lands in Madrid and bases at the Spanish FA residence in Las Rozas when it is available, which is the same residence the Spanish national football teams use, with full facilities and a dining hall on site. The first competitive game comes on day three, against Club CBS Rivas in Rivas-Vaciamadrid, after a morning day-trip to Toledo. We deliberately do not schedule a game on day one. A team coming off a transatlantic flight does not play its best softball jet-lagged, and starting with a cultural day and an easy first evening sets the week up properly.",
+      "From Madrid the tour moves to Valencia for the biggest playing day of the trip, a double-header against the Selección Valenciana U22, a regional select side fielded by the Valencian softball federation, and Sófbol Fénix Valencia, the city's home club. Valencia is also where we build in the rest day: a morning on Malvarrosa beach or free in the city before the games, because two games in one afternoon is a real workload and the legs need it. The tour then runs up the coast to Catalonia for the closing fixture against CB i Sófbol Sant Boi in Sant Boi de Llobregat, one of the historic homes of softball and baseball in Spain, before a final guided day in Barcelona and the flight home.",
+      "## The clubs you play",
+      "The four host clubs are the spine of the tour, and we name every one of them in writing before you fly, with the specific opponent age group, so there are no surprises on the ground. Club CBS Rivas is an established Madrid-region club and makes a strong, organized opener. The Selección Valenciana U22 is a select side rather than a single club, which gives your older players a genuinely competitive game against the best young softball players in the region. Sófbol Fénix Valencia is a warm, well-run home club and the second half of the Valencia double-header. CB i Sófbol Sant Boi, near Barcelona, sits in a town that has been central to Spanish softball and baseball for generations, and closing the tour there, the night of the Sant Joan festival in June, is the kind of finish that ends a trip on a high. We match each fixture to your team's age and level. If your group skews younger, we adjust the opponents accordingly.",
+      "## What is included, and what is not",
+      "A softball tour to Spain done properly is priced once, with no surprises on the ground. The per-person rate covers eight nights of accommodation, daily breakfast and dinner, all four games and the field permits and host-club coordination that sit behind them, a private coach with a driver for the airport pickups and every internal transfer, all the guided cultural visits, and a full-time Odisea Tours director who is with the group from the arrivals hall to the departure gate. What it does not cover is international flights, lunches, personal spending and travel insurance, which we strongly recommend. Keeping lunches out of the package is deliberate. Families like the flexibility to eat where they want at midday, and it keeps the headline price honest.",
+      "## What it costs",
+      "A nine-day softball tour to Spain starts from around $2,895 per person for a group of twenty, twin sharing, ground services only. That number moves with group size, travel dates and hotel category, and it firms up once we know how many players, how many family members, and which dates. Larger groups bring the per-person cost down. The honest way to get a real number is to tell us the squad size, the number of traveling families, your age groups and your travel window, and we come back with a per-person price that names the hotels and the opponents rather than hiding behind a from-rate. For most US teams the all-in cost of a Spain tour, flights included, lands close to what a domestic showcase week plus travel would cost, with a tour of Spain attached.",
+      "## How to start planning",
+      "If you are a coach or a team manager weighing a softball tour to Spain, the next step is a conversation, not a brochure. Tell us your squad size, your players' ages, how many parents and siblings are likely to travel, and your window, and we will draft a nine-day itinerary that names the cities, the host clubs and the hotels, and prices it per person. The full day-by-day, the four host clubs and the inclusions all live on the [Spain Softball Experience](/tours/softball-tours-spain) tour page, and you can see how we handle US groups more broadly on our [tours for US teams](/usa) page. When you are ready, [start the conversation here](/plan-your-tour). We have been building tours like this in Spain since 2005, and the softball version has quietly become one of the trips we most enjoy running.",
     ],
   },
 ];

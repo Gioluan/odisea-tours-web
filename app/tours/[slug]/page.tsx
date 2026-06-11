@@ -226,6 +226,58 @@ export default async function TourDetail({
         </div>
       </section>
 
+      {/* Clubs you'll play (opponent logo wall) */}
+      {tour.opponents && tour.opponents.length > 0 && (
+        <section className="bg-paper border-t border-ink/10 py-16 md:py-20">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14">
+            <div className="mb-10 flex items-end justify-between gap-6 flex-wrap">
+              <div className="max-w-xl">
+                <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.3em] uppercase text-ink/55 mb-3">
+                  <span>Who You Play</span>
+                </div>
+                <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1] tracking-[-0.015em]">
+                  The host{" "}
+                  <span className="font-display-italic text-gold">clubs.</span>
+                </h2>
+              </div>
+              <p className="text-sm text-ink/65 leading-snug max-w-sm">
+                Established Spanish clubs we have played for years, matched to your age and level. Every fixture is confirmed in writing before you fly.
+              </p>
+            </div>
+
+            <ul className="grid grid-cols-2 md:grid-cols-4 gap-5">
+              {tour.opponents.map((club) => (
+                <li
+                  key={club.name}
+                  className="border border-ink/12 rounded-sm bg-[#faf6ee] p-5 flex flex-col items-center text-center"
+                >
+                  <div className="relative w-20 h-20 mb-4">
+                    <Image
+                      src={club.logo}
+                      alt={club.name}
+                      fill
+                      className="object-contain"
+                      sizes="80px"
+                    />
+                  </div>
+                  <h3 className="font-display text-base md:text-lg leading-tight tracking-[-0.01em] text-ink">
+                    {club.name}
+                  </h3>
+                  <p className="mt-1 font-mono-editorial text-[0.52rem] tracking-[0.22em] uppercase text-ink/55">
+                    {club.city}
+                  </p>
+                  {club.note && (
+                    <p className="mt-3 text-[0.82rem] text-ink/65 leading-snug">
+                      {club.note}
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       {/* Itinerary */}
       <section className="bg-[#faf6ee] border-t border-ink/10 py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14">

@@ -15,44 +15,43 @@ const GREETING: Msg = {
     "Hola, I'm the Odisea concierge. Planning a group trip to Spain, soccer, school, Camino, or something cultural? Tell me about your group and I'll point you the right way.",
 };
 
-/** Minimal, safe inline renderer: linkifies URLs and markdown links, keeps line breaks. */
+/**
+ * Minimal, safe inline renderer: bold (**text**), markdown links, and bare URLs.
+ * Newlines are left intact and rendered by the message container's pre-wrap, so
+ * users never see raw markdown like ** or [](.
+ */
 function renderContent(text: string) {
   const nodes: React.ReactNode[] = [];
-  // Split on markdown links [label](url) and bare urls.
+  // Order matters: links first (they contain brackets), then bold, then bare urls.
   const pattern =
-    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s)]+)/g;
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|\*\*([^*]+)\*\*|(https?:\/\/[^\s)]+)/g;
   let last = 0;
   let m: RegExpExecArray | null;
   let key = 0;
   while ((m = pattern.exec(text)) !== null) {
     if (m.index > last) nodes.push(text.slice(last, m.index));
-    const label = m[1] || m[3] || m[2];
-    const url = m[2] || m[3];
-    nodes.push(
-      <a
-        key={key++}
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: "var(--gold-deep)", textDecoration: "underline" }}
-      >
-        {label}
-      </a>
-    );
+    if (m[3] !== undefined) {
+      // **bold**
+      nodes.push(<strong key={key++}>{m[3]}</strong>);
+    } else {
+      const url = m[2] || m[4];
+      const label = m[1] || url;
+      nodes.push(
+        <a
+          key={key++}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "var(--gold-deep)", textDecoration: "underline" }}
+        >
+          {label}
+        </a>
+      );
+    }
     last = pattern.lastIndex;
   }
   if (last < text.length) nodes.push(text.slice(last));
-  // Preserve newlines.
-  return nodes.map((n, i) =>
-    typeof n === "string"
-      ? n.split("\n").map((line, j, arr) => (
-          <span key={`${i}-${j}`}>
-            {line}
-            {j < arr.length - 1 && <br />}
-          </span>
-        ))
-      : n
-  );
+  return nodes;
 }
 
 export default function Concierge() {

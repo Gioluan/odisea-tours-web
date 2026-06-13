@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Analytics from "@/components/Analytics";
+import Concierge from "@/components/Concierge";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",
@@ -128,11 +129,18 @@ const organizationSchema = {
     },
   ],
   sameAs: [
-    "https://www.wikidata.org/wiki/Q140133533",
+    "https://www.google.com/search?kgmid=/g/11h11byhhn",
     "https://www.linkedin.com/company/odisea-tours",
     "https://www.facebook.com/odiseatoursEU/",
     "https://www.instagram.com/Odisea_Tours/",
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "12",
+    bestRating: "5",
+    worstRating: "1",
+  },
 };
 
 const websiteSchema = {
@@ -174,6 +182,7 @@ export default function RootLayout({
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Concierge />
       </body>
     </html>
   );

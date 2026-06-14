@@ -115,6 +115,17 @@ export default function Footer() {
             <div className="font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-paper/40">
               © {new Date().getFullYear()} Odisea Tours. All journeys reserved.
             </div>
+            <div className="font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-paper/30">
+              AI search visibility by{" "}
+              <a
+                href="https://tripcite.com/reports/odisea-tours"
+                target="_blank"
+                rel="noopener"
+                className="text-paper/55 hover:text-gold transition-colors"
+              >
+                Tripcite ↗
+              </a>
+            </div>
           </div>
         </div>
       </div>

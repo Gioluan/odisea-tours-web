@@ -871,7 +871,7 @@ export const TOURS: Tour[] = [
     italicTitle: "Experience",
     tagline: "Four games, three cities, one of Spain's most generous softball communities.",
     description:
-      "Built for US softball teams and their families, this is nine days through Madrid, Valencia and Barcelona with four competitive games against established Spanish softball clubs. The group is based at the Spanish FA residence in Las Rozas, plays its opener against Club CBS Rivas after a day in Toledo, takes on a Valencia double-header against the Selección Valenciana U22 and Sófbol Fénix Valencia, and closes against CB i Sófbol Sant Boi on the Catalan coast. Around the diamond it is a real cultural tour: Las Ventas, Toledo, the City of Arts and Sciences, Sagunto castle, a Mediterranean rest day and a guided Barcelona finish. Designed and run by Odisea Tours staff on the ground from the airport to the flight home.",
+      "Built for US softball teams and their families, this is nine days through Madrid, Valencia and Barcelona with four competitive games against established Spanish softball clubs. The group is based at the Spanish FA residence in Las Rozas and plays a game in each city, with opponents drawn from established Spanish clubs like Club CBS Rivas in Madrid, the Selección Valenciana U22 and Sófbol Fénix Valencia in Valencia, and CB i Sófbol Sant Boi on the Catalan coast. Around the diamond it is a real cultural tour: Las Ventas, Toledo, the City of Arts and Sciences, Sagunto castle, a Mediterranean rest day and a guided Barcelona finish. Designed and run by Odisea Tours staff on the ground from the airport to the flight home.",
     image: "/photos/softball-tours-spain-hero.jpg",
     coordinates: "40.4168° N / 3.7038° W",
     duration: "8 nights · 9 days",
@@ -884,7 +884,7 @@ export const TOURS: Tour[] = [
       },
       {
         q: "Which Spanish softball clubs do visiting US teams play against?",
-        a: "On the Spain Softball Experience, US teams play four host clubs across three cities: Club CBS Rivas (Rivas-Vaciamadrid, Madrid), the Selección Valenciana U22 fielded by the Valencian softball federation, Sófbol Fénix Valencia, and CB i Sófbol Sant Boi (Sant Boi de Llobregat, one of the historic homes of Spanish softball and baseball). Opponents are matched to the visiting team's age and level, and every fixture is confirmed in writing with the club name before departure.",
+        a: "On the Spain Softball Experience, US teams play four host clubs across three cities: Club CBS Rivas (Rivas-Vaciamadrid, Madrid), the Selección Valenciana U22 fielded by the Valencian softball federation, Sófbol Fénix Valencia, and CB i Sófbol Sant Boi (Sant Boi de Llobregat, one of the historic homes of Spanish softball and baseball). Opponents are matched to the visiting team's age and level. We arrange the fixtures ahead of the trip and share the planned opponents in advance, though the final clubs can change with the Spanish season and calendar.",
       },
       {
         q: "How much does a softball tour to Spain cost and how long is it?",

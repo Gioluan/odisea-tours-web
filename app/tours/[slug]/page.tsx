@@ -241,7 +241,7 @@ export default async function TourDetail({
                 </h2>
               </div>
               <p className="text-sm text-ink/65 leading-snug max-w-sm">
-                Established Spanish clubs we have played for years, matched to your age and level. Every fixture is confirmed in writing before you fly.
+                Spanish softball clubs and regional sides, matched to your team&apos;s age and level. We arrange the fixtures ahead of the trip, and the final opponents can change with the Spanish season.
               </p>
             </div>
 

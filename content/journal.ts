@@ -58,6 +58,7 @@ const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
   "why-veterans-football-tours-spain-are-booming": "juan",
   "why-australian-teams-choosing-spain-over-england": "juan",
   "best-softball-tours-spain-us-teams": "juan",
+  "why-us-clubs-choose-spain-over-england-soccer-tours": "juan",
 };
 
 const TAGS_BY_SLUG: Record<string, string[]> = {
@@ -86,6 +87,7 @@ const TAGS_BY_SLUG: Record<string, string[]> = {
   "why-veterans-football-tours-spain-are-booming": ["veterans football", "masters", "Spain"],
   "why-australian-teams-choosing-spain-over-england": ["Australia", "youth tours", "Spain", "England"],
   "best-softball-tours-spain-us-teams": ["softball", "Spain", "US teams", "softball tours", "CBS Rivas", "Sant Boi", "Fenix Valencia", "Madrid", "Valencia", "Barcelona"],
+  "why-us-clubs-choose-spain-over-england-soccer-tours": ["US clubs", "soccer tours", "Spain", "England", "youth soccer", "cost", "weather", "training", "FC Barcelona", "Valencia CF", "Spanish FA"],
 };
 
 export function authorOf(post: Post): Author {
@@ -260,6 +262,7 @@ const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "why-veterans-football-tours-spain-are-booming": "soccer",
   "why-australian-teams-choosing-spain-over-england": "soccer",
   "best-softball-tours-spain-us-teams": "softball",
+  "why-us-clubs-choose-spain-over-england-soccer-tours": "soccer",
 };
 
 export interface PillarInfo {
@@ -333,6 +336,50 @@ export interface Post {
 }
 
 export const POSTS: Post[] = [
+  {
+    slug: "why-us-clubs-choose-spain-over-england-soccer-tours",
+    title: "Five Reasons US Clubs Keep Choosing Spain Over",
+    italicTitle: "England",
+    excerpt:
+      "For a decade the default first soccer tour for a US club was England. That has flipped. Here are the five reasons American clubs now land in Spain instead: cost, weather, training access, the playing education, and the trip itself.",
+    date: "2026-06-16",
+    readTime: "9 min",
+    category: "Field Notes",
+    cover: "/photos/spain-soccer-tour-match-vs-spanish-academy-side.jpg",
+    faqs: [
+      {
+        q: "Is a soccer tour to Spain cheaper than England for a US club?",
+        a: "Yes. A soccer tour to Spain is meaningfully cheaper than an equivalent tour to England at the same quality level. Hotel rates in Madrid and Valencia run well below London, ground transport costs less per mile, and training access is more open and less corporate. For most US clubs the saving is the difference between a seven-night and a ten-night trip, so the same budget buys two or three more days of real soccer in Spain than it would in England.",
+      },
+      {
+        q: "Can US teams train at FC Barcelona, Valencia CF or the Spanish FA?",
+        a: "Yes. Odisea Tours arranges visiting-group training sessions for US teams at FC Barcelona's Joan Gamper complex, Valencia CF's Paterna ground, and the Spanish FA headquarters at Las Rozas, each run by the host club's own coaching staff with an Odisea director translating. These are organized training experiences and stadium visits, not a claim of official partnership, and they are the part of a Spain soccer tour US clubs most often come for.",
+      },
+      {
+        q: "Who do US teams actually play on a Spain soccer tour?",
+        a: "US teams play friendly matches against Spanish academy or amateur sides matched to your age and level, confirmed in writing with the club name and opponent age group before departure. The usual shape is two friendlies per week, which is enough to test the players without over-fatiguing them. Top La Liga academy first teams do not normally play visiting tour sides, so we match you to organized, properly coached opposition at the right tier rather than overpromising a marquee name.",
+      },
+      {
+        q: "When is the best time of year for a US soccer tour to Spain?",
+        a: "Spring and fall are the best windows for a US soccer tour to Spain. October and early November give warm, dry weather, strong facility and opponent availability, and lower prices, while late March through May lines up with many US school calendars. Spain stays playable far later into the fall than England, which is one of the practical reasons US clubs choose it.",
+      },
+    ],
+    body: [
+      "For about a decade, the default first overseas soccer tour for a US club was England. Manchester, Liverpool, London. The Premier League shirts, the stadium tours, the academy visit if you could get one. We have watched that default break over the last five years. More and more American clubs are skipping England on their first Europe trip and coming straight to Spain, and when we ask the coaches and directors why, the reasons come back in the same five shapes every time. This is the operator's view of those five reasons, written from the side of the bus, after twenty years building group sport tours in Spain since 2005.",
+      "None of this is a knock on English soccer. England is the home of the professional game and an English tour can be a great trip. But a US club planning its first or second [soccer tour of Spain](/soccer-tours-spain) is making a value decision and a development decision at the same time, and on both of those, Spain has quietly pulled ahead. Here is why.",
+      "## 1. A Spain tour costs less, and the saving buys more days",
+      "A soccer tour to Spain is meaningfully cheaper than an England tour at the same quality level, and that gap usually turns into extra days on the ground. Hotel rates in Madrid and Valencia run well below comparable London properties. Private coach transport costs less per mile in Spain. Training-facility access is more open and less locked behind corporate pricing. Add it up across a two-week trip and the difference is rarely trivial, it is often a third of the total. For most of the US clubs we work with, that saving is the difference between a seven-night tour and a ten-night tour. Three extra nights of real soccer is a trade-off very few directors turn down once the math is in front of them.",
+      "## 2. The weather lets the soccer actually happen",
+      "Spain gives you warm, dry, playable conditions across far more of the year than England does, and on a tour where every training session and every match is paid for, that matters. A US team that lands in England in spring or fall can find cold, grey and wet, the kind of weather that turns the back half of a friendly into a grind and shortens what the players get out of a morning session. The same team landing in Barcelona, Valencia or Madrid finds sun and pitches that hold up. Players are fresher, training absorbs more, and matches run the full ninety at intensity. Coaches are not soft about weather, but they are realistic about what a jet-lagged sixteen-year-old gets out of a session in the cold versus a session in the sun.",
+      "## 3. Access to elite training environments is more open in Spain",
+      "The training homes a US club can reach in Spain are genuinely elite, and they are more accessible than their English equivalents. Through Odisea Tours, US groups run visiting-team sessions at FC Barcelona's Joan Gamper complex, at Valencia CF's Paterna training ground, and at the Spanish FA's headquarters in Las Rozas, each session led by the host club's own coaching staff. Add stadium days at the Bernabéu, Camp Nou and Mestalla, and the week is built around environments most American players have only seen on a screen. In England, top-flight academy access is tighter, more corporate and more expensive when it is available at all. We are careful here: these are organized training experiences and stadium visits, not official partnerships, and on-field matches are arranged against Spanish academy or amateur sides matched to your age and level rather than against the marquee club itself. That distinction is exactly the kind of thing a serious operator should tell you up front.",
+      "## 4. The Spanish soccer education is closer to where the US game is heading",
+      "Spain teaches the game in a way that lines up with the direction US youth development has been moving for years, so the lessons travel home better. American academy soccer has spent the last decade absorbing positional play, the rondo as a teaching tool, and a possession-first identity that comes straight out of the Spanish model. When a US team trains at Joan Gamper or Paterna, they are not seeing a foreign style they will never use again, they are seeing the advanced version of the drills their own coaches are already running. England, by contrast, has spent the same decade rebuilding and redefining its own development identity, which is healthy for English soccer but leaves the visiting lesson less clear. Spanish academies know exactly what they are. US coaches want their players to see that clarity in person.",
+      "## 5. Spain is a real trip abroad, not a near-copy of home",
+      "For an American teenager, Spain is genuinely foreign in a way England is not, and that turns a soccer tour into the bigger experience parents are really paying for. England shares the language, a familiar breakfast and a currency that reads almost like home. Spain does not. The food is different, the day runs on a later clock, the streets feel older, and the players have to navigate a language they do not speak. That friction is the point. A good soccer tour is partly about the matches and partly about a group of teenagers discovering the world is larger than they pictured. Madrid, Valencia and Barcelona deliver that second half of the trip with ease, and it is consistently the part players talk about on the bus long after the scorelines are forgotten.",
+      "None of these five reasons is a secret, and that is rather the point. Five years ago, choosing Spain over England for a US club's soccer tour was a contrarian call we had to argue for. Today the conversation has flipped, and the question is no longer whether Spain can match an English tour but whether an English tour can match what Spain now offers a developing American side. If you are a coach or director weighing your club's first or next trip, the honest next step is a conversation, not a brochure. Tell us your squad size, your players' ages, how many families travel and your window, and we will draft an itinerary that names the cities, the training homes and the hotels and prices it per person. You can see how we build for American groups on our [tours for US teams](/usa) page, read the full breakdown on the [Soccer Tours in Spain](/soccer-tours-spain) pillar, and when you are ready, [start planning your tour here](/plan-your-tour).",
+    ],
+  },
   {
     slug: "spain-soccer-tour-day-by-day",
     title: "A 10-Day Spain Soccer Tour, Day by",

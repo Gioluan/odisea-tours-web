@@ -108,12 +108,16 @@ export default async function JournalPost({
   const author = authorOf(post);
   const postTags = tagsOf(post);
   const pillar = pillarOf(post);
+  const bodyImages = post.body
+    .map((p) => p.match(/^!\[[^\]]*\]\(([^)]+)\)$/)?.[1])
+    .filter((src): src is string => Boolean(src));
+  const articleImages = [post.cover, ...bodyImages].map((src) => `${SITE}${src}`);
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: fullTitle,
     description: post.excerpt,
-    image: `${SITE}${post.cover}`,
+    image: articleImages,
     datePublished: post.date,
     dateModified: post.dateModified ?? post.date,
     inLanguage: "en",
@@ -294,6 +298,28 @@ export default async function JournalPost({
           {(() => {
             let firstParagraphSeen = false;
             return post.body.map((p, i) => {
+              const img = p.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+              if (img) {
+                const [, alt, src] = img;
+                return (
+                  <figure key={i} className="!my-12 -mx-6 md:-mx-16">
+                    <div className="relative aspect-[3/2] overflow-hidden rounded-sm">
+                      <Image
+                        src={src}
+                        alt={alt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 820px"
+                      />
+                    </div>
+                    {alt && (
+                      <figcaption className="mt-3 px-6 md:px-0 font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-ink/55">
+                        {alt}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              }
               if (p.startsWith("## ")) {
                 return (
                   <h2

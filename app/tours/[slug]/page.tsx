@@ -71,7 +71,10 @@ export default async function TourDetail({
     name: fullTitle,
     description: tour.description,
     url,
-    image: `${SITE}${tour.image}`,
+    image: [
+      `${SITE}${tour.image}`,
+      ...(tour.gallery?.map((g) => `${SITE}${g.src}`) ?? []),
+    ],
     touristType: tour.groupSize,
     provider: {
       "@type": "TravelAgency",
@@ -274,6 +277,46 @@ export default async function TourDetail({
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Photo gallery from real tours */}
+      {tour.gallery && tour.gallery.length > 0 && (
+        <section className="bg-ink text-paper py-16 md:py-20">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-14">
+            <div className="mb-10 flex items-end justify-between gap-6 flex-wrap">
+              <div className="max-w-xl">
+                <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.3em] uppercase text-paper/55 mb-3">
+                  <span>From Recent Tours</span>
+                </div>
+                <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1] tracking-[-0.015em]">
+                  Moments on{" "}
+                  <span className="font-display-italic text-gold">the ground.</span>
+                </h2>
+              </div>
+              <p className="text-sm text-paper/65 leading-snug max-w-sm">
+                Real photographs from groups we have hosted in Spain. Not stock, not staged.
+              </p>
+            </div>
+
+            <div className="columns-2 md:columns-3 gap-4 [column-fill:_balance]">
+              {tour.gallery.map((shot) => (
+                <div
+                  key={shot.src}
+                  className="mb-4 break-inside-avoid overflow-hidden rounded-sm"
+                >
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    width={800}
+                    height={600}
+                    className="w-full h-auto object-cover transition-transform duration-[1.5s] ease-out hover:scale-[1.04]"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       )}

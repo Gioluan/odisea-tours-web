@@ -20,6 +20,9 @@ export interface Tour {
   // Phrased to mirror how travelers actually ask LLM search engines, with
   // entity-clear answers, so the page earns citations on those queries.
   faq?: { q: string; a: string }[];
+  // Real photos from past tours, rendered as a gallery. Keyword-rich,
+  // descriptive alt text earns image-search and AI-search visibility.
+  gallery?: { src: string; alt: string }[];
 }
 
 export const TOURS: Tour[] = [
@@ -925,6 +928,40 @@ export const TOURS: Tour[] = [
         city: "Sant Boi de Llobregat · Barcelona",
         logo: "/badges/cb-sant-boi.jpg",
         note: "One of the historic homes of Spanish softball, the closing fixture.",
+      },
+    ],
+    gallery: [
+      {
+        src: "/photos/odisea-softball-tours-spain-teams-on-field.jpg",
+        alt: "Visiting US softball team and their Spanish host club together on the field during an Odisea Tours softball tour of Spain",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-celebration.jpg",
+        alt: "US softball players celebrating a win on tour in Spain, a hilltop Spanish castle behind the field",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-team-lineup.jpg",
+        alt: "American softball team lined up before a game against a Spanish club on their Spain softball tour",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-ball-on-grass.jpg",
+        alt: "Softball resting on the grass at a Spanish ballpark during an Odisea Tours softball tour",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-players-celebrate.jpg",
+        alt: "Softball players celebrating together after a game on their tour of Spain",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-team-huddle.jpg",
+        alt: "US softball team huddled together before a game in Spain",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-us-team.jpg",
+        alt: "US youth softball team on tour in Spain with Odisea Tours",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-medals.jpg",
+        alt: "Medals and awards from softball games played against Spanish clubs on tour",
       },
     ],
     itinerary: [

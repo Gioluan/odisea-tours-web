@@ -79,6 +79,42 @@ export default function Footer() {
                 <li>+34 670 059 797</li>
                 <li className="pt-2">Madrid · Castellón · Barcelona</li>
               </ul>
+
+              <p className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/50 mt-10 mb-5">
+                Follow
+              </p>
+              <ul className="space-y-2.5 text-sm text-paper/80 font-mono-editorial">
+                <li>
+                  <a
+                    href="https://www.instagram.com/odisea_tours/"
+                    target="_blank"
+                    rel="me noopener"
+                    className="link-rule"
+                  >
+                    Instagram ↗
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/odiseatoursEU/"
+                    target="_blank"
+                    rel="me noopener"
+                    className="link-rule"
+                  >
+                    Facebook ↗
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://g.page/r/CSYiUfmmYcrkEBE/review"
+                    target="_blank"
+                    rel="noopener"
+                    className="link-rule"
+                  >
+                    Review us on Google ↗
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

@@ -8,6 +8,14 @@ export const metadata: Metadata = {
     "Educational football tours to Spain for school teams. Coaching, matches, cultural visits and stadium tours, fully organized with 24/7 bilingual supervision.",
   alternates: { canonical: "/schools" },
   openGraph: {
+    images: [
+      {
+        url: "/photos/og-schools.jpg",
+        width: 1200,
+        height: 630,
+        alt: "School group on an educational Odisea Tours visit in Spain",
+      },
+    ],
     url: "https://odisea-tours.com/schools",
     title: "School Football Tours to Spain",
     description:
@@ -15,6 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/photos/og-schools.jpg"],
     title: "School Football Tours to Spain",
     description:
       "Safe, educational football tours for school teams. Training, matches, stadium visits, fully supervised end-to-end.",

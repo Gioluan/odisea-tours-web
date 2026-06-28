@@ -7,6 +7,14 @@ export const metadata: Metadata = {
     "Youth academy football tours to Spain. Train with FC Barcelona coaches, play Spanish youth teams, tour La Masia. Safe, fully organized group travel from Odisea Tours.",
   alternates: { canonical: "/youth" },
   openGraph: {
+    images: [
+      {
+        url: "/photos/og-youth.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Youth football team at FC Barcelona on an Odisea Tours tour of Spain",
+      },
+    ],
     url: "https://odisea-tours.com/youth",
     title: "Youth Football Tours to Spain",
     description:
@@ -14,6 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/photos/og-youth.jpg"],
     title: "Youth Football Tours to Spain",
     description:
       "Train with FC Barcelona coaches, play Spanish youth sides, visit iconic stadiums. Safe, coach-led group travel for U-12 to U-18 squads.",

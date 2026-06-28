@@ -7,6 +7,14 @@ export const metadata: Metadata = {
     "Veteran football tours in Spain for over-35 clubs. Play Spanish sides, train at pro facilities, visit Camp Nou & Bernabeu. Fully organized door to door by Odisea Tours.",
   alternates: { canonical: "/veterans" },
   openGraph: {
+    images: [
+      {
+        url: "/photos/og-veterans.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Over-35 veterans football club celebrating on an Odisea Tours tour of Spain",
+      },
+    ],
     url: "https://odisea-tours.com/veterans",
     title: "Veterans Football Tours to Spain",
     description:
@@ -14,6 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/photos/og-veterans.jpg"],
     title: "Veterans Football Tours to Spain",
     description:
       "Over-35 football tours to Spain. Play local Spanish clubs, train at pro facilities, visit iconic stadiums. Families welcome.",

@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     "Insider tips, destination guides, and planning advice for organizing football tours to Spain. Written by the Odisea Tours team from 20+ years on the ground.",
   alternates: { canonical: "/journal" },
   openGraph: {
+    images: [
+      {
+        url: "/photos/og-journal.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Travellers exploring Barcelona Cathedral on an Odisea Tours trip to Spain",
+      },
+    ],
     url: "https://odisea-tours.com/journal",
     title: "Spain Football Tour Blog: Guides, Tips & Field Notes",
     description:
@@ -16,6 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/photos/og-journal.jpg"],
     title: "Spain Football Tour Blog: Guides, Tips & Field Notes",
     description:
       "Insider tips, destination guides, and planning advice for organizing football tours to Spain. Written by the Odisea Tours team from 20+ years on the ground.",

@@ -7,6 +7,14 @@ export const metadata: Metadata = {
     "Tell us about your team and we'll build a custom football tour itinerary to Spain — flights, hotels, pitches, matches and stadium visits. Free, no obligation.",
   alternates: { canonical: "/plan-your-tour" },
   openGraph: {
+    images: [
+      {
+        url: "/photos/og-plan-your-tour.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Aerial view of Barcelona, Spain, an Odisea Tours football tour destination",
+      },
+    ],
     url: "https://odisea-tours.com/plan-your-tour",
     title: "Plan Your Football Tour to Spain",
     description:
@@ -14,6 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/photos/og-plan-your-tour.jpg"],
     title: "Plan Your Football Tour to Spain",
     description:
       "Free custom itinerary for your football tour to Spain. Tell us about your team and we'll handle the rest.",

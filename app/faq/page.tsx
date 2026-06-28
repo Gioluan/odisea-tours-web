@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     "Honest answers to the questions every coach and parent asks before booking a Spain soccer tour: pricing, what's included, group sizes, training partners, safety, booking and cancellation.",
   alternates: { canonical: "/faq" },
   openGraph: {
+    images: [
+      {
+        url: "/photos/og-faq.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Coaches comparing notes during an Odisea Tours football tour of Spain",
+      },
+    ],
     title: "FAQ: Spain Soccer Tours & Group Travel | Odisea Tours",
     description:
       "Pricing, what's included, group sizes, training partners and booking terms. Answered by Odisea Tours, operating Spain group travel since 2005.",
@@ -17,6 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/photos/og-faq.jpg"],
     title: "FAQ: Spain Soccer Tours & Group Travel | Odisea Tours",
     description:
       "Pricing, what's included, group sizes, training partners and booking terms. Answered by Odisea Tours, operating Spain group travel since 2005.",

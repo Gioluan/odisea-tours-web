@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     "The people behind every Odisea Tours sport tour. Local specialists in Spain, the Middle East and the USA — over 20 years of group sport tour experience.",
   alternates: { canonical: "/team" },
   openGraph: {
+    images: [
+      {
+        url: "/photos/og-team.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Odisea Tours group together during a sport tour in Spain",
+      },
+    ],
     url: "https://odisea-tours.com/team",
     title: "Meet the Odisea Tours Team",
     description:
@@ -16,6 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/photos/og-team.jpg"],
     title: "Meet the Odisea Tours Team",
     description:
       "Local specialists on the ground in Spain, the Middle East and the USA. Decades of combined experience organizing group sport tours.",

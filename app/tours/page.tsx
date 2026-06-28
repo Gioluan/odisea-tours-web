@@ -4,7 +4,7 @@ import Link from "next/link";
 import { TOURS } from "@/content/tours";
 
 export const metadata: Metadata = {
-  title: "Spain Group Tours — Soccer, Cultural & Corporate",
+  title: "Spain Group Tours: Soccer, Cultural & Corporate",
   description:
     "Nine group tour experiences across Spain. Youth soccer pilgrimages, UK pre-season stages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats and sport and adventure. Built for groups of 10 to 120 since 2005.",
   alternates: { canonical: "https://odisea-tours.com/tours" },
@@ -114,6 +114,13 @@ export default function ToursIndex() {
                 Soccer Tours in Spain pillar
               </Link>{" "}
               for pricing, training homes (FC Barcelona, Valencia CF and the Spanish FA), audiences and the four soccer-specific formats we run.
+            </p>
+            <p>
+              Bringing a softball team? Start with the{" "}
+              <Link href="/softball-tours-spain" className="link-rule text-gold">
+                Softball Tours in Spain pillar
+              </Link>{" "}
+              for the four host clubs, the three cities, pricing and what a real softball tour to Spain looks like for a US team and its families.
             </p>
           </div>
         </div>

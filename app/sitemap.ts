@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${SITE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${SITE}/soccer-tours-spain`, lastModified: now, changeFrequency: "weekly", priority: 0.98 },
+    { url: `${SITE}/softball-tours-spain`, lastModified: now, changeFrequency: "weekly", priority: 0.96 },
     { url: `${SITE}/corporate-retreats`, lastModified: now, changeFrequency: "weekly", priority: 0.92 },
     { url: `${SITE}/tours`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${SITE}/veterans`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },

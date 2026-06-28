@@ -48,6 +48,11 @@ export default function UsaIndexPage() {
           <p className="mt-6 max-w-[60ch] text-paper/85 text-lg leading-relaxed">
             Odisea Tours has been hosting US soccer clubs, high schools and college rosters in Spain since 2005. Pick your home city to see flight routes, training partners and the tour formats that work from your market.
           </p>
+          <p className="mt-4 max-w-[60ch] text-paper/75 leading-relaxed">
+            Bringing a softball team? See the{" "}
+            <Link href="/softball-tours-spain" className="underline underline-offset-4 hover:text-gold">Softball Tours in Spain</Link>{" "}
+            guide for US teams: four games against Spanish clubs across Madrid, Valencia and Barcelona, with a full cultural programme for travelling families.
+          </p>
         </div>
       </section>
 

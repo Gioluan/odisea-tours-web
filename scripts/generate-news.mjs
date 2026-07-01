@@ -49,7 +49,7 @@ const FEEDS = [
   { name: "Marca", url: "https://e00-marca.uecdn.es/rss/futbol/primera-division.xml" },
   { name: "AS", url: "https://as.com/rss/futbol/primera.xml" },
   { name: "Sport", url: "https://www.sport.es/es/rss/futbol/rss.xml" },
-  { name: "Mundo Deportivo", url: "https://www.mundodeportivo.com/rss/futbol/primera-division" },
+  { name: "Mundo Deportivo", url: "https://www.mundodeportivo.com/feed/rss/futbol" },
 ];
 
 // Real cover photos that exist in /public/photos — Claude picks the closest fit.
@@ -201,16 +201,14 @@ const TOOL = {
             },
             tags: { type: "array", items: { type: "string" } },
             ctaTheme: { type: "string", enum: ["soccer", "academy", "softball", "default"] },
-            sources: {
+            sourceItems: {
               type: "array",
-              items: {
-                type: "object",
-                properties: { name: { type: "string" }, url: { type: "string" } },
-                required: ["name", "url"],
-              },
+              items: { type: "integer" },
+              description:
+                "The item NUMBER(S) from the RSS list below whose headline is about THIS story. The article's facts must come from these items only. Do not list items about a different story.",
             },
           },
-          required: ["slug", "title", "excerpt", "readTime", "category", "cover", "body", "tags", "ctaTheme", "sources"],
+          required: ["slug", "title", "excerpt", "readTime", "category", "cover", "body", "tags", "ctaTheme", "sourceItems"],
         },
       },
     },
@@ -218,14 +216,22 @@ const TOOL = {
   },
 };
 
-// Only trust source URLs the model actually saw in the feed. This blocks the
-// model from attaching a plausible-but-wrong (or hallucinated) link, which would
-// gut our "we report facts and cite the real source" position.
-function validateSources(article, validUrls) {
-  if (!Array.isArray(article.sources)) return [];
-  const kept = article.sources.filter((s) => s && validUrls.has(s.url));
-  if (kept.length < (article.sources?.length ?? 0)) {
-    console.warn(`  ! ${article.slug}: dropped ${article.sources.length - kept.length} unverifiable source link(s)`);
+// Resolve the model's chosen item NUMBERS back to the exact {name, url} of those
+// real feed items. Name and URL always come from the same real item, so the model
+// cannot staple an unrelated (or hallucinated) link to a story to pass a check.
+function resolveSources(article, items) {
+  const idxs = Array.isArray(article.sourceItems) ? article.sourceItems : [];
+  const seen = new Set();
+  const kept = [];
+  for (const n of idxs) {
+    const item = items[n - 1]; // list is 1-based in the prompt
+    if (!item) {
+      console.warn(`  ! ${article.slug}: source item #${n} out of range, dropped`);
+      continue;
+    }
+    if (seen.has(item.link)) continue;
+    seen.add(item.link);
+    kept.push({ name: item.source, url: item.link });
   }
   return kept;
 }
@@ -292,7 +298,7 @@ async function main() {
     console.log(`Writing evergreen guide: "${GUIDE_TOPIC}"`);
     const userContent =
       `Write ONE evergreen "Tour Guides" article for US coaches on this topic: "${GUIDE_TOPIC}". ` +
-      `This is not news, so sources should be an empty array and category should be "Tour Guides". ` +
+      `This is not news, so set sourceItems to an empty array and category to "Tour Guides". ` +
       `Make it genuinely useful and specific to youth soccer tours in Spain. ctaTheme "academy" or "soccer".`;
     const articles = await writeArticles(anthropic, userContent);
     articles.slice(0, 1).forEach((a) => save(toPost(a, "guide")));
@@ -315,7 +321,7 @@ async function main() {
   const userContent =
     `Today is ${todayISO()}. Below are today's Spanish-football headlines from AS, Marca, Sport and Mundo Deportivo, plus a fact digest.\n\n` +
     `Select the ${COUNT} most relevant stories for US coaches, cluster duplicates, and write ${COUNT} ORIGINAL English articles. ` +
-    `Each article's "sources" MUST copy, VERBATIM, the exact "URL:" string(s) shown below for the item(s) you drew the story from. Do not shorten, guess, or reconstruct URLs, and do not use any URL not shown below. Never copy the source's wording, only the facts.\n\n` +
+    `Only write about stories that actually appear in the numbered list below. For each article, set "sourceItems" to the item NUMBER(S) whose headline is about that same story. Do not attach an item number about a different story. Never copy the source's wording, only the facts.\n\n` +
     `=== RSS HEADLINES ===\n${feedBlock || "(none)"}\n\n` +
     `=== FACT DIGEST ===\n${digest || "(none)"}\n`;
 
@@ -323,9 +329,8 @@ async function main() {
   const articles = await writeArticles(anthropic, userContent);
   console.log(`Model returned ${articles.length} articles.`);
 
-  const validUrls = new Set(items.map((it) => it.link));
   for (const a of articles.slice(0, COUNT)) {
-    a.sources = validateSources(a, validUrls);
+    a.sources = resolveSources(a, items);
     if (a.sources.length === 0) {
       // A news piece with no verifiable source link is not publishable under our rule.
       console.warn(`  ✗ ${a.slug}: no verifiable sources, skipping`);

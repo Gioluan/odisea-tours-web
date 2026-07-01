@@ -19,8 +19,6 @@ const nextConfig: NextConfig = {
       { source: "/about-us", destination: "/team", permanent: true },
       { source: "/blog", destination: "/journal", permanent: true },
       { source: "/blog/:slug*", destination: "/journal/:slug*", permanent: true },
-      { source: "/news", destination: "/journal", permanent: true },
-      { source: "/news/:slug*", destination: "/journal/:slug*", permanent: true },
       { source: "/services", destination: "/tours", permanent: true },
       { source: "/sports-tours", destination: "/tours", permanent: true },
       { source: "/contact-us", destination: "/contact", permanent: true },

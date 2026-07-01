@@ -58,6 +58,7 @@ const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
   "why-veterans-football-tours-spain-are-booming": "juan",
   "why-australian-teams-choosing-spain-over-england": "juan",
   "best-softball-tours-spain-us-teams": "juan",
+  "spain-softball-tour-basque-country-barcelona": "juan",
   "why-us-clubs-choose-spain-over-england-soccer-tours": "juan",
 };
 
@@ -87,6 +88,7 @@ const TAGS_BY_SLUG: Record<string, string[]> = {
   "why-veterans-football-tours-spain-are-booming": ["veterans football", "masters", "Spain"],
   "why-australian-teams-choosing-spain-over-england": ["Australia", "youth tours", "Spain", "England"],
   "best-softball-tours-spain-us-teams": ["softball", "Spain", "US teams", "softball tours", "CBS Rivas", "Sant Boi", "Fenix Valencia", "Madrid", "Valencia", "Barcelona"],
+  "spain-softball-tour-basque-country-barcelona": ["softball", "Spain", "US teams", "softball tours", "Basque Country", "Bilbao", "San Sebastian", "Barcelona", "Zaragoza", "Pamplona", "Sant Boi", "Gaztelugatxe"],
   "why-us-clubs-choose-spain-over-england-soccer-tours": ["US clubs", "soccer tours", "Spain", "England", "youth soccer", "cost", "weather", "training", "FC Barcelona", "Valencia CF", "Spanish FA", "Premier League", "Pep Guardiola", "Mikel Arteta", "Unai Emery", "Rafa Benitez", "possession game"],
 };
 
@@ -262,6 +264,7 @@ const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "why-veterans-football-tours-spain-are-booming": "soccer",
   "why-australian-teams-choosing-spain-over-england": "soccer",
   "best-softball-tours-spain-us-teams": "softball",
+  "spain-softball-tour-basque-country-barcelona": "softball",
   "why-us-clubs-choose-spain-over-england-soccer-tours": "soccer",
 };
 
@@ -1114,6 +1117,60 @@ export const POSTS: Post[] = [
       "![Medals and awards from softball games played against Spanish clubs on tour](/photos/odisea-softball-tours-spain-medals.jpg)",
       "## How to start planning",
       "If you are a coach or a team manager weighing a softball tour to Spain, the next step is a conversation, not a brochure. Tell us your squad size, your players' ages, how many parents and siblings are likely to travel, and your window, and we will draft a nine-day itinerary that names the cities, the host clubs and the hotels, and prices it per person. The full day-by-day, the four host clubs and the inclusions all live on the [Spain Softball Experience](/tours/softball-tours-spain) tour page, and you can see how we handle US groups more broadly on our [tours for US teams](/usa) page. When you are ready, [start the conversation here](/plan-your-tour). We have been building group tours in Spain since 2005, and softball is the newest version of that work, built on the same template we trust for our other sport tours.",
+    ],
+  },
+  {
+    slug: "spain-softball-tour-basque-country-barcelona",
+    title: "A Softball Tour Through the Basque Country and",
+    italicTitle: "Barcelona",
+    excerpt:
+      "A different shape of Spain softball tour: one way from Barcelona to Bilbao, four games against Spanish clubs, and a straight run north through Zaragoza, Pamplona, San Sebastián and the Basque coast. Written from the operator side of the bus.",
+    date: "2026-07-01",
+    readTime: "11 min",
+    category: "Field Notes",
+    cover: "/photos/basque-softball-tour-hero.jpg",
+    faqs: [
+      {
+        q: "What is the Basque Country and Barcelona softball tour?",
+        a: "It is a nine-day, eight-night softball and culture tour that Odisea Tours runs one way across northern Spain for US teams and their families. The group flies into Barcelona and out of Bilbao, so the route never backtracks, and travels entirely by private coach through Barcelona, Zaragoza, Olite, Pamplona, San Sebastián and Bilbao. It plays four games against Spanish clubs (CB i Sófbol Sant Boi, CB Miralbueno, CD Arga and OBB Bizkorrak) and visits the Sagrada Familia, the Basílica del Pilar, Olite castle, San Sebastián's La Concha bay, the Guggenheim and San Juan de Gaztelugatxe. It is a separate trip from our Madrid, Valencia and Barcelona softball tour.",
+      },
+      {
+        q: "How is this different from the Madrid, Valencia and Barcelona softball tour?",
+        a: "Both are nine-day softball tours with four games, but the route and the region are different. The Madrid tour bases the group at the Spanish FA residence in Las Rozas and runs south-to-coast through Madrid, Valencia and Barcelona. This tour runs the opposite way, one way north from Barcelona to Bilbao through Aragón, Navarra and the Basque Country, and its cultural spine is the Basque coast rather than central Spain. Teams pick between them on which region they want to see and whether they prefer to fly in and out of the same airport or make a one-way trip of it.",
+      },
+      {
+        q: "Which Spanish softball clubs do US teams play on this tour?",
+        a: "The group plays four host clubs along the route: CB i Sófbol Sant Boi near Barcelona, one of the historic homes of Spanish softball and baseball; CB Miralbueno in Zaragoza; CD Arga in Pamplona; and OBB Bizkorrak on the Basque coast near San Sebastián. Three games are guaranteed, opponents are matched to your age and level, and the fixtures are confirmed in writing before departure. The final clubs can change with the Spanish season.",
+      },
+      {
+        q: "When is the best time of year for this softball tour?",
+        a: "Late spring and early summer, roughly May through June, is the best window. The weather across Barcelona, Zaragoza and the Basque Country is warm and settled, the Spanish clubs are mid-season and available for friendlies, and it lines up with the end of the US school year. The Basque coast is at its best in June, which is when we like to schedule the San Sebastián and Gaztelugatxe days.",
+      },
+    ],
+    body: [
+      "Most of the softball groups that come to us want the same core trip: real games against Spanish clubs, wrapped inside a tour of Spain that the traveling families will remember. We already run that as the [Spain Softball Experience](/tours/softball-tours-spain) through Madrid, Valencia and Barcelona. But over the last year, enough teams asked for something further north, and something that did not double back on itself, that we built a second softball tour on the same template. This is the operator's view of it: a nine-day trip that runs one way from Barcelona up through Aragón and Navarra and into the Basque Country, four games along the way, and a finish on one of the most dramatic stretches of coast in Spain. We run it as the [Basque Country and Barcelona softball tour](/tours/softball-tour-basque-country-barcelona).",
+      "## Why one way, and why north",
+      "The single decision that shapes this whole tour is that it runs one way. The group flies into Barcelona and out of Bilbao, and the coach only ever moves in one direction. That sounds like a small thing. It is not. On a tour that starts and ends in the same city, you either backtrack at the end, which burns most of a day on a motorway you have already seen, or you build a loop that compromises the middle. Flying into Barcelona and out of Bilbao removes that problem entirely. Every kilometre the coach drives is a kilometre toward somewhere new, and the day we would have spent driving back to the start becomes an extra day on the Basque coast instead. Open-jaw flights into Barcelona and out of Bilbao are widely available from the US, usually for little or no more than a round trip, and the trade is well worth it.",
+      "The north also gives the tour a different character from our Madrid trip. Central Spain is national-team scale, big and monumental. The route this tour takes is greener, cooler and more varied: the plains of Aragón, the castle towns of Navarra, and then the Basque Country, which does not feel quite like anywhere else in Spain. For a group that has already done a Spain tour, or one that simply wants the coast and the mountains rather than the capital, this is the trip.",
+      "![San Juan de Gaztelugatxe, the island hermitage on the Basque coast visited on the softball tour](/photos/it-gaztelugatxe.jpg)",
+      "## The route, city by city",
+      "The tour opens in Barcelona with the softest possible first day. The group lands, the director meets them at the airport, and the afternoon is a walk along La Rambla and the seafront followed by a welcome dinner. No game, no early start. A team off a transatlantic flight does not play good softball, and the first evening is for finding your feet, not for a fixture. Day two is Gaudí's Sagrada Familia and the Gothic Quarter in the morning, then out to Sant Boi for the first game of the tour. That order is deliberate: the culture happens while the legs are still fresh, and the game comes in the cooler evening.",
+      "![Gaudí's Sagrada Familia in Barcelona, visited on day two of the softball tour](/photos/it-sagrada-familia.jpg)",
+      "From Barcelona the coach turns inland to Zaragoza, the capital of Aragón and one of the most underrated cities in Spain. The group visits the Basílica del Pilar, an enormous baroque church on the banks of the Ebro, walks the old town, and plays CB Miralbueno in the evening. Zaragoza is the kind of stop most tours skip, and it is exactly the kind of place a real tour should include: a genuine Spanish city, mid-country, that the players would never otherwise see.",
+      "![The Basílica del Pilar in Zaragoza, a stop on the northern softball tour](/photos/it-zaragoza-pilar.jpg)",
+      "Then comes the Navarra leg, which is my favourite day on the tour. The coach runs up into Navarra and stops at Olite, a small town built around a fairy-tale royal castle, the Palacio Real, all turrets and battlements and spiral stairs. The players get an hour to explore it at their own pace before the short hop to Pamplona and the game against CD Arga. Pamplona is famous for one week a year, the running of the bulls, and quiet and beautiful the other fifty-one, and walking the bull-run route through the old town the next morning is a genuine highlight that costs nothing.",
+      "![The royal castle of Olite in Navarra, visited on the softball tour](/photos/it-olite-castle.jpg)",
+      "The Basque Country is where the tour lands its finish. From Pamplona it is a short run over to San Sebastián, which is, straightforwardly, one of the most beautiful cities in Europe: a shell-shaped bay, a golden crescent of beach, and an old town packed with pintxos bars. The final game, against OBB Bizkorrak, is played nearby in Orio, and then the group gets a full free day in San Sebastián, which after five days of games and travel is exactly where a rest day should fall.",
+      "![La Concha bay in San Sebastián, where the softball tour takes its rest day](/photos/it-san-sebastian-concha.jpg)",
+      "The last two days are Bilbao. The Guggenheim, Frank Gehry's titanium ship of a museum, is included and guided, and it genuinely stops teenagers in their tracks in a way a museum is not supposed to. The final full day runs out to the coast for San Juan de Gaztelugatxe, the island hermitage reached by a stone causeway and a climb of 241 steps, which the players will remember long after the scorelines. A farewell Basque dinner closes the trip, and the group flies home from Bilbao the next morning.",
+      "![The Guggenheim Museum in Bilbao, included on the softball tour](/photos/it-bilbao-guggenheim.jpg)",
+      "## The clubs you play",
+      "Four host clubs are the spine of the tour, and three games are guaranteed. CB i Sófbol Sant Boi, near Barcelona, sits in a town that has been central to Spanish softball and baseball for generations, and it makes a strong, well-organized opener. CB Miralbueno is Aragón's club in Zaragoza. CD Arga carries the flag for softball in Navarra, in Pamplona. OBB Bizkorrak, on the Basque coast, closes the tour. We share the planned opponents and their age groups with you ahead of the trip and match each fixture to your team's level, and we are upfront that the final clubs can shift with the Spanish season. What does not change is the welcome. Spanish softball clubs treat a visiting American side as an event, they turn out their squads, and the post-game mixing between a team from the US and a team from Navarra or the Basque Country is consistently the part the players talk about on the bus.",
+      "![US and Spanish softball players together on the field during an Odisea Tours softball tour of Spain](/photos/odisea-softball-tours-spain-teams-on-field.jpg)",
+      "## What is included, and what it costs",
+      "The tour is priced once, per person, with no surprises on the ground. The rate covers eight nights of hotels across Barcelona, Zaragoza, Pamplona, San Sebastián and Bilbao, daily breakfast and dinner including a welcome dinner and a farewell Basque dinner, all four games and the field permits and host-club coordination behind them, a private coach with driver for the airport welcome and every internal transfer, the guided cultural visits, included entry to the Guggenheim and the Palacio Real de Olite, and a full-time Odisea director on the ground from the arrival in Barcelona to the departure from Bilbao. It does not cover international flights, lunches, personal spending or travel insurance, which we recommend. Softball tour pricing starts from $1,700 per person for a six-night trip, based on a group of twenty, twin sharing, ground services only, and this fuller nine-day northern route sits above that entry point. Families traveling alongside the team are quoted at a slightly lower rate than players. The honest way to get a real number is to tell us the details and let us price it.",
+      "## How to start planning",
+      "If your team wants a softball tour of Spain that runs through the Basque Country rather than the capital, the next step is a conversation, not a brochure. Tell us your squad size, your players' ages, how many parents and siblings are likely to travel, and your window, and we will draft the nine-day itinerary that names the cities, the host clubs and the hotels, and prices it per person. The full day-by-day, the four host clubs and the inclusions live on the [Basque Country and Barcelona softball tour](/tours/softball-tour-basque-country-barcelona) page, our original route is on the [Spain Softball Experience](/tours/softball-tours-spain) page, and you can see how we handle US groups more broadly on our [tours for US teams](/usa) page. When you are ready, [start the conversation here](/plan-your-tour).",
     ],
   },
 ];

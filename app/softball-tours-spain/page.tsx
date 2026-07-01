@@ -273,6 +273,10 @@ export default function SoftballToursSpainPillarPage() {
             ))}
           </div>
 
+          <p className="mt-10 max-w-[62ch] text-paper/70 leading-relaxed">
+            Prefer the north? We also run a one-way <Link href="/tours/softball-tour-basque-country-barcelona" className="underline decoration-gold/60 underline-offset-4 hover:text-gold">Basque Country and Barcelona softball tour</Link>, flying into Barcelona and out of Bilbao, with four games against CB i Sófbol Sant Boi, CB Miralbueno, CD Arga and OBB Bizkorrak on the way through Zaragoza, Pamplona and San Sebastián.
+          </p>
+
           <div className="mt-12">
             <Link href="/tours/softball-tours-spain" className="btn-editorial on-dark">
               Full day-by-day & inclusions
@@ -540,8 +544,8 @@ export default function SoftballToursSpainPillarPage() {
         intro="The operator's view of building a softball tour to Spain for a US team: the cities, the clubs you play, what it costs, and the decisions that separate a tour that lands from one that does not."
         slugs={[
           "best-softball-tours-spain-us-teams",
+          "spain-softball-tour-basque-country-barcelona",
           "how-to-plan-a-group-trip-to-spain",
-          "how-to-fundraise-for-your-teams-spain-tour",
         ]}
       />
 

@@ -1020,6 +1020,160 @@ export const TOURS: Tour[] = [
       },
     ],
   },
+  {
+    slug: "softball-tour-basque-country-barcelona",
+    chapter: "XIII",
+    title: "Basque Country & Barcelona",
+    italicTitle: "Softball Tour",
+    tagline: "Four games, six cities, one straight run north from Barcelona to the Basque coast.",
+    description:
+      "A nine-day softball and culture tour built for US teams and their families, running one way through northern Spain: fly into Barcelona, out of Bilbao, and cover everything in between by private coach with no backtracking. The group plays four games against established Spanish clubs, CB i Sófbol Sant Boi near Barcelona, CB Miralbueno in Zaragoza, CD Arga in Pamplona and OBB Bizkorrak on the Basque coast, with three games guaranteed. Around the diamond it is a real tour of Spain: Gaudí's Sagrada Familia, the Basílica del Pilar in Zaragoza, the royal castle of Olite, the old town of Pamplona, the beaches of San Sebastián, the Guggenheim in Bilbao and the island hermitage of San Juan de Gaztelugatxe. Designed and run by Odisea Tours staff on the ground from the airport welcome to the departure gate.",
+    image: "/photos/basque-softball-tour-hero.jpg",
+    coordinates: "43.2630° N / 2.9350° W",
+    duration: "8 nights · 9 days",
+    groupSize: "20–40 players + families",
+    accent: "#B11226",
+    faq: [
+      {
+        q: "What is the Basque Country and Barcelona softball tour?",
+        a: "It is a nine-day, eight-night softball and culture tour that Odisea Tours runs one way across northern Spain for US teams and their families. The group flies into Barcelona and out of Bilbao, so there is no backtracking, and travels the whole route by private coach through Barcelona, Zaragoza, Olite, Pamplona, San Sebastián and Bilbao. Along the way it plays four games against established Spanish clubs and visits the Sagrada Familia, the Basílica del Pilar, Olite castle, San Sebastián's La Concha bay, the Guggenheim and San Juan de Gaztelugatxe. It is a distinct trip from our Madrid, Valencia and Barcelona softball tour, built for teams who want the Basque Country and a one-way northern route.",
+      },
+      {
+        q: "Which Spanish softball clubs do US teams play on the Basque Country tour?",
+        a: "On this tour US teams play four host clubs across the route: CB i Sófbol Sant Boi near Barcelona, one of the historic homes of Spanish softball and baseball; CB Miralbueno in Zaragoza; CD Arga in Pamplona; and OBB Bizkorrak on the Basque coast near San Sebastián. Three games are guaranteed and the opponents are matched to your age and level, arranged ahead of the trip. The final clubs can change with the Spanish season and calendar, and your director confirms the fixtures in writing before departure.",
+      },
+      {
+        q: "How much does the Basque Country softball tour cost and how long is it?",
+        a: "The tour runs nine days and eight nights. Softball tour pricing starts from $1,700 per person for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. This fuller nine-day northern route, with four games, all internal coach travel and the full cultural programme, sits above that entry point, and families travelling alongside the team are quoted at a slightly lower rate than players. We lock a firm per-person figure once the group size, travel dates and trip length are confirmed.",
+      },
+    ],
+    includes: [
+      "Eight nights in twin-share hotel rooms across Barcelona, Zaragoza, Pamplona, San Sebastián and Bilbao",
+      "Four games against established Spanish softball clubs, three guaranteed, matched to your age and level",
+      "Daily breakfast and dinner, plus a welcome dinner and a farewell Basque dinner",
+      "Private coach with driver for the airport welcome and every internal transfer, no internal flights or trains",
+      "Guided cultural visits: Sagrada Familia, Zaragoza old town, Palacio Real de Olite, Pamplona, San Sebastián and Bilbao",
+      "Included entry to the Guggenheim Museum Bilbao and Palacio Real de Olite",
+      "All game-day field permits and host-club coordination",
+      "Full-time Odisea Tours director on the ground from arrival in Barcelona to departure from Bilbao",
+    ],
+    opponents: [
+      {
+        name: "CB i Sófbol Sant Boi",
+        city: "Sant Boi de Llobregat · Barcelona",
+        logo: "/badges/cb-sant-boi.jpg",
+        note: "One of the historic homes of Spanish softball, the tour opener.",
+      },
+      {
+        name: "CB Miralbueno",
+        city: "Zaragoza",
+        logo: "/badges/cb-miralbueno.jpg",
+        note: "Aragón's home club, played the evening the group reaches Zaragoza.",
+      },
+      {
+        name: "CD Arga",
+        city: "Pamplona · Navarra",
+        logo: "/badges/cd-arga.png",
+        note: "Navarrese hosts, played on arrival in Pamplona.",
+      },
+      {
+        name: "OBB Bizkorrak",
+        city: "Orio · Basque Country",
+        logo: "/badges/obb-bizkorrak.jpg",
+        note: "Basque coast club near San Sebastián, the final fixture.",
+      },
+    ],
+    gallery: [
+      {
+        src: "/photos/odisea-softball-tours-spain-teams-on-field.jpg",
+        alt: "Visiting US softball team and their Spanish host club together on the field during an Odisea Tours softball tour of Spain",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-celebration.jpg",
+        alt: "US and Spanish softball players celebrating together after a game on tour in Spain",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-team-lineup.jpg",
+        alt: "American softball team lined up before a game against a Spanish club on their Spain softball tour",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-team-huddle.jpg",
+        alt: "US softball team huddled together before a game in Spain",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-players-celebrate.jpg",
+        alt: "Softball players celebrating together after a game on their tour of northern Spain",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-us-team.jpg",
+        alt: "US youth softball team on tour in Spain with Odisea Tours",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-medals.jpg",
+        alt: "Medals and awards from softball games played against Spanish clubs on tour",
+      },
+      {
+        src: "/photos/odisea-softball-tours-spain-ball-on-grass.jpg",
+        alt: "Softball resting on the grass at a Spanish ballpark during an Odisea Tours softball tour",
+      },
+    ],
+    itinerary: [
+      {
+        day: "I",
+        title: "Arrival · Barcelona",
+        detail: "Tour director meets the group at Barcelona Airport, transfer to the hotel and a first evening walk along La Rambla and the seafront, then a welcome dinner before rest.",
+        image: "/photos/it-barcelona-el-born.jpg",
+      },
+      {
+        day: "II",
+        title: "Sagrada Familia & vs Sant Boi",
+        detail: "Morning at Gaudí's Sagrada Familia and a guided walk through the Gothic Quarter, then out to Sant Boi for the first game of the tour against CB i Sófbol Sant Boi and a social with the host club.",
+        image: "/photos/it-sagrada-familia.jpg",
+      },
+      {
+        day: "III",
+        title: "Zaragoza & vs Miralbueno",
+        detail: "Coach north to Zaragoza with a comfort stop en route, a guided visit to the Basílica del Pilar and the old town, then an evening game against CB Miralbueno.",
+        image: "/photos/it-zaragoza-pilar.jpg",
+      },
+      {
+        day: "IV",
+        title: "Olite & vs CD Arga",
+        detail: "Into Navarra to the royal castle of Olite, the Palacio Real, at your own pace, then on to Pamplona for the game against CD Arga under the evening light.",
+        image: "/photos/it-olite-castle.jpg",
+      },
+      {
+        day: "V",
+        title: "Pamplona, San Sebastián & vs Bizkorrak",
+        detail: "A morning walk of Pamplona's old town and the Running of the Bulls route, over to San Sebastián and its La Concha bay, then the final game of the tour against OBB Bizkorrak in nearby Orio.",
+        image: "/photos/it-pamplona.jpg",
+      },
+      {
+        day: "VI",
+        title: "San Sebastián Free Day",
+        detail: "A full rest day in San Sebastián: the beaches of La Concha and Zurriola in the morning, pintxos in the Parte Vieja old town, and a free afternoon before dinner together.",
+        image: "/photos/it-san-sebastian-concha.jpg",
+      },
+      {
+        day: "VII",
+        title: "Bilbao & the Guggenheim",
+        detail: "Coach to Bilbao and a guided visit to the Guggenheim Museum, entry included, then pintxos in the Casco Viejo and free time along the Nervión riverside and the Ribera market.",
+        image: "/photos/it-bilbao-guggenheim.jpg",
+      },
+      {
+        day: "VIII",
+        title: "San Juan de Gaztelugatxe",
+        detail: "Out to the Basque coast for the island hermitage of San Juan de Gaztelugatxe, lunch in a coastal village, then back to Bilbao for a farewell Basque dinner on the last night.",
+        image: "/photos/it-gaztelugatxe.jpg",
+      },
+      {
+        day: "IX",
+        title: "Departure · Bilbao",
+        detail: "Final breakfast together, timed to the group's flights, then transfers to Bilbao Airport for the journey home. Photo book mailed to the team within the month.",
+        image: "/photos/it-bilbao-skyline.jpg",
+      },
+    ],
+  },
 ];
 
 export function tourBySlug(slug: string) {

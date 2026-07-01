@@ -25,7 +25,8 @@ export interface NewsPost {
   dateModified?: string;
   readTime: string; // e.g. "4 min"
   category: string; // e.g. "La Liga", "Transfers", "Youth & Academies", "Tour Guides"
-  cover: string; // /photos/... path already in the repo
+  kicker?: string; // "La Liga · Atletico Madrid" — drives the typographic cover for hard news
+  cover?: string; // /photos/... path; optional. Hard news uses a typographic cover instead.
   body: string[]; // markdown-ish paragraphs, "## " headings, [text](url) links
   tags: string[];
   sources: NewsSource[]; // the outbound receipts

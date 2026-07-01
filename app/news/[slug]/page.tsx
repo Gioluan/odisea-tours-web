@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allNews, newsBySlug, relatedNews } from "@/lib/news";
 import TourCTA from "@/components/news/TourCTA";
+import { CoverHero, CoverCard } from "@/components/news/TypographicCover";
 
 const SITE = "https://odisea-tours.com";
 
@@ -82,7 +83,7 @@ export default async function NewsArticle({
     "@type": "NewsArticle",
     headline: post.title,
     description: post.excerpt,
-    image: [`${SITE}${post.cover}`],
+    ...(post.cover ? { image: [`${SITE}${post.cover}`] } : {}),
     datePublished: post.date,
     dateModified: post.dateModified ?? post.date,
     inLanguage: "en",
@@ -131,41 +132,57 @@ export default async function NewsArticle({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Header */}
-      <article className="pt-40 pb-24 px-6 md:px-10 lg:px-14">
-        <div className="max-w-[900px] mx-auto">
-          <div className="flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60 mb-10">
-            <Link href="/news" className="link-rule">
-              ← News
-            </Link>
-            <span>{post.category}</span>
-            <span>{post.readTime}</span>
-          </div>
-          <h1 className="font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.005em]">
-            {post.title}
-          </h1>
-          <p className="mt-8 font-mono-editorial text-[0.65rem] tracking-[0.28em] uppercase text-ink/60">
-            {new Date(post.date).toLocaleDateString("en-GB", {
-              day: "2-digit",
-              month: "long",
-              year: "numeric",
-            })}{" "}
-            · Odisea Tours Newsroom
-          </p>
+      {/* Breadcrumb bar */}
+      <div className="pt-28 px-6 md:px-10 lg:px-14">
+        <div className="max-w-[900px] mx-auto flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/60">
+          <Link href="/news" className="link-rule">
+            ← News
+          </Link>
+          <span>{post.category}</span>
+          <span>{post.readTime}</span>
         </div>
-      </article>
-
-      {/* Cover */}
-      <div className="relative h-[45vh] md:h-[60vh] mb-20">
-        <Image
-          src={post.cover}
-          alt={post.title}
-          fill
-          className="object-cover"
-          sizes="100vw"
-          priority
-        />
       </div>
+
+      {post.cover ? (
+        <>
+          {/* Guide: text header + real Odisea photo */}
+          <article className="pt-8 pb-16 px-6 md:px-10 lg:px-14">
+            <div className="max-w-[900px] mx-auto">
+              <h1 className="font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.005em]">
+                {post.title}
+              </h1>
+              <p className="mt-8 font-mono-editorial text-[0.65rem] tracking-[0.28em] uppercase text-ink/60">
+                {new Date(post.date).toLocaleDateString("en-GB", {
+                  day: "2-digit",
+                  month: "long",
+                  year: "numeric",
+                })}{" "}
+                · Odisea Tours Newsroom
+              </p>
+            </div>
+          </article>
+          <div className="relative h-[45vh] md:h-[60vh] mb-20">
+            <Image
+              src={post.cover}
+              alt={post.title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
+          </div>
+        </>
+      ) : (
+        /* Hard news: typographic cover carries kicker + headline + date */
+        <div className="mt-8 mb-20">
+          <CoverHero
+            kicker={post.kicker ?? post.category}
+            title={post.title}
+            date={post.date}
+            readTime={post.readTime}
+          />
+        </div>
+      )}
 
       {/* Body */}
       <div className="max-w-[720px] mx-auto px-6 pb-24">
@@ -269,22 +286,30 @@ export default async function NewsArticle({
               <span>More from the newsroom</span>
             </div>
             <div className="grid md:grid-cols-2 gap-10">
-              {others.map((o) => (
-                <Link key={o.slug} href={`/news/${o.slug}`} className="group block">
-                  <div className="relative aspect-[16/10] overflow-hidden corner-ticks text-ink/40">
-                    <Image
-                      src={o.cover}
-                      alt=""
-                      fill
-                      className="object-cover transition-transform duration-[1.6s] group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  </div>
-                  <h3 className="mt-5 font-display text-2xl md:text-3xl tracking-tight">
-                    {o.title}
-                  </h3>
-                </Link>
-              ))}
+              {others.map((o) =>
+                o.cover ? (
+                  <Link key={o.slug} href={`/news/${o.slug}`} className="group block">
+                    <div className="relative aspect-[16/10] overflow-hidden corner-ticks text-ink/40">
+                      <Image
+                        src={o.cover}
+                        alt=""
+                        fill
+                        className="object-cover transition-transform duration-[1.6s] group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                    <h3 className="mt-5 font-display text-2xl md:text-3xl tracking-tight">
+                      {o.title}
+                    </h3>
+                  </Link>
+                ) : (
+                  <Link key={o.slug} href={`/news/${o.slug}`} className="group block">
+                    <div className="transition-transform duration-500 group-hover:-translate-y-1">
+                      <CoverCard kicker={o.kicker ?? o.category} title={o.title} />
+                    </div>
+                  </Link>
+                ),
+              )}
             </div>
           </div>
         </section>

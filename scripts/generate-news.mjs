@@ -192,7 +192,16 @@ const TOOL = {
               type: "string",
               enum: ["La Liga", "Transfers", "Youth & Academies", "Spanish Football", "Tour Guides"],
             },
-            cover: { type: "string", enum: COVERS },
+            kicker: {
+              type: "string",
+              description:
+                "Short label for the typographic cover: the competition and/or club, e.g. 'La Liga · Atletico Madrid' or 'Transfers · Sevilla'. 2-4 words.",
+            },
+            cover: {
+              type: "string",
+              enum: COVERS,
+              description: "ONLY for evergreen guides (an Odisea photo). Leave empty for news.",
+            },
             body: {
               type: "array",
               items: { type: "string" },
@@ -208,7 +217,7 @@ const TOOL = {
                 "The item NUMBER(S) from the RSS list below whose headline is about THIS story. The article's facts must come from these items only. Do not list items about a different story.",
             },
           },
-          required: ["slug", "title", "excerpt", "readTime", "category", "cover", "body", "tags", "ctaTheme", "sourceItems"],
+          required: ["slug", "title", "excerpt", "readTime", "category", "kicker", "body", "tags", "ctaTheme", "sourceItems"],
         },
       },
     },
@@ -262,7 +271,10 @@ function toPost(a, kind) {
     dateModified: date,
     readTime: a.readTime || "4 min",
     category: a.category,
-    cover: a.cover,
+    kicker: a.kicker || a.category,
+    // Hard news uses a typographic cover (no third-party photo rights). Only
+    // evergreen guides get a real Odisea photo.
+    ...(kind === "guide" && a.cover ? { cover: a.cover } : {}),
     body: a.body,
     tags: a.tags || [],
     sources: kind === "news" ? a.sources || [] : [],

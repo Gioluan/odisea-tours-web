@@ -48,6 +48,16 @@ export default function Footer() {
                 <li><Link href="/corporate-retreats" className="link-rule">Corporate Retreats</Link></li>
                 <li><Link href="/team" className="link-rule">Team</Link></li>
                 <li><Link href="/journal" className="link-rule">Journal</Link></li>
+                <li>
+                  <a
+                    href="https://spanishfootballdesk.com"
+                    target="_blank"
+                    rel="noopener"
+                    className="link-rule"
+                  >
+                    Spanish Football Desk ↗
+                  </a>
+                </li>
                 <li><Link href="/plan-your-tour" className="link-rule">Plan a Tour</Link></li>
                 <li><Link href="/usa" className="link-rule">US Clubs</Link></li>
                 <li><Link href="/faq" className="link-rule">FAQ</Link></li>

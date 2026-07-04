@@ -10,6 +10,7 @@ const LINKS = [
   { href: "/schools", label: "Schools", num: "IV" },
   { href: "/team", label: "Team", num: "V" },
   { href: "/journal", label: "Journal", num: "VI" },
+  { href: "/news", label: "News", num: "VII" },
 ];
 
 export default function Nav() {

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { POSTS } from "@/content/journal";
+import { allNews } from "@/lib/news";
 import { TOURS } from "@/content/tours";
 import { US_CITIES } from "@/content/us-cities";
 import { US_STATES } from "@/content/us-states";
@@ -22,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/schools`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/journal`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${SITE}/news`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${SITE}/plan-your-tour`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
@@ -78,6 +80,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const newsRoutes: MetadataRoute.Sitemap = allNews().map((post) => ({
+    url: `${SITE}/news/${post.slug}`,
+    lastModified: new Date(post.dateModified ?? post.date),
+    changeFrequency: "weekly",
+    priority: post.kind === "news" ? 0.75 : 0.85,
+  }));
+
   const categoryRoutes: MetadataRoute.Sitemap = [
     "dispatches",
     "field-notes",
@@ -92,6 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...tourRoutes,
     ...journalRoutes,
+    ...newsRoutes,
     ...categoryRoutes,
     ...usCityRoutes,
     ...usStateRoutes,

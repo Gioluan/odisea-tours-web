@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Analytics from "@/components/Analytics";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import Concierge from "@/components/Concierge";
 
 const archivoBlack = Archivo_Black({
@@ -178,6 +179,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <Analytics />
+        <VercelAnalytics />
         <Reveal />
         <Nav />
         <main className="flex-1">{children}</main>

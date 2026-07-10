@@ -49,7 +49,7 @@ export const US_CITIES: UsCity[] = [
     ],
     hero_photo: "/photos/odisea-tours-fcb-celebration-night.jpg",
     og_summary:
-      "Spain soccer tours for Los Angeles and Southern California clubs. FC Barcelona, Valencia CF and Spanish FA training. Run by Odisea Tours since 2005.",
+      "Spain soccer tours for Los Angeles and Southern California clubs. FC Barcelona, Valencia CF and Spanish FA training. Run by a Spanish team on the ground since 2005.",
   },
   {
     slug: "san-diego",
@@ -113,7 +113,7 @@ export const US_CITIES: UsCity[] = [
     ],
     hero_photo: "/photos/veterans-soccer-tour-spain-match-action.jpg",
     og_summary:
-      "Spain soccer tours for Dallas-Fort Worth youth clubs. Direct flights DFW to Madrid, FC Barcelona and Valencia CF training, run by Odisea Tours since 2005.",
+      "Spain soccer tours for Dallas-Fort Worth youth clubs. Direct flights DFW to Madrid, FC Barcelona and Valencia CF training, run by a Spanish team on the ground since 2005.",
   },
   {
     slug: "houston",

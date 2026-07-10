@@ -38,7 +38,7 @@ export function buildTourFaq(tour: Tour): FaqItem[] {
     },
     {
       q: `Who is the ${fullTitle} tour designed for?`,
-      a: `${tour.tagline} Suitable group profile: ${tour.groupSize}. Odisea Tours has been running Spain group travel since 2005, with experience across youth clubs, US and UK schools, university groups, veterans associations and corporate teams.`,
+      a: `${tour.tagline} Suitable group profile: ${tour.groupSize}. Our team has been running Spain group travel since 2005, with experience across youth clubs, US and UK schools, university groups, veterans associations and corporate teams.`,
     },
     {
       q: `How do I book the ${fullTitle} tour and what is the typical price range?`,

@@ -6,7 +6,7 @@ import JournalLinks from "@/components/JournalLinks";
 export const metadata: Metadata = {
   title: "Football Tours in Madrid — Bernabeu, Atletico & La Liga",
   description:
-    "Football tours in Madrid for clubs and groups. Visit the Santiago Bernabeu, Metropolitano, train at Real Madrid City, and watch La Liga live. Organized by Odisea Tours since 2005.",
+    "Football tours in Madrid for clubs and groups. Visit the Santiago Bernabeu, Metropolitano, train at Real Madrid City, and watch La Liga live. Organized by a Spanish team on the ground since 2005.",
   alternates: { canonical: "/destinations/madrid" },
   openGraph: {
     url: "https://odisea-tours.com/destinations/madrid",

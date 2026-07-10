@@ -8,7 +8,7 @@ import GroundLogistics from "@/components/GroundLogistics";
 export const metadata: Metadata = {
   title: "Spain Football Tours from the UK | Odisea Tours",
   description:
-    "Spain football tours built for UK clubs, schools and academies. City-specific planning for London, Manchester, Birmingham, Liverpool, Leeds and Glasgow. Run by Odisea Tours since 2005.",
+    "Spain football tours built for UK clubs, schools and academies. City-specific planning for London, Manchester, Birmingham, Liverpool, Leeds and Glasgow. Run by a Spanish team on the ground since 2005.",
   alternates: {
     canonical: "/uk",
     languages: {
@@ -58,7 +58,7 @@ export default function UkIndexPage() {
             Spain Football Tours <span className="font-display-italic text-gold">from the UK</span>
           </h1>
           <p className="mt-6 max-w-[60ch] text-paper/85 text-lg leading-relaxed">
-            Odisea Tours has been hosting UK football clubs, school First XIs and academy squads in Spain since 2005. Pick your home city to see direct flights, training partners and the tour formats that work from your market.
+            Our team has been hosting UK football clubs, school First XIs and academy squads in Spain since 2005. Pick your home city to see direct flights, training partners and the tour formats that work from your market.
           </p>
         </div>
       </section>

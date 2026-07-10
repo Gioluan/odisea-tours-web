@@ -8,7 +8,7 @@ import { topJournalPosts } from "@/lib/tour-journal-map";
 const HOME_FAQ = [
   {
     q: "Is Odisea Tours a reliable Spain DMC for international groups?",
-    a: "Odisea Tours has run Spain group travel since 2005. More than 200 groups from the United States, Australia, the United Kingdom and across Europe have used Odisea for youth soccer tours, school trips, Camino de Santiago and cultural programs. Legal entity is Ground Agents Solutions S.L., based in Castellón. Every group has a bilingual Odisea trip leader on the ground end to end and a 24 hour emergency contact for the full length of the trip.",
+    a: "Odisea Tours founder Juan Sanchez has organized Spain group travel since 2005, and founded Odisea Tours in 2018. More than 200 groups from the United States, Australia, the United Kingdom and across Europe have traveled with us for youth soccer tours, school trips, Camino de Santiago and cultural programs. The legal entity is Ground Agents Solutions S.L., based in Benicàssim, Castellón. Every group has a bilingual Odisea trip leader on the ground end to end and a 24 hour emergency contact for the full length of the trip.",
   },
   {
     q: "What is included in a typical Odisea Spain Soccer Tour?",
@@ -67,7 +67,7 @@ export default function Home() {
         <div className="px-6 md:px-10 lg:px-14 pt-6 flex items-center justify-between font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70">
           <span>40.4168° N / 3.7038° W</span>
           <span className="hidden md:inline">Volume I · Edition MMXXVI</span>
-          <span>Est. 2005</span>
+          <span>On the ground since 2005</span>
         </div>
 
         {/* Hero headline */}

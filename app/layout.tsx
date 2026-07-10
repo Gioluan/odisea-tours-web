@@ -90,8 +90,8 @@ const organizationSchema = {
   url: "https://odisea-tours.com",
   logo: "https://odisea-tours.com/brand/favicons/Browser.png",
   description:
-    "Spanish destination management company (DMC) running youth soccer tours, school trips, Camino de Santiago, cultural and corporate group travel across Spain. Founded in 2005 by Juan Sanchez. Remote-first team based in Castellón.",
-  foundingDate: "2005",
+    "Spanish destination management company (DMC) running youth soccer tours, school trips, Camino de Santiago, cultural and corporate group travel across Spain. Founded in 2018 by Juan Sanchez, who has organized Spain sport tours since 2005. Remote-first team based in Benicàssim, Castellón.",
+  foundingDate: "2018",
   foundingLocation: {
     "@type": "Place",
     name: "Benicàssim, Castellón, Spain",
@@ -151,7 +151,7 @@ const websiteSchema = {
   url: "https://odisea-tours.com",
   name: "Odisea Tours",
   description:
-    "Youth soccer tours, school trips, cultural journeys and corporate retreats across Spain. Since 2005.",
+    "Youth soccer tours, school trips, cultural journeys and corporate retreats across Spain, by a team on the ground since 2005.",
   publisher: { "@id": "https://odisea-tours.com/#organization" },
   inLanguage: "en-US",
   potentialAction: {

@@ -135,7 +135,7 @@ export default function Footer() {
             <div className="stamp text-paper/70">
               EST.
               <br />
-              2005
+              2018
             </div>
             <div className="font-mono-editorial text-[0.6rem] tracking-[0.22em] uppercase text-paper/50 leading-relaxed">
               Ground Agents Solutions S.L.

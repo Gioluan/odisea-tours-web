@@ -7,7 +7,7 @@ import JournalLinks from "@/components/JournalLinks";
 export const metadata: Metadata = {
   title: "Spain Soccer Tours from the USA | Odisea Tours",
   description:
-    "Spain soccer tours built for US clubs, high schools and colleges. City-specific planning for Los Angeles, San Diego, Dallas, Houston, New York, Miami and beyond. Run by Odisea Tours since 2005.",
+    "Spain soccer tours built for US clubs, high schools and colleges. City-specific planning for Los Angeles, San Diego, Dallas, Houston, New York, Miami and beyond. Run by a Spanish team on the ground since 2005.",
   alternates: {
     canonical: "/usa",
     languages: {
@@ -46,7 +46,7 @@ export default function UsaIndexPage() {
             Spain Soccer Tours <span className="font-display-italic text-gold">from the USA</span>
           </h1>
           <p className="mt-6 max-w-[60ch] text-paper/85 text-lg leading-relaxed">
-            Odisea Tours has been hosting US soccer clubs, high schools and college rosters in Spain since 2005. Pick your home city to see flight routes, training partners and the tour formats that work from your market.
+            Our team has been hosting US soccer clubs, high schools and college rosters in Spain since 2005. Pick your home city to see flight routes, training partners and the tour formats that work from your market.
           </p>
           <p className="mt-4 max-w-[60ch] text-paper/75 leading-relaxed">
             Bringing a softball team? See the{" "}

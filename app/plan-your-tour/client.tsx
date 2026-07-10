@@ -357,7 +357,7 @@ export default function PlanYourTourPage() {
 
           {/* Trust */}
           <div className="flex flex-wrap items-center justify-center gap-4 mt-14 reveal">
-            <span className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink-muted">Based in Spain since 2005</span>
+            <span className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink-muted">On the ground in Spain since 2005</span>
             <span className="text-ink/15">|</span>
             <span className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink-muted">100+ tours organized</span>
             <span className="text-ink/15">|</span>

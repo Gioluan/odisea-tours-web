@@ -78,7 +78,7 @@ function faqSchema(c: AuCity) {
         name: "Who runs Odisea Tours?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ground Agents Solutions S.L., operating Spain group tours since 2005. Headquarters in Benicassim, Castellón, with ground teams in Madrid, Valencia and Barcelona.",
+          text: "Ground Agents Solutions S.L., the company behind Odisea Tours, with a Spanish team organizing group tours since 2005. Headquarters in Benicassim, Castellón, with ground teams in Madrid, Valencia and Barcelona.",
         },
       },
     ],

@@ -34,7 +34,7 @@ export const UK_CITIES: UkCity[] = [
       "Ryanair (STN to Madrid and Valencia)",
     ],
     intro:
-      "London grassroots and academy football is the deepest pipeline in Europe, and the cheapest flight to Spain is the one your club is already used to taking on a half-term family trip. Odisea Tours has been hosting London Sunday League clubs, school first XIs and academy sides since 2005, with training inside FC Barcelona, Valencia CF and the Spanish Football Federation's Las Rozas headquarters.",
+      "London grassroots and academy football is the deepest pipeline in Europe, and the cheapest flight to Spain is the one your club is already used to taking on a half-term family trip. Our team has been hosting London Sunday League clubs, school first XIs and academy sides since 2005, with training inside FC Barcelona, Valencia CF and the Spanish Football Federation's Las Rozas headquarters.",
     local_football_context:
       "London clubs sit closer to Spanish football than any other big football city in Europe. The U16 to U18 squad that travels Sunday morning to Hackney Marshes can fly to Madrid Saturday after school and train at the Spanish FA on Sunday. The pull is not the flight. It is the access to La Liga methodology, the warm-weather training week in February when London pitches are unplayable, and the cultural side trip that turns a football tour into a parent-friendly itinerary.",
     time_zone_note:
@@ -53,7 +53,7 @@ export const UK_CITIES: UkCity[] = [
     ],
     hero_photo: "/photos/spain-football-tour-london-clubs-fc-barcelona-training-spain.jpg",
     og_summary:
-      "Spain football tours for London clubs, schools and academies. FC Barcelona, Valencia CF and Spanish FA training, two and a half hours from Heathrow. Run by Odisea Tours since 2005.",
+      "Spain football tours for London clubs, schools and academies. FC Barcelona, Valencia CF and Spanish FA training, two and a half hours from Heathrow. Run by a Spanish team on the ground since 2005.",
   },
   {
     slug: "manchester",
@@ -89,7 +89,7 @@ export const UK_CITIES: UkCity[] = [
     ],
     hero_photo: "/photos/spain-football-tour-manchester-clubs-pre-season-training-spain.jpg",
     og_summary:
-      "Spain football tours from Manchester. Direct flights to Madrid, Barcelona and Valencia. FC Barcelona, Valencia CF and Spanish FA training. Run by Odisea Tours since 2005.",
+      "Spain football tours from Manchester. Direct flights to Madrid, Barcelona and Valencia. FC Barcelona, Valencia CF and Spanish FA training. Run by a Spanish team on the ground since 2005.",
   },
   {
     slug: "birmingham",
@@ -106,7 +106,7 @@ export const UK_CITIES: UkCity[] = [
       "Vueling (BHX to Barcelona, daily seasonal)",
     ],
     intro:
-      "Birmingham and the West Midlands hold one of the deepest grassroots football pipelines outside London. Odisea Tours has been hosting Midlands clubs and school football sides in Spain since 2005, with training inside FC Barcelona, Valencia CF and the Spanish FA at Las Rozas.",
+      "Birmingham and the West Midlands hold one of the deepest grassroots football pipelines outside London. Our team has been hosting Midlands clubs and school football sides in Spain since 2005, with training inside FC Barcelona, Valencia CF and the Spanish FA at Las Rozas.",
     local_football_context:
       "Midlands grassroots football covers everything from Birmingham city academies to county football across Warwickshire, Worcestershire and Staffordshire. A Spain tour from BHX is the same flight time as a London commute and the cost sits below a comparable European youth festival in Germany or the Netherlands. Most Midlands squads run their tour over February half-term, the Easter break or the late May bank holiday.",
     time_zone_note:
@@ -125,7 +125,7 @@ export const UK_CITIES: UkCity[] = [
     ],
     hero_photo: "/photos/spain-football-tour-birmingham-clubs-spanish-fa-training-spain.jpg",
     og_summary:
-      "Spain football tours from Birmingham. Direct flights to Madrid, Barcelona and Alicante. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
+      "Spain football tours from Birmingham. Direct flights to Madrid, Barcelona and Alicante. FC Barcelona, Valencia CF, Spanish FA training. On the ground in Spain since 2005.",
   },
   {
     slug: "liverpool",
@@ -161,7 +161,7 @@ export const UK_CITIES: UkCity[] = [
     ],
     hero_photo: "/photos/spain-football-tour-liverpool-clubs-coaching-briefing-spain.jpg",
     og_summary:
-      "Spain football tours from Liverpool and Merseyside. FC Barcelona, Valencia CF and Spanish FA training. Direct flights from LPL and MAN. Odisea Tours since 2005.",
+      "Spain football tours from Liverpool and Merseyside. FC Barcelona, Valencia CF and Spanish FA training. Direct flights from LPL and MAN. On the ground in Spain since 2005.",
   },
   {
     slug: "leeds",
@@ -178,7 +178,7 @@ export const UK_CITIES: UkCity[] = [
       "Iberia and British Airways (MAN to Madrid)",
     ],
     intro:
-      "Leeds and West Yorkshire run one of the strongest grassroots football networks in northern England. Odisea Tours has been hosting Yorkshire clubs and schools in Spain since 2005, with training inside FC Barcelona, Valencia CF and the Spanish Football Federation.",
+      "Leeds and West Yorkshire run one of the strongest grassroots football networks in northern England. Our team has been hosting Yorkshire clubs and schools in Spain since 2005, with training inside FC Barcelona, Valencia CF and the Spanish Football Federation.",
     local_football_context:
       "Yorkshire football starts at parish level and runs up through county leagues and into academy feeders. A Spain tour for a Leeds club is the same outlay as a domestic showcase weekend, but the players come home with a Spanish FA training day on the books and a friendly fixture line on the CV. Most Leeds groups travel during October half-term and February half-term.",
     time_zone_note:
@@ -197,7 +197,7 @@ export const UK_CITIES: UkCity[] = [
     ],
     hero_photo: "/photos/spain-football-tour-leeds-clubs-spanish-fa-training-session-spain.jpg",
     og_summary:
-      "Spain football tours from Leeds and West Yorkshire. Direct Jet2 flights from LBA. FC Barcelona, Valencia CF and Spanish FA training. Odisea Tours since 2005.",
+      "Spain football tours from Leeds and West Yorkshire. Direct Jet2 flights from LBA. FC Barcelona, Valencia CF and Spanish FA training. On the ground in Spain since 2005.",
   },
   {
     slug: "glasgow",
@@ -233,7 +233,7 @@ export const UK_CITIES: UkCity[] = [
     ],
     hero_photo: "/photos/spain-football-tour-glasgow-clubs-valencia-cf-coaching-spain.jpg",
     og_summary:
-      "Spain football tours from Glasgow and central Scotland. Direct flights to Barcelona, Madrid and Alicante. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
+      "Spain football tours from Glasgow and central Scotland. Direct flights to Barcelona, Madrid and Alicante. FC Barcelona, Valencia CF, Spanish FA training. On the ground in Spain since 2005.",
   },
 ];
 

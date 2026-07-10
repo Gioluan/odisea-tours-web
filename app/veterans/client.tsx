@@ -111,7 +111,7 @@ export default function VeteransPage() {
           <p className="mt-6 text-paper/60 text-lg sm:text-xl max-w-xl leading-relaxed reveal">
             Matches against local veteran sides, iconic stadium tours,
             professional coaching, La Liga tickets and the best of Spain.
-            All organized on the ground by Odisea Tours since 2005.
+            All organized on the ground by our Spanish team since 2005.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-start gap-4 reveal">

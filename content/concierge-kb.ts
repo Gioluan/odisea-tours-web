@@ -38,7 +38,7 @@ leaders on the ground in Madrid, Barcelona and Valencia. Primary markets are the
 Every tour is private and fully custom-built for the group: you tell Odisea your dates, group size
 and interests, and the team designs the trip and sends a per-traveler quote. All tours are bilingual
 with 24/7 on-the-ground support in Spain. Transport is by private coach throughout; international
-flights are always quoted separately from ground services. Odisea has hosted 200+ groups since 2005.`;
+flights are always quoted separately from ground services. Our team has hosted 200+ groups since 2005.`;
 
 export const CONTACT_FACTS = `Discovery call (free, 30 minutes): https://calendly.com/juan-odisea-tours/30min
 Email: bookings@odisea-tours.com

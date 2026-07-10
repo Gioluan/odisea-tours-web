@@ -12,7 +12,7 @@ const CANONICAL = `${SITE}/soccer-tours-spain`;
 export const metadata: Metadata = {
   title: { absolute: "Soccer Tours in Spain · Youth, Pre-Season & Veterans | Odisea Tours" },
   description:
-    "Soccer tours in Spain run by Odisea Tours since 2005. Training at FC Barcelona, Valencia CF and the Spanish Football Federation. Matches against Spanish academy or amateur sides. Stadium days at Camp Nou, Bernabéu and Mestalla. From $1,400 per player.",
+    "Soccer tours in Spain run by a Spanish team on the ground since 2005. Training at FC Barcelona, Valencia CF and the Spanish Football Federation. Matches against Spanish academy or amateur sides. Stadium days at Camp Nou, Bernabéu and Mestalla. From $1,400 per player.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Soccer Tours in Spain | Odisea Tours · Since 2005",
@@ -102,7 +102,7 @@ export default function SoccerToursSpainPillarPage() {
       "@type": "TravelAgency",
       name: "Odisea Tours",
       url: SITE,
-      foundingDate: "2005",
+      foundingDate: "2018",
       areaServed: { "@type": "Country", name: "Spain" },
     },
     itinerary: [
@@ -152,7 +152,7 @@ export default function SoccerToursSpainPillarPage() {
             Soccer Tours <span className="font-display-italic text-gold">in Spain</span>
           </h1>
           <p className="mt-7 max-w-[62ch] text-paper/85 text-lg leading-relaxed">
-            A soccer tour in Spain is not a vacation with a stadium tour bolted on. It is ten days of being inside the country that built the modern game. Odisea Tours has been planning these trips since 2005, for youth clubs, high school programs, college pre-season squads and adult amateur teams from the US, UK and Australia.
+            A soccer tour in Spain is not a vacation with a stadium tour bolted on. It is ten days of being inside the country that built the modern game. Our team has been planning these trips since 2005, for youth clubs, high school programs, college pre-season squads and adult amateur teams from the US, UK and Australia.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/plan-your-tour" className="btn-editorial on-dark">

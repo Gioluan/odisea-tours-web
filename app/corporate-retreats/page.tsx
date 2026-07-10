@@ -9,7 +9,7 @@ const CANONICAL = `${SITE}/corporate-retreats`;
 export const metadata: Metadata = {
   title: { absolute: "Corporate Retreats in Spain · Company Offsites & Team Building | Odisea Tours" },
   description:
-    "Corporate retreats, company offsites and team-building trips in Spain, run end to end by Odisea Tours since 2005. Venues in Madrid, Barcelona, Valencia, La Rioja and the Basque Country for groups of 8 to 120. Venue scouting, AV and translation, transfers and an on-site producer, with full budget transparency.",
+    "Corporate retreats, company offsites and team-building trips in Spain, run end to end by a Spanish team on the ground since 2005. Venues in Madrid, Barcelona, Valencia, La Rioja and the Basque Country for groups of 8 to 120. Venue scouting, AV and translation, transfers and an on-site producer, with full budget transparency.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Corporate Retreats in Spain | Odisea Tours · Since 2005",
@@ -80,7 +80,7 @@ const FAQ = [
   },
   {
     q: "Do you run corporate retreats for companies based outside Spain?",
-    a: "Yes. Most corporate clients are companies based in the United States, the United Kingdom and across Europe. Odisea Tours is a Spanish destination management company running everything on the ground since 2005, which means the organiser abroad gets a single point of contact and never has to source or manage local venues, transport or production vendors.",
+    a: "Yes. Most corporate clients are companies based in the United States, the United Kingdom and across Europe. Odisea Tours is a Spanish destination management company whose team has run everything on the ground since 2005, which means the organiser abroad gets a single point of contact and never has to source or manage local venues, transport or production vendors.",
   },
   {
     q: "How far in advance should we book a company retreat in Spain?",
@@ -123,7 +123,7 @@ export default function CorporateRetreatsPage() {
       "@type": "TravelAgency",
       name: "Odisea Tours",
       url: SITE,
-      foundingDate: "2005",
+      foundingDate: "2018",
       areaServed: { "@type": "Country", name: "Spain" },
     },
     itinerary: [
@@ -165,7 +165,7 @@ export default function CorporateRetreatsPage() {
             Corporate Retreats <span className="font-display-italic text-gold">in Spain</span>
           </h1>
           <p className="mt-7 max-w-[62ch] text-paper/85 text-lg leading-relaxed">
-            Off-sites that do not feel like off-sites. Your team plans next year from a restored monastery in La Rioja or a design hotel in Barcelona, breaks bread with the winemaker, and comes home actually energised. Odisea Tours has run company retreats in Spain since 2005, end to end, for teams of 8 to 120 from the US, UK and across Europe.
+            Off-sites that do not feel like off-sites. Your team plans next year from a restored monastery in La Rioja or a design hotel in Barcelona, breaks bread with the winemaker, and comes home actually energised. Our team has run company retreats in Spain since 2005, end to end, for teams of 8 to 120 from the US, UK and across Europe.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/plan-your-tour" className="btn-editorial on-dark">

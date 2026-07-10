@@ -27,39 +27,27 @@ const TEAM = [
 const TIMELINE = [
   {
     year: "2005",
-    title: "A garage in Castellon",
+    title: "The first tour",
     detail:
-      "Juan starts Odisea Tours with a landline, a second-hand coach, and one French school group who had been let down by another agency. Three months later, they returned with a second booking.",
-  },
-  {
-    year: "2009",
-    title: "The first stadium pass",
-    detail:
-      "A youth coach from England asks us to arrange a training visit to La Masia. A ten-year relationship with FC Barcelona's academy staff begins.",
+      "Based in Madrid, Juan is crossing Spain north to south making sure every Inspiresport tour lands right. The first is a UK club to Valencia CF, based at Posadas de España. It is where the way Odisea runs a tour begins.",
   },
   {
     year: "2014",
-    title: "Ground Agents Solutions S.L.",
+    title: "Going solo",
     detail:
-      "We incorporate as a full Spanish tour operator, licensed, insured, bonded. The team grows to six. We open the Madrid office.",
+      "After years making other operators' groups a success across Spain, Juan steps out on his own and starts running tours under his own name.",
   },
   {
-    year: "2019",
-    title: "A thousand groups",
+    year: "2018",
+    title: "Odisea Tours",
     detail:
-      "We pass the one-thousandth group mark. We celebrate quietly, with a paella for the team, on a beach outside Valencia.",
-  },
-  {
-    year: "2022",
-    title: "The pandemic year",
-    detail:
-      "Every group cancels. We refund every euro without hesitation. Twelve months later, eighty-percent of those clients come back. It is the proudest moment in the company's history.",
+      "Juan founds Odisea Tours under Ground Agents Solutions S.L. Licensed, insured, bonded. Small by design, independent by choice.",
   },
   {
     year: "2026",
-    title: "Twenty years in.",
+    title: "On the ground, still",
     detail:
-      "Still small. Still independent. Still answering the phone ourselves at 2am when a flight gets delayed in Dublin.",
+      "Small by design. Independent by choice. Still answering the phone ourselves at 2am when a flight gets delayed in Dublin.",
   },
 ];
 

@@ -7,7 +7,7 @@ const LAST_UPDATED = "2026-05-06";
 export const metadata: Metadata = {
   title: "Booking Terms & Conditions | Odisea Tours",
   description:
-    "Booking terms for Odisea Tours group travel in Spain. Operated by Ground Agents Solutions S.L. (CIF B40274763), Benicassim, Castellón, Spain. Since 2005.",
+    "Booking terms for Odisea Tours group travel in Spain. Operated by Ground Agents Solutions S.L. (CIF B40274763), Benicassim, Castellón, Spain.",
   alternates: { canonical: "/terms" },
   robots: { index: true, follow: true },
   openGraph: {

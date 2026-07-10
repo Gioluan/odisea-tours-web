@@ -34,7 +34,7 @@ export const AU_CITIES: AuCity[] = [
       "Singapore Airlines (SYD via Singapore, codeshare to Madrid)",
     ],
     intro:
-      "Sydney runs the largest junior soccer base in Australia. Odisea Tours has been hosting NPL clubs, junior representative squads, school First XIs and academy sides from Greater Sydney in Spain since 2005, with training inside FC Barcelona, Valencia CF and the Spanish Football Federation's Las Rozas headquarters.",
+      "Sydney runs the largest junior soccer base in Australia. Our team has been hosting NPL clubs, junior representative squads, school First XIs and academy sides from Greater Sydney in Spain since 2005, with training inside FC Barcelona, Valencia CF and the Spanish Football Federation's Las Rozas headquarters.",
     local_soccer_context:
       "Sydney soccer covers NPL Men's and Women's, junior representative football, NSWNL, and the deep school AFC and CIS competitions across the north shore, eastern suburbs, western Sydney and the Sutherland shire. The A-League off-season from May through September aligns cleanly with a European tour window, and the Australian winter is the right time to be training in Spanish sunshine. We run the most Sydney groups in late June, July and September school holidays.",
     time_zone_note:
@@ -53,7 +53,7 @@ export const AU_CITIES: AuCity[] = [
     ],
     hero_photo: "/photos/spain-soccer-tour-sydney-clubs-fc-barcelona-training-spain.jpg",
     og_summary:
-      "Spain soccer tours from Sydney for NPL clubs, schools and junior representative squads. FC Barcelona, Valencia CF and Spanish FA training. Run by Odisea Tours since 2005.",
+      "Spain soccer tours from Sydney for NPL clubs, schools and junior representative squads. FC Barcelona, Valencia CF and Spanish FA training. Run by a Spanish team on the ground since 2005.",
   },
   {
     slug: "melbourne",
@@ -89,7 +89,7 @@ export const AU_CITIES: AuCity[] = [
     ],
     hero_photo: "/photos/spain-soccer-tour-melbourne-clubs-spanish-fa-training-spain.jpg",
     og_summary:
-      "Spain soccer tours from Melbourne for NPL clubs, schools and academies. FC Barcelona, Valencia CF and Spanish FA training. Odisea Tours since 2005.",
+      "Spain soccer tours from Melbourne for NPL clubs, schools and academies. FC Barcelona, Valencia CF and Spanish FA training. On the ground in Spain since 2005.",
   },
   {
     slug: "brisbane",
@@ -125,7 +125,7 @@ export const AU_CITIES: AuCity[] = [
     ],
     hero_photo: "/photos/spain-soccer-tour-brisbane-clubs-spanish-fa-training-session-spain.jpg",
     og_summary:
-      "Spain soccer tours from Brisbane and South East Queensland. NPL clubs, schools and academies. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
+      "Spain soccer tours from Brisbane and South East Queensland. NPL clubs, schools and academies. FC Barcelona, Valencia CF, Spanish FA training. On the ground in Spain since 2005.",
   },
   {
     slug: "perth",
@@ -161,7 +161,7 @@ export const AU_CITIES: AuCity[] = [
     ],
     hero_photo: "/photos/spain-soccer-tour-perth-clubs-coaching-briefing-spain.jpg",
     og_summary:
-      "Spain soccer tours from Perth and Western Australia. Shortest one-stop route to Europe. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
+      "Spain soccer tours from Perth and Western Australia. Shortest one-stop route to Europe. FC Barcelona, Valencia CF, Spanish FA training. On the ground in Spain since 2005.",
   },
   {
     slug: "adelaide",
@@ -197,7 +197,7 @@ export const AU_CITIES: AuCity[] = [
     ],
     hero_photo: "/photos/spain-soccer-tour-adelaide-clubs-action-training-spain.jpg",
     og_summary:
-      "Spain soccer tours from Adelaide and South Australia. NPL clubs, schools and academies. FC Barcelona, Valencia CF, Spanish FA training. Odisea Tours since 2005.",
+      "Spain soccer tours from Adelaide and South Australia. NPL clubs, schools and academies. FC Barcelona, Valencia CF, Spanish FA training. On the ground in Spain since 2005.",
   },
 ];
 

@@ -8,7 +8,7 @@ export type SchoolFaq = { q: string; a: string };
 export const SCHOOLS_FAQ: SchoolFaq[] = [
   {
     q: "Who can help organize a high school soccer team trip to Spain?",
-    a: "Odisea Tours organizes high school soccer team trips to Spain end to end. We are a Spain-based company that has run school and club soccer tours since 2005, handling hotels, ground transport, training sessions at professional clubs, matches against Spanish sides, stadium visits, cultural days and 24/7 bilingual supervision. A US coach or athletic director gives us the dates, squad size and budget, and we build and run the trip on the ground. Start with a free planning call at odisea-tours.com/plan-your-tour.",
+    a: "Odisea Tours organizes high school soccer team trips to Spain end to end. We are a Spain-based team that has run school and club soccer tours since 2005, handling hotels, ground transport, training sessions at professional clubs, matches against Spanish sides, stadium visits, cultural days and 24/7 bilingual supervision. A US coach or athletic director gives us the dates, squad size and budget, and we build and run the trip on the ground. Start with a free planning call at odisea-tours.com/plan-your-tour.",
   },
   {
     q: "When should we book a high school soccer tour to Spain for next summer?",

@@ -12,7 +12,7 @@ export const AUTHORS: Record<AuthorId, Author> = {
     id: "juan",
     name: "Juan Sanchez",
     role: "Director, Odisea Tours",
-    bio: "Founded Odisea Tours in 2005. Twenty years organising group sport and cultural tours across Spain.",
+    bio: "Founder of Odisea Tours. Has organised group sport and cultural tours across Spain since 2005.",
   },
   aitor: {
     id: "aitor",

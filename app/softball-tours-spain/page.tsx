@@ -152,7 +152,7 @@ export default function SoftballToursSpainPillarPage() {
       "@type": "TravelAgency",
       name: "Odisea Tours",
       url: SITE,
-      foundingDate: "2005",
+      foundingDate: "2018",
       areaServed: { "@type": "Country", name: "Spain" },
     },
     itinerary: [
@@ -203,7 +203,7 @@ export default function SoftballToursSpainPillarPage() {
             Softball Tours <span className="font-display-italic text-gold">in Spain</span>
           </h1>
           <p className="mt-7 max-w-[62ch] text-paper/85 text-lg leading-relaxed">
-            A softball tour to Spain done properly is not a sightseeing trip with one exhibition game bolted on. It is four competitive games against established Spanish clubs, across Madrid, Valencia and Barcelona, woven into a real cultural trip the whole family remembers. Odisea Tours has built group sport tours in Spain since 2005, and softball is the newest version of that work.
+            A softball tour to Spain done properly is not a sightseeing trip with one exhibition game bolted on. It is four competitive games against established Spanish clubs, across Madrid, Valencia and Barcelona, woven into a real cultural trip the whole family remembers. Our team has built group sport tours in Spain since 2005, and softball is the newest version of that work.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/plan-your-tour" className="btn-editorial on-dark">

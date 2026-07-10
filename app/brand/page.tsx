@@ -418,7 +418,7 @@ export default function BrandPage() {
               <dl className="space-y-3 font-mono-editorial text-sm">
                 <div className="flex gap-4">
                   <dt className="text-paper/50 w-28 flex-shrink-0 uppercase tracking-[0.18em] text-[0.65rem] pt-0.5">Founded</dt>
-                  <dd>2005</dd>
+                  <dd>2018 · on the ground since 2005</dd>
                 </div>
                 <div className="flex gap-4">
                   <dt className="text-paper/50 w-28 flex-shrink-0 uppercase tracking-[0.18em] text-[0.65rem] pt-0.5">Legal</dt>

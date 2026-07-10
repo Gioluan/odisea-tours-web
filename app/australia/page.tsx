@@ -8,7 +8,7 @@ import GroundLogistics from "@/components/GroundLogistics";
 export const metadata: Metadata = {
   title: "Spain Soccer Tours from Australia | Odisea Tours",
   description:
-    "Spain soccer tours built for Australian clubs, schools and academies. City-specific planning for Sydney, Melbourne, Brisbane, Perth and Adelaide. Run by Odisea Tours since 2005.",
+    "Spain soccer tours built for Australian clubs, schools and academies. City-specific planning for Sydney, Melbourne, Brisbane, Perth and Adelaide. Run by a Spanish team on the ground since 2005.",
   alternates: {
     canonical: "/australia",
     languages: {
@@ -58,7 +58,7 @@ export default function AustraliaIndexPage() {
             Spain Soccer Tours <span className="font-display-italic text-gold">from Australia</span>
           </h1>
           <p className="mt-6 max-w-[60ch] text-paper/85 text-lg leading-relaxed">
-            Odisea Tours has been hosting Australian NPL clubs, school First XIs and junior representative squads in Spain since 2005. Pick your home city to see flight routes, training partners and the tour formats that work from your market.
+            Our team has been hosting Australian NPL clubs, school First XIs and junior representative squads in Spain since 2005. Pick your home city to see flight routes, training partners and the tour formats that work from your market.
           </p>
         </div>
       </section>

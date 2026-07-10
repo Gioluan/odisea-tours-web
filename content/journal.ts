@@ -59,6 +59,7 @@ const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
   "why-australian-teams-choosing-spain-over-england": "juan",
   "best-softball-tours-spain-us-teams": "juan",
   "spain-softball-tour-basque-country-barcelona": "juan",
+  "softball-tour-spain-for-families-and-parents": "juan",
   "why-us-clubs-choose-spain-over-england-soccer-tours": "juan",
 };
 
@@ -88,6 +89,7 @@ const TAGS_BY_SLUG: Record<string, string[]> = {
   "why-veterans-football-tours-spain-are-booming": ["veterans football", "masters", "Spain"],
   "why-australian-teams-choosing-spain-over-england": ["Australia", "youth tours", "Spain", "England"],
   "best-softball-tours-spain-us-teams": ["softball", "Spain", "US teams", "softball tours", "CBS Rivas", "Sant Boi", "Fenix Valencia", "Madrid", "Valencia", "Barcelona"],
+  "softball-tour-spain-for-families-and-parents": ["softball", "Spain", "families", "parents", "softball tours", "travel", "Madrid", "Valencia", "Barcelona"],
   "spain-softball-tour-basque-country-barcelona": ["softball", "Spain", "US teams", "softball tours", "Basque Country", "Bilbao", "San Sebastian", "Barcelona", "Zaragoza", "Pamplona", "Sant Boi", "Gaztelugatxe"],
   "why-us-clubs-choose-spain-over-england-soccer-tours": ["US clubs", "soccer tours", "Spain", "England", "youth soccer", "cost", "weather", "training", "FC Barcelona", "Valencia CF", "Spanish FA", "Premier League", "Pep Guardiola", "Mikel Arteta", "Unai Emery", "Rafa Benitez", "possession game"],
 };
@@ -265,6 +267,7 @@ const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "why-australian-teams-choosing-spain-over-england": "soccer",
   "best-softball-tours-spain-us-teams": "softball",
   "spain-softball-tour-basque-country-barcelona": "softball",
+  "softball-tour-spain-for-families-and-parents": "softball",
   "why-us-clubs-choose-spain-over-england-soccer-tours": "soccer",
 };
 
@@ -1171,6 +1174,57 @@ export const POSTS: Post[] = [
       "The tour is priced once, per person, with no surprises on the ground. The rate covers eight nights of hotels across Barcelona, Zaragoza, Pamplona, San Sebastián and Bilbao, daily breakfast and dinner including a welcome dinner and a farewell Basque dinner, all four games and the field permits and host-club coordination behind them, a private coach with driver for the airport welcome and every internal transfer, the guided cultural visits, included entry to the Guggenheim and the Palacio Real de Olite, and a full-time Odisea director on the ground from the arrival in Barcelona to the departure from Bilbao. It does not cover international flights, lunches, personal spending or travel insurance, which we recommend. Softball tour pricing starts from $1,700 per person for a six-night trip, based on a group of twenty, twin sharing, ground services only, and this fuller nine-day northern route sits above that entry point. Families traveling alongside the team are quoted at a slightly lower rate than players. The honest way to get a real number is to tell us the details and let us price it.",
       "## How to start planning",
       "If your team wants a softball tour of Spain that runs through the Basque Country rather than the capital, the next step is a conversation, not a brochure. Tell us your squad size, your players' ages, how many parents and siblings are likely to travel, and your window, and we will draft the nine-day itinerary that names the cities, the host clubs and the hotels, and prices it per person. The full day-by-day, the four host clubs and the inclusions live on the [Basque Country and Barcelona softball tour](/tours/softball-tour-basque-country-barcelona) page, our original route is on the [Spain Softball Experience](/tours/softball-tours-spain) page, and you can see how we handle US groups more broadly on our [tours for US teams](/usa) page. When you are ready, [start the conversation here](/plan-your-tour).",
+    ],
+  },
+  {
+    slug: "softball-tour-spain-for-families-and-parents",
+    title: "What the Families Do: A Softball Tour of Spain for Parents and",
+    italicTitle: "Siblings",
+    excerpt:
+      "Softball teams almost never travel alone. Here is what a Spain softball tour actually looks like for the parents, siblings and grandparents who come along: what they do on game days, what they see between the diamonds, and how we price the family alongside the player.",
+    date: "2026-07-02",
+    readTime: "10 min",
+    category: "Field Notes",
+    cover: "/photos/odisea-softball-tours-spain-celebration.jpg",
+    faqs: [
+      {
+        q: "Can families travel with the team on a Spain softball tour?",
+        a: "Yes, and most do. A softball tour to Spain is usually a family trip built around a team, not a closed squad trip. Parents, siblings and grandparents travel on the same coach, stay in the same hotels and follow the same route through Madrid, Valencia and Barcelona. Odisea Tours quotes traveling family members at a slightly lower per-person rate than players, and builds the itinerary so the games and the sightseeing work for everyone in the group.",
+      },
+      {
+        q: "What do parents do while the team is playing?",
+        a: "On the four game days, families watch the games. Spanish clubs treat a visiting US side as an event, the games are relaxed and social, and the post-game mixing over refreshments is where parents from Texas or California end up talking to parents from Valencia. On the days between games the whole group tours together: Toledo, Las Ventas, the City of Arts and Sciences in Valencia, Sagunto castle and a guided day through Gaudí's Barcelona. Nobody spends the week sitting alone in bleachers.",
+      },
+      {
+        q: "Is a Spain softball tour suitable for younger siblings and grandparents?",
+        a: "Yes. The pace is built for a mixed-age group rather than a squad of athletes. Game days are relaxed, cultural days are walkable and broken up with sit-down meals, and there is a built-in rest day in Valencia with a morning on the beach. Younger siblings and grandparents travel comfortably on the same itinerary. We adjust the walking days and the free time when we know the age spread of the group in advance.",
+      },
+      {
+        q: "How much does it cost to bring family on a softball tour to Spain?",
+        a: "Softball tour pricing starts from $1,700 per person for a six-night trip, based on a group of twenty, twin sharing, ground services only, with international flights separate. Traveling family members are quoted at a slightly lower rate than players because they are not attached to the games and permits. Larger groups bring the per-person cost down, so a team that travels with a strong contingent of families usually lands on a better number for everyone.",
+      },
+    ],
+    body: [
+      "Ask any softball coach who has taken a team abroad and they will tell you the same thing: the team does not travel alone. A softball tour is a family trip with a team at the center of it. Parents come, siblings come, and more grandparents than you would expect come too. That is different from a lot of youth soccer trips, where the squad often travels as a closed group, and it changes how the whole tour has to be built. After twenty years running group tours in Spain, we build our softball tours for the whole traveling party, not just the players. This is the view from the other side of the fence: what a [Spain softball tour](/tours/softball-tours-spain) actually looks like for the families who come along.",
+      "## The team is the reason, the family is the trip",
+      "It helps to be honest about what a softball tour to Spain really is. The four games against Spanish clubs are the spine, the reason the trip exists and the reason it gets approved. But most of the people on the coach are not playing. They are the mom who has driven to every tournament for eight years and has never once been thanked with a trip she actually wanted to take. They are the younger brother who is about to see the Sagrada Familia. They are the grandparents who decided that this, finally, was the one worth the flight. Build the tour only for the players and you have failed most of the people paying for it. Build it for the family and the players still get their four games, because the games were never in competition with the sightseeing in the first place.",
+      "![A US softball team and their families celebrate together on tour in Spain](/photos/odisea-softball-tours-spain-celebration.jpg)",
+      "## Game days, from the family's seat",
+      "There are four game days across the tour, and on each of them the families watch. This is not the tense, silent atmosphere of a US travel-ball tournament. Spanish clubs treat a visiting American side as an event. They turn out their squads, they put on refreshments afterward, and the fixtures are competitive but relaxed. The part parents remember is rarely the score. It is the half hour after the final out, when a parent from a club in Valencia comes over with a plate of food and, through a mix of broken English and phone translation and hand gestures, works out that both families have been doing the exact same thing, driving to the exact same kind of tournament, for the exact same number of years. That conversation happens on every tour. It is the quiet heart of the whole trip.",
+      "![US and Spanish softball players and families together on the field in Spain](/photos/odisea-softball-tours-spain-teams-on-field.jpg)",
+      "## The days between the games",
+      "Four games across a nine-day trip means most days are not game days, and those are the days the family came for. The whole group tours together. In Madrid there is a morning in Toledo, the medieval city on the hill, and a visit to Las Ventas, the great bullring, as a piece of Spanish history rather than a spectacle. In Valencia there is the City of Arts and Sciences, Santiago Calatrava's white spaceship of a science museum and aquarium that lands equally with a nine-year-old sibling and a grandfather. There is Sagunto castle above the Mediterranean. And the tour closes with a guided day through Gaudí's Barcelona, the Sagrada Familia and the Gothic Quarter, which is the single most photographed day of any trip we run. The players see all of this too. The difference is that for the family, this is not the filler between games. It is the trip.",
+      "![Gaudí's Sagrada Familia in Barcelona, visited by the whole group on the softball tour](/photos/it-sagrada-familia.jpg)",
+      "## Pacing for a mixed-age group",
+      "The thing that separates a family softball tour from a squad trip is the pace. A team of athletes can be marched. A group that includes a nine-year-old and a seventy-year-old cannot, and should not be. So the itinerary is built differently. We do not schedule a game on the first day, because nobody, player or parent, is at their best off a transatlantic flight. We build a real rest day into the Valencia leg, with a morning on Malvarrosa beach or free time in the city before the games, because the double-header there is a genuine workload and the families want an afternoon that is theirs. The cultural days are walkable and broken up with proper sit-down lunches rather than route-marched. When we know the age spread of a group in advance, we adjust: more free time, gentler walking days, an earlier dinner. Tell us there are three under-tens and two grandparents traveling and the itinerary quietly changes to fit them.",
+      "![A rest day on La Concha bay, the kind of afternoon families get between games](/photos/it-san-sebastian-concha.jpg)",
+      "## What families do with their free time",
+      "Not every hour is programmed, and that is deliberate. Groups that are scheduled to the minute do not enjoy themselves, and the best moments are usually the unplanned ones. Families use the free windows differently. Some parents want the market and a long lunch. Some want to take the younger kids back to the hotel pool. Some grandparents want an afternoon nap and are entirely unapologetic about it, and they are right. Our director on the ground is there for exactly this: the parent who wants a restaurant recommendation for a table of eight, the family that wants to duck out of an afternoon visit and needs to know how to get back, the group that wants to find somewhere to watch a match on television. The structure carries the group, and the free time lets each family make the trip their own.",
+      "![Medals from games played against Spanish clubs, the souvenirs the players bring home](/photos/odisea-softball-tours-spain-medals.jpg)",
+      "## How we price the family",
+      "The practical question every family asks is what it costs to come along. Softball tour pricing starts from $1,700 per person for a six-night trip, based on a group of twenty, twin sharing, ground services only, with international flights quoted separately. Traveling family members are quoted at a slightly lower per-person rate than players, because they are not attached to the games, the field permits or the host-club coordination. The rate covers the hotels, daily breakfast and dinner, the private coach and every transfer, the guided cultural visits and a full-time Odisea director with the group from the arrivals hall to the departure gate. Lunches are left out on purpose, because families like the freedom to eat where they want at midday and it keeps the price honest. The more of the group that travels, the better the per-person number gets for everyone, so a team that brings its families along is usually helping its own bottom line.",
+      "## How to start planning",
+      "If you are a coach weighing a softball tour to Spain, the number that matters is not just the squad size. It is how many parents, siblings and grandparents are likely to come, because that is the real shape of the trip. Tell us the squad size, the players' ages, and your honest guess at how many family members will travel, along with your window, and we will draft a nine-day itinerary that names the cities, the host clubs and the hotels, and prices the players and the families separately so everyone can see their number. The full day-by-day, the four host clubs and the inclusions live on the [Spain Softball Experience](/tours/softball-tours-spain) tour page, there is a second northern route on the [Basque Country and Barcelona softball tour](/tours/softball-tour-basque-country-barcelona) page, and you can see how we handle US groups more broadly on our [tours for US teams](/usa) page. When you are ready, [start the conversation here](/plan-your-tour).",
     ],
   },
 ];

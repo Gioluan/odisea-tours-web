@@ -12,7 +12,7 @@ const CANONICAL = `${SITE}/soccer-tours-spain`;
 export const metadata: Metadata = {
   title: { absolute: "Soccer Tours in Spain · Youth, Pre-Season & Veterans | Odisea Tours" },
   description:
-    "Soccer tours in Spain run by Odisea Tours since 2005. Training at FC Barcelona, Valencia CF and the Spanish Football Federation. Matches against Spanish academy or amateur sides. Stadium days at Camp Nou, Bernabéu and Mestalla. From $3,495 per player.",
+    "Soccer tours in Spain run by Odisea Tours since 2005. Training at FC Barcelona, Valencia CF and the Spanish Football Federation. Matches against Spanish academy or amateur sides. Stadium days at Camp Nou, Bernabéu and Mestalla. From $1,400 per player.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Soccer Tours in Spain | Odisea Tours · Since 2005",
@@ -112,11 +112,11 @@ export default function SoccerToursSpainPillarPage() {
     ],
     offers: {
       "@type": "Offer",
-      price: "3495",
+      price: "1400",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       url: `${SITE}/plan-your-tour`,
-      description: "Youth Soccer Spain Tour, from $3,495 per player for 10 to 12 days, based on group size and season.",
+      description: "Youth Soccer Spain Tour, from $1,400 per player for 6 to 12 nights, based on group size and season.",
     },
   };
 
@@ -418,11 +418,11 @@ export default function SoccerToursSpainPillarPage() {
                 Youth Soccer Spain Tour
               </div>
               <div className="font-display text-3xl md:text-4xl text-paper">
-                From <span className="font-display-italic text-gold">$3,495</span>
+                From <span className="font-display-italic text-gold">$1,400</span>
                 <span className="ml-2 text-base text-paper/60 font-mono-editorial tracking-wider uppercase">per player</span>
               </div>
               <p className="mt-4 text-paper/75 leading-relaxed text-[0.97rem]">
-                10 to 12 days through Madrid, Valencia and Barcelona. Training at FC Barcelona, Valencia CF and the Spanish FA. Three friendlies against Spanish academy or amateur sides. One La Liga match. Four-star hotels. Bilingual Odisea guide for the full trip.
+                6 to 12 nights through Madrid, Valencia and Barcelona. Training at FC Barcelona, Valencia CF and the Spanish FA. Three friendlies against Spanish academy or amateur sides. One La Liga match. Four-star hotels. Bilingual Odisea guide for the full trip.
               </p>
             </div>
             <div className="border border-paper/15 p-7">

@@ -103,7 +103,7 @@ Every programmatic page must contain these sections in this order. If a page can
 
 1. **Hero**. H1 with the exact target keyword phrase (e.g. "Spain soccer tours for California youth clubs"). Sub-headline naming the unique angle for this combination. Hero photo from the existing Odisea photo library, not stock.
 2. **Why this combination works** (2 paragraphs, ~180 to 220 words, first-person Juan voice). The operator's read on this specific intersection. Cannot be template-swapped. A California state page talks about the ECNL National League calendar, MLS Next academy density in SoCal / Bay Area, and the LAX-MAD Iberia nonstop. A Texas state page talks about UIL calendar, FC Dallas / Houston Dynamo academies, DFW-MAD American direct.
-3. **Real cost range for this audience**. Pulled from `content/tours.ts` price anchors ($3,495 youth soccer, $2,895 softball, €1,995 to €2,595 cultural). State what is included, what is not (international flights). Add per-state flight-cost band if we have it.
+3. **Real cost range for this audience**. Pulled from `content/tours.ts` price anchors (from $1,400 youth soccer, $2,895 softball, €1,995 to €2,595 cultural). State what is included, what is not (international flights). Add per-state flight-cost band if we have it.
 4. **Sample 3-day itinerary specific to this profile**. Not the full 10-day. Three days that signal what THIS audience does differently. College pre-season = double sessions + GPS load monitoring + closed scrimmages. Schools language immersion = morning Spanish class + afternoon cultural visit. Veterans = walking pace tour + La Liga match + boutique hotel.
 5. **Real testimonial slot**. Only inserted if a real client from that profile exists. Otherwise omit the section entirely. Never fabricate (memory rule).
 6. **FAQ block (4 to 6 Qs)** specific to this audience / origin. For a Massachusetts page: "How long is the flight from Boston to Madrid? Is there a direct?" For a college pre-season page: "Can the tour fit between summer term and pre-season camp?" Each FAQ has to be answerable from existing Odisea operations.
@@ -223,7 +223,7 @@ Validate at 30 days: did 5 of these 8 index in the top 50 for at least one comme
 3. **Schools language-immersion**: there is already a `/sin-traduccion` tour for this. Should the schools-immersion audience hub feed into that tour exclusively, or do you want a different format?
 4. **Veterans agency angle**: memory says veterans = US travel agencies as the buyer. Should the veterans audience hub be B2C (the traveller) or B2B (the agency)? Different copy entirely.
 5. **Australia state hubs**: do you have AU client references comparable to the US? If thin, drop AU state hubs from batch 1 and ship the 5 AU city pages we already have instead.
-6. **Pricing per audience**: confirm college-programs (LBU shape) and veterans price points. We have youth ($3,495), softball ($2,895), cultural (€1,995 to €2,595). What is the college-programs number?
+6. **Pricing per audience**: confirm college-programs (LBU shape) and veterans price points. We have youth (from $1,400), softball ($2,895), cultural (€1,995 to €2,595). What is the college-programs number?
 7. **Author byline**: "By Juan Sanchez" or "By the Odisea Tours team"? Affects schema `author` field.
 
 None of these are blocking. Defaults work if you do not respond.

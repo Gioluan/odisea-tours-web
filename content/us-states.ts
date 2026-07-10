@@ -85,7 +85,7 @@ export const US_STATES: UsState[] = [
       },
       {
         q: "What does a Spain tour from California cost per player?",
-        a: "A 10-day Spain soccer tour from California sits between roughly $3,495 and $4,200 per player for ground services (accommodation in 4-star hotels and the Spanish FA residence, ground transport, training facility access, fixtures, full board on match days, bilingual Odisea guides, group travel insurance). International flights are quoted separately because LAX to Madrid airfare moves week to week. The per-player number for college programs and tournament formats varies by group size and itinerary.",
+        a: "A Spain soccer tour from California starts from around $1,400 per player for ground services (accommodation in 4-star hotels and the Spanish FA residence, ground transport, training facility access, fixtures, full board on match days, bilingual Odisea guides, group travel insurance), depending on length and group size. International flights are quoted separately because LAX to Madrid airfare moves week to week. The per-player number for college programs and tournament formats varies by group size and itinerary.",
       },
       {
         q: "When is the best time for a California team to travel to Spain?",
@@ -155,7 +155,7 @@ export const US_STATES: UsState[] = [
       },
       {
         q: "What does a Spain tour from Texas cost per player?",
-        a: "A 10-day Spain soccer tour from Texas sits between roughly $3,495 and $4,200 per player for ground services. International flights are quoted separately because DFW to Madrid airfare moves week to week. College pre-season and tournament formats vary by group size and itinerary.",
+        a: "A Spain soccer tour from Texas starts from around $1,400 per player for ground services, depending on length and group size. International flights are quoted separately because DFW to Madrid airfare moves week to week. College pre-season and tournament formats vary by group size and itinerary.",
       },
       {
         q: "Can the tour include Spanish-language immersion for the players?",
@@ -879,7 +879,7 @@ export const US_STATES: UsState[] = [
       },
       {
         q: "What does a Spain tour from Colorado cost per player?",
-        a: "A 10-day Spain soccer tour from Colorado sits between roughly $3,495 and $4,200 per player for ground services, with the range reflecting the one-stop routing. International flights are quoted separately because the Denver-to-Madrid connection varies by season and booking lead time.",
+        a: "A Spain soccer tour from Colorado starts from around $1,400 per player for ground services, depending on length and group size. International flights are quoted separately because the Denver-to-Madrid connection varies by season and booking lead time.",
       },
       {
         q: "Do you work with Real Colorado or the Rapids academy?",
@@ -937,7 +937,7 @@ export const US_STATES: UsState[] = [
       },
       {
         q: "What does a Spain tour from Arizona cost per player?",
-        a: "A 10-day Spain soccer tour from Arizona sits between roughly $3,495 and $4,200 per player for ground services, with the range reflecting the one-stop routing through Dallas. International flights are quoted separately because the Phoenix-to-Madrid connection varies by season and booking lead time.",
+        a: "A Spain soccer tour from Arizona starts from around $1,400 per player for ground services, depending on length and group size. International flights are quoted separately because the Phoenix-to-Madrid connection varies by season and booking lead time.",
       },
       {
         q: "Can the tour include Spanish-language immersion?",

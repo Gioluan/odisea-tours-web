@@ -16,7 +16,7 @@ export const SCHOOLS_FAQ: SchoolFaq[] = [
   },
   {
     q: "What does a high school soccer tour to Spain include, and what does it cost?",
-    a: "A typical 7 to 10 day high school soccer tour includes 4-star hotels, ground transport, training sessions at professional clubs such as FC Barcelona or Valencia CF, friendly matches against Spanish academy or amateur sides, stadium visits, cultural days, full board on match days, and a bilingual Odisea guide for the whole trip. Ground-service pricing typically runs from around $3,495 per player depending on length, group size and season. International flights are quoted separately.",
+    a: "A typical 7 to 10 day high school soccer tour includes 4-star hotels, ground transport, training sessions at professional clubs such as FC Barcelona or Valencia CF, friendly matches against Spanish academy or amateur sides, stadium visits, cultural days, full board on match days, and a bilingual Odisea guide for the whole trip. Ground-service pricing typically runs from around $1,400 per player depending on length, group size and season. International flights are quoted separately.",
   },
   {
     q: "Do you handle the whole trip, or just parts of it?",

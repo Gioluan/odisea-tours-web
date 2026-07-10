@@ -16,7 +16,7 @@ const HOME_FAQ = [
   },
   {
     q: "How much does a Spain soccer tour or school trip cost per traveler?",
-    a: "Published per-traveler pricing: youth soccer tour $3,495 for 10 to 12 days; softball tour $2,895; cultural tour Sabores de España €2,595; Camino de Santiago €1,995; Sin Traducción Spanish immersion for US schools $2,000 for 8 nights. Final pricing depends on group size, season and hotel level. Larger groups bring the per-traveler number down. Booking is locked in with a $500 deposit per traveler.",
+    a: "Published per-traveler pricing: youth soccer tour from $1,400 for 6 to 12 nights; softball tour $2,895; cultural tour Sabores de España €2,595; Camino de Santiago €1,995; Sin Traducción Spanish immersion for US schools $2,000 for 8 nights. Final pricing depends on group size, season and hotel level. Larger groups bring the per-traveler number down. Booking is locked in with a $500 deposit per traveler.",
   },
   {
     q: "Which groups travel with Odisea Tours?",
@@ -250,7 +250,7 @@ export default function Home() {
                 </div>
               </div>
               <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1] tracking-[-0.015em]">
-                Seven kinds of <span className="font-display-italic text-gold">unforgettable.</span>
+                Every kind of <span className="font-display-italic text-gold">unforgettable.</span>
               </h2>
             </div>
             <p className="text-sm text-paper/60 leading-snug max-w-sm">

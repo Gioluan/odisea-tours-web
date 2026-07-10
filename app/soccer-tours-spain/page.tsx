@@ -609,6 +609,53 @@ export default function SoccerToursSpainPillarPage() {
         ]}
       />
 
+      {/* SISTER PUBLICATION · reciprocal deep links to The Spanish Football Desk */}
+      <section className="paper-texture border-t border-ink/10 py-20 md:py-28 px-6 md:px-10">
+        <div className="max-w-[900px] mx-auto">
+          <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink/55 mb-6">
+            From our newsroom · The Spanish Football Desk
+          </div>
+          <h2 className="font-display text-[clamp(1.9rem,4vw,3rem)] uppercase leading-[1.02] max-w-[28ch]">
+            The coach&apos;s <span className="font-display-italic text-gold">planning library</span>.
+          </h2>
+          <p className="mt-6 max-w-[60ch] text-ink-soft leading-relaxed text-lg">
+            We publish The Spanish Football Desk, an English-language read on Spanish football written for US coaches. Its
+            free guides answer the questions coaches ask before a tour, from budget to academy access.
+          </p>
+          <ul className="mt-10 grid md:grid-cols-2 gap-x-10 gap-y-4">
+            {[
+              ["What a youth soccer tour to Spain really costs", "cost-to-take-us-youth-team-on-tour-to-spain"],
+              ["When to take your team: a coach's calendar", "best-time-of-year-youth-soccer-tour-spain"],
+              ["The best cities in Spain for a youth tour", "best-cities-in-spain-for-a-youth-soccer-tour"],
+              ["How to arrange friendlies against Spanish clubs", "arranging-friendly-matches-spanish-clubs-us-coaches"],
+              ["Visiting La Masia and Spain's top academies", "visiting-la-masia-spanish-academies-team-tour-guide"],
+            ].map(([title, slug]) => (
+              <li key={slug} className="border-t border-ink/15 pt-3">
+                <a
+                  href={`https://spanishfootballdesk.com/${slug}?utm_source=odisea-tours&utm_medium=pillar&utm_campaign=soccer-tours-spain`}
+                  target="_blank"
+                  rel="noopener"
+                  className="group flex items-start justify-between gap-4 font-display uppercase text-base md:text-lg leading-snug hover:text-gold transition-colors"
+                >
+                  <span>{title}</span>
+                  <span className="text-gold shrink-0" aria-hidden>↗</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-10">
+            <a
+              href="https://spanishfootballdesk.com/coaches?utm_source=odisea-tours&utm_medium=pillar&utm_campaign=soccer-tours-spain"
+              target="_blank"
+              rel="noopener"
+              className="btn-editorial"
+            >
+              Browse all coach guides
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="paper-texture py-20 md:py-28 px-6 md:px-10">
         <div className="max-w-[900px] mx-auto text-center">

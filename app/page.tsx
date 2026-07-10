@@ -104,18 +104,23 @@ export default function Home() {
                 <span className="font-display-italic"> All handled, all yours.</span>
               </p>
               <div className="md:col-span-5 flex flex-wrap gap-4">
-                <Link href="/soccer-tours-spain" className="btn-editorial on-dark">
-                  Soccer Tours in Spain
+                <Link href="/plan-your-tour" className="btn-editorial solid-gold">
+                  Plan Your Tour
                   <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                     <path d="M1 5 H13 M9 1 L13 5 L9 9" stroke="currentColor" strokeWidth="1.3" />
                   </svg>
                 </Link>
-                <Link href="/tours" className="btn-editorial on-dark">
-                  Browse the Tours
+                <Link href="/soccer-tours-spain" className="btn-editorial on-dark">
+                  Soccer Tours in Spain
                 </Link>
-                <Link href="/plan-your-tour" className="btn-editorial on-dark">
-                  Plan Your Tour
-                </Link>
+                <a
+                  href="https://calendly.com/juan-odisea-tours/30min?utm_source=odisea-home&utm_medium=hero&utm_campaign=meet-juan"
+                  target="_blank"
+                  rel="noopener"
+                  className="btn-editorial on-dark"
+                >
+                  Meet Juan
+                </a>
               </div>
             </div>
           </div>
@@ -495,6 +500,65 @@ export default function Home() {
             <p className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/60">
               Colne Academy · United Kingdom
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- MEET JUAN · PERSONAL BOOK-A-CALL ---------- */}
+      <section className="bg-paper-warm py-16 md:py-20 border-t border-ink/10">
+        <div className="max-w-[1100px] mx-auto px-6 md:px-10 lg:px-14 grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+          <div className="md:col-span-4">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm corner-ticks text-gold">
+              <Image
+                src="/photos/juan-sanchez-odisea-tours-director.jpg"
+                alt="Juan Sanchez, founder and director of Odisea Tours, in Spain"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <span className="absolute bottom-3 left-3 font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase bg-ink/70 backdrop-blur-sm text-paper px-2 py-0.5 rounded-sm">
+                Founder · On the ground
+              </span>
+            </div>
+          </div>
+          <div className="md:col-span-8">
+            <div className="flex items-baseline gap-4 mb-3">
+              <span className="chapter-num text-4xl leading-none text-gold">·</span>
+              <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-ink/60">
+                <span>Meet Juan</span>
+              </div>
+            </div>
+            <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1.05] tracking-[-0.015em]">
+              Talk to the person who will{" "}
+              <span className="font-display-italic text-gold">actually run your trip.</span>
+            </h2>
+            <p className="mt-5 text-ink/75 leading-[1.6] text-[1rem] max-w-2xl">
+              I am Juan Sanchez, founder of Odisea Tours. I started in this
+              business in the early days of Inspiresport, six years traveling
+              with groups before I built Odisea in 2005. When you tour with us,
+              you are not handed off to a call center. You plan with me, and a
+              real person from our Spanish team is with your group end to end.
+            </p>
+            <p className="mt-4 text-ink/75 leading-[1.6] text-[1rem] max-w-2xl">
+              The best way to start is a free 30 minute call. Bring your dates,
+              your group and what you want out of Spain. No script, no pressure.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-4 items-center">
+              <a
+                href="https://calendly.com/juan-odisea-tours/30min?utm_source=odisea-home&utm_medium=meet-juan-block&utm_campaign=meet-juan"
+                target="_blank"
+                rel="noopener"
+                className="btn-editorial solid-gold"
+              >
+                Book a call with Juan
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                  <path d="M1 5 H13 M9 1 L13 5 L9 9" stroke="currentColor" strokeWidth="1.3" />
+                </svg>
+              </a>
+              <span className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/50">
+                Free · 30 minutes · No obligation
+              </span>
+            </div>
           </div>
         </div>
       </section>

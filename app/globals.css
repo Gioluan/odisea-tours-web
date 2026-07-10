@@ -251,6 +251,20 @@ html {
   color: var(--ink);
 }
 
+/* Solid gold primary — the single highest-intent action */
+.btn-editorial.solid-gold {
+  color: var(--ink);
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.btn-editorial.solid-gold::before {
+  background: var(--ink);
+}
+.btn-editorial.solid-gold:hover {
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
 /* Corner ticks — hard to replicate signature */
 .corner-ticks {
   position: relative;

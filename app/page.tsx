@@ -533,11 +533,13 @@ export default function Home() {
               <span className="font-display-italic text-gold">actually run your trip.</span>
             </h2>
             <p className="mt-5 text-ink/75 leading-[1.6] text-[1rem] max-w-2xl">
-              I am Juan Sanchez, founder of Odisea Tours. I started in this
-              business in the early days of Inspiresport, six years traveling
-              with groups before I built Odisea in 2005. When you tour with us,
-              you are not handed off to a call center. You plan with me, and a
-              real person from our Spanish team is with your group end to end.
+              I am Juan Sanchez, founder of Odisea Tours. I was the first person
+              to bring an international group to train at Valencia CF in Paterna,
+              and I have built programs with the top clubs in Spain ever since. I
+              am the most experienced sport tours organizer in the country. When
+              you tour with us, you are not handed off to a call center. You plan
+              with me, and a real person from our Spanish team is with your group
+              end to end.
             </p>
             <p className="mt-4 text-ink/75 leading-[1.6] text-[1rem] max-w-2xl">
               The best way to start is a free 30 minute call. Bring your dates,

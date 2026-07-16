@@ -16,6 +16,12 @@ export interface Tour {
   // logo wall on the tour page. Entity-clear names earn citations on
   // "who do US teams play in Spain" style queries.
   opponents?: { name: string; city: string; logo: string; note?: string }[];
+  // Optional copy overrides for the opponents logo wall, for programs where
+  // the wall shows hosts and tournaments rather than softball fixtures.
+  opponentsLabel?: string;
+  opponentsTitle?: string;
+  opponentsTitleAccent?: string;
+  opponentsIntro?: string;
   // Custom, query-targeted FAQs prepended ahead of the auto-generated set.
   // Phrased to mirror how travelers actually ask LLM search engines, with
   // entity-clear answers, so the page earns citations on those queries.
@@ -1171,6 +1177,159 @@ export const TOURS: Tour[] = [
         title: "Departure · Bilbao",
         detail: "Final breakfast together, timed to the group's flights, then transfers to Bilbao Airport for the journey home. Photo book mailed to the team within the month.",
         image: "/photos/it-bilbao-skyline.jpg",
+      },
+    ],
+  },
+  {
+    slug: "alaves-academy-spain-program",
+    chapter: "XIV",
+    title: "Alavés Academy",
+    italicTitle: "& Costa Daurada Cup",
+    tagline: "A week inside a La Liga club's academy, then a tournament on the Catalan coast.",
+    description:
+      "Eleven days across Spain, north to south, built around two anchors. First, four nights living at the Baskonia Alavés Academy residence in Vitoria-Gasteiz, with training sessions led by Deportivo Alavés coaching staff, a visit to Mendizorroza stadium, a friendly against local Basque opposition and a day trip to San Sebastián's La Concha bay. Then south through Zaragoza to the Costa Daurada Cup, an international youth tournament on the Catalan coast: opening ceremony, group stage, knockouts and finals, with a PortAventura afternoon between rounds. The trip finishes in Barcelona with the Sagrada Família and Camp Nou before flying home. In via Bilbao, out via Barcelona, private coach the whole way.",
+    image: "/photos/alaves-academy-spain-program-hero.jpg",
+    coordinates: "42.8467° N / 2.6716° W",
+    duration: "10 nights · 11 days",
+    groupSize: "15–40 players + staff",
+    accent: "#0761af",
+    opponentsLabel: "The Hosts",
+    opponentsTitle: "Academy &",
+    opponentsTitleAccent: "tournament.",
+    opponentsIntro:
+      "The Vitoria week is hosted at the Baskonia Alavés Academy, with on-pitch sessions led by Deportivo Alavés coaching staff. The competition leg is the Costa Daurada Cup on the Catalan coast. Session times and fixtures are confirmed in writing before departure.",
+    opponents: [
+      {
+        name: "Baskonia Alavés Academy",
+        city: "Vitoria-Gasteiz · Basque Country",
+        logo: "/badges/alaves-baskonia.png",
+        note: "The group lives at the academy residence and trains with Deportivo Alavés coaching staff.",
+      },
+      {
+        name: "Costa Daurada Cup",
+        city: "Costa Daurada · Tarragona",
+        logo: "/badges/costa-daurada-cup.jpg",
+        note: "International youth tournament: opening ceremony, group stage, knockouts and finals.",
+      },
+    ],
+    faq: [
+      {
+        q: "What is the Alavés Academy and Costa Daurada Cup program?",
+        a: "It is an eleven-day, ten-night youth soccer program that Odisea Tours runs across Spain from north to south. The group flies into Bilbao and spends four nights based at the Baskonia Alavés Academy residence in Vitoria-Gasteiz, training with Deportivo Alavés coaching staff, visiting Mendizorroza stadium and playing a friendly against local Basque opposition, with a day trip to San Sebastián. The group then travels south via an overnight in Zaragoza to play the Costa Daurada Cup, an international youth tournament on the Catalan coast, and finishes with two nights in Barcelona, the Sagrada Família and Camp Nou, flying home from Barcelona-El Prat.",
+      },
+      {
+        q: "Do players really train with Deportivo Alavés coaches?",
+        a: "Yes. The on-pitch sessions in Vitoria are led by Deportivo Alavés coaching staff at the Baskonia Alavés Academy, where the group also lives during the Basque leg, and players receive an academy certificate at the end of the week. These are organized training experiences for visiting teams, arranged through the academy, not a claim of official partnership, and the session count and times are confirmed in writing before the group departs.",
+      },
+      {
+        q: "What is the Costa Daurada Cup?",
+        a: "The Costa Daurada Cup is an international youth soccer tournament played on Catalonia's Costa Daurada, around Salou, Cambrils and La Pineda, south of Barcelona. Teams from across Europe and beyond play a group stage followed by knockout rounds and finals, with an opening ceremony to start the week. On this program the tournament sits in the second half of the trip, after the training week in Vitoria, so the squad arrives match-sharp.",
+      },
+      {
+        q: "Which airports does the program use?",
+        a: "The program flies into Bilbao (BIO) and out of Barcelona-El Prat (BCN), so there is no backtracking. A private coach with driver covers the airport welcome in Bilbao, the Vitoria week, the transfer south through Zaragoza, all tournament shuttles on the Costa Daurada, and the final transfer to Barcelona-El Prat for the flights home.",
+      },
+    ],
+    includes: [
+      "Ten nights: four at the Baskonia Alavés Academy residence in Vitoria, one in Zaragoza, three on the Costa Daurada during the cup, two on the Barcelona coast",
+      "Training sessions at the academy in Vitoria led by Deportivo Alavés coaching staff, with an academy certificate for every player",
+      "Mendizorroza stadium visit, the home of Deportivo Alavés",
+      "A friendly match against local Basque opposition in Vitoria",
+      "Costa Daurada Cup registration, credentials and fixtures: opening ceremony, group stage, knockouts and finals",
+      "San Sebastián day trip: La Concha bay, Monte Urgull and a pintxos lunch in the Parte Vieja",
+      "PortAventura theme park afternoon between tournament rounds",
+      "Guided Barcelona finish: Sagrada Família and Camp Nou",
+      "Private coach with driver from the Bilbao airport welcome to the Barcelona departure",
+      "Odisea Tours director on the ground for the full eleven days",
+    ],
+    itinerary: [
+      {
+        day: "I",
+        title: "Arrival · Vitoria-Gasteiz",
+        detail: "Welcome at Bilbao Airport, private coach to Vitoria-Gasteiz, check-in at the Baskonia Alavés Academy residence, then a first walk through the medieval old town to the Plaza de la Virgen Blanca and a welcome dinner.",
+        image: "/photos/it-vitoria-virgen-blanca.jpg",
+      },
+      {
+        day: "II",
+        title: "Two Sessions & Mendizorroza",
+        detail: "Morning and midday training sessions with Deportivo Alavés coaching staff at the academy, then an evening visit to Mendizorroza, the club's home ground since 1924.",
+        image: "/photos/it-alaves-mendizorroza-stadium.jpg",
+      },
+      {
+        day: "III",
+        title: "One Session, Then a Game",
+        detail: "A final morning session and the academy certificates ceremony, then the competitive test of the Basque week: a friendly against local opposition under the evening light.",
+        image: "/photos/it-alaves-match-day.jpg",
+      },
+      {
+        day: "IV",
+        title: "San Sebastián Day Trip",
+        detail: "A recovery day on the coast: La Concha bay and the Monte Urgull viewpoint, a pintxos lunch in the Parte Vieja old town, and free time on the beach before returning to Vitoria.",
+        image: "/photos/it-san-sebastian-concha.jpg",
+      },
+      {
+        day: "V",
+        title: "Farewell Vitoria · Zaragoza",
+        detail: "A closing session with the Alavés staff and a farewell lunch, then the coach south to Zaragoza in time to see the Basílica del Pilar lit up after dark.",
+        image: "/photos/it-zaragoza-pilar.jpg",
+      },
+      {
+        day: "VI",
+        title: "South to the Costa Daurada",
+        detail: "Down to the Catalan coast, check-in at the tournament hotel, credentials and age verification, then the Costa Daurada Cup opening ceremony in the evening.",
+        image: "/photos/it-costa-daurada-cup-opening.jpg",
+      },
+      {
+        day: "VII",
+        title: "The Group Stage",
+        detail: "The tournament begins. Group stage fixtures through the day against international opposition, with recovery time at the hotel pool between matches.",
+        image: "/photos/it-costa-daurada-cup-group-stage.jpg",
+      },
+      {
+        day: "VIII",
+        title: "Knockouts & PortAventura",
+        detail: "Knockout rounds decide the bracket, and the free window between fixtures goes to PortAventura, one of Europe's biggest theme parks, ten minutes from the tournament hotels.",
+        image: "/photos/odisea-tours-costa-daurada-cup-match-2.jpg",
+      },
+      {
+        day: "IX",
+        title: "Finals, Then Barcelona",
+        detail: "Finals and the podium ceremony close the Costa Daurada Cup, then the short coach ride up the coast to the Barcelona area for the last leg of the trip.",
+        image: "/photos/it-costa-daurada-cup-podium.jpg",
+      },
+      {
+        day: "X",
+        title: "Sagrada Família & Camp Nou",
+        detail: "The Barcelona day: a guided morning at the Sagrada Família, then Camp Nou in the afternoon, with the evening free along the Mediterranean before the farewell dinner.",
+        image: "/photos/it-sagrada-familia.jpg",
+      },
+      {
+        day: "XI",
+        title: "Departure · Barcelona",
+        detail: "A last breakfast by the sea in Castelldefels, the group photo, and the twenty-minute transfer to Barcelona-El Prat for the flights home.",
+        image: "/photos/it-castelldefels-beach-sunset.jpg",
+      },
+    ],
+    gallery: [
+      {
+        src: "/photos/odisea-tours-costa-daurada-cup-opening-group.jpg",
+        alt: "Youth soccer teams gathered at the Costa Daurada Cup opening ceremony on an Odisea Tours tournament program in Spain",
+      },
+      {
+        src: "/photos/odisea-tours-costa-daurada-cup-match.jpg",
+        alt: "Youth teams playing a Costa Daurada Cup group stage match on the Catalan coast",
+      },
+      {
+        src: "/photos/odisea-tours-costa-daurada-cup-nou-estadi.jpg",
+        alt: "Costa Daurada Cup match at the Nou Estadi in Tarragona during an Odisea Tours program",
+      },
+      {
+        src: "/photos/odisea-tours-costa-daurada-cup-complex.jpg",
+        alt: "Aerial view of the Costa Daurada Cup tournament pitches near Salou, Tarragona",
+      },
+      {
+        src: "/photos/it-costa-daurada-cup-podium.jpg",
+        alt: "Players celebrating on the podium at the Costa Daurada Cup finals in Spain",
       },
     ],
   },

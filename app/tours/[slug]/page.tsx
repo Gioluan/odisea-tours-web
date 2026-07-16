@@ -236,15 +236,18 @@ export default async function TourDetail({
             <div className="mb-10 flex items-end justify-between gap-6 flex-wrap">
               <div className="max-w-xl">
                 <div className="rule-label font-mono-editorial text-[0.58rem] tracking-[0.3em] uppercase text-ink/55 mb-3">
-                  <span>Who You Play</span>
+                  <span>{tour.opponentsLabel ?? "Who You Play"}</span>
                 </div>
                 <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[1] tracking-[-0.015em]">
-                  The host{" "}
-                  <span className="font-display-italic text-gold">clubs.</span>
+                  {tour.opponentsTitle ?? "The host"}{" "}
+                  <span className="font-display-italic text-gold">
+                    {tour.opponentsTitleAccent ?? "clubs."}
+                  </span>
                 </h2>
               </div>
               <p className="text-sm text-ink/65 leading-snug max-w-sm">
-                Spanish softball clubs and regional sides, matched to your team&apos;s age and level. We arrange the fixtures ahead of the trip, and the final opponents can change with the Spanish season.
+                {tour.opponentsIntro ??
+                  "Spanish softball clubs and regional sides, matched to your team's age and level. We arrange the fixtures ahead of the trip, and the final opponents can change with the Spanish season."}
               </p>
             </div>
 

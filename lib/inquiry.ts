@@ -1,6 +1,14 @@
 import { Resend } from "resend";
 
-const TO = "bookings@odisea-tours.com";
+// Where lead notifications land. bookings@odisea-tours.com did NOT deliver to a
+// mailbox Juan reads (Resend accepted the send but the address dead-ended), so
+// leads were silently lost. Route to inboxes Juan actually monitors. Override
+// with INQUIRY_TO (comma-separated). The split/trim also strips any stray
+// trailing newline the Vercel CLI can append to env values.
+const TO = (process.env.INQUIRY_TO || "juan@odisea-tours.com, bookings@odisea-tours.com")
+  .split(",")
+  .map((s) => s.trim())
+  .filter(Boolean);
 const FROM = process.env.RESEND_FROM || "Odisea Tours <inquiry@odisea-tours.com>";
 
 export interface InquiryPayload {

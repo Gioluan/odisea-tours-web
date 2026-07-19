@@ -122,6 +122,104 @@ export async function sendInquiry(p: InquiryPayload): Promise<InquiryResult> {
   return { ok: true };
 }
 
+export type ChatClassification = "abandoned" | "converted" | "browsed";
+
+export interface TranscriptPayload {
+  conversationId: string;
+  messages: { role: "user" | "assistant"; content: string }[];
+  classification: ChatClassification;
+  capturedEmail?: string;
+}
+
+/**
+ * Emails Juan a full concierge conversation transcript when a chat ends or is
+ * abandoned. Complements sendInquiry (which only fires on a fully-qualified
+ * lead): this gives visibility into every engaged chat, and flags the ones
+ * where a visitor left a name/email but never completed as ABANDONED so they
+ * can be recovered. Reuses the same Resend transport, sender and recipients.
+ */
+export async function sendConciergeTranscript(
+  p: TranscriptPayload
+): Promise<InquiryResult> {
+  const userCount = p.messages.filter((m) => m.role === "user").length;
+
+  const badge = {
+    abandoned: { label: "Abandoned · contact captured", color: "#a8391e" },
+    converted: { label: "Lead submitted", color: "#1f7a3d" },
+    browsed: { label: "Browsed · no contact left", color: "#666" },
+  }[p.classification];
+
+  const bubbles = p.messages
+    .map((m) => {
+      const who = m.role === "user" ? "Visitor" : "Concierge";
+      const bg = m.role === "user" ? "#f2ede3" : "#ffffff";
+      const align = m.role === "user" ? "right" : "left";
+      return `<div style="margin: 8px 0; text-align: ${align};"><div style="display: inline-block; max-width: 88%; text-align: left; background: ${bg}; border: 1px solid #ececec; border-radius: 10px; padding: 8px 11px;"><div style="font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #999; margin-bottom: 3px;">${who}</div><div style="font-size: 13px; line-height: 1.5; white-space: pre-wrap;">${escape(
+        m.content
+      )}</div></div></div>`;
+    })
+    .join("");
+
+  const html = `
+    <div style="font-family: -apple-system, Helvetica, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; color: #111;">
+      <div style="border-bottom: 1px solid #eee; padding-bottom: 16px; margin-bottom: 20px;">
+        <p style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #888; margin: 0;">Concierge conversation</p>
+        <p style="display: inline-block; margin: 10px 0 0; padding: 3px 10px; border-radius: 999px; background: ${badge.color}; color: #fff; font-size: 12px; font-weight: 600;">${badge.label}</p>
+        ${
+          p.capturedEmail
+            ? `<p style="margin: 12px 0 0; font-size: 14px;">Contact left: <a href="mailto:${escape(
+                p.capturedEmail
+              )}">${escape(p.capturedEmail)}</a></p>`
+            : ""
+        }
+        <p style="margin: 6px 0 0; font-size: 12px; color: #999;">${userCount} visitor message${
+    userCount === 1 ? "" : "s"
+  } · id ${escape(p.conversationId.slice(0, 8))}</p>
+      </div>
+      ${
+        p.classification === "abandoned"
+          ? `<p style="background: #fdf3f0; border: 1px solid #f3d6cd; border-radius: 8px; padding: 10px 12px; font-size: 13px; color: #7a2814; margin: 0 0 18px;">This visitor left contact details but did not complete an inquiry. Worth a follow-up.</p>`
+          : ""
+      }
+      ${bubbles}
+      <p style="margin-top: 28px; font-size: 11px; color: #aaa; text-align: center;">Sent from odisea-tours.com concierge · ${new Date().toISOString()}</p>
+    </div>
+  `;
+
+  const subject =
+    p.classification === "abandoned"
+      ? `Concierge · Abandoned lead${
+          p.capturedEmail ? ` · ${p.capturedEmail}` : ""
+        } · ${userCount} msgs`
+      : p.classification === "converted"
+      ? `Concierge · Conversation (lead submitted) · ${userCount} msgs`
+      : `Concierge · Conversation (browsed, no contact) · ${userCount} msgs`;
+
+  if (!process.env.RESEND_API_KEY) {
+    console.log("[concierge-log] Would send transcript:", {
+      conversationId: p.conversationId,
+      classification: p.classification,
+      capturedEmail: p.capturedEmail,
+    });
+    return { ok: true, dev: true };
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const { error } = await resend.emails.send({
+    from: FROM,
+    to: TO,
+    ...(p.capturedEmail ? { replyTo: p.capturedEmail } : {}),
+    subject,
+    html,
+  });
+
+  if (error) {
+    console.error("Resend transcript error:", error);
+    return { ok: false, error: "Could not send transcript." };
+  }
+  return { ok: true };
+}
+
 function escape(s: string) {
   return String(s)
     .replace(/&/g, "&amp;")

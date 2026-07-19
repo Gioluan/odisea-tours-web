@@ -53,6 +53,11 @@ export default function UsaIndexPage() {
             <Link href="/softball-tours-spain" className="underline underline-offset-4 hover:text-gold">Softball Tours in Spain</Link>{" "}
             guide for US teams: four games against Spanish clubs across Madrid, Valencia and Barcelona, with a full cultural programme for travelling families.
           </p>
+          <p className="mt-4 max-w-[60ch] text-paper/75 leading-relaxed">
+            Playing a cup? See the{" "}
+            <Link href="/soccer-tournaments-spain" className="underline underline-offset-4 hover:text-gold">Soccer Tournaments in Spain</Link>{" "}
+            guide: full travel packages for US clubs around the Donosti Cup, the MIC, the Iber Cup and the Costa Daurada Cup.
+          </p>
         </div>
       </section>
 

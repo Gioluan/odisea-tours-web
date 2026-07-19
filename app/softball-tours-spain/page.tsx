@@ -11,7 +11,7 @@ const HERO = "/photos/softball-tours-spain-hero.jpg";
 export const metadata: Metadata = {
   title: { absolute: "Softball Tours in Spain · For US Teams & Families | Odisea Tours" },
   description:
-    "Softball tours to Spain run by Odisea Tours. Four competitive games against established Spanish clubs across Madrid, Valencia and Barcelona, woven into a real cultural trip for US teams and their families. From $1,400 per person.",
+    "Softball tours to Spain run by Odisea Tours. Four competitive games against established Spanish clubs across Madrid, Valencia and Barcelona, woven into a real cultural trip for US teams and their families. From $1,700 per person.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Softball Tours in Spain | Odisea Tours · Since 2005",
@@ -94,7 +94,7 @@ const SOFTBALL_FAQ = [
   },
   {
     q: "How much does a softball tour to Spain cost for a US team?",
-    a: "A Spain softball tour starts from $1,400 per person for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. The price scales with the number of nights, the group size, the season and the hotel category, so a fuller nine-day trip through Madrid, Valencia and Barcelona with four games and the full cultural programme sits above that entry point. Pricing is locked once the group size, dates and trip length are confirmed.",
+    a: "A Spain softball tour starts from $1,700 per person for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. The price scales with the number of nights, the group size, the season and the hotel category, so a fuller nine-day trip through Madrid, Valencia and Barcelona with four games and the full cultural programme sits above that entry point. Pricing is locked once the group size, dates and trip length are confirmed.",
   },
   {
     q: "What is the best time of year for a softball tour to Spain?",
@@ -111,6 +111,18 @@ const SOFTBALL_FAQ = [
   {
     q: "How long is a softball tour to Spain and where do teams stay?",
     a: "The tour we recommend runs nine days and eight nights from Madrid through Valencia to Barcelona, and the length is flexible from six nights up depending on your budget and travel window. The group bases at the Spanish FA residence in Las Rozas when it is available, the same residence the Spanish national football teams use, with full facilities and a dining hall on site, and moves to vetted group hotels in Valencia and Barcelona for the coastal legs.",
+  },
+  {
+    q: "Who organizes softball tours to Spain for US teams?",
+    a: "Odisea Tours organizes softball tours to Spain for US teams. We are a Spain-based ground operator, so we arrange the four games against established Spanish clubs, the accommodation, the transfers and the cultural programme directly and locally, rather than reselling from abroad. Opponents are matched to your team's age and level, and an Odisea director travels with the group for the whole trip. Our team has run group sport tours in Spain since 2005.",
+  },
+  {
+    q: "Can you plan a women's or fastpitch softball tour to Spain with real games?",
+    a: "Yes. The Spain softball tour is built around four competitive fastpitch games against established Spanish clubs across Madrid, Valencia and Barcelona, and we run it for women's, girls travel ball and high school fastpitch teams. Opponents include a regional select side fielded by the Valencian softball federation for older squads, and every fixture is matched to your team's age and level ahead of the trip, so a women's or girls fastpitch team gets genuine games, not a single exhibition bolted onto a sightseeing trip.",
+  },
+  {
+    q: "Is a spring break softball trip to Spain possible for a high school girls team?",
+    a: "Yes. A spring break softball trip to Spain works well for a high school girls team and is one of the windows we run most. The trip is six nights and up, with four games against Spanish clubs and a full cultural programme that travelling families join, and it can be sized to a school-break week. Late spring and early summer have the warmest, driest weather and the most available Spanish opposition, so if your break falls in March or April we confirm fixtures and hotels early to lock the dates.",
   },
 ];
 
@@ -162,12 +174,12 @@ export default function SoftballToursSpainPillarPage() {
     ],
     offers: {
       "@type": "Offer",
-      price: "1400",
+      price: "1700",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       url: `${SITE}/plan-your-tour`,
       description:
-        "Spain Softball Experience, from $1,400 per person for a six-night trip, scaling with length, group size and season. Fuller nine-day Madrid, Valencia and Barcelona tour with four games sits above that entry point.",
+        "Spain Softball Experience, from $1,700 per person for a six-night trip, scaling with length, group size and season. Fuller nine-day Madrid, Valencia and Barcelona tour with four games sits above that entry point.",
     },
   };
 

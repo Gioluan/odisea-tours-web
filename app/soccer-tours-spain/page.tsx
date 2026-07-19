@@ -436,6 +436,9 @@ export default function SoccerToursSpainPillarPage() {
               <p className="mt-4 text-paper/75 leading-relaxed text-[0.97rem]">
                 Donosti Cup in San Sebastián. 10 nights, group stage through finals, opening and closing ceremonies, plus a preparation match at FC Barcelona's Joan Gamper. Priced per group based on size and accommodation tier.
               </p>
+              <Link href="/soccer-tournaments-spain" className="mt-4 inline-block font-mono-editorial text-[0.6rem] tracking-[0.24em] uppercase text-gold hover:underline underline-offset-4">
+                All Spain tournaments: Donosti Cup, MIC, Iber Cup →
+              </Link>
             </div>
             <div className="border border-paper/15 p-7">
               <div className="font-mono-editorial text-[0.58rem] tracking-[0.26em] uppercase text-paper/60 mb-3">

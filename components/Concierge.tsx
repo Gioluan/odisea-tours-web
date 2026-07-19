@@ -63,6 +63,80 @@ export default function Concierge() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  // Conversation logging: a stable id per chat, plus refs so the unload/idle
+  // handlers always see the latest state without stale closures.
+  const convIdRef = useRef<string>("");
+  const messagesRef = useRef<Msg[]>(messages);
+  const submittedRef = useRef(false);
+  const loggedCountRef = useRef(0);
+  const idleTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  messagesRef.current = messages;
+
+  // Sends the full transcript to the server, which decides whether to email
+  // Juan (engaged chats only) and how to classify it. Guarded so each new
+  // exchange is logged at most once, no matter how many end-events fire.
+  function logConversation() {
+    const msgs = messagesRef.current;
+    const userCount = msgs.filter((m) => m.role === "user").length;
+    if (userCount < 2) return; // not engaged yet
+    if (userCount <= loggedCountRef.current) return; // already logged this state
+    loggedCountRef.current = userCount;
+
+    const payload = JSON.stringify({
+      conversationId: convIdRef.current,
+      messages: msgs,
+      inquirySubmitted: submittedRef.current,
+    });
+
+    try {
+      if (typeof navigator !== "undefined" && navigator.sendBeacon) {
+        navigator.sendBeacon(
+          "/api/concierge/log",
+          new Blob([payload], { type: "application/json" })
+        );
+      } else {
+        fetch("/api/concierge/log", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: payload,
+          keepalive: true,
+        });
+      }
+    } catch {
+      // Best-effort logging: never disrupt the visitor if it fails.
+    }
+  }
+
+  function bumpIdleTimer() {
+    if (idleTimerRef.current) clearTimeout(idleTimerRef.current);
+    // If the visitor goes quiet mid-conversation, treat it as ended.
+    idleTimerRef.current = setTimeout(logConversation, 90_000);
+  }
+
+  // Assign a conversation id once on mount, and flush the transcript when the
+  // page is hidden or unloaded (covers most "visitor left" cases).
+  useEffect(() => {
+    if (!convIdRef.current) {
+      convIdRef.current =
+        typeof crypto !== "undefined" && crypto.randomUUID
+          ? crypto.randomUUID()
+          : `c_${Date.now()}_${Math.round(Math.random() * 1e6)}`;
+    }
+    const onHide = () => {
+      if (document.visibilityState === "hidden") logConversation();
+    };
+    document.addEventListener("visibilitychange", onHide);
+    window.addEventListener("pagehide", logConversation);
+    window.addEventListener("beforeunload", logConversation);
+    return () => {
+      document.removeEventListener("visibilitychange", onHide);
+      window.removeEventListener("pagehide", logConversation);
+      window.removeEventListener("beforeunload", logConversation);
+      if (idleTimerRef.current) clearTimeout(idleTimerRef.current);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     if (open && scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -101,6 +175,7 @@ export default function Concierge() {
           },
         ]);
       } else {
+        if (data.inquirySubmitted) submittedRef.current = true;
         setMessages((prev) => [...prev, { role: "assistant", content: data.reply }]);
       }
     } catch {
@@ -115,6 +190,7 @@ export default function Concierge() {
       ]);
     } finally {
       setLoading(false);
+      bumpIdleTimer();
     }
   }
 
@@ -216,7 +292,10 @@ export default function Concierge() {
               </p>
             </div>
             <button
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                logConversation();
+                setOpen(false);
+              }}
               aria-label="Close concierge"
               style={{
                 background: "transparent",

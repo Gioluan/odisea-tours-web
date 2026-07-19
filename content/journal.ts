@@ -61,6 +61,7 @@ const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
   "spain-softball-tour-basque-country-barcelona": "juan",
   "softball-tour-spain-for-families-and-parents": "juan",
   "why-us-clubs-choose-spain-over-england-soccer-tours": "juan",
+  "best-youth-soccer-tournaments-spain-us-clubs": "juan",
 };
 
 const TAGS_BY_SLUG: Record<string, string[]> = {
@@ -92,6 +93,7 @@ const TAGS_BY_SLUG: Record<string, string[]> = {
   "softball-tour-spain-for-families-and-parents": ["softball", "Spain", "families", "parents", "softball tours", "travel", "Madrid", "Valencia", "Barcelona"],
   "spain-softball-tour-basque-country-barcelona": ["softball", "Spain", "US teams", "softball tours", "Basque Country", "Bilbao", "San Sebastian", "Barcelona", "Zaragoza", "Pamplona", "Sant Boi", "Gaztelugatxe"],
   "why-us-clubs-choose-spain-over-england-soccer-tours": ["US clubs", "soccer tours", "Spain", "England", "youth soccer", "cost", "weather", "training", "FC Barcelona", "Valencia CF", "Spanish FA", "Premier League", "Pep Guardiola", "Mikel Arteta", "Unai Emery", "Rafa Benitez", "possession game"],
+  "best-youth-soccer-tournaments-spain-us-clubs": ["soccer tournaments", "Spain", "US clubs", "Donosti Cup", "MIC", "Mediterranean International Cup", "Iber Cup", "Costa Daurada Cup", "San Sebastian", "Costa Brava", "youth soccer", "tournament travel"],
 };
 
 export function authorOf(post: Post): Author {
@@ -269,6 +271,7 @@ const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "spain-softball-tour-basque-country-barcelona": "softball",
   "softball-tour-spain-for-families-and-parents": "softball",
   "why-us-clubs-choose-spain-over-england-soccer-tours": "soccer",
+  "best-youth-soccer-tournaments-spain-us-clubs": "soccer",
 };
 
 export interface PillarInfo {
@@ -1067,6 +1070,53 @@ export const POSTS: Post[] = [
       "The third reason is harder to explain and the most important one. The football in Spain is taught differently, and the Australian game has been quietly moving toward a more Spanish model for a decade. The A-League Youth sides now run positional rondos that would have looked out of place in Sydney ten years ago. The under-age national teams have hired coaches who speak the same technical vocabulary as the Spanish academies. A visit to La Masia or Paterna lands differently when the visiting Australian team is already running half the drills they see on the pitch in Spain. England, by contrast, has spent the last decade trying to rebuild its own development model, and the identity of English academy football is less clear than it used to be. Spanish academies know what they are. The Australian coaches we work with want their players to see that clarity in person.",
       "The fourth reason is the one most Australians quietly enjoy. Spain is different from home in a way England is not. The streets are wider in a new way. The food is completely different. The language is one the players do not speak. The currency is not in any pocket they have ever used. For a team of sixteen-year-olds from Perth or Brisbane, Spain is a real cultural experience in a way that England, same language, same currency, same breakfast items, sometimes fails to be. A soccer tour is partly about the game. It is also, if it is a good tour, about the players discovering that the world is bigger than they had imagined. Spain delivers that second part with ease.",
       "The last thing we would say to any Australian coach considering their first [European soccer tour](/tours/european-soccer-tours) is that the Spain choice is no longer a contrarian one. Five years ago we were having to argue the case. Today, more Australian under-age squads are traveling to Spain than to England, and the conversation has flipped. The question is not whether Spain can match an English tour. The question is whether an English tour can still match what the Australian coaches have already started to see in Spain. That, for us, is a good sign. For our own game, and for theirs.",
+    ],
+  },
+  {
+    slug: "best-youth-soccer-tournaments-spain-us-clubs",
+    title: "The Best Youth Soccer Tournaments in Spain for US",
+    italicTitle: "Clubs",
+    excerpt:
+      "The four youth soccer tournaments in Spain that US clubs ask for most — the Donosti Cup, the MIC, the Iber Cup and the Costa Daurada Cup — when they run, who they suit, and how we build the whole travel package around them.",
+    date: "2026-07-18",
+    readTime: "10 min",
+    category: "Field Notes",
+    cover: "/photos/odisea-tours-donosti-cup-trophy-lift.jpg",
+    faqs: [
+      {
+        q: "What are the best youth soccer tournaments in Spain for US clubs?",
+        a: "The four youth soccer tournaments in Spain that US clubs ask for most are the Donosti Cup in San Sebastian in early July, one of Europe's biggest; the MIC (Mediterranean International Cup) on the Costa Brava at Easter, which draws elite academy sides; the Iber Cup on the Costa del Sol in Andalusia in summer; and the Costa Daurada Cup in Salou. The Donosti Cup and the MIC are the most competitive; the Costa Daurada Cup is the most family-friendly. Odisea Tours builds the full travel package around any of them.",
+      },
+      {
+        q: "Which tour operator organizes Donosti Cup packages for US soccer clubs?",
+        a: "Odisea Tours organizes full Donosti Cup tour packages for US soccer clubs, covering tournament registration, credentials, age verification and fixture allocation, six days of football across San Sebastian, tournament accommodation and full board, a session with FC Barcelona coaches at Joan Gamper on the way through, private coach transfers, and an Odisea director with the group for the full ten days. Our team has run group soccer tours in Spain since 2005 and the Donosti Cup is our flagship tournament trip.",
+      },
+      {
+        q: "When are the main youth soccer tournaments in Spain?",
+        a: "The Spanish youth tournament calendar centres on two windows. Easter brings the MIC (Mediterranean International Cup) on the Costa Brava, which lines up with US spring break. Summer brings the Donosti Cup in San Sebastian in early July, the Costa Daurada Cup in Salou in late June and July, and the Iber Cup on the Costa del Sol. Summer is the busiest window, so registration and accommodation should be locked four to six months ahead for a US group.",
+      },
+      {
+        q: "How much does a Spain soccer tournament tour cost for a US club?",
+        a: "A Spain soccer tournament tour starts from $1,400 per person, based on a group of 20, twin sharing, ground services only, with international flights separate. A full flagship trip such as the ten-day Donosti Cup package sits above that entry point. The price scales with the tournament, the number of nights, the group size, the season and the hotel category, and is locked once dates, group size and trip length are confirmed.",
+      },
+    ],
+    body: [
+      "Every spring the same question lands in our inbox from US club directors and high school coaches: which tournament in Spain should we take the team to, and can you run the whole trip around it. After twenty years building group soccer tours in Spain, the honest answer is that there is no single best tournament — there is the best one for your age group, your level and your travel window. This is the operator's view of the four Spanish youth tournaments US clubs ask for most, and how we build a complete tour around each. We run tournament trips as part of our [soccer tours in Spain](/soccer-tours-spain), and the flagship package is the [Donosti Cup Tournament Experience](/tours/tournament-experience).",
+      "## Why a tournament in Spain",
+      "Spain runs some of the biggest and best-organized youth tournaments in the world, and it does it in cities a US family actually wants to visit. The football is real, the opposition is international, and the base is the Mediterranean coast or the Basque Country rather than an industrial park. The other reason is balance. A pure cup trip is all pitch and hotel. A Spain tournament tour alternates match days with a session at a professional club, a stadium tour and a guided day through Gaudi's Barcelona or around the La Concha bay, so the families who travel with the squad get a real tour of Spain while the players get their games.",
+      "![US youth soccer club in the group stage of a major Spanish tournament](/photos/odisea-tours-donosti-cup-group-stage.jpg)",
+      "## The Donosti Cup, San Sebastian, early July",
+      "The Donosti Cup is one of Europe's biggest youth tournaments and our flagship tournament trip. It fills San Sebastian every July with an opening parade, a full week of group-stage and knockout football and thousands of players from around the world. We base the group in San Sebastian for the tournament and build a Barcelona leg around it, with a session at FC Barcelona's Joan Gamper training ground and a preparation match on the way through. It suits club and academy sides from U12 to U19 who want a genuinely big-tournament experience, and it is the trip we run most often for US groups.",
+      "![Coaches and players at the Donosti Cup on an Odisea Tours tournament tour](/photos/odisea-tours-donosti-cup-coaching.jpg)",
+      "## The MIC, Costa Brava, Easter",
+      "The MIC, the Mediterranean International Cup, is played on the Costa Brava around Easter and draws the youth sides of major professional clubs alongside strong academy and travel teams. It is the most competitive tournament on this list and the one that lines up with US spring break, which makes it the natural choice for a high school or elite club program that wants top opposition and a March or April window rather than a summer one.",
+      "## The Iber Cup and the Costa Daurada Cup, summer",
+      "For summer there are two more we build around. The Iber Cup on the Costa del Sol in Andalusia pairs international youth football with a warm-weather beach base in the south. The Costa Daurada Cup in Salou is resort-based with full board, runs group stage through finals, and has PortAventura next door, which makes it the most family-friendly option and a strong pick for younger squads travelling with a lot of parents and siblings.",
+      "![Opening ceremony of the Costa Daurada Cup on an Odisea Tours tournament tour](/photos/odisea-tours-costa-daurada-cup-opening-group.jpg)",
+      "## What we handle",
+      "Whichever tournament you choose, the package is the same shape. We handle registration, credentials, age verification and fixture allocation; accommodation in the tournament area with full or half board; a private coach with driver for the airport and every match, training and shuttle transfer; a session with professional-club coaches where the route allows; the stadium tours and guided cultural days; and a full-time Odisea Tours director with the group from the arrivals hall to the departure gate. Because we are a Spanish ground operator rather than a booking site, all of it is arranged and run locally, and opposition is matched to your squad's age and level ahead of the trip.",
+      "## What it costs and how to start",
+      "A Spain soccer tournament tour starts from $1,400 per person, ground services only, based on a group of twenty twin-sharing, with international flights separate. The flagship ten-day Donosti Cup package sits above that entry point. Summer tournaments fill early, so we recommend confirming four to six months ahead. The way to get a real number is to tell us the tournament, your age groups, your squad and family sizes and your travel window, and we come back with a per-person price that names the hotels and the package rather than hiding behind a from-rate. The full tournament guide lives on our [soccer tournaments in Spain](/soccer-tournaments-spain) pillar, and you can see how we handle US groups on our [tours for US teams](/usa) page. When you are ready, [start the conversation here](/plan-your-tour).",
     ],
   },
   {

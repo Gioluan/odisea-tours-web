@@ -41,6 +41,7 @@ with 24/7 on-the-ground support in Spain. Transport is by private coach througho
 flights are always quoted separately from ground services. Our team has hosted 200+ groups since 2005.`;
 
 export const CONTACT_FACTS = `Discovery call (free, 30 minutes): https://calendly.com/juan-odisea-tours/30min
-Email: bookings@odisea-tours.com
-Phone / WhatsApp: +34 670 059 797
+Email (team, group inquiries): bookings@odisea-tours.com
+Juan Sanchez direct (family and small-group trips): juan@odisea-tours.com
+WhatsApp: https://wa.me/34670059797 (or +34 670 059 797)
 Website: https://odisea-tours.com (see /tours, /faq, and /plan-your-tour)`;

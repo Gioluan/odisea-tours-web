@@ -478,31 +478,92 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- CHAPTER IV · TESTIMONIAL ---------- */}
+      {/* ---------- CHAPTER IV · TESTIMONIALS ---------- */}
       <section className="bg-paper py-16 md:py-20 relative border-t border-ink/10">
-        <div className="max-w-[900px] mx-auto px-6 md:px-10 lg:px-14 text-center">
-          <div className="rule-label justify-center font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-ink/60 mb-6 inline-flex">
-            <span>Chapter IV · Word From a Traveler</span>
+        <div className="max-w-[1100px] mx-auto px-6 md:px-10 lg:px-14">
+          <div className="text-center mb-12 md:mb-16">
+            <div className="rule-label justify-center font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-ink/60 inline-flex">
+              <span>Chapter IV · Words From Travelers</span>
+            </div>
           </div>
-          <blockquote className="font-display italic text-[clamp(1.25rem,2.3vw,1.9rem)] leading-[1.3] max-w-3xl mx-auto reveal">
-            &ldquo;Everything was handled,{" "}
-            <span className="not-italic font-display text-gold">every detail</span>
-            , from the playing facilities to the hotel to the little dinner spots our boys still talk about. We have been on many trips. None like this.&rdquo;
-          </blockquote>
-          <div className="mt-8 flex flex-col items-center gap-1">
-            <svg width="48" height="10" viewBox="0 0 60 12" className="text-gold">
-              {[0, 12, 24, 36, 48].map((x) => (
-                <path
-                  key={x}
-                  d={`M${x + 6} 1 L${x + 7.5} 4.5 L${x + 11} 5 L${x + 8.5} 7.5 L${x + 9} 11 L${x + 6} 9 L${x + 3} 11 L${x + 3.5} 7.5 L${x + 1} 5 L${x + 4.5} 4.5 Z`}
-                  fill="currentColor"
-                />
-              ))}
-            </svg>
-            <p className="font-display text-lg mt-3">Jon Taylor</p>
-            <p className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/60">
-              Colne Academy · United Kingdom
-            </p>
+          <div className="grid md:grid-cols-3 gap-12 md:gap-10">
+            {/* Jon Taylor */}
+            <figure className="flex flex-col items-center text-center">
+              <blockquote className="font-display italic text-[clamp(1rem,1.35vw,1.25rem)] leading-[1.4] reveal">
+                &ldquo;Everything was handled,{" "}
+                <span className="not-italic font-display text-gold">every detail</span>
+                , from the playing facilities to the hotel to the little dinner spots our boys still talk about. We have been on many trips. None like this.&rdquo;
+              </blockquote>
+              <div className="mt-6 flex flex-col items-center gap-1">
+                <svg width="48" height="10" viewBox="0 0 60 12" className="text-gold">
+                  {[0, 12, 24, 36, 48].map((x) => (
+                    <path
+                      key={x}
+                      d={`M${x + 6} 1 L${x + 7.5} 4.5 L${x + 11} 5 L${x + 8.5} 7.5 L${x + 9} 11 L${x + 6} 9 L${x + 3} 11 L${x + 3.5} 7.5 L${x + 1} 5 L${x + 4.5} 4.5 Z`}
+                      fill="currentColor"
+                    />
+                  ))}
+                </svg>
+                <figcaption>
+                  <p className="font-display text-lg mt-3">Jon Taylor</p>
+                  <p className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/60">
+                    Colne Academy · United Kingdom
+                  </p>
+                </figcaption>
+              </div>
+            </figure>
+
+            {/* Brent Nunes */}
+            <figure className="flex flex-col items-center text-center">
+              <blockquote className="font-display italic text-[clamp(1rem,1.35vw,1.25rem)] leading-[1.4] reveal">
+                &ldquo;I&rsquo;ve known Juan since 2012, and in that time we&rsquo;ve sent close to a thousand players into programs with the{" "}
+                <span className="not-italic font-display text-gold">Spanish FA, FC Barcelona and Valencia CF</span>
+                . Best service and experience we&rsquo;ve ever had, every single time.&rdquo;
+              </blockquote>
+              <div className="mt-6 flex flex-col items-center gap-1">
+                <svg width="48" height="10" viewBox="0 0 60 12" className="text-gold">
+                  {[0, 12, 24, 36, 48].map((x) => (
+                    <path
+                      key={x}
+                      d={`M${x + 6} 1 L${x + 7.5} 4.5 L${x + 11} 5 L${x + 8.5} 7.5 L${x + 9} 11 L${x + 6} 9 L${x + 3} 11 L${x + 3.5} 7.5 L${x + 1} 5 L${x + 4.5} 4.5 Z`}
+                      fill="currentColor"
+                    />
+                  ))}
+                </svg>
+                <figcaption>
+                  <p className="font-display text-lg mt-3">Brent Nunes</p>
+                  <p className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/60">
+                    Hawaii Elite Director · United States
+                  </p>
+                </figcaption>
+              </div>
+            </figure>
+
+            {/* Peter Griffiths */}
+            <figure className="flex flex-col items-center text-center">
+              <blockquote className="font-display italic text-[clamp(1rem,1.35vw,1.25rem)] leading-[1.4] reveal">
+                &ldquo;He is a{" "}
+                <span className="not-italic font-display text-gold">superstar</span>
+                , and Odisea Tours knows how to make every tour a success.&rdquo;
+              </blockquote>
+              <div className="mt-6 flex flex-col items-center gap-1">
+                <svg width="48" height="10" viewBox="0 0 60 12" className="text-gold">
+                  {[0, 12, 24, 36, 48].map((x) => (
+                    <path
+                      key={x}
+                      d={`M${x + 6} 1 L${x + 7.5} 4.5 L${x + 11} 5 L${x + 8.5} 7.5 L${x + 9} 11 L${x + 6} 9 L${x + 3} 11 L${x + 3.5} 7.5 L${x + 1} 5 L${x + 4.5} 4.5 Z`}
+                      fill="currentColor"
+                    />
+                  ))}
+                </svg>
+                <figcaption>
+                  <p className="font-display text-lg mt-3">Peter Griffiths</p>
+                  <p className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/60">
+                    PG10 Academy · Wales · Five years running
+                  </p>
+                </figcaption>
+              </div>
+            </figure>
           </div>
         </div>
       </section>

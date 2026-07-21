@@ -6,19 +6,19 @@ import { TOURS } from "@/content/tours";
 export const metadata: Metadata = {
   title: "Spain Group Tours: Soccer, Cultural & Corporate",
   description:
-    "Nine group tour experiences across Spain. Youth soccer pilgrimages, UK pre-season stages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats and sport and adventure. Built for groups of 10 to 120 since 2005.",
+    "Fourteen group tour experiences across Spain. Youth soccer pilgrimages, UK pre-season stages, cultural journeys, Sabores de España, Flamenco and Moorish Spain, the Camino de Santiago, corporate retreats and sport and adventure. Built for groups of 10 to 120 since 2005.",
   alternates: { canonical: "https://odisea-tours.com/tours" },
   openGraph: {
     title: "Spain Group Tours, Soccer, Cultural, Camino & Corporate",
     description:
-      "Nine group tour experiences across Spain. Built for groups of 10 to 120 since 2005.",
+      "Fourteen group tour experiences across Spain. Built for groups of 10 to 120 since 2005.",
     url: "https://odisea-tours.com/tours",
   },
   twitter: {
     card: "summary_large_image",
     title: "Spain Group Tours, Soccer, Cultural, Camino & Corporate",
     description:
-      "Nine group tour experiences across Spain. Built for groups of 10 to 120 since 2005.",
+      "Fourteen group tour experiences across Spain. Built for groups of 10 to 120 since 2005.",
   },
 };
 
@@ -30,6 +30,25 @@ const breadcrumbJsonLd = {
     { "@type": "ListItem", position: 2, name: "Tours", item: "https://odisea-tours.com/tours" },
   ],
 };
+
+// Surface the competitive team-sport tours first: soccer, then softball.
+const SPORT_ORDER = [
+  "european-soccer-tours",
+  "youth-soccer-spain-tour",
+  "pre-season-stages",
+  "tournament-experience",
+  "alaves-academy-spain-program",
+  "softball-tours-spain",
+  "softball-tour-basque-country-barcelona",
+];
+const SPORT_SLUGS = new Set(SPORT_ORDER);
+
+const ORDERED_TOURS = [
+  ...SPORT_ORDER.map((slug) => TOURS.find((t) => t.slug === slug)).filter(
+    (t): t is (typeof TOURS)[number] => Boolean(t),
+  ),
+  ...TOURS.filter((t) => !SPORT_SLUGS.has(t.slug)),
+];
 
 export default function ToursIndex() {
   return (
@@ -52,13 +71,13 @@ export default function ToursIndex() {
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14 text-paper">
           <div className="flex items-center justify-between font-mono-editorial text-[0.58rem] tracking-[0.28em] uppercase text-paper/70 mb-4">
             <span>Chapter I · Index</span>
-            <span>09 Tour Experiences</span>
+            <span>14 Tour Experiences</span>
           </div>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[0.98] tracking-[-0.015em] max-w-[16ch]">
             <span className="sr-only">Spain group tours including Soccer Tours in Spain, cultural journeys, the Camino and corporate retreats: </span>Tour <span className="font-display-italic text-gold">Experiences.</span>
           </h1>
           <p className="mt-4 max-w-xl text-base md:text-lg text-paper/80 leading-snug">
-            Nine ways to travel through Spain with us. Each one built from the ground up for groups, from a handful of friends to a corporate team of a hundred.
+            Fourteen ways to travel through Spain with us. Each one built from the ground up for groups, from a handful of friends to a corporate team of a hundred.
           </p>
         </div>
       </section>
@@ -70,7 +89,7 @@ export default function ToursIndex() {
             <span>How We Build Tours</span>
           </div>
           <h2 className="font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.15] tracking-[-0.01em] mb-6">
-            Nine shapes of trip. One way of working.
+            Many shapes of trip. One way of working.
           </h2>
           <div className="space-y-5 text-[1.0rem] md:text-[1.05rem] leading-[1.7] text-ink/75">
             <p>
@@ -84,7 +103,7 @@ export default function ToursIndex() {
               remembers from one they merely survived.
             </p>
             <p>
-              The nine experiences below are the shapes we run most often,
+              The experiences below are the shapes we run most often,
               built up over twenty years of hosting youth soccer teams from the
               United States and Australia, school groups from the United
               Kingdom, culinary groups from across Europe, and corporate teams
@@ -96,7 +115,7 @@ export default function ToursIndex() {
               transfer to the last.
             </p>
             <p>
-              If your group does not fit one of these nine, that is normally
+              If your group does not fit one of these, that is normally
               the most interesting place to start a conversation. Use the form
               on{" "}
               <Link href="/plan-your-tour" className="link-rule text-gold">
@@ -129,11 +148,15 @@ export default function ToursIndex() {
       {/* List */}
       <section className="pb-16 md:pb-20 paper-texture">
         <div className="max-w-[1200px] mx-auto">
-          {TOURS.map((tour, i) => (
+          {ORDERED_TOURS.map((tour, i) => {
+            const isSport = SPORT_SLUGS.has(tour.slug);
+            return (
             <Link
               key={tour.slug}
               href={`/tours/${tour.slug}`}
-              className="group block border-t border-ink/15 relative isolate overflow-hidden"
+              className={`group block border-t border-ink/15 relative isolate overflow-hidden ${
+                isSport ? "border-l-[3px] border-l-gold bg-gold/[0.04]" : ""
+              }`}
             >
               {/* Mobile: full-row background photo + gradient */}
               <div className="absolute inset-0 -z-0 md:hidden">
@@ -161,15 +184,19 @@ export default function ToursIndex() {
                     />
                     <div className="absolute inset-0 ring-1 ring-inset ring-ink/10 pointer-events-none" />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
-                    <span className="absolute top-2 left-2 font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase bg-ink/70 backdrop-blur-sm text-paper px-1.5 py-0.5 rounded-sm">
-                      Ch. {tour.chapter}
+                    <span className={`absolute top-2 left-2 font-mono-editorial text-[0.52rem] tracking-[0.28em] uppercase px-1.5 py-0.5 rounded-sm ${
+                      isSport ? "bg-gold text-ink" : "bg-ink/70 backdrop-blur-sm text-paper"
+                    }`}>
+                      {isSport ? "Sport" : `Ch. ${tour.chapter}`}
                     </span>
                   </div>
                 </div>
 
                 {/* Chapter label (mobile only, desktop uses badge above) */}
-                <div className="md:hidden font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase opacity-70">
-                  Ch. {tour.chapter}
+                <div className={`md:hidden font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase ${
+                  isSport ? "text-gold opacity-100" : "opacity-70"
+                }`}>
+                  {isSport ? "Sport" : `Ch. ${tour.chapter}`}
                 </div>
 
                 <div className="md:col-span-4">
@@ -199,11 +226,12 @@ export default function ToursIndex() {
                 </div>
               </div>
 
-              {i === TOURS.length - 1 && (
+              {i === ORDERED_TOURS.length - 1 && (
                 <div className="border-b border-ink/15" />
               )}
             </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
     </>

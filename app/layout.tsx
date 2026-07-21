@@ -142,6 +142,29 @@ const organizationSchema = {
     bestRating: "5",
     worstRating: "1",
   },
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Jon Taylor" },
+      reviewBody:
+        "Everything was handled, every detail, from the playing facilities to the hotel to the little dinner spots our boys still talk about. We have been on many trips. None like this.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Brent Nunes" },
+      reviewBody:
+        "I've known Juan since 2012, and in that time we've sent close to a thousand players into programs with the Spanish FA, FC Barcelona and Valencia CF. Best service and experience we've ever had, every single time.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Peter Griffiths" },
+      reviewBody:
+        "He is a superstar, and Odisea Tours knows how to make every tour a success.",
+    },
+  ],
 };
 
 const websiteSchema = {

@@ -171,18 +171,18 @@ export default function Home() {
               two decades translating it, <span className="font-display-italic">honestly</span>, for the people who come to see it.
             </p>
             <div className="mt-6 grid grid-cols-3 gap-4 text-[0.72rem] text-ink-muted font-mono-editorial">
-              <div className="border-t border-ink/15 pt-3">
-                <span className="text-ink font-display text-xl block mb-1">20</span>
-                Years in the field
-              </div>
-              <div className="border-t border-ink/15 pt-3">
-                <span className="text-ink font-display text-xl block mb-1">200+</span>
-                Groups hosted
-              </div>
-              <div className="border-t border-ink/15 pt-3">
-                <span className="text-ink font-display text-xl block mb-1">37</span>
-                Spanish provinces
-              </div>
+              <Link href="/soccer-tours-spain" className="group border-t border-ink/15 pt-3 block">
+                <span className="text-ink font-display text-xl block mb-1 group-hover:text-gold transition-colors">Soccer</span>
+                FC Barcelona, Valencia CF &amp; the Spanish FA
+              </Link>
+              <Link href="/softball-tours-spain" className="group border-t border-ink/15 pt-3 block">
+                <span className="text-ink font-display text-xl block mb-1 group-hover:text-gold transition-colors">Softball</span>
+                Four games across three Spanish cities
+              </Link>
+              <Link href="/tours" className="group border-t border-ink/15 pt-3 block">
+                <span className="text-ink font-display text-xl block mb-1 group-hover:text-gold transition-colors">Culture</span>
+                Food, flamenco, the Camino &amp; the cities
+              </Link>
             </div>
           </div>
         </div>

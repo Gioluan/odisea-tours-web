@@ -1,14 +1,16 @@
 const ITEMS = [
-  "20 Years in the Field",
-  "200+ Groups Guided",
-  "37 Spanish Provinces",
+  "Soccer Tours",
+  "Softball Tours",
+  "Cultural Journeys",
   "La Liga Stadium Access",
+  "FC Barcelona & Valencia CF",
   "Michelin Kitchens",
+  "The Camino de Santiago",
   "Flamenco Nights in Triana",
-  "Bus + Rail + Private Transfer",
+  "Private Coach & Transfers",
   "24/7 Local Concierge",
-  "Founded in Castellón",
   "Bilingual Tour Leaders",
+  "On the Ground Since 2005",
 ];
 
 export default function Marquee() {

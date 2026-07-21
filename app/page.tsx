@@ -165,10 +165,10 @@ export default function Home() {
               </div>
             </div>
             <p className="font-display text-[clamp(1.15rem,1.9vw,1.65rem)] leading-[1.35] tracking-[-0.01em] reveal">
-              We are not an agency. We are a small team of
-              <span className="font-display-italic"> Spaniards </span>
-              who happen to love the country we were born in, and have spent
-              two decades translating it, <span className="font-display-italic">honestly</span>, for the people who come to see it.
+              Spanish tours, built by
+              <span className="font-display-italic"> Spanish people.</span>
+              {" "}A small team on the ground here, not an agency reselling trips from a screen. Our clients become partners, and they come back
+              <span className="font-display-italic"> year after year.</span>
             </p>
             <div className="mt-6 grid grid-cols-3 gap-4 text-[0.72rem] text-ink-muted font-mono-editorial">
               <div className="border-t border-ink/15 pt-3">

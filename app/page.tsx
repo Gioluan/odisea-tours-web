@@ -78,7 +78,7 @@ export default function Home() {
             </div>
 
             <h1 className="font-display uppercase text-[clamp(4rem,14vw,14rem)] leading-[0.82] tracking-[-0.015em]">
-              <span className="sr-only">Soccer Tours in Spain since 2005. Youth, school, pre-season and veterans group travel by Odisea Tours. </span>
+              <span className="sr-only">Soccer and softball tours in Spain since 2005. Youth, school, pre-season and veterans group travel by Odisea Tours. </span>
               <HeroLetters
                 text="Travel is"
                 delayStart={120}
@@ -99,8 +99,8 @@ export default function Home() {
             <div className="mt-12 grid md:grid-cols-12 gap-10 items-end">
               <p className="md:col-span-5 md:col-start-7 text-lg md:text-xl text-paper/85 max-w-md leading-relaxed">
                 Odisea Tours has been quietly crafting group journeys through
-                Spain for twenty years. Soccer pilgrimages, cultural odysseys,
-                corporate retreats and adventures on the coast.
+                Spain for twenty years. Soccer pilgrimages, softball tours,
+                cultural odysseys, corporate retreats and adventures on the coast.
                 <span className="font-display-italic"> All handled, all yours.</span>
               </p>
               <div className="md:col-span-5 flex flex-wrap gap-4">
@@ -112,6 +112,9 @@ export default function Home() {
                 </Link>
                 <Link href="/soccer-tours-spain" className="btn-editorial on-dark">
                   Soccer Tours in Spain
+                </Link>
+                <Link href="/softball-tours-spain" className="btn-editorial on-dark">
+                  Softball Tours in Spain
                 </Link>
                 <a
                   href="https://calendly.com/juan-odisea-tours/30min?utm_source=odisea-home&utm_medium=hero&utm_campaign=meet-juan"

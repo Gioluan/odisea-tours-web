@@ -167,8 +167,9 @@ export default function Home() {
             <p className="font-display text-[clamp(1.15rem,1.9vw,1.65rem)] leading-[1.35] tracking-[-0.01em] reveal">
               Spanish tours, built by
               <span className="font-display-italic"> Spanish people.</span>
-              {" "}A small team on the ground here, not an agency reselling trips from a screen. Our clients become partners, and they come back
-              <span className="font-display-italic"> year after year.</span>
+              {" "}A small team on the ground here, not an agency reselling trips from a screen. Most groups that travel with us come back the next year, and the year after that, because every trip is
+              <span className="font-display-italic"> safe, calm, and organized</span>
+              {" "}down to the last transfer.
             </p>
             <div className="mt-6 grid grid-cols-3 gap-4 text-[0.72rem] text-ink-muted font-mono-editorial">
               <div className="border-t border-ink/15 pt-3">

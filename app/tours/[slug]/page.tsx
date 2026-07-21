@@ -421,7 +421,7 @@ export default async function TourDetail({
               Ready to turn this into <span className="font-display-italic text-gold">your trip?</span>
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/plan-your-tour" className="btn-editorial">
+              <Link href={`/plan-your-tour${tour.slug.includes("softball") ? "?sport=softball" : ""}`} className="btn-editorial">
                 Request This Experience
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                   <path

@@ -218,7 +218,7 @@ export default function SoftballToursSpainPillarPage() {
             A softball tour to Spain done properly is not a sightseeing trip with one exhibition game bolted on. It is four competitive games against established Spanish clubs, across Madrid, Valencia and Barcelona, woven into a real cultural trip the whole family remembers. Our team has built group sport tours in Spain since 2005, and softball is the newest version of that work.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="/plan-your-tour" className="btn-editorial on-dark">
+            <Link href="/plan-your-tour?sport=softball" className="btn-editorial on-dark">
               Plan your Spain softball tour
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden>
                 <path d="M1 5 H13 M9 1 L13 5 L9 9" stroke="currentColor" strokeWidth="1.3" />
@@ -405,11 +405,11 @@ export default function SoftballToursSpainPillarPage() {
                 Spain Softball Experience
               </div>
               <div className="font-display text-3xl md:text-4xl text-ink">
-                From <span className="font-display-italic text-gold-deep">$2,300</span>
+                From <span className="font-display-italic text-gold-deep">$1,700</span>
                 <span className="ml-2 text-base text-ink/55 font-mono-editorial tracking-wider uppercase">per person</span>
               </div>
               <p className="mt-4 text-ink-soft leading-relaxed text-[0.97rem]">
-                Eight nights and nine days through Madrid, Valencia and Barcelona, based on a group of 20, twin sharing, ground services only, with international flights separate. Four games and the full cultural programme included. Pricing scales with the season and the hotel category, and larger groups bring the per-person cost down.
+                The entry rate is for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. The fuller nine-day Madrid, Valencia and Barcelona trip, with four games and the full cultural programme, sits above that entry point. Pricing scales with the length, the season and the hotel category, and larger groups bring the per-person cost down.
               </p>
             </div>
             <div className="border border-ink/15 p-7">
@@ -574,8 +574,8 @@ export default function SoftballToursSpainPillarPage() {
             Tell us your squad size, your players' ages, how many families are likely to travel, and the window you are looking at. We come back with a draft nine-day itinerary and a per-person number that names the cities, the host clubs and the hotels.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <Link href="/plan-your-tour" className="btn-editorial">
-              Plan your tour
+            <Link href="/plan-your-tour?sport=softball" className="btn-editorial">
+              Plan your softball tour
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden>
                 <path d="M1 5 H13 M9 1 L13 5 L9 9" stroke="currentColor" strokeWidth="1.3" />
               </svg>

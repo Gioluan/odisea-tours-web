@@ -897,7 +897,7 @@ export const TOURS: Tour[] = [
       },
       {
         q: "How much does a softball tour to Spain cost and how long is it?",
-        a: "A Spain softball tour is built around a flexible length. Pricing starts from $1,400 per person for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. The rate scales with the number of nights, the group size, the season and the hotel category, so the fuller nine-day Madrid, Valencia and Barcelona trip shown here, with four games and the full cultural programme, sits above that entry point. We lock a firm per-person figure once the group size, travel dates and trip length are confirmed.",
+        a: "A Spain softball tour is built around a flexible length. Pricing starts from $1,700 per person for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. The rate scales with the number of nights, the group size, the season and the hotel category, so the fuller nine-day Madrid, Valencia and Barcelona trip shown here, with four games and the full cultural programme, sits above that entry point. We lock a firm per-person figure once the group size, travel dates and trip length are confirmed.",
       },
     ],
     includes: [

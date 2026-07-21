@@ -14,7 +14,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         q: "How much does a Spain soccer tour cost?",
-        a: "Our published soccer tour package starts at $1,400 per player for a 6 to 12 night European Soccer Tour. Cultural tours sit between €1,995 and €2,595 per traveller. Our youth softball tour is $2,895 per player. Final pricing depends on group size, season, hotel level and the specific cities on the itinerary. Larger groups bring the per-player number down. International flights are not included in any of our packages.",
+        a: "Our published soccer tour package starts at $1,400 per player for a 6 to 12 night European Soccer Tour. Cultural tours sit between €1,995 and €2,595 per traveller. Our softball tour starts from $1,700 per player for a six-night trip. Final pricing depends on group size, season, hotel level and the specific cities on the itinerary. Larger groups bring the per-player number down. International flights are not included in any of our packages.",
       },
       {
         q: "What is included in the price?",

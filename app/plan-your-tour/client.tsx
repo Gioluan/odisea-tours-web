@@ -1,8 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+const SPORTS = [
+  { value: "soccer", label: "Soccer / Football" },
+  { value: "softball", label: "Softball" },
+  { value: "other", label: "Other sport" },
+];
 
 const GROUP_TYPES = [
   { value: "veterans", label: "Veterans / Adult Club" },
@@ -31,8 +37,10 @@ export default function PlanYourTourPage() {
     email: "",
     phone: "",
     clubName: "",
+    sport: "",
     groupType: "",
     groupSize: "",
+    families: "",
     destination: "",
     preferredDates: "",
     message: "",
@@ -41,18 +49,29 @@ export default function PlanYourTourPage() {
   const update = (field: string, value: string) =>
     setForm((prev) => ({ ...prev, [field]: value }));
 
+  // Pre-select the sport when arriving from a sport-specific CTA (e.g. ?sport=softball)
+  useEffect(() => {
+    const sport = new URLSearchParams(window.location.search).get("sport");
+    if (sport && SPORTS.some((s) => s.value === sport)) update("sport", sport);
+  }, []);
+
+  const isSoftball = form.sport === "softball";
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
 
-    const subject = `Tour Inquiry / ${form.clubName || form.name} (${form.groupType})`;
+    const sportLabel = SPORTS.find((s) => s.value === form.sport)?.label || "Not specified";
+    const subject = `${form.sport === "softball" ? "Softball" : "Tour"} Inquiry / ${form.clubName || form.name} (${form.groupType || sportLabel})`;
     const body = [
       `Name: ${form.name}`,
       `Email: ${form.email}`,
       `Phone: ${form.phone || "Not provided"}`,
       `Club/Team: ${form.clubName}`,
+      `Sport: ${sportLabel}`,
       `Group Type: ${form.groupType}`,
       `Group Size: ${form.groupSize}`,
+      `Families travelling: ${form.families || "Not specified"}`,
       `Destination: ${form.destination}`,
       `Preferred Dates: ${form.preferredDates || "Flexible"}`,
       `Message: ${form.message || "No additional message"}`,
@@ -90,7 +109,11 @@ export default function PlanYourTourPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/34670059797?text=Hi%20Juan!%20I%20just%20submitted%20a%20tour%20inquiry%20on%20odisea-tours.com."
+                href={`https://wa.me/34670059797?text=${encodeURIComponent(
+                  isSoftball
+                    ? "Hi Juan! I just submitted a softball tour inquiry on odisea-tours.com."
+                    : "Hi Juan! I just submitted a tour inquiry on odisea-tours.com.",
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-editorial on-dark"
@@ -115,8 +138,12 @@ export default function PlanYourTourPage() {
       ═══════════════════════════════════════════════════ */}
       <section className="relative bg-ink pt-32 pb-20 overflow-hidden">
         <Image
-          src="/photos/veterans-soccer-tour-match-vs-spanish-team.jpg"
-          alt="Football tour group in Spain"
+          src={
+            isSoftball
+              ? "/photos/odisea-softball-tours-spain-teams-on-field.jpg"
+              : "/photos/veterans-soccer-tour-match-vs-spanish-team.jpg"
+          }
+          alt={isSoftball ? "US softball team on tour in Spain" : "Football tour group in Spain"}
           fill
           className="object-cover opacity-15"
           sizes="100vw"
@@ -126,16 +153,17 @@ export default function PlanYourTourPage() {
         <div className="relative max-w-[1200px] mx-auto px-6 md:px-10 lg:px-14">
           <div className="max-w-2xl">
             <p className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/40 mb-6 reveal">
-              Start your journey
+              {isSoftball ? "Four games, three cities" : "Start your journey"}
             </p>
             <h1 className="font-display text-[clamp(2rem,5vw,3.4rem)] leading-[0.92] text-paper mb-6 reveal">
-              Plan Your Football
+              {isSoftball ? "Plan Your Softball" : "Plan Your Football"}
               <br />
               Tour to <span className="font-display-italic text-gold">Spain</span>
             </h1>
             <p className="text-paper/50 text-lg max-w-lg reveal">
-              Tell us about your group and we&apos;ll build a custom itinerary.
-              No commitment, no pressure. Just 20 years of experience at your service.
+              {isSoftball
+                ? "Tell us your squad size, your players' ages and how many families are travelling. We come back with a draft nine-day itinerary and a per-person number that names the cities, the host clubs and the hotels."
+                : "Tell us about your group and we'll build a custom itinerary. No commitment, no pressure. Just 20 years of experience at your service."}
             </p>
           </div>
         </div>
@@ -147,6 +175,35 @@ export default function PlanYourTourPage() {
       <section className="bg-paper-warm paper-texture py-20">
         <div className="max-w-[720px] mx-auto px-6 md:px-10">
           <form onSubmit={handleSubmit} className="space-y-10">
+
+            {/* Sport */}
+            <div className="reveal">
+              <label className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink-muted block mb-4">
+                What sport is your team?
+              </label>
+              <div className="grid grid-cols-3 gap-3">
+                {SPORTS.map((s) => (
+                  <label
+                    key={s.value}
+                    className={`relative border py-3 px-4 cursor-pointer transition-all text-sm font-display tracking-tight text-center ${
+                      form.sport === s.value
+                        ? "bg-ink text-paper border-ink"
+                        : "border-ink/20 text-ink hover:border-ink/40"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="sport"
+                      value={s.value}
+                      checked={form.sport === s.value}
+                      onChange={() => update("sport", s.value)}
+                      className="sr-only"
+                    />
+                    {s.label}
+                  </label>
+                ))}
+              </div>
+            </div>
 
             {/* Group type */}
             <div className="reveal">
@@ -264,6 +321,25 @@ export default function PlanYourTourPage() {
               </div>
             </div>
 
+            {/* Families travelling */}
+            <div className="reveal">
+              <label className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink-muted block mb-2">
+                How many families are travelling? {isSoftball ? "" : "(optional)"}
+              </label>
+              <input
+                type="text"
+                value={form.families}
+                onChange={(e) => update("families", e.target.value)}
+                placeholder={isSoftball ? "e.g., 12 families joining the squad" : "e.g., a few parents, or none"}
+                className="w-full bg-transparent border-b border-ink/25 py-3 text-lg text-ink placeholder-ink-muted/40 focus:border-ink focus:outline-none transition-colors"
+              />
+              {isSoftball && (
+                <p className="font-mono-editorial text-[0.58rem] tracking-[0.22em] uppercase text-ink-muted/70 mt-2">
+                  Softball groups travel with families. They join the cultural programme and are quoted at a lower rate than players.
+                </p>
+              )}
+            </div>
+
             {/* Destination */}
             <div className="reveal">
               <label className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink-muted block mb-4">
@@ -345,7 +421,11 @@ export default function PlanYourTourPage() {
             {/* WhatsApp */}
             <div className="reveal">
               <a
-                href="https://wa.me/34670059797?text=Hi%20Juan!%20I%27m%20interested%20in%20organizing%20a%20football%20tour%20to%20Spain."
+                href={`https://wa.me/34670059797?text=${encodeURIComponent(
+                  isSoftball
+                    ? "Hi Juan! I'm interested in organizing a softball tour to Spain."
+                    : "Hi Juan! I'm interested in organizing a football tour to Spain.",
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-editorial w-full justify-center"

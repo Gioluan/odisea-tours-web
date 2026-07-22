@@ -380,6 +380,10 @@ export const POSTS: Post[] = [
         a: "Gracias a Odisea Tours tenemos la oportunidad de conectar con clubes de primer nivel como Valencia CF y el Deportivo Alavés para entrenamientos y partidos organizados en sus instalaciones de España, además de días de estadio y entrenamiento en entornos de referencia del fútbol español.",
       },
       {
+        q: "¿Es la primera vez que se lleva a jóvenes argentinos a España?",
+        a: "No. En 2021, el equipo que hoy impulsa BHM ya llevó a once jóvenes de Tucumán a España en la Gira Europea Valencia 2021, donde entrenaron, compitieron y visitaron Mestalla, el estadio del Valencia CF. Esa experiencia es el precedente directo de la alianza actual entre BHM Fútbol Group y Odisea Tours.",
+      },
+      {
         q: "¿Cuándo es el primer viaje a España?",
         a: "Estamos trabajando en los detalles del primer viaje y compartiremos las novedades en las próximas semanas. Puedes seguir el trabajo de BHM en bhmfutbol.com y escribirnos a Odisea Tours para entender cómo funciona un viaje deportivo a España.",
       },
@@ -393,6 +397,9 @@ export const POSTS: Post[] = [
       "![Un equipo visitante y un club local español juntos tras un partido amistoso en España](/photos/odisea-tours-both-teams-post-match.jpg)",
       "## Quién es BHM Fútbol Group",
       "BHM Fútbol Group es un equipo de profesionales dedicado a la formación y la mejora de futbolistas, con la mirada puesta en que cada chico llegue preparado a las categorías juveniles del fútbol argentino y, cuando el talento lo permite, del extranjero. No es una promesa de folleto. Sus jugadores, junto a los de la Fundación Arroyo El Tejar con la que trabajan codo con codo, ya están dando el salto: chicos formados en Monteros han sido fichados por clubes de Primera División de la AFA como Independiente, Argentinos Juniors, Estudiantes de La Plata y Banfield. Ese es el tipo de trabajo que vale la pena acompañar.",
+      "## Ya ocurrió una vez: Valencia 2021",
+      "Esta alianza no parte de cero. En 2021, el mismo grupo humano que hoy impulsa BHM llevó a once jóvenes futbolistas de Tucumán a España en la Gira Europea Valencia 2021. Entrenaron, compitieron y pisaron el césped de Mestalla, el estadio del Valencia CF. Aquella experiencia, hecha a pulmón y con el apoyo de las familias, es la semilla de lo que ahora construimos juntos. La diferencia es que esta vez Odisea Tours aporta su estructura, su logística y su red en España para que el salto sea más grande y llegue a más chicos.",
+      "![Los jóvenes de la Gira Europea Valencia 2021 sobre el césped de Mestalla, estadio del Valencia CF](/photos/sarayaku-valencia-2021-mestalla.jpg)",
       "## Qué vamos a construir juntos",
       "El plan es sencillo de explicar y exigente de ejecutar: organizar viajes a España para los futbolistas de BHM, con entrenamientos de nivel, partidos amistosos contra equipos españoles de su edad y categoría, y visitas a los entornos donde se formó el fútbol moderno. La idea no es turismo con balón, es competencia real y exposición real, en un contexto pensado para que cada jugador crezca dentro y fuera del campo.",
       "![Jóvenes futbolistas entrenando en un complejo de fútbol en España](/photos/odisea-tours-youth-fcb-training-hero.jpg)",

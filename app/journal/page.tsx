@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { POSTS } from "@/content/journal";
+import { postsByLang } from "@/content/journal";
 
 export const metadata: Metadata = {
   title: "Spain Football Tour Blog: Guides, Tips & Field Notes",
@@ -91,47 +91,66 @@ export default function JournalIndex() {
 
       <section className="pb-16 md:pb-20 paper-texture">
         <div className="max-w-[1200px] mx-auto">
-          {POSTS.map((post, i) => (
-            <Link
-              key={post.slug}
-              href={`/journal/${post.slug}`}
-              className="group block border-t border-ink/15"
-            >
-              <div className="grid md:grid-cols-12 gap-5 items-center px-6 md:px-10 lg:px-14 py-6 md:py-7 transition-colors duration-500 hover:bg-ink hover:text-paper">
-                <div className="md:col-span-2 font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase opacity-60">
-                  {post.category}
-                  <br />
-                  <span className="opacity-60">
-                    {new Date(post.date).toLocaleDateString("en-GB", {
-                      day: "2-digit",
-                      month: "short",
-                      year: "numeric",
-                    })}
-                  </span>
-                </div>
-                <h2 className="md:col-span-7 font-display text-xl md:text-2xl leading-tight tracking-tight">
-                  {post.title}{" "}
-                  <span className="font-display-italic text-gold">
-                    {post.italicTitle}
-                  </span>
-                </h2>
-                <div className="md:col-span-3 font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase opacity-70">
-                  <div>{post.readTime} read</div>
-                  <div className="mt-2 inline-flex items-center gap-2">
-                    Read
-                    <svg width="18" height="8" viewBox="0 0 24 10" fill="none">
-                      <path
-                        d="M1 5 H23 M18 1 L23 5 L18 9"
-                        stroke="currentColor"
-                        strokeWidth="1"
-                      />
-                    </svg>
-                  </div>
-                </div>
+          {postsByLang().map((group) => (
+            <div key={group.lang}>
+              <div
+                className="flex items-center gap-3 px-6 md:px-10 lg:px-14 pt-10 pb-3 border-t border-ink/15"
+                lang={group.lang}
+              >
+                <span className="font-display text-lg md:text-xl tracking-tight text-ink">
+                  {group.label}
+                </span>
+                <span className="font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase text-ink/45">
+                  {group.lang === "es" ? "Artículos en español" : "Articles in English"}
+                </span>
               </div>
-              {i === POSTS.length - 1 && <div className="border-b border-ink/15" />}
-            </Link>
+              {group.posts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/journal/${post.slug}`}
+                  className="group block border-t border-ink/15"
+                  lang={group.lang}
+                >
+                  <div className="grid md:grid-cols-12 gap-5 items-center px-6 md:px-10 lg:px-14 py-6 md:py-7 transition-colors duration-500 hover:bg-ink hover:text-paper">
+                    <div className="md:col-span-2 font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase opacity-60">
+                      <span className="inline-block mb-1 px-1.5 py-0.5 border border-ink/25 rounded-sm not-italic tracking-[0.18em] text-ink/70 group-hover:border-paper/40 group-hover:text-paper/80">
+                        {group.lang.toUpperCase()}
+                      </span>
+                      <br />
+                      {post.category}
+                      <br />
+                      <span className="opacity-60">
+                        {new Date(post.date).toLocaleDateString(
+                          group.lang === "es" ? "es-ES" : "en-GB",
+                          { day: "2-digit", month: "short", year: "numeric" }
+                        )}
+                      </span>
+                    </div>
+                    <h2 className="md:col-span-7 font-display text-xl md:text-2xl leading-tight tracking-tight">
+                      {post.title}{" "}
+                      <span className="font-display-italic text-gold">
+                        {post.italicTitle}
+                      </span>
+                    </h2>
+                    <div className="md:col-span-3 font-mono-editorial text-[0.55rem] tracking-[0.28em] uppercase opacity-70">
+                      <div>{post.readTime} {group.lang === "es" ? "de lectura" : "read"}</div>
+                      <div className="mt-2 inline-flex items-center gap-2">
+                        {group.lang === "es" ? "Leer" : "Read"}
+                        <svg width="18" height="8" viewBox="0 0 24 10" fill="none">
+                          <path
+                            d="M1 5 H23 M18 1 L23 5 L18 9"
+                            stroke="currentColor"
+                            strokeWidth="1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           ))}
+          <div className="border-b border-ink/15" />
         </div>
       </section>
     </>

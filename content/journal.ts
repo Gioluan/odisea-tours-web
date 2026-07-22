@@ -328,6 +328,8 @@ export function pillarOf(post: Post): PillarInfo | null {
   return PILLAR_BY_CLUSTER[clusterOf(post)];
 }
 
+export type Lang = "en" | "es";
+
 export interface Post {
   slug: string;
   title: string;
@@ -342,6 +344,21 @@ export interface Post {
   author?: AuthorId;
   tags?: string[];
   faqs?: FAQ[];
+  lang?: Lang;
+}
+
+export function langOf(post: Post): Lang {
+  return post.lang ?? "en";
+}
+
+// Posts sorted newest first, then grouped by language.
+export function postsByLang(): { lang: Lang; label: string; posts: Post[] }[] {
+  const sorted = [...POSTS].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const groups: { lang: Lang; label: string; posts: Post[] }[] = [
+    { lang: "es", label: "En español", posts: sorted.filter((p) => langOf(p) === "es") },
+    { lang: "en", label: "In English", posts: sorted.filter((p) => langOf(p) === "en") },
+  ];
+  return groups.filter((g) => g.posts.length > 0);
 }
 
 export const POSTS: Post[] = [
@@ -357,6 +374,7 @@ export const POSTS: Post[] = [
     category: "Alianzas",
     cover: "/photos/bhm-odisea-partnership.jpg",
     author: "juan",
+    lang: "es",
     tags: ["BHM Fútbol Group", "Argentina", "alianza", "formación", "viajes deportivos", "España", "ojeadores", "Monteros", "Tucumán", "AFA"],
     faqs: [
       {
@@ -390,7 +408,7 @@ export const POSTS: Post[] = [
     ],
     body: [
       "Cuando dos proyectos miran en la misma dirección, lo lógico es unir fuerzas. Por eso nos alegra anunciar la alianza entre Odisea Tours y BHM Fútbol Group, la organización de Monteros, Tucumán, que forma a niños y jóvenes futbolistas argentinos para la alta competencia. Juntos vamos a abrir un camino que hasta ahora, para muchas familias, parecía reservado a unos pocos: viajar a España para entrenar, competir y mostrarse ante el fútbol europeo.",
-      "Odisea Tours organiza viajes deportivos y culturales por España desde 2005, sobre todo para clubes de Estados Unidos y Australia. BHM aporta algo que no se improvisa: un trabajo serio de formación, con método y seguimiento, que ya está dando frutos concretos en Argentina. La alianza une las dos mitades de una misma historia, la cantera y el puente.",
+      "Odisea Tours organiza viajes deportivos y culturales por España desde 2005, sobre todo para clubes de Estados Unidos y Gran Bretaña. BHM aporta algo que no se improvisa: un trabajo serio de formación, con método y seguimiento, que ya está dando frutos concretos en Argentina. La alianza une las dos mitades de una misma historia, la cantera y el puente.",
       "## Una conexión que ya existe",
       "España y Argentina llevan más de un siglo compartiendo el mismo idioma, muchos de los mismos apellidos y la misma pasión por el fútbol. Buena parte de Argentina desciende de españoles que cruzaron el Atlántico, y ese vínculo sigue vivo en cada barrio, en cada club y en cada sobremesa. Para un chico argentino, llegar a España no es aterrizar en un país extraño: es reencontrarse con una parte de su propia historia, solo que con el balón de por medio.",
       "El fútbol lo hace todavía más natural. Los dos países comparten una manera de entender el juego, hecha de técnica, asociación y calle. Algunos de los mejores futbolistas de la historia del fútbol español nacieron en Argentina, y muchos entrenadores y jugadores argentinos se han formado o consagrado en clubes españoles. Esa autopista de ida y vuelta es exactamente el terreno en el que trabaja esta alianza.",

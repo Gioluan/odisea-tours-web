@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { POSTS, postBySlug, authorOf, tagsOf, howToOf, clusterOf, pillarOf } from "@/content/journal";
+import { POSTS, postBySlug, authorOf, tagsOf, howToOf, clusterOf, pillarOf, langOf } from "@/content/journal";
 
 const SITE = "https://odisea-tours.com";
 
@@ -54,7 +54,7 @@ export async function generateMetadata({
       description: post.excerpt,
       url,
       siteName: "Odisea Tours",
-      locale: "en_US",
+      locale: langOf(post) === "es" ? "es_ES" : "en_US",
       publishedTime: post.date,
       modifiedTime: post.dateModified ?? post.date,
       authors: [authorName],
@@ -290,7 +290,7 @@ export default async function JournalPost({
       </div>
 
       {/* Body */}
-      <div className="max-w-[720px] mx-auto px-6 pb-32">
+      <div className="max-w-[720px] mx-auto px-6 pb-32" lang={langOf(post)}>
         <div className="font-display-italic text-3xl md:text-4xl leading-[1.15] mb-14 text-ink/80">
           {post.excerpt}
         </div>

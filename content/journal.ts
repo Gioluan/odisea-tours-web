@@ -346,6 +346,69 @@ export interface Post {
 
 export const POSTS: Post[] = [
   {
+    slug: "odisea-tours-bhm-futbol-group-alianza-argentina",
+    title: "Odisea Tours se alía con BHM Fútbol Group para abrirle las puertas de",
+    italicTitle: "España",
+    excerpt:
+      "Anunciamos nuestra alianza con BHM Fútbol Group, la organización de Monteros, Tucumán, que forma futbolistas argentinos para la alta competencia. Un puente entre España y Argentina: dos países unidos por el idioma, la cultura y el fútbol, para llevar el talento del interior a competir con los clubes locales españoles.",
+    date: "2026-07-22",
+    dateModified: "2026-07-22",
+    readTime: "8 min",
+    category: "Alianzas",
+    cover: "/photos/spain-soccer-tour-match-vs-spanish-academy-side.jpg",
+    author: "juan",
+    tags: ["BHM Fútbol Group", "Argentina", "alianza", "formación", "viajes deportivos", "España", "ojeadores", "Monteros", "Tucumán", "AFA"],
+    faqs: [
+      {
+        q: "¿En qué consiste la alianza entre Odisea Tours y BHM Fútbol Group?",
+        a: "Odisea Tours y BHM Fútbol Group unen fuerzas para organizar viajes deportivos a España para los futbolistas que BHM forma en Monteros, Tucumán. BHM aporta el trabajo de formación y el talento, y Odisea Tours aporta veinte años organizando viajes deportivos por España: entrenamientos, partidos contra equipos españoles del nivel adecuado, logística y acompañamiento bilingüe sobre el terreno. El objetivo es dar a cada jugador competencia real y más visibilidad.",
+      },
+      {
+        q: "¿Qué van a hacer los futbolistas de BHM en España?",
+        a: "Entrenar con nivel, competir en partidos amistosos contra equipos españoles de su edad y categoría, y conocer los entornos donde se formó el fútbol moderno. No es turismo con balón: es competencia real y exposición real, en una experiencia organizada de principio a fin. No prometemos fichajes ni partidos contra primeras figuras, prometemos rivales de verdad al nivel correcto y un viaje pensado para que cada jugador crezca dentro y fuera del campo.",
+      },
+      {
+        q: "¿BHM Fútbol Group ya tiene jugadores en clubes profesionales?",
+        a: "Sí. Chicos formados en Monteros, entre BHM y la Fundación Arroyo El Tejar, ya han sido fichados por clubes de Primera División de la AFA, entre ellos Independiente, Argentinos Juniors, Estudiantes de La Plata y Banfield. Ese trabajo concreto en Argentina es exactamente lo que esta alianza busca acompañar y difundir.",
+      },
+      {
+        q: "¿Por qué tiene sentido una alianza entre España y Argentina para el fútbol juvenil?",
+        a: "Porque España y Argentina comparten idioma, cultura y una misma pasión por el fútbol desde hace más de un siglo. Buena parte de Argentina desciende de españoles, así que para un jugador argentino formarse y competir en España no es un choque cultural, es una prolongación natural de su historia. A eso se suma que España es una de las grandes escuelas del fútbol mundial: el vínculo cultural y el deportivo apuntan en la misma dirección.",
+      },
+      {
+        q: "¿Con qué clubes españoles se trabaja en estos viajes?",
+        a: "Gracias a Odisea Tours tenemos la oportunidad de conectar con clubes de primer nivel como Valencia CF y el Deportivo Alavés para entrenamientos y partidos organizados en sus instalaciones de España, además de días de estadio y entrenamiento en entornos de referencia del fútbol español.",
+      },
+      {
+        q: "¿Cuándo es el primer viaje a España?",
+        a: "Estamos trabajando en los detalles del primer viaje y compartiremos las novedades en las próximas semanas. Puedes seguir el trabajo de BHM en bhmfutbol.com y escribirnos a Odisea Tours para entender cómo funciona un viaje deportivo a España.",
+      },
+    ],
+    body: [
+      "Cuando dos proyectos miran en la misma dirección, lo lógico es unir fuerzas. Por eso nos alegra anunciar la alianza entre Odisea Tours y BHM Fútbol Group, la organización de Monteros, Tucumán, que forma a niños y jóvenes futbolistas argentinos para la alta competencia. Juntos vamos a abrir un camino que hasta ahora, para muchas familias, parecía reservado a unos pocos: viajar a España para entrenar, competir y mostrarse ante el fútbol europeo.",
+      "Odisea Tours organiza viajes deportivos y culturales por España desde 2005, sobre todo para clubes de Estados Unidos y Australia. BHM aporta algo que no se improvisa: un trabajo serio de formación, con método y seguimiento, que ya está dando frutos concretos en Argentina. La alianza une las dos mitades de una misma historia, la cantera y el puente.",
+      "## Una conexión que ya existe",
+      "España y Argentina llevan más de un siglo compartiendo el mismo idioma, muchos de los mismos apellidos y la misma pasión por el fútbol. Buena parte de Argentina desciende de españoles que cruzaron el Atlántico, y ese vínculo sigue vivo en cada barrio, en cada club y en cada sobremesa. Para un chico argentino, llegar a España no es aterrizar en un país extraño: es reencontrarse con una parte de su propia historia, solo que con el balón de por medio.",
+      "El fútbol lo hace todavía más natural. Los dos países comparten una manera de entender el juego, hecha de técnica, asociación y calle. Algunos de los mejores futbolistas de la historia del fútbol español nacieron en Argentina, y muchos entrenadores y jugadores argentinos se han formado o consagrado en clubes españoles. Esa autopista de ida y vuelta es exactamente el terreno en el que trabaja esta alianza.",
+      "![Un equipo visitante y un club local español juntos tras un partido amistoso en España](/photos/odisea-tours-both-teams-post-match.jpg)",
+      "## Quién es BHM Fútbol Group",
+      "BHM Fútbol Group es un equipo de profesionales dedicado a la formación y la mejora de futbolistas, con la mirada puesta en que cada chico llegue preparado a las categorías juveniles del fútbol argentino y, cuando el talento lo permite, del extranjero. No es una promesa de folleto. Sus jugadores, junto a los de la Fundación Arroyo El Tejar con la que trabajan codo con codo, ya están dando el salto: chicos formados en Monteros han sido fichados por clubes de Primera División de la AFA como Independiente, Argentinos Juniors, Estudiantes de La Plata y Banfield. Ese es el tipo de trabajo que vale la pena acompañar.",
+      "## Qué vamos a construir juntos",
+      "El plan es sencillo de explicar y exigente de ejecutar: organizar viajes a España para los futbolistas de BHM, con entrenamientos de nivel, partidos amistosos contra equipos españoles de su edad y categoría, y visitas a los entornos donde se formó el fútbol moderno. La idea no es turismo con balón, es competencia real y exposición real, en un contexto pensado para que cada jugador crezca dentro y fuera del campo.",
+      "![Jóvenes futbolistas entrenando en un complejo de fútbol en España](/photos/odisea-tours-youth-fcb-training-hero.jpg)",
+      "El viaje se apoya en los clubes locales. Gracias a Odisea Tours tenemos la oportunidad de conectar con clubes de primer nivel como Valencia CF y el Deportivo Alavés para entrenamientos y partidos organizados en sus instalaciones de España, además de días de estadio en entornos de referencia del fútbol europeo. Para un chico de Monteros o de Famaillá, entrenar en esos complejos y medirse con el fútbol de base español es un salto enorme.",
+      "Para nosotros hay algo más, y es lo que más nos motiva: dar difusión al trabajo que BHM hace en Argentina. Detrás de cada fichaje hay años de entrenamientos en Monteros, de familias que apuestan, de chicos que madrugan. Ese esfuerzo merece un escaparate más grande. Un viaje a España, bien organizado y bien contado, es una forma de ponerlo en valor y de abrir puertas a los que vienen detrás.",
+      "## Apoyar el desarrollo desde la base",
+      "Odisea Tours no quiere ser solo una agencia que vende un viaje. Con esta alianza queremos apoyar de forma concreta las iniciativas que desarrollan talento joven en Argentina, empezando por el trabajo de BHM y de la Fundación Arroyo El Tejar. Poner nuestra experiencia logística, nuestra red en España y nuestra manera de contar historias al servicio de proyectos que forman jugadores desde el interior es, para nosotros, la mejor forma de devolverle algo al fútbol que nos une.",
+      "El objetivo a medio plazo es que este puente funcione en las dos direcciones: que chicos argentinos vengan a formarse y competir a España, y que el trabajo de clubes y fundaciones argentinas gane visibilidad y aliados al otro lado del Atlántico. La cultura, el idioma y el fútbol ya están del mismo lado. Solo hacía falta construir el camino.",
+      "## Por qué España",
+      "España no es un destino cualquiera para un futbolista en formación. Es donde se construyó el estilo de juego que hoy domina buena parte del fútbol europeo, y donde un chico puede medirse contra rivales que juegan distinto, piensan distinto y exigen distinto. Competir allí, aunque sea unos días, deja huella. Lo que hacemos desde hace veinte años, la logística, los rivales al nivel adecuado, el acompañamiento bilingüe sobre el terreno, se pone ahora al servicio del talento argentino.",
+      "![Equipo visitante disputando un amistoso contra un club local español](/photos/odisea-tours-match-vs-local-team.jpg)",
+      "## Lo que viene",
+      "Estamos trabajando en los detalles del primer viaje y en las próximas semanas iremos compartiendo novedades. Si quieres conocer el trabajo de BHM Fútbol Group, sigue su proyecto en [bhmfutbol.com](https://bhmfutbol.com). Y si formas parte de un club o de una familia y quieres entender cómo funciona un viaje deportivo a España, [escríbenos y montamos el plan juntos](/plan-your-tour). Esto no ha hecho más que empezar.",
+    ],
+  },
+  {
     slug: "why-us-clubs-choose-spain-over-england-soccer-tours",
     title: "Five Reasons US Clubs Keep Choosing Spain Over",
     italicTitle: "England",

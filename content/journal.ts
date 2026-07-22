@@ -355,7 +355,7 @@ export const POSTS: Post[] = [
     dateModified: "2026-07-22",
     readTime: "8 min",
     category: "Alianzas",
-    cover: "/photos/spain-soccer-tour-match-vs-spanish-academy-side.jpg",
+    cover: "/photos/bhm-odisea-partnership.jpg",
     author: "juan",
     tags: ["BHM Fútbol Group", "Argentina", "alianza", "formación", "viajes deportivos", "España", "ojeadores", "Monteros", "Tucumán", "AFA"],
     faqs: [

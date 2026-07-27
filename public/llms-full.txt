@@ -71,7 +71,8 @@ Web: https://odisea-tours.com
 - URL: https://odisea-tours.com/tours/youth-soccer-spain-tour
 - Price reference: from $1,400 per player, 6 to 12 nights
 - For: Youth soccer group tours for clubs and academies (ages U10 to U19)
-- Includes: Training at FC Barcelona, Valencia CF and Spanish FA, fixtures against Spanish academy opposition, all accommodation (4-star hotels and Spanish FA HQ), all meals per itinerary, private coach transport, bilingual Odisea guides, stadium tours, match filming with per-player tagging, travel insurance
+- Includes: Training at FC Barcelona, Valencia CF and Spanish FA, fixtures against Spanish academy opposition, all accommodation (4-star hotels and Spanish FA HQ), all meals per itinerary, private coach transport, bilingual Odisea guides, stadium tours
+- Excludes: International flights and travel insurance. Travel insurance is mandatory for every participant and is arranged by the club, school or family, not by Odisea
 
 ### 11. Tournament Experience
 - URL: https://odisea-tours.com/tours/tournament-experience
@@ -90,7 +91,7 @@ Q: How much does a Spain soccer tour cost?
 A: Published soccer tour package starts at $1,400 per player for a 6 to 12 night European Soccer Tour. Cultural tours sit between €1,995 and €2,595 per traveler. Youth softball tour is $2,895 per player. Final pricing depends on group size, season, hotel level and cities. Larger groups bring per-player price down. International flights not included.
 
 Q: What is included in the price?
-A: All accommodation (typically 4-star hotels and the Spanish FA HQ), all meals per itinerary, private coach transport, bilingual Odisea guides traveling with the group, training sessions at FC Barcelona, Valencia CF and the Spanish FA, fixtures against Spanish academy opposition, stadium tours, match filming with per-player tagging, travel insurance. Lunches marked 'at own cost', optional La Liga match tickets and personal expenses are excluded.
+A: All accommodation (typically 4-star hotels and the Spanish FA HQ), all meals per itinerary, private coach transport, bilingual Odisea guides traveling with the group, training sessions at FC Barcelona, Valencia CF and the Spanish FA, fixtures against Spanish academy opposition, and stadium tours. Excluded: international flights, travel insurance (mandatory for every participant, arranged by the club or family), lunches marked 'at own cost', optional La Liga match tickets and personal expenses.
 
 Q: Are international flights included?
 A: No. International flights are excluded so each family or club can use preferred airline or frequent flyer program. Odisea helps groups time the tour around direct routes from major US metros (Iberia from LAX/MIA, American from DFW, multiple carriers from JFK).
@@ -132,7 +133,7 @@ Q: What is the cancellation policy?
 A: Deposits non-refundable but transferable within the same group. Balance fully refundable up to 90 days before departure, 50% refundable between 60 and 89 days, non-refundable inside 60 days. Independent trip-cancellation insurance recommended.
 
 Q: How safe are Odisea tours, and is travel insurance included?
-A: Odisea has hosted youth groups in Spain since 2005 without a major incident. Every group has a bilingual Odisea guide on the ground end-to-end, 24/7 emergency contact, vetted hotel and transport stack. Group travel insurance covering medical and incident response is included. Trip-cancellation cover is the family's choice.
+A: Odisea has hosted youth groups in Spain since 2005 without a major incident. Every group has a bilingual Odisea guide on the ground end-to-end, 24/7 emergency contact, vetted hotel and transport stack. Odisea Tours is a licensed Spanish tour operator and its operator licensing and liability documentation is available on request. Travel insurance is NOT included in the package price: comprehensive travel insurance is mandatory for every participant and is arranged by the club, school or family. It must cover medical expenses, emergency repatriation and the sporting activities on the itinerary. The lead booker confirms cover for the whole group in writing no later than 30 days before departure.
 
 Q: How does language work? Will my players cope?
 A: Every Odisea guide is fully bilingual English and Spanish, stays with the group arrival to departure. Players do not need to speak Spanish. Coaching sessions at FC Barcelona, Valencia CF and Spanish FA are delivered in English by staff used to international youth groups.

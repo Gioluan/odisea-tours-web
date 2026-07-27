@@ -550,13 +550,13 @@ export default function SoccerToursSpainPillarPage() {
               <div className="font-display text-4xl text-gold-deep">24 / 7</div>
               <div className="mt-3 font-mono-editorial text-[0.6rem] tracking-[0.26em] uppercase text-ink/55">Emergency phone</div>
               <p className="mt-4 text-ink-soft leading-relaxed text-[0.97rem]">
-                A real person on the line whenever the group is in Spain. Group travel insurance covering medical and incident response is included in every package.
+                A real person on the line whenever the group is in Spain, from the arrivals hall to the departure gate.
               </p>
             </div>
           </div>
 
           <p className="mt-10 text-ink-soft leading-relaxed max-w-[64ch]">
-            Operator licensing and insurance documentation available on request. Our team is on the <Link href="/team" className="underline underline-offset-4 hover:text-gold-deep">team page</Link>, with first names, photos and what each person actually does on a tour.
+            Operator licensing and liability documentation available on request. Participant travel insurance is not included in the package: it is mandatory, and the club or family arranges it. Our team is on the <Link href="/team" className="underline underline-offset-4 hover:text-gold-deep">team page</Link>, with first names, photos and what each person actually does on a tour.
           </p>
         </div>
       </section>

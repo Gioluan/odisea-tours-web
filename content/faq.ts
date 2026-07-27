@@ -18,7 +18,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: "What is included in the price?",
-        a: "All accommodation (typically 4-star hotels and the Spanish FA headquarters), all meals per the itinerary, private coach transport throughout, bilingual Odisea guides who travel with the group, training sessions at FC Barcelona, Valencia CF and the Spanish FA, fixtures against Spanish academy opposition, stadium tours, match filming with per-player tagging, and travel insurance. Lunches marked 'at own cost' on the itinerary, optional La Liga match tickets, and personal expenses are excluded.",
+        a: "All accommodation (typically 4-star hotels and the Spanish FA headquarters), all meals per the itinerary, private coach transport throughout, bilingual Odisea guides who travel with the group, training sessions at FC Barcelona, Valencia CF and the Spanish FA, fixtures against Spanish academy opposition and stadium tours. Excluded: international flights, travel insurance (which every participant must arrange themselves and is mandatory), lunches marked 'at own cost' on the itinerary, optional La Liga match tickets, and personal expenses.",
       },
       {
         q: "Are international flights included?",
@@ -81,7 +81,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: "How safe are Odisea tours, and is travel insurance included?",
-        a: "We have hosted youth groups in Spain since 2005 without a major incident. Every group has a bilingual Odisea guide on the ground end-to-end, 24/7 emergency contact, and a vetted hotel and transport stack. Group travel insurance covering medical and incident response is included in the package price. Trip-cancellation cover is the family's choice.",
+        a: "We have hosted youth groups in Spain since 2005 without a major incident. Every group has a bilingual Odisea guide on the ground end-to-end, 24/7 emergency contact, and a vetted hotel and transport stack. Odisea Tours is a licensed Spanish tour operator and our operator licensing and liability documentation is available on request. Travel insurance is not included in the package price. Comprehensive travel insurance is mandatory for every participant and is arranged by the club or the family, and it must cover medical expenses, emergency repatriation and the sporting activities on the itinerary. The lead booker confirms cover for the whole group in writing no later than 30 days before departure.",
       },
       {
         q: "How does language work? Will my players cope?",

@@ -12,7 +12,7 @@ const HOME_FAQ = [
   },
   {
     q: "What is included in a typical Odisea Spain Soccer Tour?",
-    a: "All accommodation in 4-star hotels and the Spanish Football Federation headquarters, all meals per itinerary, private coach transport across cities, bilingual Odisea guides traveling with the group, training sessions at FC Barcelona's Joan Gamper facility, Valencia CF Paterna, and the Spanish FA in Las Rozas, fixtures against Spanish academy opposition, stadium tours at Camp Nou and Bernabéu, match filming with per-player tagging, and group travel insurance. International flights are excluded so each family or club can use a preferred airline.",
+    a: "All accommodation in 4-star hotels and the Spanish Football Federation headquarters, all meals per itinerary, private coach transport across cities, bilingual Odisea guides traveling with the group, training sessions at FC Barcelona's Joan Gamper facility, Valencia CF Paterna, and the Spanish FA in Las Rozas, fixtures against Spanish academy opposition, and stadium tours at Camp Nou and Bernabéu. International flights are excluded so each family or club can use a preferred airline. Travel insurance is also excluded: it is mandatory for every participant and arranged by the club or the family.",
   },
   {
     q: "How much does a Spain soccer tour or school trip cost per traveler?",

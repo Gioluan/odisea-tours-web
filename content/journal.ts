@@ -33,6 +33,8 @@ export function authorById(id: AuthorId | undefined): Author {
 }
 
 const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
+  "educational-school-trips-to-spain-guide": "juan",
+  "what-a-spain-dmc-does-for-agencies": "juan",
   "spain-soccer-tour-day-by-day": "juan",
   "best-football-tour-destinations-barcelona": "aitor",
   "what-parents-need-to-know-youth-football-tours-spain": "juan",
@@ -62,9 +64,13 @@ const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
   "softball-tour-spain-for-families-and-parents": "juan",
   "why-us-clubs-choose-spain-over-england-soccer-tours": "juan",
   "best-youth-soccer-tournaments-spain-us-clubs": "juan",
+  "how-to-get-your-club-to-take-a-soccer-tour-to-spain": "juan",
+  "how-to-choose-a-soccer-tour-company-for-your-club": "juan",
 };
 
 const TAGS_BY_SLUG: Record<string, string[]> = {
+  "educational-school-trips-to-spain-guide": ["school trips", "language immersion", "Modern Languages", "educational travel", "Spain", "US schools"],
+  "what-a-spain-dmc-does-for-agencies": ["DMC", "receptive operator", "B2B", "travel agencies", "ground handling", "Spain"],
   "spain-soccer-tour-day-by-day": ["youth soccer", "Spain", "day by day", "Madrid", "Valencia", "Barcelona", "tour planning", "complete guide"],
   "best-football-tour-destinations-barcelona": ["Barcelona", "Camp Nou", "football tours", "Spain"],
   "what-parents-need-to-know-youth-football-tours-spain": ["youth tours", "parents", "safeguarding", "Spain"],
@@ -94,6 +100,8 @@ const TAGS_BY_SLUG: Record<string, string[]> = {
   "spain-softball-tour-basque-country-barcelona": ["softball", "Spain", "US teams", "softball tours", "Basque Country", "Bilbao", "San Sebastian", "Barcelona", "Zaragoza", "Pamplona", "Sant Boi", "Gaztelugatxe"],
   "why-us-clubs-choose-spain-over-england-soccer-tours": ["US clubs", "soccer tours", "Spain", "England", "youth soccer", "cost", "weather", "training", "FC Barcelona", "Valencia CF", "Spanish FA", "Premier League", "Pep Guardiola", "Mikel Arteta", "Unai Emery", "Rafa Benitez", "possession game"],
   "best-youth-soccer-tournaments-spain-us-clubs": ["soccer tournaments", "Spain", "US clubs", "Donosti Cup", "MIC", "Mediterranean International Cup", "Iber Cup", "Costa Daurada Cup", "San Sebastian", "Costa Brava", "youth soccer", "tournament travel"],
+  "how-to-get-your-club-to-take-a-soccer-tour-to-spain": ["youth soccer", "parents", "players", "Spain", "club tour", "Director of Coaching", "high school soccer", "travel team", "fundraising", "tour planning"],
+  "how-to-choose-a-soccer-tour-company-for-your-club": ["soccer tour company", "tour operator", "ground operator", "club directors", "high school soccer", "insurance", "safeguarding", "international travel", "Spain", "buyer's guide"],
 };
 
 export function authorOf(post: Post): Author {
@@ -234,13 +242,49 @@ const HOWTO_BY_SLUG: Record<string, HowToData> = {
       },
     ],
   },
+  "how-to-get-your-club-to-take-a-soccer-tour-to-spain": {
+    name: "How to get your club to approve a soccer tour to Spain",
+    description:
+      "A step by step for players and parents who want their US soccer club or high school program to take a team tour to Spain, from identifying the decision maker to the message to send the coach.",
+    totalTime: "P3M",
+    steps: [
+      {
+        name: "Find out who actually decides",
+        text: "Your team coach is usually your advocate, not the decision maker. At a US travel club the decision normally sits with the Director of Coaching, often with the club board for international travel and money held for families. At a high school it is the athletic director and the school administration. Ask your coach directly who would have to approve it and what they need to see.",
+      },
+      {
+        name: "Bring a specific travel window",
+        text: "Name a window and a year rather than proposing the idea in general. Spring break in March or April lines up with the MIC on the Costa Brava. Late June into July lines up with the Donosti Cup in San Sebastian and the Costa Daurada Cup in Salou. Allow twelve months so the group can fundraise properly.",
+      },
+      {
+        name: "Quote a per-player price, not a trip total",
+        text: "A trip total ends the conversation. A per-player number starts it. Spain tours run from 1,400 dollars per player for the ground portion over 6 to 12 nights, flights separate, and most families pay it across 10 to 12 monthly installments with club fundraising against it. State clearly what is and is not included.",
+      },
+      {
+        name: "Pre-answer the three questions other parents will ask",
+        text: "What does it cost me, who is supervising my child, and will my child actually play competitive games rather than watch. Give the coach these answers before the parents meeting rather than after it, since the coach is anticipating that room when they decide.",
+      },
+      {
+        name: "Show the workload does not land on the coach",
+        text: "State explicitly that the tour company handles hotels, ground transport, training sessions, fixture matching and scheduling, cultural days, dietary requirements and an on-site director for the whole trip. The unspoken objection is that the coach becomes a travel agent. Remove it before it is raised.",
+      },
+      {
+        name: "Gather other families before you pitch",
+        text: "One player asking is an idea. Five families asking together is a mandate. Canvass the other parents on your team first, and take the actual count of interested families to the club, since they need that number anyway to know whether the group is viable.",
+      },
+      {
+        name: "Send a short, concrete message to the coach",
+        text: "Keep the ask to one paragraph that names the window, names the per-player number, makes clear the coach is not being handed a project, and asks only for permission to gather real numbers for your age group and dates. Requesting a quote is a smaller ask than requesting a decision.",
+      },
+    ],
+  },
 };
 
 export function howToOf(post: Post): HowToData | null {
   return HOWTO_BY_SLUG[post.slug] ?? null;
 }
 
-export type ClusterId = "soccer" | "softball" | "culinary" | "camino" | "corporate" | "planning";
+export type ClusterId = "soccer" | "softball" | "culinary" | "camino" | "corporate" | "schools" | "dmc" | "planning";
 
 const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "spain-soccer-tour-day-by-day": "soccer",
@@ -272,6 +316,10 @@ const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "softball-tour-spain-for-families-and-parents": "softball",
   "why-us-clubs-choose-spain-over-england-soccer-tours": "soccer",
   "best-youth-soccer-tournaments-spain-us-clubs": "soccer",
+  "how-to-get-your-club-to-take-a-soccer-tour-to-spain": "soccer",
+  "how-to-choose-a-soccer-tour-company-for-your-club": "soccer",
+  "educational-school-trips-to-spain-guide": "schools",
+  "what-a-spain-dmc-does-for-agencies": "dmc",
 };
 
 export interface PillarInfo {
@@ -316,6 +364,20 @@ export const PILLAR_BY_CLUSTER: Record<ClusterId, PillarInfo | null> = {
     blurb:
       "The full menu of corporate retreat options across the Basque Country, La Rioja, Andalucía and the Camino lives on the Corporate Retreats tour page. Group sizes, activity options and what a typical five-day itinerary looks like.",
     ctaLabel: "Read the Corporate Retreats tour page",
+  },
+  schools: {
+    href: "/school-trips-spain",
+    title: "School Trips to Spain",
+    blurb:
+      "The full picture of how we build an educational trip to Spain, the language immersion and Modern Languages programmes, the academic and cultural routes, how supervision actually works day to day and what it costs per student, lives on our school trips pillar guide.",
+    ctaLabel: "Read the School Trips to Spain pillar",
+  },
+  dmc: {
+    href: "/spain-dmc",
+    title: "Spain DMC for Agencies",
+    blurb:
+      "If you are an agency or tour operator rather than an end client, the B2B side of what we do, full ground handling, net rates, the four programme types we operate and how to send us a brief, lives on our Spain DMC page.",
+    ctaLabel: "Read the Spain DMC page",
   },
   planning: null,
 };
@@ -362,6 +424,155 @@ export function postsByLang(): { lang: Lang; label: string; posts: Post[] }[] {
 }
 
 export const POSTS: Post[] = [
+  {
+    slug: "how-to-get-your-club-to-take-a-soccer-tour-to-spain",
+    title: "How to Get Your Club to Take a Soccer Tour to",
+    italicTitle: "Spain",
+    excerpt:
+      "Most Spain tours do not start with a coach. They start with one player or one parent who asked. Here is how to make that ask land, who actually decides, and exactly what to put in front of your club.",
+    date: "2026-07-27",
+    readTime: "9 min",
+    category: "Field Notes",
+    cover: "/photos/odisea-tours-both-teams-post-match.jpg",
+    faqs: [
+      {
+        q: "How do I convince my soccer club to go on a tour to Spain?",
+        a: "Start by finding out who actually decides, which is usually the Director of Coaching at a club or the athletic director at a high school, not your team coach. Then bring three specific things rather than an idea: a travel window (summer or spring break), a per-player price rather than a trip total, and evidence that the workload does not land on the coach. Clubs almost never say no because of the destination. They say no because nobody has answered who runs it, what it costs each family, and who is liable. Answer those three and the conversation changes.",
+      },
+      {
+        q: "How much does a Spain soccer tour cost per player?",
+        a: "A Spain soccer tour with Odisea Tours starts from $1,400 per player for 6 to 12 nights, ground services only, based on a group of 20 sharing twin rooms, with international flights separate. That covers accommodation, meals, training, matches, transfers and a full-time Odisea director with the group. Most US families fund it over 10 to 12 months through a payment plan plus club fundraising rather than in one payment.",
+      },
+      {
+        q: "Who decides whether a youth soccer club goes on an international tour?",
+        a: "At a US travel club it is normally the Director of Coaching, sometimes with the club board for anything involving international travel and money held on behalf of families. At a high school it is the athletic director, and usually the school administration or district as well. Your team coach is often an advocate rather than the decision maker. Identifying the right person before you pitch saves months.",
+      },
+      {
+        q: "What is the best time of year for a US team to tour Spain?",
+        a: "Two windows work for US teams. Spring break in March or April lines up with the MIC on the Costa Brava and avoids the summer heat. Late June through July is the bigger window and lines up with the Donosti Cup in San Sebastian and the Costa Daurada Cup in Salou. Summer fills early, so a group aiming at a July tournament should be committed four to six months ahead.",
+      },
+    ],
+    body: [
+      "Almost every Spain tour we have run since 2005 started the same way, and it was not with a coach calling us. It was one player who came back from a trip and would not stop talking about it, or one parent who asked a question at the end of a team meeting. The club came later.",
+      "So if you are a player or a parent reading this because you want your team to go to Spain, you are not out of place in this conversation. You are where most of these trips actually begin. What follows is the practical version: who really decides, why clubs say no, and what to put in front of them so the answer changes.",
+      "## Why clubs say no (it is almost never the destination)",
+      "In twenty years we have watched a lot of good tour ideas die, and the reason is nearly always one of three things, none of which is Spain.",
+      "The first is workload. A coach hears \"international tour\" and pictures themselves collecting passports, chasing 18 families for payments, and being personally responsible for a squad of teenagers in a foreign country. That is a lot to volunteer for.",
+      "The second is money, but not in the way people assume. The blocker is rarely the size of the number. It is that nobody has said what each family pays, so every parent imagines their own worst case.",
+      "The third is liability. Somebody has to be able to answer what happens if a player gets hurt in Girona at 11pm, and if no one can answer it, the safe decision is always no.",
+      "Notice that none of those are arguments about whether the trip would be good for the players. Everyone already agrees it would. Your job is not to sell Spain. Your job is to remove the three reasons to say no.",
+      "![US and Spanish youth teams together after a match on an Odisea Tours soccer tour](/photos/spain-soccer-tour-match-vs-spanish-academy-side.jpg)",
+      "## Step one: find out who actually decides",
+      "This is the step people skip, and it costs them months. Your team coach usually is not the decision maker. They are your advocate.",
+      "At a US travel club, the decision normally sits with the Director of Coaching, and anything involving international travel and money collected from families often needs the club board too. At a high school, it is the athletic director, and generally the school administration or district behind them. In a smaller club it might genuinely be one person who does everything.",
+      "Ask your coach one question: who would have to approve this, and what do they need to see. Coaches almost always know, and being asked that question makes you look serious rather than starry-eyed.",
+      "## Step two: bring a window, not an idea",
+      "\"We should go to Spain sometime\" is easy to say no to because it costs nothing to defer. A specific window forces a real answer.",
+      "There are two that work for US teams. Spring break in March or April lines up with the MIC on the Costa Brava and misses the summer heat. Late June into July is the bigger window and lines up with the Donosti Cup in San Sebastian and the Costa Daurada Cup in Salou. Pick the one that fits your season and name it.",
+      "Name the year too, and give it room. A group deciding in July for the following summer has time to fundraise properly. A group deciding in March for that same July does not.",
+      "## Step three: bring a per-player number, not a trip total",
+      "This is the single biggest thing you can do, and most people get it backwards.",
+      "If you tell a room of parents the tour costs $32,000, the conversation is over. If you tell them it is from $1,400 per player for the ground portion and flights on top, and that it can be spread over 10 to 12 monthly payments with club fundraising against it, you are talking about roughly the cost of a season of club soccer in a lot of US markets. Same trip. Completely different conversation.",
+      "Be straight about what the number does and does not include. Ours is ground services: accommodation, meals, training sessions, matches, all transfers in Spain, and a full-time Odisea director with the group. International flights are separate, because they swing hundreds of dollars by departure city and month and anyone quoting you a single all-in figure a year out is guessing.",
+      "## Step four: answer the three questions every other parent will ask",
+      "Your coach is not just deciding for themselves. They are anticipating the meeting where 18 families ask questions. Hand them the answers in advance.",
+      "**What does it actually cost me?** The per-player number, what is included, the payment schedule, and what the club plans to fundraise. Vague answers here kill trips.",
+      "**Who is watching my kid?** Supervision ratios, who the adults are, where the group stays, what the evenings look like. Parents of 14-year-olds are not asking about training facilities. They are asking this.",
+      "**Will my kid actually play?** Not watch. Play. Parents have heard about trips that turned out to be a stadium tour and a scrimmage. Be clear about how many competitive games against Spanish opposition are in the itinerary, and that the opposition gets matched to your squad's age and level rather than whoever happens to be free.",
+      "![US squad training with professional coaches on an Odisea Tours soccer tour in Spain](/photos/odisea-tours-professional-coaching.jpg)",
+      "## Step five: show that it does not land on the coach",
+      "This is the objection nobody says out loud, so you have to address it unprompted.",
+      "On our tours, the club picks the dates, the squad and the level of competition they want. We do everything else: hotels, all ground transport, training sessions, matching and scheduling the opposition, stadium and cultural days, dietary requirements, and a director who travels with the group from arrivals to departure. The coach coaches. They do not become a travel agent.",
+      "Say that part explicitly when you pitch. It is the difference between asking your coach to take on a second job and asking them to say yes to something someone else runs.",
+      "## Step six: do not walk in alone",
+      "One player asking is a nice idea. Five families asking together is a mandate.",
+      "Before you go to the Director of Coaching, talk to the other parents on your team. Find out who is interested and who is not, because knowing that eight of 16 families are in is far more persuasive than enthusiasm on its own. It also tells the club something they need anyway, which is whether the group is big enough to work.",
+      "## What to send your coach",
+      "When you are ready, keep it short. Something close to this works, and you can copy it:",
+      "> Hi Coach, a few of us have been talking about a team trip to Spain, either spring break or next summer. Before I take it any further I wanted to check with you. From what I have found, a club tour runs from around $1,400 per player for the ground portion (accommodation, meals, training, games, transfers, staff on site), with flights on top, and families usually pay it monthly over the year with club fundraising against it. The tour company handles the planning, the hotels, the transport and the fixtures, so it would not fall on you. I have spoken to a few other families and there is real interest. Would it be worth me getting proper numbers for our age group and dates so you can look at something concrete?",
+      "That message works because it does three things at once. It names a window, it names a per-player number, and it makes clear the coach is not being handed a project.",
+      "## What happens after that",
+      "If your coach or Director of Coaching wants real numbers, we can give them numbers rather than a brochure. Tell us the age groups, roughly how many players and how many family members would travel, and your window, and we come back with a per-person price that names the hotels and the itinerary.",
+      "Nothing is committed at that stage and there is no cost to finding out. Most clubs we work with spend a few weeks with a real quote in front of them before they decide, which is exactly how it should be.",
+      "You can read what a Spain trip actually looks like day by day on our [soccer tours in Spain](/soccer-tours-spain) page, see the tournament options on the [soccer tournaments in Spain](/soccer-tournaments-spain) page, and look at how we handle US groups specifically on our [tours for US teams](/usa) page. When you want the numbers, [start the conversation here](/plan-your-tour). If you are the coach reading this rather than the player, the companion piece is [how to choose a soccer tour company for your club](/journal/how-to-choose-a-soccer-tour-company-for-your-club).",
+    ],
+  },
+  {
+    slug: "how-to-choose-a-soccer-tour-company-for-your-club",
+    title: "How to Choose a Soccer Tour Company for Your",
+    italicTitle: "Club",
+    excerpt:
+      "Seven questions to ask any soccer tour company before you sign, from who is actually on the ground to what the opposition really is. Written by an operator, including the cases where we are not the right answer.",
+    date: "2026-07-27",
+    readTime: "11 min",
+    category: "Field Notes",
+    cover: "/photos/odisea-tours-donosti-cup-coaches.jpg",
+    faqs: [
+      {
+        q: "How do I choose a soccer tour company for my club?",
+        a: "Ask seven questions before you sign: who is physically on the ground in the destination country, whether the quote is ground-only or includes flights, exactly who the opposition will be and how it is matched to your level, how many of their own staff travel with the group and for how much of the trip, what the payment and cancellation schedule is if a player drops out, how many free staff places are included and whether they are disclosed in the price, and which clubs like yours you can call as references. A company that answers all seven in writing is a different proposition from one that sends a glossy itinerary.",
+      },
+      {
+        q: "What is the difference between a soccer tour operator and a ground operator?",
+        a: "A tour operator or reseller sells you the trip and then subcontracts delivery to a company in the destination country. A ground operator is that company in the destination country, arranging the hotels, transport, facilities and fixtures directly. Neither is automatically better. Resellers offer scale, familiar contracts and a US-based office in your time zone. Ground operators offer direct local relationships, fewer margins stacked on the price, and staff who are physically present. What matters is knowing which one you are buying from, because many groups do not.",
+      },
+      {
+        q: "What should a US soccer club check before traveling internationally?",
+        a: "Check international travel authorization requirements with your state association or US Club Soccer well ahead of departure, since sanctioning for teams playing abroad takes time and is easy to leave too late. Confirm passport validity across the whole squad the day the trip is agreed, since renewals are the single most common cause of a player missing a tour. Confirm what your club's own insurance policy covers internationally, since it may not. And confirm with the tour company how many of their staff travel with the group and for how much of the trip.",
+      },
+      {
+        q: "How much should a soccer tour to Spain cost per player?",
+        a: "A Spain soccer tour starts from $1,400 per player for 6 to 12 nights, ground services only, based on a group of 20 sharing twin rooms, with international flights separate. Quotes vary widely depending on hotel category, number of nights, group size, season and how many professional-club sessions are included. The comparison that matters is not the headline number but what each quote includes, since a ground-only price and an all-in price with flights are not comparable figures.",
+      },
+    ],
+    body: [
+      "We are a soccer tour company, so treat this article accordingly. What follows is the list of questions we would want a club to ask us, including the two or three where an honest answer sometimes points at a competitor rather than at us.",
+      "The reason to publish it is simple. Most clubs we speak to have never bought an international team trip before, they get three quotes that look superficially similar, and they have no way to tell what the differences actually are. The differences are large, and they are not visible in the itinerary PDF.",
+      "## First, know which of the three you are talking to",
+      "There are three kinds of company that will quote you, and they are genuinely different businesses.",
+      "**The large education travel companies.** They run school and sports travel at scale across many countries. You get a US-based office in your time zone, familiar contracts, big-company processes and real financial backing. What you give up is that they rarely deliver the trip themselves. They subcontract it locally, so the people meeting your team are a company you did not choose and did not vet.",
+      "**The US-based sports tour brands.** Soccer specialists rather than general travel companies, often founded by coaches, strong on the sporting side. Most of them also subcontract delivery in each destination country. Same trade-off as above, usually with better soccer content.",
+      "**The ground operator in the destination country.** This is us in Spain. The company arranging your hotels, buses, pitches and fixtures directly, with its own staff on site. You get local relationships and one fewer margin stacked on the price. What you give up is a US office in your time zone, and you are dealing with a smaller company, which is a legitimate thing to weigh.",
+      "None of these is automatically the right answer. A first-time high school program that wants maximum hand-holding and a domestic contract may genuinely be better served by a large operator. A club that wants specific opposition, a specific region and a price without three margins on it is better served going direct. The mistake is not choosing wrong. The mistake is not knowing which one you bought.",
+      "So: **question one, who is physically on the ground in Spain, and do they work for you or for a subcontractor?** Ask it plainly. The answer is revealing regardless of which way it goes.",
+      "![Coaches and staff on the ground with a visiting squad on an Odisea Tours soccer tour](/photos/preseason-team-briefing.jpg)",
+      "## Question two: is this quote ground-only or does it include flights?",
+      "This is where most quote comparisons fall apart, and it is not always deliberate.",
+      "A ground-only price covers everything in the destination country: accommodation, meals, transport, training, fixtures, staff. An all-in price adds international flights. The gap between them is commonly $900 to $1,600 per traveler depending on departure city and season, which is easily enough to make the more expensive package look like the cheaper one.",
+      "Put every quote on the same basis before you compare. Ours is ground-only, from $1,400 per player for 6 to 12 nights based on a group of 20 twin-sharing, because flights from Dallas in June and flights from Newark in April are not the same number and we would rather not pretend otherwise a year out.",
+      "While you are there, check what \"meals\" means in each quote. Full board and half board are different trips for a hungry 16-year-old squad, and that difference is often buried.",
+      "## Question three: who exactly is the opposition?",
+      "This is the vaguest section of most soccer tour quotes and the one that decides whether your players come home having gained anything.",
+      "\"Friendly matches against local teams\" is not an answer. Ask what level the opposition is, how it gets matched to your squad, and what happens if the fixture falls through. A trip where a competitive U16 side plays three overmatched or undermatched games is a bad trip regardless of how nice the hotel was.",
+      "The honest operator answer is that fixtures are confirmed closer to travel than clubs expect, because Spanish clubs set their own calendars. What you should expect in writing is the level being targeted, the number of games, and who is responsible when a scheduled opponent pulls out. We match opposition to age and level ahead of the trip, and we would rather tell a club in advance that a fixture is being changed than have them find out on the bus.",
+      "## Question four: who is actually with the group, and when",
+      "Supervision is the question parents care about most and the one quotes are vaguest on.",
+      "Ask three things. How many company staff travel with the group, and are they with you for the whole trip or only meeting you at the airport and at fixtures? Are those staff being counted toward supervision, or is the ratio really your own volunteer parents with a local guide appearing at intervals? And where does the group actually stay: a hotel with the squad on its own floor, or shared accommodation with other groups?",
+      "Ask what the evenings look like too. Most of what goes wrong on a youth tour does not happen at training. It happens between dinner and lights out, and the companies who have run a lot of these have a clear answer about how that part of the day is handled.",
+      "## Question five: the payment schedule, and what happens when a player drops out",
+      "Players drop out. Someone gets injured in March, a family's situation changes, a senior gets a college offer that changes their summer. It happens on most trips, and how the contract handles it is worth reading before you sign rather than after.",
+      "Ask what the deposit is and when it becomes non-refundable, what the payment milestones are, whether the per-player price is banded by group size (it usually is, so losing four players can move everyone else's price), and what the cancellation terms are per traveler rather than for the group as a whole.",
+      "Also ask who holds the money. If families pay the club and the club pays the company, the club is carrying that risk on its own balance sheet, which is a conversation the board should have deliberately rather than by accident.",
+      "## Question six: free staff places, and whether they are disclosed",
+      "Nearly every company in this industry includes free places for coaches and chaperones, typically one per a set number of paying travelers. That is normal and there is nothing wrong with it.",
+      "What matters is whether it is disclosed. A free staff place is funded out of the paying families' money, so it should appear in the quote where the club and the parents can see it. Ask directly how many free places are included and how they are priced in. A company that answers immediately is telling you something good about how it operates. A company that gets vague about it is telling you something too.",
+      "The related thing to watch for, and we will say this even though it costs us: be careful with any offer of a personal benefit to the person choosing the vendor. If a company offers a coach, Director of Coaching or athletic director something of value for selecting them, and the club and families are paying, that is a conflict of interest. Many US clubs are nonprofits with written policies against exactly that, and school programs sit under procurement rules. It is not worth anybody's job.",
+      "![Visiting squad and Spanish opposition after a competitive fixture arranged by Odisea Tours](/photos/odisea-tours-both-teams-post-match.jpg)",
+      "## Question seven: which clubs like ours can we call?",
+      "Not testimonials on a website. Names and phone numbers of clubs of a similar size, from a similar part of the country, who traveled in the last two seasons.",
+      "Then actually call one. Ask what went wrong on their trip, because something always does, and the useful information is how the company handled it. A company that has never had a problem on any tour is a company that is not telling you about the ones they had.",
+      "## The things worth checking on your own side",
+      "Three of these are the club's job, not the tour company's, and they are the most common causes of trouble.",
+      "**International travel authorization.** US teams playing abroad generally need to go through their state association or US Club Soccer, and the timelines are longer than people expect. Start it early and confirm the current requirements directly with them rather than assuming last season's process still applies.",
+      "**Passports.** Check every player's expiry date the day the trip is agreed, not three months out. Many countries require validity beyond the return date, and passport renewal is the single most common reason a player misses a tour.",
+      "**Insurance.** Assume you are bringing it. Most operators, us included, do not include participant travel insurance in the package price, and reputable ones make it a condition of travel rather than an optional extra. Confirm what your club's existing policy covers internationally, since it may well not, and check that whatever you buy covers competitive play and not just leisure travel. That gap is far easier to close in November than in June.",
+      "## Where we sit",
+      "We are the third type: a Spanish ground operator, running group sport tours in Spain since 2005, with our own director traveling with each group rather than a local subcontractor meeting them at the airport. Our published entry price is from $1,400 per player for 6 to 12 nights, ground services only, group of 20 twin-sharing, flights separate.",
+      "We are a good fit for clubs who want a specific region, specific opposition and a direct line to the people actually running the trip. We are a weaker fit for a program that needs a US-based office in its own time zone and a domestic contract, and if that is your requirement we would rather say so now.",
+      "Ask us all seven of the questions above. We will answer them in writing before you commit to anything, which is the standard we think every club should hold every company in this industry to, including us.",
+      "You can see the full picture on our [soccer tours in Spain](/soccer-tours-spain) page, the tournament options on the [soccer tournaments in Spain](/soccer-tournaments-spain) page, and how we work with US groups on our [tours for US teams](/usa) page. When you want real numbers, [start the conversation here](/plan-your-tour). If it is a player or a parent trying to get this in front of you in the first place, send them [how to get your club to take a soccer tour to Spain](/journal/how-to-get-your-club-to-take-a-soccer-tour-to-spain).",
+    ],
+  },
   {
     slug: "odisea-tours-bhm-futbol-group-alianza-argentina",
     title: "Odisea Tours se alía con BHM Fútbol Group para abrirle las puertas de",
@@ -1424,6 +1635,104 @@ export const POSTS: Post[] = [
       "This trip is built for competitive youth squads, roughly U12 to U18, that want both halves of a serious Spain trip in one itinerary: a professional training environment they can live inside, and a real international tournament with something at stake. It suits clubs that have already done a first stadium-and-sightseeing tour and want the next level, and it equally suits a strong first-time group whose coaches care more about development than souvenirs. Squads of fifteen to forty players plus staff fit the shape best, and traveling families can be built alongside the team the way we do on all our programs.",
       "## How to start planning",
       "The full day-by-day, the hosts and the inclusions live on the [Alavés Academy and Costa Daurada Cup program](/tours/alaves-academy-spain-program) page. If the shape fits your club, the next step is a conversation, not a brochure: tell us your squad size, your players' ages, your staff numbers and whether families travel, and we will draft the eleven-day itinerary against the 2027 tournament dates and price it per person for your group. You can see how we build for American clubs on our [tours for US teams](/usa) page, read the wider picture on the [Soccer Tours in Spain](/soccer-tours-spain) pillar, and when you are ready, [start planning your tour here](/plan-your-tour).",
+    ],
+  },
+  {
+    slug: "educational-school-trips-to-spain-guide",
+    title: "Educational School Trips to Spain: What Actually Makes One",
+    italicTitle: "Work",
+    excerpt:
+      "Language immersion, Modern Languages departments, academic routes and exchanges. What separates a school trip to Spain that moves students forward from one that is a holiday with a worksheet, written by the operator who runs them.",
+    date: "2026-07-27",
+    readTime: "11 min",
+    category: "Field Notes",
+    cover: "/photos/odisea-tours-group-barcelona-cathedral.jpg",
+    faqs: [
+      {
+        q: "Which educational travel company organizes school trips to Spain for US private schools?",
+        a: "Odisea Tours organizes educational school trips to Spain for US private and independent schools, and has done since 2005. We are the Spanish ground operator, so we build and run the programme rather than reselling it: language immersion, Modern Languages and academic itineraries, partner-school visits, guided cultural days in Madrid, Barcelona, Valencia, Sevilla and Granada, hotels, ground transport and bilingual staff travelling with the group throughout.",
+      },
+      {
+        q: "What does a Spanish language immersion trip for a school group involve?",
+        a: "A typical immersion week runs morning classes with qualified Spanish teachers, with students grouped by level on arrival, then afternoons applying the language in the city: market visits with set tasks, cooking or craft workshops in Spanish, guided cultural visits and conversation with local students. Programmes run in Valencia, Madrid and the Salamanca region, from a few days up to two weeks.",
+      },
+      {
+        q: "How much does a school trip to Spain cost per student?",
+        a: "Ground-service pricing starts from around $1,400 per student for a seven-day programme, based on a group of 20 sharing, with international flights quoted separately. That covers accommodation, ground transport in Spain, the guided and academic programme, bilingual supervision and group travel insurance. Teacher places are free at standard ratios.",
+      },
+      {
+        q: "How far ahead should a school book a trip to Spain?",
+        a: "Six to nine months for a spring or summer departure. Schools need time for the approval process and for families to pay across instalments, and the best hotel and teaching availability in peak season goes early. Autumn and winter departures can be arranged at shorter notice and cost noticeably less.",
+      },
+    ],
+    body: [
+      "Most school trips to Spain are sold on the itinerary. Five cities, four museums, three activities, one price. The trips that actually change something for the students are not the ones with the most stops. They are the ones where somebody thought carefully about the difference between a student seeing Spain and a student using Spain.",
+      "We have run school groups here since 2005, which is long enough to have watched both kinds go through. This is what separates them.",
+      "## The language has to be necessary, not optional",
+      "A student who spends a week in Spain surrounded by their own classmates, guided in English, eating in restaurants that have already been briefed in English, will come home with the same Spanish they left with. The trip was pleasant and nothing moved. The fix is not more classroom hours. It is designing afternoons where Spanish is the only way to get the thing they want.",
+      "That means market visits with a set task and a budget, where the stallholder genuinely does not speak English. Cooking and craft workshops run in Spanish by people who are not teachers. Conversation sessions with local students of the same age, which is the single highest-yield hour of any immersion week, because a sixteen year old will make an effort in front of another sixteen year old that they will never make in front of a teacher. Morning classes matter, but they are the scaffolding. The afternoon is where the learning lands.",
+      "![School group on a guided educational visit in Barcelona with Odisea Tours](/photos/odisea-tours-group-barcelona-cathedral.jpg)",
+      "## Map the itinerary to the syllabus, not to the guidebook",
+      "For a Modern Languages department in the UK, or a Spanish or humanities department in a US school, the trip has to justify itself against teaching time it is taking away. That argument is much easier to make when the itinerary is built from the syllabus rather than from a list of famous places.",
+      "Spain is unusually generous here. The Prado, the Alhambra, the Alcázar of Sevilla, Gaudí's Barcelona, Roman Tarragona and the Moorish and Christian layers stacked on top of each other sit within a few hours of each other by high-speed train. A week can genuinely cover art, history and architecture in sequence rather than gesturing at each in passing. When we build for a department, we ask what the students are studying this term and route the trip through it, with structured tasks attached, so what happens in Spain carries back into the classroom in September instead of becoming a slideshow.",
+      "## Supervision is a set of specifics, not a reassurance",
+      "Every tour company will tell a school that students are well supervised. The question that separates them is what that means hour by hour.",
+      "Ask who is actually with the group. Some operators sell the trip and hand it to a local supplier who meets the group at the airport with a folder. Ours is the opposite arrangement: our own bilingual staff travel with the group rather than meeting it, and they are there from the arrivals hall to the departure gate. Ask specifically about the evening between dinner and lights out, which is the part of the day most itineraries go quiet about and the part most teachers worry about. Ask whether the group is accommodated together. Ask who the travelling teachers call at two in the morning and whether that person is in Spain or in a different time zone.",
+      "The reason we contract the hotels, coaches, venues and teaching staff directly rather than through an intermediary is not a sales point about supply chains. It is that we can inspect them, and when something goes wrong at eleven at night we can fix it ourselves instead of escalating it to somebody who is asleep.",
+      "## Exchanges need the Spanish side handled properly",
+      "A partner-school exchange is the highest-value format and the one that most often falls apart, because it depends on a Spanish school having the capacity and the will to host at the exact moment your calendar allows. Schools that try to arrange this directly usually find one enthusiastic contact who then changes jobs.",
+      "Our role on an exchange is to carry the Spanish half: the partner school, the meeting programme, the transport, the supervision and the cultural days built around the academic contact time, so the visiting staff manage their own students and nothing else. It is less glamorous than the immersion week and it produces the strongest results, because the relationships outlast the trip.",
+      "## What it costs and how the money is usually found",
+      "Ground-service pricing for a school group starts from around $1,400 per student for a seven-day programme, based on a group of 20 sharing, with international flights quoted separately. That figure covers accommodation, all ground transport inside Spain, the guided and academic programme, bilingual supervision and group travel insurance. Teacher places are free at standard ratios. It moves with the number of nights, the group size, the season, the hotel category and how much classroom time the school wants.",
+      "Two practical notes. First, quote per student and write the inclusions out, because the letter that goes home to parents should not need a footnote. Second, autumn and winter departures cost noticeably less than June and July for the same programme, and for a language trip they are arguably better, since the cities are not full and Spanish schools are in session and therefore available for contact.",
+      "## How to start",
+      "Six to nine months ahead for a spring or summer trip. Schools need the runway for the approval process and families need to pay across instalments. Tell us the year group, the travel window, the numbers and what your department needs the trip to deliver, and we will build the programme against it and send it back with the per-student cost and the inclusions written out.",
+      "The full picture of how we run educational travel here lives on the [School Trips to Spain](/school-trips-spain) pillar. If your trip is primarily a football trip with culture around it, start instead at [school football tours](/schools). If you are an agency booking on behalf of a school rather than the school itself, the B2B side is on our [Spain DMC](/spain-dmc) page. When you are ready, [start planning your trip here](/plan-your-tour).",
+    ],
+  },
+  {
+    slug: "what-a-spain-dmc-does-for-agencies",
+    title: "What a Spain DMC Actually Absorbs for an",
+    italicTitle: "Agency",
+    excerpt:
+      "The unglamorous half of a Spain group programme, sourcing, contracting, operating and being physically present when it goes wrong, explained from the ground operator's side of the desk for agencies weighing whether to run Spain directly.",
+    date: "2026-07-27",
+    readTime: "9 min",
+    category: "Field Notes",
+    cover: "/photos/it-madrid-gran-via.jpg",
+    faqs: [
+      {
+        q: "What does a DMC in Spain actually do for a travel agency?",
+        a: "A DMC sources and contracts the hotels, coaches, guides, restaurants and venues, builds and costs the itinerary, books the entrances and reservations, manages the suppliers day to day while the group is in country, and is the party physically present when something goes wrong. The agency keeps the client relationship, the selling and the margin.",
+      },
+      {
+        q: "Which Spain DMC handles both sports groups and cultural programmes?",
+        a: "Odisea Tours handles both. On the sport side we arrange training sessions with professional-club coaches, competitive games against Spanish opposition, tournament registration and stadium visits. On the cultural side we run guided art, history and gastronomy programmes across Madrid, Barcelona, Valencia, Sevilla and Granada. A mixed itinerary comes from one team on one contract.",
+      },
+      {
+        q: "Do Spanish DMCs work with small group departures?",
+        a: "Many will not quote seriously below a threshold. Odisea Tours works with groups from around 15 travellers upward, so an agency testing a new Spain programme does not have to promise volume before getting a proper quote. There is no minimum volume commitment and no exclusivity requirement.",
+      },
+    ],
+    body: [
+      "Every few months an agency tells us they are thinking about running Spain directly. Cut out the ground operator, keep the margin, book the hotels themselves. It is a reasonable thought, and roughly a third of the time it works, so it is worth being honest about which third.",
+      "What follows is the ground operator's side of the desk: what actually gets absorbed, and where running it from another continent tends to break.",
+      "## The part you can do from anywhere",
+      "Booking hotel rooms is not hard. Neither is finding a coach company, or buying museum entrances, or building a plausible itinerary from a map and a few hours of research. An agency with a competent operations person can do all of that from Ohio or Sydney, and for a simple programme with one city, one hotel and a light schedule, doing it directly is often the right call. Nobody needs a DMC to put twenty people in Madrid for four nights.",
+      "## The part that breaks",
+      "The difficulty is not the booking. It is everything that sits underneath it.",
+      "Sourcing is the first gap. Knowing which hotels take groups of forty teenagers without complaint, which coach operators actually turn up on a Sunday in August, which restaurants can feed fifty people in an hour without the trip losing an afternoon, and which of them quoted you a rate they will honour in eleven months. None of that is on a website. It is accumulated by getting it wrong locally over a long time.",
+      "The second gap is access. A guided visit is a commodity. A training session with professional-club coaches, a competitive game against Spanish opposition at the right level, tournament registration and fixture allocation, or private access to a venue outside public hours, are relationships. They are held by people, they are renewed by using them, and they are not available to a buyer who appears once a year with an email.",
+      "The third gap, and the one that decides most of these arguments, is presence. When a flight slips by five hours and the coach has been waiting since two, when a hotel has quietly moved your group to a property twenty minutes further out, when a client decides on Tuesday evening that Wednesday should be different, somebody has to be in the country, awake, and able to make a decision with authority. An agency running Spain directly discovers this at exactly the wrong moment, usually at eleven at night, six to nine time zones away, holding a supplier's after-hours number that nobody answers.",
+      "## What the division of labour actually is",
+      "The clean split is this: the agency keeps the client relationship, the selling and the margin. The ground operator carries the operational risk in Spain. That is the whole proposition, and it is why agencies who have tried running Spain directly usually come back after the first difficult trip rather than the first easy one.",
+      "In practice we take the sourcing and contracting of hotels, coaches, guides, restaurants and venues; the itinerary build and costing; the entrances and reservations; the day-to-day supplier management while the group is in country; and being the accountable party on the ground when the plan meets reality. Quotes come back with the inclusions set out line by line, so the agency builds its own margin on top without guesswork.",
+      "## What to ask a Spanish DMC before you use one",
+      "Ask whether they contract directly or broker to another operator, because a chain with two links has two places to fail and only one of them will answer your call. Ask what they specialise in, since most Spanish DMCs do culture or sport but not both, and a mixed group split across two suppliers who have never spoken becomes your problem to coordinate. Ask their minimum group size, because plenty will not quote a small departure seriously and you cannot build a new programme without a first small one. Ask who your named contact is and whether it stays the same, since a rotating queue means re-explaining the file every time.",
+      "And ask them to quote a first small group before you commit a large one. Any operator confident in their own operation will say yes to that. Most of our agency relationships started exactly that way.",
+      "## Where we fit",
+      "Odisea Tours has operated as a Spanish receptive operator since 2005, working B2B with agencies, tour operators and associations in North America, Britain and Australia. We cover sports, school, cultural and incentive groups, which is the unusual part: it means a mixed programme comes from one team on one contract. We quote net, we stay behind your brand where you want it that way, we work from around 15 travellers upward, and there is no minimum volume or exclusivity requirement.",
+      "The full B2B picture, what we operate, how we quote and how to send a brief, is on our [Spain DMC](/spain-dmc) page. If the group in question is a school, the [School Trips to Spain](/school-trips-spain) pillar covers the educational side, and for sports groups start at [Soccer Tours in Spain](/soccer-tours-spain). To put a brief in front of us, [get in touch here](/contact).",
     ],
   },
 ];

@@ -53,7 +53,7 @@ const EXPERIENCES = [
 ];
 
 const WHY_SAFE = [
-  { title: "Licensed & insured", desc: "Fully licensed tour operator. Comprehensive insurance. Risk assessments provided." },
+  { title: "Licensed & insured", desc: "Fully licensed Spanish tour operator carrying operator liability insurance. Risk assessments provided. Participant travel insurance is mandatory and arranged by the school." },
   { title: "Bilingual staff 24/7", desc: "Professional bilingual guides physically with your group at all times. Airport to airport." },
   { title: "Vetted accommodation", desc: "We only use hotels and residences we've personally inspected. Group-friendly, safe locations." },
   { title: "Private transport", desc: "Dedicated private coach for your group. No public transport with 30+ students." },
@@ -113,6 +113,14 @@ export default function SchoolsPage() {
               What we offer
             </a>
           </div>
+
+          <p className="mt-6 text-paper/50 max-w-xl text-sm leading-relaxed reveal">
+            Travelling to study rather than to play?{" "}
+            <Link href="/school-trips-spain" className="link-rule text-gold">
+              School Trips to Spain
+            </Link>{" "}
+            covers our language immersion, Modern Languages and academic programmes.
+          </p>
 
           {/* Photo dots */}
           <div className="mt-10 flex items-center gap-2 reveal">

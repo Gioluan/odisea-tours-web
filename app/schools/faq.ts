@@ -28,7 +28,7 @@ export const SCHOOLS_FAQ: SchoolFaq[] = [
   },
   {
     q: "What supervision is provided for a school group?",
-    a: "Odisea Tours staff are with your group 24/7. Our bilingual team handles all logistics, transport and coordination so teachers and coaches can focus on the students. Group travel insurance covering medical and incident response is included.",
+    a: "Odisea Tours staff are with your group 24/7. Our bilingual team handles all logistics, transport and coordination so teachers and coaches can focus on the students. Travel insurance is not included in the package: it is mandatory for every participant and is arranged by the school or the families.",
   },
   {
     q: "What group sizes do you accommodate?",

@@ -141,6 +141,17 @@ export default function ToursIndex() {
               </Link>{" "}
               for the four host clubs, the three cities, pricing and what a real softball tour to Spain looks like for a US team and its families.
             </p>
+            <p>
+              Travelling with a school for the language and the culture rather than the sport? The{" "}
+              <Link href="/school-trips-spain" className="link-rule text-gold">
+                School Trips to Spain pillar
+              </Link>{" "}
+              covers immersion programmes, Modern Languages itineraries, exchanges and how supervision works day to day. And if you are an agency or tour operator rather than an end client, our{" "}
+              <Link href="/spain-dmc" className="link-rule text-gold">
+                Spain DMC page
+              </Link>{" "}
+              sets out the B2B side: full ground handling, net rates and how to send us a brief.
+            </p>
           </div>
         </div>
       </section>

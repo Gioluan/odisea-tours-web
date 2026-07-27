@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/futbol-espana-argentina`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE}/softball-tours-spain`, lastModified: now, changeFrequency: "weekly", priority: 0.96 },
     { url: `${SITE}/soccer-tournaments-spain`, lastModified: now, changeFrequency: "weekly", priority: 0.96 },
+    { url: `${SITE}/school-trips-spain`, lastModified: now, changeFrequency: "weekly", priority: 0.96 },
+    { url: `${SITE}/spain-dmc`, lastModified: now, changeFrequency: "weekly", priority: 0.96 },
     { url: `${SITE}/corporate-retreats`, lastModified: now, changeFrequency: "weekly", priority: 0.92 },
     { url: `${SITE}/tours`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${SITE}/veterans`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },

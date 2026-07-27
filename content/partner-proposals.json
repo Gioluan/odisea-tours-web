@@ -6,7 +6,7 @@
     "partner_org": "Long Beach State University",
     "territory": "Southern California",
     "commission_usd_per_player": 200,
-    "commission_note": "Included in the per-player price. Paid on deposit collection for every confirmed traveller.",
+    "commission_note": "Included in the per-player price. Paid on deposit collection for every confirmed traveler.",
     "contact_name": "Juan Sanchez",
     "contact_email": "juan@odisea-tours.com",
     "contact_phone": "+34 635 745 527",
@@ -25,19 +25,19 @@
         "highlights": [
           "Games against strong local Spanish opposition",
           "Training sessions in Madrid, Valencia and Barcelona",
-          "Deep cultural programme: Madrid, Valencia old town, Barcelona Gothic Quarter",
-          "Built for a college roster: 30 travellers, tight 8-night window",
+          "Deep cultural program: Madrid, Valencia old town, Barcelona Gothic Quarter",
+          "Built for a college roster: 30 travelers, tight 8-night window",
           "Commission of $200/player already baked into price"
         ],
         "itinerary": [
           { "day": "Day 01", "title": "Arrival in Madrid", "detail": "Airport pickup by Raul Sanz. Transfer to Madrid accommodation. Welcome briefing and dinner." },
           { "day": "Day 02", "title": "Madrid training + city", "detail": "Morning training vs local college-level opposition. Afternoon panoramic tour of Madrid, Gran Vía, Plaza Mayor. Optional La Liga match." },
-          { "day": "Day 03", "title": "First fixture in Madrid", "detail": "Match against a Spanish college or semi-pro side. Filmed and tagged per player." },
+          { "day": "Day 03", "title": "First fixture in Madrid", "detail": "Match against a Spanish college or semi-pro side, matched to your squad's level." },
           { "day": "Day 04", "title": "Transfer to Valencia", "detail": "Coastal route. Check-in in Valencia. Evening walk through Valencia old town with guide." },
-          { "day": "Day 05", "title": "Valencia training + fixture", "detail": "Morning session. Afternoon cultural programme at Ciudad de las Artes y las Ciencias. Evening match vs Valencia college side." },
+          { "day": "Day 05", "title": "Valencia training + fixture", "detail": "Morning session. Afternoon cultural program at Ciudad de las Artes y las Ciencias. Evening match vs Valencia college side." },
           { "day": "Day 06", "title": "Transfer to Barcelona", "detail": "Check-in Castelldefels. Afternoon full day in Barcelona. Gothic Quarter, La Rambla, tapas dinner." },
           { "day": "Day 07", "title": "Barcelona fixture", "detail": "Competitive friendly against Spanish college opposition. Post-match recovery + team meal." },
-          { "day": "Day 08", "title": "Culture + final fixture", "detail": "Morning cultural programme in Barcelona. Evening closing fixture. Team awards." },
+          { "day": "Day 08", "title": "Culture + final fixture", "detail": "Morning cultural program in Barcelona. Evening closing fixture. Team awards." },
           { "day": "Day 09", "title": "Departure", "detail": "Breakfast + airport transfers from Barcelona." }
         ],
         "included": [
@@ -62,7 +62,7 @@
         "cities": ["Madrid", "Valencia", "Benicassim", "Barcelona"],
         "nights": 11,
         "group_size": 100,
-        "group_size_note": "Ideal: 100 travellers (3 squads + family members)",
+        "group_size_note": "Ideal: 100 travelers (3 squads + family members)",
         "price_usd_per_person": null,
         "price_note": "Final per-player price matches Hawaii Elite 2026 package and is confirmed once we lock dates and final headcount.",
         "highlights": [
@@ -77,7 +77,7 @@
           "Commission of $200/player already baked into price"
         ],
         "itinerary": [
-          { "day": "Day 01", "title": "Arrival in Madrid", "detail": "Raul Sanz airport welcome. Check in at Spanish FA headquarters. Afternoon free in Madrid city centre. Evening HESA training at Spanish FA + welcome meeting." },
+          { "day": "Day 01", "title": "Arrival in Madrid", "detail": "Raul Sanz airport welcome. Check in at Spanish FA headquarters. Afternoon free in Madrid city center. Evening HESA training at Spanish FA + welcome meeting." },
           { "day": "Day 02", "title": "RFEF training + Madrid", "detail": "Two full sessions at Spanish FA. Lunch on-site. Afternoon Madrid sightseeing. Optional La Liga match in the evening." },
           { "day": "Day 03", "title": "Bernabéu + transfer to Valencia", "detail": "Real Madrid CF Santiago Bernabéu stadium tour. Madrid panoramic tour. Afternoon transfer to Valencia. Check in 4-star hotel." },
           { "day": "Day 04", "title": "Mestalla + first fixture", "detail": "Valencia CF Mestalla stadium tour. Free time Valencia old town. Evening match vs local Spanish opposition." },

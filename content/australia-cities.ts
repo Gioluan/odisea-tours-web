@@ -48,7 +48,7 @@ export const AU_CITIES: AuCity[] = [
       "Clubs across the north shore, eastern suburbs, inner west, Sutherland shire, western Sydney, the Hills district and the Central Coast",
     ideal_audiences: [
       "NPL and NPL2 junior clubs",
-      "School AFC, CAS, GPS and CIS First XI programmes",
+      "School AFC, CAS, GPS and CIS First XI programs",
       "Junior representative and academy development squads",
     ],
     hero_photo: "/photos/spain-soccer-tour-sydney-clubs-fc-barcelona-training-spain.jpg",
@@ -70,7 +70,7 @@ export const AU_CITIES: AuCity[] = [
       "Singapore Airlines (MEL via SIN with codeshare to Madrid)",
     ],
     intro:
-      "Melbourne carries the deepest senior soccer culture in Australia and a junior pipeline to match. Odisea Tours builds Spain tours for Victorian NPL clubs, school sport programmes and academy squads, with sessions inside FC Barcelona's Joan Gamper, Valencia CF's Paterna ground and the Spanish FA at Las Rozas.",
+      "Melbourne carries the deepest senior soccer culture in Australia and a junior pipeline to match. Odisea Tours builds Spain tours for Victorian NPL clubs, school sport programs and academy squads, with sessions inside FC Barcelona's Joan Gamper, Valencia CF's Paterna ground and the Spanish FA at Las Rozas.",
     local_soccer_context:
       "Victorian soccer is split across NPL Victoria, the State League system and the school sport network through ACC, AGSV and APS competitions. Melbourne winters in July and August are exactly when Spain hits a quieter training window, which gives Odisea access to better facilities and coaches than the high A-League months. Most Melbourne tours we run align with the July school holidays.",
     time_zone_note:
@@ -84,7 +84,7 @@ export const AU_CITIES: AuCity[] = [
       "Clubs across the inner suburbs, the bayside, the eastern corridor, Geelong, the south east and the northern suburbs",
     ideal_audiences: [
       "NPL Victoria and State League junior clubs",
-      "ACC, AGSV and APS school sport programmes",
+      "ACC, AGSV and APS school sport programs",
       "Junior representative and academy squads",
     ],
     hero_photo: "/photos/spain-soccer-tour-melbourne-clubs-spanish-fa-training-spain.jpg",
@@ -120,7 +120,7 @@ export const AU_CITIES: AuCity[] = [
       "Clubs across Brisbane, the Gold Coast, the Sunshine Coast, Ipswich and Logan",
     ideal_audiences: [
       "NPL Queensland and FQPL junior clubs",
-      "AIC, GPS and TAS school sport programmes",
+      "AIC, GPS and TAS school sport programs",
       "Junior representative and academy sides",
     ],
     hero_photo: "/photos/spain-soccer-tour-brisbane-clubs-spanish-fa-training-session-spain.jpg",

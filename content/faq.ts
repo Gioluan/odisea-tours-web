@@ -14,7 +14,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         q: "How much does a Spain soccer tour cost?",
-        a: "Our published soccer tour package starts at $1,400 per player for a 6 to 12 night European Soccer Tour. Cultural tours sit between €1,995 and €2,595 per traveller. Our softball tour starts from $1,700 per player for a six-night trip. Final pricing depends on group size, season, hotel level and the specific cities on the itinerary. Larger groups bring the per-player number down. International flights are not included in any of our packages.",
+        a: "Our published soccer tour package starts at $1,400 per player for a 6 to 12 night European Soccer Tour. Cultural tours sit between €1,995 and €2,595 per traveler. Our softball tour starts from $1,700 per player for a six-night trip. Final pricing depends on group size, season, hotel level and the specific cities on the itinerary. Larger groups bring the per-player number down. International flights are not included in any of our packages.",
       },
       {
         q: "What is included in the price?",
@@ -22,11 +22,11 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: "Are international flights included?",
-        a: "No. We exclude international flights so each family or club can use their preferred airline, frequent flyer programme or group flight desk. We do help groups time the tour around direct routes from major US metros (Iberia from LAX and MIA, American from DFW, multiple carriers from JFK).",
+        a: "No. We exclude international flights so each family or club can use their preferred airline, frequent flyer program or group flight desk. We do help groups time the tour around direct routes from major US metros (Iberia from LAX and MIA, American from DFW, multiple carriers from JFK).",
       },
       {
         q: "What is the deposit and payment schedule?",
-        a: "Standard schedule: a deposit of $500 per player at booking, balance due 60 days before departure. Once the deposit is paid, the per-player price is locked in. We work with families on instalments where the club requests it.",
+        a: "Standard schedule: a deposit of $500 per player at booking, balance due 60 days before departure. Once the deposit is paid, the per-player price is locked in. We work with families on installments where the club requests it.",
       },
     ],
   },
@@ -35,15 +35,15 @@ export const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         q: "What is the minimum and maximum group size?",
-        a: "Minimum 18 travellers, no hard maximum. We have run tours from a single 22-player squad up to 100-traveller programmes (3 squads plus families). Larger groups get better per-player pricing because our coach, hotel and training-facility costs spread over more travellers.",
+        a: "Minimum 18 travelers, no hard maximum. We have run tours from a single 22-player squad up to 100-traveler programs (3 squads plus families). Larger groups get better per-player pricing because our coach, hotel and training-facility costs spread over more travelers.",
       },
       {
         q: "Can families travel on the same itinerary as the players?",
-        a: "Yes, and most clubs prefer it that way. The standard format runs the players through training and fixtures while a parallel cultural programme is available for families: stadium tours, Gaudí architecture in Barcelona, Valencia old town, Madrid panoramic tour, beach days. Everyone shares the same hotels, meals and coach.",
+        a: "Yes, and most clubs prefer it that way. The standard format runs the players through training and fixtures while a parallel cultural program is available for families: stadium tours, Gaudí architecture in Barcelona, Valencia old town, Madrid panoramic tour, beach days. Everyone shares the same hotels, meals and coach.",
       },
       {
         q: "What ages can travel?",
-        a: "We host every age group from U10 through college and adult amateur. Most of our youth soccer programmes run U12 through U19. We also run veterans' tours for adult amateur teams and corporate groups, and softball tours for high school and youth softball clubs.",
+        a: "We host every age group from U10 through college and adult amateur. Most of our youth soccer programs run U12 through U19. We also run veterans' tours for adult amateur teams and corporate groups, and softball tours for high school and youth softball clubs.",
       },
       {
         q: "Do you cater to dietary restrictions, allergies and special needs?",
@@ -59,12 +59,12 @@ export const FAQ_GROUPS: FaqGroup[] = [
         a: "Yes. Training sessions are held at FC Barcelona's Joan Gamper facilities (the same complex used by the FCB academy), at Valencia CF's Paterna training ground, and at the Spanish Football Federation's headquarters in Las Rozas, Madrid. Sessions are run by FC Barcelona and Valencia CF coaching staff. The Spanish FA stay includes accommodation on-site, where the senior Spanish national team also trains.",
       },
       {
-        q: "Who organises the matches, and who is the opposition?",
-        a: "We do, through twenty years of relationships with Spanish academy clubs and federations. Opposition is age-matched and competitive: typically Spanish academy sides, college-level clubs, or regional select teams depending on the level of the visiting group. Every match is filmed and tagged per player so coaches can review back home.",
+        q: "Who organizes the matches, and who is the opposition?",
+        a: "We do, through twenty years of relationships with Spanish academy clubs and federations. Opposition is age-matched and competitive: typically Spanish academy sides, college-level clubs, or regional select teams depending on the level of the visiting group.",
       },
       {
         q: "Can we customize the itinerary or are these fixed packages?",
-        a: "Every tour is customised. The published packages are starting points, not boxes. We adjust cities, training partners, hotel level, dates, length and the cultural programme around the group. The discipline that runs through every tour is the same; the route never is.",
+        a: "Every tour is customized. The published packages are starting points, not boxes. We adjust cities, training partners, hotel level, dates, length and the cultural program around the group. The discipline that runs through every tour is the same; the route never is.",
       },
     ],
   },
@@ -77,7 +77,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: "What is the cancellation policy?",
-        a: "Deposits are non-refundable but transferrable to other travellers in the same group. Balance is fully refundable up to 90 days before departure, 50% refundable between 60 and 89 days, and non-refundable inside 60 days. We strongly recommend each family also carry independent trip-cancellation insurance.",
+        a: "Deposits are non-refundable but transferrable to other travelers in the same group. Balance is fully refundable up to 90 days before departure, 50% refundable between 60 and 89 days, and non-refundable inside 60 days. We strongly recommend each family also carry independent trip-cancellation insurance.",
       },
       {
         q: "How safe are Odisea tours, and is travel insurance included?",

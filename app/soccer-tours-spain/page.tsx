@@ -49,7 +49,7 @@ const FAQ_SLUGS_FOR_PILLAR = [
   "How much does a Spain soccer tour cost?",
   "What is included in the price?",
   "Do players actually train inside FC Barcelona, Valencia CF and the Spanish FA?",
-  "Who organises the matches, and who is the opposition?",
+  "Who organizes the matches, and who is the opposition?",
   "What is the minimum and maximum group size?",
   "What ages can travel?",
   "Can families travel on the same itinerary as the players?",
@@ -203,7 +203,7 @@ export default function SoccerToursSpainPillarPage() {
             Four kinds of Spain soccer tours <span className="font-display-italic text-gold">we run</span>.
           </h2>
           <p className="mt-6 max-w-[60ch] text-paper/75 leading-relaxed">
-            Every tour gets customised around the group, but most soccer tours in Spain fall into one of these four formats. Pick the closest fit and we shape the rest in the planning call.
+            Every tour gets customized around the group, but most soccer tours in Spain fall into one of these four formats. Pick the closest fit and we shape the rest in the planning call.
           </p>
 
           <div className="mt-12 grid md:grid-cols-2 gap-5">
@@ -266,7 +266,7 @@ export default function SoccerToursSpainPillarPage() {
                 <span className="font-display-italic text-gold">Paterna</span>
               </h3>
               <p className="mt-4 text-ink-soft leading-relaxed text-[0.97rem]">
-                Valencia CF's Paterna training ground is twenty minutes outside the city. Sessions are run by VCF coaches and built around a more intense, defensive-organisation pedagogy than Barcelona. The Mestalla stadium tour usually pairs with the training day.
+                Valencia CF's Paterna training ground is twenty minutes outside the city. Sessions are run by VCF coaches and built around a more intense, defensive-organization pedagogy than Barcelona. The Mestalla stadium tour usually pairs with the training day.
               </p>
             </article>
             <article className="border border-ink/15 p-7">
@@ -330,7 +330,7 @@ export default function SoccerToursSpainPillarPage() {
                 <span className="font-display-italic text-gold">Barcelona</span>
               </h3>
               <p className="mt-4 text-paper/80 group-hover:text-ink-soft leading-relaxed text-[0.97rem]">
-                Camp Nou, Joan Gamper, the Cruyff legacy, Gaudí. The emotional centre of any Spain soccer tour.
+                Camp Nou, Joan Gamper, the Cruyff legacy, Gaudí. The emotional center of any Spain soccer tour.
               </p>
               <span className="inline-block mt-5 font-mono-editorial text-[0.58rem] tracking-[0.26em] uppercase text-gold group-hover:text-gold-deep">
                 Soccer tours in Barcelona →
@@ -449,7 +449,7 @@ export default function SoccerToursSpainPillarPage() {
                 <span className="ml-2 text-base text-paper/60 font-mono-editorial tracking-wider uppercase">nights · adult</span>
               </div>
               <p className="mt-4 text-paper/75 leading-relaxed text-[0.97rem]">
-                Adult amateur and veterans groups, 12 to 60 travellers. Stadium tours at Camp Nou and Bernabéu, La Liga match tickets by category, a tactical session with a UEFA coach, four-star lodging within walking distance of each stadium.
+                Adult amateur and veterans groups, 12 to 60 travelers. Stadium tours at Camp Nou and Bernabéu, La Liga match tickets by category, a tactical session with a UEFA coach, four-star lodging within walking distance of each stadium.
               </p>
             </div>
             <div className="border border-paper/15 p-7">

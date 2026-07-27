@@ -60,7 +60,7 @@ const WHAT_YOU_GET = [
   },
   {
     title: "Beach lifestyle",
-    desc: "Malvarrosa and Patacona beaches are 15 minutes from the city centre. Recovery sessions on the sand, morning swims, and seafood lunches by the water.",
+    desc: "Malvarrosa and Patacona beaches are 15 minutes from the city center. Recovery sessions on the sand, morning swims, and seafood lunches by the water.",
   },
   {
     title: "Paella, the real thing",
@@ -102,11 +102,11 @@ const BEYOND_THE_PITCH = [
   },
   {
     title: "Turia Gardens",
-    desc: "A 9-kilometre park running through the city centre in a drained riverbed. Perfect for a group jog, a bike ride, or a slow walk between activities.",
+    desc: "A 9-kilometer park running through the city center in a drained riverbed. Perfect for a group jog, a bike ride, or a slow walk between activities.",
   },
   {
     title: "Malvarrosa Beach",
-    desc: "A wide, sandy beach 15 minutes from the city centre. Ideal for a morning swim, beach volleyball, or an afternoon paella at one of the beachfront restaurants.",
+    desc: "A wide, sandy beach 15 minutes from the city center. Ideal for a morning swim, beach volleyball, or an afternoon paella at one of the beachfront restaurants.",
   },
   {
     title: "Central Market (Mercado Central)",
@@ -114,14 +114,14 @@ const BEYOND_THE_PITCH = [
   },
   {
     title: "El Carmen (Old Town)",
-    desc: "Narrow streets, street art, independent shops, and some of the best tapas bars in Valencia. The historic centre comes alive in the evenings.",
+    desc: "Narrow streets, street art, independent shops, and some of the best tapas bars in Valencia. The historic center comes alive in the evenings.",
   },
 ];
 
 const STATS = [
   { value: "1923", label: "Mestalla opened" },
   { value: "49K", label: "Mestalla capacity" },
-  { value: "15min", label: "City centre to beach" },
+  { value: "15min", label: "City center to beach" },
   { value: "Top 3", label: "Coaching sessions in Spain" },
 ];
 
@@ -270,7 +270,7 @@ export default function ValenciaPage() {
                 architecture, one of Europe's best beaches, the birthplace of paella,
                 and a compact old town that is easy to explore on foot. It is a
                 smaller, warmer, more relaxed alternative to Barcelona and Madrid,
-                and groups consistently rate it as their favourite stop.
+                and groups consistently rate it as their favorite stop.
               </p>
             </div>
 
@@ -328,7 +328,7 @@ export default function ValenciaPage() {
             </p>
             <p className="text-ink-muted text-base leading-relaxed">
               Groups wanting a beach-focused stay can base themselves near Malvarrosa,
-              with easy tram access to the city centre and Mestalla. We work with 3
+              with easy tram access to the city center and Mestalla. We work with 3
               and 4-star hotels experienced in group bookings, with flexible dining
               and secure luggage storage for match-day equipment.
             </p>

@@ -3,7 +3,7 @@ import { POSTS } from "@/content/journal";
 const SITE = "https://odisea-tours.com";
 const TITLE = "Odisea Tours — The Journal";
 const DESCRIPTION =
-  "Field notes and dispatches from twenty years of organising youth soccer tours, school trips and group travel in Spain.";
+  "Field notes and dispatches from twenty years of organizing youth soccer tours, school trips and group travel in Spain.";
 
 function escapeXml(input: string): string {
   return input

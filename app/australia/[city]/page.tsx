@@ -279,8 +279,8 @@ export default async function AuCityPage({ params }: Props) {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { href: "/tours/european-soccer-tours", title: "European Soccer Tours", body: "Seven to twelve night soccer tours. FC Barcelona and Valencia CF training, fixtures against Spanish academy or amateur sides." },
-              { href: "/youth", title: "Youth soccer programme", body: "Built for U11 to U18 clubs. Families travel on the same itinerary." },
-              { href: "/schools", title: "School and First XI tours", body: "Term-time and school holiday programmes for AFC, GPS, CAS, AGSV and APS sides." },
+              { href: "/youth", title: "Youth soccer program", body: "Built for U11 to U18 clubs. Families travel on the same itinerary." },
+              { href: "/schools", title: "School and First XI tours", body: "Term-time and school holiday programs for AFC, GPS, CAS, AGSV and APS sides." },
             ].map((t) => (
               <Link key={t.href} href={t.href} className="group border border-ink/15 p-8 hover:bg-ink hover:text-paper transition-colors">
                 <div className="font-mono-editorial text-[0.6rem] tracking-[0.26em] uppercase text-ink/55 group-hover:text-paper/70 mb-3">Tour format</div>

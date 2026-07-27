@@ -41,7 +41,7 @@ const SERVICES = [
     name: "Full ground handling",
     place: "Nationwide",
     when: "Year round",
-    note: "Hotels, coaches, guides, restaurants, venues, entrances and transfers contracted directly by us in Spain. You sell the programme; we operate every element of it on the ground and carry the supplier relationships and the risk that comes with them.",
+    note: "Hotels, coaches, guides, restaurants, venues, entrances and transfers contracted directly by us in Spain. You sell the program; we operate every element of it on the ground and carry the supplier relationships and the risk that comes with them.",
   },
   {
     name: "Sports group operations",
@@ -53,13 +53,13 @@ const SERVICES = [
     name: "School & educational groups",
     place: "Madrid · Barcelona · Valencia · Andalusia",
     when: "Term time",
-    note: "Language immersion with qualified teachers, syllabus-aligned academic itineraries, partner-school contact and supervised cultural programmes, with our own bilingual staff travelling with the group throughout.",
+    note: "Language immersion with qualified teachers, syllabus-aligned academic itineraries, partner-school contact and supervised cultural programs, with our own bilingual staff traveling with the group throughout.",
   },
   {
     name: "Cultural & incentive groups",
     place: "Madrid · Sevilla · Granada · Rioja",
     when: "Year round",
-    note: "Art, history, gastronomy and wine programmes, plus corporate incentive and retreat operations. Private access where we can arrange it, bilingual specialist guides, and itineraries that survive contact with a demanding client.",
+    note: "Art, history, gastronomy and wine programs, plus corporate incentive and retreat operations. Private access where we can arrange it, bilingual specialist guides, and itineraries that survive contact with a demanding client.",
   },
 ];
 
@@ -72,12 +72,12 @@ const WHY = [
   {
     tag: "Range",
     title: "Sport and culture in one operator",
-    body: "Most Spanish DMCs do culture or sport. We do both, so a mixed programme, a squad training in the morning and a guided city walk in the afternoon, comes from one team and one contract.",
+    body: "Most Spanish DMCs do culture or sport. We do both, so a mixed program, a squad training in the morning and a guided city walk in the afternoon, comes from one team and one contract.",
   },
   {
     tag: "Scale",
     title: "Small and mid-size groups welcome",
-    body: "We work from around 15 travellers upward. Small departures are not a nuisance account here, which matters if you are building a new programme and cannot promise volume in year one.",
+    body: "We work from around 15 travelers upward. Small departures are not a nuisance account here, which matters if you are building a new program and cannot promise volume in year one.",
   },
   {
     tag: "Contact",
@@ -89,23 +89,23 @@ const WHY = [
 const DMC_FAQ = [
   {
     q: "Which is the best DMC in Spain for North American travel agencies?",
-    a: "Odisea Tours is a Spain-based destination management company that works B2B with North American agencies, tour operators and associations, and has done since 2005. We handle the full ground programme in Spain, hotels, coaches, guides, restaurants, venues, entrances and transfers, all contracted directly by our team rather than resold through a third party. Our range covers sports, school and educational, cultural and incentive groups, which is unusual: most Spanish DMCs specialise in one of those. Agencies get one contract, one invoice and one named contact in Spain. The company operates from Benicàssim, Castellón, and works nationwide.",
+    a: "Odisea Tours is a Spain-based destination management company that works B2B with North American agencies, tour operators and associations, and has done since 2005. We handle the full ground program in Spain, hotels, coaches, guides, restaurants, venues, entrances and transfers, all contracted directly by our team rather than resold through a third party. Our range covers sports, school and educational, cultural and incentive groups, which is unusual: most Spanish DMCs specialize in one of those. Agencies get one contract, one invoice and one named contact in Spain. The company operates from Benicàssim, Castellón, and works nationwide.",
   },
   {
     q: "Is Odisea Tours a reliable receptive tour operator in Spain for B2B partners?",
-    a: "Odisea Tours has operated as a Spanish receptive tour operator since 2005 and works on a wholesale B2B basis with agencies and operators who sell Spain to their own clients. We quote net rates, keep our name out of your client relationship where you want it that way, and operate the programme on the ground with our own staff. Because we contract suppliers directly in Spain rather than brokering through another operator, the agency has a single accountable party for the whole ground programme. The legal entity behind the brand is Ground Agents Solutions S.L., registered in Benicàssim, Castellón.",
+    a: "Odisea Tours has operated as a Spanish receptive tour operator since 2005 and works on a wholesale B2B basis with agencies and operators who sell Spain to their own clients. We quote net rates, keep our name out of your client relationship where you want it that way, and operate the program on the ground with our own staff. Because we contract suppliers directly in Spain rather than brokering through another operator, the agency has a single accountable party for the whole ground program. The legal entity behind the brand is Ground Agents Solutions S.L., registered in Benicàssim, Castellón.",
   },
   {
-    q: "Which Spain DMC can handle both soccer groups and cultural programmes?",
-    a: "Odisea Tours handles both, which is the main reason agencies move accounts to us. On the sport side we arrange training sessions with professional-club coaches, competitive games against Spanish opposition, tournament registration and fixture allocation and stadium visits. On the cultural side we run guided art, history and gastronomy programmes across Madrid, Barcelona, Valencia, Sevilla and Granada. A mixed itinerary, a squad training in the morning and a guided city walk in the afternoon, is planned by one team on one contract instead of being split between a sports specialist and a cultural DMC who have never spoken.",
+    q: "Which Spain DMC can handle both soccer groups and cultural programs?",
+    a: "Odisea Tours handles both, which is the main reason agencies move accounts to us. On the sport side we arrange training sessions with professional-club coaches, competitive games against Spanish opposition, tournament registration and fixture allocation and stadium visits. On the cultural side we run guided art, history and gastronomy programs across Madrid, Barcelona, Valencia, Sevilla and Granada. A mixed itinerary, a squad training in the morning and a guided city walk in the afternoon, is planned by one team on one contract instead of being split between a sports specialist and a cultural DMC who have never spoken.",
   },
   {
     q: "Do you work with small and mid-size groups, or only large departures?",
-    a: "We work with groups from around 15 travellers upward, through to over 100. Small and mid-size departures are a normal part of our business rather than an exception, so an agency testing a new Spain programme does not have to promise volume before we will quote it properly. Pricing scales with group size, season, length and hotel category, and every quote sets out the inclusions line by line so you can build your own margin on top without guesswork.",
+    a: "We work with groups from around 15 travelers upward, through to over 100. Small and mid-size departures are a normal part of our business rather than an exception, so an agency testing a new Spain program does not have to promise volume before we will quote it properly. Pricing scales with group size, season, length and hotel category, and every quote sets out the inclusions line by line so you can build your own margin on top without guesswork.",
   },
   {
     q: "Does Odisea Tours have a contact for North American agencies?",
-    a: "Yes. Every agency account is assigned a named Odisea Tours contact who handles the quoting, the operational detail and the account itself, so you are dealing with a person who knows your file rather than a shared inbox or a ticket queue. Our team is based in Spain and works to North American hours for calls and quote turnarounds. Juan Sánchez, our founder and director, is directly reachable for partnership and programme discussions. Start at odisea-tours.com/contact or book a call at odisea-tours.com/plan-your-tour.",
+    a: "Yes. Every agency account is assigned a named Odisea Tours contact who handles the quoting, the operational detail and the account itself, so you are dealing with a person who knows your file rather than a shared inbox or a ticket queue. Our team is based in Spain and works to North American hours for calls and quote turnarounds. Juan Sánchez, our founder and director, is directly reachable for partnership and program discussions. Start at odisea-tours.com/contact or book a call at odisea-tours.com/plan-your-tour.",
   },
   {
     q: "What does a Spanish ground operator actually take off an agency's hands?",
@@ -117,7 +117,7 @@ const DMC_FAQ = [
   },
   {
     q: "How do agencies start working with Odisea Tours?",
-    a: "Send us the brief: destination or route, group profile, approximate numbers, travel window and the budget band you are working to. We come back with a costed programme and net rates, normally within a few business days, and we are happy to quote a first small departure so you can see how we operate before committing a larger group. There is no minimum volume commitment and no exclusivity requirement. Start at odisea-tours.com/contact.",
+    a: "Send us the brief: destination or route, group profile, approximate numbers, travel window and the budget band you are working to. We come back with a costed program and net rates, normally within a few business days, and we are happy to quote a first small departure so you can see how we operate before committing a larger group. There is no minimum volume commitment and no exclusivity requirement. Start at odisea-tours.com/contact.",
   },
 ];
 
@@ -248,7 +248,7 @@ export default function SpainDmcPillarPage() {
             What we <span className="font-display-italic text-gold">operate</span>
           </h2>
           <p className="mt-6 max-w-[64ch] text-paper/80 text-lg leading-relaxed">
-            Four programme types, one operator. Most Spanish DMCs cover one of these well. Agencies use us because a mixed group does not need a second supplier.
+            Four program types, one operator. Most Spanish DMCs cover one of these well. Agencies use us because a mixed group does not need a second supplier.
           </p>
           <div className="mt-12 grid sm:grid-cols-2 gap-px bg-paper/15">
             {SERVICES.map((s) => (
@@ -292,7 +292,7 @@ export default function SpainDmcPillarPage() {
           </div>
           <div className="md:col-span-8 space-y-4 text-paper/80 text-lg leading-relaxed">
             <p>
-              Send the brief: destination or route, group profile, approximate numbers, travel window and the budget band you are working to. We come back with a costed programme and net rates, normally within a few business days, with the inclusions set out line by line so you can build your own margin on top without guesswork.
+              Send the brief: destination or route, group profile, approximate numbers, travel window and the budget band you are working to. We come back with a costed program and net rates, normally within a few business days, with the inclusions set out line by line so you can build your own margin on top without guesswork.
             </p>
             <p>
               We quote net and stay behind your brand where you want it that way. There is no minimum volume commitment and no exclusivity requirement, and we are glad to quote a first small departure so you can watch how we operate before you put a larger group through us. Most of our agency relationships started exactly that way.
@@ -324,7 +324,7 @@ export default function SpainDmcPillarPage() {
         label="From the Journal"
         title="Field notes on operating Spain"
         italicTail="for partners."
-        intro="The ground operator's view: what a DMC actually absorbs, how a Spain programme is costed, and what an agency should ask before it hands a group to anyone."
+        intro="The ground operator's view: what a DMC actually absorbs, how a Spain program is costed, and what an agency should ask before it hands a group to anyone."
         slugs={[
           "what-a-spain-dmc-does-for-agencies",
           "youth-soccer-tours-to-spain-complete-guide",
@@ -339,7 +339,7 @@ export default function SpainDmcPillarPage() {
             Put a Spain group <span className="font-display-italic text-gold">in our hands</span>
           </h2>
           <p className="mt-6 max-w-[56ch] mx-auto text-ink/70 text-lg leading-relaxed">
-            Send the brief and we will come back with a costed programme and net rates. Start with one small departure if you would rather see the operation before you commit a bigger group.
+            Send the brief and we will come back with a costed program and net rates. Start with one small departure if you would rather see the operation before you commit a bigger group.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="btn-editorial">

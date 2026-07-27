@@ -231,7 +231,7 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
             01 / The partnership
           </div>
           <h2 className="font-display text-[clamp(1.9rem,3.6vw,3.4rem)] uppercase leading-[1.02] max-w-[26ch]">
-            A partnership built on <em className="font-display-italic text-gold-deep">trust, credibility</em> and a fair share of every traveller you bring.
+            A partnership built on <em className="font-display-italic text-gold-deep">trust, credibility</em> and a fair share of every traveler you bring.
           </h2>
           <p className="mt-8 max-w-[68ch] text-[clamp(1.05rem,1.3vw,1.2rem)] leading-relaxed text-ink-soft">
             {proposal.partner_name} refers clubs, coaches and families in {proposal.territory} to Odisea Tours. Odisea operates the tour end-to-end: long-standing training relationships at the Spanish FA, Valencia CF and FC Barcelona, hotels, transport, games against local Spanish opposition, and on-the-ground support.
@@ -247,7 +247,7 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
               {
                 k: "Paid on deposit",
                 v: "Same week",
-                body: "We pay your commission in the same week every confirmed traveller pays their deposit. Not when they travel. Not net-60.",
+                body: "We pay your commission in the same week every confirmed traveler pays their deposit. Not when they travel. Not net-60.",
               },
               {
                 k: "Attribution",
@@ -313,7 +313,7 @@ export default function PartnerProposalView({ proposal }: { proposal: PartnerPro
             03 / Two tours ready to quote
           </div>
           <h2 className="font-display text-[clamp(1.9rem,3.6vw,3.4rem)] uppercase leading-[1.02] max-w-[24ch]">
-            Two clubs, two builds, <em className="font-display-italic text-gold-deep">same commission</em> on every traveller.
+            Two clubs, two builds, <em className="font-display-italic text-gold-deep">same commission</em> on every traveler.
           </h2>
           <p className="mt-6 max-w-[62ch] text-ink-soft leading-relaxed">
             Both tours are live and buildable for 2026. Option 1 is a college-focused eight-night build for a 30-player university roster. Option 2 is the full 12-day family + squads package we ran for Hawaii Elite, identical format.

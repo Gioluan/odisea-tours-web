@@ -69,7 +69,7 @@ function faqSchema(c: UsCity) {
         name: `What does a Spain soccer tour from ${c.name} include?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Training at Spanish FA headquarters, Valencia CF and FC Barcelona facilities, fixtures against Spanish academy opposition, 4-star accommodation, coach transport, bilingual Odisea guides, stadium tours and cultural programme for families. International flights excluded.",
+          text: "Training at Spanish FA headquarters, Valencia CF and FC Barcelona facilities, fixtures against Spanish academy opposition, 4-star accommodation, coach transport, bilingual Odisea guides, stadium tours and cultural program for families. International flights excluded.",
         },
       },
       {
@@ -263,8 +263,8 @@ export default async function UsCityPage({ params }: Props) {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { href: "/tours/european-soccer-tours", title: "European Soccer Tours", body: "7 to 12 night soccer tours. FC Barcelona and Valencia CF training, games against Spanish academy opposition." },
-              { href: "/youth", title: "Youth soccer programme", body: "Built for U12 to U19 clubs. Families welcome on the same itinerary." },
-              { href: "/schools", title: "School & high school tours", body: "Term-time and summer programmes for high school varsity and private school teams." },
+              { href: "/youth", title: "Youth soccer program", body: "Built for U12 to U19 clubs. Families welcome on the same itinerary." },
+              { href: "/schools", title: "School & high school tours", body: "Term-time and summer programs for high school varsity and private school teams." },
             ].map((t) => (
               <Link key={t.href} href={t.href} className="group border border-ink/15 p-8 hover:bg-ink hover:text-paper transition-colors">
                 <div className="font-mono-editorial text-[0.6rem] tracking-[0.26em] uppercase text-ink/55 group-hover:text-paper/70 mb-3">Tour format</div>

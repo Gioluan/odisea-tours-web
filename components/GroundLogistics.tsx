@@ -17,7 +17,7 @@ const ITEMS = [
   "Stadium tours, matchday access, behind-the-scenes credentials",
   "Breakfast and dinner daily, plus vetted lunch stops on the road",
   "Bilingual on-the-ground staff every day of the tour",
-  "Cultural programme running parallel for travelling family members",
+  "Cultural program running parallel for traveling family members",
   "24/7 emergency phone line, with people who actually pick up",
   "Operator licensing and insurance transparency on request",
 ];
@@ -38,7 +38,7 @@ export default function GroundLogistics({
     <section className={`${bg} py-20 md:py-24 px-6 md:px-10`}>
       <div className="max-w-[1200px] mx-auto">
         <div className={`rule-label font-mono-editorial text-[0.62rem] tracking-[0.28em] uppercase ${labelColor} mb-6`}>
-          What Odisea organises in Spain
+          What Odisea organizes in Spain
         </div>
         <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.8rem)] uppercase leading-[1.05] max-w-[26ch]">
           Flights are not in the tour. <span className="font-display-italic text-gold-deep">Every ground logistic is.</span>
@@ -46,7 +46,7 @@ export default function GroundLogistics({
 
         <div className={`mt-6 max-w-[68ch] border-l-2 ${accentBlock} pl-5 py-4`}>
           <p className={`${bodyColor} leading-relaxed text-[1.02rem]`}>
-            International flights are not in our package. You or your travel agent book them, which keeps our pricing transparent and lets {audience} use loyalty programmes and group fare brokers we would not have access to. The moment your squad lands in Spain, every detail is ours, end to end.
+            International flights are not in our package. You or your travel agent book them, which keeps our pricing transparent and lets {audience} use loyalty programs and group fare brokers we would not have access to. The moment your squad lands in Spain, every detail is ours, end to end.
           </p>
         </div>
 

@@ -56,7 +56,7 @@ const WHAT_YOU_GET = [
   },
   {
     title: "Spanish FA headquarters",
-    desc: "Visit the RFEF (Real Federacion Espanola de Futbol) at Ciudad del Futbol in Las Rozas. The nerve centre of Spanish football.",
+    desc: "Visit the RFEF (Real Federacion Espanola de Futbol) at Ciudad del Futbol in Las Rozas. The nerve center of Spanish football.",
   },
   {
     title: "Matches against Madrid clubs",
@@ -102,7 +102,7 @@ const BEYOND_THE_PITCH = [
   },
   {
     title: "Retiro Park",
-    desc: "A 350-acre green lung in the city centre. Ideal for a morning jog, a rowing boat on the lake, or a group picnic between matches.",
+    desc: "A 350-acre green lung in the city center. Ideal for a morning jog, a rowing boat on the lake, or a group picnic between matches.",
   },
   {
     title: "Gran Via and Plaza Mayor",
@@ -220,7 +220,7 @@ export default function MadridPage() {
                 <span className="font-display-italic text-gold">La Liga experience</span>
               </h2>
               <p className="text-ink-muted text-base leading-relaxed mb-8 reveal">
-                No city in Spain offers more football per square kilometre than Madrid.
+                No city in Spain offers more football per square kilometer than Madrid.
                 Three La Liga stadiums, the national federation headquarters, hundreds
                 of local clubs, and a culture where football is the first topic at
                 every dinner table.
@@ -269,7 +269,7 @@ export default function MadridPage() {
                 Madrid is a city that stays up late and eats well. World-class
                 museums, sprawling parks, tapas bars on every corner, and a
                 nightlife that starts when most cities wind down. For groups
-                travelling with families, there is as much to do off the pitch
+                traveling with families, there is as much to do off the pitch
                 as on it.
               </p>
             </div>
@@ -328,7 +328,7 @@ export default function MadridPage() {
             </p>
             <p className="text-ink-muted text-base leading-relaxed">
               The Bernabeu is on the Paseo de la Castellana, easily reached from
-              anywhere in the centre. The Metropolitano is a short metro ride south.
+              anywhere in the center. The Metropolitano is a short metro ride south.
               We select 3 or 4-star hotels with experience hosting groups and
               flexible breakfast and dinner service.
             </p>

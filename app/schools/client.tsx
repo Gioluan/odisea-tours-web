@@ -115,11 +115,11 @@ export default function SchoolsPage() {
           </div>
 
           <p className="mt-6 text-paper/50 max-w-xl text-sm leading-relaxed reveal">
-            Travelling to study rather than to play?{" "}
+            Traveling to study rather than to play?{" "}
             <Link href="/school-trips-spain" className="link-rule text-gold">
               School Trips to Spain
             </Link>{" "}
-            covers our language immersion, Modern Languages and academic programmes.
+            covers our language immersion, Modern Languages and academic programs.
           </p>
 
           {/* Photo dots */}

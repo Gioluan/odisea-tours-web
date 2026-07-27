@@ -70,13 +70,13 @@ export const US_CITIES: UsCity[] = [
     why_spain: [
       "Every big San Diego club has done Surf Cup. A Spain tour is what comes after.",
       "Two-week format fits high school summer and winter break windows without disrupting the club season.",
-      "Families travel on the same itinerary, with a cultural programme running parallel to training so parents are not sitting in hotel lobbies.",
+      "Families travel on the same itinerary, with a cultural program running parallel to training so parents are not sitting in hotel lobbies.",
     ],
     sample_clubs_phrase:
       "Clubs across North County, Chula Vista, La Jolla, Carlsbad and the East County",
     ideal_audiences: [
       "Presidio and CSL clubs",
-      "High school varsity and JV programmes",
+      "High school varsity and JV programs",
       "College ID camp graduates and academy sides",
     ],
     hero_photo: "/photos/veterans-soccer-tour-valencia-cf-match.jpg",
@@ -96,7 +96,7 @@ export const US_CITIES: UsCity[] = [
     intro:
       "Dallas–Fort Worth has the shortest nonstop flight to Madrid of any major US metro west of the Mississippi. Odisea Tours builds Spain tours for DFW clubs that use the direct American Airlines service to arrive rested, train the same day, and keep the full calendar productive.",
     local_soccer_context:
-      "North Texas runs one of the most organised youth soccer ecosystems in the country, from FC Dallas's academy down through the ECNL clubs in Plano, Frisco, Southlake and the mid-cities. A Spain tour slots cleanly into the Texas school calendar's summer window and the winter break, and the cultural side of the trip (Madrid, Valencia, Barcelona in 10–12 days) matches how DFW families already think about group travel.",
+      "North Texas runs one of the most organized youth soccer ecosystems in the country, from FC Dallas's academy down through the ECNL clubs in Plano, Frisco, Southlake and the mid-cities. A Spain tour slots cleanly into the Texas school calendar's summer window and the winter break, and the cultural side of the trip (Madrid, Valencia, Barcelona in 10–12 days) matches how DFW families already think about group travel.",
     time_zone_note:
       "Spain is 7 hours ahead of Dallas. Groups leaving DFW in the evening arrive Madrid mid-morning ready to train.",
     why_spain: [
@@ -108,7 +108,7 @@ export const US_CITIES: UsCity[] = [
       "Clubs across Plano, Frisco, Southlake, Flower Mound, McKinney, Arlington and the mid-cities",
     ideal_audiences: [
       "ECNL and MLS Next clubs",
-      "UIL high school varsity programmes",
+      "UIL high school varsity programs",
       "Select and academy teams from U13 up",
     ],
     hero_photo: "/photos/veterans-soccer-tour-spain-match-action.jpg",
@@ -128,19 +128,19 @@ export const US_CITIES: UsCity[] = [
     intro:
       "Houston has one of the largest and fastest-growing youth soccer markets in the United States, driven by the Dynamo FC academy, a dense ECNL base and a deep Hispanic soccer culture. Odisea Tours runs Spain tours for Houston clubs that fit the Texas summer and winter break windows without pulling players out of the season.",
     local_soccer_context:
-      "Houston clubs already send players to Europe through Dynamo, FC Dallas academy loans and the occasional international showcase. What Odisea adds is the structure a club tour needs: FC Barcelona training at Joan Gamper, fixtures against Spanish academy sides, and a full cultural programme for families so the trip reads as a family investment, not a soccer-only ask.",
+      "Houston clubs already send players to Europe through Dynamo, FC Dallas academy loans and the occasional international showcase. What Odisea adds is the structure a club tour needs: FC Barcelona training at Joan Gamper, fixtures against Spanish academy sides, and a full cultural program for families so the trip reads as a family investment, not a soccer-only ask.",
     time_zone_note:
       "Spain is 7 hours ahead of Houston. Most groups connect through Washington Dulles or Newark for the nonstop leg to Madrid.",
     why_spain: [
       "Strong Spanish-language connection in Houston homes. Families land and feel half the cultural work is already done.",
       "Summer break windows are longer in Texas than most states; a 12-day Spain tour fits without touching the club season.",
-      "Houston's existing sport-tourism travel patterns (Orlando, Europe, Mexico) make a Spain tour a recognisable, trusted next step.",
+      "Houston's existing sport-tourism travel patterns (Orlando, Europe, Mexico) make a Spain tour a recognizable, trusted next step.",
     ],
     sample_clubs_phrase:
       "Clubs across The Woodlands, Katy, Sugar Land, Pearland, Cypress, and inside the Loop",
     ideal_audiences: [
       "ECNL and MLS Next clubs",
-      "UIL varsity programmes",
+      "UIL varsity programs",
       "Hispanic soccer academies and Sunday leagues",
     ],
     hero_photo: "/photos/veterans-soccer-tour-fc-barcelona-visit.jpg",
@@ -160,7 +160,7 @@ export const US_CITIES: UsCity[] = [
     intro:
       "New York is the closest major US metro to Spain by flight time and the easiest to build a Spain tour around. Odisea Tours runs youth soccer tours for clubs across the NY/NJ/CT metro, using the nonstop JFK-to-Madrid and Newark-to-Barcelona services to fit the school calendar tightly.",
     local_soccer_context:
-      "The NY metro runs ECNL, NPL and MLS Next alongside a deep high school soccer tradition and some of the most competitive academy sides on the East Coast. A Spain tour gives a NY club something the domestic showcase circuit cannot: training inside FC Barcelona and Valencia CF, games against Spanish academy opposition, and a cultural programme in Barcelona, Madrid and Valencia that parents value as much as the soccer.",
+      "The NY metro runs ECNL, NPL and MLS Next alongside a deep high school soccer tradition and some of the most competitive academy sides on the East Coast. A Spain tour gives a NY club something the domestic showcase circuit cannot: training inside FC Barcelona and Valencia CF, games against Spanish academy opposition, and a cultural program in Barcelona, Madrid and Valencia that parents value as much as the soccer.",
     time_zone_note:
       "Spain is 6 hours ahead of New York. Groups leaving JFK in the evening arrive Madrid first thing in the morning and train the same day.",
     why_spain: [
@@ -204,7 +204,7 @@ export const US_CITIES: UsCity[] = [
       "Clubs across Miami-Dade, Broward, Palm Beach and the Treasure Coast",
     ideal_audiences: [
       "MLS Next clubs and Inter Miami affiliates",
-      "FHSAA varsity programmes",
+      "FHSAA varsity programs",
       "Hispanic soccer academies and church leagues",
     ],
     hero_photo: "/photos/odisea-tours-girls-fcb-celebration-hero.jpg",

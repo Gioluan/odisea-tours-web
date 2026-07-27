@@ -117,7 +117,7 @@ export default function TermsPage() {
               Odisea Tours is the trading name of <strong>Ground Agents Solutions, S.L.</strong>, a Spanish limited company registered in the Castellón Mercantile Registry, CIF <strong>B40274763</strong>, with registered address at c/José Bellido Mor, 12560 Benicassim, Castellón, Spain.
             </p>
             <p>
-              We act as the organiser of the package travel arrangements described in your booking proposal, in accordance with Spanish Royal Decree-Law 23/2018 of 21 December (transposing EU Directive 2015/2302 on package travel and linked travel arrangements). The operational components of every tour (accommodation, ground transport, stadium tours, training sessions, clinics, cultural activities, food and beverage providers and any sports or adventure activities) are delivered by independent third-party operators. Our role is to design the tour, contract those operators on your behalf and coordinate them in the field. See section 02 below for the detail.
+              We act as the organizer of the package travel arrangements described in your booking proposal, in accordance with Spanish Royal Decree-Law 23/2018 of 21 December (transposing EU Directive 2015/2302 on package travel and linked travel arrangements). The operational components of every tour (accommodation, ground transport, stadium tours, training sessions, clinics, cultural activities, food and beverage providers and any sports or adventure activities) are delivered by independent third-party operators. Our role is to design the tour, contract those operators on your behalf and coordinate them in the field. See section 02 below for the detail.
             </p>
             <p>
               In these terms, &quot;<strong>you</strong>&quot; means the lead booker who signs the proposal, and on whose behalf you make the booking for every member of your group. &quot;<strong>We</strong>&quot;, &quot;<strong>us</strong>&quot; and &quot;<strong>Odisea</strong>&quot; mean Ground Agents Solutions, S.L.
@@ -130,7 +130,7 @@ export default function TermsPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2 marker:text-gold-deep">
               <li>
-                <strong>Stadium tours and football experiences</strong> (FC Barcelona / Spotify Camp Nou, Real Madrid / Santiago Bernabéu, Valencia CF / Mestalla, RCD Espanyol, Atlético de Madrid and others). These are operated by the clubs themselves through their official tour and hospitality programmes; Odisea purchases the tickets and coordinates the visit, but the experience inside the stadium is run entirely by the club.
+                <strong>Stadium tours and football experiences</strong> (FC Barcelona / Spotify Camp Nou, Real Madrid / Santiago Bernabéu, Valencia CF / Mestalla, RCD Espanyol, Atlético de Madrid and others). These are operated by the clubs themselves through their official tour and hospitality programs; Odisea purchases the tickets and coordinates the visit, but the experience inside the stadium is run entirely by the club.
               </li>
               <li>
                 <strong>Football clinics, training sessions and friendly fixtures</strong> with Spanish clubs, federations and academies. These are run by the host club, federation or academy under their own coaching staff, facility rules and insurance.
@@ -164,13 +164,13 @@ export default function TermsPage() {
               The lead booker confirms that they are at least 18 years old, have authority to contract on behalf of every member of the group, and have shared these terms with them. The lead booker is responsible for collecting and forwarding any information we need (full names, dates of birth, passport numbers, dietary requirements, medical conditions and emergency contacts) by the deadlines set out in the proposal.
             </p>
             <p>
-              We reserve the right to refuse a booking at our reasonable discretion, including where the proposed dates are no longer available, where a participant has a history of disruptive behaviour on a previous Odisea trip, or where we cannot operate the requested itinerary safely.
+              We reserve the right to refuse a booking at our reasonable discretion, including where the proposed dates are no longer available, where a participant has a history of disruptive behavior on a previous Odisea trip, or where we cannot operate the requested itinerary safely.
             </p>
           </Section>
 
           <Section id="payments" title="04. Payments and deposits">
             <p>
-              The deposit, instalment dates and final balance for your trip are set out in your proposal. Unless your proposal says otherwise, the final balance is due no later than 60 days before the first day of travel. For bookings made within 60 days of departure, the full price is due at the time of booking.
+              The deposit, installment dates and final balance for your trip are set out in your proposal. Unless your proposal says otherwise, the final balance is due no later than 60 days before the first day of travel. For bookings made within 60 days of departure, the full price is due at the time of booking.
             </p>
             <p>
               All prices are quoted in the currency of the proposal (typically euros). Bank transfer fees are paid by the sender. Card payments are processed through our payment provider and are subject to the surcharge, if any, disclosed at checkout.
@@ -221,7 +221,7 @@ export default function TermsPage() {
               You are responsible for ensuring that every member of the group holds a passport valid for at least three months beyond the date of return, and any visa or other entry document required for travel to Spain (and to any other country in the itinerary). For US, Canadian, Australian, UK and EU passport holders, a Schengen visa is not required for short stays, but the EU Entry/Exit System (EES) and ETIAS authorisation may apply at the time of travel. Check current requirements with your nearest Spanish consulate.
             </p>
             <p>
-              Minors travelling without both parents may need additional documentation to enter or leave Spain. We will flag this in your proposal where it applies, but the lead booker is responsible for the documentation itself.
+              Minors traveling without both parents may need additional documentation to enter or leave Spain. We will flag this in your proposal where it applies, but the lead booker is responsible for the documentation itself.
             </p>
             <p>
               We are not liable for missed travel or denied entry caused by missing or invalid travel documents.
@@ -233,7 +233,7 @@ export default function TermsPage() {
               Sports and school tours are run under the supervision of the group leader you nominate (typically the head coach, athletic director, teacher or department chair). The group leader is responsible for the safeguarding, discipline and welfare of the group during the trip, supported by Odisea&apos;s ground staff.
             </p>
             <p>
-              Every participant agrees to behave reasonably, to follow the lawful instructions of the group leader, the Odisea team and our suppliers (drivers, hotel staff, training-venue staff), and to respect the laws and customs of Spain. We reserve the right to remove from the trip, at the lead booker&apos;s expense, any participant whose behaviour endangers others, causes serious damage to property, or significantly disrupts the running of the tour. No refund is due in that case.
+              Every participant agrees to behave reasonably, to follow the lawful instructions of the group leader, the Odisea team and our suppliers (drivers, hotel staff, training-venue staff), and to respect the laws and customs of Spain. We reserve the right to remove from the trip, at the lead booker&apos;s expense, any participant whose behavior endangers others, causes serious damage to property, or significantly disrupts the running of the tour. No refund is due in that case.
             </p>
           </Section>
 
@@ -254,7 +254,7 @@ export default function TermsPage() {
 
           <Section id="force-majeure" title="11. Force majeure">
             <p>
-              Neither party is liable for any failure or delay in performing its obligations caused by an unavoidable and extraordinary circumstance beyond its reasonable control. This includes (without limitation) war, civil unrest, terrorism, government action, labour disputes affecting third parties, natural disasters, fires, floods, epidemics, pandemics, public-health restrictions, airspace closures and adverse weather that materially affects the itinerary.
+              Neither party is liable for any failure or delay in performing its obligations caused by an unavoidable and extraordinary circumstance beyond its reasonable control. This includes (without limitation) war, civil unrest, terrorism, government action, labor disputes affecting third parties, natural disasters, fires, floods, epidemics, pandemics, public-health restrictions, airspace closures and adverse weather that materially affects the itinerary.
             </p>
             <p>
               In a force majeure situation we will work with you in good faith to find an alternative (rescheduling the trip, or substituting affected services with comparable ones) before considering the trip cancelled. Where supplier deposits cannot be recovered, those amounts are not refundable.
@@ -288,7 +288,7 @@ export default function TermsPage() {
 
           <Section id="data" title="13. Data protection">
             <p>
-              Ground Agents Solutions, S.L. is the data controller for personal data you share with us. We process the data of group members (names, dates of birth, passport details, medical and dietary information) only for the purpose of organising and running your trip, and we share it with suppliers (hotels, training partners, transport providers, insurers, emergency services) only as necessary for that purpose.
+              Ground Agents Solutions, S.L. is the data controller for personal data you share with us. We process the data of group members (names, dates of birth, passport details, medical and dietary information) only for the purpose of organizing and running your trip, and we share it with suppliers (hotels, training partners, transport providers, insurers, emergency services) only as necessary for that purpose.
             </p>
             <p>
               You have the rights to access, rectify, erase, restrict, port and object to the processing of your personal data under the EU General Data Protection Regulation (Regulation 2016/679) and the Spanish Organic Law 3/2018. To exercise any of these rights, write to{" "}

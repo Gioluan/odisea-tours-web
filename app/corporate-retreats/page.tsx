@@ -40,14 +40,14 @@ const HANDLED = [
   { t: "AV, translation and stage build", d: "Full production for the working sessions: AV, simultaneous translation, stage and set build, so the offsite runs like a conference when it needs to." },
   { t: "Team-building programming", d: "Cooking classes, winery harvest days, sailing, guided hikes and city challenges, matched to the seniority and energy of the group." },
   { t: "Transfers and ground logistics", d: "Executive transfers, group coaches and private rail cars. Airport to venue to dinner, all timed and held invisible so nobody is left waiting." },
-  { t: "On-site producer, 24/7", d: "A dedicated Odisea producer on the ground for the whole programme, with 24/7 incident response. One contact, every detail handled." },
+  { t: "On-site producer, 24/7", d: "A dedicated Odisea producer on the ground for the whole program, with 24/7 incident response. One contact, every detail handled." },
   { t: "Full budget transparency", d: "Itemised vendor reporting and a transparent budget. You see what each line costs. No hidden margin buried in a package price." },
 ];
 
 const VENUES = [
   { city: "Madrid", note: "The connectivity choice: direct long-haul flights, fast onward rail, historic five-star hotels and private palacio venues. Best for leadership offsites and kickoffs that need easy arrival from abroad.", href: "/destinations/madrid" },
   { city: "Barcelona", note: "Design hotels, the sea and the Collserola hills within reach, and a creative backdrop for product and brand teams. Best for offsites that want energy and a city to spill into after hours.", href: "/destinations/barcelona" },
-  { city: "Valencia", note: "The value option without the compromise: beach, sailing, the City of Arts and Sciences and a compact, walkable centre. Best for larger company retreats and team-building-led programmes.", href: "/destinations/valencia" },
+  { city: "Valencia", note: "The value option without the compromise: beach, sailing, the City of Arts and Sciences and a compact, walkable center. Best for larger company retreats and team-building-led programs.", href: "/destinations/valencia" },
   { city: "La Rioja & the Basque Country", note: "Restored monasteries, working wineries and the San Sebastián Michelin scene. Best for senior teams and board retreats that want to think somewhere quiet and eat extremely well.", href: "/plan-your-tour" },
 ];
 
@@ -64,11 +64,11 @@ const FAQ = [
   },
   {
     q: "Where are the best venues for a company retreat in Spain?",
-    a: "It depends on the group. Madrid is the connectivity choice, with direct long-haul flights and historic five-star and private palacio venues. Barcelona suits creative teams that want design hotels and city energy. Valencia is the value option with beach, sailing and a walkable centre, and works well for larger groups. La Rioja and the Basque Country offer restored monasteries, working wineries and the San Sebastián Michelin scene for senior teams and board retreats. Odisea Tours scouts and contracts the venue for you in whichever region fits.",
+    a: "It depends on the group. Madrid is the connectivity choice, with direct long-haul flights and historic five-star and private palacio venues. Barcelona suits creative teams that want design hotels and city energy. Valencia is the value option with beach, sailing and a walkable center, and works well for larger groups. La Rioja and the Basque Country offer restored monasteries, working wineries and the San Sebastián Michelin scene for senior teams and board retreats. Odisea Tours scouts and contracts the venue for you in whichever region fits.",
   },
   {
-    q: "Can you organise a company offsite or team-building retreat in Spain end to end?",
-    a: "Yes. Odisea Tours handles the whole offsite on the ground: venue scouting and contracting, AV, simultaneous translation and stage build for the working sessions, team-building programming, executive transfers and group coaches, an on-site producer for the full programme and 24/7 incident response. The organiser has one contact and never has to manage Spanish vendors directly.",
+    q: "Can you organize a company offsite or team-building retreat in Spain end to end?",
+    a: "Yes. Odisea Tours handles the whole offsite on the ground: venue scouting and contracting, AV, simultaneous translation and stage build for the working sessions, team-building programming, executive transfers and group coaches, an on-site producer for the full program and 24/7 incident response. The organizer has one contact and never has to manage Spanish vendors directly.",
   },
   {
     q: "How large a group can you handle for a corporate retreat?",
@@ -80,7 +80,7 @@ const FAQ = [
   },
   {
     q: "Do you run corporate retreats for companies based outside Spain?",
-    a: "Yes. Most corporate clients are companies based in the United States, the United Kingdom and across Europe. Odisea Tours is a Spanish destination management company whose team has run everything on the ground since 2005, which means the organiser abroad gets a single point of contact and never has to source or manage local venues, transport or production vendors.",
+    a: "Yes. Most corporate clients are companies based in the United States, the United Kingdom and across Europe. Odisea Tours is a Spanish destination management company whose team has run everything on the ground since 2005, which means the organizer abroad gets a single point of contact and never has to source or manage local venues, transport or production vendors.",
   },
   {
     q: "How far in advance should we book a company retreat in Spain?",
@@ -197,7 +197,7 @@ export default function CorporateRetreatsPage() {
               A generic conference hotel gives you a windowless room and a coffee urn. Spain gives you a reason for the team to be there. Direct long-haul flights into Madrid and Barcelona, a climate that cooperates from spring through autumn, world-class food at every budget tier, and venues with actual character, from Rioja wineries to Basque monasteries to Mediterranean design hotels.
             </p>
             <p>
-              The value maths works too. A retreat in Valencia or La Rioja typically lands below the equivalent in London, Paris or a US resort town, while the experience reads as more memorable. And because Odisea Tours is a Spanish company running everything on the ground, the organiser abroad gets one contact and never has to source a Spanish venue, coach company or AV vendor.
+              The value maths works too. A retreat in Valencia or La Rioja typically lands below the equivalent in London, Paris or a US resort town, while the experience reads as more memorable. And because Odisea Tours is a Spanish company running everything on the ground, the organizer abroad gets one contact and never has to source a Spanish venue, coach company or AV vendor.
             </p>
           </div>
         </div>
@@ -273,7 +273,7 @@ export default function CorporateRetreatsPage() {
       <section className="bg-ink text-paper py-20 md:py-24 px-6 md:px-10">
         <div className="max-w-[900px] mx-auto">
           <div className="rule-label font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-paper/70 mb-6">
-            05 / Questions organisers ask
+            05 / Questions organizers ask
           </div>
           <h2 className="font-display text-[clamp(1.9rem,3.6vw,3rem)] uppercase leading-[1.05] max-w-[22ch]">
             Planning a company retreat, <span className="font-display-italic text-gold">answered</span>.
@@ -302,7 +302,7 @@ export default function CorporateRetreatsPage() {
             Tell us the team and the goal. <span className="font-display-italic text-gold-deep">We cost it in 48 hours.</span>
           </h2>
           <p className="mt-6 max-w-[56ch] mx-auto text-ink-soft leading-relaxed">
-            Group size, the dates you are eyeing, and what the retreat is for. We come back with a venue shortlist, a draft programme and a transparent, itemised budget.
+            Group size, the dates you are eyeing, and what the retreat is for. We come back with a venue shortlist, a draft program and a transparent, itemised budget.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <Link href="/plan-your-tour" className="btn-editorial">Plan your company retreat</Link>
@@ -313,7 +313,7 @@ export default function CorporateRetreatsPage() {
 
       <JournalLinks
         title="Reading for"
-        italicTail="retreat organisers."
+        italicTail="retreat organizers."
         slugs={["corporate-team-building-retreats-spain", "how-to-plan-a-group-trip-to-spain"]}
       />
     </main>

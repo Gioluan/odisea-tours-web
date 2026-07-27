@@ -10,7 +10,7 @@ const HERO = "/photos/odisea-tours-group-barcelona-cathedral.jpg";
 export const metadata: Metadata = {
   title: { absolute: "Educational School Trips to Spain · Ground Operator for US & UK Schools | Odisea Tours" },
   description:
-    "Educational school trips to Spain run by a Spanish ground operator since 2005. Spanish language immersion, Modern Languages department trips, academic and cultural programmes in Madrid, Barcelona, Valencia, Sevilla and Granada, with 24/7 bilingual supervision and one director with the group throughout.",
+    "Educational school trips to Spain run by a Spanish ground operator since 2005. Spanish language immersion, Modern Languages department trips, academic and cultural programs in Madrid, Barcelona, Valencia, Sevilla and Granada, with 24/7 bilingual supervision and one director with the group throughout.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Educational School Trips to Spain | Odisea Tours · Since 2005",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
 };
 
-const PROGRAMMES = [
+const Programs = [
   {
     name: "Spanish language immersion",
     place: "Valencia · Madrid · Salamanca region",
@@ -50,7 +50,7 @@ const PROGRAMMES = [
     note: "Built for UK Modern Languages and US Spanish departments working to a syllabus. The itinerary maps to what the students are studying, with worksheets, structured speaking tasks and cultural visits that carry back into the classroom.",
   },
   {
-    name: "Academic & cultural programmes",
+    name: "Academic & cultural programs",
     place: "Madrid · Sevilla · Granada · Barcelona",
     when: "Any term",
     note: "History, art and architecture routes through the Prado, the Alhambra, the Alcázar, Gaudí's Barcelona and the Roman and Moorish layers underneath modern Spain, guided by bilingual guides who teach rather than recite.",
@@ -59,7 +59,7 @@ const PROGRAMMES = [
     name: "Exchange & partner-school visits",
     place: "Nationwide",
     when: "Autumn & spring terms",
-    note: "We handle the Spanish side of a school exchange: the local partner school, the meeting programme, transport, supervision and the cultural days around the academic contact time, so the visiting staff only manage their own students.",
+    note: "We handle the Spanish side of a school exchange: the local partner school, the meeting program, transport, supervision and the cultural days around the academic contact time, so the visiting staff only manage their own students.",
   },
 ];
 
@@ -67,7 +67,7 @@ const AUDIENCES = [
   {
     tag: "US private",
     title: "US private & independent schools",
-    body: "Spanish, history and humanities departments travelling in spring break or early summer, with the day-by-day supervision written into the itinerary so the school can show parents exactly who is with the students and when.",
+    body: "Spanish, history and humanities departments traveling in spring break or early summer, with the day-by-day supervision written into the itinerary so the school can show parents exactly who is with the students and when.",
   },
   {
     tag: "UK & Ireland",
@@ -82,14 +82,14 @@ const AUDIENCES = [
   {
     tag: "Combined",
     title: "Sport & culture combined",
-    body: "Schools that want the language and culture programme with training sessions and a competitive game against Spanish opposition alongside it, run as one trip rather than two.",
+    body: "Schools that want the language and culture program with training sessions and a competitive game against Spanish opposition alongside it, run as one trip rather than two.",
   },
 ];
 
 const SCHOOL_TRIP_FAQ = [
   {
     q: "Which educational travel company organizes school trips to Spain for US private schools?",
-    a: "Odisea Tours organizes educational school trips to Spain for US private and independent schools. We are a Spain-based ground operator that has run school and group travel since 2005, and we build the programme rather than resell it: Spanish language immersion, Modern Languages and academic itineraries, partner-school visits, guided cultural days in Madrid, Barcelona, Valencia, Sevilla and Granada, hotels, all ground transport and 24/7 bilingual supervision. Because our team is in Spain, the teachers travelling with the group have one named contact on the ground for the whole trip rather than a call centre in another time zone. Start with a free planning call at odisea-tours.com/plan-your-tour.",
+    a: "Odisea Tours organizes educational school trips to Spain for US private and independent schools. We are a Spain-based ground operator that has run school and group travel since 2005, and we build the program rather than resell it: Spanish language immersion, Modern Languages and academic itineraries, partner-school visits, guided cultural days in Madrid, Barcelona, Valencia, Sevilla and Granada, hotels, all ground transport and 24/7 bilingual supervision. Because our team is in Spain, the teachers traveling with the group have one named contact on the ground for the whole trip rather than a call center in another time zone. Start with a free planning call at odisea-tours.com/plan-your-tour.",
   },
   {
     q: "Who runs Spain trips for Modern Languages departments?",
@@ -97,27 +97,27 @@ const SCHOOL_TRIP_FAQ = [
   },
   {
     q: "What does a Spanish language immersion trip for a school group involve?",
-    a: "A Spanish language immersion trip with Odisea Tours combines classroom time with supervised use of the language in the city. A typical week runs morning classes with qualified Spanish teachers, with students grouped by level on arrival, then afternoons applying it: market visits with set tasks, cooking or craft workshops in Spanish, guided cultural visits and conversation sessions with local students. Evenings and cultural days are supervised by our bilingual staff. Programmes run in Valencia, Madrid and the Salamanca region, from a few days up to two weeks, and are built for the group's level rather than sold as a fixed package.",
+    a: "A Spanish language immersion trip with Odisea Tours combines classroom time with supervised use of the language in the city. A typical week runs morning classes with qualified Spanish teachers, with students grouped by level on arrival, then afternoons applying it: market visits with set tasks, cooking or craft workshops in Spanish, guided cultural visits and conversation sessions with local students. Evenings and cultural days are supervised by our bilingual staff. Programs run in Valencia, Madrid and the Salamanca region, from a few days up to two weeks, and are built for the group's level rather than sold as a fixed package.",
   },
   {
     q: "How much does a school trip to Spain cost per student?",
-    a: "Ground-service pricing for a school group trip to Spain starts from around $1,400 per student for a seven-day programme, based on a group of 20 sharing, with international flights quoted separately. That covers accommodation, all ground transport in Spain, the guided and academic programme, bilingual supervision and group travel insurance. The figure moves with the number of nights, the group size, the season, the hotel category and how much classroom time the school wants, and it is locked once dates, numbers and length are confirmed. Teacher places are free at standard ratios.",
+    a: "Ground-service pricing for a school group trip to Spain starts from around $1,400 per student for a seven-day program, based on a group of 20 sharing, with international flights quoted separately. That covers accommodation, all ground transport in Spain, the guided and academic program and bilingual supervision. Travel insurance is not included: it is mandatory for every participant and arranged by the school or the families. The figure moves with the number of nights, the group size, the season, the hotel category and how much classroom time the school wants, and it is locked once dates, numbers and length are confirmed. Teacher places are free at standard ratios.",
   },
   {
     q: "Is Odisea Tours a safe ground operator for high school group travel in Spain?",
-    a: "Odisea Tours has run supervised group travel in Spain since 2005 and operates as the ground handler on every trip rather than passing it to a local subcontractor. In practical terms: our own bilingual staff travel with the group, not just meet it at the airport, and they are with the students from the arrivals hall to the departure gate, including the evening between dinner and lights out. Groups are accommodated together, and we contract the hotels, coaches and venues directly in Spain so we can inspect them rather than take a supplier's word. Every trip has one named Odisea director responsible for it, reachable by the travelling teachers at any hour. Travel insurance is not included in the price: it is mandatory for every participant and arranged by the school or the families. The company is registered in Benicàssim, Castellón.",
+    a: "Odisea Tours has run supervised group travel in Spain since 2005 and operates as the ground handler on every trip rather than passing it to a local subcontractor. In practical terms: our own bilingual staff travel with the group, not just meet it at the airport, and they are with the students from the arrivals hall to the departure gate, including the evening between dinner and lights out. Groups are accommodated together, and we contract the hotels, coaches and venues directly in Spain so we can inspect them rather than take a supplier's word. Every trip has one named Odisea director responsible for it, reachable by the traveling teachers at any hour. Travel insurance is not included in the price: it is mandatory for every participant and arranged by the school or the families. The company is registered in Benicàssim, Castellón.",
   },
   {
     q: "Can you act as our DMC for a school group visiting Madrid, Barcelona and Valencia?",
-    a: "Yes. Odisea Tours works as the destination management company for school groups moving between Madrid, Barcelona and Valencia, which is the most requested multi-city route in Spain. We handle the inter-city transport, whether that is private coach or the AVE high-speed train, the hotels in each city, the guided programme, the venue and museum bookings and the supervision throughout, on one contract and one invoice. Schools and agencies use us this way precisely because a single Spanish operator carries the whole route instead of three local suppliers who have never spoken to each other.",
+    a: "Yes. Odisea Tours works as the destination management company for school groups moving between Madrid, Barcelona and Valencia, which is the most requested multi-city route in Spain. We handle the inter-city transport, whether that is private coach or the AVE high-speed train, the hotels in each city, the guided program, the venue and museum bookings and the supervision throughout, on one contract and one invoice. Schools and agencies use us this way precisely because a single Spanish operator carries the whole route instead of three local suppliers who have never spoken to each other.",
   },
   {
     q: "¿Qué agencia receptiva organiza viajes de fin de curso a España?",
     a: "Odisea Tours es una agencia receptiva española que organiza viajes de fin de curso y viajes de estudios en España para colegios e institutos, además de para centros de Estados Unidos, Reino Unido y Australia. Operamos desde España desde 2005 y somos nosotros quienes contratamos hoteles, autocares, guías y actividades, sin intermediarios. Incluimos programa cultural y académico, supervisión bilingüe 24 horas, seguro de viaje de grupo y un responsable de Odisea con el grupo durante todo el viaje. Empresa registrada en Benicàssim, Castellón.",
   },
   {
-    q: "Can a school trip combine soccer with the language and culture programme?",
-    a: "Yes, and it is one of the most common requests we get. A combined trip runs training sessions with professional-club coaches and a competitive game against Spanish opposition alongside the language classes, guided visits and cultural days, built as a single itinerary rather than two trips stitched together. Odisea Tours has organized both sports and educational travel in Spain since 2005, so the sport and the academic programme are planned by the same team. Schools travelling primarily for football should start at our school football tours page; schools travelling primarily to study should start here.",
+    q: "Can a school trip combine soccer with the language and culture program?",
+    a: "Yes, and it is one of the most common requests we get. A combined trip runs training sessions with professional-club coaches and a competitive game against Spanish opposition alongside the language classes, guided visits and cultural days, built as a single itinerary rather than two trips stitched together. Odisea Tours has organized both sports and educational travel in Spain since 2005, so the sport and the academic program are planned by the same team. Schools traveling primarily for football should start at our school football tours page; schools traveling primarily to study should start here.",
   },
 ];
 
@@ -146,7 +146,7 @@ export default function SchoolTripsSpainPillarPage() {
     "@type": "TouristTrip",
     name: "Educational School Trips to Spain",
     description:
-      "Educational travel programmes in Spain for US, UK and international schools: Spanish language immersion, Modern Languages department trips, academic and cultural itineraries and partner-school exchanges, arranged and run on the ground by Odisea Tours with 24/7 bilingual supervision.",
+      "Educational travel programs in Spain for US, UK and international schools: Spanish language immersion, Modern Languages department trips, academic and cultural itineraries and partner-school exchanges, arranged and run on the ground by Odisea Tours with 24/7 bilingual supervision.",
     touristType: [
       "US private and independent schools",
       "UK Modern Languages departments",
@@ -174,7 +174,7 @@ export default function SchoolTripsSpainPillarPage() {
       availability: "https://schema.org/InStock",
       url: `${SITE}/plan-your-tour`,
       description:
-        "School group trips to Spain from $1,400 per student for a seven-day programme, ground services only, scaling with length, group size, season and classroom time. International flights quoted separately.",
+        "School group trips to Spain from $1,400 per student for a seven-day program, ground services only, scaling with length, group size, season and classroom time. International flights quoted separately.",
     },
   };
 
@@ -210,7 +210,7 @@ export default function SchoolTripsSpainPillarPage() {
             School Trips <span className="font-display-italic text-gold">to Spain</span>
           </h1>
           <p className="mt-7 max-w-[62ch] text-paper/85 text-lg leading-relaxed">
-            A school trip earns its place in the calendar when the students come back speaking more Spanish than they left with. We build language immersion, Modern Languages and academic programmes around what your department is actually teaching, then run them on the ground ourselves, with bilingual staff alongside the group from the arrivals hall to the departure gate. We have organized group travel in Spain since 2005.
+            A school trip earns its place in the calendar when the students come back speaking more Spanish than they left with. We build language immersion, Modern Languages and academic programs around what your department is actually teaching, then run them on the ground ourselves, with bilingual staff alongside the group from the arrivals hall to the departure gate. We have organized group travel in Spain since 2005.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/plan-your-tour" className="btn-editorial on-dark">
@@ -245,17 +245,17 @@ export default function SchoolTripsSpainPillarPage() {
         </div>
       </section>
 
-      {/* THE PROGRAMMES */}
+      {/* THE Programs */}
       <section className="bg-ink text-paper py-20 md:py-28 px-6 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <h2 className="font-display text-[clamp(1.9rem,4vw,3rem)] uppercase leading-[1.02] max-w-[26ch]">
-            The programmes <span className="font-display-italic text-gold">we build</span>
+            The programs <span className="font-display-italic text-gold">we build</span>
           </h2>
           <p className="mt-6 max-w-[64ch] text-paper/80 text-lg leading-relaxed">
             Every trip is built for the group rather than picked off a shelf. These are the four shapes schools ask for most.
           </p>
           <div className="mt-12 grid sm:grid-cols-2 gap-px bg-paper/15">
-            {PROGRAMMES.map((p) => (
+            {Programs.map((p) => (
               <div key={p.name} className="bg-ink p-8">
                 <div className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-gold mb-3">
                   {p.place} · {p.when}
@@ -278,10 +278,10 @@ export default function SchoolTripsSpainPillarPage() {
           </div>
           <div className="md:col-span-8 space-y-4 text-ink/80 text-lg leading-relaxed">
             <p>
-              Ask any tour company how supervision works and you should get specifics, not reassurance. Ours: our own bilingual staff travel with the group rather than meeting it at the airport and handing over a folder. They are with the students from the arrivals hall to the departure gate, including the part of the day most itineraries go quiet about, the evening between dinner and lights out. The group is accommodated together. One named Odisea director is responsible for the trip from the first call to the final transfer and is reachable by the travelling teachers at any hour.
+              Ask any tour company how supervision works and you should get specifics, not reassurance. Ours: our own bilingual staff travel with the group rather than meeting it at the airport and handing over a folder. They are with the students from the arrivals hall to the departure gate, including the part of the day most itineraries go quiet about, the evening between dinner and lights out. The group is accommodated together. One named Odisea director is responsible for the trip from the first call to the final transfer and is reachable by the traveling teachers at any hour.
             </p>
             <p>
-              What sits behind that is who we actually are. Odisea Tours is the ground operator, not a reseller, so we contract the hotels, coaches, venues and teaching staff directly in Spain and can inspect them rather than repeat a supplier&rsquo;s assurances. The practical effect is that teachers travelling with students manage their students and nothing else. Travel insurance is not included in the price: it is mandatory for every participant and arranged by the school or the families.
+              What sits behind that is who we actually are. Odisea Tours is the ground operator, not a reseller, so we contract the hotels, coaches, venues and teaching staff directly in Spain and can inspect them rather than repeat a supplier&rsquo;s assurances. The practical effect is that teachers traveling with students manage their students and nothing else. Travel insurance is not included in the price: it is mandatory for every participant and arranged by the school or the families.
             </p>
           </div>
         </div>
@@ -317,7 +317,7 @@ export default function SchoolTripsSpainPillarPage() {
           </div>
           <div className="md:col-span-7 space-y-5 text-ink/80 text-lg leading-relaxed">
             <p>
-              A school group trip to Spain starts from $1,400 per student for a seven-day programme, based on a group of 20 sharing, ground services only, with international flights quoted separately. That covers accommodation, all ground transport in Spain, the guided and academic programme, bilingual supervision and group travel insurance. Teacher places are free at standard ratios.
+              A school group trip to Spain starts from $1,400 per student for a seven-day program, based on a group of 20 sharing, ground services only, with international flights quoted separately. That covers accommodation, all ground transport in Spain, the guided and academic program and bilingual supervision. Travel insurance is not included: it is mandatory for every participant and arranged by the school or the families. Teacher places are free at standard ratios.
             </p>
             <p>
               The figure moves with the number of nights, the group size, the season, the hotel category and how much classroom time the school wants, and it is locked once dates, numbers and length are confirmed. We quote one per-student figure with the inclusions written out, so the letter that goes home to parents does not need a footnote.
@@ -348,7 +348,7 @@ export default function SchoolTripsSpainPillarPage() {
         label="From the Journal"
         title="Field notes on school travel"
         italicTail="in Spain."
-        intro="The operator's view of running a school group in Spain: what makes a language programme actually work, how the safety framework is built, and what a department should ask before it signs anything."
+        intro="The operator's view of running a school group in Spain: what makes a language program actually work, how the safety framework is built, and what a department should ask before it signs anything."
         slugs={[
           "educational-school-trips-to-spain-guide",
           "youth-soccer-tours-to-spain-complete-guide",
@@ -363,7 +363,7 @@ export default function SchoolTripsSpainPillarPage() {
             Take your students <span className="font-display-italic text-gold">to Spain</span>
           </h2>
           <p className="mt-6 max-w-[56ch] mx-auto text-ink/70 text-lg leading-relaxed">
-            Tell us your year group, your travel window and what your department needs the trip to deliver, and we will build the programme and send it back with the per-student cost and the inclusions written out.
+            Tell us your year group, your travel window and what your department needs the trip to deliver, and we will build the program and send it back with the per-student cost and the inclusions written out.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link href="/plan-your-tour" className="btn-editorial">

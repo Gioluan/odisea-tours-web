@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         url: "/photos/og-journal.jpg",
         width: 1200,
         height: 630,
-        alt: "Travellers exploring Barcelona Cathedral on an Odisea Tours trip to Spain",
+        alt: "Travelers exploring Barcelona Cathedral on an Odisea Tours trip to Spain",
       },
     ],
     url: "https://odisea-tours.com/journal",

@@ -110,7 +110,7 @@ const BEYOND_THE_PITCH = [
   },
   {
     title: "Barceloneta Beach",
-    desc: "A 20-minute walk from the city centre. Ideal for a morning recovery swim or an afternoon on the sand after a training session.",
+    desc: "A 20-minute walk from the city center. Ideal for a morning recovery swim or an afternoon on the sand after a training session.",
   },
   {
     title: "Montjuic Hill",
@@ -267,7 +267,7 @@ export default function BarcelonaPage() {
               <p className="text-ink-muted text-base leading-relaxed reveal">
                 Football is the reason you come. Barcelona is the reason you never
                 want to leave. Gothic architecture, Mediterranean food, beaches five
-                minutes from the city centre, and a cultural scene that rivals
+                minutes from the city center, and a cultural scene that rivals
                 anywhere in Europe.
               </p>
             </div>

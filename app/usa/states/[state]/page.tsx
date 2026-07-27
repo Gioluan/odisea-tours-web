@@ -194,7 +194,7 @@ export default async function UsStatePage({ params }: Props) {
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             <div className="border border-ink/15 p-7">
               <div className="font-mono-editorial text-[0.6rem] tracking-[0.26em] uppercase text-ink/55 mb-3">
-                Major {s.name} soccer organisations
+                Major {s.name} soccer organizations
               </div>
               <ul className="space-y-2 text-ink-soft">
                 {s.major_soccer_organisations.map((o) => (
@@ -361,8 +361,8 @@ export default async function UsStatePage({ params }: Props) {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { href: "/tours/european-soccer-tours", title: "European Soccer Tours", body: "7 to 12 night soccer tours. FC Barcelona and Valencia CF training, games against Spanish academy or amateur opposition." },
-              { href: "/youth", title: "Youth soccer programme", body: "Built for U12 to U19 clubs. Families welcome on the same itinerary." },
-              { href: "/schools", title: "School and high school tours", body: "Term-time and summer programmes for high school varsity and private school teams." },
+              { href: "/youth", title: "Youth soccer program", body: "Built for U12 to U19 clubs. Families welcome on the same itinerary." },
+              { href: "/schools", title: "School and high school tours", body: "Term-time and summer programs for high school varsity and private school teams." },
             ].map((t) => (
               <Link
                 key={t.href}

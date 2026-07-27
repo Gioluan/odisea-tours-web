@@ -10,7 +10,7 @@ const HERO = "/photos/odisea-tours-donosti-cup-group-stage.jpg";
 export const metadata: Metadata = {
   title: { absolute: "Youth Soccer Tournaments in Spain · Tours for US Clubs | Odisea Tours" },
   description:
-    "Tournament tours to Spain for US soccer clubs, run by Odisea Tours. Full travel packages around the Donosti Cup, the MIC, the Iber Cup and the Costa Daurada Cup: registration, accommodation, transfers, a pro-club training session and a cultural programme. From $1,400 per person.",
+    "Tournament tours to Spain for US soccer clubs, run by Odisea Tours. Full travel packages around the Donosti Cup, the MIC, the Iber Cup and the Costa Daurada Cup: registration, accommodation, transfers, a pro-club training session and a cultural program. From $1,400 per person.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Youth Soccer Tournaments in Spain | Odisea Tours · Since 2005",
@@ -67,7 +67,7 @@ const AUDIENCES = [
   {
     tag: "High school",
     title: "US high school teams",
-    body: "Varsity boys and girls programs travelling in spring break or early summer for a real tournament abroad, with age verification and fixtures matched to level handled ahead of the trip.",
+    body: "Varsity boys and girls programs traveling in spring break or early summer for a real tournament abroad, with age verification and fixtures matched to level handled ahead of the trip.",
   },
   {
     tag: "Club",
@@ -81,8 +81,8 @@ const AUDIENCES = [
   },
   {
     tag: "Families",
-    title: "Travelling families",
-    body: "Parents and siblings travel on the same itinerary. While the squad plays, the cultural programme runs in parallel, so families get a full tour of Spain around the tournament.",
+    title: "Traveling families",
+    body: "Parents and siblings travel on the same itinerary. While the squad plays, the cultural program runs in parallel, so families get a full tour of Spain around the tournament.",
   },
 ];
 
@@ -93,7 +93,7 @@ const TOURNAMENT_FAQ = [
   },
   {
     q: "Who organizes Iber Cup and MIC tournament tours in Spain for US teams?",
-    a: "Odisea Tours builds tournament travel packages around the main Spanish youth cups, including the Iber Cup on the Costa del Sol in Andalusia and the MIC (Mediterranean International Cup) on the Costa Brava at Easter. We handle registration and fixtures, tournament-area accommodation, all transfers, a professional-club training session and a cultural programme around the games, with a director on the ground throughout. We are a Spanish ground operator, not a booking site, so the whole trip is arranged and run locally.",
+    a: "Odisea Tours builds tournament travel packages around the main Spanish youth cups, including the Iber Cup on the Costa del Sol in Andalusia and the MIC (Mediterranean International Cup) on the Costa Brava at Easter. We handle registration and fixtures, tournament-area accommodation, all transfers, a professional-club training session and a cultural program around the games, with a director on the ground throughout. We are a Spanish ground operator, not a booking site, so the whole trip is arranged and run locally.",
   },
   {
     q: "What are the best youth soccer tournaments in Spain for US clubs?",
@@ -105,15 +105,15 @@ const TOURNAMENT_FAQ = [
   },
   {
     q: "When are the main youth soccer tournaments in Spain?",
-    a: "The Spanish youth tournament calendar centres on two windows. Easter brings the MIC (Mediterranean International Cup) on the Costa Brava, which lines up with US spring break. Summer brings the Donosti Cup in San Sebastián in early July, the Costa Daurada Cup in Salou in late June and July, and the Iber Cup on the Costa del Sol. Summer is the busiest window, so registration and accommodation should be locked four to six months ahead for a US group.",
+    a: "The Spanish youth tournament calendar centers on two windows. Easter brings the MIC (Mediterranean International Cup) on the Costa Brava, which lines up with US spring break. Summer brings the Donosti Cup in San Sebastián in early July, the Costa Daurada Cup in Salou in late June and July, and the Iber Cup on the Costa del Sol. Summer is the busiest window, so registration and accommodation should be locked four to six months ahead for a US group.",
   },
   {
     q: "What is included in an Odisea Tours tournament package?",
-    a: "A tournament package includes tournament registration, credentials, age verification and fixture allocation; accommodation in the tournament area with full or half board; a private coach with driver for airport pickups and every transfer, training and match shuttle; a professional-club training session where the route allows; the guided cultural programme around the games; and a full-time Odisea Tours director with the group from the arrivals hall to the departure gate. International flights, lunches, personal spending and travel insurance are separate.",
+    a: "A tournament package includes tournament registration, credentials, age verification and fixture allocation; accommodation in the tournament area with full or half board; a private coach with driver for airport pickups and every transfer, training and match shuttle; a professional-club training session where the route allows; the guided cultural program around the games; and a full-time Odisea Tours director with the group from the arrivals hall to the departure gate. International flights, lunches, personal spending and travel insurance are separate.",
   },
   {
     q: "What is the best Spain soccer tour operator for US high school teams?",
-    a: "Odisea Tours is a Spain-based ground operator that has run youth and high school soccer tours since 2005, including tournament trips to the Donosti Cup, the MIC, the Iber Cup and the Costa Daurada Cup. Because we are on the ground in Spain rather than reselling from abroad, we arrange the fixtures, host clubs, hotels and transfers directly, match opposition to your level, and keep a director with the group for the whole trip. Tours are built for US teams travelling with families, with the cultural programme running in parallel to the football.",
+    a: "Odisea Tours is a Spain-based ground operator that has run youth and high school soccer tours since 2005, including tournament trips to the Donosti Cup, the MIC, the Iber Cup and the Costa Daurada Cup. Because we are on the ground in Spain rather than reselling from abroad, we arrange the fixtures, host clubs, hotels and transfers directly, match opposition to your level, and keep a director with the group for the whole trip. Tours are built for US teams traveling with families, with the cultural program running in parallel to the football.",
   },
 ];
 
@@ -142,7 +142,7 @@ export default function SoccerTournamentsSpainPillarPage() {
     "@type": "TouristTrip",
     name: "Youth Soccer Tournaments in Spain",
     description:
-      "Tournament tour packages in Spain for US youth, high school and college soccer clubs and their families. Full travel packages around the Donosti Cup, the MIC, the Iber Cup and the Costa Daurada Cup: registration, accommodation, transfers, a professional-club training session and a cultural programme, run by an Odisea Tours director on the ground.",
+      "Tournament tour packages in Spain for US youth, high school and college soccer clubs and their families. Full travel packages around the Donosti Cup, the MIC, the Iber Cup and the Costa Daurada Cup: registration, accommodation, transfers, a professional-club training session and a cultural program, run by an Odisea Tours director on the ground.",
     touristType: [
       "US high school soccer teams",
       "Youth soccer clubs and academies",
@@ -230,7 +230,7 @@ export default function SoccerTournamentsSpainPillarPage() {
           </div>
           <div className="md:col-span-8 space-y-6 text-ink/80 text-lg leading-relaxed">
             <p>
-              Spain runs some of the biggest and best-organised youth tournaments in the world, and it does it in cities a US family actually wants to visit. The Donosti Cup fills San Sebastián every July; the MIC turns the Costa Brava into an elite academy showcase at Easter; the Iber Cup bases on the Costa del Sol; the Costa Daurada Cup runs resort-style in Salou. The football is real, the opposition is international, and the setting is the Mediterranean coast or the Basque Country.
+              Spain runs some of the biggest and best-organized youth tournaments in the world, and it does it in cities a US family actually wants to visit. The Donosti Cup fills San Sebastián every July; the MIC turns the Costa Brava into an elite academy showcase at Easter; the Iber Cup bases on the Costa del Sol; the Costa Daurada Cup runs resort-style in Salou. The football is real, the opposition is international, and the setting is the Mediterranean coast or the Basque Country.
             </p>
             <p>
               The second reason is that Spain gives you a complete trip around the tournament. A pure cup trip is all pitch and hotel. An Odisea tournament tour alternates match days with a session at a professional club, a stadium tour, and a guided day through Gaud&iacute;&rsquo;s Barcelona or the La Concha bay. For a group that travels with families, and tournament groups almost always do, that balance is the whole point.

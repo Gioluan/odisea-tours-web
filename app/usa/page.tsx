@@ -51,7 +51,7 @@ export default function UsaIndexPage() {
           <p className="mt-4 max-w-[60ch] text-paper/75 leading-relaxed">
             Bringing a softball team? See the{" "}
             <Link href="/softball-tours-spain" className="underline underline-offset-4 hover:text-gold">Softball Tours in Spain</Link>{" "}
-            guide for US teams: four games against Spanish clubs across Madrid, Valencia and Barcelona, with a full cultural programme for travelling families.
+            guide for US teams: four games against Spanish clubs across Madrid, Valencia and Barcelona, with a full cultural program for traveling families.
           </p>
           <p className="mt-4 max-w-[60ch] text-paper/75 leading-relaxed">
             Playing a cup? See the{" "}

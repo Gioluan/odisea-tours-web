@@ -55,7 +55,7 @@ export const US_STATES: UsState[] = [
     ],
     real_clients: [
       "Long Beach University (college program, 2 trips, soccer-focused with Mauricio Ingrassia as Director of Coaching)",
-      "NorCal Coaches and Directors (coaching delegation, travelled with Odisea in 2012)",
+      "NorCal Coaches and Directors (coaching delegation, traveled with Odisea in 2012)",
     ],
     flight_overview:
       "California's gateway to Spain is Los Angeles International (LAX), with Iberia operating a year-round nonstop service to Madrid of around 11 hours. San Francisco (SFO), San Diego (SAN) and Sacramento (SMF) groups typically route through LAX or one-stop via Dallas, Miami or London. Group bookings on Iberia carry through-bag handling, which removes one of the biggest pain points on connections.",
@@ -63,7 +63,7 @@ export const US_STATES: UsState[] = [
     why_state_picks_spain: [
       "Year-round LAX to Madrid nonstop on Iberia. California groups land rested and train the same day, with no European weather window forcing the trip into a specific season.",
       "California's Spanish-speaking community runs deep enough that most California groups have at least one parent, coach or player who handles the language. The trip reads as cultural homecoming, not foreign expedition.",
-      "Tour cost from California sits in the same range a Disney week or an out-of-state showcase would. Families recognise the number and the value proposition lands without sticker shock.",
+      "Tour cost from California sits in the same range a Disney week or an out-of-state showcase would. Families recognize the number and the value proposition lands without sticker shock.",
     ],
     ideal_audiences: [
       "ECNL clubs (both genders) across Cal North and Cal South",
@@ -81,7 +81,7 @@ export const US_STATES: UsState[] = [
       },
       {
         q: "Have you actually run Spain tours for California clubs before?",
-        a: "Yes. Long Beach University has travelled with Odisea twice on in-season soccer-focused tours, in coordination with Director of Coaching Mauricio Ingrassia. The NorCal Coaches and Directors delegation travelled with us in 2012. We have hosted youth clubs, high school programs and college rosters from across the state for two decades.",
+        a: "Yes. Long Beach University has traveled with Odisea twice on in-season soccer-focused tours, in coordination with Director of Coaching Mauricio Ingrassia. The NorCal Coaches and Directors delegation traveled with us in 2012. We have hosted youth clubs, high school programs and college rosters from across the state for two decades.",
       },
       {
         q: "What does a Spain tour from California cost per player?",
@@ -93,7 +93,7 @@ export const US_STATES: UsState[] = [
       },
       {
         q: "Can families travel on the same itinerary as the players?",
-        a: "Yes, and a meaningful share of California families do. We run a parent-side cultural programme in parallel with training, with a bilingual guide leading market visits, cooking classes and city tours while players are on the pitch. Everyone reconvenes for dinners. Parents are not sitting in hotel lobbies.",
+        a: "Yes, and a meaningful share of California families do. We run a parent-side cultural program in parallel with training, with a bilingual guide leading market visits, cooking classes and city tours while players are on the pitch. Everyone reconvenes for dinners. Parents are not sitting in hotel lobbies.",
       },
       {
         q: "Which California cities have detailed planning pages?",
@@ -109,7 +109,7 @@ export const US_STATES: UsState[] = [
     og_summary:
       "Spain soccer tours for Texas clubs, high schools and college programs. American Airlines nonstop DFW to Madrid in 9.5 hours. ECNL Texas, UIL varsity, FC Dallas and Houston Dynamo academies all welcome.",
     intro:
-      "Texas runs one of the most organised youth soccer ecosystems in the country, anchored by the FC Dallas and Houston Dynamo academies and supported by deep ECNL and NPL bases across the major metros. Odisea Tours hosts Texas soccer programs across DFW, Greater Houston, Austin and San Antonio, and the American Airlines nonstop service from Dallas to Madrid makes Texas one of the easiest US states to build a Spain tour around.",
+      "Texas runs one of the most organized youth soccer ecosystems in the country, anchored by the FC Dallas and Houston Dynamo academies and supported by deep ECNL and NPL bases across the major metros. Odisea Tours hosts Texas soccer programs across DFW, Greater Houston, Austin and San Antonio, and the American Airlines nonstop service from Dallas to Madrid makes Texas one of the easiest US states to build a Spain tour around.",
     soccer_landscape:
       "Tex-N and Tex-S Youth Soccer Associations together register more youth soccer players than any state outside California. ECNL has more than fifteen Texas clubs across both genders, and MLS Next is anchored by FC Dallas, one of the most productive academies in North America, alongside Houston Dynamo affiliates. The University Interscholastic League (UIL) runs Texas high school soccer with a January through April schedule, which leaves the summer and winter break windows clear for international travel without disrupting the school season. The college pipeline includes Big 12 and American Conference programs (SMU, Houston, Texas Tech, Baylor, Texas State, TCU) and a deep NAIA presence.",
     major_soccer_organisations: [
@@ -282,7 +282,7 @@ export const US_STATES: UsState[] = [
       },
       {
         q: "Does the tour work for both private school and public school groups?",
-        a: "Yes. We run separate tour shapes for CHSAA private school varsity programs (often combined with Spanish-language coursework) and NYSPHSAA public school programs (often combined with an athletic department's overall European exposure). Both groups travel in similar windows but the cultural programme adapts to the group's interests.",
+        a: "Yes. We run separate tour shapes for CHSAA private school varsity programs (often combined with Spanish-language coursework) and NYSPHSAA public school programs (often combined with an athletic department's overall European exposure). Both groups travel in similar windows but the cultural program adapts to the group's interests.",
       },
       {
         q: "What does a Spain tour from New York cost per player?",
@@ -304,9 +304,9 @@ export const US_STATES: UsState[] = [
     abbreviation: "HI",
     hero_photo: "/photos/veterans-soccer-tour-match-vs-spanish-team.jpg",
     og_summary:
-      "Spain soccer tours for Hawaii clubs and high schools. Hawaii Elite has travelled annually with Odisea Tours since 2019. Brent Nunes is our Hawaii partner. Routing through LAX with nonstop continuation to Madrid.",
+      "Spain soccer tours for Hawaii clubs and high schools. Hawaii Elite has traveled annually with Odisea Tours since 2019. Brent Nunes is our Hawaii partner. Routing through LAX with nonstop continuation to Madrid.",
     intro:
-      "Hawaii is the longest journey from a US state to Spain, and it is also the state with our deepest, longest-running client relationship. Hawaii Elite has travelled with Odisea Tours every year since 2019, in partnership with Brent Nunes. After six consecutive years of running Hawaii groups through Madrid, Valencia and Barcelona, we have built a tour shape specifically calibrated for the Pacific time zone, the long flight day, and the unique competitive landscape Hawaii youth soccer operates inside.",
+      "Hawaii is the longest journey from a US state to Spain, and it is also the state with our deepest, longest-running client relationship. Hawaii Elite has traveled with Odisea Tours every year since 2019, in partnership with Brent Nunes. After six consecutive years of running Hawaii groups through Madrid, Valencia and Barcelona, we have built a tour shape specifically calibrated for the Pacific time zone, the long flight day, and the unique competitive landscape Hawaii youth soccer operates inside.",
     soccer_landscape:
       "Hawaii Youth Soccer Association (HYSA) runs the state's competitive youth soccer base, and Hawaii Elite is the most prominent club. The Hawaii Premier Soccer League covers the upper end of the competitive pyramid. What makes Hawaii distinct from any mainland state is the geography. Hawaii kids have less access to mainland US showcase events than their peers in California or Texas, which makes an international tour fill a clearer competitive gap. Players who travel with us from Hawaii return having played against Spanish academy and amateur opposition the same age and level they would meet at a top mainland showcase, with the cultural depth of a real European tour as a bonus the mainland circuit cannot provide.",
     major_soccer_organisations: [
@@ -320,7 +320,7 @@ export const US_STATES: UsState[] = [
       { slug: "kailua-kona", name: "Big Island and outer islands", note: "Clubs from Kona, Hilo, Maui and Kauai connect through Honolulu or LAX" },
     ],
     real_clients: [
-      "Hawaii Elite (six consecutive years travelling with Odisea since 2019, partnership with Brent Nunes).",
+      "Hawaii Elite (six consecutive years traveling with Odisea since 2019, partnership with Brent Nunes).",
     ],
     flight_overview:
       "Hawaii's gateway to Spain is Honolulu (HNL), with a connection through LAX onto Iberia's nonstop service to Madrid. Total travel time is around 17 to 19 hours including the LAX connection. We schedule HNL departures for late evening so groups arrive Madrid in the morning, hold the hotel for an early check-in, and protect Day 1 as a pure rest day before training begins on Day 2. Outer-island groups (Maui, Kauai, Big Island) connect through Honolulu first.",
@@ -345,7 +345,7 @@ export const US_STATES: UsState[] = [
       },
       {
         q: "Have you really hosted Hawaii groups before?",
-        a: "Yes. Hawaii Elite has travelled with Odisea Tours every year since 2019, six consecutive years as of 2026, in partnership with Brent Nunes. We have run the Hawaii to Spain routing more times than any other Pacific-region travel pattern, and the operational details (LAX layover handling, Day 1 rest protocol, Pacific time zone reset) are dialled in.",
+        a: "Yes. Hawaii Elite has traveled with Odisea Tours every year since 2019, six consecutive years as of 2026, in partnership with Brent Nunes. We have run the Hawaii to Spain routing more times than any other Pacific-region travel pattern, and the operational details (LAX layover handling, Day 1 rest protocol, Pacific time zone reset) are dialled in.",
       },
       {
         q: "What does a Spain tour from Hawaii cost per player?",
@@ -353,7 +353,7 @@ export const US_STATES: UsState[] = [
       },
       {
         q: "Who is Brent Nunes?",
-        a: "Brent Nunes is our partner in Hawaii and the contact through which Hawaii Elite has travelled with Odisea Tours since 2019. Brent handles the Hawaii-side coordination for the partnership.",
+        a: "Brent Nunes is our partner in Hawaii and the contact through which Hawaii Elite has traveled with Odisea Tours since 2019. Brent handles the Hawaii-side coordination for the partnership.",
       },
       {
         q: "Is the long flight worth it for younger players?",
@@ -603,7 +603,7 @@ export const US_STATES: UsState[] = [
     og_summary:
       "Spain soccer tours for North Carolina clubs, high schools and college programs. American nonstop Charlotte to Madrid in around 8 hours. NCFC Youth and North Carolina Courage ecosystem, one of the largest youth soccer bases in the Southeast.",
     intro:
-      "North Carolina runs one of the largest and best-organised youth soccer bases in the Southeast, anchored by NCFC Youth and the North Carolina FC and Courage professional structure in the Triangle. Our team has hosted US soccer programs since 2005, and North Carolina groups build their Spain tour around the American nonstop from Charlotte to Madrid, which gives the state a direct gateway most of the Southeast does not have.",
+      "North Carolina runs one of the largest and best-organized youth soccer bases in the Southeast, anchored by NCFC Youth and the North Carolina FC and Courage professional structure in the Triangle. Our team has hosted US soccer programs since 2005, and North Carolina groups build their Spain tour around the American nonstop from Charlotte to Madrid, which gives the state a direct gateway most of the Southeast does not have.",
     soccer_landscape:
       "The North Carolina Youth Soccer Association registers one of the largest competitive bases in the Southeast, and NCFC Youth in the Triangle is among the biggest youth clubs in the country by registration. North Carolina FC and the NWSL's North Carolina Courage anchor the professional structure, and ECNL fields a strong North Carolina contingent across both genders. The NCHSAA high school season runs in the fall for boys and spring for girls, which gives programs flexibility. The college pipeline runs through the ACC, home to North Carolina, Duke, NC State and Wake Forest.",
     major_soccer_organisations: [

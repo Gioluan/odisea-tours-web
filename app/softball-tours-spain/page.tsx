@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Softball Tours in Spain | Odisea Tours · Since 2005",
     description:
-      "A real softball tour to Spain for US teams: four games against Spanish clubs in Madrid, Valencia and Barcelona, full cultural programme for travelling families, an Odisea director on the ground for the whole trip.",
+      "A real softball tour to Spain for US teams: four games against Spanish clubs in Madrid, Valencia and Barcelona, full cultural program for traveling families, an Odisea director on the ground for the whole trip.",
     url: CANONICAL,
     type: "website",
     images: [
@@ -41,7 +41,7 @@ const HOST_CLUBS = [
   {
     name: "Club CBS Rivas",
     place: "Rivas-Vaciamadrid · Madrid",
-    note: "An established Madrid-region club and a strong, well-organised opener, played after the Toledo day trip.",
+    note: "An established Madrid-region club and a strong, well-organized opener, played after the Toledo day trip.",
   },
   {
     name: "Selección Valenciana U22",
@@ -64,7 +64,7 @@ const AUDIENCES = [
   {
     tag: "High school",
     title: "High school programs",
-    body: "Varsity girls fastpitch programs travelling with parents and siblings. Spring break and early-summer windows that line up with the end of the US school year.",
+    body: "Varsity girls fastpitch programs traveling with parents and siblings. Spring break and early-summer windows that line up with the end of the US school year.",
   },
   {
     tag: "Travel ball",
@@ -78,8 +78,8 @@ const AUDIENCES = [
   },
   {
     tag: "Families",
-    title: "Travelling families",
-    body: "Softball groups almost always travel with families. The cultural programme runs in parallel, so parents and siblings get a full tour of Spain while the players get their four games.",
+    title: "Traveling families",
+    body: "Softball groups almost always travel with families. The cultural program runs in parallel, so parents and siblings get a full tour of Spain while the players get their four games.",
   },
 ];
 
@@ -94,7 +94,7 @@ const SOFTBALL_FAQ = [
   },
   {
     q: "How much does a softball tour to Spain cost for a US team?",
-    a: "A Spain softball tour starts from $1,700 per person for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. The price scales with the number of nights, the group size, the season and the hotel category, so a fuller nine-day trip through Madrid, Valencia and Barcelona with four games and the full cultural programme sits above that entry point. Pricing is locked once the group size, dates and trip length are confirmed.",
+    a: "A Spain softball tour starts from $1,700 per person for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. The price scales with the number of nights, the group size, the season and the hotel category, so a fuller nine-day trip through Madrid, Valencia and Barcelona with four games and the full cultural program sits above that entry point. Pricing is locked once the group size, dates and trip length are confirmed.",
   },
   {
     q: "What is the best time of year for a softball tour to Spain?",
@@ -102,7 +102,7 @@ const SOFTBALL_FAQ = [
   },
   {
     q: "Can families travel with the team on a Spain softball tour?",
-    a: "Yes, and most softball groups do. The tour is built so families travel on the same itinerary as the players. While the team plays its four games, the cultural programme runs in parallel: Las Ventas, Toledo, the City of Arts and Sciences in Valencia, Sagunto castle and a guided day through Gaudí's Barcelona. The players get competitive softball, the parents get a tour of Spain, and nobody spends the week sitting in a single set of bleachers.",
+    a: "Yes, and most softball groups do. The tour is built so families travel on the same itinerary as the players. While the team plays its four games, the cultural program runs in parallel: Las Ventas, Toledo, the City of Arts and Sciences in Valencia, Sagunto castle and a guided day through Gaudí's Barcelona. The players get competitive softball, the parents get a tour of Spain, and nobody spends the week sitting in a single set of bleachers.",
   },
   {
     q: "What is included in a Spain softball tour?",
@@ -114,7 +114,7 @@ const SOFTBALL_FAQ = [
   },
   {
     q: "Who organizes softball tours to Spain for US teams?",
-    a: "Odisea Tours organizes softball tours to Spain for US teams. We are a Spain-based ground operator, so we arrange the four games against established Spanish clubs, the accommodation, the transfers and the cultural programme directly and locally, rather than reselling from abroad. Opponents are matched to your team's age and level, and an Odisea director travels with the group for the whole trip. Our team has run group sport tours in Spain since 2005.",
+    a: "Odisea Tours organizes softball tours to Spain for US teams. We are a Spain-based ground operator, so we arrange the four games against established Spanish clubs, the accommodation, the transfers and the cultural program directly and locally, rather than reselling from abroad. Opponents are matched to your team's age and level, and an Odisea director travels with the group for the whole trip. Our team has run group sport tours in Spain since 2005.",
   },
   {
     q: "Can you plan a women's or fastpitch softball tour to Spain with real games?",
@@ -122,7 +122,7 @@ const SOFTBALL_FAQ = [
   },
   {
     q: "Is a spring break softball trip to Spain possible for a high school girls team?",
-    a: "Yes. A spring break softball trip to Spain works well for a high school girls team and is one of the windows we run most. The trip is six nights and up, with four games against Spanish clubs and a full cultural programme that travelling families join, and it can be sized to a school-break week. Late spring and early summer have the warmest, driest weather and the most available Spanish opposition, so if your break falls in March or April we confirm fixtures and hotels early to lock the dates.",
+    a: "Yes. A spring break softball trip to Spain works well for a high school girls team and is one of the windows we run most. The trip is six nights and up, with four games against Spanish clubs and a full cultural program that traveling families join, and it can be sized to a school-break week. Late spring and early summer have the warmest, driest weather and the most available Spanish opposition, so if your break falls in March or April we confirm fixtures and hotels early to lock the dates.",
   },
 ];
 
@@ -153,7 +153,7 @@ export default function SoftballToursSpainPillarPage() {
     "@type": "TouristTrip",
     name: "Softball Tours in Spain",
     description:
-      "Group softball tours in Spain for US high school, travel ball and college teams and their families. Four competitive games against established Spanish clubs across Madrid, Valencia and Barcelona, woven into a full cultural programme, run by an Odisea Tours director on the ground.",
+      "Group softball tours in Spain for US high school, travel ball and college teams and their families. Four competitive games against established Spanish clubs across Madrid, Valencia and Barcelona, woven into a full cultural program, run by an Odisea Tours director on the ground.",
     touristType: [
       "US high school softball teams",
       "Girls travel ball and club softball teams",
@@ -247,7 +247,7 @@ export default function SoftballToursSpainPillarPage() {
               Softball in the US is enormous and the level is high, so the first thing a coach wants to know is whether Spain can give their players real games. It can. Spain has an established softball community concentrated around Madrid, Valencia and Catalonia, with federation structures, regional select sides and clubs that have been playing for decades.
             </p>
             <p>
-              The level is not the US college game, and we never pretend it is. What it is, is competitive, well-organised, age-appropriate opposition that gives your players four real games in three different cities, against teams who are genuinely happy to host a visiting American side. The Spanish clubs treat these fixtures as an event. The post-game mixing between a team from Texas or California and a team from Valencia is consistently the part players talk about on the bus home.
+              The level is not the US college game, and we never pretend it is. What it is, is competitive, well-organized, age-appropriate opposition that gives your players four real games in three different cities, against teams who are genuinely happy to host a visiting American side. The Spanish clubs treat these fixtures as an event. The post-game mixing between a team from Texas or California and a team from Valencia is consistently the part players talk about on the bus home.
             </p>
             <p>
               The second reason is that Spain gives you a complete trip around the softball. A pure tournament trip is all diamond and hotel. A Spain tour alternates game days with Las Ventas, Toledo, the City of Arts and Sciences, Sagunto castle above the Mediterranean, and a guided day through Gaudí's Barcelona. For a group that travels with families, and softball groups almost always do, that balance is the whole point.
@@ -409,7 +409,7 @@ export default function SoftballToursSpainPillarPage() {
                 <span className="ml-2 text-base text-ink/55 font-mono-editorial tracking-wider uppercase">per person</span>
               </div>
               <p className="mt-4 text-ink-soft leading-relaxed text-[0.97rem]">
-                The entry rate is for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. The fuller nine-day Madrid, Valencia and Barcelona trip, with four games and the full cultural programme, sits above that entry point. Pricing scales with the length, the season and the hotel category, and larger groups bring the per-person cost down.
+                The entry rate is for a six-night trip, based on a group of 20, twin sharing, ground services only, with international flights separate. The fuller nine-day Madrid, Valencia and Barcelona trip, with four games and the full cultural program, sits above that entry point. Pricing scales with the length, the season and the hotel category, and larger groups bring the per-person cost down.
               </p>
             </div>
             <div className="border border-ink/15 p-7">
@@ -428,7 +428,7 @@ export default function SoftballToursSpainPillarPage() {
           </div>
 
           <p className="mt-10 text-ink-soft leading-relaxed text-[0.95rem] max-w-[68ch]">
-            Lunches are deliberately left out of the package so families can eat where they want at midday and the headline price stays honest. The honest way to get a real number is to tell us the squad size, the number of travelling families, your age groups, your travel window and how many nights you want, and we come back with a per-person price that names the hotels and the opponents rather than hiding behind a from-rate. International flights, personal spending and travel insurance, which we strongly recommend, are not included.
+            Lunches are deliberately left out of the package so families can eat where they want at midday and the headline price stays honest. The honest way to get a real number is to tell us the squad size, the number of traveling families, your age groups, your travel window and how many nights you want, and we come back with a per-person price that names the hotels and the opponents rather than hiding behind a from-rate. International flights, personal spending and travel insurance, which we strongly recommend, are not included.
           </p>
         </div>
       </section>

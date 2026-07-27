@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   return {
     title: `Spain Tour Proposal · ${proposal.club_name}`,
-    description: `A personalised Spain sports tour proposal for ${proposal.club_name}.`,
+    description: `A personalized Spain sports tour proposal for ${proposal.club_name}.`,
     robots: { index: false, follow: false },
   };
 }

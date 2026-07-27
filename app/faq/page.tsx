@@ -143,7 +143,7 @@ export default function FaqPage() {
       <JournalLinks
         title="Long-form answers"
         italicTail="to the bigger questions."
-        intro="The FAQ above gives you the short version. These field notes go deeper for coaches, parents and trip organisers who want the full picture before they commit."
+        intro="The FAQ above gives you the short version. These field notes go deeper for coaches, parents and trip organizers who want the full picture before they commit."
         slugs={[
           "youth-soccer-tours-to-spain-complete-guide",
           "what-a-youth-soccer-tour-to-spain-costs",

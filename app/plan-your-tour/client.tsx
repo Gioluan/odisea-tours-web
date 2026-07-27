@@ -71,7 +71,7 @@ export default function PlanYourTourPage() {
       `Sport: ${sportLabel}`,
       `Group Type: ${form.groupType}`,
       `Group Size: ${form.groupSize}`,
-      `Families travelling: ${form.families || "Not specified"}`,
+      `Families traveling: ${form.families || "Not specified"}`,
       `Destination: ${form.destination}`,
       `Preferred Dates: ${form.preferredDates || "Flexible"}`,
       `Message: ${form.message || "No additional message"}`,
@@ -162,7 +162,7 @@ export default function PlanYourTourPage() {
             </h1>
             <p className="text-paper/50 text-lg max-w-lg reveal">
               {isSoftball
-                ? "Tell us your squad size, your players' ages and how many families are travelling. We come back with a draft nine-day itinerary and a per-person number that names the cities, the host clubs and the hotels."
+                ? "Tell us your squad size, your players' ages and how many families are traveling. We come back with a draft nine-day itinerary and a per-person number that names the cities, the host clubs and the hotels."
                 : "Tell us about your group and we'll build a custom itinerary. No commitment, no pressure. Just 20 years of experience at your service."}
             </p>
           </div>
@@ -321,10 +321,10 @@ export default function PlanYourTourPage() {
               </div>
             </div>
 
-            {/* Families travelling */}
+            {/* Families traveling */}
             <div className="reveal">
               <label className="font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-ink-muted block mb-2">
-                How many families are travelling? {isSoftball ? "" : "(optional)"}
+                How many families are traveling? {isSoftball ? "" : "(optional)"}
               </label>
               <input
                 type="text"
@@ -335,7 +335,7 @@ export default function PlanYourTourPage() {
               />
               {isSoftball && (
                 <p className="font-mono-editorial text-[0.58rem] tracking-[0.22em] uppercase text-ink-muted/70 mt-2">
-                  Softball groups travel with families. They join the cultural programme and are quoted at a lower rate than players.
+                  Softball groups travel with families. They join the cultural program and are quoted at a lower rate than players.
                 </p>
               )}
             </div>

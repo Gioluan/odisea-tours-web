@@ -27,7 +27,7 @@ const ITINERARY = [
   {
     day: "Day 03",
     title: "First fixture",
-    detail: "Competitive friendly against an age-matched Spanish academy side. Match filmed and tagged per player for post-trip review.",
+    detail: "Competitive friendly against an age-matched Spanish academy side, matched to your squad's level ahead of the trip.",
   },
   {
     day: "Day 04",
@@ -183,7 +183,7 @@ export default function ProposalView({ proposal }: { proposal: Proposal }) {
             {[
               { img: "/photos/veterans-soccer-tour-camp-nou-barcelona.jpg", label: "Facilities", title: "Camp Nou + La Masia tour", body: "Stadium and academy visit. Your players walk the tunnel champions walked." },
               { img: "/photos/odisea-tours-professional-coaching.jpg", label: "Training", title: "Daily sessions with Spanish coaches", body: "Methodology straight from La Liga youth development. Not generic drills." },
-              { img: "/photos/veterans-soccer-tour-valencia-cf-match.jpg", label: "Matches", title: "Fixtures vs Spanish academy teams", body: "Two or three friendlies against age-matched clubs. Filmed and tagged per player." },
+              { img: "/photos/veterans-soccer-tour-valencia-cf-match.jpg", label: "Matches", title: "Fixtures vs Spanish academy teams", body: "Two or three friendlies against age-matched clubs." },
               { img: "/photos/veterans-soccer-tour-spanish-football-federation.jpg", label: "Accommodation", title: "Spanish FA headquarters stay", body: "Train where the national team trains. Sleep where the national team sleeps." },
               { img: "/photos/odisea-tours-group-barcelona-cathedral.jpg", label: "Culture", title: "Barcelona + Gaudí half-day", body: "Families welcome. Real city, real food, real Spain. Not a theme park." },
               { img: "/photos/veterans-soccer-tour-real-madrid-bernabeu.jpg", label: "Optional", title: "Santiago Bernabéu stop", body: "Add Madrid for a 9th day. El Clásico rivalry, both sides, same tour." },

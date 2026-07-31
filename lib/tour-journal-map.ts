@@ -69,6 +69,12 @@ export const TOUR_TO_JOURNAL: Record<string, string[]> = {
     "how-to-plan-a-group-trip-to-spain",
     "how-to-fundraise-for-your-teams-spain-tour",
   ],
+  "barcelona-costa-brava-soccer-tour": [
+    "costa-brava-the-coast-most-soccer-tours-skip",
+    "best-time-of-year-for-a-youth-soccer-tour-to-spain",
+    "arranging-friendly-matches-against-spanish-youth-clubs",
+    "what-a-youth-soccer-tour-to-spain-costs",
+  ],
 };
 
 export function relatedJournalPosts(tourSlug: string, limit = 3): Post[] {

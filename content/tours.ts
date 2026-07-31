@@ -1333,6 +1333,131 @@ export const TOURS: Tour[] = [
       },
     ],
   },
+  {
+    slug: "barcelona-costa-brava-soccer-tour",
+    chapter: "XV",
+    title: "Barcelona &",
+    italicTitle: "the Costa Brava",
+    tagline: "Two sessions with FC Barcelona coaching staff, then the coast most tours never see.",
+    description:
+      "Nine days in Catalonia built on two halves. First four nights on the coast at Castelldefels, with two morning training sessions run by FC Barcelona coaching staff at the Joan Gamper complex, a tour of Spotify Camp Nou for players and families, the Gothic Quarter and Gaudí, and a competitive game against Spanish opposition under the lights. Then three nights north on the Costa Brava: Tossa de Mar and its walled medieval town, a boat around the cliffs of Cap de Creus into Cadaqués, the Dalí Theatre-Museum at Figueres and the Romanesque town of Besalú. The group comes back down through Girona for a final night at Castelldefels, twenty minutes from the terminal, so departure morning is a breakfast rather than a dawn coach. In and out of Barcelona-El Prat, private coach throughout.",
+    image: "/photos/spain-soccer-tour-costa-brava-cadaques.jpg",
+    coordinates: "42.2887° N / 3.2790° E",
+    duration: "8 nights · 9 days",
+    groupSize: "20–55 players, staff & families",
+    accent: "#0f7fa5",
+    faq: [
+      {
+        q: "What is the Barcelona and Costa Brava soccer tour?",
+        a: "It is a nine-day, eight-night youth soccer program Odisea Tours runs in Catalonia. The group flies into Barcelona-El Prat and stays four nights on the coast at Castelldefels, training twice with FC Barcelona coaching staff at the Joan Gamper complex, touring Spotify Camp Nou and playing a competitive game against Spanish opposition. The tour then moves three nights north to the Costa Brava for Tossa de Mar, Cadaqués by boat around Cap de Creus, the Dalí Theatre-Museum at Figueres and medieval Besalú, before returning south via Girona for a final night at Castelldefels and the flight home.",
+      },
+      {
+        q: "Can a US youth team really train with FC Barcelona coaches?",
+        a: "Yes. The two morning sessions run at the Joan Gamper complex and are led by FC Barcelona coaching staff, using the methodology the club's own academy is built on. These are organized training experiences that visiting teams book through the club, not a claim of official partnership, and the number of sessions and the times are confirmed in writing before the group departs.",
+      },
+      {
+        q: "Is the Costa Brava worth adding to a Barcelona soccer tour?",
+        a: "It is the part of Catalonia most tours skip, and it is an hour and a half from Barcelona. Tossa de Mar has the only walled medieval town left standing on the Catalan coast, with the beach at the foot of the ramparts. Cadaqués is whitewashed, stacked around a church on a headland and awkward to reach by road, which is why the group arrives by boat around the cliffs of Cap de Creus. Figueres holds the Dalí Theatre-Museum, the strangest building in Spain, and Besalú is entered on foot over a fortified twelfth-century bridge. For a squad travelling with families it turns a training week into a trip parents talk about afterwards.",
+      },
+      {
+        q: "How long is the transfer from Castelldefels to Barcelona airport?",
+        a: "About twenty minutes. That is the reason the tour comes back down the coast for its final night rather than flying out of the Costa Brava. From Roses the departure transfer would run close to two hours, which means a dawn start with tired players and luggage. Returning to Castelldefels the night before turns departure morning into breakfast and a short hop, and the drive south is broken with a guided stop in Girona so the day still earns its place.",
+      },
+      {
+        q: "What time of year does this tour run?",
+        a: "It is built for the summer window, late June through July and into early August, when US and Australian club seasons are between campaigns and Catalonia is at its best for the coastal half of the trip. Summer is also the busiest window on the Costa Brava, so hotels, the coach and the FC Barcelona sessions need locking eight to ten months out. The program also runs in spring, when the coast is quieter and rates are lower.",
+      },
+    ],
+    includes: [
+      "Eight nights: five on the Barcelona coast at Castelldefels (four at the start, one at the end) and three on the Costa Brava",
+      "Two training sessions with FC Barcelona coaching staff at the Joan Gamper complex",
+      "Spotify Camp Nou stadium tour for players, staff and families",
+      "A competitive game against Spanish opposition, with pitch, referees and kit-room access, opposition matched to age and level",
+      "Half board throughout: breakfast and dinner at the accommodation every day",
+      "Guided walks in the Gothic Quarter, Tossa de Mar, medieval Besalú and Girona",
+      "Boat around Cap de Creus to Cadaqués, and entry to the Dalí Theatre-Museum at Figueres",
+      "Private coach with driver throughout, including both airport transfers",
+      "Odisea Tours director on the ground for the full nine days",
+    ],
+    itinerary: [
+      {
+        day: "I",
+        title: "Arrival · Castelldefels",
+        detail: "Welcome at Barcelona-El Prat, short transfer down to Castelldefels, check-in and the afternoon free to shake off the flight. A first walk on the seafront and a welcome dinner.",
+        image: "/photos/it-castelldefels-beach-sunset.jpg",
+      },
+      {
+        day: "II",
+        title: "The First Session",
+        detail: "Straight to work: a morning training session at the Joan Gamper complex led by FC Barcelona coaching staff. Then the afternoon in the city, the Gothic Quarter and La Rambla on foot with a guide.",
+        image: "/photos/spain-soccer-tour-australia-clubs-fc-barcelona-joan-gamper-spain.jpg",
+      },
+      {
+        day: "III",
+        title: "Spotify Camp Nou",
+        detail: "A morning tour of Spotify Camp Nou for players, staff and families, lunch in the city, then the Gaudí afternoon at the Sagrada Família and Park Güell before the beach at Castelldefels.",
+        image: "/photos/spain-soccer-tour-camp-nou-stadium-visit-barcelona.jpg",
+      },
+      {
+        day: "IV",
+        title: "A Session, Then a Game",
+        detail: "The biggest day of the tour. A second morning session with FC Barcelona coaching staff, legs up through the heat of the afternoon, then the competitive game against Spanish opposition under the lights.",
+        image: "/photos/spain-soccer-tour-match-vs-spanish-academy-side.jpg",
+      },
+      {
+        day: "V",
+        title: "North via Tossa de Mar",
+        detail: "Checkout and the coach up the coast, breaking the drive at Tossa de Mar. The Vila Vella is the only walled medieval town left standing on the Catalan coast, three towers and a curtain wall dropping onto the beach. Then north to the Costa Brava base.",
+        image: "/photos/spain-soccer-tour-costa-brava-tossa-de-mar.jpg",
+      },
+      {
+        day: "VI",
+        title: "Cadaqués, by Sea",
+        detail: "The best day on the coast. A boat around the cliffs of Cap de Creus into Cadaqués, which is how the village should be arrived at. The old town, Dalí's house on the water at Portlligat, and an afternoon swimming off the coves.",
+        image: "/photos/spain-soccer-tour-costa-brava-cadaques.jpg",
+      },
+      {
+        day: "VII",
+        title: "Besalú & Dalí",
+        detail: "Inland. Besalú is a Romanesque town that never modernised: you walk in over a fortified twelfth-century bridge into streets that have not changed shape in eight hundred years. Then Figueres and the Dalí Theatre-Museum, which the painter built himself and is buried under.",
+        image: "/photos/spain-soccer-tour-costa-brava-besalu.jpg",
+      },
+      {
+        day: "VIII",
+        title: "Girona, and Back",
+        detail: "The run south, broken in Girona: the cathedral steps, the coloured houses stacked over the Onyar and one of the best-preserved Jewish quarters in Europe. Back to Castelldefels for a last afternoon on the beach and the farewell dinner.",
+        image: "/photos/spain-soccer-tour-costa-brava-girona.jpg",
+      },
+      {
+        day: "IX",
+        title: "Departure · Barcelona",
+        detail: "Breakfast, the group photo, and twenty minutes up the road to Barcelona-El Prat for the flights home. No dawn start and no long transfer, which is the whole reason the last night sits back on the Barcelona coast.",
+        image: "/photos/odisea-tours-both-teams-post-match.jpg",
+      },
+    ],
+    gallery: [
+      {
+        src: "/photos/spain-soccer-tour-costa-brava-cadaques.jpg",
+        alt: "Cadaqués on the Costa Brava, the whitewashed old town stacked around its church on the headland, visited on an Odisea Tours soccer tour in Spain",
+      },
+      {
+        src: "/photos/spain-soccer-tour-costa-brava-tossa-de-mar.jpg",
+        alt: "Tossa de Mar and the Vila Vella walled medieval town above the bay on the Costa Brava, Catalonia",
+      },
+      {
+        src: "/photos/spain-soccer-tour-costa-brava-besalu.jpg",
+        alt: "The fortified Romanesque bridge at Besalú and the medieval town behind it, Girona province, Catalonia",
+      },
+      {
+        src: "/photos/spain-soccer-tour-costa-brava-girona.jpg",
+        alt: "The coloured houses along the Onyar river in Girona with the cathedral bell tower behind, Catalonia",
+      },
+      {
+        src: "/photos/spain-soccer-tour-australia-clubs-fc-barcelona-joan-gamper-spain.jpg",
+        alt: "Visiting youth team training with FC Barcelona coaching staff at the Joan Gamper complex in Barcelona",
+      },
+    ],
+  },
 ];
 
 export function tourBySlug(slug: string) {

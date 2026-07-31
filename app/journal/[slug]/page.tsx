@@ -6,12 +6,14 @@ import { POSTS, postBySlug, authorOf, tagsOf, howToOf, clusterOf, pillarOf, lang
 
 const SITE = "https://odisea-tours.com";
 
+// Inline markdown for post bodies: links and **bold**. Anything not matched is
+// passed through as text, so a stray asterisk never breaks a paragraph.
 function renderParagraph(text: string) {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
   return parts.map((part, i) => {
-    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-    if (match) {
-      const [, linkText, href] = match;
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (link) {
+      const [, linkText, href] = link;
       const isExternal = href.startsWith("http");
       return (
         <a
@@ -22,6 +24,14 @@ function renderParagraph(text: string) {
         >
           {linkText}
         </a>
+      );
+    }
+    const bold = part.match(/^\*\*([^*]+)\*\*$/);
+    if (bold) {
+      return (
+        <strong key={i} className="font-semibold text-ink">
+          {bold[1]}
+        </strong>
       );
     }
     return <span key={i}>{part}</span>;
@@ -328,6 +338,16 @@ export default async function JournalPost({
                   >
                     {p.slice(3)}
                   </h2>
+                );
+              }
+              if (p.startsWith("> ")) {
+                return (
+                  <blockquote
+                    key={i}
+                    className="border-l-2 border-gold pl-6 !my-10 font-display-italic text-xl md:text-2xl leading-[1.5] text-ink/75"
+                  >
+                    {renderParagraph(p.slice(2))}
+                  </blockquote>
                 );
               }
               const isFirst = !firstParagraphSeen;

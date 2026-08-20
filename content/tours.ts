@@ -415,16 +415,16 @@ export const TOURS: Tour[] = [
     italicTitle: "& Moorish Spain",
     tagline: "Andalusia, from royal Madrid to the Alhambra.",
     description:
-      "Seven nights through the south. A curator-led hour at the Prado. The Mezquita of Córdoba when the tour groups haven't arrived yet. The Alcázar of Seville with an art historian who will tell you what Game of Thrones got right. A live flamenco tablao in Triana and a full day inside the Alhambra palaces at the pace they deserve. Paced for adults who want to linger.",
+      "Six nights through the south. A curator-led hour at the Prado. The Mezquita of Córdoba when the tour groups haven't arrived yet. The Alcázar of Seville with an art historian who will tell you what Game of Thrones got right. A live flamenco tablao in Triana and a full day inside the Alhambra palaces at the pace they deserve. Paced for adults who want to linger.",
     image: "/photos/flamenco-moorish-spain-hero.jpg",
     coordinates: "37.1760° N / 3.5880° W",
-    duration: "7 nights · 8 days",
+    duration: "6 nights · 7 days",
     groupSize: "20 travelers",
     accent: "#a8391e",
     faq: [
       {
         q: "Can you organize a flamenco and tapas tour of Spain for a book club or small group?",
-        a: "Yes. Odisea Tours organizes flamenco and tapas tours of Spain for book clubs, groups of friends and cultural groups. The Flamenco & Moorish Spain tour spends seven nights across Madrid, Córdoba, Sevilla and Granada with a live flamenco tablao and tapas dinner in Triana, an art historian at the Prado, the Mezquita of Córdoba, the Real Alcázar of Sevilla and a full day inside the Alhambra. Tapas evenings and the daily pace are tailored to adults who want to linger.",
+        a: "Yes. Odisea Tours organizes flamenco and tapas tours of Spain for book clubs, groups of friends and cultural groups. The Flamenco & Moorish Spain tour spends six nights across Madrid, Córdoba, Sevilla and Granada with a live flamenco tablao and tapas dinner in Triana, an art historian at the Prado, the Mezquita of Córdoba, the Real Alcázar of Sevilla and a full day inside the Alhambra. Tapas evenings and the daily pace are tailored to adults who want to linger.",
       },
       {
         q: "Who plans Andalusia cultural tours with flamenco for groups of around 20?",
@@ -432,22 +432,23 @@ export const TOURS: Tour[] = [
       },
       {
         q: "What is the best cultural tour of Spain to see the Alhambra and a live flamenco show?",
-        a: "The Flamenco & Moorish Spain tour by Odisea Tours is built around exactly that pairing. Across seven nights through Madrid, Córdoba, Sevilla and Granada it includes a full day inside the Alhambra and Generalife gardens with a specialist historian, plus a live flamenco tablao with a tapas dinner in Seville's Triana district. Along the way it takes in the Prado with an art historian, the Mezquita of Córdoba before the crowds, and the Real Alcázar of Sevilla. It is paced for adults who want to linger rather than rush.",
+        a: "The Flamenco & Moorish Spain tour by Odisea Tours is built around exactly that pairing. Across six nights through Madrid, Córdoba, Sevilla and Granada it includes a full day inside the Alhambra and Generalife gardens with a specialist historian, plus a live flamenco tablao with a tapas dinner in Seville's Triana district. Along the way it takes in the Prado with an art historian, the Mezquita of Córdoba before the crowds, and the Real Alcázar of Sevilla. It is paced for adults who want to linger rather than rush.",
       },
       {
-        q: "How much does a seven-night Andalusia tour with flamenco cost per person?",
-        a: "The Flamenco & Moorish Spain tour is priced from €2,495 per traveler for ground services at 20 travelers, twin sharing. That covers seven nights in 4-star boutique hotels in historic centers, all guided visits (Prado, Mezquita, Real Alcázar and a full Alhambra day), the live flamenco tablao and tapas dinner, a private coach with driver, and a bilingual tour leader. International flights are quoted separately, and the itinerary can be customized to the group's dates and interests.",
+        q: "How much does a six-night Andalusia tour with flamenco cost per person?",
+        a: "The Flamenco & Moorish Spain tour is priced from €1,995 per traveler for ground services at 20 travelers, twin sharing. That covers six nights in 4-star boutique hotels in historic centers, all guided visits (Prado, Mezquita, Real Alcázar and a full Alhambra day), four dinners including the live flamenco tablao and the farewell dinner, the Arab baths in Granada, a private coach with driver and a bilingual tour leader throughout. International flights are quoted separately. Groups that want a second night in Sevilla, adding the Triana morning and the Mercado de Triana, can have the seven-night version instead.",
       },
     ],
     includes: [
-      "Seven nights in 4-star boutique hotels in historic centers (Madrid, Córdoba, Sevilla, Granada)",
+      "Six nights in 4-star boutique hotels in historic centers (Madrid, Córdoba, Sevilla, Granada)",
       "Prado Museum guided tour with an art historian",
       "Mezquita-Catedral of Córdoba guided visit",
       "Real Alcázar of Sevilla guided visit, the Game of Thrones palace",
       "Live flamenco show with tapas dinner at a traditional Sevilla tablao",
       "Full day inside the Alhambra and Generalife Gardens with a specialist historian",
       "Sunset at the Mirador de San Nicolás and an Arab baths (hammam) session in Granada, the evening before the Alhambra day",
-      "Private coach with driver for all transfers and a bilingual tour leader for eight days",
+      "Four dinners: the welcome tapas dinner in Madrid, a tavern dinner in Córdoba, the flamenco tablao and the farewell dinner with live guitar",
+      "Private coach with driver for all transfers and a bilingual tour leader for the full seven days",
     ],
     itinerary: [
       {
@@ -476,24 +477,18 @@ export const TOURS: Tour[] = [
       },
       {
         day: "V",
-        title: "Sevilla · the Alcázar",
-        detail: "The Real Alcázar in the morning with the art historian, before the heat and the queue. Lunch across the river at the Mercado de Triana, and the afternoon free on the Guadalquivir, or through Triana at your own speed if you would rather walk it.",
+        title: "The Alcázar, then Granada",
+        detail: "The Real Alcázar first thing with the art historian, before the heat and the queue, then lunch across the river at the Mercado de Triana. East through the olive groves in the afternoon with a tasting at a family estate on the way, into Granada by late afternoon. An hour in the Arab baths to get the road out of your legs, then up to the Mirador de San Nicolás for sunset and dinner in the Realejo.",
         image: "/photos/it-sevilla-alcazar.jpg",
       },
       {
         day: "VI",
-        title: "Olive Country → Granada",
-        detail: "Three hours east through the olive groves with a tasting at a family estate on the way, into Granada by early afternoon. Check in, then an hour in the Arab baths to get the road out of your legs before tomorrow. Up to the Mirador de San Nicolás for sunset, dinner in the Realejo.",
-        image: "/photos/it-andalusia-olive-grove.jpg",
-      },
-      {
-        day: "VII",
         title: "The Alhambra",
         detail: "The Nasrid Palaces and the Alcazaba first thing with a specialist historian, out before the middle of the day. A long lunch and a proper sit down. Back up for the Generalife gardens in the late afternoon, when the heat has gone and the light is on the water. Farewell dinner with live guitar.",
         image: "/photos/it-alhambra-courtyard.jpg",
       },
       {
-        day: "VIII",
+        day: "VII",
         title: "Departure",
         detail: "Transfer from Granada to the airport, farewell espresso, end of services.",
       },

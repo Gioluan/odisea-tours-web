@@ -10,7 +10,7 @@ const HERO = "/photos/it-cordoba-mezquita.jpg";
 export const metadata: Metadata = {
   title: { absolute: "Cultural Tours of Spain for Small Groups | Odisea Tours" },
   description:
-    "Private cultural tours of Spain for small groups of 10 to 30 travelers, planned and operated by a Spanish ground operator since 2005. Art, history, architecture and gastronomy across Madrid, Sevilla, Córdoba, Granada, Barcelona and the Basque north, plus faith and pilgrimage groups and corporate incentive programs. Flamenco and Moorish Spain runs seven nights from €2,495 per traveler, ground services.",
+    "Private cultural tours of Spain for small groups of 10 to 30 travelers, planned and operated by a Spanish ground operator since 2005. Art, history, architecture and gastronomy across Madrid, Sevilla, Córdoba, Granada, Barcelona and the Basque north, plus faith and pilgrimage groups and corporate incentive programs. Flamenco and Moorish Spain runs six nights from €1,995 per traveler, ground services.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Cultural Tours of Spain for Small Groups | Odisea Tours · Since 2005",
@@ -41,7 +41,7 @@ const PROGRAMS = [
     name: "Andalusia: Moorish Spain",
     place: "Madrid · Córdoba · Sevilla · Granada",
     when: "Spring and autumn",
-    note: "A curator-led hour at the Prado, the Mezquita of Córdoba before the day-trip coaches arrive, the Real Alcázar with an art historian, a live flamenco tablao in Triana, and a full day inside the Alhambra at the pace it deserves. Seven nights, from €2,495 per traveler.",
+    note: "A curator-led hour at the Prado, the Mezquita of Córdoba before the day-trip coaches arrive, the Real Alcázar with an art historian, a live flamenco tablao in Triana, and a full day inside the Alhambra at the pace it deserves. Six nights, from €1,995 per traveler.",
   },
   {
     name: "Art, architecture & the Castiles",
@@ -105,7 +105,7 @@ const CULTURE_FAQ = [
   },
   {
     q: "What does a private cultural tour of Spain cost per person?",
-    a: "Our Flamenco and Moorish Spain route, seven nights through Madrid, Córdoba, Sevilla and Granada, starts from €2,495 per traveler for ground services based on 20 travelers sharing twin rooms. That covers 4-star boutique hotels in historic centers, all the guided visits including the Prado, the Mezquita, the Real Alcázar and a full Alhambra day, the live flamenco tablao and tapas dinner, a private coach with driver and a bilingual tour leader throughout. International flights are quoted separately. Longer cultural itineraries of eight to twelve nights, and programs with private access such as dawn entry to the Alhambra or a curator at the Prado, are priced individually. The figure moves with group size, season, length and hotel category, and we give a firm per-person price once dates and numbers are confirmed.",
+    a: "Our Flamenco and Moorish Spain route, six nights through Madrid, Córdoba, Sevilla and Granada, starts from €1,995 per traveler for ground services based on 20 travelers sharing twin rooms. That covers 4-star boutique hotels in historic centers, all the guided visits including the Prado, the Mezquita, the Real Alcázar and a full Alhambra day, the live flamenco tablao and tapas dinner, a private coach with driver and a bilingual tour leader throughout. International flights are quoted separately. Longer cultural itineraries of eight to twelve nights, and programs with private access such as dawn entry to the Alhambra or a curator at the Prado, are priced individually. The figure moves with group size, season, length and hotel category, and we give a firm per-person price once dates and numbers are confirmed.",
   },
   {
     q: "Is a small group tour of Spain private or shared with other travelers?",
@@ -183,11 +183,11 @@ export default function CulturalToursSpainPage() {
     },
     offers: {
       "@type": "Offer",
-      name: "Flamenco and Moorish Spain, seven nights, ground services",
-      price: "2495",
+      name: "Flamenco and Moorish Spain, six nights, ground services",
+      price: "1995",
       priceCurrency: "EUR",
       description:
-        "From €2,495 per traveler for ground services, based on 20 travelers sharing twin rooms. International flights quoted separately.",
+        "From €1,995 per traveler for ground services, based on 20 travelers sharing twin rooms. International flights quoted separately.",
       url: `${SITE}/tours/flamenco-moorish-spain`,
       availability: "https://schema.org/InStock",
     },
@@ -312,7 +312,7 @@ export default function CulturalToursSpainPage() {
               The route we <span className="font-display-italic text-gold">recommend first</span>
             </h2>
             <p className="mt-6 font-mono-editorial text-[0.6rem] tracking-[0.28em] uppercase text-gold">
-              Flamenco &amp; Moorish Spain · 7 nights · from €2,495 pp
+              Flamenco &amp; Moorish Spain · 6 nights · from €1,995 pp
             </p>
           </div>
           <div className="md:col-span-8 space-y-4 text-paper/80 text-lg leading-relaxed">
@@ -320,7 +320,7 @@ export default function CulturalToursSpainPage() {
               Madrid, Córdoba, Sevilla and Granada in that order, because that is the order in which the story makes sense. A curator-led hour at the Prado, then the Mezquita of Córdoba early enough to have the arches to yourselves, the Real Alcázar with an art historian who will tell you what the television version got right, a live tablao in Triana, and a full day inside the Alhambra and the Generalife gardens rather than the ninety minutes most itineraries allow.
             </p>
             <p>
-              Seven nights from €2,495 per traveler for ground services, based on 20 travelers sharing twin rooms, in 4-star boutique hotels in the historic centers, with a private coach and a bilingual tour leader throughout. International flights are quoted separately. Groups with more time usually add the Basque north or Toledo and Segovia, and groups who want the food to lead should look at the food and wine route instead.
+              Six nights from €1,995 per traveler for ground services, based on 20 travelers sharing twin rooms, in 4-star boutique hotels in the historic centers, with a private coach and a bilingual tour leader throughout. International flights are quoted separately. Groups with more time usually add the Basque north or Toledo and Segovia, and groups who want the food to lead should look at the food and wine route instead.
             </p>
             <div className="pt-4 flex flex-wrap gap-4">
               <Link href="/tours/flamenco-moorish-spain" className="btn-editorial on-dark">

@@ -39,13 +39,13 @@ const HANDLED = [
   { t: "Venue scouting and contracting", d: "We find and contract the right venue for your group size and tone, from a restored monastery to a design hotel or a private winery estate. You approve, we sign." },
   { t: "AV, translation and stage build", d: "Full production for the working sessions: AV, simultaneous translation, stage and set build, so the offsite runs like a conference when it needs to." },
   { t: "Team-building programming", d: "Cooking classes, winery harvest days, sailing, guided hikes and city challenges, matched to the seniority and energy of the group." },
-  { t: "Transfers and ground logistics", d: "Executive transfers, group coaches and private rail cars. Airport to venue to dinner, all timed and held invisible so nobody is left waiting." },
+  { t: "Transfers and ground logistics", d: "Executive transfers, group coaches and all airport pickups. Airport to venue to dinner, all timed and held invisible so nobody is left waiting." },
   { t: "On-site producer, 24/7", d: "A dedicated Odisea producer on the ground for the whole program, with 24/7 incident response. One contact, every detail handled." },
   { t: "Full budget transparency", d: "Itemised vendor reporting and a transparent budget. You see what each line costs. No hidden margin buried in a package price." },
 ];
 
 const VENUES = [
-  { city: "Madrid", note: "The connectivity choice: direct long-haul flights, fast onward rail, historic five-star hotels and private palacio venues. Best for leadership offsites and kickoffs that need easy arrival from abroad.", href: "/destinations/madrid" },
+  { city: "Madrid", note: "The connectivity choice: direct long-haul flights, short drives to the rest of the country, historic five-star hotels and private palacio venues. Best for leadership offsites and kickoffs that need easy arrival from abroad.", href: "/destinations/madrid" },
   { city: "Barcelona", note: "Design hotels, the sea and the Collserola hills within reach, and a creative backdrop for product and brand teams. Best for offsites that want energy and a city to spill into after hours.", href: "/destinations/barcelona" },
   { city: "Valencia", note: "The value option without the compromise: beach, sailing, the City of Arts and Sciences and a compact, walkable center. Best for larger company retreats and team-building-led programs.", href: "/destinations/valencia" },
   { city: "La Rioja & the Basque Country", note: "Restored monasteries, working wineries and the San Sebastián Michelin scene. Best for senior teams and board retreats that want to think somewhere quiet and eat extremely well.", href: "/plan-your-tour" },

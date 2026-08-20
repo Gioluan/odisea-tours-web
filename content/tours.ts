@@ -74,9 +74,9 @@ export const TOURS: Tour[] = [
       },
       {
         day: "IV",
-        title: "AVE to Madrid",
-        detail: "High-speed rail in business class. Check in, afternoon at the Metropolitano museum.",
-        image: "/photos/it-ave-train-madrid.jpg",
+        title: "North to Madrid",
+        detail: "Private coach north to the capital. Check in, afternoon at the Metropolitano museum.",
+        image: "/photos/it-madrid-gran-via.jpg",
       },
       {
         day: "V",
@@ -114,7 +114,7 @@ export const TOURS: Tour[] = [
       "Studio visit with a fourth-generation ceramicist in Úbeda",
       "Olive-oil tasting at a family-run mill in Jaén",
       "Pintxo route and hands-on cooking class in San Sebastián",
-      "AVE high-speed rail transfers between Madrid, Andalusia and the Basque country",
+      "Private coach with driver for the whole route, between Madrid, Andalusia and the Basque country",
       "Hand-selected boutique hotels and historic paradores",
       "Bilingual cultural historian and Odisea ground team throughout",
     ],
@@ -151,13 +151,13 @@ export const TOURS: Tour[] = [
       {
         day: "VI",
         title: "Madrid · the Prado",
-        detail: "AVE high-speed rail north to Madrid in under three hours. Afternoon at the Prado with a curator who can walk you past Velázquez, Goya and El Greco without the audio-guide script. Dinner in Lavapiés.",
+        detail: "North to Madrid by private coach. Afternoon at the Prado with a curator who can walk you past Velázquez, Goya and El Greco without the audio-guide script. Dinner in Lavapiés.",
         image: "/photos/it-madrid-prado.jpg",
       },
       {
         day: "VII",
         title: "San Sebastián",
-        detail: "Train north to San Sebastián. Pintxo route through the old town with a Basque food writer, then a hands-on cooking class in a private chef's home above the bay.",
+        detail: "Coach north to San Sebastián. Pintxo route through the old town with a Basque food writer, then a hands-on cooking class in a private chef's home above the bay.",
         image: "/photos/it-san-sebastian-pintxos.jpg",
       },
       {
@@ -202,7 +202,7 @@ export const TOURS: Tour[] = [
       "Venue scouting and contracting",
       "AV, simultaneous translation, and stage build",
       "Team-building programming (hiking, cooking, sailing)",
-      "Executive transfers, group coaches, private rail cars",
+      "Executive transfers, group coaches and all airport pickups",
       "On-site producer and 24/7 incident response",
       "Full budget transparency and vendor reporting",
     ],

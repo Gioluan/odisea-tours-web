@@ -113,7 +113,7 @@ const CULTURE_FAQ = [
   },
   {
     q: "Which Spanish cities should a first cultural trip cover?",
-    a: "For a first trip of about a week, Madrid, Córdoba, Sevilla and Granada is the strongest single run: the Prado and the Royal Palace at the start, then the Mezquita, the Real Alcázar and the Alhambra in a sequence that actually tells the story of Moorish and Christian Spain in the right order. Barcelona is a different trip rather than an extension, and pairing it with Andalusia in one week means spending the week on the road. Groups with ten days or more usually add either the Basque north, San Sebastián and Bilbao, for the food and the Guggenheim, or Toledo and Segovia as day trips out of Madrid. We move groups by private coach throughout, which keeps a group together and lets the route stop at places a rail schedule cannot.",
+    a: "For a first trip of about a week, Madrid, Córdoba, Sevilla and Granada is the strongest single run: the Prado and the Royal Palace at the start, then the Mezquita, the Real Alcázar and the Alhambra in a sequence that actually tells the story of Moorish and Christian Spain in the right order. Barcelona is a different trip rather than an extension, and pairing it with Andalusia in one week means spending the week on the road. Groups with ten days or more usually add either the Basque north, San Sebastián and Bilbao, for the food and the Guggenheim, or Toledo and Segovia as day trips out of Madrid. We move groups by private coach throughout, which keeps a group together and lets the route stop at places a scheduled service cannot.",
   },
   {
     q: "Can a cultural tour be combined with food, wine or walking?",

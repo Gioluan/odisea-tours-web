@@ -109,7 +109,7 @@ const SCHOOL_TRIP_FAQ = [
   },
   {
     q: "Can you act as our DMC for a school group visiting Madrid, Barcelona and Valencia?",
-    a: "Yes. Odisea Tours works as the destination management company for school groups moving between Madrid, Barcelona and Valencia, which is the most requested multi-city route in Spain. We handle the inter-city transport, whether that is private coach or the AVE high-speed train, the hotels in each city, the guided program, the venue and museum bookings and the supervision throughout, on one contract and one invoice. Schools and agencies use us this way precisely because a single Spanish operator carries the whole route instead of three local suppliers who have never spoken to each other.",
+    a: "Yes. Odisea Tours works as the destination management company for school groups moving between Madrid, Barcelona and Valencia, which is the most requested multi-city route in Spain. We handle the inter-city transport by private coach, the hotels in each city, the guided program, the venue and museum bookings and the supervision throughout, on one contract and one invoice. Schools and agencies use us this way precisely because a single Spanish operator carries the whole route instead of three local suppliers who have never spoken to each other.",
   },
   {
     q: "¿Qué agencia receptiva organiza viajes de fin de curso a España?",
@@ -239,7 +239,7 @@ export default function SchoolTripsSpainPillarPage() {
               Spanish is the language your students are most likely to use again, and Spain is where they can practise it without the trip stopping being a trip. A morning of classes in Valencia and an afternoon buying lunch in the Mercado Central do more for a hesitant speaker than a term of textbook work, because the language stops being an exercise and becomes the only way to get what they want.
             </p>
             <p>
-              The country also carries an unusual amount of syllabus in a short distance. The Prado and the Alhambra, Roman Tarragona, Moorish Andalusia and Gaud&iacute;&rsquo;s Barcelona sit within a few hours of each other by high-speed train, which means a week can genuinely cover art, history and architecture rather than gesture at them. We build the route so the academic content and the travel time work with each other instead of competing.
+              The country also carries an unusual amount of syllabus in a short distance. The Prado and the Alhambra, Roman Tarragona, Moorish Andalusia and Gaud&iacute;&rsquo;s Barcelona sit within a few hours of each other by road, which means a week can genuinely cover art, history and architecture rather than gesture at them. We build the route so the academic content and the travel time work with each other instead of competing.
             </p>
           </div>
         </div>

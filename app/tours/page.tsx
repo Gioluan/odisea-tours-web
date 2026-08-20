@@ -152,6 +152,17 @@ export default function ToursIndex() {
               </Link>{" "}
               sets out the B2B side: full ground handling, net rates and how to send us a brief.
             </p>
+            <p>
+              Coming for the table rather than the pitch? The{" "}
+              <Link href="/food-and-wine-tours-spain" className="link-rule text-gold">
+                Food &amp; Wine Tours of Spain pillar
+              </Link>{" "}
+              covers the wine country of La Rioja and Navarra, the San Sebasti&aacute;n pintxos scene, the Basque cooking class and what a private culinary week costs per traveler. For art, history and architecture, or for a faith group walking the Camino, start at the{" "}
+              <Link href="/cultural-tours-spain" className="link-rule text-gold">
+                Cultural Tours of Spain pillar
+              </Link>{" "}
+              instead.
+            </p>
           </div>
         </div>
       </section>

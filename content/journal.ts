@@ -33,6 +33,8 @@ export function authorById(id: AuthorId | undefined): Author {
 }
 
 const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
+  "planning-a-food-and-wine-tour-of-spain-for-a-group": "aitor",
+  "choosing-a-cultural-tour-operator-in-spain": "juan",
   "educational-school-trips-to-spain-guide": "juan",
   "what-a-spain-dmc-does-for-agencies": "juan",
   "spain-soccer-tour-day-by-day": "juan",
@@ -69,6 +71,8 @@ const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
 };
 
 const TAGS_BY_SLUG: Record<string, string[]> = {
+  "planning-a-food-and-wine-tour-of-spain-for-a-group": ["food and wine", "wine tours", "La Rioja", "San Sebastian", "private groups", "Spain"],
+  "choosing-a-cultural-tour-operator-in-spain": ["cultural tours", "small groups", "Andalusia", "art and history", "tour operators", "Spain"],
   "educational-school-trips-to-spain-guide": ["school trips", "language immersion", "Modern Languages", "educational travel", "Spain", "US schools"],
   "what-a-spain-dmc-does-for-agencies": ["DMC", "receptive operator", "B2B", "travel agencies", "ground handling", "Spain"],
   "spain-soccer-tour-day-by-day": ["youth soccer", "Spain", "day by day", "Madrid", "Valencia", "Barcelona", "tour planning", "complete guide"],
@@ -284,7 +288,7 @@ export function howToOf(post: Post): HowToData | null {
   return HOWTO_BY_SLUG[post.slug] ?? null;
 }
 
-export type ClusterId = "soccer" | "softball" | "culinary" | "camino" | "corporate" | "schools" | "dmc" | "planning";
+export type ClusterId = "soccer" | "softball" | "culinary" | "cultural" | "camino" | "corporate" | "schools" | "dmc" | "planning";
 
 const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "spain-soccer-tour-day-by-day": "soccer",
@@ -320,6 +324,8 @@ const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "how-to-choose-a-soccer-tour-company-for-your-club": "soccer",
   "educational-school-trips-to-spain-guide": "schools",
   "what-a-spain-dmc-does-for-agencies": "dmc",
+  "planning-a-food-and-wine-tour-of-spain-for-a-group": "culinary",
+  "choosing-a-cultural-tour-operator-in-spain": "cultural",
 };
 
 export interface PillarInfo {
@@ -345,11 +351,18 @@ export const PILLAR_BY_CLUSTER: Record<ClusterId, PillarInfo | null> = {
     ctaLabel: "Read the Spain Softball Experience tour page",
   },
   culinary: {
-    href: "/tours/sabores-de-espana",
-    title: "Sabores de España",
+    href: "/food-and-wine-tours-spain",
+    title: "Food & Wine Tours of Spain",
     blurb:
-      "The full day-by-day for our culinary tour through Barcelona, Penedès, La Rioja, San Sebastián and Pamplona lives on the Sabores de España tour page. Inclusions, group size, the cooking class and what is on each table are all listed there.",
-    ctaLabel: "Read the Sabores de España tour page",
+      "How a private food and wine trip through Spain is built, region by region, what it costs per traveler, when to travel if the harvest is the point and how the Sabores de España route runs, all live on our food and wine pillar guide.",
+    ctaLabel: "Read the Food & Wine Tours pillar",
+  },
+  cultural: {
+    href: "/cultural-tours-spain",
+    title: "Cultural Tours of Spain",
+    blurb:
+      "The full picture of how we build a private cultural trip for a small group, the art and history routes through Andalusia and the Castiles, faith and pilgrimage groups, corporate incentive programs and what it costs per traveler, lives on our cultural tours pillar guide.",
+    ctaLabel: "Read the Cultural Tours of Spain pillar",
   },
   camino: {
     href: "/tours/camino-de-santiago",
@@ -1802,6 +1815,123 @@ export const POSTS: Post[] = [
       "## Where we fit",
       "Odisea Tours has operated as a Spanish receptive operator since 2005, working B2B with agencies, tour operators and associations in North America, Britain and Australia. We cover sports, school, cultural and incentive groups, which is the unusual part: it means a mixed program comes from one team on one contract. We quote net, we stay behind your brand where you want it that way, we work from around 15 travelers upward, and there is no minimum volume or exclusivity requirement.",
       "The full B2B picture, what we operate, how we quote and how to send a brief, is on our [Spain DMC](/spain-dmc) page. If the group in question is a school, the [School Trips to Spain](/school-trips-spain) pillar covers the educational side, and for sports groups start at [Soccer Tours in Spain](/soccer-tours-spain). To put a brief in front of us, [get in touch here](/contact).",
+    ],
+  },
+  {
+    slug: "planning-a-food-and-wine-tour-of-spain-for-a-group",
+    title: "How to Plan a Food and Wine Tour of Spain for a",
+    italicTitle: "Group",
+    excerpt:
+      "Where the food actually is, why the north beats the south for a wine trip, what a private group tour costs per traveler, when to go if the harvest is the point, and the three planning mistakes that turn a good culinary week into an exhausting one.",
+    date: "2026-08-20",
+    readTime: "10 min",
+    category: "Field Notes",
+    cover: "/photos/it-rioja-harvest.jpg",
+    faqs: [
+      {
+        q: "Who organizes food and wine tours of Spain for US groups?",
+        a: "Odisea Tours plans and operates private food and wine tours of Spain for groups of 15 to 30 adults traveling from the United States, Canada and Australia. We are a Spanish company based in Benicassim, Castellon, operating since 2005, and we contract the bodegas, cooking schools, restaurants, hotels and coaches directly with our own team in Spain. The flagship route, Sabores de Espana, runs eight nights from Barcelona through the Penedes, La Rioja, San Sebastian and Pamplona to Bilbao, from 2,595 euros per traveler for ground services at 20 travelers, twin sharing.",
+      },
+      {
+        q: "When is the best time of year for a wine tour in Spain?",
+        a: "September and early October if the harvest matters, because that is when the vendimia is happening in Rioja and Navarra and a family vineyard will let a group pick and press. Harvest dates move with the weather and the good bodegas fill early, so hold dates about a year out. Late spring, May and June, is the other strong window: settled weather, San Sebastian not yet full, and prices below the autumn peak.",
+      },
+      {
+        q: "How many wineries should a group visit in a week?",
+        a: "Three or four across the whole trip, not one a day. Palates flatten after the second tasting of a day, and a wine lunch stacked on a wine dinner stops being a pleasure by midweek. The stronger structure is one substantial food or wine thing per day, with the afternoon left open, and one hands-on cooking class across the week rather than three.",
+      },
+    ],
+    body: [
+      "Most groups start planning a food and wine trip to Spain by picking cities, and most of them pick the wrong ones. The mental map of Spain that people arrive with runs Madrid, Seville, Granada, which is a wonderful cultural route and a mediocre eating one. The food is in the north.",
+      "This is a practical guide to building the trip properly for a group of 15 to 30 adults: where to go, how long it takes, what it costs, when to travel, and the planning mistakes that show up on day four.",
+      "## Where the food actually is",
+      "Spain has four regions that genuinely justify a trip built around eating, and three of them sit within a few hours of each other along the north.",
+      "La Rioja and Navarra are the wine country. Family vineyards around Haro that will take a group through a harvest, Bodegas Marques de Riscal in Elciego where Frank Gehry wrapped a working winery in titanium ribbons, and the villages of the Rioja Alavesa where lunch is chuletillas al sarmiento, lamb chops grilled over vine cuttings, and nothing else needs to happen that afternoon.",
+      "The Basque coast is the eating. San Sebastian has one of the highest concentrations of Michelin stars per resident anywhere, but the reason to bring a group is the pintxos culture in the Parte Vieja, where the custom is to eat one thing and one glass in a bar and then leave for the next one. It is the most sociable food in Europe and it works unreasonably well for a group of twenty. Bilbao, an hour west, adds the Guggenheim and the Mercado de la Ribera.",
+      "Catalonia and the Penedes give you Barcelona, La Boqueria and cava country an hour outside the city, among the vines rather than in a visitor center.",
+      "Andalusia is the fourth, and it is a different trip: sherry, olive oil, Andalusian cooking, and the Moorish monuments around it. It is a magnificent week. It is just not primarily a wine week, and trying to combine it with the north inside seven days means spending the week on a coach.",
+      "## How long it takes",
+      "Eight nights is the honest number for the northern route from Barcelona to Bilbao. Seven works. Six works if you cut the Pamplona day. Below that you are choosing between the wine country and the Basque coast, and either on its own is better than half of each.",
+      "Groups often ask whether they can add Madrid or Seville to the same week. They can, and we have built it, but the trip stops being about food somewhere on the second long driving day. Ten nights or more is when a genuine two-region trip becomes comfortable rather than heroic.",
+      "## What it costs",
+      "Our own eight-night route, Sabores de Espana, is priced from 2,595 euros per traveler for ground services, based on 20 travelers sharing twin rooms. That covers 4-star hotels the whole way, the Penedes cava lunch, the Rioja harvest visit with a five-course pairing lunch, the Marques de Riscal tasting, a hands-on Basque cooking class, the guided pintxos crawl, a flamenco dinner in Barcelona, a full day in Pamplona with a farewell Navarrese dinner, the Guggenheim, and a private 50-seat coach with driver and bilingual leader for all nine days. International flights are separate.",
+      "The figure moves with group size, season, trip length and hotel category. Twenty travelers is roughly the point where the per-person cost of the coach and the guide stops hurting. Below fifteen it climbs noticeably. Above thirty the tastings have to be split into two sittings and the character of the trip changes.",
+      "Be skeptical of any quote that does not tell you what is inside it. The line that matters is whether the winery visits, the cooking class and the group dinners are included or sold to you again once you are on the ground.",
+      "## When to travel",
+      "September and the first half of October if the harvest is the point. The vendimia is real work happening on a real schedule, and a group that arrives during it gets something no amount of money buys in July. The trade-off is that harvest dates move with the weather, and the bodegas worth visiting are committed early, so a September group should be holding dates around a year ahead.",
+      "May and June are the other good window. The weather has settled, San Sebastian is busy but not yet impossible, and prices sit below the autumn peak.",
+      "July and August are workable, but inland Spain is genuinely hot and a significant part of the wine trade is on holiday in August. November through March is quiet and cheap, and the north is grey and wet, which some groups love and most do not.",
+      "## Three mistakes that show up on day four",
+      "The first is stacking. A winery lunch and a winery dinner on the same day is not twice as good, it is half as good, because nobody tastes the second one. The same applies to a cooking class on top of a four-hour drive. Build one substantial thing into each day and leave the afternoon alone.",
+      "The second is booking a cooking class in every city. Groups that cook three times stop noticing the difference by the third. One class, taught properly and hands on, is the thing people talk about afterwards.",
+      "The third is underestimating driving time and then putting activities on the days that have it. A travel day should be a travel day: arrive, rest, have dinner. We strip activities off any day with three or more hours of coach movement, and every group that has argued with us about it during planning has thanked us for it in the second half of the trip.",
+      "## When a private group tour is the wrong tool",
+      "If you are two people rather than a group, this is not what you want. A private tour spreads the cost of the coach, the guide and the group bookings across the travelers, so a couple is far better served by a scheduled small-group departure from an operator who sells seats, or by booking the bodegas yourselves and driving.",
+      "If what you want is a three-hour tapas walk in Seville or a flamenco and tapas evening in Madrid, that is a day-activity purchase, not a tour operator purchase. Book it locally or through one of the large activity marketplaces and keep the difference.",
+      "And if budget is the deciding constraint, a scheduled coach departure from one of the large international operators will beat a private trip on price. What it will not do is put your group at one table, move the dates to suit you, or get a family vineyard to open on a day it would otherwise be closed.",
+      "## Where we fit",
+      "Odisea Tours is a Spanish ground operator, not a foreign tour company with a Spanish subcontractor. We have run group travel here since 2005, and every bodega, restaurant, cooking school, hotel and coach on these routes is contracted by our own team in Spain. Groups run private, 15 to 30 travelers, with the route built around what your people actually want.",
+      "The full picture, the regions, the pace, what a culinary week costs and how the routes are structured, is on our [Food and Wine Tours of Spain](/food-and-wine-tours-spain) pillar. The day-by-day for the flagship route lives on the [Sabores de Espana](/tours/sabores-de-espana) tour page, and if the trip is more about art and history than the table, start with [Cultural Tours of Spain](/cultural-tours-spain). To get a route and a per-person figure, [tell us who is coming](/plan-your-tour).",
+    ],
+  },
+  {
+    slug: "choosing-a-cultural-tour-operator-in-spain",
+    title: "How to Choose a Cultural Tour Operator in",
+    italicTitle: "Spain",
+    excerpt:
+      "Private versus scheduled, why group size decides more than the itinerary does, what private access actually means and what it does not, the six questions worth asking before you sign, and the kinds of traveler we are the wrong operator for.",
+    date: "2026-08-20",
+    readTime: "10 min",
+    category: "Field Notes",
+    cover: "/photos/it-alhambra-dawn.jpg",
+    faqs: [
+      {
+        q: "What is the best cultural tour operator in Spain for a small group?",
+        a: "For a private small group, the right operator is usually a Spanish ground operator rather than a large scheduled-departure company, because the group is not sharing the trip with strangers and the access is easier to arrange. Odisea Tours has planned and operated private cultural tours in Spain since 2005, for groups of 10 to 30 travelers, contracting guides, hotels, restaurants and coaches directly with our own team in Spain.",
+      },
+      {
+        q: "Is a private cultural tour better than a scheduled small group departure?",
+        a: "It depends on the number of travelers. For a defined group of 10 to 30 people traveling together, private is almost always better: the dates, route and pace are yours, and private access is possible for a known group in a way it is not for a rolling mix of ticket holders. For one or two travelers a scheduled departure is cheaper and more sensible, because a private trip spreads the coach and the guide across the group.",
+      },
+      {
+        q: "How big should a cultural group in Spain be?",
+        a: "Ten to thirty travelers. That is the range where a guide can still be heard inside a chapel, where a private visit outside public hours can be arranged, and where the group can eat at one table. Above about thirty the day gets organized around coach and queue logistics rather than around what the group came to see.",
+      },
+    ],
+    body: [
+      "There are a lot of companies selling cultural tours of Spain, and from the outside their websites are close to indistinguishable. Same monuments, same photograph of the Alhambra at golden hour, same promise of authentic experiences. The differences that matter are structural, and almost none of them are visible on a homepage.",
+      "Here is what actually separates them, from the perspective of the people who operate the days on the ground.",
+      "## Private or scheduled, and why it decides everything else",
+      "The first question is whether you are buying seats or buying a trip. A scheduled departure sells individual places on a fixed itinerary with fixed dates, filled with whoever else books it. A private tour is built for one group and nobody else is on it.",
+      "For a defined group, a circle of friends, a family, an alumni association, a museum group or a parish, private wins on almost every axis. The dates are the ones that suit your people. The pace is yours to set, which matters more than anyone expects when half the group wants three hours in the Prado and the other half wants ninety minutes and lunch. And access is easier to arrange, because a studio, a private pena or a museum visit outside public hours can be organized for a known group of twenty and cannot be organized for a rolling mix of strangers holding tickets.",
+      "For one or two travelers it is the opposite. A private trip spreads the coach, the guide and the group bookings across the travelers, so a couple should book a scheduled departure and keep the difference.",
+      "## Group size decides more than the itinerary does",
+      "Two itineraries can list the same monuments and produce entirely different weeks depending on the number of people walking them.",
+      "Ten to thirty travelers is the working range for a cultural trip. Inside it a guide can be heard in a chapel without a radio headset, a restaurant can seat the group at one long table, and a private visit is a realistic ask. Somewhere above thirty the day quietly reorganizes itself around logistics: two coaches, split entry times, a queue for the bathroom that eats twenty minutes, and a guide talking into a microphone to people standing thirty feet away.",
+      "This is worth asking about directly, because a brochure that says small group can mean twelve or can mean forty-four.",
+      "## What private access actually means",
+      "Every operator claims exclusive access, and a good deal of what is described that way is a normal ticket bought in advance. It is worth knowing which is which.",
+      "Real access looks specific. Dawn entry to the Alhambra and the Generalife before the gates open to the public. A curator at the Prado who can walk a group past Velazquez, Goya and El Greco without the script. A flamenco pena in Triana with the families who actually live in the neighbourhood, rather than a show with a coach parked outside. A fourth-generation ceramicist opening a studio in Ubeda. A family-run olive mill in Jaen doing a tasting for twenty.",
+      "None of that is bookable on a website. It exists because somebody has used those relationships for years and keeps using them, which is the single strongest argument for an operator based in the country over one visiting it.",
+      "## Spanish operator or home-country operator",
+      "Both models work and the trade-off is real. A large operator in your own country gives you a familiar contract, a domestic phone number, consumer protections you already understand and, usually, a lower price on a scheduled departure.",
+      "A Spanish ground operator gives you the sourcing and the presence. The hotels, guides, restaurants and coaches are contracted here by people who know which ones perform, and when something goes wrong at eleven at night there is somebody in the country with the authority to fix it rather than an after-hours number six to nine time zones away. Monuments in Spain do occasionally close without much warning, coaches do break down, and Semana Santa reroutes entire cities for a week.",
+      "The middle case, which is common and worth spotting, is a home-country brand that subcontracts to a Spanish operator anyway. That is not wrong, but you are paying two margins and you are one step further from the person who can actually change the day.",
+      "## Six questions worth asking before you sign",
+      "How many travelers will be on this departure, and what is the maximum you will let it reach.",
+      "Do you contract the hotels, guides and coaches yourselves in Spain, or through another operator.",
+      "Which of the access items are timed public tickets and which are genuinely outside public hours.",
+      "Who is with the group day to day, a local guide hired city by city or your own tour leader for the whole week.",
+      "What exactly is included, meal by meal and entrance by entrance, and what will we be asked to pay for on the ground.",
+      "What happens if a monument closes or a flight slips, and who in Spain makes that decision.",
+      "The answers are more revealing than the itinerary. Any operator confident in their own operation answers all six without hedging.",
+      "## When we are the wrong operator",
+      "We are not the right choice for solo travelers or couples. Everything we do is priced as a private group, and a scheduled departure will serve two people better and cheaper.",
+      "We are not the right choice for a half-day walking tour or a flamenco and tapas evening either. Those are day activities, they are widely available through local operators and the large activity marketplaces, and paying a tour operator to arrange one makes no sense.",
+      "And if the deciding factor is the lowest possible price per person, a large scheduled coach departure will beat us. What it will not do is move the dates, keep the group at one table, or open a door that is closed to the public.",
+      "## Where we fit",
+      "Odisea Tours is a Spanish company, based in Benicassim in Castellon, running group travel across Spain since 2005. We build private cultural trips for groups of 10 to 30: art and history through Andalusia and the Castiles, architecture in Barcelona, faith and pilgrimage groups on the Camino de Santiago, and corporate incentive programs. Because the same team also operates our culinary, walking and school programs, a mixed itinerary comes on one contract instead of being split between two operators who have never spoken.",
+      "The full picture, the programs, the group sizes, what a cultural week costs and the routes we recommend first, is on our [Cultural Tours of Spain](/cultural-tours-spain) pillar. If the table matters more than the museums, start at [Food and Wine Tours of Spain](/food-and-wine-tours-spain). For a group walking the Camino, the [Camino de Santiago](/tours/camino-de-santiago) tour page has the day-by-day, and companies planning an incentive program should look at [Corporate Retreats](/corporate-retreats). To get a route and a per-person figure, [tell us what your group came for](/plan-your-tour).",
     ],
   },
 ];

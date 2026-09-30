@@ -142,6 +142,13 @@ export default function CodigoEticoPage() {
             <p>
               Toda comisión o remuneración a agentes e intermediarios debe estar documentada por escrito, responder a un servicio real y ser proporcional al mismo, y abonarse mediante transferencia a una cuenta a nombre del propio intermediario.
             </p>
+            <p>
+              Estas normas se desarrollan en la{" "}
+              <Link href="/politica-anticorrupcion" className="underline decoration-gold-deep underline-offset-4">
+                Política Anticorrupción
+              </Link>{" "}
+              de la Empresa.
+            </p>
           </Section>
 
           <Section id="regalos" title="05. Regalos, invitaciones y hospitalidad">

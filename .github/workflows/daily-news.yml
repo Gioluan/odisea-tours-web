@@ -1,0 +1,63 @@
+name: Daily Spanish football news
+
+# Generates original English articles from AS/Marca/Sport/MD each morning,
+# commits them, and pings the Vercel deploy hook (repo auto-deploy is disabled).
+on:
+  schedule:
+    - cron: "0 6 * * *" # 06:00 UTC daily
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many news articles"
+        default: "4"
+      guide:
+        description: "Optional evergreen guide topic (leave blank for news)"
+        default: ""
+
+concurrency:
+  group: daily-news
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Generate news
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.guide }}" ]; then
+            node scripts/generate-news.mjs --guide "${{ github.event.inputs.guide }}"
+          else
+            node scripts/generate-news.mjs --count "${{ github.event.inputs.count || 4 }}"
+          fi
+
+      - name: Commit new articles
+        run: |
+          git config user.name "Odisea Newsroom"
+          git config user.email "newsroom@odisea-tours.com"
+          if [ -n "$(git status --porcelain content/news)" ]; then
+            git add content/news
+            git commit -m "news: daily Spanish football dispatch $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No new articles today."
+          fi
+
+      - name: Trigger Vercel deploy
+        if: ${{ env.VERCEL_DEPLOY_HOOK != '' }}
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: curl -s -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null && echo "Deploy triggered."

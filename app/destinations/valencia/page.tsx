@@ -51,6 +51,10 @@ const WHAT_YOU_GET = [
     desc: "Valencia CF's training facilities at Paterna offer some of the best coaching sessions we have seen. Small groups, expert coaches, outstanding pitches.",
   },
   {
+    title: "Villarreal CF, an hour up the coast",
+    desc: "Villarreal's academy is in Castellon, our home province. Groups add sessions with Villarreal CF academy coaches and a night or two on the beach in Benicassim before Barcelona.",
+  },
+  {
     title: "Friendlies against local clubs",
     desc: "Levante UD and dozens of Valencian amateur and youth clubs provide competitive opposition at every level. Real matches, proper pitches, referees included.",
   },
@@ -381,6 +385,12 @@ export default function ValenciaPage() {
               paella was invented, after all. For groups that want to train hard in
               the morning and eat paella on the beach in the afternoon, Valencia is
               the perfect choice.
+            </p>
+            <p className="mt-4 text-ink-muted text-base leading-relaxed">
+              Up the coast:{" "}
+              <Link href="/villarreal-training" className="text-gold-deep underline underline-offset-4">Villarreal CF training for visiting teams</Link>
+              , or the full{" "}
+              <Link href="/madrid-barcelona-valencia-soccer-tour" className="text-gold-deep underline underline-offset-4">Madrid, Valencia and Barcelona tour</Link>.
             </p>
           </div>
         </div>

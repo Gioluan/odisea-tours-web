@@ -55,6 +55,10 @@ const WHAT_YOU_GET = [
     desc: "Atletico's 68,000-seat stadium. Modern, electric on match days, and an excellent tour for any football group.",
   },
   {
+    title: "Training with Atletico de Madrid",
+    desc: "Sessions with Atletico de Madrid youth academy coaches on the club's training ground. Two 90-minute mornings is our standard Madrid format, most recently for Hawaii Elite Soccer Academy in October 2026.",
+  },
+  {
     title: "Spanish FA headquarters",
     desc: "Visit the RFEF (Real Federacion Espanola de Futbol) at Ciudad del Futbol in Las Rozas. The nerve center of Spanish football.",
   },
@@ -381,6 +385,12 @@ export default function MadridPage() {
               a La Liga match day, Madrid is the destination. Add world-class tapas,
               the Prado, and Retiro Park for the days between matches, and you have
               the complete football tour.
+            </p>
+            <p className="mt-4 text-ink-muted text-base leading-relaxed">
+              Training in Madrid:{" "}
+              <Link href="/atletico-madrid-training" className="text-gold-deep underline underline-offset-4">Atletico de Madrid sessions for visiting teams</Link>
+              , or the full{" "}
+              <Link href="/madrid-barcelona-valencia-soccer-tour" className="text-gold-deep underline underline-offset-4">Madrid, Valencia and Barcelona tour</Link>.
             </p>
           </div>
         </div>

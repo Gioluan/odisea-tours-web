@@ -281,6 +281,15 @@ export default function SoccerToursSpainPillarPage() {
               </p>
             </article>
           </div>
+          <p className="mt-8 max-w-[70ch] text-ink-soft leading-relaxed">
+            Two more training homes clubs ask for by name:{" "}
+            <Link href="/atletico-madrid-training" className="text-gold-deep underline underline-offset-4">Atlético de Madrid</Link>
+            , with sessions led by the club&apos;s academy coaches in Madrid, and{" "}
+            <Link href="/villarreal-training" className="text-gold-deep underline underline-offset-4">Villarreal CF</Link>
+            , twenty-five minutes from our office in Castellón. The route that ties three of them together is the{" "}
+            <Link href="/madrid-barcelona-valencia-soccer-tour" className="text-gold-deep underline underline-offset-4">Madrid, Valencia and Barcelona tour</Link>
+            , eight nights from €1,950 per player.
+          </p>
         </div>
       </section>
 

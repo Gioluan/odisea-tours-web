@@ -49,7 +49,7 @@ const juanPerson = {
   familyName: "Sanchez",
   jobTitle: "Founder and Director",
   description:
-    "Founder and director of Odisea Tours with over 20 years organizing group sport and cultural tours across Spain and Europe. Former Spanish Liaison Officer at InspireSport, where he ran hundreds of tours per year and built the working relationships with FC Barcelona, Valencia CF and the Spanish Football Federation that Odisea Tours runs on today. In the mid-2000s he developed Villarreal CF training for visiting teams with Juan Carlos Garrido, then part of Villarreal's youth set-up and later its first-team coach.",
+    "Founder and director of Odisea Tours with over 20 years organizing group sport and cultural tours across Spain and Europe. Former Spanish Liaison Officer at InspireSport, where he ran hundreds of tours per year and built the working relationships with FC Barcelona, Valencia CF and the Spanish Football Federation that Odisea Tours runs on today. Between 2004 and 2006 he developed Villarreal CF training for visiting teams with Juan Carlos Garrido, then part of Villarreal's youth set-up and later its first-team coach.",
   image: `${SITE}/photos/juan-sanchez-odisea-tours-director.jpg`,
   email: "juan@odisea-tours.com",
   telephone: "+34-670-059-797",

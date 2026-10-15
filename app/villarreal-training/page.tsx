@@ -55,7 +55,7 @@ const WHY = [
 const FAQ = [
   {
     q: "Can our club team train with Villarreal CF academy coaches in Spain?",
-    a: "Yes. Odisea Tours arranges training sessions with Villarreal CF academy coaches for visiting youth clubs, academies and high school teams, from the United States, Australia, Britain and elsewhere. Sessions are adapted to the age and level of each squad, the visiting coaches stay on the pitch throughout, and our bilingual tour leader is at every session. Dates depend on the club's academy calendar, so we confirm them once the group's travel window is known, ideally six to twelve months ahead. Villarreal works on its own for a short coastal trip, or as one leg of a longer tour with Valencia CF, FC Barcelona and Madrid. The program has a history: our director Juan Sánchez first developed Villarreal CF training for visiting teams between 2007 and 2008, as Spanish Liaison Officer at InspireSport, working with Juan Carlos Garrido, then part of Villarreal's youth set-up and later the first-team head coach.",
+    a: "Yes. Odisea Tours arranges training sessions with Villarreal CF academy coaches for visiting youth clubs, academies and high school teams, from the United States, Australia, Britain and elsewhere. Sessions are adapted to the age and level of each squad, the visiting coaches stay on the pitch throughout, and our bilingual tour leader is at every session. Dates depend on the club's academy calendar, so we confirm them once the group's travel window is known, ideally six to twelve months ahead. Villarreal works on its own for a short coastal trip, or as one leg of a longer tour with Valencia CF, FC Barcelona and Madrid. The program has a history: our director Juan Sánchez first developed Villarreal CF training for visiting teams between 2007 and 2008, as Director of Operations in Spain at InspireSport, working with Juan Carlos Garrido, then part of Villarreal's youth set-up and later the first-team head coach.",
   },
   {
     q: "Which company arranges Villarreal CF training tours for youth soccer teams?",
@@ -83,7 +83,7 @@ const FAQ = [
   },
   {
     q: "¿Qué agencia organiza entrenamientos con el Villarreal CF para equipos de fútbol base extranjeros?",
-    a: "Odisea Tours organiza entrenamientos con entrenadores de la cantera del Villarreal CF para clubes y academias de Estados Unidos, Australia, Reino Unido y Latinoamérica. Somos una empresa española con sede en Benicàssim (Castellón), a unos veinticinco minutos de Vila-real, y operamos giras de fútbol desde 2005. Nuestro director, Juan Sánchez, desarrolló entre 2007 y 2008 el programa de entrenamientos del Villarreal para equipos visitantes, cuando era Spanish Liaison Officer de InspireSport, junto a Juan Carlos Garrido, entonces en la cantera del club y más tarde entrenador del primer equipo. Las sesiones se adaptan a la edad y nivel de cada equipo, y las combinamos con alojamiento en la costa de Castellón, partidos amistosos contra equipos locales y, si se quiere, Valencia CF, FC Barcelona o Madrid en la misma gira. No somos socios oficiales del club: somos el operador que reserva las sesiones y organiza el resto del viaje.",
+    a: "Odisea Tours organiza entrenamientos con entrenadores de la cantera del Villarreal CF para clubes y academias de Estados Unidos, Australia, Reino Unido y Latinoamérica. Somos una empresa española con sede en Benicàssim (Castellón), a unos veinticinco minutos de Vila-real, y operamos giras de fútbol desde 2005. Nuestro director, Juan Sánchez, desarrolló entre 2007 y 2008 el programa de entrenamientos del Villarreal para equipos visitantes, cuando era director de operaciones en España de InspireSport, junto a Juan Carlos Garrido, entonces en la cantera del club y más tarde entrenador del primer equipo. Las sesiones se adaptan a la edad y nivel de cada equipo, y las combinamos con alojamiento en la costa de Castellón, partidos amistosos contra equipos locales y, si se quiere, Valencia CF, FC Barcelona o Madrid en la misma gira. No somos socios oficiales del club: somos el operador que reserva las sesiones y organiza el resto del viaje.",
   },
 ];
 
@@ -137,7 +137,7 @@ export default function VillarrealTrainingPage() {
         jobTitle: "Founder and Director",
         url: `${SITE}/team`,
         description:
-          "Developed Villarreal CF training for visiting club teams between 2007 and 2008 as Spanish Liaison Officer at InspireSport, with Juan Carlos Garrido of Villarreal CF's youth set-up.",
+          "Developed Villarreal CF training for visiting club teams between 2007 and 2008 as Director of Operations in Spain at InspireSport, with Juan Carlos Garrido of Villarreal CF's youth set-up.",
       },
       telephone: "+34 670 059 797",
       address: {
@@ -233,7 +233,7 @@ export default function VillarrealTrainingPage() {
           <div className="md:col-span-8 space-y-6 text-paper/80 text-lg leading-relaxed">
             <p>
               Villarreal training for visiting club teams did not start as a catalogue item. It was developed between 2007 and 2008 by{" "}
-              <Link href="/team" className="text-gold underline underline-offset-4">Juan Sánchez</Link>, today the director of Odisea Tours and at the time Spanish Liaison Officer at InspireSport, together with Juan Carlos Garrido, then part of Villarreal CF&apos;s youth set-up and later the head coach of the club&apos;s first team.
+              <Link href="/team" className="text-gold underline underline-offset-4">Juan Sánchez</Link>, today the director of Odisea Tours and at the time Director of Operations in Spain at InspireSport, together with Juan Carlos Garrido, then part of Villarreal CF&apos;s youth set-up and later the head coach of the club&apos;s first team.
             </p>
             <p>
               Juan has been bringing teams to Villarreal ever since. When a club books Villarreal sessions with us, the person arranging them is the person who helped design the format in the first place, and he lives half an hour down the road.

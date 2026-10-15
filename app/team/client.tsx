@@ -151,7 +151,7 @@ export default function TeamClient() {
                 Juan knows every pitch, every stadium contact, and every shortcut to make your tour unforgettable.
               </p>
               <p>
-                As former <strong className="text-ink">Spanish Liaison Officer at InspireSport</strong>,
+                As former <strong className="text-ink">Director of Operations in Spain at InspireSport</strong>,
                 he was responsible for organizing hundreds of tours per year, building the connections with
                 FC Barcelona, Valencia CF, the Spanish FA, and clubs across the country that Odisea Tours clients benefit from today.
                 Between 2007 and 2008 he developed <Link href="/villarreal-training" className="text-gold-deep underline underline-offset-4">Villarreal CF training for visiting teams</Link> together with Juan Carlos Garrido, then part of Villarreal&apos;s youth set-up and later the club&apos;s first-team coach.

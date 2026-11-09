@@ -27,7 +27,7 @@ const ALLOWED_ORIGINS = new Set([
 ]);
 
 const ALLOWED_SENDERS: Record<string, { name: string }> = {
-  "juan@odisea-tours.com": { name: "Juan Sanchez" },
+  "juan@odisea-tours.com": { name: "Juan Sanchez | Odisea Tours" },
   "bookings@odisea-tours.com": { name: "Odisea Tours · Bookings" },
   "info@odisea-tours.com": { name: "Odisea Tours" },
 };

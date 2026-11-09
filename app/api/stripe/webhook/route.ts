@@ -70,7 +70,7 @@ type Outcome = { status: string; subject: string; lines: string[] };
 async function markPaid(session: any): Promise<Outcome> {
   const ref = String(session.client_reference_id || "");
   // Codes are PREFIX-XXXX or PREFIX-XXXX-XXXX (long codes since 9-Nov-2026).
-  const m = /^OT-([A-Z0-9]+(?:-[A-Z0-9]+){1,2})-(deposit|second|final)$/.exec(ref);
+  const m = /^OT-([A-Z0-9]+(?:-[A-Z0-9]+){1,2})-(deposit|second|final|extra\d+)$/.exec(ref);
   const cents = euroCents(session);
   const shown = cents != null ? (cents / 100).toFixed(2) + " EUR" : `${session.amount_total} ${session.currency}`;
   const base = [`Stripe session: ${session.id}`, `Reference: ${ref || "(none)"}`, `Amount: ${shown}`,
@@ -82,7 +82,21 @@ async function markPaid(session: any): Promise<Outcome> {
     const doc = await getDoc(`accessCodes/${code}`);
     const plan = doc?.data?.payment;
     const items: any[] = Array.isArray(plan?.installments) ? plan.installments : [];
-    const it = items.find(i => i.key === key);
+    // Confirmed/TBC plans (portal js/family-plan.js): the deposit is 500 x the
+    // travelers the family has confirmed, paid through the shared 500 EUR link,
+    // so any whole number of deposits is accepted and frozen as paid. A deposit
+    // for travelers confirmed later ("extraN") is added to the plan here.
+    const dynamic = Array.isArray(plan?.places) && plan.places.length > 0 && !!plan?.prices;
+    const per = Math.round((Number(plan?.depositPerTraveler) || 500) * 100);
+    const depositKind = key === "deposit" || /^extra\d+$/.test(key);
+    let it = items.find(i => i.key === key);
+    if (doc && plan && !it && dynamic && /^extra\d+$/.test(key)) {
+      const d = items.find(i => i.key === "deposit");
+      it = { key, label: "Deposit for added travelers", due: new Date().toISOString().slice(0, 10), status: "due",
+             reference: String(d?.reference || "").replace(/-DEP$/, "") + "-ADD" + key.slice(5) };
+      items.push(it);
+    }
+    if (dynamic && depositKind && it && cents != null && cents >= per && cents % per === 0) it.amount = cents / 100;
     if (!doc || !it) return { status: "unmatched", subject: `Card payment to check: unknown family code (${shown})`, lines: [...base, "", `No payment plan for ${code} / ${key}. Nothing changed on the portal.`] };
     const family = String(doc.data.familyName || code);
     const due = Math.round(Number(it.amount) * 100);

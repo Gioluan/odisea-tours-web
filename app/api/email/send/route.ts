@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { Resend } from "resend";
+import { verifyFirebaseToken, STAFF_UIDS } from "@/lib/firebase-token";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -11,8 +12,10 @@ export const dynamic = "force-dynamic";
  * juan@odisea-tours.com as the verified sender. Replies go to that address,
  * which forwards to Juan's mailbox.
  *
- * Auth: Origin allowlist for v1. Replace with Firebase ID token verification
- * when Aitor/Raul start sending on their own accounts.
+ * Auth: the caller must send the Firebase ID token of a staff login (the CRM
+ * does this). The Origin check alone was not enough: a script can send any
+ * Origin header, which let anyone email anybody as juan@odisea-tours.com.
+ * Add a uid to STAFF_UIDS (lib/firebase-token.ts) for each new staff login.
  */
 
 const ALLOWED_ORIGINS = new Set([
@@ -49,6 +52,11 @@ export async function POST(req: NextRequest) {
   const origin = req.headers.get("origin") || "";
   if (!ALLOWED_ORIGINS.has(origin)) {
     return cors(NextResponse.json({ error: "Origin not allowed" }, { status: 403 }), origin);
+  }
+
+  const caller = await verifyFirebaseToken(req.headers.get("authorization"));
+  if (!caller || !STAFF_UIDS.has(caller.uid)) {
+    return cors(NextResponse.json({ error: "Sign in to the CRM to send email" }, { status: 401 }), origin);
   }
 
   const apiKey = process.env.RESEND_API_KEY;

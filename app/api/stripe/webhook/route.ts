@@ -127,7 +127,14 @@ export async function POST(req: NextRequest) {
   let outcome: Outcome = { status: "ignored", subject: "", lines: [] };
   const obj = event.data?.object || {};
   try {
-    if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
+    // The Stripe account is shared with MyCantera (subscriptions, its own
+    // webhook). Only Odisea portal payments carry an OT- reference; other
+    // subscription checkouts are not ours and are ignored without an email.
+    const ours = String(obj.client_reference_id || "").startsWith("OT-");
+    const sessionEvent = event.type.startsWith("checkout.session.");
+    if (sessionEvent && !ours && obj.mode === "subscription") {
+      outcome = { status: "ignored-subscription", subject: "", lines: [] };
+    } else if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
       if (obj.payment_status === "paid") outcome = await markPaid(obj);
       else outcome = { status: "pending", subject: `Card payment started, not yet confirmed (${obj.client_reference_id || "no reference"})`,
                        lines: [`Stripe session: ${obj.id}`, "Payment method still processing (bank debit or similar). The portal stays as due until Stripe confirms it."] };

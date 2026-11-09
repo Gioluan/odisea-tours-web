@@ -69,7 +69,8 @@ type Outcome = { status: string; subject: string; lines: string[] };
 
 async function markPaid(session: any): Promise<Outcome> {
   const ref = String(session.client_reference_id || "");
-  const m = /^OT-([A-Z0-9]+-[A-Z0-9]+)-(deposit|second|final)$/.exec(ref);
+  // Codes are PREFIX-XXXX or PREFIX-XXXX-XXXX (long codes since 9-Nov-2026).
+  const m = /^OT-([A-Z0-9]+(?:-[A-Z0-9]+){1,2})-(deposit|second|final)$/.exec(ref);
   const cents = euroCents(session);
   const shown = cents != null ? (cents / 100).toFixed(2) + " EUR" : `${session.amount_total} ${session.currency}`;
   const base = [`Stripe session: ${session.id}`, `Reference: ${ref || "(none)"}`, `Amount: ${shown}`,

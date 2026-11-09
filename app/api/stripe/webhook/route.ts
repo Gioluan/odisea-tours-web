@@ -98,6 +98,14 @@ async function markPaid(session: any): Promise<Outcome> {
     plan.updatedAt = new Date().toISOString();
     try {
       await patchDoc(`accessCodes/${code}`, { payment: plan }, { updateTime: doc.updateTime });
+      // Paid tick for the organiser's club portal (counts only, no amounts).
+      const tourId = doc.data.tourId, familyId = doc.data.familyId;
+      if (tourId != null && familyId != null) {
+        try {
+          await patchDoc(`tours/${tourId}/familyPaid/${familyId}`, {
+            paid: items.filter(i => i.status === "paid").length, count: items.length, updatedAt: new Date().toISOString() });
+        } catch { /* the CRM re-syncs this tick when the tour is opened */ }
+      }
       return { status: "paid", subject: `Card payment received: ${code} ${it.label || key} ${(due / 100).toFixed(2)} EUR`,
                lines: [...base, "", `Marked PAID on the family portal (${code}, ${it.label || key}).`, family !== code ? `Family: ${family}` : ""] };
     } catch (e: any) {

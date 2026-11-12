@@ -32,9 +32,14 @@ const JUAN = "juan@odisea-tours.com";
 const FROM_FAMILY = "Juan Sanchez | Odisea Tours <info@odisea-tours.com>";
 const FROM_JUAN = "Odisea Tours Payments <info@odisea-tours.com>";
 const PORTAL = "https://portal.odisea-tours.com/portal.html?code=";
-const STEPS: { days: number; step: string }[] = [
-  { days: 14, step: "before14" }, { days: 3, step: "before3" },
-  { days: -1, step: "late1" }, { days: -7, step: "late7" },
+// Windows, not exact days: a missed cron run sends the reminder the next day
+// instead of losing it. Each step is still sent once per due date. Checked
+// in order; only the first window matching daysTo applies.
+const STEPS: { from: number; to: number; step: string; late: boolean }[] = [
+  { from: 4, to: 14, step: "before14", late: false },
+  { from: 0, to: 3, step: "before3", late: false },
+  { from: -6, to: -1, step: "late1", late: true },
+  { from: -60, to: -7, step: "late7", late: true },
 ];
 
 const eur = (v: number) => "€" + Number(v).toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -77,7 +82,7 @@ function juanTable(rows: Row[], title: string) {
 <tr style="text-align:left;color:#6b7280"><th style="padding:3px 10px 3px 0">Family</th><th style="padding:3px 10px">Paid</th><th style="padding:3px 10px">Next date</th><th style="padding:3px 10px">Still due</th><th style="padding:3px 10px">Note</th></tr>
 ${rows.map(r => `<tr><td style="padding:3px 10px 3px 0">${esc(r.family)} <span style="color:#9ca3af">${esc(r.code)}</span></td>
 <td style="padding:3px 10px">${eur(r.paid)} / ${eur(r.total)}</td>
-<td style="padding:3px 10px">${r.due ? esc(r.due) + (r.daysTo < 0 ? ` <b style="color:#b91c1c">(${-r.daysTo}d late)</b>` : ` (${r.daysTo}d)`) : "all paid"}</td>
+<td style="padding:3px 10px">${r.due ? esc(r.due) + (r.daysTo < 0 ? ` <b style="color:#b91c1c">(${-r.daysTo}d late)</b>` : ` (${r.daysTo}d)`) : r.total > 0 ? "all paid" : "nothing due"}</td>
 <td style="padding:3px 10px">${r.left > 0 ? eur(r.left) : "-"}</td>
 <td style="padding:3px 10px">${esc(r.step ? (r.sent ? "emailed: " : "would email: ") + r.step : r.error || "")}</td></tr>`).join("")}
 </table>`;
@@ -89,7 +94,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "unauthorised" }, { status: 401 });
   }
   const dry = req.nextUrl.searchParams.get("dry") === "1";
-  const today = new Date().toISOString().slice(0, 10);
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Madrid" });
   const cfg = (await getDoc("config/paymentReminders"))?.data || {};
   const override = dry ? (req.nextUrl.searchParams.get("tours") || "").split(",").filter(Boolean) : [];
   const tourIds: string[] = override.length ? override : Array.isArray(cfg.tourIds) ? cfg.tourIds.map(String) : [];
@@ -128,7 +133,7 @@ export async function GET(req: NextRequest) {
       };
       all.push(row);
       if (!next?.due) continue;
-      const hit = STEPS.find(s => s.days === row.daysTo);
+      const hit = STEPS.find(s => row.daysTo >= s.from && row.daysTo <= s.to);
       if (!hit) continue;
       const sentKey = `${next.due}:${hit.step}`;
       const reminders: Record<string, string> = doc!.data.reminders || {};
@@ -137,7 +142,7 @@ export async function GET(req: NextRequest) {
       if (!familyOn || !resend) continue;
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(row.email)) { row.error = "no valid email"; continue; }
       try {
-        const m = familyEmail(row, hit.days < 0);
+        const m = familyEmail(row, hit.late);
         await resend.emails.send({ from: FROM_FAMILY, to: [row.email], replyTo: JUAN, subject: m.subject, html: m.html });
         row.sent = true;
         await patchDoc(`accessCodes/${code}`, { reminders: { ...reminders, [sentKey]: new Date().toISOString() } });

@@ -72,6 +72,9 @@ function euroCents(s: any): number | null {
 
 type Outcome = { status: string; subject: string; lines: string[] };
 
+// Calendar day in Spain (payments are dated as Juan sees them).
+const madridDay = () => new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Madrid" });
+
 // Club portal Paid tick (counts only, no amounts), from the live plan.
 async function syncPaidTick(data: any, plan: any) {
   const tourId = data?.tourId, familyId = data?.familyId;
@@ -94,7 +97,7 @@ async function addAnyPayment(session: any, code: string, cents: number | null, b
     if (!doc || !plan) return { status: "unmatched", subject: `Card payment to check: unknown family code (${shown})`, lines: [...base, "", `No payment plan for ${code}. Nothing changed on the portal.`] };
     plan.payments = Array.isArray(plan.payments) ? plan.payments : [];
     if (plan.payments.some((p: any) => p.stripeSession === session.id)) return { status: "duplicate", subject: "", lines: [] };
-    plan.payments.push({ id: "s" + String(session.id).slice(-10), amount: cents / 100, on: new Date().toISOString().slice(0, 10),
+    plan.payments.push({ id: "s" + String(session.id).slice(-10), amount: cents / 100, on: madridDay(),
                          via: "card", stripeSession: session.id, markedBy: "stripe" });
     plan.updatedAt = new Date().toISOString();
     try {
@@ -139,7 +142,7 @@ async function markPaid(session: any): Promise<Outcome> {
     let it = items.find(i => i.key === key);
     if (doc && plan && !it && dynamic && /^extra\d+$/.test(key)) {
       const d = items.find(i => i.key === "deposit");
-      it = { key, label: "Deposit for added travelers", due: new Date().toISOString().slice(0, 10), status: "due",
+      it = { key, label: "Deposit for added travelers", due: madridDay(), status: "due",
              reference: String(d?.reference || "").replace(/-DEP$/, "") + "-ADD" + key.slice(5) };
       items.push(it);
     }
@@ -152,8 +155,18 @@ async function markPaid(session: any): Promise<Outcome> {
       return { status: "amount-mismatch", subject: `Card payment to check: ${code} paid ${shown}, ${it.label || key} is ${(due / 100).toFixed(2)} EUR`,
                lines: [...base, "", `Expected ${(due / 100).toFixed(2)} EUR for the ${it.label || key}. The portal still shows it as due. Check the quantity paid and mark it by hand (or refund the difference).`] };
     }
+    // Already covered by any-amount payments? Still record it (the money did
+    // arrive), but warn Juan: it may be a double payment to refund.
+    let coveredNote = "";
+    try {
+      const ch = doc.data.tourId != null && doc.data.familyId != null
+        ? (await getDoc(`tours/${doc.data.tourId}/familyChoices/${doc.data.familyId}`).catch(() => null))?.data || {} : {};
+      const liveIt = FamilyPlan.compute(plan, ch).items.find((x: any) => x.key === key);
+      if (liveIt?.covered) coveredNote = `WARNING: the ${it.label || key} was already covered by earlier payments of any amount. Possible double payment: check with the family and refund if needed.`;
+      else if (Number(liveIt?.paidPart) > 0) coveredNote = `Note: ${Number(liveIt.paidPart).toFixed(2)} EUR of this instalment had already been paid in smaller payments; that money now counts towards the next instalment.`;
+    } catch { /* note only */ }
     it.status = "paid";
-    it.paidOn = new Date().toISOString().slice(0, 10);
+    it.paidOn = madridDay();
     it.paidVia = "card";
     it.stripeSession = session.id;
     plan.updatedAt = new Date().toISOString();
@@ -161,8 +174,8 @@ async function markPaid(session: any): Promise<Outcome> {
       await patchDoc(`accessCodes/${code}`, { payment: plan }, { updateTime: doc.updateTime });
       // Paid tick for the organiser's club portal (counts only, no amounts).
       await syncPaidTick(doc.data, plan);
-      return { status: "paid", subject: `Card payment received: ${code} ${it.label || key} ${(due / 100).toFixed(2)} EUR`,
-               lines: [...base, "", `Marked PAID on the family portal (${code}, ${it.label || key}).`, family !== code ? `Family: ${family}` : ""] };
+      return { status: "paid", subject: `${coveredNote.startsWith("WARNING") ? "CHECK: possible double payment, " : "Card payment received: "}${code} ${it.label || key} ${(due / 100).toFixed(2)} EUR`,
+               lines: [...base, "", `Marked PAID on the family portal (${code}, ${it.label || key}).`, family !== code ? `Family: ${family}` : "", coveredNote] };
     } catch (e: any) {
       if (e?.status === 400 || e?.status === 409 || e?.status === 412) continue;   // changed meanwhile: re-read and retry
       throw e;
@@ -207,7 +220,9 @@ export async function POST(req: NextRequest) {
                   lines: [`Stripe session: ${obj.id}`, "The delayed payment failed. Nothing changed on the portal; the family still owes it."] };
     } else if (event.type === "charge.refunded" || event.type === "charge.dispute.created") {
       outcome = { status: "refund-or-dispute", subject: `Stripe ${event.type === "charge.refunded" ? "refund" : "DISPUTE"}: ${(obj.amount_refunded ?? obj.amount ?? 0) / 100} ${String(obj.currency || "").toUpperCase()}`,
-                  lines: [`Charge: ${obj.id || obj.charge}`, "The portal is NOT changed automatically. If an instalment should go back to due, change it by hand."] };
+                  lines: [`Charge: ${obj.id || obj.charge}`, `Payment intent: ${obj.payment_intent || "-"}`, `Payer email: ${obj.billing_details?.email || obj.receipt_email || "-"}`, "",
+                          "The portal is NOT changed automatically. In Stripe, open this payment to see its client reference (OT-<CODE>-...) = the family.",
+                          "Then in the CRM (tour > Client Portal > family > Payments): for an any-amount payment, record the refund as a NEGATIVE payment (or Remove it if fully refunded); for an instalment, click Undo."] };
     }
   } catch (e: any) {
     outcome = { status: "error", subject: "Card payment to check: webhook error", lines: [`Event ${event.id} (${event.type})`, String(e?.message || e)] };

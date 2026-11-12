@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { Resend } from "resend";
 import { getDoc, patchDoc } from "@/lib/firestore-rest";
+import FamilyPlan from "@/lib/family-plan.js";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -20,6 +21,10 @@ export const dynamic = "force-dynamic";
  *   3. client_reference_id names a real family code and instalment
  *      ("OT-<CODE>-<key>", added to each family's link by _cufc_payments.py);
  *   4. the amount in euros equals that instalment to the cent.
+ * Payments of ANY amount ("OT-<CODE>-pay", the "Pay any amount by card"
+ * button, 12-Nov-2026) are added to payment.payments instead: the portal pours
+ * them into the instalments in order (js/family-plan.js). Each Stripe session
+ * is added once.
  * Anything else changes nothing on the portal and emails Juan to check.
  * Every event is processed once (stripeEvents/{eventId}).
  */
@@ -67,16 +72,58 @@ function euroCents(s: any): number | null {
 
 type Outcome = { status: string; subject: string; lines: string[] };
 
+// Club portal Paid tick (counts only, no amounts), from the live plan.
+async function syncPaidTick(data: any, plan: any) {
+  const tourId = data?.tourId, familyId = data?.familyId;
+  if (tourId == null || familyId == null) return;
+  try {
+    const ch = await getDoc(`tours/${tourId}/familyChoices/${familyId}`).catch(() => null);
+    const live = FamilyPlan.compute(plan, ch?.data || {});
+    const items = live.items.filter((i: any) => i.status === "paid" || (Number(i.amount) || 0) > 0);
+    await patchDoc(`tours/${tourId}/familyPaid/${familyId}`, {
+      paid: items.filter((i: any) => i.status === "paid").length, count: items.length, updatedAt: new Date().toISOString() });
+  } catch { /* the CRM re-syncs this tick when the tour is opened */ }
+}
+
+// "Pay any amount by card": add the payment to the family's list.
+async function addAnyPayment(session: any, code: string, cents: number | null, base: string[], shown: string): Promise<Outcome> {
+  if (cents == null || cents <= 0) return { status: "amount-mismatch", subject: `Card payment to check: ${code} paid ${shown}, not in euros`, lines: [...base, "", "Could not read the euro amount. Nothing changed on the portal. Record it by hand."] };
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const doc = await getDoc(`accessCodes/${code}`);
+    const plan = doc?.data?.payment;
+    if (!doc || !plan) return { status: "unmatched", subject: `Card payment to check: unknown family code (${shown})`, lines: [...base, "", `No payment plan for ${code}. Nothing changed on the portal.`] };
+    plan.payments = Array.isArray(plan.payments) ? plan.payments : [];
+    if (plan.payments.some((p: any) => p.stripeSession === session.id)) return { status: "duplicate", subject: "", lines: [] };
+    plan.payments.push({ id: "s" + String(session.id).slice(-10), amount: cents / 100, on: new Date().toISOString().slice(0, 10),
+                         via: "card", stripeSession: session.id, markedBy: "stripe" });
+    plan.updatedAt = new Date().toISOString();
+    try {
+      await patchDoc(`accessCodes/${code}`, { payment: plan }, { updateTime: doc.updateTime });
+      await syncPaidTick(doc.data, plan);
+      const live = FamilyPlan.compute(plan, {});
+      const family = String(doc.data.familyName || code);
+      return { status: "paid", subject: `Card payment received: ${code} ${(cents / 100).toFixed(2)} EUR (any amount)`,
+               lines: [...base, "", `Added to the family portal (${code}).`, family !== code ? `Family: ${family}` : "",
+                       `Paid so far: ${Number(live.paid).toFixed(2)} EUR (before any TBC changes).`] };
+    } catch (e: any) {
+      if (e?.status === 400 || e?.status === 409 || e?.status === 412) continue;
+      throw e;
+    }
+  }
+  return { status: "error", subject: `Card payment to check: could not update ${code}`, lines: [...base, "", "The plan kept changing while saving. Record it by hand."] };
+}
+
 async function markPaid(session: any): Promise<Outcome> {
   const ref = String(session.client_reference_id || "");
   // Codes are PREFIX-XXXX or PREFIX-XXXX-XXXX (long codes since 9-Nov-2026).
-  const m = /^OT-([A-Z0-9]+(?:-[A-Z0-9]+){1,2})-(deposit|second|final|extra\d+)$/.exec(ref);
+  const m = /^OT-([A-Z0-9]+(?:-[A-Z0-9]+){1,2})-(deposit|second|final|extra\d+|pay)$/.exec(ref);
   const cents = euroCents(session);
   const shown = cents != null ? (cents / 100).toFixed(2) + " EUR" : `${session.amount_total} ${session.currency}`;
   const base = [`Stripe session: ${session.id}`, `Reference: ${ref || "(none)"}`, `Amount: ${shown}`,
                 `Payer email: ${session.customer_details?.email || "-"}`];
   if (!m) return { status: "unmatched", subject: `Card payment to check: no family reference (${shown})`, lines: [...base, "", "Not linked to a family. Nothing changed on the portal. Find the payer in Stripe and mark it by hand."] };
   const [, code, key] = m;
+  if (key === "pay") return addAnyPayment(session, code, cents, base, shown);
 
   for (let attempt = 0; attempt < 3; attempt++) {
     const doc = await getDoc(`accessCodes/${code}`);
@@ -113,13 +160,7 @@ async function markPaid(session: any): Promise<Outcome> {
     try {
       await patchDoc(`accessCodes/${code}`, { payment: plan }, { updateTime: doc.updateTime });
       // Paid tick for the organiser's club portal (counts only, no amounts).
-      const tourId = doc.data.tourId, familyId = doc.data.familyId;
-      if (tourId != null && familyId != null) {
-        try {
-          await patchDoc(`tours/${tourId}/familyPaid/${familyId}`, {
-            paid: items.filter(i => i.status === "paid").length, count: items.length, updatedAt: new Date().toISOString() });
-        } catch { /* the CRM re-syncs this tick when the tour is opened */ }
-      }
+      await syncPaidTick(doc.data, plan);
       return { status: "paid", subject: `Card payment received: ${code} ${it.label || key} ${(due / 100).toFixed(2)} EUR`,
                lines: [...base, "", `Marked PAID on the family portal (${code}, ${it.label || key}).`, family !== code ? `Family: ${family}` : ""] };
     } catch (e: any) {

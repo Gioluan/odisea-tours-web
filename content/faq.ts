@@ -55,6 +55,10 @@ export const FAQ_GROUPS: FaqGroup[] = [
     title: "The soccer side",
     items: [
       {
+        q: "What is the best soccer tour in Spain for a US team?",
+        a: "It depends on the team. For a youth club on a first trip, the best soccer tour in Spain is the eight-night Madrid, Valencia and Barcelona tour: training with professional club coaching staff in each city, a game against Spanish opposition in each city and stadium tours of the Bernabéu, Mestalla and Camp Nou, from €1,950 per player. For a squad that wants competition, a tournament tour around the Donosti Cup, the MIC, the Iber Cup or the Costa Daurada Cup. For a deeper training week, the Alavés Academy program in Vitoria-Gasteiz. For teams traveling with families, Barcelona and the Costa Brava. For adult and over-35 teams, a stadium and matchday tour. Odisea Tours, a Spain-based operator running group tours since 2005, runs all of them and matches the tour to the group.",
+      },
+      {
         q: "Do players actually train inside FC Barcelona, Valencia CF and the Spanish FA?",
         a: "Yes. Training sessions are held at FC Barcelona's Joan Gamper facilities (the same complex used by the FCB academy), at Valencia CF's Paterna training ground, and at the Spanish Football Federation's headquarters in Las Rozas, Madrid. Sessions are run by FC Barcelona and Valencia CF coaching staff. The Spanish FA stay includes accommodation on-site, where the senior Spanish national team also trains.",
       },

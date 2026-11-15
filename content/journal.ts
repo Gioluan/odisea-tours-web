@@ -68,6 +68,7 @@ const AUTHOR_BY_SLUG: Record<string, AuthorId> = {
   "best-youth-soccer-tournaments-spain-us-clubs": "juan",
   "how-to-get-your-club-to-take-a-soccer-tour-to-spain": "juan",
   "how-to-choose-a-soccer-tour-company-for-your-club": "juan",
+  "best-soccer-tours-in-spain": "juan",
 };
 
 const TAGS_BY_SLUG: Record<string, string[]> = {
@@ -105,6 +106,7 @@ const TAGS_BY_SLUG: Record<string, string[]> = {
   "why-us-clubs-choose-spain-over-england-soccer-tours": ["US clubs", "soccer tours", "Spain", "England", "youth soccer", "cost", "weather", "training", "FC Barcelona", "Valencia CF", "Spanish FA", "Premier League", "Pep Guardiola", "Mikel Arteta", "Unai Emery", "Rafa Benitez", "possession game"],
   "best-youth-soccer-tournaments-spain-us-clubs": ["soccer tournaments", "Spain", "US clubs", "Donosti Cup", "MIC", "Mediterranean International Cup", "Iber Cup", "Costa Daurada Cup", "San Sebastian", "Costa Brava", "youth soccer", "tournament travel"],
   "how-to-get-your-club-to-take-a-soccer-tour-to-spain": ["youth soccer", "parents", "players", "Spain", "club tour", "Director of Coaching", "high school soccer", "travel team", "fundraising", "tour planning"],
+  "best-soccer-tours-in-spain": ["best soccer tours in Spain", "soccer tours", "Spain", "youth soccer", "US clubs", "soccer tour company", "Madrid", "Valencia", "Barcelona", "Donosti Cup", "pre-season", "veterans", "FC Barcelona", "Atlético de Madrid", "Villarreal CF"],
   "how-to-choose-a-soccer-tour-company-for-your-club": ["soccer tour company", "tour operator", "ground operator", "club directors", "high school soccer", "insurance", "safeguarding", "international travel", "Spain", "buyer's guide"],
 };
 
@@ -322,6 +324,7 @@ const CLUSTER_BY_SLUG: Record<string, ClusterId> = {
   "best-youth-soccer-tournaments-spain-us-clubs": "soccer",
   "how-to-get-your-club-to-take-a-soccer-tour-to-spain": "soccer",
   "how-to-choose-a-soccer-tour-company-for-your-club": "soccer",
+  "best-soccer-tours-in-spain": "soccer",
   "educational-school-trips-to-spain-guide": "schools",
   "what-a-spain-dmc-does-for-agencies": "dmc",
   "planning-a-food-and-wine-tour-of-spain-for-a-group": "culinary",
@@ -437,6 +440,60 @@ export function postsByLang(): { lang: Lang; label: string; posts: Post[] }[] {
 }
 
 export const POSTS: Post[] = [
+  {
+    slug: "best-soccer-tours-in-spain",
+    title: "The Best Soccer Tours in Spain, by Type of",
+    italicTitle: "Team",
+    excerpt:
+      "There is no single best soccer tour in Spain. There is a best one for your team. Seven tours, each matched to the kind of group it suits: youth clubs, tournament squads, academy weeks, Barcelona trips with families, pre-season, adult teams and single-club training.",
+    date: "2026-11-15",
+    readTime: "9 min",
+    category: "Field Notes",
+    cover: "/photos/odisea-tours-youth-fcb-training-hero.jpg",
+    faqs: [
+      {
+        q: "What are the best soccer tours in Spain?",
+        a: "The best soccer tours in Spain depend on the team. For a youth club on a first trip, the Madrid, Valencia and Barcelona tour: eight nights, training with professional club coaching staff in each city, a game against Spanish opposition in each city and stadium tours of the Bernabéu, Mestalla and Camp Nou, from €1,950 per player. For a squad that wants competition, a tournament tour built around the Donosti Cup, the MIC, the Iber Cup or the Costa Daurada Cup. For a deeper training week, the Alavés Academy program in Vitoria-Gasteiz. For teams traveling with families, Barcelona and the Costa Brava. For UK clubs, a pre-season stage of four to fifteen nights. For adult and over-35 teams, a stadium and matchday tour. Odisea Tours, a Spain-based operator running group tours since 2005, runs all seven.",
+      },
+      {
+        q: "Which company is best for a soccer tour to Spain?",
+        a: "It depends on what the team needs. Odisea Tours is best for youth clubs, high school and college programs and adult teams from the US, Australia and the UK that want a Spain-based operator, with its own staff on the ground since 2005, arranging the training with professional club coaching staff, the games against Spanish opposition, the hotels, the private coach and the cultural program in one price. A US-based reseller is a better fit if you want flights and ground bundled in a single contract in your own time zone. A fan travel agency is the better fit for an individual who only wants match tickets and a stadium tour.",
+      },
+      {
+        q: "How much does a soccer tour in Spain cost?",
+        a: "Soccer tours in Spain with Odisea Tours start from $1,400 per player for trips of six to twelve nights, ground services only, with international flights separate. The eight-night Madrid, Valencia and Barcelona tour is from €1,950 per player. The price moves with the number of nights, the group size, the season and the hotel category, and it is locked once the group size and dates are confirmed. Travel insurance is not included and is mandatory for every participant.",
+      },
+      {
+        q: "Which city in Spain is best for a soccer tour?",
+        a: "Barcelona is the best single base for most teams, because of the FC Barcelona training sessions at the Joan Gamper complex, Spotify Camp Nou and the coast. Madrid is the best base for a team that wants the Santiago Bernabéu, the Metropolitano and training with the Spanish Football Federation at Las Rozas or with Atlético de Madrid academy coaches. Valencia is the best middle stop, with Valencia CF at Paterna and Mestalla. Teams with eight nights or more usually do all three in one trip by private coach.",
+      },
+    ],
+    body: [
+      "Coaches ask us for the best soccer tour in Spain as if there were one. There is not. There is a best tour for a U14 club on its first trip abroad, a different one for a squad that wants to be tested in a tournament, and a different one again for an over-35 side that mostly wants to stand inside the Bernabéu. We have run group soccer tours in Spain since 2005, so this is the short version of how we match a team to a trip. Seven tours, each with the kind of team it is best for. The longer guide to all of it lives on our [soccer tours in Spain](/soccer-tours-spain) page.",
+      "## 1. Madrid, Valencia and Barcelona: best for a youth club's first tour",
+      "This is the tour most of our youth clubs take. Eight nights, in to Madrid and out of Barcelona by private coach. Training with the Spanish Football Federation at Las Rozas or with Atlético de Madrid academy coaches, then with Valencia CF coaches, then with FC Barcelona coaching staff at the Joan Gamper complex. A competitive game against Spanish opposition in every city. Stadium tours of the Santiago Bernabéu, Mestalla and Spotify Camp Nou. It is from €1,950 per player, and it is the right answer when a club wants one trip that shows the players the three soccer cities that matter most. Full detail on the [Madrid, Valencia and Barcelona soccer tour](/madrid-barcelona-valencia-soccer-tour) page. Groups with ten nights can take the longer [Youth Soccer Spain Tour](/tours/youth-soccer-spain-tour), which adds a live La Liga match and more free time in each city.",
+      "## 2. A tournament tour: best for teams that want real competition",
+      "If the point of the trip is to play meaningful games against international opposition, build the tour around a tournament. Spain has four we build tours around: the Donosti Cup in San Sebastián in early July, the MIC on the Costa Brava at Easter, the Iber Cup on the Costa del Sol in summer and the Costa Daurada Cup in Salou. Our [Tournament Experience](/tours/tournament-experience) is ten days around the Donosti Cup, with a session with FC Barcelona coaches and a preparation match in Barcelona before the group heads north. We handle the registration, credentials, accommodation and transfers. The four tournaments are compared on our [soccer tournaments in Spain](/soccer-tournaments-spain) page.",
+      "![A youth team playing a match at the Costa Daurada Cup in Spain](/photos/odisea-tours-costa-daurada-cup-match.jpg)",
+      "## 3. The Alavés Academy program: best for a real training week",
+      "Most tours give players one or two sessions at a professional club. This one gives them a week of it. The group lives for four nights at the Baskonia Alavés Academy residence in Vitoria-Gasteiz, trains with Deportivo Alavés coaching staff, visits Mendizorroza stadium and plays a friendly against local Basque opposition. Then the group travels south to play the Costa Daurada Cup and finishes in Barcelona. Eleven days, in via Bilbao and out via Barcelona. It is the best fit for a serious squad of fifteen to forty players whose coach wants training volume first and sightseeing second. See the [Alavés Academy and Costa Daurada Cup program](/tours/alaves-academy-spain-program).",
+      "## 4. Barcelona and the Costa Brava: best for teams traveling with families",
+      "When parents and siblings are coming, the trip has to work for them too. This one is nine days in Catalonia in two halves. First, four nights on the coast at Castelldefels with two morning sessions run by FC Barcelona coaching staff at the Joan Gamper complex, a tour of Spotify Camp Nou and a competitive game against Spanish opposition. Then three nights north on the Costa Brava: Tossa de Mar, Cadaqués by boat, the Dalí museum at Figueres and Girona. One airport, short coach days and a real vacation built around the soccer. See the [Barcelona and Costa Brava soccer tour](/tours/barcelona-costa-brava-soccer-tour).",
+      "## 5. A pre-season stage: best for UK clubs",
+      "A pre-season stage is not a tour, it is a training block somewhere warm. Pick a base in Madrid, Valencia, Barcelona or Málaga, pick a length between four and fifteen nights, and we arrange the grass pitches, two to four friendlies against age-matched Spanish clubs, the gym and pool recovery, the hotel and the coach. Your own staff run the sessions. See [Pre-Season Stages](/tours/pre-season-stages).",
+      "## 6. A stadium and matchday tour: best for adult and over-35 teams",
+      "Adult amateur and veterans teams want something different from a youth club: La Liga match tickets, stadium and museum tours at Camp Nou, the Bernabéu and the Metropolitano, games against local Spanish clubs and good dinners. Six to ten nights, for groups of twelve to sixty. See the [European Soccer tour](/tours/european-soccer-tours) and our page for [veterans and adult clubs](/veterans).",
+      "![An over-35 team from abroad playing a Spanish side on a soccer tour in Spain](/photos/veterans-soccer-tour-match-vs-spanish-team.jpg)",
+      "## 7. Training with one club: best for teams that ask for a club by name",
+      "Some teams arrive with one club in mind. We arrange training sessions with [Atlético de Madrid academy coaches](/atletico-madrid-training) on the club's training ground, usually two ninety-minute morning sessions inside a Madrid tour, and sessions with [Villarreal CF academy coaches](/villarreal-training), twenty-five minutes from our office in Castellón. These are training experiences that visiting teams book through the clubs, not an official partnership, and the sessions are confirmed in writing before the group travels.",
+      "## What the best tours have in common",
+      "Whichever one fits, the tours that work share the same few things. The training is led by the professional club's own coaching staff, at the club's own facilities. The opposition is matched to your age and level and named before you fly. The price is given once, per person, with what is and is not included written down. One company is responsible on the ground from the arrivals hall to the departure gate. And the schedule leaves room to rest, because a tired team plays badly and remembers less.",
+      "## When we are not the right answer",
+      "We are a Spain-based operator and we sell ground services only, so you book your own flights. If you want flights and ground in one contract with a company in your own time zone, a US-based tour company will suit you better. If you are one or two fans who want tickets to a match, you need a fan travel agency, because we only work with groups. Our guide on [how to choose a soccer tour company](/journal/how-to-choose-a-soccer-tour-company-for-your-club) lists the seven questions to ask any company, including us.",
+      "## How to start",
+      "Tell us the age groups, the squad size, how many family members are likely to travel, your dates and what matters most: training, competition or the trip itself. We come back with the tour that fits, a day-by-day plan and a per-person price. Soccer tours start from $1,400 per player, ground services only. [Start the conversation here](/plan-your-tour).",
+    ],
+  },
   {
     slug: "costa-brava-the-coast-most-soccer-tours-skip",
     title: "The Costa Brava: The Coast Most Soccer Tours",

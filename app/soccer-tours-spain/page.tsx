@@ -46,6 +46,7 @@ const SOCCER_TOUR_SLUGS = [
 ] as const;
 
 const FAQ_SLUGS_FOR_PILLAR = [
+  "What is the best soccer tour in Spain for a US team?",
   "How much does a Spain soccer tour cost?",
   "What is included in the price?",
   "Do players actually train inside FC Barcelona, Valencia CF and the Spanish FA?",
@@ -611,6 +612,7 @@ export default function SoccerToursSpainPillarPage() {
         italicTail="in Spain."
         intro="Long-form pieces written for the coaches, directors and athletic departments planning their first or fifth Spain tour. Cost, timing, academies worth visiting, friendlies, what parents actually ask."
         slugs={[
+          "best-soccer-tours-in-spain",
           "spain-soccer-tour-day-by-day",
           "youth-soccer-tours-to-spain-complete-guide",
           "what-a-youth-soccer-tour-to-spain-costs",

@@ -152,6 +152,11 @@ const nextConfig: NextConfig = {
       { source: "/retreats", destination: "/corporate-retreats", permanent: true },
       { source: "/partnership", destination: "/contact", permanent: true },
       { source: "/partnerships", destination: "/contact", permanent: true },
+
+      // GSC 404 sweep 2026-11-19
+      { source: "/journal/category/alianzas", destination: "/journal", permanent: true },
+      { source: "/destinations/soccer-tours-europe", destination: "/tours/european-soccer-tours", permanent: true },
+      { source: "/enquiry-thank-you-page", destination: "/contact", permanent: true },
     ];
   },
 };

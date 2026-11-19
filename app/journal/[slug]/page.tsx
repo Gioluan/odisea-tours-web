@@ -258,12 +258,17 @@ export default async function JournalPost({
             <Link href="/journal" className="link-rule">
               ← The Journal
             </Link>
-            <Link
-              href={`/journal/category/${post.category.toLowerCase().replace(/\s+/g, "-")}`}
-              className="link-rule hover:text-ink transition-colors"
-            >
-              {post.category}
-            </Link>
+            {/* Only Dispatches and Field Notes have category pages; others (e.g. "Alianzas") would 404. */}
+            {["dispatches", "field-notes"].includes(post.category.toLowerCase().replace(/\s+/g, "-")) ? (
+              <Link
+                href={`/journal/category/${post.category.toLowerCase().replace(/\s+/g, "-")}`}
+                className="link-rule hover:text-ink transition-colors"
+              >
+                {post.category}
+              </Link>
+            ) : (
+              <span>{post.category}</span>
+            )}
             <span>{post.readTime}</span>
           </div>
           <h1 className="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.9] tracking-[-0.005em]">
